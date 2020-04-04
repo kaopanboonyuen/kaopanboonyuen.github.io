@@ -9,8 +9,8 @@ sidebar:
     # Profile information
     name: Teerapong Panboonyuen 
     tagline: also known as Kao Panboonyuen
-    tagline: Machine Learning Reseacher
-    avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+    tagline: Machine Learning Researcher
+    avatar: kao_v3.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
     email: teerapong.panboonyuen at gmail
