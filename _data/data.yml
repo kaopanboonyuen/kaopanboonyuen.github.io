@@ -239,34 +239,34 @@ skills:
 
     toolset:
       - name: Python
-        level: 99%
-
-      - name: Tensorflow 2
-        level: 98%
-
-      - name: Pandas and Sklearn
-        level: 98%
-
-      - name: Seaborn with Matplot
-        level: 98%
-
-      - name: RapidMiner Studio
-        level: 97%
-
-      - name: PowerBI and Tableau
-        level: 97%
-
-      - name: Java
-        level: 95%
-
-      - name: SparkML
         level: 90%
 
-      - name: Hadoop
+      - name: Tensorflow 2 and Keras
+        level: 85%
+
+      - name: Pandas and Sklearn
+        level: 83%
+
+      - name: Seaborn with Matplot
         level: 80%
 
+      - name: RapidMiner Studio
+        level: 75%
+
+      - name: PowerBI and Tableau
+        level: 70%
+
+      - name: Java
+        level: 65%
+
+      - name: SparkML
+        level: 60%
+
+      - name: Hadoop
+        level: 60%
+
       - name: GDAL
-        level: 80%
+        level: 55%
 
 
 footer: >
