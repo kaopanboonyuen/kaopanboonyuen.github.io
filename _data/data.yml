@@ -65,7 +65,7 @@ career-profile:
       my publication: https://dblp.org/pers/hd/p/Panboonyuen:Teerapong
       research gate: https://www.researchgate.net/profile/Teerapong_Panboonyuen
 education:
-    - degree: Ph.D. Candidate in Computer Engineering
+    - degree: Ph.D. in Computer Engineering
       university: Chulalongkorn University
       time: 2017 - 2019
       details: |
@@ -76,9 +76,9 @@ education:
         pretium quis, sem.
           - Bullet point
           - Bullet point
-    - degree: MSc in Computer Science
-      university: University of London
-      time: 2011 - 2012
+    - degree: M.Eng. in Computer Engineering
+      university: Chulalongkorn University
+      time: 2015 - 2016
       details: |
         Describe your study here lorem ipsum dolor sit amet, consectetuer
         adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
@@ -87,9 +87,9 @@ education:
         pretium quis, sem.
           - Bullet point
           - Bullet point
-    - degree: BSc in Applied Mathematics
-      university: Bristol University
-      time: 2007 - 2011
+    - degree: B.Eng. in Computer Engineering
+      university: King Mongkut's University of Technology North Bangkok
+      time: 2012 - 2015
       details: |
         Describe your study here lorem ipsum dolor sit amet, consectetuer
         adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
