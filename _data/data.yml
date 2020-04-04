@@ -13,7 +13,7 @@ sidebar:
     avatar: kao_v3.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
-    email: teerapong.panboonyuen at gmail
+    email: teerapong.panboonyuen at gmail dot com
     # phone: 012 345 6789
     website: https://kaoisthmus.tumblr.com/ #do not add http://
     linkedin: teerapong-panboonyuen
@@ -189,7 +189,16 @@ skills:
     title: Skills &amp; Proficiency
 
     toolset:
-      - name: Python & TensorFlow2 & Pandas & Scikit Learn & More ML libraries
+      - name: Python
+        level: 99%
+
+      - name: Tensorflow 2
+        level: 98%
+
+      - name: Pandas and Sklearn
+        level: 98%
+
+      - name: Seaborn with Matplot
         level: 98%
 
       - name: RapidMiner Studio
@@ -201,8 +210,14 @@ skills:
       - name: Java
         level: 95%
 
-      - name: Hadoop and Bid Data Infrastucture
+      - name: SparkML
         level: 90%
+
+      - name: Hadoop
+        level: 80%
+
+      - name: GDAL
+        level: 80%
 
 
 footer: >
