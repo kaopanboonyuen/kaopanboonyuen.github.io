@@ -74,121 +74,165 @@ education:
       university: Chulalongkorn University
       time: 2017 - 2019
       details: |
-        Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
-          - Bullet point
-          - Bullet point
+        Activities and Societies: The 100th Anniversary Chulalongkorn University Fund for Doctoral Scholarship. Machine Intelligence and Knowledge Discovery Lab (MIND Lab). 
+        Designed and built deep encoder-decoder networks for semantic segmentation on satellite images.
+        - A dissertation proposal: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network
+        - I'm also currently being advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr.Siam Lawawirojwong, and Dr.Panu Srestasathiern
+        - My academic also interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning
+        - My Ph.D Publication (ISI Journal, Q1, Tier 1, Impact Factor 4.118, https://www.mdpi.com/2072-4292/11/1/83)
+        - https://dblp.org/pers/hd/p/Panboonyuen:Teerapong
     - degree: M.Eng. in Computer Engineering
       university: Chulalongkorn University
       time: 2015 - 2016
       details: |
-        Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
-          - Bullet point
-          - Bullet point
+        Activities and Societies: H.M. the King Bhumibhol Adulyadej's 72nd Birthday Anniversary Scholarship. Machine Intelligence and Knowledge Discovery Lab (MIND Lab).
+        - A master thesis: Semantic Road Segmentation on Remotely-Sensed Images Using Deep Convolutional Neural Networks and Landscape Metrics (Evaluation: Very Good)
+        - I am advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr.Siam Lawawirojwong and, Dr.Panu Srestasathiern.
+        - GPAX 4.00/4.00  
+        - My master publication (ISI Journal, Q1, Tier 1, Impact Factor 4.118, https://www.mdpi.com/2072-4292/9/7/680)
+        - Best Student Paper Award in International Conference on Computing and Information Technology 2017 (Recent Advances in Information and Communication Technology 2017), https://link.springer.com/book/10.1007/978-3-319-60663-7
+        - http://cuir.car.chula.ac.th/handle/123456789/55593
+
+        - Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University
+        - My Publication Thesis (Full Text, 2016): http://cuir.car.chula.ac.th/handle/123456789/55593
     - degree: B.Eng. in Computer Engineering
       university: King Mongkut's University of Technology North Bangkok
       time: 2012 - 2015
       details: |
-        Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
-          - Bullet point
-          - Bullet point
+         Designed and built computer vision algorithms to detect the occurrence of lumbar spinal stenosis.
+        - My academic interests mainly Computer Vision on Lumbar Spinal Stenosis corpus (Examination Grade: A)
+        - I am advised by Professor Waranyu Wongseree
+        - Department of Electrical and Computer Engineering, Faculty of Engineering, King Mongkut's University of Technology North Bangkok
+    - degree: Pre-Engineering Thai-German School
+      university: King Mongkut's University of Technology North Bangkok
+      time: 2010 - 2012
+      details: |
+         Activities and Societies: Pre-Electrical Technician (PET 21)
+        - Pre-Engineering Thai-German School Department College of Industrial Technology
+        - My Secondary School (Senior High School)
+        King Mongkut's University of Technology North Bangkok
 experiences:
-    - role: Lead Developer
-      time: 2015 - Present
-      company: Startup Hubs, San Francisco
+    - role: Ph.D. Researcher in Computer Engineering (Machine Learning)
+      time: 2018 - Present
+      company: Chulalongkorn University
       details: |
-        Describe your role here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        pellentesque eu, pretium quis, sem. Nulla consequat massa quis
-        enim. Donec pede justo. Sed ut perspiciatis unde omnis iste natus
-        error sit voluptatem accusantium doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-        architecto beatae vitae dicta sunt explicabo.
-          - Bullet point
-          - Bullet point
-    - role: Senior Software Engineer
-      time: 2014 - 2015
-      company: Google, London
+        A dissertation research: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network
+        I'm also currently being advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr.Siam Lawawirojwong, and Dr.Panu Srestasathiern
+        My academic also interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning
+        - My Ph.D Publication (ISI Journal, Q1, Tier 1, Impact Factor 4.118, https://www.mdpi.com/2072-4292/11/1/83)
+        - https://dblp.org/pers/hd/p/Panboonyuen:Teerapong
+    - role: Master Researcher (M.Eng.) in Computer Engineering (Machine Learning)
+      time: 2015 - 2016
+      company: Chulalongkorn University
       details: |
-        Describe your role here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        pellentesque eu, pretium quis, sem.
-          - Bullet point
-          - Bullet point
-    - role: UI Developer
-      time: 2012 - 2014
-      company: Amazon, London
+        A master thesis: Semantic Road Segmentation on Remotely-Sensed Images Using Deep Convolutional Neural Networks and Landscape Metrics (Evaluation: Very Good)
+        I am advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr.Siam Lawawirojwong and, Dr.Panu Srestasathiern.
+        - GPAX 4.00/4.00
+        - My master publication (ISI Journal, Q1, Tier 1, Impact Factor 4.118, https://www.mdpi.com/2072-4292/9/7/680)
+        - Best Student Paper Award in International Conference on Computing and Information Technology 2017 (Recent Advances in Information and Communication Technology 2017), https://link.springer.com/book/10.1007/978-3-319-60663-7
+        - http://cuir.car.chula.ac.th/handle/123456789/55593
+        - https://dblp.org/pers/hd/p/Panboonyuen:Teerapong
+    - role: Data Analytics and Computer Technical Support
+      time: 2017 - Present
+      company: Main Shipping Service Co.,Ltd
       details: |
-        Describe your role here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        pellentesque eu, pretium quis, sem.
-          - Bullet point
-          - Bullet point
+        Design and deploy functional networks(WAN, LAN, WLAN) incuding configure and install software, servers, routers and other network devices. Maintain complete technical documentation and suggest improvements to network performance, capacity and scalability.
+        Customer segmentation and retargeting using machine learning
+    - role: Pathway Assistant in Data Science, Data Analytics, and Big Data Program
+      time: 2018 - 2020
+      company: Bangkok Innovation House Co., Ltd
+      details: |
+        PA 
+    - role: Freelance in Artificial Intelligence, Computer Vision on Remote Sening Corpus
+      time: 2016 - 2019
+      company: GISTDA (Geo-informatics and Space Technology Development Agency)
+      details: |
+        Research and training all types of satellite images applying deep Convolutional Neural Network (CNNs) methods
+    - role: Python Programming Tutor
+      time: 2019
+      company: NetDesign
+      details: |
+        Teaches: Python Programming at Net Design, Siam Paragon, 4A floor (Bangkok, Thailand) every Saturday morning
+    - role: Freelance in Artificial intelligence, Data Mining with Hatchability Prediction in Chickens
+      time: 2018 - 2020
+      company: CENTACO FARM COMPANY LIMITED
+      details: |
+        - Implement and design hatchability prediction model of broiler chickens by using regression model
+        - Problem solving for a quadratic relationship between the predicted hatchability and the age of the breeders
+    - role: Teacher Assistant (Python and Java Programming)
+      time: 2017 - 2018
+      company: International School of Engineering, Chulalongkorn University
+      details: |
+        - 2140101 Computer Programming (Java, ISE, Chulalongkorn University)
+        - 2110101 Computer Programming (Python, 1st year bachelor of Faculty of Engineering, Chulalongkorn University)
+        - 2110215 Programming Methodology(Java, 2nd year bachelor of Computer Engineering, Chulalongkorn University)
+        - 2110627 Big Data Tools (Master Student)
+        - 2110446 Data Science and Data Engineering (3rd year bachelor of Computer Engineering, Chulalongkorn University)
+
+
 projects:
     title: Projects
     intro: >
-      You can list your side projects or open source libraries in this
-      section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
+      You can find my project via https://github.com/kaopanboonyuen
     assignments:
-      - title: Velocity
-        link: "#hook"
-        tagline: "A responsive website template designed to help startups promote, market and sell their products."
+      - title: Transportation Mobility Factor Extraction Using Image Recognition Techniques
+        link: "https://github.com/kaopanboonyuen/TransportationMobilityFactorExtraction"
+        tagline: "we propose a method that automatically extract mobility indicators using two image recognition techniques: Semantic Segmentation and Object Recognition."
 
-      - title: DevStudio
-        link: "#"
+      - title: Remote Sensing Corpora Using Feature Fusion-Based Enhanced Global Convolutional Network with High-Resolution Representations and Depthwise Atrous Convolution
+        link: "https://github.com/kaopanboonyuen/SemanticLabelingOnRemoteSensingCorpora"
         tagline: "A responsive website template designed to help web developers/designers market their services."
-
-      - title: Tempo
-        link: "#"
-        tagline: "A responsive website template designed to help startups promote their products or services and to attract users &amp; investors"
-
-      - title: Atom
-        link: "#"
-        tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
-
-      - title: Delta
-        link: "#"
-        tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
 
 publications:
     title: Publications
     intro: |
-      You can list your publications in this section. Lorem ipsum dolor sit
-      amet, consectetur adipiscing elit. Vestibulum et ligula in nunc
-      bibendum fringilla a eu lectus.
+      You can find my publications via https://www.researchgate.net/profile/Teerapong_Panboonyuen
     papers:
-      - title: The Art of Computer Programming
-        link: "#"
-        authors: Donald E. Knuth
-        conference: Addison-Wesley, 1968
+      - title: Road segmentation of remotely-sensed images using deep convolutional neural networks with landscape metrics and conditional random fields
+        link: "https://www.mdpi.com/2072-4292/9/7/680/htm"
+        authors: Panboonyuen, Teerapong, et al.
+        conference: Remote Sensing 9.7 (2017), 680.
 
-      - title: "Genetic Programming III: Darwinian Invention &amp; Problem Solving"
-        link: "#"
-        authors: Koza, J.R., Andre, D., Bennett, F.H., Keane, M.A.
-        conference: "Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edn. (1999)"
+      - title: Semantic Segmentation on Remotely Sensed Images Using an Enhanced Global Convolutional Network with Channel Attention and Domain Specific Transfer Learning
+        link: "https://www.mdpi.com/2072-4292/11/1/83/htm"
+        authors: Panboonyuen, Teerapong, et al.
+        conference: Remote Sensing 11.1 (2019), 83.
 
-      - title: A syntax directed compiler for Algol 60
+      - title: An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery
+        link: "https://link.springer.com/chapter/10.1007/978-3-319-60663-7_18"
+        authors: Panboonyuen, Teerapong, et al.
+        conference: International Conference on Computing and Information Technology. Springer, Cham, 2017.    
+
+      - title: Image Vectorization of Road Satellite Data Sets
+        link: "http://research.gistda.or.th/assets/uploads/pdfs/9ee49-8.-.pdf"
+        authors: Panboonyuen, Teerapong, et al.
+        conference: Journal of Remote Sensing and GIS Association of Thailand (2017)
+
+      - title: Semantic Labeling on Remotely Sensed Corpora Using Feature Fusion-Based Enhanced Global Convolutional Network with High-Resolution Representations and Depthwise Atrous Convolution
         link: "#"
-        authors: Edgar T. Irons
-        conference: "Comm. ACM 4 (1961), 51–55"
+        authors: Panboonyuen, Teerapong, et al.
+        conference: Pending Review on Remote Sensing (2020)
+
+      - title: "Road map extraction from satellite imagery using connected component analysis and landscape metrics"
+        link: "https://ieeexplore.ieee.org/document/8258330/"
+        authors: Jitkajornwanich, K., Vateekul, P., Panboonyuen, T., Lawawirojwong, S., & Srisonphan, S.
+        conference: "IEEE International Conference on Big Data (Big Data) (pp. 3435-3442). IEEE. (2017)"
+
+      - title: Real-Time Polyps Segmentation for Colonoscopy Video Frames Using Compressed Fully Convolutional Network
+        link: "https://link.springer.com/chapter/10.1007/978-3-319-73603-7_32"
+        authors:  Wichakam, I., Panboonyuen, T., Udomcharoenchaikit, C., & Vateekul, P.
+        conference: "International Conference on Multimedia Modeling (pp. 393-404). Springer, Cham. (2018)"
+
+      - title: "Semantic Segmentation On Medium-Resolution Satellite Images Using Deep Convolutional Networks With Remote Sensing Derived Indices"
+        link: "https://ieeexplore.ieee.org/document/8457378/"
+        authors: Chantharaj, S., Pornratthanapong, K., Chitsinpchayakun, P., Panboonyuen, T., Vateekul, P., Lawavirojwong, S., ... & Jitkajornwanich, K.
+        conference: "15th International Joint Conference on Computer Science and Software Engineering (JCSSE) (pp. 1-6). IEEE. (2018)"
+
+      - title: Transportation Mobility Factor Extraction Using Image Recognition Techniques
+        link: "https://ieeexplore.ieee.org/document/9018796"
+        authors:  Kantavat, P., Hayashi, Y., City, G. S., Kijsirikul, B., Panboonyuen, T., Achariyaviriya, W., ... & Vateekul, P.
+        conference: "First International Conference on Smart Technology & Urban Development (STUD 2019)"
+
 
 skills:
     title: Skills &amp; Proficiency
