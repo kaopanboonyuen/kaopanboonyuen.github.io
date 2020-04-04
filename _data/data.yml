@@ -130,10 +130,10 @@ experiences:
       details: |
         A dissertation research: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network.
         I'm also currently being advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr.Siam Lawawirojwong, and Dr.Panu Srestasathiern.
-        My academic also interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning
+        My academic also interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning.
         - My Ph.D Publication (ISI Journal, Q1, Tier 1, Impact Factor 4.118, https://www.mdpi.com/2072-4292/11/1/83)
         - https://dblp.org/pers/hd/p/Panboonyuen:Teerapong
-    - role: Master Researcher (M.Eng.) in Computer Engineering (Machine Learning)
+    - role: Master Researcher (M.Eng.) in Computer Engineering
       time: 2015 - 2016
       company: Chulalongkorn University
       details: |
@@ -159,7 +159,7 @@ experiences:
       details: |
         - Writing python script to download for various data sources: Sentinel-2 L1C, Sentinel-2 L2A, Sentinel-1, Landsat 8, MODIS, DEM.
         - Create radiometrically terrain correct (RTC) on sentinel-1 data using python 
-    - role: Freelance in Artificial intelligence, Data Mining with Hatchability Prediction in Chickens
+    - role: Data Science with Hatchability Prediction Project
       time: 2018 - 2020
       company: Centaco Farm Company Limited
       details: |
@@ -171,12 +171,12 @@ experiences:
       details: |
         - Creating the AI model and computer vision technique to segmenting multi-objects on aerial and satellite image.
         - Constructing and Visualising the large database of the agricultural corpora for research.
-    - role: Freelance in Artificial Intelligence, Computer Vision on Remote Sening Corpus
+    - role: Artificial Intelligence Developer
       time: 2016 - 2019
       company: GISTDA (Geo-informatics and Space Technology Development Agency)
       details: |
         Research and training all types of satellite images applying deep Convolutional Neural Network (CNNs) methods
-    - role: Pathway Assistant in Data Science, Data Analytics, and Big Data Program
+    - role: Pathway Assistant in Data Science and Big Data Program
       time: 2018 - 2020
       company: Bangkok Innovation House Co., Ltd
       details: |
@@ -188,7 +188,7 @@ experiences:
         - Government Housing Bank
         - Metropolitan Waterworks Authority (MWA)
         - Western Digital (WD)
-    - role: Python Programming Tutor    
+    - role: Python Programming Trainer    
       time: 2018-2019
       company: NetDesign School
       details: |
