@@ -142,7 +142,7 @@ experiences:
         - Invited Reviewer of IEEE Access (Tier1, Q1, ISI Journal)
         - Invited Reviewer of IEEE Transactions on Geoscience and Remote Sensing (Tier1, Q1, ISI Journal)
     - role: Data Technical Support
-      time: 2020
+      time: 2019-2020
       company: Puey Ungphakorn Institute for Economic Research Bank of Thailand
       details: |
         - Writing python script to download for various data sources: Sentinel-2 L1C, Sentinel-2 L2A, Sentinel-1, Landsat 8, MODIS, DEM.
@@ -177,9 +177,8 @@ experiences:
         - Government Housing Bank
         - Metropolitan Waterworks Authority (MWA)
         - Western Digital (WD)
-
-      time: 2019
     - role: Python Programming Tutor    
+      time: 2018-2019
       company: NetDesign School
       details: |
         Teaches: Python Programming at Net Design, Siam Paragon, 4A floor (Bangkok, Thailand) every Saturday morning
