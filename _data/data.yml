@@ -155,7 +155,7 @@ experiences:
         - Invited Reviewer of IEEE Transactions on Geoscience and Remote Sensing (Tier1, Q1, ISI Journal)
     - role: Data Technical Support
       time: 2019-2020
-      company: Puey Ungphakorn Institute for Economic Research Bank of Thailand
+      company: Puey Ungphakorn Institute for Economic Research (Bank of Thailand)
       details: |
         - Writing python script to download for various data sources: Sentinel-2 L1C, Sentinel-2 L2A, Sentinel-1, Landsat 8, MODIS, DEM.
         - Create radiometrically terrain correct (RTC) on sentinel-1 data using python 
@@ -176,14 +176,13 @@ experiences:
       time: 2016 - 2019
       company: GISTDA (Geo-informatics and Space Technology Development Agency)
       details: |
-        Research and training all types of satellite images applying deep Convolutional Neural Network (CNNs) methods
+        Research and training all types of satellite images applying deep Convolutional Neural Network (CNNs) methods.
     - role: Pathway Assistant in Data Science Program
       time: 2018 - 2020
       company: Bangkok Innovation House Co., Ltd
       details: |
         Data science pathway team of Chula Mooc achieve
-        with Volunteer Teaching
-        - Practical Data Analytics at
+        with Volunteer Teaching (Practical Data Analytics) at
         - Metropolitan Electricity Authority (MEA)
         - Kasikorn Bank Public Company Limited
         - Government Housing Bank
