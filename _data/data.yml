@@ -44,6 +44,17 @@ sidebar:
       # - item: Cooking
       #   link:
 
+      # - degree: B.Eng. in Computer Engineering
+      # university: King Mongkut's University of Technology North Bangkok
+      # time: 2012 - 2015
+      # details: |
+      #    Activities and Societies: Computer Engineering (Cpr.E 9)
+      #   Graduate research in the laboratory of Waranyu Wongseree
+      #   - Designed and built computer vision algorithms to detect the occurrence of lumbar spinal stenosis.
+      #   - My academic interests mainly Computer Vision on Lumbar Spinal Stenosis corpus
+      #   - I am advised by Professor Waranyu Wongseree
+      #   - Department of Electrical and Computer Engineering, Faculty of Engineering, King Mongkut's University of Technology North Bangkok
+
 career-profile:
     title: Career Profile
     summary: |
@@ -98,17 +109,15 @@ education:
       university: King Mongkut's University of Technology North Bangkok
       time: 2012 - 2015
       details: |
-         Activities and Societies: Computer Engineering (Cpr.E 9)
-        Graduate research in the laboratory of Waranyu Wongseree
-        - Designed and built computer vision algorithms to detect the occurrence of lumbar spinal stenosis.
+         Activities and Societies: Computer Engineering (Cpr.E 9) 
+        - I am advised by Professor Waranyu Wongseree 
         - My academic interests mainly Computer Vision on Lumbar Spinal Stenosis corpus
-        - I am advised by Professor Waranyu Wongseree
         - Department of Electrical and Computer Engineering, Faculty of Engineering, King Mongkut's University of Technology North Bangkok
     - degree: Pre-Engineering Thai-German School
       university: King Mongkut's University of Technology North Bangkok
       time: 2010 - 2012
       details: |
-         Activities and Societies: Pre-Electrical Technician (PET21)
+         Activities and Societies: Pre-Electrical Technician (PET 21)
         - Pre-Engineering Thai-German School Department College of Industrial Technology
         - My Secondary School (Senior High School)
         - King Mongkut's University of Technology North Bangkok
@@ -118,8 +127,8 @@ experiences:
       time: 2018 - Present
       company: Chulalongkorn University
       details: |
-        A dissertation research: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network
-        I'm also currently being advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr.Siam Lawawirojwong, and Dr.Panu Srestasathiern
+        A dissertation research: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network.
+        I'm also currently being advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr.Siam Lawawirojwong, and Dr.Panu Srestasathiern.
         My academic also interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning
         - My Ph.D Publication (ISI Journal, Q1, Tier 1, Impact Factor 4.118, https://www.mdpi.com/2072-4292/11/1/83)
         - https://dblp.org/pers/hd/p/Panboonyuen:Teerapong
@@ -127,7 +136,7 @@ experiences:
       time: 2015 - 2016
       company: Chulalongkorn University
       details: |
-        A master thesis: Semantic Road Segmentation on Remotely-Sensed Images Using Deep Convolutional Neural Networks and Landscape Metrics (Evaluation: Very Good)
+        A master thesis: Semantic Road Segmentation on Remotely-Sensed Images Using Deep Convolutional Neural Networks and Landscape Metrics (Evaluation: Very Good).
         I am advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr.Siam Lawawirojwong and, Dr.Panu Srestasathiern.
         - GPAX 4.00/4.00
         - My master publication (ISI Journal, Q1, Tier 1, Impact Factor 4.118, https://www.mdpi.com/2072-4292/9/7/680)
@@ -171,7 +180,7 @@ experiences:
       company: Bangkok Innovation House Co., Ltd
       details: |
         Data science pathway team of Chula Mooc achieve
-        Volunteer Teaching
+        with Volunteer Teaching
         - Practical Data Analytics at
         - Metropolitan Electricity Authority (MEA)
         - Kasikorn Bank Public Company Limited
