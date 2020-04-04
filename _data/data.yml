@@ -7,9 +7,10 @@ sidebar:
     education: True # set to False if you want education in main section instead of in sidebar
 
     # Profile information
-    name: Teerapong Panboonyuen (also known as Kao Panboonyuen)
+    name: Teerapong Panboonyuen 
+    tagline: also known as Kao Panboonyuen
     tagline: Ph.D. Candidate in Computer Engineering (AI, Machine Learning, Deep Learning) at Chulalongkorn University
-    avatar: kao_v1.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+    avatar: kao_v2.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
     email: teerapong.panboonyuen@gmail.com
