@@ -61,12 +61,14 @@ career-profile:
 
       name in Thai: ธีรพงศ์ ปานบุญยืน
             
-      my cv: http://bit.ly/kao_cv
+      - my cv: http://bit.ly/kao_cv
 
-      my publication: https://dblp.org/pers/hd/p/Panboonyuen:Teerapong
+      - my publication (DBLP): https://dblp.org/pers/hd/p/Panboonyuen:Teerapong
 
-      my research gate: https://www.researchgate.net/profile/Teerapong_Panboonyuen
-      
+      - my publication (Google Scholar): https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en
+
+      - my research gate: https://www.researchgate.net/profile/Teerapong_Panboonyuen
+
 education:
     - degree: Ph.D. in Computer Engineering
       university: Chulalongkorn University
