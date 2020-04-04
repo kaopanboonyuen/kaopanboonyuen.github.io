@@ -9,7 +9,7 @@ sidebar:
     # Profile information
     name: Teerapong Panboonyuen 
     tagline: also known as Kao Panboonyuen
-    tagline: Ph.D. Candidate in Computer Engineering (AI, Machine Learning, Deep Learning) at Chulalongkorn University
+    tagline: Ph.D. Student in Computer Engineering, Chulalongkorn University
     avatar: kao_v2.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
@@ -35,25 +35,46 @@ sidebar:
 
 
     interests:
-      - item: Climbing
-        link:
+      - item: ISTHMUS TRIXIE (my music side project) 
+        link: https://soundcloud.com/isthmustrixie
 
-      - item: Snowboarding
-        link:
+      # - item: Snowboarding
+      #   link:
 
-      - item: Cooking
-        link:
+      # - item: Cooking
+      #   link:
 
 career-profile:
     title: Career Profile
     summary: |
-      Summarise your career here lorem ipsum dolor sit amet, consectetuer
-      adipiscing elit. You can [download this free resume/CV template here]().
-      Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque
-      penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      Donec quam felis, ultricies nec, pellentesque eu.
-      Second paragraph if required.
+      Hi there. My name is Kao and I’m currently a Ph.D. candidate, a second year Ph.D. in Computer Engineering (Artificial Intelligence, Machine Learning, Deep Learning) at Chulalongkorn University (Bangkok, Thailand).
+
+      In 2015, I graduated with a B.Eng. degree in Computer Engineering from KMUTNB.
+      In 2016, I graduated a M.Eng. in Computer Engineering from Chulalongkorn University.
+      In 2019, I'll be graduated a Ph.D. in Computer Engineering from here as well, hopefully.
+
+      My primary interests are in practical deep learning and computer vision (especially on remote sensing corpus). I’ll be distilling my own learnings to (expectantly) help machine learning practitioners learn and be able to take advantage of important techniques and technologies faster, better, and more intuitively.
+
+      if you’re interested in me more, please contact me at teerapong.panboonyuen<at>gmail.com.
+
+      name in Thai: ธีรพงศ์ ปานบุญยืน
+      about me: https://kaoisthmus.tumblr.com/
+      my cv: http://bit.ly/kao_cv
+
+      my publication: https://dblp.org/pers/hd/p/Panboonyuen:Teerapong
+      research gate: https://www.researchgate.net/profile/Teerapong_Panboonyuen
 education:
+    - degree: MSc in Computer Science
+      university: University of London
+      time: 2011 - 2012
+      details: |
+        Describe your study here lorem ipsum dolor sit amet, consectetuer
+        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+        sociis natoque penatibus et magnis dis parturient montes, nascetur
+        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+        pretium quis, sem.
+          - Bullet point
+          - Bullet point
     - degree: MSc in Computer Science
       university: University of London
       time: 2011 - 2012
