@@ -10,7 +10,7 @@ sidebar:
     name: Teerapong Panboonyuen 
     tagline: also known as Kao Panboonyuen
     tagline: Ph.D. Student in Computer Engineering, Chulalongkorn University
-    avatar: kao_v2.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+    avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
     email: teerapong.panboonyuen@gmail.com
@@ -47,7 +47,7 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-      Hi there. My name is Kao and I’m currently a Ph.D. candidate, a second year Ph.D. in Computer Engineering (Artificial Intelligence, Machine Learning, Deep Learning) at Chulalongkorn University (Bangkok, Thailand).
+      Hi there. My name is Teerapong Panboonyuen, also known as Kao Panboonyuen (or just Kao), and I’m currently a Ph.D. candidate, a second year Ph.D. in Computer Engineering (Artificial Intelligence, Machine Learning, Deep Learning) at Chulalongkorn University (Bangkok, Thailand).
 
       In 2015, I graduated with a B.Eng. degree in Computer Engineering from KMUTNB.
       In 2016, I graduated a M.Eng. in Computer Engineering from Chulalongkorn University.
@@ -58,6 +58,7 @@ career-profile:
       if you’re interested in me more, please contact me at teerapong.panboonyuen<at>gmail.com.
 
       name in Thai: ธีรพงศ์ ปานบุญยืน
+      
       about me: https://kaoisthmus.tumblr.com/
       my cv: http://bit.ly/kao_cv
 
