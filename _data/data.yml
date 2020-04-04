@@ -55,6 +55,15 @@ sidebar:
       #   - I am advised by Professor Waranyu Wongseree
       #   - Department of Electrical and Computer Engineering, Faculty of Engineering, King Mongkut's University of Technology North Bangkok
 
+      # - degree: Pre-Engineering Thai-German School
+      # university: King Mongkut's University of Technology North Bangkok
+      # time: 2010 - 2012
+      # details: |
+      #    Activities and Societies: Pre-Electrical Technician (PET 21)
+      #   - Pre-Engineering Thai-German School Department College of Industrial Technology
+      #   - My Secondary School (Senior High School)
+      #   - King Mongkut's University of Technology North Bangkok
+
 career-profile:
     title: Career Profile
     summary: |
@@ -105,15 +114,14 @@ education:
         - http://cuir.car.chula.ac.th/handle/123456789/55593
         - Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University
         - My Publication Thesis (Full Text, 2016): http://cuir.car.chula.ac.th/handle/123456789/55593
-
-    - degree: Pre-Engineering Thai-German School
+    - degree: B.Eng. in Computer Engineering
       university: King Mongkut's University of Technology North Bangkok
-      time: 2010 - 2012
+      time: 2012 - 2015
       details: |
-         Activities and Societies: Pre-Electrical Technician (PET 21)
-        - Pre-Engineering Thai-German School Department College of Industrial Technology
-        - My Secondary School (Senior High School)
-        - King Mongkut's University of Technology North Bangkok
+         Activities and Societies: Computer Engineering (Cpr.E 9) 
+        - I am advised by Professor Waranyu Wongseree 
+        - My academic interests mainly Computer Vision on Lumbar Spinal Stenosis corpus
+        - Department of Electrical and Computer Engineering, Faculty of Engineering, King Mongkut's University of Technology North Bangkok
 
 experiences:
     - role: Ph.D. Researcher in Computer Engineering (Machine Learning)
