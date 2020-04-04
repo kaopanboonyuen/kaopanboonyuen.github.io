@@ -9,11 +9,11 @@ sidebar:
     # Profile information
     name: Teerapong Panboonyuen 
     tagline: also known as Kao Panboonyuen
-    tagline: Ph.D. Student in Computer Engineering, Chulalongkorn University
+    tagline: Machine Learning Reseacher
     avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
-    email: teerapong.panboonyuen@gmail.com
+    email: teerapong.panboonyuen at gmail
     # phone: 012 345 6789
     website: https://kaoisthmus.tumblr.com/ #do not add http://
     linkedin: teerapong-panboonyuen
@@ -65,9 +65,9 @@ career-profile:
       my publication: https://dblp.org/pers/hd/p/Panboonyuen:Teerapong
       research gate: https://www.researchgate.net/profile/Teerapong_Panboonyuen
 education:
-    - degree: MSc in Computer Science
-      university: University of London
-      time: 2011 - 2012
+    - degree: Ph.D. Candidate in Computer Engineering
+      university: Chulalongkorn University
+      time: 2017 - 2019
       details: |
         Describe your study here lorem ipsum dolor sit amet, consectetuer
         adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
@@ -189,23 +189,21 @@ skills:
     title: Skills &amp; Proficiency
 
     toolset:
-      - name: Python & Django
+      - name: Python & TensorFlow2 & Pandas & Scikit Learn & More ML libraries
         level: 98%
 
-      - name: Javascript & jQuery
-        level: 98%
+      - name: RapidMiner Studio
+        level: 97%
 
-      - name: Angular
-        level: 98%
+      - name: PowerBI and Tableau
+        level: 97%
 
-      - name: HTML5 & CSS
+      - name: Java
         level: 95%
 
-      - name: Ruby on Rails
-        level: 85%
+      - name: Hadoop and Bid Data Infrastucture
+        level: 90%
 
-      - name: Sketch & Photoshop
-        level: 60%
 
 footer: >
     Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
