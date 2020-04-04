@@ -132,33 +132,53 @@ experiences:
         - Best Student Paper Award in International Conference on Computing and Information Technology 2017 (Recent Advances in Information and Communication Technology 2017), https://link.springer.com/book/10.1007/978-3-319-60663-7
         - http://cuir.car.chula.ac.th/handle/123456789/55593
         - https://dblp.org/pers/hd/p/Panboonyuen:Teerapong
-    - role: Data Analytics and Computer Technical Support
-      time: 2017 - Present
-      company: Main Shipping Service Co.,Ltd
+    - role: Professional Service
+      time: 2018-Present
+      company: IEEE Journal and Science Journal
       details: |
-        Design and deploy functional networks(WAN, LAN, WLAN) incuding configure and install software, servers, routers and other network devices. Maintain complete technical documentation and suggest improvements to network performance, capacity and scalability.
-        Customer segmentation and retargeting using machine learning
-    - role: Pathway Assistant in Data Science, Data Analytics, and Big Data Program
+        - Invited Reviewer of International Journal of Remote Sensing (Tier1, Q1, ISI Journal)
+        - Invited Reviewer of Sensors (Q2, Journal)
+        - Invited Reviewer of IEEE Transactions on Industrial Informatics (Q1, ISI Journal)
+        - Invited Reviewer of IEEE Access (Tier1, Q1, ISI Journal)
+        - Invited Reviewer of IEEE Transactions on Geoscience and Remote Sensing (Tier1, Q1, ISI Journal)
+    - role: Data Technical Support
+      time: 2020
+      company: Puey Ungphakorn Institute for Economic Research Bank of Thailand
+      details: |
+        - Writing python script to download for various data sources: Sentinel-2 L1C, Sentinel-2 L2A, Sentinel-1, Landsat 8, MODIS, DEM.
+        - Create radiometrically terrain correct (RTC) on sentinel-1 data using python 
+    - role: Freelance in Artificial intelligence, Data Mining with Hatchability Prediction in Chickens
       time: 2018 - 2020
-      company: Bangkok Innovation House Co., Ltd
+      company: Centaco Farm Company Limited
       details: |
-        PA 
+        - Implement and design hatchability prediction model of broiler chickens by using regression model
+        - Problem solving for a quadratic relationship between the predicted hatchability and the age of the breeders
+    - role: Computer Vision and Data Analytics Developer on Remote Sensing Data
+      time: 2018 - 2020
+      company: Digital Economy Promotion Agency (DEPA)
+      details: |
+        - Creating the AI model and computer vision technique to segmenting multi-objects on aerial and satellite image.
+        - Constructing and Visualising the large database of the agricultural corpora for research.
     - role: Freelance in Artificial Intelligence, Computer Vision on Remote Sening Corpus
       time: 2016 - 2019
       company: GISTDA (Geo-informatics and Space Technology Development Agency)
       details: |
         Research and training all types of satellite images applying deep Convolutional Neural Network (CNNs) methods
-    - role: Python Programming Tutor
+    - role: Pathway Assistant in Data Science, Data Analytics, and Big Data Program
+      time: 2018 - 2020
+      company: Bangkok Innovation House Co., Ltd
+      details: |
+        Data science pathway team of Chula Mooc achieve
       time: 2019
-      company: NetDesign
+    - role: Python Programming Tutor    
+      company: NetDesign School
       details: |
         Teaches: Python Programming at Net Design, Siam Paragon, 4A floor (Bangkok, Thailand) every Saturday morning
-    - role: Freelance in Artificial intelligence, Data Mining with Hatchability Prediction in Chickens
-      time: 2018 - 2020
-      company: CENTACO FARM COMPANY LIMITED
+    - role: Computer Technical Support
+      time: 2017 - Present
+      company: Main Shipping Service Co.,Ltd
       details: |
-        - Implement and design hatchability prediction model of broiler chickens by using regression model
-        - Problem solving for a quadratic relationship between the predicted hatchability and the age of the breeders
+        Design and deploy functional networks(WAN, LAN, WLAN) incuding configure and install software, servers, routers and other network devices. Maintain complete technical documentation and suggest improvements to network performance, capacity and scalability.
     - role: Teacher Assistant (Python and Java Programming)
       time: 2017 - 2018
       company: International School of Engineering, Chulalongkorn University
@@ -168,7 +188,8 @@ experiences:
         - 2110215 Programming Methodology(Java, 2nd year bachelor of Computer Engineering, Chulalongkorn University)
         - 2110627 Big Data Tools (Master Student)
         - 2110446 Data Science and Data Engineering (3rd year bachelor of Computer Engineering, Chulalongkorn University)
-
+        - (Online Course, Head TA) Intro to Data Analytics and Big Data (https://mooc.chula.ac.th/courses/chulamooc2812)
+        - (Online Course, Head TA) Practical Data Analytics Using Rapid Miner (https://mooc.chula.ac.th/courses/chulamooc2813)
 
 projects:
     title: Projects
