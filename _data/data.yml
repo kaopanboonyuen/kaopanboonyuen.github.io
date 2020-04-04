@@ -165,12 +165,13 @@ experiences:
       details: |
         - Implement and design hatchability prediction model of broiler chickens by using regression model
         - Problem solving for a quadratic relationship between the predicted hatchability and the age of the breeders
-    - role: Computer Vision and Data Analytics Developer on Remote Sensing Data
+    - role: Computer Vision and Data Analytics Developer
       time: 2018 - 2020
       company: Digital Economy Promotion Agency (DEPA)
       details: |
         - Creating the AI model and computer vision technique to segmenting multi-objects on aerial and satellite image.
         - Constructing and Visualising the large database of the agricultural corpora for research.
+        - Play with remote sensing corpora
     - role: Artificial Intelligence Developer
       time: 2016 - 2019
       company: GISTDA (Geo-informatics and Space Technology Development Agency)
@@ -217,11 +218,16 @@ projects:
     assignments:
       - title: Transportation Mobility Factor Extraction Using Image Recognition Techniques
         link: "https://github.com/kaopanboonyuen/TransportationMobilityFactorExtraction"
-        tagline: "we propose a method that automatically extract mobility indicators using two image recognition techniques: Semantic Segmentation and Object Recognition."
+        tagline: "We propose a method that automatically extract mobility indicators using two image recognition techniques: Semantic Segmentation and Object Recognition."
 
-      - title: Remote Sensing Corpora Using Feature Fusion-Based Enhanced Global Convolutional Network with High-Resolution Representations and Depthwise Atrous Convolution
+      - title: Semantic Labeling on Remote Sensing Corpora using Deep Learning
         link: "https://github.com/kaopanboonyuen/SemanticLabelingOnRemoteSensingCorpora"
-        tagline: "A responsive website template designed to help web developers/designers market their services."
+        tagline: "We present a novel global convolutional network for segmenting multi-objects from aerial and satellite images."
+
+      - title: Flood Risk Assessment in Ayutthaya Province
+        link: "https://github.com/kaopanboonyuen/Rainfall-Prediction-A-Machine-Learning-Approach"
+        tagline: "We described a more efficient method to create flood susceptibility map - using Thailand’s Ayutthaya Province as a case study to assess flood prone areas."
+
 
 publications:
     title: Publications
