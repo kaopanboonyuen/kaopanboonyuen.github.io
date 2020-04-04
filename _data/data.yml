@@ -9,7 +9,7 @@ sidebar:
     # Profile information
     name: Teerapong Panboonyuen 
     tagline: also known as Kao Panboonyuen
-    tagline: Computer Vision, Remote Sensing, and Machine Learning Researcher
+    tagline: Machine Learning Researcher
     avatar: Kao_v5_250.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
@@ -52,7 +52,7 @@ career-profile:
       In 2015, I graduated with a B.Eng. degree in Computer Engineering from KMUTNB.
 
       In 2016, I graduated a M.Eng. in Computer Engineering from Chulalongkorn University.
-      
+
       In 2019, I'll be graduated a Ph.D. in Computer Engineering from here as well, hopefully.
 
       My primary interests are in practical deep learning and computer vision (especially on remote sensing corpus). I’ll be distilling my own learnings to (expectantly) help machine learning practitioners learn and be able to take advantage of important techniques and technologies faster, better, and more intuitively.
