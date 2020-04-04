@@ -111,7 +111,12 @@ education:
         - My Secondary School (Senior High School)
         King Mongkut's University of Technology North Bangkok
         
-
+experiences:
+    - role: Ph.D. Researcher in Computer Engineering (Machine Learning)
+      time: 2018 - Present
+      company: Chulalongkorn University
+      details: |
+        A dissertation research: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network
 
 projects:
     title: Projects
