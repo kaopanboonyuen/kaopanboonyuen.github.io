@@ -169,6 +169,15 @@ experiences:
       company: Bangkok Innovation House Co., Ltd
       details: |
         Data science pathway team of Chula Mooc achieve
+
+        Volunteer Teaching
+        - Practical Data Analytics at
+        - Metropolitan Electricity Authority (MEA)
+        - Kasikorn Bank Public Company Limited
+        - Government Housing Bank
+        - Metropolitan Waterworks Authority (MWA)
+        - Western Digital (WD)
+
       time: 2019
     - role: Python Programming Tutor    
       company: NetDesign School
@@ -219,7 +228,7 @@ publications:
         authors: Panboonyuen, Teerapong, et al.
         conference: Remote Sensing 11.1 (2019), 83.
 
-      - title: An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery
+      - title: (Best Paper Student Awards 2017) An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery
         link: "https://link.springer.com/chapter/10.1007/978-3-319-60663-7_18"
         authors: Panboonyuen, Teerapong, et al.
         conference: International Conference on Computing and Information Technology. Springer, Cham, 2017.    
