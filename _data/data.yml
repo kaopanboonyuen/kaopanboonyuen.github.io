@@ -158,13 +158,13 @@ experiences:
         - Invited Reviewer of IEEE Access (Tier1, Q1, ISI Journal)
         - Invited Reviewer of IEEE Transactions on Geoscience and Remote Sensing (Tier1, Q1, ISI Journal)
     - role: Data Technical Support
-      time: 2019-2020
+      time: 2020 (February to April)
       company: Puey Ungphakorn Institute for Economic Research (Bank of Thailand)
       details: |
         - Writing python script to download for various data sources: Sentinel-2 L1C, Sentinel-2 L2A, Sentinel-1, Landsat 8, MODIS, DEM.
         - Create radiometrically terrain correct (RTC) on sentinel-1 data using python 
     - role: Data Science with Hatchability Prediction Project
-      time: 2018 - 2020
+      time: 2019 - 2020
       company: Centaco Farm Company Limited
       details: |
         - Implement and design hatchability prediction model of broiler chickens by using regression model
@@ -194,7 +194,7 @@ experiences:
         - Metropolitan Waterworks Authority (MWA)
         - Western Digital (WD)
     - role: Python Programming Trainer    
-      time: 2018-2019
+      time: 2019 (October to December)
       company: NetDesign School
       details: |
         Teaches: Python Programming at Net Design, Siam Paragon, 4A floor (Bangkok, Thailand) every Saturday morning
@@ -204,7 +204,7 @@ experiences:
       details: |
         Design and deploy functional networks(WAN, LAN, WLAN) incuding configure and install software, servers, routers and other network devices. Maintain complete technical documentation and suggest improvements to network performance, capacity and scalability.
     - role: Teacher Assistant (Python and Java Programming)
-      time: 2017 - 2018
+      time: 2017 - 2020
       company: International School of Engineering, Chulalongkorn University
       details: |
         - 2140101 Computer Programming (Java, ISE, Chulalongkorn University)
