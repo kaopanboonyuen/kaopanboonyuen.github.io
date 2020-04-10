@@ -73,7 +73,7 @@ career-profile:
 
       In 2016, I graduated a M.Eng. in Computer Engineering from Chulalongkorn University.
 
-      In 2019, I'll be graduated a Ph.D. in Computer Engineering from here as well, hopefully.
+      In 2020, I'll be graduated a Ph.D. in Computer Engineering from here as well, hopefully.
 
       My primary interests are in practical deep learning and computer vision (especially on remote sensing corpus). I’ll be distilling my own learnings to (expectantly) help machine learning practitioners learn and be able to take advantage of important techniques and technologies faster, better, and more intuitively.
 
@@ -87,19 +87,22 @@ career-profile:
 
       - my publication (Google Scholar): https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en
 
+      - my ORCID: https://orcid.org/0000-0001-8464-4476
+
       - my research gate: https://www.researchgate.net/profile/Teerapong_Panboonyuen
 
 education:
     - degree: Ph.D. in Computer Engineering
       university: Chulalongkorn University
-      time: 2017 - 2019
+      time: 2017 - 2020
       details: |
         Activities and Societies: The 100th Anniversary Chulalongkorn University Fund for Doctoral Scholarship. Machine Intelligence and Knowledge Discovery Lab (MIND Lab). 
         Designed and built deep encoder-decoder networks for semantic segmentation on satellite images.
         - A dissertation proposal: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network
         - I'm also currently being advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr.Siam Lawawirojwong, and Dr.Panu Srestasathiern.
         - My academic also interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning
-        - My Ph.D Publication (ISI Journal, Q1, Tier 1, Impact Factor 4.118, https://www.mdpi.com/2072-4292/11/1/83)
+        - My Ph.D Publication (My 2nd Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.406, https://www.mdpi.com/)
+        - My Ph.D Publication (My 3rd Journal, ISI Journal, Q1, Tier 1, Impact Factor 4.118, https://www.mdpi.com/2072-4292/11/1/83)
         - Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University
     - degree: M.Eng. in Computer Engineering
       university: Chulalongkorn University
@@ -109,14 +112,14 @@ education:
         - A master thesis: Semantic Road Segmentation on Remotely-Sensed Images Using Deep Convolutional Neural Networks and Landscape Metrics (Evaluation: Very Good)
         - I am advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr.Siam Lawawirojwong and, Dr.Panu Srestasathiern.
         - GPAX 4.00/4.00  
-        - My master publication (ISI Journal, Q1, Tier 1, Impact Factor 4.118, https://www.mdpi.com/2072-4292/9/7/680)
+        - My Master Publication (My 1st Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.244, https://www.mdpi.com/2072-4292/9/7/680)
         - Best Student Paper Award in International Conference on Computing and Information Technology 2017 (Recent Advances in Information and Communication Technology 2017), https://link.springer.com/book/10.1007/978-3-319-60663-7
         - http://cuir.car.chula.ac.th/handle/123456789/55593
         - Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University
         - My Publication Thesis (Full Text, 2016): http://cuir.car.chula.ac.th/handle/123456789/55593
     - degree: B.Eng. in Computer Engineering
       university: King Mongkut's University of Technology North Bangkok
-      time: 2012 - 2015
+      time: 2011 - 2015
       details: |
          Activities and Societies: Computer Engineering (Cpr.E 9) 
         - I am advised by Professor Waranyu Wongseree 
@@ -133,7 +136,8 @@ experiences:
         My academic also interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning.
         - The 100th Anniversary Chulalongkorn University Fund for Doctoral Scholarship
         - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
-        - My Ph.D Publication (ISI Journal, Q1, Tier 1, Impact Factor 4.118, https://www.mdpi.com/2072-4292/11/1/83)
+        - My Ph.D Publication (My 2nd Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.406, https://www.mdpi.com/2072-4292/11/1/83)
+        - My Ph.D Publication (My 3rd Journal, ISI Journal, Q1, Tier 1, Impact Factor 4.118, https://www.mdpi.com)
         - https://dblp.org/pers/hd/p/Panboonyuen:Teerapong
     - role: Master Researcher (M.Eng.) in Computer Engineering
       time: 2015 - 2016
@@ -144,7 +148,7 @@ experiences:
         - H.M. the King Bhumibhol Adulyadej's 72nd Birthday Anniversary Scholarship
         - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
         - GPAX 4.00/4.00
-        - My master publication (ISI Journal, Q1, Tier 1, Impact Factor 4.118, https://www.mdpi.com/2072-4292/9/7/680)
+        - My Master Publication (My 1st Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.244, https://www.mdpi.com/2072-4292/9/7/680)
         - Best Student Paper Award in International Conference on Computing and Information Technology 2017 (Recent Advances in Information and Communication Technology 2017), https://link.springer.com/book/10.1007/978-3-319-60663-7
         - My Publication Thesis (Full Text, 2016): http://cuir.car.chula.ac.th/handle/123456789/55593
         - https://dblp.org/pers/hd/p/Panboonyuen:Teerapong
