@@ -240,7 +240,7 @@ projects:
 publications:
     title: Publications
     intro: |
-      You can find my publications via [this link](https://www.researchgate.net/profile/Teerapong_Panboonyuen)
+      You can find my publications via [**this link**](https://www.researchgate.net/profile/Teerapong_Panboonyuen)
     papers:
       - title: Road segmentation of remotely-sensed images using deep convolutional neural networks with landscape metrics and conditional random fields
         link: "https://www.mdpi.com/2072-4292/9/7/680/htm"
