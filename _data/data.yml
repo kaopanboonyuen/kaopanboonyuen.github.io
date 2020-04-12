@@ -136,7 +136,7 @@ experiences:
         - The 100th Anniversary Chulalongkorn University Fund for Doctoral Scholarship
         - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
         - My Ph.D. Publication (My 2nd Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.406, [https://www.mdpi.com/2072-4292/11/1/83](https://www.mdpi.com/2072-4292/11/1/83)) Special Issue "Convolutional Neural Networks Applications in Remote Sensing"
-        - My Ph.D. Publication (My 3rd Journal, ISI Journal, Q1, Tier 1, Impact Factor 4.118, [https://www.mdpi.com](https://www.mdpi.com)) Special Issue "Advanced Deep Learning Strategies for the Analysis of Remote Sensing Images"
+        - My Ph.D. Publication (My 3rd Journal, ISI Journal, Q1, Tier 1, Impact Factor 4.118, [https://www.mdpi.com/2072-4292/12/8/1233](https://www.mdpi.com/2072-4292/12/8/1233)) Special Issue "Advanced Deep Learning Strategies for the Analysis of Remote Sensing Images"
         - Certificate of Fundamentals of Deep Learning for Computer Vision (NVIDIA): [**this link**](https://bit.ly/kao_certificated)
         - [https://dblp.org/pers/hd/p/Panboonyuen:Teerapong](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
     - role: Master Researcher (M.Eng.) in Computer Engineering
@@ -253,9 +253,9 @@ publications:
         conference: Remote Sensing 11.1 (2019), 83.
 
       - title: Semantic Labeling in Remote Sensing Corpora Using Feature Fusion-Based Enhanced Global Convolutional Network with High-Resolution Representations and Depthwise Atrous Convolution
-        link: "#"
+        link: "https://www.mdpi.com/2072-4292/12/8/1233"
         authors: Panboonyuen, Teerapong, et al.
-        conference: Remote Sensing (2020)
+        conference: Remote Sensing 12 (2020). 1233.
 
       - title: (Best Paper Student Awards 2017) An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery
         link: "https://link.springer.com/chapter/10.1007/978-3-319-60663-7_18"
