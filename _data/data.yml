@@ -71,25 +71,25 @@ career-profile:
 
       In 2015, I graduated with a B.Eng. in Computer Engineering from KMUTNB.
 
-      In 2016, I graduated a M.Eng. in Computer Engineering from Chulalongkorn University.
+      In 2016, I graduated with a M.Eng. in Computer Engineering from Chulalongkorn University.
 
       In 2020, I'll be graduated a Ph.D. in Computer Engineering from Chulalongkorn University as well, hopefully.
 
       My primary interests are in practical deep learning and computer vision (especially on remote sensing corpus). I’ll be distilling my own learnings to (expectantly) help machine learning practitioners learn and be able to take advantage of important techniques and technologies faster, better, and more intuitively.
 
-      if you’re interested in me more, please contact me via teerapong.panboonyuen (at) gmail (dot) com
+      Summaries of my academic, industry, and teaching experience can be found [**here**](https://bit.ly/panboonyuen_cv), as well as a small collection of [**my music, a side project **](https://soundcloud.com/kao_isthmus). Please refer to my [**resume**](https://bit.ly/panboonyuen_cv) for additional information.
 
       name in Thai: ธีรพงศ์ ปานบุญยืน (เก้า)
             
-      - **my curriculum vitae (CV)**: [this link](https://bit.ly/panboonyuen_cv)
+      - my curriculum vitae **(CV)**: [this link](https://bit.ly/panboonyuen_cv)
 
-      - **my publication (DBLP)**: [this link](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
+      - my publication **(DBLP)**: [this link](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
 
-      - **my publication (Google Scholar)**: [this link](https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en)
+      - my publication **(Google Scholar)**: [this link](https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en)
 
-      - **my ORCID**: [this link](https://orcid.org/0000-0001-8464-4476)
+      - my **ORCID**: [this link](https://orcid.org/0000-0001-8464-4476)
 
-      - **my research gate**: [this link](https://www.researchgate.net/profile/Teerapong_Panboonyuen)
+      - my research gate **(RG)**: [this link](https://www.researchgate.net/profile/Teerapong_Panboonyuen)
 
 education:
     - degree: Ph.D. in Computer Engineering
@@ -132,7 +132,7 @@ experiences:
       details: |
         A dissertation research: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network.
         I'm also currently being advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr. Siam Lawawirojwong, and Dr. Panu Srestasathiern.
-        My academic also interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning.
+        My academic interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning.
         - The 100th Anniversary Chulalongkorn University Fund for Doctoral Scholarship
         - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
         - My Ph.D. Publication (My 2nd Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.406, [https://www.mdpi.com/2072-4292/11/1/83](https://www.mdpi.com/2072-4292/11/1/83)) Special Issue "Convolutional Neural Networks Applications in Remote Sensing"
@@ -240,7 +240,7 @@ projects:
 publications:
     title: Publications
     intro: |
-      You can find my publications via [https://www.researchgate.net/profile/Teerapong_Panboonyuen](https://www.researchgate.net/profile/Teerapong_Panboonyuen)
+      You can find my publications via [this link](https://www.researchgate.net/profile/Teerapong_Panboonyuen)
     papers:
       - title: Road segmentation of remotely-sensed images using deep convolutional neural networks with landscape metrics and conditional random fields
         link: "https://www.mdpi.com/2072-4292/9/7/680/htm"
