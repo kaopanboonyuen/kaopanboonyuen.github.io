@@ -81,7 +81,7 @@ career-profile:
 
       name in Thai: ธีรพงศ์ ปานบุญยืน (เก้า)
             
-      - my cv: http://bit.ly/kao_cv
+      - my cv: <a href="http://bit.ly/kao_cv" target="_blank" rel="nofollow">http://bit.ly/kao_cv</a>
 
       - my publication (DBLP): https://dblp.org/pers/hd/p/Panboonyuen:Teerapong
 
@@ -162,7 +162,7 @@ experiences:
         - Invited Reviewer of IEEE Access (Tier1, Q1, ISI Journal)
         - Invited Reviewer of IEEE Transactions on Geoscience and Remote Sensing (Tier1, Q1, ISI Journal)
     - role: Data Technical Support
-      time: 2020 (February to April)
+      time: 2020 (February to March)
       company: Puey Ungphakorn Institute for Economic Research (Bank of Thailand)
       details: |
         - Writing python script to download for various data sources: Sentinel-2, Sentinel-1, Landsat 8
@@ -181,7 +181,7 @@ experiences:
         - Constructing and Visualising the large database of the agricultural corpora for research
         - Play with remote sensing corpora
     - role: Artificial Intelligence Developer
-      time: 2016 - 2019
+      time: 2016 - 2020
       company: GISTDA (Geo-informatics and Space Technology Development Agency)
       details: |
         Research and training all types of satellite images applying deep Convolutional Neural Network (CNNs) methods
