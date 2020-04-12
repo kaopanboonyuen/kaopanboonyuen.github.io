@@ -255,7 +255,7 @@ publications:
       - title: Semantic Labeling in Remote Sensing Corpora Using Feature Fusion-Based Enhanced Global Convolutional Network with High-Resolution Representations and Depthwise Atrous Convolution
         link: "https://www.mdpi.com/2072-4292/12/8/1233"
         authors: Panboonyuen, Teerapong, et al.
-        conference: Remote Sensing 12 (2020). 1233.
+        conference: Remote Sensing 12 (2020), 1233.
 
       - title: (Best Paper Student Awards 2017) An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery
         link: "https://link.springer.com/chapter/10.1007/978-3-319-60663-7_18"
