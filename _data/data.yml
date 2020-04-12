@@ -223,7 +223,7 @@ experiences:
 projects:
     title: Projects
     intro: >
-      You can find my project via [https://github.com/kaopanboonyuen](https://github.com/kaopanboonyuen)
+      You can find my project via https://github.com/kaopanboonyuen
     assignments:
       - title: Transportation Mobility Factor Extraction Using Image Recognition Techniques
         link: "https://github.com/kaopanboonyuen/TransportationMobilityFactorExtraction"
