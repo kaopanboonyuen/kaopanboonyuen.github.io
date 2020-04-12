@@ -173,18 +173,18 @@ experiences:
       details: |
         - Implement and design hatchability prediction model of broiler chickens by using regression model
         - Problem solving for a quadratic relationship between the predicted hatchability and the age of the breeders
-    - role: Research Assistant
+    - role: Computer Vision and Data Analytics Developer
       time: 2018 - 2020
       company: Digital Economy Promotion Agency (DEPA)
       details: |
-        - Creating the AI model and computer vision technique to segmenting multi-objects on aerial and satellite image
-        - Constructing and Visualising the large database of the agricultural corpora for research
+        - Creating the AI model and computer vision technique to segmenting multi-objects on aerial and satellite image.
+        - Constructing and Visualising the large database of the agricultural corpora for research.
         - Play with remote sensing corpora
     - role: Artificial Intelligence Developer
       time: 2016 - 2019
       company: GISTDA (Geo-informatics and Space Technology Development Agency)
       details: |
-        Research and training all types of satellite images applying deep Convolutional Neural Network (CNNs) methods
+        Research and training all types of satellite images applying deep Convolutional Neural Network (CNNs) methods.
         - I am currently being advised by Dr. Siam Lawawirojwong and Dr. Panu Srestasathiern from here.
     - role: Pathway Assistant in Data Science Program
       time: 2018 - 2020
@@ -206,15 +206,11 @@ experiences:
       time: 2017 - Present
       company: Main Shipping Service Co.,Ltd
       details: |
-        Design and deploy functional networks(WAN, LAN, WLAN) including configure and install software, servers, routers and other network devices. Maintain complete technical documentation and suggest improvements to network performance, capacity and scalability
+        Design and deploy functional networks(WAN, LAN, WLAN) including configure and install software, servers, routers and other network devices. Maintain complete technical documentation and suggest improvements to network performance, capacity and scalability.
     - role: Teacher Assistant (Python and Java Programming)
       time: 2017 - 2020
       company: International School of Engineering, Chulalongkorn University
       details: |
-        Instructed the inaugural course on data science, offered online
-        Helped develop the course content and held regular teaching live sessions
-        Co-instructed the annual offering on machine learning to undergraduate/graduate students
-        Revised the course content to include hands-on experience with Python programming
         - 2140101 Computer Programming (Java, ISE, Chulalongkorn University)
         - 2110101 Computer Programming (Python, 1st year bachelor of Faculty of Engineering, Chulalongkorn University)
         - 2110215 Programming Methodology(Java, 2nd year bachelor of Computer Engineering, Chulalongkorn University)
@@ -256,11 +252,6 @@ publications:
         authors: Panboonyuen, Teerapong, et al.
         conference: Remote Sensing 11.1 (2019), 83.
 
-      - title: Semantic Labeling in Remote Sensing Corpora Using Feature Fusion-Based Enhanced Global Convolutional Network with High-Resolution Representations and Depthwise Atrous Convolution
-        link: "#"
-        authors: Panboonyuen, Teerapong, et al.
-        conference: Remote Sensing (2020)
-
       - title: (Best Paper Student Awards 2017) An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery
         link: "https://link.springer.com/chapter/10.1007/978-3-319-60663-7_18"
         authors: Panboonyuen, Teerapong, et al.
@@ -270,6 +261,11 @@ publications:
         link: "http://research.gistda.or.th/assets/uploads/pdfs/9ee49-8.-.pdf"
         authors: Panboonyuen, Teerapong, et al.
         conference: Journal of Remote Sensing and GIS Association of Thailand (2017)
+
+      - title: Semantic Labeling on Remotely Sensed Corpora Using Feature Fusion-Based Enhanced Global Convolutional Network with High-Resolution Representations and Depthwise Atrous Convolution
+        link: "#"
+        authors: Panboonyuen, Teerapong, et al.
+        conference: Pending Review on Remote Sensing (2020)
 
       - title: "Road map extraction from satellite imagery using connected component analysis and landscape metrics"
         link: "https://ieeexplore.ieee.org/document/8258330/"
