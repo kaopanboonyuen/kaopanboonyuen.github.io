@@ -165,8 +165,8 @@ experiences:
       time: 2020 (February to March)
       company: Puey Ungphakorn Institute for Economic Research (Bank of Thailand)
       details: |
-        - Writing python script to download for various data sources: Sentinel-2, Sentinel-1, Landsat 8
-        - Create radiometrically terrain correct (RTC) on sentinel data using python 
+        - Writing python script to download for various data sources: Sentinel-1 and 2, Landsat 8
+        - Create radiometrically terrain correct (RTC) on Sentinel data using python 
     - role: Data Science with Hatchability Prediction Project
       time: 2019 - 2020
       company: Centaco Farm Company Limited
