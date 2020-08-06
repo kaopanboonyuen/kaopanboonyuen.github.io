@@ -129,7 +129,7 @@ education:
         - Department of Electrical and Computer Engineering, Faculty of Engineering, King Mongkut's University of Technology North Bangkok
 experiences:
     - role: Ph.D. Researcher in Computer Engineering (Machine Learning)
-      time: 2018 - Present
+      time: 2018 - 2020
       company: Chulalongkorn University
       details: |
         A dissertation research: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network.
