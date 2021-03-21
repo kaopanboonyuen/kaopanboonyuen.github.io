@@ -9,7 +9,7 @@ sidebar:
     # Profile information
     name: Teerapong Panboonyuen 
     tagline: also known as Kao Panboonyuen
-    tagline: Machine Learning Researcher
+    tagline: AI Research Scientist
     avatar: Kao_v5_250.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
@@ -35,8 +35,8 @@ sidebar:
 
 
     interests:
-      - item: ISTHMUS TRIXIE (my music side project) 
-        link: https://soundcloud.com/isthmustrixie
+      - item: Kao Panboonyuen (my music side project) 
+        link: https://soundcloud.com/kaopanboonyuen
 
       # - item: Snowboarding
       #   link:
@@ -67,7 +67,7 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-      Hi there. My name is **Teerapong Panboonyuen** (now, I am 27), also known as **Kao Panboonyuen** (or just **Kao**) and received the Ph.D. degree in Computer Engineering (Artificial Intelligence, Machine Learning, Deep Learning) from Chulalongkorn University (Bangkok, Thailand).
+      Hi there. My name is **Teerapong Panboonyuen** (now, I am 28), also known as **Kao Panboonyuen** (or just **Kao**) and received the Ph.D. degree in Computer Engineering (Artificial Intelligence, Machine Learning, Deep Learning) from Chulalongkorn University (Bangkok, Thailand).
 
       In 2015, I graduated with a B.Eng. in Computer Engineering from KMUTNB.
 
@@ -94,6 +94,15 @@ career-profile:
       - my research gate **(RG)**: [**this link**](https://www.researchgate.net/profile/Teerapong_Panboonyuen)
 
 education:
+    - degree: Postdoctoral Researcher
+      university: Chulalongkorn University
+      time: 2021 - 2022
+      details: |
+        Topic: Semantic Labeling in Remote Sensing Corpora Using Convolutional Neural Network.
+        - Postdoctoral Researcher in Deep Learning for Remote Sensing.
+        - Postdoctoral Fellowship 2021 under Ratchadapisek Somphot Fund, Chulalongkorn University. Fellowship.
+        - I'm also currently being advised by Professor Peerapon Vateekul, Dr. Siam Lawawirojwong, and Dr. Panu Srestasathiern.
+        - Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University
     - degree: Ph.D. in Computer Engineering
       university: Chulalongkorn University
       time: 2017 - 2020
@@ -128,6 +137,15 @@ education:
         - My academic interests mainly Computer Vision on Lumbar Spinal Stenosis corpus
         - Department of Electrical and Computer Engineering, Faculty of Engineering, King Mongkut's University of Technology North Bangkok
 experiences:
+    - role: Postdoctoral Researcher in Deep Learning for Remote Sensing
+      time: 2021 - 2022
+      company: Graduate School Chulalongkorn University
+      details: |
+        A research topic: Semantic Labeling in Remote Sensing Corpora Using Convolutional Neural Network.
+        I'm also currently being advised by Professor Peerapon Vateekul, Dr. Siam Lawawirojwong, and Dr. Panu Srestasathiern.
+        - Postdoctoral Fellowship 2021 under Ratchadapisek Somphot Fund, Chulalongkorn University. Fellowship.
+        - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
+        - [https://dblp.org/pers/hd/p/Panboonyuen:Teerapong](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
     - role: Ph.D. Researcher in Computer Engineering (Machine Learning)
       time: 2018 - 2020
       company: Chulalongkorn University
@@ -164,13 +182,14 @@ experiences:
         - Invited Reviewer of IEEE Transactions on Industrial Informatics (Q1, ISI Journal)
         - Invited Reviewer of IEEE Access (Tier1, Q1, ISI Journal)
         - Invited Reviewer of IEEE Transactions on Geoscience and Remote Sensing (Tier1, Q1, ISI Journal)
-    - role: Artificial Intelligence Research Engineer
+    - role: AI Research Scientist (Department Manager)
       time: 2020-Present
       company: CJExpress Group
       details: |
-        - Apply Data Science and AI technology in Barter for Dsemand Forecasting in Retail Grocery Stores.
+        - Apply Data Science and AI technology in Barter for Demand Forecasting in Retail Grocery Stores.
         - Working as Artificial Intelligence Researcher with Machine Learning, Big Data Solutions; Hadoop, PySpark for Demand Forecasting Project via Data Innovation Team.
         - Fine-Grained Time Series Forecasting at Scale with PySpark, Deep Learning, and Visualizing Demand Seasonality in Time Series Data.
+        - Artificial Intelligence Research Scientist (Department Manager), C.J. Express Group Co., Ltd., Office Silom
     - role: Data Technical Support
       time: 2020 (February to March)
       company: Puey Ungphakorn Institute for Economic Research (Bank of Thailand)
