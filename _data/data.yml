@@ -328,42 +328,42 @@ publications:
         conference: "First International Conference on Smart Technology & Urban Development (STUD 2019)"
 
 
-skills:
-    title: Skills &amp; Proficiency
+# skills:
+#     title: Skills &amp; Proficiency
 
-    toolset:
-      - name: Python2 and Python3
-        level: 90%
+#     toolset:
+#       - name: Python2 and Python3
+#         level: 90%
 
-      - name: Tensorflow2 with Keras, PyTorch
-        level: 85%
+#       - name: Tensorflow2 with Keras, PyTorch
+#         level: 85%
 
-      - name: Google Cloud Platform (GCP)
-        level: 84%
+#       - name: Google Cloud Platform (GCP)
+#         level: 84%
 
-      - name: Pandas and Sklearn
-        level: 83%
+#       - name: Pandas and Sklearn
+#         level: 83%
 
-      - name: Seaborn with Matplot
-        level: 80%
+#       - name: Seaborn with Matplot
+#         level: 80%
 
-      - name: RapidMiner Studio
-        level: 75%
+#       - name: RapidMiner Studio
+#         level: 75%
 
-      - name: PowerBI and Tableau
-        level: 70%
+#       - name: PowerBI and Tableau
+#         level: 70%
 
-      - name: Java
-        level: 65%
+#       - name: Java
+#         level: 65%
 
-      - name: SparkML
-        level: 60%
+#       - name: SparkML
+#         level: 60%
 
-      - name: Hadoop
-        level: 60%
+#       - name: Hadoop
+#         level: 60%
 
-      - name: GDAL
-        level: 55%
+#       - name: GDAL
+#         level: 55%
 
 
 footer: >
