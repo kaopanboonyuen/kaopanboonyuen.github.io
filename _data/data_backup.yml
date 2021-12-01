@@ -9,18 +9,18 @@ sidebar:
     # Profile information
     name: Teerapong Panboonyuen 
     tagline: also known as Kao Panboonyuen
-    tagline: Machine Learning Researcher
+    tagline: AI Research Scientist
     avatar: Kao_v5_250.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
     email: teerapong.panboonyuen at gmail dot com
     # phone: 012 345 6789
-    website: kaoisthmus.tumblr.com/ #do not add http://
+    website: kaopanboonyuen.tumblr.com/ #do not add http://
     linkedin: teerapong-panboonyuen
     github: kaopanboonyuen
     gitlab:
     bitbucket:
-    twitter: 'kaoisthmus'
+    twitter: 'kaopanboonyuen'
     stack-overflow: # Number/Username, e.g. 123456/alandoe
     codewars:
     goodreads: # Number-Username, e.g. 123456-alandoe
@@ -35,8 +35,8 @@ sidebar:
 
 
     interests:
-      - item: ISTHMUS TRIXIE (my music side project) 
-        link: https://soundcloud.com/isthmustrixie
+      - item: Ivánaticia (my music side project) 
+        link: https://soundcloud.com/kaopanboonyuen
 
       # - item: Snowboarding
       #   link:
@@ -67,31 +67,48 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-      Hi there. My name is Teerapong Panboonyuen (now, I am 27), also known as Kao Panboonyuen (or just Kao) and I’m currently a Ph.D. candidate, a second year Ph.D. in Computer Engineering (Artificial Intelligence, Machine Learning, Deep Learning) at Chulalongkorn University (Bangkok, Thailand).
+      Hi there. My name is **Teerapong Panboonyuen** (now, I am 28), also known as **Kao Panboonyuen** (or just **Kao**) and received the Ph.D. degree in Computer Engineering (Artificial Intelligence, Machine Learning, Deep Learning) from Chulalongkorn University (Bangkok, Thailand).
 
-      In 2015, I graduated with a B.Eng. degree in Computer Engineering from KMUTNB.
+      In 2015, I graduated with a B.Eng. in Computer Engineering from KMUTNB.
 
-      In 2016, I graduated a M.Eng. in Computer Engineering from Chulalongkorn University.
+      In 2016, I graduated with a M.Eng. in Computer Engineering from Chulalongkorn University.
 
-      In 2020, I'll be graduated a Ph.D. in Computer Engineering from here as well, hopefully.
+      In 2020, I graduated with a Ph.D. in Computer Engineering from Chulalongkorn University as well.
+
+      In 2021, I’m currently AI Research Scientist at CJExpress Group and recently accepted a postdoctoral position at Chula. This is my first postdoctoral position since finishing my PhD.
 
       My primary interests are in practical deep learning and computer vision (especially on remote sensing corpus). I’ll be distilling my own learnings to (expectantly) help machine learning practitioners learn and be able to take advantage of important techniques and technologies faster, better, and more intuitively.
 
-      if you’re interested in me more, please contact me via teerapong.panboonyuen (at) gmail (dot) com
+      Summaries of my academic, industry, and teaching experience can be found [**here**](https://kaopanboonyuen.github.io/files/panboonyuen_cv.pdf), as well as a small collection of [**my music**](https://soundcloud.com/kaopanboonyuen). Further, I am a self-motivated, independent researcher with six years of deep learning and machine learning experience.
 
-      name in Thai: ธีรพงศ์ ปานบุญยืน (เก้า)
+      Thai name: ธีรพงศ์ ปานบุญยืน (เก้า)
+
+      - my **Web of Science** ResearcherID: [**AAO-4985-2020**](https://publons.com/researcher/AAO-4985-2020/)
             
-      - my cv: http://bit.ly/kao_cv
+      - my curriculum vitae **(CV)**: [**this link**](https://kaopanboonyuen.github.io/files/panboonyuen_cv.pdf)
 
-      - my publication (DBLP): https://dblp.org/pers/hd/p/Panboonyuen:Teerapong
+      - my publication **(DBLP)**: [**this link**](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
 
-      - my publication (Google Scholar): https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en
+      - my publication **(Google Scholar)**: [**this link**](https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en)
 
-      - my ORCID: https://orcid.org/0000-0001-8464-4476
+      - my **ORCID**: [**this link**](https://orcid.org/0000-0001-8464-4476)
 
-      - my research gate: https://www.researchgate.net/profile/Teerapong_Panboonyuen
+      - my research gate **(RG)**: [**this link**](https://www.researchgate.net/profile/Teerapong_Panboonyuen)
+
+      - my paperswithcode: [**this link**](https://paperswithcode.com/author/teerapong-panboonyuen)
+
+      Additionally, you all guys could reach me through [**teerapong.pa@chula.ac.th**](window.open('mailto:teerapong.pa@chula.ac.th');).
 
 education:
+    - degree: Postdoctoral Researcher
+      university: Chulalongkorn University
+      time: 2021 - 2022
+      details: |
+        Topic: Semantic Labeling in Remote Sensing Corpora Using Convolutional Neural Network.
+        - Postdoctoral Researcher in Deep Learning for Remote Sensing.
+        - Postdoctoral Fellowship 2021 under Ratchadapisek Somphot Fund, Chulalongkorn University. Fellowship.
+        - I'm also currently being advised by Professor Peerapon Vateekul, Dr. Siam Lawawirojwong, and Dr. Panu Srestasathiern.
+        - Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University
     - degree: Ph.D. in Computer Engineering
       university: Chulalongkorn University
       time: 2017 - 2020
@@ -102,7 +119,7 @@ education:
         - I'm also currently being advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr. Siam Lawawirojwong, and Dr. Panu Srestasathiern.
         - My academic research also interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning
         - My Ph.D. Publication (My 2nd Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.406, https://www.mdpi.com/2072-4292/11/1/83)
-        - My Ph.D. Publication (My 3rd Journal, ISI Journal, Q1, Tier 1, Impact Factor 4.118, https://www.mdpi.com)
+        - My Ph.D. Publication (My 3rd Journal, ISI Journal, Q1, Tier 1, Impact Factor 4.509, https://www.mdpi.com)
         - Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University
     - degree: M.Eng. in Computer Engineering
       university: Chulalongkorn University
@@ -126,19 +143,36 @@ education:
         - My academic interests mainly Computer Vision on Lumbar Spinal Stenosis corpus
         - Department of Electrical and Computer Engineering, Faculty of Engineering, King Mongkut's University of Technology North Bangkok
 experiences:
+    - role: Postdoctoral Researcher in Deep Learning for Remote Sensing
+      time: 2021 - 2022
+      company: Graduate School Chulalongkorn University
+      details: |
+        A research topic: Semantic Labeling in Remote Sensing Corpora Using Convolutional Neural Network.
+        I'm also currently being advised by Professor Peerapon Vateekul, Dr. Siam Lawawirojwong, and Dr. Panu Srestasathiern.
+        - Postdoctoral Fellowship 2021 under Ratchadapisek Somphot Fund, Chulalongkorn University. Fellowship.
+        - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
+        - [https://dblp.org/pers/hd/p/Panboonyuen:Teerapong](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
+    - role: AI Research Scientist (Department Manager)
+      time: 2020-Present
+      company: CJExpress Group
+      details: |
+        - Apply Data Science and AI technology in Barter for Demand Forecasting in Retail Grocery Stores.
+        - Working as Artificial Intelligence Researcher with Machine Learning, Big Data Solutions; Hadoop, PySpark for Demand Forecasting Project via Data Innovation Team.
+        - Fine-Grained Time Series Forecasting at Scale with PySpark, Deep Learning, and Visualizing Demand Seasonality in Time Series Data.
+        - Artificial Intelligence Research Scientist (Department Manager), C.J. Express Group Co., Ltd., Office Silom
     - role: Ph.D. Researcher in Computer Engineering (Machine Learning)
-      time: 2018 - Present
+      time: 2018 - 2020
       company: Chulalongkorn University
       details: |
         A dissertation research: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network.
         I'm also currently being advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr. Siam Lawawirojwong, and Dr. Panu Srestasathiern.
-        My academic also interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning.
+        My academic interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning.
         - The 100th Anniversary Chulalongkorn University Fund for Doctoral Scholarship
         - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
-        - My Ph.D. Publication (My 2nd Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.406, https://www.mdpi.com/2072-4292/11/1/83) Special Issue "Convolutional Neural Networks Applications in Remote Sensing"
-        - My Ph.D. Publication (My 3rd Journal, ISI Journal, Q1, Tier 1, Impact Factor 4.118, https://www.mdpi.com) Special Issue "Advanced Deep Learning Strategies for the Analysis of Remote Sensing Images"
-        - Certificate of Fundamentals of Deep Learning for Computer Vision (NVIDIA): https://bit.ly/kao_certificated
-        - https://dblp.org/pers/hd/p/Panboonyuen:Teerapong
+        - My Ph.D. Publication (My 2nd Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.406, [https://www.mdpi.com/2072-4292/11/1/83](https://www.mdpi.com/2072-4292/11/1/83)) Special Issue "Convolutional Neural Networks Applications in Remote Sensing"
+        - My Ph.D. Publication (My 3rd Journal, ISI Journal, Q1, Tier 1, Impact Factor 4.118, [https://www.mdpi.com/2072-4292/12/8/1233](https://www.mdpi.com/2072-4292/12/8/1233)) Special Issue "Advanced Deep Learning Strategies for the Analysis of Remote Sensing Images"
+        - Certificate of Fundamentals of Deep Learning for Computer Vision (NVIDIA): [**this link**](https://bit.ly/kao_certificated)
+        - [https://dblp.org/pers/hd/p/Panboonyuen:Teerapong](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
     - role: Master Researcher (M.Eng.) in Computer Engineering
       time: 2015 - 2016
       company: Chulalongkorn University
@@ -148,25 +182,35 @@ experiences:
         - H.M. the King Bhumibhol Adulyadej's 72nd Birthday Anniversary Scholarship
         - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
         - GPAX 4.00/4.00
-        - My Master Publication (My 1st Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.244, https://www.mdpi.com/2072-4292/9/7/680) Special Issue "Learning to Understand Remote Sensing Images"
-        - Best Student Paper Award in International Conference on Computing and Information Technology 2017 (Recent Advances in Information and Communication Technology 2017), https://link.springer.com/book/10.1007/978-3-319-60663-7
-        - My Publication Thesis (Full Text, 2016): http://cuir.car.chula.ac.th/handle/123456789/55593
-        - https://dblp.org/pers/hd/p/Panboonyuen:Teerapong
+        - My Master Publication (My 1st Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.244, [https://www.mdpi.com/2072-4292/9/7/680](https://www.mdpi.com/2072-4292/9/7/680)) Special Issue "Learning to Understand Remote Sensing Images"
+        - **Best Student Paper Award** in International Conference on Computing and Information Technology 2017 (Recent Advances in Information and Communication Technology 2017), [https://link.springer.com/book/10.1007/978-3-319-60663-7](https://link.springer.com/book/10.1007/978-3-319-60663-7)
+        - My Publication Thesis (Full Text, 2016): [http://cuir.car.chula.ac.th/handle/123456789/55593](http://cuir.car.chula.ac.th/handle/123456789/55593)
+        - [https://dblp.org/pers/hd/p/Panboonyuen:Teerapong](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
     - role: Professional Service
       time: 2018-Present
       company: IEEE Journal and Science Journal
       details: |
         - Invited Reviewer of International Journal of Remote Sensing (Tier1, Q1, ISI Journal)
-        - Invited Reviewer of Sensors (Q2, Journal)
+        - Invited Reviewer of International Journal of Image and Data Fusion
+        - Invited Reviewer of International Journal of Distributed Sensor Networks
         - Invited Reviewer of IEEE Transactions on Industrial Informatics (Q1, ISI Journal)
-        - Invited Reviewer of IEEE Access (Tier1, Q1, ISI Journal)
+        - Invited Reviewer of IEEE Transactions on Emerging Topics in Computational Intelligence
+        - Invited Reviewer of IEEE Access (Q1, ISI Journal)
+        - Invited Reviewer of IEEE Sensors Journal
         - Invited Reviewer of IEEE Transactions on Geoscience and Remote Sensing (Tier1, Q1, ISI Journal)
+        - Invited Reviewer of IET Image Processing (Q2, ISI Journal)
+        - Invited Reviewer of Geo-spatial Information Science
+        - Invited Reviewer of Remote Sensing Letters
+        - Invited Reviewer of Sensors (Q2, Journal)
+        - Invited Reviewer of Journal of Spectroscopy (Q4, Journal, Hindawi)
+        - Invited Reviewer of Journal of Spatial Science (Q2, Journal, Taylor and Francis)
+        - Invited Reviewer of International Journal of Imaging Systems and Technology (Q2, Journal)
     - role: Data Technical Support
-      time: 2020 (February to April)
+      time: 2020 (February to March)
       company: Puey Ungphakorn Institute for Economic Research (Bank of Thailand)
       details: |
-        - Writing python script to download for various data sources: Sentinel-2, Sentinel-1, Landsat 8
-        - Create radiometrically terrain correct (RTC) on sentinel data using python 
+        - Writing python script to download for various data sources: Sentinel-1 and 2, Landsat 8
+        - Create radiometrically terrain correct (RTC) on Sentinel data using python 
     - role: Data Science with Hatchability Prediction Project
       time: 2019 - 2020
       company: Centaco Farm Company Limited
@@ -181,7 +225,7 @@ experiences:
         - Constructing and Visualising the large database of the agricultural corpora for research
         - Play with remote sensing corpora
     - role: Artificial Intelligence Developer
-      time: 2016 - 2019
+      time: 2016 - 2020
       company: GISTDA (Geo-informatics and Space Technology Development Agency)
       details: |
         Research and training all types of satellite images applying deep Convolutional Neural Network (CNNs) methods
@@ -237,11 +281,10 @@ projects:
         link: "https://github.com/kaopanboonyuen/Rainfall-Prediction-A-Machine-Learning-Approach"
         tagline: "We described a more efficient method to create flood susceptibility map - using Thailand’s Ayutthaya Province as a case study to assess flood prone areas."
 
-
 publications:
     title: Publications
     intro: |
-      You can find my publications via https://www.researchgate.net/profile/Teerapong_Panboonyuen
+      You can find my publications via [**this link**](https://www.researchgate.net/profile/Teerapong_Panboonyuen)
     papers:
       - title: Road segmentation of remotely-sensed images using deep convolutional neural networks with landscape metrics and conditional random fields
         link: "https://www.mdpi.com/2072-4292/9/7/680/htm"
@@ -254,9 +297,9 @@ publications:
         conference: Remote Sensing 11.1 (2019), 83.
 
       - title: Semantic Labeling in Remote Sensing Corpora Using Feature Fusion-Based Enhanced Global Convolutional Network with High-Resolution Representations and Depthwise Atrous Convolution
-        link: "#"
+        link: "https://www.mdpi.com/2072-4292/12/8/1233"
         authors: Panboonyuen, Teerapong, et al.
-        conference: Remote Sensing (2020)
+        conference: Remote Sensing 12 (2020), 1233.
 
       - title: (Best Paper Student Awards 2017) An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery
         link: "https://link.springer.com/chapter/10.1007/978-3-319-60663-7_18"
@@ -268,15 +311,15 @@ publications:
         authors: Panboonyuen, Teerapong, et al.
         conference: Journal of Remote Sensing and GIS Association of Thailand (2017)
 
-      - title: "Road map extraction from satellite imagery using connected component analysis and landscape metrics"
-        link: "https://ieeexplore.ieee.org/document/8258330/"
-        authors: Jitkajornwanich, K., Vateekul, P., Panboonyuen, T., Lawawirojwong, S., & Srisonphan, S.
-        conference: "IEEE International Conference on Big Data (Big Data) (pp. 3435-3442). IEEE. (2017)"
-
       - title: Real-Time Polyps Segmentation for Colonoscopy Video Frames Using Compressed Fully Convolutional Network
         link: "https://link.springer.com/chapter/10.1007/978-3-319-73603-7_32"
         authors:  Wichakam, I., Panboonyuen, T., Udomcharoenchaikit, C., & Vateekul, P.
         conference: "International Conference on Multimedia Modeling (pp. 393-404). Springer, Cham. (2018)"
+
+      - title: "Road map extraction from satellite imagery using connected component analysis and landscape metrics"
+        link: "https://ieeexplore.ieee.org/document/8258330/"
+        authors: Jitkajornwanich, K., Vateekul, P., Panboonyuen, T., Lawawirojwong, S., & Srisonphan, S.
+        conference: "IEEE International Conference on Big Data (Big Data) (pp. 3435-3442). IEEE. (2017)"
 
       - title: "Semantic Segmentation On Medium-Resolution Satellite Images Using Deep Convolutional Networks With Remote Sensing Derived Indices"
         link: "https://ieeexplore.ieee.org/document/8457378/"
@@ -289,39 +332,42 @@ publications:
         conference: "First International Conference on Smart Technology & Urban Development (STUD 2019)"
 
 
-skills:
-    title: Skills &amp; Proficiency
+# skills:
+#     title: Skills &amp; Proficiency
 
-    toolset:
-      - name: Python2 and Python3
-        level: 90%
+#     toolset:
+#       - name: Python2 and Python3
+#         level: 90%
 
-      - name: Tensorflow2 and Keras
-        level: 85%
+#       - name: Tensorflow2 with Keras, PyTorch
+#         level: 85%
 
-      - name: Pandas and Sklearn
-        level: 83%
+#       - name: Google Cloud Platform (GCP)
+#         level: 84%
 
-      - name: Seaborn with Matplot
-        level: 80%
+#       - name: Pandas and Sklearn
+#         level: 83%
 
-      - name: RapidMiner Studio
-        level: 75%
+#       - name: Seaborn with Matplot
+#         level: 80%
 
-      - name: PowerBI and Tableau
-        level: 70%
+#       - name: RapidMiner Studio
+#         level: 75%
 
-      - name: Java
-        level: 65%
+#       - name: PowerBI and Tableau
+#         level: 70%
 
-      - name: SparkML
-        level: 60%
+#       - name: Java
+#         level: 65%
 
-      - name: Hadoop
-        level: 60%
+#       - name: SparkML
+#         level: 60%
 
-      - name: GDAL
-        level: 55%
+#       - name: Hadoop
+#         level: 60%
+
+#       - name: GDAL
+#         level: 55%
 
 
 footer: >

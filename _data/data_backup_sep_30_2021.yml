@@ -35,7 +35,7 @@ sidebar:
 
 
     interests:
-      - item: Kao Panboonyuen (my music side project) 
+      - item: Ivánaticia (my music side project) 
         link: https://soundcloud.com/kaopanboonyuen
 
       # - item: Snowboarding
@@ -79,7 +79,7 @@ career-profile:
 
       My primary interests are in practical deep learning and computer vision (especially on remote sensing corpus). I’ll be distilling my own learnings to (expectantly) help machine learning practitioners learn and be able to take advantage of important techniques and technologies faster, better, and more intuitively.
 
-      Summaries of my academic, industry, and teaching experience can be found [**here**](https://kaopanboonyuen.github.io/files/panboonyuen_cv.pdf), as well as a small collection of [**my music**](https://soundcloud.com/kaopanboonyuen), [**my wordpress blog**](https://kaopanboonyuen.wordpress.com/) and [**my artwork**](https://kaopanboonyuen.tumblr.com/). Please refer to my [**resume**](https://kaopanboonyuen.github.io/files/panboonyuen_cv.pdf) for additional information.
+      Summaries of my academic, industry, and teaching experience can be found [**here**](https://kaopanboonyuen.github.io/files/panboonyuen_cv.pdf), as well as a small collection of [**my music**](https://soundcloud.com/kaopanboonyuen). Further, I am a self-motivated, independent researcher with six years of deep learning and machine learning experience.
 
       Thai name: ธีรพงศ์ ปานบุญยืน (เก้า)
 
@@ -96,6 +96,8 @@ career-profile:
       - my research gate **(RG)**: [**this link**](https://www.researchgate.net/profile/Teerapong_Panboonyuen)
 
       - my paperswithcode: [**this link**](https://paperswithcode.com/author/teerapong-panboonyuen)
+
+      Additionally, you all guys could reach me through [**teerapong.pa@chula.ac.th**](window.open('mailto:teerapong.pa@chula.ac.th');).
 
 education:
     - degree: Postdoctoral Researcher
@@ -189,12 +191,20 @@ experiences:
       company: IEEE Journal and Science Journal
       details: |
         - Invited Reviewer of International Journal of Remote Sensing (Tier1, Q1, ISI Journal)
-        - Invited Reviewer of Sensors (Q2, Journal)
-        - Invited Reviewer of Journal of Spectroscopy (Q4, Journal, Hindawi)
+        - Invited Reviewer of International Journal of Image and Data Fusion
+        - Invited Reviewer of International Journal of Distributed Sensor Networks
         - Invited Reviewer of IEEE Transactions on Industrial Informatics (Q1, ISI Journal)
+        - Invited Reviewer of IEEE Transactions on Emerging Topics in Computational Intelligence
         - Invited Reviewer of IEEE Access (Q1, ISI Journal)
+        - Invited Reviewer of IEEE Sensors Journal
         - Invited Reviewer of IEEE Transactions on Geoscience and Remote Sensing (Tier1, Q1, ISI Journal)
         - Invited Reviewer of IET Image Processing (Q2, ISI Journal)
+        - Invited Reviewer of Geo-spatial Information Science
+        - Invited Reviewer of Remote Sensing Letters
+        - Invited Reviewer of Sensors (Q2, Journal)
+        - Invited Reviewer of Journal of Spectroscopy (Q4, Journal, Hindawi)
+        - Invited Reviewer of Journal of Spatial Science (Q2, Journal, Taylor and Francis)
+        - Invited Reviewer of International Journal of Imaging Systems and Technology (Q2, Journal)
     - role: Data Technical Support
       time: 2020 (February to March)
       company: Puey Ungphakorn Institute for Economic Research (Bank of Thailand)
@@ -322,42 +332,42 @@ publications:
         conference: "First International Conference on Smart Technology & Urban Development (STUD 2019)"
 
 
-skills:
-    title: Skills &amp; Proficiency
+# skills:
+#     title: Skills &amp; Proficiency
 
-    toolset:
-      - name: Python2 and Python3
-        level: 90%
+#     toolset:
+#       - name: Python2 and Python3
+#         level: 90%
 
-      - name: Tensorflow2 with Keras, PyTorch
-        level: 85%
+#       - name: Tensorflow2 with Keras, PyTorch
+#         level: 85%
 
-      - name: Google Cloud Platform (GCP)
-        level: 84%
+#       - name: Google Cloud Platform (GCP)
+#         level: 84%
 
-      - name: Pandas and Sklearn
-        level: 83%
+#       - name: Pandas and Sklearn
+#         level: 83%
 
-      - name: Seaborn with Matplot
-        level: 80%
+#       - name: Seaborn with Matplot
+#         level: 80%
 
-      - name: RapidMiner Studio
-        level: 75%
+#       - name: RapidMiner Studio
+#         level: 75%
 
-      - name: PowerBI and Tableau
-        level: 70%
+#       - name: PowerBI and Tableau
+#         level: 70%
 
-      - name: Java
-        level: 65%
+#       - name: Java
+#         level: 65%
 
-      - name: SparkML
-        level: 60%
+#       - name: SparkML
+#         level: 60%
 
-      - name: Hadoop
-        level: 60%
+#       - name: Hadoop
+#         level: 60%
 
-      - name: GDAL
-        level: 55%
+#       - name: GDAL
+#         level: 55%
 
 
 footer: >
