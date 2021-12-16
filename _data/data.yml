@@ -153,7 +153,7 @@ experiences:
         - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
         - [https://dblp.org/pers/hd/p/Panboonyuen:Teerapong](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
     - role: AI Research Scientist (Department Manager)
-      time: 2020-Present
+      time: 2020 - 2021
       company: CJExpress Group
       details: |
         - Apply Data Science and AI technology in Barter for Demand Forecasting in Retail Grocery Stores.
@@ -288,20 +288,26 @@ publications:
     intro: |
       You can find my publications via [**this link**](https://www.researchgate.net/profile/Teerapong_Panboonyuen)
     papers:
-      - title: Road segmentation of remotely-sensed images using deep convolutional neural networks with landscape metrics and conditional random fields
-        link: "https://www.mdpi.com/2072-4292/9/7/680/htm"
+
+      - title: Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images
+        link: "https://www.mdpi.com/2072-4292/13/24/5100"
         authors: Panboonyuen, Teerapong, et al.
-        conference: Remote Sensing 9.7 (2017), 680.
+        conference: Remote Sensing 13.24 (2021), 5100.
+
+      - title: Semantic Labeling in Remote Sensing Corpora Using Feature Fusion-Based Enhanced Global Convolutional Network with High-Resolution Representations and Depthwise Atrous Convolution
+        link: "https://www.mdpi.com/2072-4292/12/8/1233"
+        authors: Panboonyuen, Teerapong, et al.
+        conference: Remote Sensing 12.8 (2020), 1233.
 
       - title: Semantic Segmentation on Remotely Sensed Images Using an Enhanced Global Convolutional Network with Channel Attention and Domain Specific Transfer Learning
         link: "https://www.mdpi.com/2072-4292/11/1/83/htm"
         authors: Panboonyuen, Teerapong, et al.
         conference: Remote Sensing 11.1 (2019), 83.
 
-      - title: Semantic Labeling in Remote Sensing Corpora Using Feature Fusion-Based Enhanced Global Convolutional Network with High-Resolution Representations and Depthwise Atrous Convolution
-        link: "https://www.mdpi.com/2072-4292/12/8/1233"
+      - title: Road segmentation of remotely-sensed images using deep convolutional neural networks with landscape metrics and conditional random fields
+        link: "https://www.mdpi.com/2072-4292/9/7/680/htm"
         authors: Panboonyuen, Teerapong, et al.
-        conference: Remote Sensing 12 (2020), 1233.
+        conference: Remote Sensing 9.7 (2017), 680.
 
       - title: (Best Paper Student Awards 2017) An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery
         link: "https://link.springer.com/chapter/10.1007/978-3-319-60663-7_18"
