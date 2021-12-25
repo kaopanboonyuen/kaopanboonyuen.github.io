@@ -289,6 +289,11 @@ publications:
       You can find my publications via [**this link**](https://www.researchgate.net/profile/Teerapong_Panboonyuen)
     papers:
 
+      - title: Object Detection of Road Assets Using Transformer-Based YOLOX with Feature Pyramid Decoder on Thai Highway Panorama
+        link: "https://www.mdpi.com/2078-2489/13/1/5"
+        authors: Panboonyuen, Teerapong, et al.
+        conference: Information 13.1 (2022), 5.
+        
       - title: Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images
         link: "https://www.mdpi.com/2072-4292/13/24/5100"
         authors: Panboonyuen, Teerapong, et al.
