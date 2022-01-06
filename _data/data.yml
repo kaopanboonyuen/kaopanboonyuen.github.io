@@ -69,7 +69,7 @@ career-profile:
     summary: |
       Hi there. My name is **Teerapong Panboonyuen** (now, I am 29), also known as **Kao Panboonyuen** (or just **Kao**) and received the Ph.D. degree in Computer Engineering (Artificial Intelligence, Machine Learning, Deep Learning) from Chulalongkorn University (Bangkok, Thailand).
 
-      Tech Stack: GCP; DataProc/PySpark; AWS; Python; PyTorch; SageMaker; S3; Flask; Docker
+      **Tech Stack:** GCP; DataProc/PySpark; AWS; Python; PyTorch; SageMaker; S3; Flask; Docker
 
       In 2015, I graduated with a B.Eng. in Computer Engineering from KMUTNB.
 
@@ -153,9 +153,9 @@ experiences:
       details: |
         - Research, enhance the deep learning layer including backbone/frontend networks, train state-of-the-art (SOTA) deep learning models, and deploy them to production.
         - Continually updating the latest research papers (in the databases: CVPR, ICLR, ICCV, ECCV, NeurIPS, PAMI, etc.) in deep learning and computer vision, especially panoptic segmentation, semantic segmentation, object detection, and instance segmentation, to improve existing models.
-        - Strategy and design ML/DL infrastructures, including training pipeline, deployment flow, experiment management, and labeling pipeline using tools, such as Label Studio, Weights \& Biases (W\&B), MLOps, Streamlit, and SageMaker.
+        - Strategy and design ML/DL infrastructures, including training pipeline, deployment flow, experiment management, and labeling pipeline using tools, such as Label Studio, Weights & Biases (W&B), MLOps, Streamlit, and SageMaker.
         - Tech Stack: Python, PyTorch, MaskRCNNDetectron2, SageMaker, S3, Flask, Docker
-    - role: Postdoctoral Researcher in Deep Learning for Remote Sensing
+    - role: Postdoctoral Researcher in AI
       time: 2021 - 2022
       company: Graduate School Chulalongkorn University
       details: |
