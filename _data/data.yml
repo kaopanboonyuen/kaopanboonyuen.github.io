@@ -106,7 +106,7 @@ career-profile:
 education:
     - degree: Postdoctoral Researcher
       university: Chulalongkorn University
-      time: 2021 - 2022
+      time: 2021 - Present
       details: |
         Topic: Semantic Labeling in Remote Sensing Corpora Using Convolutional Neural Network.
         - Postdoctoral Researcher in Deep Learning for Remote Sensing.
@@ -148,7 +148,7 @@ education:
         - Department of Electrical and Computer Engineering, Faculty of Engineering, King Mongkut's University of Technology North Bangkok
 experiences:
     - role: Senior AI Engineer
-      time: 2021 - 2022
+      time: 2022 - Present
       company: MARS (Motor AI Recognition Solution)
       details: |
         - Research, enhance the deep learning layer including backbone/frontend networks, train state-of-the-art (SOTA) deep learning models, and deploy them to production.
@@ -156,7 +156,7 @@ experiences:
         - Strategy and design ML/DL infrastructures, including training pipeline, deployment flow, experiment management, and labeling pipeline using tools, such as Label Studio, Weights & Biases (W&B), MLOps, Streamlit, and SageMaker.
         - Tech Stack: Python, PyTorch, MaskRCNNDetectron2, SageMaker, S3, Flask, Docker
     - role: Postdoctoral Researcher in AI
-      time: 2021 - 2022
+      time: 2021 - Present
       company: Graduate School Chulalongkorn University
       details: |
         A research topic: Semantic Labeling in Remote Sensing Corpora Using Convolutional Neural Network.
