@@ -288,7 +288,7 @@ projects:
     intro: >
       You can find my project via https://github.com/kaopanboonyuen
     assignments:
-      - title: Transportation Mobility Factor Extraction Using Image Recognition Techniques
+      - title: Transportation Mobility Factor Extraction Using a Image Recognition Techniques 
         link: "https://github.com/kaopanboonyuen/TransportationMobilityFactorExtraction"
         tagline: "We propose a method that automatically extract mobility indicators using two image recognition techniques: Semantic Segmentation and Object Recognition."
 
