@@ -69,17 +69,13 @@ career-profile:
     summary: |
       Hi there. My name is **Teerapong Panboonyuen** (now, I am 29), also known as **Kao Panboonyuen** (or just **Kao**) and received the Ph.D. degree in Computer Engineering (Artificial Intelligence, Machine Learning, Deep Learning) from Chulalongkorn University (Bangkok, Thailand).
 
-      **Tech Stack:** GCP; DataProc/PySpark; AWS; Python; PyTorch; SageMaker; S3; Flask; Docker
-
       In 2015, I graduated with a B.Eng. in Computer Engineering from KMUTNB.
 
       In 2016, I graduated with a M.Eng. in Computer Engineering from Chulalongkorn University.
 
       In 2020, I graduated with a Ph.D. in Computer Engineering from Chulalongkorn University as well.
 
-      In 2021, I was AI Research Scientist at CJExpress Group and accepted the position of Postdoctoral Fellowship at Chula.
-
-      In 2022, I'm currently working at MARS (Motor AI Recognition Solution) as a Senior AI Engineer and still being PostDoc at Chula.
+      In 2021, I was AI Research Scientist at CJExpress Group and accepted a postdoctoral position at Chula. This is my first postdoctoral position since finishing my PhD.
 
       My primary interests are in practical deep learning and computer vision (especially on remote sensing corpus). I’ll be distilling my own learnings to (expectantly) help machine learning practitioners learn and be able to take advantage of important techniques and technologies faster, better, and more intuitively.
 
@@ -87,13 +83,13 @@ career-profile:
 
       Thai name: ธีรพงศ์ ปานบุญยืน (เก้า)
 
-      - my publication **(Google Scholar)**: [**this link**](https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en)
-
       - my **Web of Science** ResearcherID: [**AAO-4985-2020**](https://publons.com/researcher/AAO-4985-2020/)
             
       - my curriculum vitae **(CV)**: [**this link**](https://kaopanboonyuen.github.io/files/panboonyuen_cv.pdf)
 
       - my publication **(DBLP)**: [**this link**](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
+
+      - my publication **(Google Scholar)**: [**this link**](https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en)
 
       - my **ORCID**: [**this link**](https://orcid.org/0000-0001-8464-4476)
 
@@ -106,7 +102,7 @@ career-profile:
 education:
     - degree: Postdoctoral Researcher
       university: Chulalongkorn University
-      time: 2021 - Present
+      time: 2021 - 2022
       details: |
         Topic: Semantic Labeling in Remote Sensing Corpora Using Convolutional Neural Network.
         - Postdoctoral Researcher in Deep Learning for Remote Sensing.
@@ -142,21 +138,13 @@ education:
       university: King Mongkut's University of Technology North Bangkok
       time: 2011 - 2015
       details: |
-        Activities and Societies: Computer Engineering (Cpr.E 9) 
+         Activities and Societies: Computer Engineering (Cpr.E 9) 
         - I am advised by Professor Waranyu Wongseree 
         - My academic interests mainly Computer Vision on Lumbar Spinal Stenosis corpus
         - Department of Electrical and Computer Engineering, Faculty of Engineering, King Mongkut's University of Technology North Bangkok
 experiences:
-    - role: Senior AI Engineer
-      time: 2022 - Present
-      company: MARS (Motor AI Recognition Solution)
-      details: |
-        - Research, enhance the deep learning layer including backbone/frontend networks, train state-of-the-art (SOTA) deep learning models, and deploy them to production.
-        - Continually updating the latest research papers (in the databases: CVPR, ICLR, ICCV, ECCV, NeurIPS, PAMI, etc.) in deep learning and computer vision, especially panoptic segmentation, semantic segmentation, object detection, and instance segmentation, to improve existing models.
-        - Strategy and design ML/DL infrastructures, including training pipeline, deployment flow, experiment management, and labeling pipeline using tools, such as Label Studio, Weights & Biases (W&B), MLOps, Streamlit, and SageMaker.
-        - Tech Stack: Python, PyTorch, MaskRCNNDetectron2, SageMaker, S3, Flask, Docker
-    - role: Postdoctoral Researcher in AI
-      time: 2021 - Present
+    - role: Postdoctoral Researcher in Deep Learning for Remote Sensing
+      time: 2021 - 2022
       company: Graduate School Chulalongkorn University
       details: |
         A research topic: Semantic Labeling in Remote Sensing Corpora Using Convolutional Neural Network.
@@ -165,10 +153,10 @@ experiences:
         - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
         - [https://dblp.org/pers/hd/p/Panboonyuen:Teerapong](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
     - role: AI Research Scientist (Department Manager)
-      time: 2020 - 2021
+      time: 2020-Present
       company: CJExpress Group
       details: |
-        - Apply Data Science and AI technology in Barter for Demand Forecasting in Retail Grocery Stores.
+        - Apply Data Science and AI technology in Barter for Demand Forecasting in Retail Grocery Stores.
         - Working as Artificial Intelligence Researcher with Machine Learning, Big Data Solutions; Hadoop, PySpark for Demand Forecasting Project via Data Innovation Team.
         - Fine-Grained Time Series Forecasting at Scale with PySpark, Deep Learning, and Visualizing Demand Seasonality in Time Series Data.
         - Artificial Intelligence Research Scientist (Department Manager), C.J. Express Group Co., Ltd., Office Silom
@@ -183,7 +171,7 @@ experiences:
         - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
         - My Ph.D. Publication (My 2nd Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.406, [https://www.mdpi.com/2072-4292/11/1/83](https://www.mdpi.com/2072-4292/11/1/83)) Special Issue "Convolutional Neural Networks Applications in Remote Sensing"
         - My Ph.D. Publication (My 3rd Journal, ISI Journal, Q1, Tier 1, Impact Factor 4.118, [https://www.mdpi.com/2072-4292/12/8/1233](https://www.mdpi.com/2072-4292/12/8/1233)) Special Issue "Advanced Deep Learning Strategies for the Analysis of Remote Sensing Images"
-        - Certificate of Fundamentals of Deep Learning for Computer Vision (NVIDIA): [**this link**](https://raw.githubusercontent.com/kaopanboonyuen/kaopanboonyuen.github.io/master/files/certificate/Kao's%20Fundamentals%20of%20Deep%20Learning%20for%20Computer%20Vision%20(NVIDIA).png)
+        - Certificate of Fundamentals of Deep Learning for Computer Vision (NVIDIA): [**this link**](https://bit.ly/kao_certificated)
         - [https://dblp.org/pers/hd/p/Panboonyuen:Teerapong](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
     - role: Master Researcher (M.Eng.) in Computer Engineering
       time: 2015 - 2016
@@ -202,8 +190,6 @@ experiences:
       time: 2018-Present
       company: IEEE Journal and Science Journal
       details: |
-        - Invited Reviewer of Neurocomputing (Elsevier) (Q1, ISI Journal)
-        - Invited Reviewer of Computers and Geosciences (Elsevier) (Q1, ISI Journal)
         - Invited Reviewer of International Journal of Remote Sensing (Tier1, Q1, ISI Journal)
         - Invited Reviewer of International Journal of Image and Data Fusion
         - Invited Reviewer of International Journal of Distributed Sensor Networks
@@ -216,14 +202,10 @@ experiences:
         - Invited Reviewer of Geo-spatial Information Science
         - Invited Reviewer of Remote Sensing Letters
         - Invited Reviewer of Sensors (Q2, Journal)
-        - Invited Reviewer of Computational Intelligence and Neuroscience (Journal, Hindawi)
-        - Invited Reviewer of Mathematical Problems in Engineering (Journal, Hindawi)
         - Invited Reviewer of Journal of Spectroscopy (Q4, Journal, Hindawi)
         - Invited Reviewer of Journal of Spatial Science (Q2, Journal, Taylor and Francis)
-        - Invited Reviewer of Journal of Healthcare Engineering (Q2, Journal, Hindawi Limited)
         - Invited Reviewer of International Journal of Imaging Systems and Technology (Q2, Journal)
-        - Invited Reviewer of IETE Technical Review (Q2 Journal)
-        - Invited Reviewer of IETE Journal of Research (Q4 Journal)
+        - Invited Reviewer of Neurocomputing (Elsevier) (Q1, ISI Journal)
     - role: Data Technical Support
       time: 2020 (February to March)
       company: Puey Ungphakorn Institute for Economic Research (Bank of Thailand)
@@ -288,7 +270,7 @@ projects:
     intro: >
       You can find my project via https://github.com/kaopanboonyuen
     assignments:
-      - title: Transportation Mobility Factor Extraction Using a Image Recognition Techniques 
+      - title: Transportation Mobility Factor Extraction Using Image Recognition Techniques
         link: "https://github.com/kaopanboonyuen/TransportationMobilityFactorExtraction"
         tagline: "We propose a method that automatically extract mobility indicators using two image recognition techniques: Semantic Segmentation and Object Recognition."
 
@@ -305,31 +287,20 @@ publications:
     intro: |
       You can find my publications via [**this link**](https://www.researchgate.net/profile/Teerapong_Panboonyuen)
     papers:
-
-      - title: Object Detection of Road Assets Using Transformer-Based YOLOX with Feature Pyramid Decoder on Thai Highway Panorama
-        link: "https://www.mdpi.com/2078-2489/13/1/5"
+      - title: Road segmentation of remotely-sensed images using deep convolutional neural networks with landscape metrics and conditional random fields
+        link: "https://www.mdpi.com/2072-4292/9/7/680/htm"
         authors: Panboonyuen, Teerapong, et al.
-        conference: Information 13.1 (2022), 5.
-        
-      - title: Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images
-        link: "https://www.mdpi.com/2072-4292/13/24/5100"
-        authors: Panboonyuen, Teerapong, et al.
-        conference: Remote Sensing 13.24 (2021), 5100.
-
-      - title: Semantic Labeling in Remote Sensing Corpora Using Feature Fusion-Based Enhanced Global Convolutional Network with High-Resolution Representations and Depthwise Atrous Convolution
-        link: "https://www.mdpi.com/2072-4292/12/8/1233"
-        authors: Panboonyuen, Teerapong, et al.
-        conference: Remote Sensing 12.8 (2020), 1233.
+        conference: Remote Sensing 9.7 (2017), 680.
 
       - title: Semantic Segmentation on Remotely Sensed Images Using an Enhanced Global Convolutional Network with Channel Attention and Domain Specific Transfer Learning
         link: "https://www.mdpi.com/2072-4292/11/1/83/htm"
         authors: Panboonyuen, Teerapong, et al.
         conference: Remote Sensing 11.1 (2019), 83.
 
-      - title: Road segmentation of remotely-sensed images using deep convolutional neural networks with landscape metrics and conditional random fields
-        link: "https://www.mdpi.com/2072-4292/9/7/680/htm"
+      - title: Semantic Labeling in Remote Sensing Corpora Using Feature Fusion-Based Enhanced Global Convolutional Network with High-Resolution Representations and Depthwise Atrous Convolution
+        link: "https://www.mdpi.com/2072-4292/12/8/1233"
         authors: Panboonyuen, Teerapong, et al.
-        conference: Remote Sensing 9.7 (2017), 680.
+        conference: Remote Sensing 12 (2020), 1233.
 
       - title: (Best Paper Student Awards 2017) An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery
         link: "https://link.springer.com/chapter/10.1007/978-3-319-60663-7_18"
@@ -360,6 +331,7 @@ publications:
         link: "https://ieeexplore.ieee.org/document/9018796"
         authors:  Kantavat, P., Hayashi, Y., City, G. S., Kijsirikul, B., Panboonyuen, T., Achariyaviriya, W., ... & Vateekul, P.
         conference: "First International Conference on Smart Technology & Urban Development (STUD 2019)"
+
 
 # skills:
 #     title: Skills &amp; Proficiency
