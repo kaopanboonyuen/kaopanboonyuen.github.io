@@ -146,7 +146,7 @@ education:
         - Department of Electrical and Computer Engineering, Faculty of Engineering, King Mongkut's University of Technology North Bangkok
 experiences:
     - role: Senior AI Engineer
-      time: 2022 - Present
+      time: Jan 2022 - Present
       company: MARS (Motor AI Recognition Solution)
       details: |
         - Research, enhance the deep learning layer including backbone/frontend networks, train state-of-the-art (SOTA) deep learning models, and deploy them to production.
@@ -154,7 +154,7 @@ experiences:
         - Strategy and design ML/DL infrastructures, including training pipeline, deployment flow, experiment management, and labeling pipeline using tools, such as Label Studio, Weights & Biases (W&B), MLOps, Streamlit, and SageMaker.
         - Tech Stack: Python, PyTorch, MaskRCNNDetectron2, SageMaker, S3, Flask, Docker
     - role: Postdoctoral Researcher in AI
-      time: 2021 - Present
+      time: Apr 2021 - Present
       company: Graduate School Chulalongkorn University
       details: |
         A research topic: Semantic Labeling in Remote Sensing Corpora Using Convolutional Neural Network.
@@ -163,7 +163,7 @@ experiences:
         - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
         - [https://dblp.org/pers/hd/p/Panboonyuen:Teerapong](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
     - role: AI Research Scientist (Department Manager)
-      time: 2020 - 2021
+      time: Nov 2020 - Aug 2021
       company: CJExpress Group
       details: |
         - Apply Data Science and AI technology in Barter for Demand Forecasting in Retail Grocery Stores.
@@ -171,6 +171,19 @@ experiences:
         - Fine-Grained Time Series Forecasting at Scale with PySpark, Deep Learning, and Visualizing Demand Seasonality in Time Series Data.
         - Artificial Intelligence Research Scientist (Department Manager), C.J. Express Group Co., Ltd., Office Silom
     - role: Ph.D. Researcher in Computer Engineering (Machine Learning)
+      time: 2018 - 2020
+      company: Chulalongkorn University
+      details: |
+        A dissertation research: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network.
+        I'm also currently being advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr. Siam Lawawirojwong, and Dr. Panu Srestasathiern.
+        My academic interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning.
+        - The 100th Anniversary Chulalongkorn University Fund for Doctoral Scholarship
+        - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
+        - My Ph.D. Publication (My 2nd Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.406, [https://www.mdpi.com/2072-4292/11/1/83](https://www.mdpi.com/2072-4292/11/1/83)) Special Issue "Convolutional Neural Networks Applications in Remote Sensing"
+        - My Ph.D. Publication (My 3rd Journal, ISI Journal, Q1, Tier 1, Impact Factor 4.118, [https://www.mdpi.com/2072-4292/12/8/1233](https://www.mdpi.com/2072-4292/12/8/1233)) Special Issue "Advanced Deep Learning Strategies for the Analysis of Remote Sensing Images"
+        - Certificate of Fundamentals of Deep Learning for Computer Vision (NVIDIA): [**this link**](https://bit.ly/kao_certificated)
+        - [https://dblp.org/pers/hd/p/Panboonyuen:Teerapong](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
+    - role: Master Researcher (M.Eng.) in Computer Engineering
       time: 2015 - 2016
       company: Chulalongkorn University
       details: |
