@@ -344,12 +344,17 @@ publications:
         authors:  Wichakam, I., Panboonyuen, T., Udomcharoenchaikit, C., & Vateekul, P.
         conference: "International Conference on Multimedia Modeling (pp. 393-404). Springer, Cham. (2018)"
 
-      - title: "Road map extraction from satellite imagery using connected component analysis and landscape metrics"
+      - title: A Performance Comparison between GIS-based and Neuron Network Methods for Flood Susceptibility Assessment in Ayutthaya Province
+        link: "https://link.springer.com/chapter/10.1007/978-3-319-73603-7_32"
+        authors:  Vajeethaveesin, T., Panboonyuen, T., Lawawironjwong, S., Srestasathiern, P., Jaiyen, S., & Jitkajornwanich, K.
+        conference: "Trends in Sciences 19.2 (2022): 2038-2038."
+
+      - title: Road map extraction from satellite imagery using connected component analysis and landscape metrics
         link: "https://ieeexplore.ieee.org/document/8258330/"
         authors: Jitkajornwanich, K., Vateekul, P., Panboonyuen, T., Lawawirojwong, S., & Srisonphan, S.
         conference: "IEEE International Conference on Big Data (Big Data) (pp. 3435-3442). IEEE. (2017)"
 
-      - title: "Semantic Segmentation On Medium-Resolution Satellite Images Using Deep Convolutional Networks With Remote Sensing Derived Indices"
+      - title: Semantic Segmentation On Medium-Resolution Satellite Images Using Deep Convolutional Networks With Remote Sensing Derived Indices
         link: "https://ieeexplore.ieee.org/document/8457378/"
         authors: Chantharaj, S., Pornratthanapong, K., Chitsinpchayakun, P., Panboonyuen, T., Vateekul, P., Lawavirojwong, S., ... & Jitkajornwanich, K.
         conference: "15th International Joint Conference on Computer Science and Software Engineering (JCSSE) (pp. 1-6). IEEE. (2018)"
