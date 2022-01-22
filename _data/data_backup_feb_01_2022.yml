@@ -67,7 +67,7 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-      Hi there. My name is **Teerapong Panboonyuen** (now, I am 29), also known as **Kao Panboonyuen** (or just **Kao**) and received the Ph.D. degree in Computer Engineering (Artificial Intelligence, Machine Learning, Deep Learning) from Chulalongkorn University (Bangkok, Thailand).
+      Hi there. My name is **Teerapong Panboonyuen** (now, I am 29), also known as **Kao Panboonyuen** (or just **Kao**) and received the Ph.D. degree in Computer Engineering (Artificial Intelligence, Machine Learning, Deep Learning) from Chula.
 
       **Tech Stack:** GCP; DataProc/PySpark; AWS; Python; PyTorch; SageMaker; S3; Flask; Docker
 
@@ -162,7 +162,7 @@ experiences:
         - Ratchadapisek Somphot Fund for Postdoctoral Fellowship, Chulalongkorn University
         - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
         - Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University
-        - My Publication Paper (Full Text, 2021): https://www.mdpi.com/2072-4292/13/24/5100
+        - My Publication Paper (Full Text, 2021): [https://www.mdpi.com/2072-4292/13/24/5100](https://www.mdpi.com/2072-4292/13/24/5100)
     - role: AI Research Scientist (Department Manager)
       time: Nov 2020 - Aug 2021
       company: CJExpress Group
@@ -175,39 +175,39 @@ experiences:
       time: 2018 - 2020
       company: Chulalongkorn University
       details: |
-        A dissertation: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network.
-        Graduate research in the laboratory of Peerapon Vateekul
-        My academic interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning. I propose the semantic segmentation architecture in five aspects, designed explicitly for the remotely sensed field on Landsat-8 satellite and ISPRS Vaihingen” challenge.
+        A dissertation: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network
+        - Graduate research in the laboratory of Peerapon Vateekul
+        - My academic interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning. I propose the semantic segmentation architecture in five aspects, designed explicitly for the remotely sensed field on Landsat-8 satellite and ISPRS Vaihingen challenge.
         - The 100th Anniversary Chulalongkorn University Fund for Doctoral Scholarship
         - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
         - My Ph.D. Publication (My 2nd Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.406, [https://www.mdpi.com/2072-4292/11/1/83](https://www.mdpi.com/2072-4292/11/1/83)) Special Issue "Convolutional Neural Networks Applications in Remote Sensing"
         - My Ph.D. Publication (My 3rd Journal, ISI Journal, Q1, Tier 1, Impact Factor 4.118, [https://www.mdpi.com/2072-4292/12/8/1233](https://www.mdpi.com/2072-4292/12/8/1233)) Special Issue "Advanced Deep Learning Strategies for the Analysis of Remote Sensing Images"
         - Certificate of Fundamentals of Deep Learning for Computer Vision (NVIDIA): [**this link**](https://bit.ly/kao_certificated)
-        - My publication dissertation (Full Text, 2019): http://cuir.car.chula.ac.th/handle/123456789/70297
+        - My publication dissertation (Full Text, 2019): [http://cuir.car.chula.ac.th/handle/123456789/70297](http://cuir.car.chula.ac.th/handle/123456789/70297)
     - role: Master Researcher (M.Eng.) in Computer Engineering
       time: 2015 - 2016
       company: Chulalongkorn University
       details: |
         A master thesis: Semantic Road Segmentation on Remotely-Sensed Images Using Deep Convolutional Neural Networks and Landscape Metrics (Evaluation: Very Good).
-        Graduate research in the laboratory of Peerapon Vateekul
-        This thesis presents an enhanced DCNN framework specifically tailored for road extraction on remotely-sensed images by applying landscape metrics (LMs) and conditional random fields (CRFs).
+        - Graduate research in the laboratory of Peerapon Vateekul
+        - This thesis presents an enhanced DCNN framework specifically tailored for road extraction on remotely-sensed images by applying landscape metrics (LMs) and conditional random fields (CRFs).
         - H.M. the King Bhumibhol Adulyadej's 72nd Birthday Anniversary Scholarship
         - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
         - GPAX 4.00/4.00
         - My Master Publication (My 1st Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.244, [https://www.mdpi.com/2072-4292/9/7/680](https://www.mdpi.com/2072-4292/9/7/680)) Special Issue "Learning to Understand Remote Sensing Images"
         - **Best Student Paper Award** in International Conference on Computing and Information Technology 2017 (Recent Advances in Information and Communication Technology 2017), [https://link.springer.com/book/10.1007/978-3-319-60663-7](https://link.springer.com/book/10.1007/978-3-319-60663-7)
-        - My publication thesis (Full Text, 2016): http://cuir.car.chula.ac.th/handle/123456789/55593
+        - My publication thesis (Full Text, 2016): [http://cuir.car.chula.ac.th/handle/123456789/55593](http://cuir.car.chula.ac.th/handle/123456789/55593)
     - role: Professional Service
       time: 2018 - Present
       company: IEEE Journal and Science Journal
       details: |
-        - Invited Reviewer of Neurocomputing (Elsevier) (Q1, ISI Journal)
-        - Invited Reviewer of Computers and Geosciences (Elsevier) (Q1, ISI Journal)
-        - Invited Reviewer of International Journal of Remote Sensing (Tier1, Q1, ISI Journal)
+        - Invited Reviewer of **Neurocomputing** (Elsevier) (Q1, ISI Journal)
+        - Invited Reviewer of **Computers and Geosciences** (Elsevier) (Q1, ISI Journal)
+        - Invited Reviewer of **International Journal of Remote Sensing** (Tier1, Q1, ISI Journal)
         - Invited Reviewer of International Journal of Image and Data Fusion
         - Invited Reviewer of International Journal of Distributed Sensor Networks
-        - Invited Reviewer of IEEE Transactions on Industrial Informatics (Q1, ISI Journal)
-        - Invited Reviewer of IEEE Transactions on Emerging Topics in Computational Intelligence
+        - Invited Reviewer of **IEEE Transactions on Industrial Informatics** (Q1, ISI Journal)
+        - Invited Reviewer of **IEEE Transactions on Emerging Topics in Computational Intelligence**
         - Invited Reviewer of IEEE Access (Q1, ISI Journal)
         - Invited Reviewer of IEEE Sensors Journal
         - Invited Reviewer of IEEE Transactions on Geoscience and Remote Sensing (Tier1, Q1, ISI Journal)
@@ -247,9 +247,9 @@ experiences:
       company: GISTDA (Geo-informatics and Space Technology Development Agency)
       details: |
         - AI research in the laboratory of Siam Lawawirojwong and Panu Srestasathiern
-        - (1st Project) Automated land-use/land-cover classification (LULC) Map Production using Deep Encoder-Decoder Neural Networks
-        - (2nd Project) A Multi-class Deep Learning Approach for LULC Classification of LANDSAT-8 Satellite Images
-        - (3rd Project) Deep Learning Based Forest Fire Classification in LANDSAT-8 Satellite Images
+        - **1st Project:** Automated land-use/land-cover classification (LULC) Map Production using Deep Encoder-Decoder Neural Networks
+        - **2nd Project:** A Multi-class Deep Learning Approach for LULC Classification of LANDSAT-8 Satellite Images
+        - **3rd Project:** Deep Learning Based Forest Fire Classification in LANDSAT-8 Satellite Images
     - role: Pathway Assistant in Data Science Program
       time: 2018 - 2020
       company: Bangkok Innovation House Co., Ltd
