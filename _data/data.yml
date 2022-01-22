@@ -83,7 +83,7 @@ career-profile:
 
       My primary interests are in practical deep learning and computer vision (especially on remote sensing corpus). I’ll be distilling my own learnings to (expectantly) help machine learning practitioners learn and be able to take advantage of important techniques and technologies faster, better, and more intuitively.
 
-      Summaries of my academic, industry, and teaching experience can be found [**here**](https://kaopanboonyuen.github.io/files/panboonyuen_cv.pdf), as well as a small collection of [**my music**](https://soundcloud.com/kaopanboonyuen) and [**my wordpress blog**](https://kaopanboonyuen.wordpress.com/). Further, I am a self-motivated, independent researcher with six years of deep learning and machine learning experience.
+      Summaries of my academic, industry, and teaching experience can be found [**here**](https://kaopanboonyuen.github.io/files/panboonyuen_cv.pdf), as well as a small collection of [**my music**](https://soundcloud.com/kaopanboonyuen) and [**my blog**](https://kaopanboonyuen.wordpress.com/). Further, I am a self-motivated, independent researcher with six years of deep learning and machine learning experience.
 
       Thai name: ธีรพงศ์ ปานบุญยืน (เก้า)
 
@@ -108,22 +108,23 @@ education:
       university: Chulalongkorn University
       time: 2021 - Present
       details: |
-        Topic: Semantic Labeling in Remote Sensing Corpora Using Convolutional Neural Network.
-        - Postdoctoral Researcher in Deep Learning for Remote Sensing.
-        - Postdoctoral Fellowship 2021 under Ratchadapisek Somphot Fund, Chulalongkorn University. Fellowship.
-        - I'm also currently being advised by Professor Peerapon Vateekul, Dr. Siam Lawawirojwong, and Dr. Panu Srestasathiern.
+        Topic: Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images
+        - Ratchadapisek Somphot Fund for Postdoctoral Fellowship, Chulalongkorn University
         - Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University
+        - My Publication Paper (Full Text, 2021): https://www.mdpi.com/2072-4292/13/24/5100
     - degree: Ph.D. in Computer Engineering
       university: Chulalongkorn University
       time: 2017 - 2020
       details: |
         Activities and Societies: The 100th Anniversary Chulalongkorn University Fund for Doctoral Scholarship. Machine Intelligence and Knowledge Discovery Lab (MIND Lab). 
         Designed and built deep encoder-decoder networks for semantic segmentation on satellite images.
-        - A dissertation proposal: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network
-        - I'm also currently being advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr. Siam Lawawirojwong, and Dr. Panu Srestasathiern.
+        - A dissertation: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network
         - My academic research also interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning
-        - My Ph.D. Publication (My 2nd Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.406, https://www.mdpi.com/2072-4292/11/1/83)
-        - My Ph.D. Publication (My 3rd Journal, ISI Journal, Q1, Tier 1, Impact Factor 4.509, https://www.mdpi.com)
+        - I propose the semantic segmentation architecture in five aspects, designed explicitly for the remotely sensed field on Landsat-8 satellite and ISPRS Vaihingen” challenge.
+        - My Ph.D. Publication (My 2nd paper, ISI Journal, Q1, Tier 1, Impact Factor 3.406, https://www.mdpi.com/2072-4292/11/1/83)
+        - My Ph.D. Publication (My 3rd paper, ISI Journal, Q1, Tier 1, Impact Factor 4.509, https://www.mdpi.com/2072-4292/12/8/1233)
+        - Certificate of Fundamentals of Deep Learning for Computer Vision (NVIDIA): https://bit.ly/kao_certificated
+        - My publication dissertation (Full Text, 2019): http://cuir.car.chula.ac.th/handle/123456789/70297
         - Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University
     - degree: M.Eng. in Computer Engineering
       university: Chulalongkorn University
@@ -131,19 +132,17 @@ education:
       details: |
         Activities and Societies: H.M. the King Bhumibhol Adulyadej's 72nd Birthday Anniversary Scholarship. Machine Intelligence and Knowledge Discovery Lab (MIND Lab).
         - A master thesis: Semantic Road Segmentation on Remotely-Sensed Images Using Deep Convolutional Neural Networks and Landscape Metrics (Evaluation: Very Good)
-        - I am advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr. Siam Lawawirojwong and, Dr. Panu Srestasathiern.
         - GPAX 4.00/4.00  
-        - My Master Publication (My 1st Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.244, https://www.mdpi.com/2072-4292/9/7/680)
+        - My Master Publication (My 1st paper, ISI Journal, Q1, Tier 1, Impact Factor 3.244, https://www.mdpi.com/2072-4292/9/7/680)
         - Best Student Paper Award in International Conference on Computing and Information Technology 2017 (Recent Advances in Information and Communication Technology 2017), https://link.springer.com/book/10.1007/978-3-319-60663-7
-        - http://cuir.car.chula.ac.th/handle/123456789/55593
+        - My publication thesis (Full Text, 2016): http://cuir.car.chula.ac.th/handle/123456789/55593
         - Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University
-        - My Publication Thesis (Full Text, 2016): http://cuir.car.chula.ac.th/handle/123456789/55593
     - degree: B.Eng. in Computer Engineering
       university: King Mongkut's University of Technology North Bangkok
       time: 2011 - 2015
       details: |
         Activities and Societies: Computer Engineering (Cpr.E 9) 
-        - I am advised by Professor Waranyu Wongseree 
+        - Undergraduate research in the laboratory of Waranyu Wongseree 
         - My academic interests mainly Computer Vision on Lumbar Spinal Stenosis corpus
         - Department of Electrical and Computer Engineering, Faculty of Engineering, King Mongkut's University of Technology North Bangkok
 experiences:
@@ -154,16 +153,16 @@ experiences:
         - Research, enhance the deep learning layer including backbone/frontend networks, train state-of-the-art (SOTA) deep learning models, and deploy them to production.
         - Continually updating the latest research papers (in the databases: CVPR, ICLR, ICCV, ECCV, NeurIPS, PAMI, etc.) in deep learning and computer vision, especially panoptic segmentation, semantic segmentation, object detection, and instance segmentation, to improve existing models.
         - Strategy and design ML/DL infrastructures, including training pipeline, deployment flow, experiment management, and labeling pipeline using tools, such as Label Studio, Weights & Biases (W&B), MLOps, Streamlit, and SageMaker.
-        - Tech Stack: Python, PyTorch, MaskRCNNDetectron2, SageMaker, S3, Flask, Docker
+        - Tech Stack: Python, PyTorch, MMDetection, MaskRCNN-Detectron2, SageMaker, S3, Flask, Docker
     - role: Postdoctoral Researcher in AI
       time: Apr 2021 - Present
       company: Graduate School Chulalongkorn University
       details: |
-        A research topic: Semantic Labeling in Remote Sensing Corpora Using Convolutional Neural Network.
-        I'm also currently being advised by Professor Peerapon Vateekul, Dr. Siam Lawawirojwong, and Dr. Panu Srestasathiern.
-        - Postdoctoral Fellowship 2021 under Ratchadapisek Somphot Fund, Chulalongkorn University. Fellowship.
+        A research topic: Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images
+        - Ratchadapisek Somphot Fund for Postdoctoral Fellowship, Chulalongkorn University
         - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
-        - [https://dblp.org/pers/hd/p/Panboonyuen:Teerapong](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
+        - Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University
+        - My Publication Paper (Full Text, 2021): https://www.mdpi.com/2072-4292/13/24/5100
     - role: AI Research Scientist (Department Manager)
       time: Nov 2020 - Aug 2021
       company: CJExpress Group
@@ -176,28 +175,28 @@ experiences:
       time: 2018 - 2020
       company: Chulalongkorn University
       details: |
-        A dissertation research: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network.
-        I'm also currently being advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr. Siam Lawawirojwong, and Dr. Panu Srestasathiern.
-        My academic interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning.
+        A dissertation: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network.
+        Graduate research in the laboratory of Peerapon Vateekul
+        My academic interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning. I propose the semantic segmentation architecture in five aspects, designed explicitly for the remotely sensed field on Landsat-8 satellite and ISPRS Vaihingen” challenge.
         - The 100th Anniversary Chulalongkorn University Fund for Doctoral Scholarship
         - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
         - My Ph.D. Publication (My 2nd Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.406, [https://www.mdpi.com/2072-4292/11/1/83](https://www.mdpi.com/2072-4292/11/1/83)) Special Issue "Convolutional Neural Networks Applications in Remote Sensing"
         - My Ph.D. Publication (My 3rd Journal, ISI Journal, Q1, Tier 1, Impact Factor 4.118, [https://www.mdpi.com/2072-4292/12/8/1233](https://www.mdpi.com/2072-4292/12/8/1233)) Special Issue "Advanced Deep Learning Strategies for the Analysis of Remote Sensing Images"
         - Certificate of Fundamentals of Deep Learning for Computer Vision (NVIDIA): [**this link**](https://bit.ly/kao_certificated)
-        - [https://dblp.org/pers/hd/p/Panboonyuen:Teerapong](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
+        - My publication dissertation (Full Text, 2019): http://cuir.car.chula.ac.th/handle/123456789/70297
     - role: Master Researcher (M.Eng.) in Computer Engineering
       time: 2015 - 2016
       company: Chulalongkorn University
       details: |
         A master thesis: Semantic Road Segmentation on Remotely-Sensed Images Using Deep Convolutional Neural Networks and Landscape Metrics (Evaluation: Very Good).
-        I am advised by Professor Peerapon Vateekul, Professor Kulsawasd Jitkajornwanich, Dr. Siam Lawawirojwong and, Dr. Panu Srestasathiern.
+        Graduate research in the laboratory of Peerapon Vateekul
+        This thesis presents an enhanced DCNN framework specifically tailored for road extraction on remotely-sensed images by applying landscape metrics (LMs) and conditional random fields (CRFs).
         - H.M. the King Bhumibhol Adulyadej's 72nd Birthday Anniversary Scholarship
         - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
         - GPAX 4.00/4.00
         - My Master Publication (My 1st Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.244, [https://www.mdpi.com/2072-4292/9/7/680](https://www.mdpi.com/2072-4292/9/7/680)) Special Issue "Learning to Understand Remote Sensing Images"
         - **Best Student Paper Award** in International Conference on Computing and Information Technology 2017 (Recent Advances in Information and Communication Technology 2017), [https://link.springer.com/book/10.1007/978-3-319-60663-7](https://link.springer.com/book/10.1007/978-3-319-60663-7)
-        - My Publication Thesis (Full Text, 2016): [http://cuir.car.chula.ac.th/handle/123456789/55593](http://cuir.car.chula.ac.th/handle/123456789/55593)
-        - [https://dblp.org/pers/hd/p/Panboonyuen:Teerapong](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
+        - My publication thesis (Full Text, 2016): http://cuir.car.chula.ac.th/handle/123456789/55593
     - role: Professional Service
       time: 2018 - Present
       company: IEEE Journal and Science Journal
@@ -243,12 +242,14 @@ experiences:
         - Creating the AI model and computer vision technique to segmenting multi-objects on aerial and satellite image
         - Constructing and Visualising the large database of the agricultural corpora for research
         - Play with remote sensing corpora
-    - role: Artificial Intelligence Developer
+    - role: AI Engineer (Freelance)
       time: 2016 - 2020
       company: GISTDA (Geo-informatics and Space Technology Development Agency)
       details: |
-        Research and training all types of satellite images applying deep Convolutional Neural Network (CNNs) methods
-        - I am currently being advised by Dr. Siam Lawawirojwong and Dr. Panu Srestasathiern from here.
+        - AI research in the laboratory of Siam Lawawirojwong and Panu Srestasathiern
+        - (1st Project) Automated land-use/land-cover classification (LULC) Map Production using Deep Encoder-Decoder Neural Networks
+        - (2nd Project) A Multi-class Deep Learning Approach for LULC Classification of LANDSAT-8 Satellite Images
+        - (3rd Project) Deep Learning Based Forest Fire Classification in LANDSAT-8 Satellite Images
     - role: Pathway Assistant in Data Science Program
       time: 2018 - 2020
       company: Bangkok Innovation House Co., Ltd
@@ -270,11 +271,12 @@ experiences:
       company: Main Shipping Service Co.,Ltd
       details: |
         Design and deploy functional networks(WAN, LAN, WLAN) including configure and install software, servers, routers and other network devices. Maintain complete technical documentation and suggest improvements to network performance, capacity and scalability
-    - role: Teacher Assistant (Python and Java Programming)
+    - role: Graduate Teaching Assistant
       time: 2017 - 2020
       company: International School of Engineering, Chulalongkorn University
       details: |
         Co-instructed the annual offering on machine learning to undergraduate/graduate students and revised the course content to include hands-on experience with Python programming
+        I helped teach Chula's graduate-level course on:
         - 2140101 Computer Programming (Java, ISE, Chulalongkorn University)
         - 2110101 Computer Programming (Python, 1st year bachelor of Faculty of Engineering, Chulalongkorn University)
         - 2110215 Programming Methodology(Java, 2nd year bachelor of Computer Engineering, Chulalongkorn University)
@@ -282,6 +284,7 @@ experiences:
         - 2110446 Data Science and Data Engineering (3rd year bachelor of Computer Engineering, Chulalongkorn University)
         - (Online Course, Head TA) Intro to Data Analytics and Big Data (https://mooc.chula.ac.th/courses/chulamooc2812)
         - (Online Course, Head TA) Practical Data Analytics Using Rapid Miner (https://mooc.chula.ac.th/courses/chulamooc2813)
+        My responsibilities included teaching recitations and developing homework and test material.
 
 projects:
     title: Projects
