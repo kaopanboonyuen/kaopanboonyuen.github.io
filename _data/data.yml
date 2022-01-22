@@ -177,7 +177,7 @@ experiences:
       details: |
         A dissertation: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network
         - Graduate research in the laboratory of Peerapon Vateekul
-        - My academic interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning. I propose the semantic segmentation architecture in five aspects, designed explicitly for the remotely sensed field on Landsat-8 satellite and ISPRS Vaihingen” challenge.
+        - My academic interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning. I propose the semantic segmentation architecture in five aspects, designed explicitly for the remotely sensed field on Landsat-8 satellite and ISPRS Vaihingen challenge.
         - The 100th Anniversary Chulalongkorn University Fund for Doctoral Scholarship
         - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
         - My Ph.D. Publication (My 2nd Journal, ISI Journal, Q1, Tier 1, Impact Factor 3.406, [https://www.mdpi.com/2072-4292/11/1/83](https://www.mdpi.com/2072-4292/11/1/83)) Special Issue "Convolutional Neural Networks Applications in Remote Sensing"
@@ -201,13 +201,13 @@ experiences:
       time: 2018 - Present
       company: IEEE Journal and Science Journal
       details: |
-        - Invited Reviewer of Neurocomputing (Elsevier) (Q1, ISI Journal)
-        - Invited Reviewer of Computers and Geosciences (Elsevier) (Q1, ISI Journal)
-        - Invited Reviewer of International Journal of Remote Sensing (Tier1, Q1, ISI Journal)
+        - Invited Reviewer of **Neurocomputing** (Elsevier) (Q1, ISI Journal)
+        - Invited Reviewer of **Computers and Geosciences** (Elsevier) (Q1, ISI Journal)
+        - Invited Reviewer of **International Journal of Remote Sensing** (Tier1, Q1, ISI Journal)
         - Invited Reviewer of International Journal of Image and Data Fusion
         - Invited Reviewer of International Journal of Distributed Sensor Networks
-        - Invited Reviewer of IEEE Transactions on Industrial Informatics (Q1, ISI Journal)
-        - Invited Reviewer of IEEE Transactions on Emerging Topics in Computational Intelligence
+        - Invited Reviewer of **IEEE Transactions on Industrial Informatics** (Q1, ISI Journal)
+        - Invited Reviewer of **IEEE Transactions on Emerging Topics in Computational Intelligence**
         - Invited Reviewer of IEEE Access (Q1, ISI Journal)
         - Invited Reviewer of IEEE Sensors Journal
         - Invited Reviewer of IEEE Transactions on Geoscience and Remote Sensing (Tier1, Q1, ISI Journal)
@@ -247,9 +247,9 @@ experiences:
       company: GISTDA (Geo-informatics and Space Technology Development Agency)
       details: |
         - AI research in the laboratory of Siam Lawawirojwong and Panu Srestasathiern
-        - (1st Project) Automated land-use/land-cover classification (LULC) Map Production using Deep Encoder-Decoder Neural Networks
-        - (2nd Project) A Multi-class Deep Learning Approach for LULC Classification of LANDSAT-8 Satellite Images
-        - (3rd Project) Deep Learning Based Forest Fire Classification in LANDSAT-8 Satellite Images
+        - **1st Project:** Automated land-use/land-cover classification (LULC) Map Production using Deep Encoder-Decoder Neural Networks
+        - **2nd Project:** A Multi-class Deep Learning Approach for LULC Classification of LANDSAT-8 Satellite Images
+        - **3rd Project:** Deep Learning Based Forest Fire Classification in LANDSAT-8 Satellite Images
     - role: Pathway Assistant in Data Science Program
       time: 2018 - 2020
       company: Bangkok Innovation House Co., Ltd
