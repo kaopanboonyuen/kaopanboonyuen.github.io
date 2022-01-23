@@ -223,6 +223,14 @@ experiences:
         - Invited Reviewer of International Journal of Imaging Systems and Technology (Q2, Journal)
         - Invited Reviewer of IETE Technical Review (Q2 Journal)
         - Invited Reviewer of IETE Journal of Research (Q4 Journal)
+    - role: AI Engineer (Freelance)
+      time: 2016 - 2020
+      company: GISTDA (Geo-informatics and Space Technology Development Agency)
+      details: |
+        - AI research in the laboratory of Siam Lawawirojwong and Panu Srestasathiern
+        - **1st Project:** Automated land-use/land-cover classification (LULC) Map Production using Deep Encoder-Decoder Neural Networks
+        - **2nd Project:** A Multi-class Deep Learning Approach for LULC Classification of LANDSAT-8 Satellite Images
+        - **3rd Project:** Deep Learning Based Forest Fire Classification in LANDSAT-8 Satellite Images
     - role: Data Technical Support
       time: Feb 2020 - Mar 2020
       company: Puey Ungphakorn Institute for Economic Research (Bank of Thailand)
@@ -241,15 +249,6 @@ experiences:
       details: |
         - Creating the AI model and computer vision technique to segmenting multi-objects on aerial and satellite image
         - Constructing and Visualising the large database of the agricultural corpora for research
-        - Play with remote sensing corpora
-    - role: AI Engineer (Freelance)
-      time: 2016 - 2020
-      company: GISTDA (Geo-informatics and Space Technology Development Agency)
-      details: |
-        - AI research in the laboratory of Siam Lawawirojwong and Panu Srestasathiern
-        - **1st Project:** Automated land-use/land-cover classification (LULC) Map Production using Deep Encoder-Decoder Neural Networks
-        - **2nd Project:** A Multi-class Deep Learning Approach for LULC Classification of LANDSAT-8 Satellite Images
-        - **3rd Project:** Deep Learning Based Forest Fire Classification in LANDSAT-8 Satellite Images
     - role: Pathway Assistant in Data Science Program
       time: 2018 - 2020
       company: Bangkok Innovation House Co., Ltd
