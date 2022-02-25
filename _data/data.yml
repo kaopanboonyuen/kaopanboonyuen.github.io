@@ -289,12 +289,12 @@ experiences:
 projects:
     title: Projects, Teaching, Featured Talks, and Research Communities
     intro: >
-      You can find my projects through [**this link**](https://github.com/kaopanboonyuen)
+      You can find my projects through https://github.com/kaopanboonyuen
     assignments:
 
       - title: Geospatial Big Data Analytics (Teaching)
         link: "https://github.com/kaopanboonyuen/kaopanboonyuen.github.io/raw/master/files/talks/panboonyuen_Geospatial_Big_Data_Analytics.jpeg"
-        tagline: "Learning objectives: demonstrate an understanding of the breadth of methods and techniques available for handling large volumes of geospatial data; use AI/ML methods with PySpark and techniques to conduct spatial analyses of big data and apply resulting analyses to problems within the student’s own discipline."
+        tagline: "Demonstrate an understanding of the breadth of methods and techniques available for handling large volumes of geospatial data; use AI/ML methods with PySpark and techniques to conduct spatial analyses of big data and apply resulting analyses to problems within the student’s own discipline."
 
       - title: Achieve Data Science First Meet (Featured Talks, and Research Communities)
         link: "https://github.com/kaopanboonyuen/kaopanboonyuen.github.io/raw/master/files/talks/panboonyuen_data_science_talk.jpeg"
