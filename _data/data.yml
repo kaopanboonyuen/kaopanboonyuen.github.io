@@ -148,10 +148,11 @@ education:
         - My academic interests mainly Computer Vision on Lumbar Spinal Stenosis corpus
         - Department of Electrical and Computer Engineering, Faculty of Engineering, King Mongkut's University of Technology North Bangkok
 experiences:
-    - role: Senior AI Engineer
+    - role: AI Team Lead, Senior AI Engineer
       time: Jan 2022 - Present
       company: MARS (Motor AI Recognition Solution)
       details: |
+        - Lead a team of two computer vision engineers and three data labelers to build SOTA deep learnign for damage detection tasks.
         - Research, enhance the deep learning layer including backbone/frontend networks, train state-of-the-art (SOTA) deep learning models, and deploy them to production.
         - Continually updating the latest research papers (in the databases: CVPR, ICLR, ICCV, ECCV, NeurIPS, PAMI, etc.) in deep learning and computer vision, especially panoptic segmentation, semantic segmentation, object detection, and instance segmentation, to improve existing models.
         - Strategy and design ML/DL infrastructures, including training pipeline, deployment flow, experiment management, and labeling pipeline using tools, such as Label Studio, Weights & Biases (W&B), MLOps, Streamlit, and SageMaker.
