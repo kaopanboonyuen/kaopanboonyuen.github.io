@@ -152,11 +152,11 @@ experiences:
       time: Jan 2022 - Present
       company: MARS (Motor AI Recognition Solution)
       details: |
-        - Lead a team of two computer vision engineers and three data labelers to build SOTA deep learnign for damage detection tasks.
+        - Lead a team of two computer vision engineers and three data labelers to build SOTA deep learning for computer vision tasks.
         - Research, enhance the deep learning layer including backbone/frontend networks, train state-of-the-art (SOTA) deep learning models, and deploy them to production.
         - Continually updating the latest research papers (in the databases: CVPR, ICLR, ICCV, ECCV, NeurIPS, PAMI, etc.) in deep learning and computer vision, especially panoptic segmentation, semantic segmentation, object detection, and instance segmentation, to improve existing models.
-        - Strategy and design ML/DL infrastructures, including training pipeline, deployment flow, experiment management, and labeling pipeline using tools, such as Label Studio, Weights & Biases (W&B), MLOps, Streamlit, and SageMaker.
-        - Tech Stack: Python, PyTorch, MMDetection, MaskRCNN-Detectron2, SageMaker, S3, Flask, Docker
+        - Strategy and design ML/DL infrastructures, including training pipeline, deployment flow, experiment management, and labeling pipeline using tools, such as Label Studio, Weights & Biases (W&B), MLOps, Streamlit, and EC2-G4DN.
+        - Tech Stack: Python, PyTorch, MMDetection, MaskRCNN-Detectron2, SageMaker, EC2, S3, Flask, Docker
         - Panboonyuen's business card: [**this link**](https://raw.githubusercontent.com/kaopanboonyuen/kaopanboonyuen.github.io/master/files/MARS/MARS_businesscard-panboonyuen.jpg)
         - Panboonyuen's role: [**this link**](https://raw.githubusercontent.com/kaopanboonyuen/kaopanboonyuen.github.io/master/files/MARS/MAR_panboonyuen_05.png)
         - MARS reference: [**this link**](https://www.marssolution.io/about-us)
@@ -308,6 +308,10 @@ projects:
     intro: >
       You can find my projects through https://github.com/kaopanboonyuen
     assignments:
+
+      - title: The Bangkok Urbanscapes Dataset for Semantic Urban Scene Understanding Using Deep Learning (Project)
+        link: "https://kaopanboonyuen.github.io/bkkurbanscapes"
+        tagline: "Semantic segmentation is one of the computer vision tasks which is widely researched at present. It plays an essential role to adapt and apply for real-world use-cases, including the application with autonomous driving systems. To further study self-driving cars in Thailand, we provide both the proposed methods and the proposed dataset in this paper. In the proposed method, we contribute Deeplab-V3-A1 with Xception, which is an extension of DeepLab-V3+ architecture. Our proposed method as DeepLab-V3-A1 with Xception is enhanced by the different number of 1 x 1 convolution layers on the decoder side and refining the image classification backbone with modification of the Xception model. The experiment was conducted on three datasets: the proposed dataset and two public datasets i.e., the CamVid, the cityscapes, and IDD datasets, respectively. The results show that our proposed strategy as DeepLab-V3-A1 with Xception performs comparably to the baseline methods for all corpora including measurement units such as mean IoU, F1 score, Precision, and Recall. In addition, we benchmark DeepLab-V3-A1 with Xception on the testing set of the cityscapes dataset with a mean IoU of 90.1%. For our proposed dataset, we first contribute the Bangkok Urbanscapes dataset, the urban scenes in Southeast Asia. This dataset contains the pair of input images and annotated labels for 701 images. Our dataset consists of various driving environments in Bangkok, as shown for eleven semantic classes (Road, Building, Tree, Car, Footpath, Motorcycle, Pole, Person, Trash, Crosswalk, and Misc). We hope that our architecture and our dataset would help self-driving autonomous developers improve systems for driving in many cities with unique traffic and driving conditions similar to Bangkok and elsewhere in Thailand."
 
       - title: Geospatial Big Data Analytics (Teaching)
         link: "https://github.com/kaopanboonyuen/kaopanboonyuen.github.io/raw/master/files/talks/panboonyuen_Geospatial_Big_Data_Analytics.jpeg"
