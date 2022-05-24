@@ -341,6 +341,11 @@ publications:
       You can find my publications through [**this link**](https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en)
     papers:
 
+      - title: Enhanced Feature Pyramid Vision Transformer for Semantic Segmentation on Thailand Landsat-8 Corpus
+        link: "https://www.mdpi.com/2078-2489/13/5/259"
+        authors: Intarat, K.; Rakwatin, P.; Panboonyuen, T.
+        conference: Information 13.259 (2022), 5.
+
       - title: Object Detection of Road Assets Using Transformer-Based YOLOX with Feature Pyramid Decoder on Thai Highway Panorama
         link: "https://www.mdpi.com/2078-2489/13/1/5"
         authors: Panboonyuen, Teerapong, et al.
