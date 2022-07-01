@@ -221,8 +221,10 @@ experiences:
         - Invited Reviewer of **IEEE Transactions on Geoscience and Remote Sensing** (Tier1, Q1, ISI Journal)
         - Invited Reviewer of **IEEE Transactions on Industrial Informatics** (Q1, ISI Journal)
         - Invited Reviewer of **IEEE Transactions on Emerging Topics in Computational Intelligence**
+        - Invited Reviewer of **IEEE Transactions on Radiation and Plasma Medical Sciences** (Q1, ISI Journal)
         - Invited Reviewer of IEEE Access (Q1, ISI Journal)
         - Invited Reviewer of IEEE Sensors Journal
+        - Invited Reviewer of IEEE Intelligent Systems (Q1, ISI Journal)
         - Invited Reviewer of IET Image Processing (Q2, ISI Journal)
         - Invited Reviewer of Geo-spatial Information Science
         - Invited Reviewer of Remote Sensing Letters
@@ -238,7 +240,6 @@ experiences:
         - Invited Reviewer of IETE Technical Review (Q2 Journal)
         - Invited Reviewer of IETE Journal of Research (Q4 Journal)
         - Invited Reviewer of Transactions in GIS (Wiley-Blackwell Publishing Ltd, Q1 Journal)
-        - Invited Reviewer of IEEE Transactions on Radiation and Plasma Medical Sciences (Journal)
         - Invited Reviewer of Transactions on Network Science and Engineering (Journal)
         - Invited Reviewer of Chinese Journal of Electronics (Q3, Journal)
         - Invited Reviewer of Connection Science (Q3, AI, Taylor and Francis AS, Journal)
@@ -337,6 +338,10 @@ projects:
       - title: Flood Risk Assessment in Ayutthaya Province (Project)
         link: "https://github.com/kaopanboonyuen/Rainfall-Prediction-A-Machine-Learning-Approach"
         tagline: "We described a more efficient method to create flood susceptibility map - using Thailand’s Ayutthaya Province as a case study to assess flood prone areas."
+
+      - title: 110km PTT Virtual Run (Virtual Run)
+        link: "https://raw.githubusercontent.com/kaopanboonyuen/kaopanboonyuen.github.io/master/files/certificate/Panboonyuen_PTT_Virtual_Run_110km.png"
+        tagline: "Work my way up from running continuously over the course of 30 days"
 
 publications:
     title: Publications
