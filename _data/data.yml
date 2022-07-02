@@ -354,6 +354,11 @@ publications:
         authors: Intarat, K.; Rakwatin, P.; Panboonyuen, T.
         conference: Information 13.259 (2022), 5.
 
+      - title: The Bangkok Urbanscapes Dataset for Semantic Urban Scene Understanding Using Enhanced Encoder-Decoder with Atrous Depthwise Separable A1 Convolutional Neural Networks
+        link: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9779212"
+        authors: Thitisiriwech, K., Panboonyuen, T., Kantavat, P., Iwahori, Y., & Kijsirikul, B.
+        conference: Information 13.259 (2022), 5.
+
       - title: Object Detection of Road Assets Using Transformer-Based YOLOX with Feature Pyramid Decoder on Thai Highway Panorama
         link: "https://www.mdpi.com/2078-2489/13/1/5"
         authors: Panboonyuen, Teerapong, et al.
