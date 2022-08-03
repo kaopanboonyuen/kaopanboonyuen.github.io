@@ -69,7 +69,7 @@ career-profile:
     summary: |
       Hi there. My name is **Teerapong Panboonyuen** (now, I am 29), also known as **Kao Panboonyuen** (or just **Kao**) and received the Ph.D. degree in Computer Engineering (Artificial Intelligence, Machine Learning, Deep Learning) from Chula.
 
-      **Tech Stack:** GCP; DataProc/PySpark; AWS; Python; PyTorch; SageMaker; S3; Flask; Docker
+      **Developer Tools:** Python, PyTorch, Detectron2, Weights & Biases (Developer tools for ML), Gradio, EC2-G4DN, S3, Docker-Compose
 
       In 2015, I graduated with a B.Eng. in Computer Engineering from KMUTNB.
 
@@ -156,7 +156,7 @@ experiences:
       time: Jan 2022 - Present
       company: MARS (Motor AI Recognition Solution)
       details: |
-        - Developer Tools: Python, PyTorch, Detectron2, Weights & Biases (Developer tools for ML), EC2-G4DN, S3, Docker
+        - Developer Tools: Python, PyTorch, Detectron2, Weights & Biases (Developer tools for ML), Gradio, EC2-G4DN, S3, Docker
         - Panboonyuen's business card: [**this link**](https://raw.githubusercontent.com/kaopanboonyuen/kaopanboonyuen.github.io/master/files/MARS/MARS_businesscard-panboonyuen.jpg)
         - Panboonyuen's role: [**this link**](https://raw.githubusercontent.com/kaopanboonyuen/kaopanboonyuen.github.io/master/files/MARS/MAR_panboonyuen_05.png)
         - MARS reference: [**this link**](https://www.marssolution.io/about-us)
