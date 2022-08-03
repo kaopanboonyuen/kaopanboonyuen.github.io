@@ -157,10 +157,10 @@ experiences:
       company: MARS (Motor AI Recognition Solution)
       details: |
         - New research starts with understanding, AI-model creating, reproducing, and verifying ai results in the auto insurance industry
-        - Provides ML APIs to the service team (frontend and backend) to download and use our pre-trained models on car insurance and garage tasks. Also, new models can be implemented rapidly and then transferred to production
+        - Provides ML-APIs to the service team (frontend and backend) to download and use our pre-trained models on car insurance and garage tasks. Also, new models can be implemented rapidly and then transferred to production
         - Novel research (in the databases: CVPR, ICLR, ICCV, ECCV, NeurIPS, PAMI, etc.) involves inventing new models that will likely break the design assumptions of existing models
         - Provide high-quality reference implementations for many state-of-the-art algorithms to democratize this phase of the research process
-        - Developer Tools: Python, PyTorch, Detectron2, Weights \& Biases (Developer tools for ML), Gradio, EC2-G4DN, S3, Docker
+        - Developer Tools: Python, PyTorch, Detectron2, Weights & Biases (Developer tools for ML), Gradio, EC2-G4DN, S3, Docker
         - Panboonyuen's business card: [**this link**](https://raw.githubusercontent.com/kaopanboonyuen/kaopanboonyuen.github.io/master/files/MARS/MARS_businesscard-panboonyuen.jpg)
         - Panboonyuen's role: [**this link**](https://raw.githubusercontent.com/kaopanboonyuen/kaopanboonyuen.github.io/master/files/MARS/MAR_panboonyuen_05.png)
         - MARS reference: [**this link**](https://www.marssolution.io/about-us)
