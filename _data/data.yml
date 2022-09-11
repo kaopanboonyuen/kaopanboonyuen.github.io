@@ -324,7 +324,7 @@ projects:
     assignments:
 
       - title: Object Detection of Road Assets Using Transformer-Based YOLOX with Feature Pyramid Decoder on Thai Highway Panorama (Project)
-        link: "https://kaopanboonyuen.github.io/bkkurbanscapes"
+        link: "https://www.mdpi.com/2078-2489/13/1/5"
         tagline: "Identifying road asset objects in Thailand highway monitoring image sequences is essential for intelligent traffic monitoring and administration of the highway. We introduce transformer-based Feature Pyramid Network (FPN) decoder designs, injecting the FPN style of decoder design into Transformer-based YOLOX reasoning."
 
       - title: The Bangkok Urbanscapes Dataset for Semantic Urban Scene Understanding Using Deep Learning (Project)
