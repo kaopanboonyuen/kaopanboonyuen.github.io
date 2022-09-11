@@ -223,6 +223,7 @@ experiences:
         - Invited Reviewer of International Journal of Image and Data Fusion
         - Invited Reviewer of International Journal of Distributed Sensor Networks
         - Invited Reviewer of **IEEE Transactions on Artificial Intelligence**
+        - Invited Reviewer of **IEEE Transactions on Neural Networks and Learning Systems** (Q1, ISI Journal)
         - Invited Reviewer of **IEEE Transactions on Geoscience and Remote Sensing** (Tier1, Q1, ISI Journal)
         - Invited Reviewer of **IEEE Transactions on Industrial Informatics** (Q1, ISI Journal)
         - Invited Reviewer of **IEEE Transactions on Emerging Topics in Computational Intelligence**
@@ -301,7 +302,7 @@ experiences:
       time: 2017 - Present
       company: Main Shipping Service Co.,Ltd
       details: |
-        Design and deploy functional networks(WAN, LAN, WLAN) including configure and install software, servers, routers and other network devices. Maintain complete technical documentation and suggest improvements to network performance, capacity and scalability
+        Design and deploy functional networks (WAN, LAN, WLAN) including configure and install software, servers, routers and other network devices. Maintain complete technical documentation and suggest improvements to network performance, capacity and scalability
     - role: Graduate Teaching Assistant
       time: 2017 - 2020
       company: International School of Engineering, Chulalongkorn University
@@ -321,6 +322,10 @@ projects:
     intro: >
       You can find my projects through https://github.com/kaopanboonyuen
     assignments:
+
+      - title: Object Detection of Road Assets Using Transformer-Based YOLOX with Feature Pyramid Decoder on Thai Highway Panorama (Project)
+        link: "https://kaopanboonyuen.github.io/bkkurbanscapes"
+        tagline: "Identifying road asset objects in Thailand highway monitoring image sequences is essential for intelligent traffic monitoring and administration of the highway. We introduce transformer-based Feature Pyramid Network (FPN) decoder designs, injecting the FPN style of decoder design into Transformer-based YOLOX reasoning."
 
       - title: The Bangkok Urbanscapes Dataset for Semantic Urban Scene Understanding Using Deep Learning (Project)
         link: "https://kaopanboonyuen.github.io/bkkurbanscapes"
