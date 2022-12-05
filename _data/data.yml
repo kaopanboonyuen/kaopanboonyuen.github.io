@@ -67,7 +67,7 @@ sidebar:
 career-profile:
     title: Career Profile
     summary: |
-      Hi there. My name is **Teerapong Panboonyuen** (now, I am 29), also known as **Kao Panboonyuen** (or just **Kao**) and received the Ph.D. degree in Computer Engineering (Artificial Intelligence, Machine Learning, Deep Learning) from Chula.
+      Hi there. My name is **Teerapong Panboonyuen**, also known as **Kao Panboonyuen** (or just **Kao**) and received the Ph.D. degree in Computer Engineering (Artificial Intelligence, Machine Learning, Deep Learning) from Chula.
 
       **Developer Tools:** GCP, AWS, Python, PyTorch, Detectron2, Weights & Biases (Developer tools for ML), Gradio, EC2-G4DN, S3, Docker-Compose
 
@@ -266,6 +266,8 @@ experiences:
         - Invited Reviewer of Open Geosciences
         - Invited Reviewer of GMSARN International Journal
         - Invited Reviewer of Geocarto International
+        - Invited Reviewer of Engineering Reports
+
     - role: AI Engineer (Freelance)
       time: 2016 - 2020
       company: GISTDA (Geo-informatics and Space Technology Development Agency)
