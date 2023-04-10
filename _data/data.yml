@@ -48,7 +48,7 @@ sidebar:
       # university: King Mongkut's University of Technology North Bangkok
       # time: 2012 - 2015
       # details: |
-      #    Activities and Societies: Computer Engineering (Cpr.E 9)
+      #   Activities and Societies: Computer Engineering (Cpr.E 9)
       #   Graduate research in the laboratory of Waranyu Wongseree
       #   - Designed and built computer vision algorithms to detect the occurrence of lumbar spinal stenosis.
       #   - My academic interests mainly Computer Vision on Lumbar Spinal Stenosis corpus
@@ -59,7 +59,7 @@ sidebar:
       # university: King Mongkut's University of Technology North Bangkok
       # time: 2009 - 2011
       # details: |
-      #    Activities and Societies: Pre-Electrical Technician (PET 21)
+      #   Activities and Societies: Pre-Electrical Technician (PET 21)
       #   - Pre-Engineering Thai-German School Department College of Industrial Technology
       #   - My Secondary School (Senior High School)
       #   - King Mongkut's University of Technology North Bangkok
@@ -373,6 +373,10 @@ publications:
     intro: |
       You can find my publications through [**this link**](https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en)
     papers:
+      - title: Quality of Life Prediction in Driving Scenes on Thailand Roads Using Information Extraction from Deep Convolutional Neural Networks
+        link: "https://www.mdpi.com/2078-2489/13/5/259"
+        authors: Thitisiriwech, K.; Panboonyuen, T.; Kantavat, P.; Kijsirikul, B.; Iwahori, Y.; Fukui, S.; Hayashi, Y. 
+        conference: Sustainability. 2023; 15(3):2847.
 
       - title: Enhanced Feature Pyramid Vision Transformer for Semantic Segmentation on Thailand Landsat-8 Corpus
         link: "https://www.mdpi.com/2078-2489/13/5/259"
