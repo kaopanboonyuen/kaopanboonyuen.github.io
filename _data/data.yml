@@ -344,9 +344,13 @@ projects:
         link: "https://kaopanboonyuen.github.io/bkkurbanscapes"
         tagline: "To further study self-driving cars in Thailand, we provide both the proposed methods and the proposed dataset in this project. We hope that our architecture and our dataset would help self-driving autonomous developers improve systems for driving in many cities with unique traffic and driving conditions similar to Bangkok and elsewhere in Thailand."
 
-      - title: Geospatial Big Data Analytics (Teaching)
-        link: "https://github.com/kaopanboonyuen/kaopanboonyuen.github.io/raw/master/files/talks/panboonyuen_Geospatial_Big_Data_Analytics.jpeg"
+      - title: Geospatial Big Data Analytics 2022 (Teaching)
+        link: "https://github.com/kaopanboonyuen/kaopanboonyuen.github.io/raw/master/files/talks/panboonyuen_Geospatial_Big_Data_Analytics_2022.jpeg"
         tagline: "Demonstrate an understanding of the breadth of methods and techniques available for handling large volumes of geospatial data; use AI/ML methods with PySpark and techniques to conduct spatial analyses of big data and apply resulting analyses to problems within the student’s own discipline."
+
+      - title: Geospatial Big Data Analytics 2023 (Teaching)
+        link: "https://github.com/kaopanboonyuen/kaopanboonyuen.github.io/raw/master/files/talks/panboonyuen_Geospatial_Big_Data_Analytics_2023.jpeg"
+        tagline: "Extract data using web scraping with python, Visualizations using Looker Studio of Google, and PySpark for Machine Learning"
 
       - title: Achieve Data Science First Meet (Featured Talks, and Research Communities)
         link: "https://github.com/kaopanboonyuen/kaopanboonyuen.github.io/raw/master/files/talks/panboonyuen_data_science_talk.jpeg"
