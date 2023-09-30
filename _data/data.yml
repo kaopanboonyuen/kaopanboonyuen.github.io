@@ -158,7 +158,7 @@ experiences:
       time: Jan 2022 - Present
       company: MARS (Motor AI Recognition Solution)
       details: |
-        - Developed an AI model called 'MARS: Mask Attention Refinement with Sequential Quadtree Nodes' for the MARS company. The project was presented at the International Conference on Image Analysis and Processing, ICIAP 2023, which was held in Udine, Italy, from September 11-15, 2023, and was also published in the conference proceedings.
+        - Developed an AI model called 'MARS: Mask Attention Refinement with Sequential Quadtree Nodes' [**arxiv paper**](https://arxiv.org/abs/2305.04743) for the MARS company. The project was presented at the International Conference on Image Analysis and Processing, ICIAP 2023, which was held in Udine, Italy, from September 11-15, 2023, and was also published in the conference proceedings.
         - New research starts with understanding, AI-model creating (in the tasks: Image Classification, Object Detection, Instance Segmentation, Domain Adaptation, Explainable AI (XAI), or Interpretable AI, or Explainable Machine Learning (XML), etc.), reproducing, and verifying ai results in the auto insurance industry
         - Provides ML-APIs to the service team (frontend and backend) to download and use our pre-trained models on car insurance and garage tasks. Also, new models can be implemented rapidly and then transferred to production
         - Novel research (in the databases: CVPR, ICLR, ICCV, ECCV, NeurIPS, PAMI, etc.) involves inventing new models that will likely break the design assumptions of existing models
