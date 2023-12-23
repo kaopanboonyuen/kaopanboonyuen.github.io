@@ -1,0 +1,538 @@
+#
+# Be aware that even a small syntax error here can lead to failures in output.
+#
+
+sidebar:
+    about: False # set to False or comment line if you want to remove the "how to use?" in the sidebar
+    education: True # set to False if you want education in main section instead of in sidebar
+
+    # Profile information
+    name: Teerapong Panboonyuen 
+    # tagline: also known as Kao Panboonyuen
+    tagline: AI Research Scientist
+    avatar: Kao_v5_250.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+
+    # Sidebar links
+    email: teerapong.panboonyuen at gmail dot com
+    # phone: 012 345 6789
+    website: kaopanboonyuen.tumblr.com/ #do not add http://
+    linkedin: teerapong-panboonyuen
+    github: kaopanboonyuen
+    gitlab:
+    bitbucket:
+    twitter: 'kaopanboonyuen'
+    stack-overflow: # Number/Username, e.g. 123456/alandoe
+    codewars:
+    goodreads: # Number-Username, e.g. 123456-alandoe
+
+    languages:
+      - idiom: Thai
+        level: Native
+
+      - idiom: English
+        level: Professional
+
+
+
+    interests:
+      - item: KA-O (my music side project) 
+        link: https://soundcloud.com/kaopanboonyuen
+      - item: KA-O (my personal blog) 
+        link: https://kaopanboonyuen.wordpress.com/
+
+      # - item: Snowboarding
+      #   link:
+
+      # - item: Cooking
+      #   link:
+
+      # - degree: B.Eng. in Computer Engineering
+      # university: King Mongkut's University of Technology North Bangkok
+      # time: 2012 - 2015
+      # details: |
+      #   Activities and Societies: Computer Engineering (Cpr.E 9)
+      #   Graduate research in the laboratory of Waranyu Wongseree
+      #   - Designed and built computer vision algorithms to detect the occurrence of lumbar spinal stenosis.
+      #   - My academic interests mainly Computer Vision on Lumbar Spinal Stenosis corpus
+      #   - I am advised by Professor Waranyu Wongseree
+      #   - Department of Electrical and Computer Engineering, Faculty of Engineering, King Mongkut's University of Technology North Bangkok
+
+      # - degree: Pre-Engineering Thai-German School
+      # university: King Mongkut's University of Technology North Bangkok
+      # time: 2009 - 2011
+      # details: |
+      #   Activities and Societies: Pre-Electrical Technician (PET 21)
+      #   - Pre-Engineering Thai-German School Department College of Industrial Technology
+      #   - My Secondary School (Senior High School)
+      #   - King Mongkut's University of Technology North Bangkok
+
+career-profile:
+    title: Career Profile
+    summary: |
+      Hi there. My name is **Teerapong Panboonyuen**, also known as **Kao Panboonyuen** (or just **Kao**) and received the Ph.D. degree in Computer Engineering (Artificial Intelligence, Machine Learning, Deep Learning) from Chula.
+
+      **Developer Tools:** GCP, AWS, Python, PyTorch, Detectron2, Weights & Biases (Developer tools for ML), Gradio, EC2-G4DN, S3, Docker-Compose
+
+      In 2015, I graduated with a B.Eng. in Computer Engineering from KMUTNB.
+
+      In 2016, I graduated with a M.Eng. in Computer Engineering from Chulalongkorn University.
+
+      In 2020, I graduated with a Ph.D. in Computer Engineering from Chulalongkorn University as well.
+
+      In 2021, I was AI Research Scientist at CJExpress Group and accepted the position of Postdoctoral Fellowship at Chula.
+
+      In 2022, I'm currently working at MARS (Motor AI Recognition Solution) as a Senior AI Engineer and still being PostDoc at Chula.
+
+      My primary interests are in practical deep learning and computer vision (especially on remote sensing corpus). I’ll be distilling my own learnings to (expectantly) help machine learning practitioners learn and be able to take advantage of important techniques and technologies faster, better, and more intuitively.
+
+      Summaries of my academic, industry, and teaching experience can be found [**here**](https://kaopanboonyuen.github.io/files/panboonyuen_cv.pdf), as well as a small collection of [**my music**](https://soundcloud.com/kaopanboonyuen) and [**my blog**](https://kaopanboonyuen.wordpress.com/). Further, I am a self-motivated, independent researcher with six years of deep learning and machine learning experience.
+
+      Thai name: ธีรพงศ์ ปานบุญยืน (เก้า)
+
+      - my publication **(Google Scholar)**: [**this link**](https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en)
+
+      - my publication **(DBLP)**: [**this link**](https://dblp.org/pers/hd/p/Panboonyuen:Teerapong)
+
+      - my **Web of Science** ResearcherID: [**AAO-4985-2020**](https://publons.com/researcher/AAO-4985-2020/)
+
+      - my curriculum vitae **(CV)**: [**this link**](https://kaopanboonyuen.github.io/files/panboonyuen_cv.pdf)
+
+      - my **ORCID**: [**this link**](https://orcid.org/0000-0001-8464-4476)
+
+      - my semantic scholar: [**this link**](https://www.semanticscholar.org/author/Teerapong-Panboonyuen/18098518)
+
+      - my research gate **(RG)**: [**this link**](https://www.researchgate.net/profile/Teerapong_Panboonyuen)
+
+      - my frontiers profile **(FT)**: [**this link**](https://loop.frontiersin.org/people/2534759)
+
+      - my MDPI SciProfile: [**this link**](https://sciprofiles.com/profile/panboonyuen)
+
+      - my paperswithcode: [**this link**](https://paperswithcode.com/author/teerapong-panboonyuen)
+
+      - my business card: [**this link**](https://raw.githubusercontent.com/kaopanboonyuen/kaopanboonyuen.github.io/master/files/MARS/MARS_businesscard-panboonyuen.jpg)
+
+      Additionally, you all guys could reach me through [**teerapong.pa@chula.ac.th**](window.open('mailto:teerapong.pa@chula.ac.th');).
+
+education:
+    - degree: Postdoctoral Researcher
+      university: Chulalongkorn University
+      time: 2021 - Present
+      details: |
+        Topic: Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images
+        - Ratchadapisek Somphot Fund for Postdoctoral Fellowship, Chulalongkorn University
+        - Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University
+        - My Publication Paper (Full Text, 2021): https://www.mdpi.com/2072-4292/13/24/5100
+    - degree: Ph.D. in Computer Engineering
+      university: Chulalongkorn University
+      time: 2017 - 2020
+      details: |
+        Activities and Societies: The 100th Anniversary Chulalongkorn University Fund for Doctoral Scholarship. Machine Intelligence and Knowledge Discovery Lab (MIND Lab). 
+        Designed and built deep encoder-decoder networks for semantic segmentation on satellite images.
+        - A dissertation: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network
+        - My academic research also interests mainly lie at the intersection of Remote Sensing, Computer Vision, and Machine Learning
+        - This dissertation proposes the semantic segmentation architecture in five aspects, designed explicitly for the remotely sensed field on Landsat-8 satellite and ISPRS Vaihingen” challenge.
+        - My Ph.D. Publication: My 2nd paper, ISI Journal, Q1, Tier 1, Impact Factor 3.406, [**this link**](https://www.mdpi.com/2072-4292/11/1/83)
+        - My Ph.D. Publication: My 3rd paper, ISI Journal, Q1, Tier 1, Impact Factor 4.509, [**this link**](https://www.mdpi.com/2072-4292/12/8/1233)
+        - Certificate of Fundamentals of Deep Learning for Computer Vision (NVIDIA): [**this link**](https://raw.githubusercontent.com/kaopanboonyuen/kaopanboonyuen.github.io/master/files/certificate/Kao's%20Fundamentals%20of%20Deep%20Learning%20for%20Computer%20Vision%20(NVIDIA).png)
+        - My publication dissertation (Full Text, 2019): [**this link**](http://cuir.car.chula.ac.th/handle/123456789/70297)
+        - Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University
+    - degree: M.Eng. in Computer Engineering
+      university: Chulalongkorn University
+      time: 2015 - 2016
+      details: |
+        Activities and Societies: H.M. the King Bhumibhol Adulyadej's 72nd Birthday Anniversary Scholarship. Machine Intelligence and Knowledge Discovery Lab (MIND Lab).
+        - A master thesis: Semantic Road Segmentation on Remotely-Sensed Images Using Deep Convolutional Neural Networks and Landscape Metrics (Evaluation: Very Good)
+        - GPAX 4.00/4.00  
+        - My Master Publication (My 1st paper, ISI Journal, Q1, Tier 1, Impact Factor 3.244, https://www.mdpi.com/2072-4292/9/7/680)
+        - Best Student Paper Award in International Conference on Computing and Information Technology 2017 (Recent Advances in Information and Communication Technology 2017), https://link.springer.com/book/10.1007/978-3-319-60663-7
+        - My publication thesis (Full Text, 2016): http://cuir.car.chula.ac.th/handle/123456789/55593
+        - Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University
+    - degree: B.Eng. in Computer Engineering
+      university: King Mongkut's University of Technology North Bangkok
+      time: 2011 - 2015
+      details: |
+        Activities and Societies: Computer Engineering (Cpr.E 9) 
+        - Undergraduate research in the laboratory of Waranyu Wongseree 
+        - My academic interests mainly Computer Vision on Lumbar Spinal Stenosis corpus
+        - Department of Electrical and Computer Engineering, Faculty of Engineering, King Mongkut's University of Technology North Bangkok
+experiences:
+    - role: AI/ML Senior Team Lead, Senior AI Engineer
+      time: Jan 2022 - Present
+      company: MARS (Motor AI Recognition Solution)
+      details: |
+        - Developed an AI model called 'MARS: Mask Attention Refinement with Sequential Quadtree Nodes' ([**arxiv paper**](https://arxiv.org/abs/2305.04743)) for the MARS company. The project was presented at the International Conference on Image Analysis and Processing, ICIAP 2023, which was held in Udine, Italy, from September 11-15, 2023, and was also published in the conference proceedings.
+        - Be published an article on TECHSAUCE detailing the innovative AI project named MARS: [**this link**](https://kaopanboonyuen.github.io/files/MARS/MARS_from_TECHSAUCE_news.jpg)
+        - New research starts with understanding, AI-model creating (in the tasks: Image Classification, Object Detection, Instance Segmentation, Domain Adaptation, Explainable AI (XAI), or Interpretable AI, or Explainable Machine Learning (XML), etc.), reproducing, and verifying ai results in the auto insurance industry
+        - Provides ML-APIs to the service team (frontend and backend) to download and use our pre-trained models on car insurance and garage tasks. Also, new models can be implemented rapidly and then transferred to production
+        - Novel research (in the databases: CVPR, ICLR, ICCV, ECCV, NeurIPS, PAMI, etc.) involves inventing new models that will likely break the design assumptions of existing models
+        - Provides high-quality reference implementations for many state-of-the-art algorithms to democratize this phase of the research process
+        - Understand the MARS’s goals and challenges and plan AI strategies and collaborate with the service team to identify areas where AI application can use MARS's business
+        - Panboonyuen's business card: [**this link**](https://raw.githubusercontent.com/kaopanboonyuen/kaopanboonyuen.github.io/master/files/MARS/MARS_businesscard-panboonyuen.jpg)
+        - Panboonyuen's role: [**this link**](https://raw.githubusercontent.com/kaopanboonyuen/kaopanboonyuen.github.io/master/files/MARS/MAR_panboonyuen_05.png)
+        - MARS reference: [**this link**](https://www.marssolution.io/about-us)
+    - role: Visiting Faculty - College of Computing, Khon Kaen University
+      time: June 2023 - Present
+      company: Khon Kaen University
+      details: |
+        - Teach the course **"SC320002 Business Intelligence"**, **CP020001 Introduction to Computers and Programming**, and **SC310005 Artificial Intelligence and Machine Learning Application** to undergraduate and postgraduate students, delivering engaging and informative lectures.
+        - Develop and update course materials, including syllabi, assignments, and assessments, to ensure students receive a comprehensive education in Business Intelligence.
+        - Deliver high-quality instruction in the "AI and Machine Learning" course to undergraduate and graduate students, promoting a deep understanding of the subject matter.
+        - Instruct the "Big Data" course for undergraduate and postgraduate students, providing comprehensive and up-to-date education in the field.
+        - Ministerial Order on the Appointment of Academic Staff (**Order 5907-2566** (Khon Kaen University)): [**this link**](https://kaopanboonyuen.github.io/files/panboonyuen_kku.pdf)
+        - Invitation Letter for a Special Lecturer Position (**Order อว 660301.26/24844** (Khon Kaen University)): [**this link**](https://kaopanboonyuen.github.io/files/panboonyuen_kku_2.pdf)
+    - role: Postdoctoral Researcher in AI, Remote Sensing
+      time: Apr 2021 - Present
+      company: Graduate School Chulalongkorn University
+      details: |
+        A research topic: Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images
+        - Ratchadapisek Somphot Fund for Postdoctoral Fellowship, Chulalongkorn University
+        - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
+        - Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University
+        - My Publication Paper (Full Text, 2021): [https://www.mdpi.com/2072-4292/13/24/5100](https://www.mdpi.com/2072-4292/13/24/5100)
+        - Postdoctoral Fellows 2021 to 2022 (Dept. of Computer Engineering, Chula): [**this link**](https://kaopanboonyuen.github.io/files/postdoc/Recipient_Posdoc_7_64.pdf)
+        - Postdoctoral Fellows 2022 to 2023 (Dept. of Survey Engineering, Chula): [**this link**](https://kaopanboonyuen.github.io/files/postdoc/Recipient_Posdoc_6_65.pdf)
+    - role: AI Research Scientist (Department Manager)
+      time: Nov 2020 - Aug 2021
+      company: CJExpress Group
+      details: |
+        - Apply Data Science and AI technology in Barter for Demand Forecasting in Retail Grocery Stores.
+        - Working as Artificial Intelligence Researcher with Machine Learning, Big Data Solutions; Hadoop, PySpark for Demand Forecasting Project via Data Innovation Team.
+        - Fine-Grained Time Series Forecasting at Scale with PySpark, Deep Learning, and Visualizing Demand Seasonality in Time Series Data.
+        - Artificial Intelligence Research Scientist (Department Manager), C.J. Express Group Co., Ltd., Office Silom
+    - role: Ph.D. Researcher in Computer Engineering (Machine Learning)
+      time: 2018 - 2020
+      company: Chulalongkorn University
+      details: |
+        A dissertation: Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network
+        - Graduate research in the laboratory of Peerapon Vateekul
+        - This dissertation proposes the semantic segmentation architecture in five aspects, designed explicitly for the remotely sensed field on Landsat-8 satellite and ISPRS Vaihingen” challenge.
+        - The 100th Anniversary Chulalongkorn University Fund for Doctoral Scholarship
+        - The 90th Anniversary of Chulalongkorn University Scholarship
+        - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
+        - GPAX 4.00/4.00
+        - My Ph.D. Publication (My 2nd paper, ISI Journal, Q1, Tier 1, Impact Factor 3.406, [https://www.mdpi.com/2072-4292/11/1/83](https://www.mdpi.com/2072-4292/11/1/83)) Special Issue "Convolutional Neural Networks Applications in Remote Sensing"
+        - My Ph.D. Publication (My 3rd paper, ISI Journal, Q1, Tier 1, Impact Factor 4.118, [https://www.mdpi.com/2072-4292/12/8/1233](https://www.mdpi.com/2072-4292/12/8/1233)) Special Issue "Advanced Deep Learning Strategies for the Analysis of Remote Sensing Images"
+        - Certificate of Fundamentals of Deep Learning for Computer Vision (NVIDIA): [**this link**](https://raw.githubusercontent.com/kaopanboonyuen/kaopanboonyuen.github.io/master/files/certificate/Kao's%20Fundamentals%20of%20Deep%20Learning%20for%20Computer%20Vision%20(NVIDIA).png)
+        - My publication dissertation (Full Text, 2019): [http://cuir.car.chula.ac.th/handle/123456789/70297](http://cuir.car.chula.ac.th/handle/123456789/70297)
+        - Kao's Ph.D. graduation rehearsal: [**this link**](https://kaopanboonyuen.github.io/files/phd_graduation_rehearsal_2022/kao_phd_ceremony.png)
+        - Kao's Ph.D. graduation rehearsal (EN): [**this link**](https://kaopanboonyuen.github.io/files/phd_graduation_rehearsal_2022/kao_phd_graduation_rehearsal_2022_eng.png)
+        - Kao's Ph.D. graduation rehearsal (TH): [**this link**](https://kaopanboonyuen.github.io/files/phd_graduation_rehearsal_2022/kao_phd_graduation_rehearsal_2022_thai.png)
+    - role: Master Researcher (M.Eng.) in Computer Engineering
+      time: 2015 - 2016
+      company: Chulalongkorn University
+      details: |
+        A master thesis: Semantic Road Segmentation on Remotely-Sensed Images Using Deep Convolutional Neural Networks and Landscape Metrics (Evaluation: Very Good).
+        - Graduate research in the laboratory of Peerapon Vateekul
+        - This thesis presents an enhanced DCNN framework specifically tailored for road extraction on remotely-sensed images by applying landscape metrics (LMs) and conditional random fields (CRFs).
+        - H.M. the King Bhumibhol Adulyadej's 72nd Birthday Anniversary Scholarship
+        - Machine Intelligence and Knowledge Discovery Lab (MIND Lab)
+        - GPAX 4.00/4.00
+        - My Master Publication (My 1st paper, ISI Journal, Q1, Tier 1, Impact Factor 3.244, [https://www.mdpi.com/2072-4292/9/7/680](https://www.mdpi.com/2072-4292/9/7/680)) Special Issue "Learning to Understand Remote Sensing Images"
+        - **Best Student Paper Award** in International Conference on Computing and Information Technology 2017 (Recent Advances in Information and Communication Technology 2017), [https://link.springer.com/book/10.1007/978-3-319-60663-7](https://link.springer.com/book/10.1007/978-3-319-60663-7)
+        - My publication thesis (Full Text, 2016): [http://cuir.car.chula.ac.th/handle/123456789/55593](http://cuir.car.chula.ac.th/handle/123456789/55593)
+    - role: Professional Service
+      time: 2018 - Present
+      company: IEEE Journal and Science Journal
+      details: |
+        - Invited Reviewer of **Pattern Recognition** (Elsevier) (Q1, ISI Journal)
+        - Invited Reviewer of **Neurocomputing** (Elsevier) (Q1, ISI Journal)
+        - Invited Reviewer of **Computer Vision and Image Understanding** (Elsevier) (Q1, ISI Journal)
+        - Invited Reviewer of **Computers and Geosciences** (Elsevier) (Q1, ISI Journal)
+        - Invited Reviewer of **PLoS ONE** (Q1, Public Library of Science)
+        - Invited Reviewer of **Remote Sensing** (Q1, MDPI, ISI Journal)
+        - Invited Reviewer of **GIScience & Remote Sensing**
+        - Invited Reviewer of **Forests** (Q1, MDPI, ISI Journal)
+        - Invited Reviewer of **Neural Processing Letters** (Springer Nature)
+        - Invited Reviewer of **International Journal of Remote Sensing** (Tier1, Q1, ISI Journal)
+        - Invited Reviewer of International Journal of Image and Data Fusion
+        - Invited Reviewer of International Journal of Distributed Sensor Networks
+        - Invited Reviewer of International Journal of Digital Earth
+        - Invited Reviewer of International Journal of Pavement Engineering
+        - Invited Reviewer of International Journal of Food Properties
+        - Invited Reviewer of **IEEE Transactions on Artificial Intelligence**
+        - Invited Reviewer of **IEEE Transactions on Neural Networks and Learning Systems** (Q1, ISI Journal)
+        - Invited Reviewer of **IEEE Transactions on Medical Imaging** (Q1, ISI Journal)
+        - Invited Reviewer of **IEEE Transactions on Geoscience and Remote Sensing** (Tier1, Q1, ISI Journal)
+        - Invited Reviewer of **IEEE Transactions on Industrial Informatics** (Q1, ISI Journal)
+        - Invited Reviewer of **IEEE Transactions on Emerging Topics in Computational Intelligence**
+        - Invited Reviewer of **IEEE Transactions on Radiation and Plasma Medical Sciences** (Q1, ISI Journal)
+        - Invited Reviewer of **IEEE Transactions on Vehicular Technology** (Q1, ISI Journal)
+        - Invited Reviewer of **IEEE Transactions on Human-Machine Systems**
+        - Invited Reviewer of **IEEE Transactions on Circuits and Systems for Video Technology**
+        - Invited Reviewer of IEEE Access (Q1, ISI Journal)
+        - Invited Reviewer of IEEE Sensors Journal
+        - Invited Reviewer of IEEE Intelligent Systems (Q1, ISI Journal)
+        - Invited Reviewer of IEEE Intelligent Transportation Systems Transactions and Magazine
+        - Invited Reviewer of IEEE Aerospace and Electronic Systems Magazine
+        - Invited Reviewer of IEEE Open Journal of Systems Engineering
+        - Invited Reviewer of European Journal of Remote Sensing
+        - Invited Reviewer of IET Image Processing (Q2, ISI Journal)
+        - Invited Reviewer of Engineering Applications of Artificial Intelligence (Q1, Elsevier Ltd.)
+        - Invited Reviewer of Geo-spatial Information Science
+        - Invited Reviewer of Engenharia Agrícola
+        - Invited Reviewer of Remote Sensing Letters
+        - Invited Reviewer of Sensors (Q2, Journal)
+        - Invited Reviewer of Heliyon
+        - Invited Reviewer of Computational Intelligence and Neuroscience (Journal, Hindawi)
+        - Invited Reviewer of Computer Methods in Biomechanics and Biomedical Engineering: Imaging & Visualization
+        - Invited Reviewer of Mathematical Problems in Engineering (Journal, Hindawi)
+        - Invited Reviewer of Journal of Spectroscopy (Q4, Journal, Hindawi)
+        - Invited Reviewer of Journal of Sensors
+        - Invited Reviewer of Journal of Spatial Science (Q2, Journal, Taylor and Francis)
+        - Invited Reviewer of Journal of Healthcare Engineering (Q2, Journal, Hindawi Limited)
+        - Invited Reviewer of Journal of Journal of Marine Science and Application
+        - Invited Reviewer of International Journal of Imaging Systems and Technology (Q2, Journal)
+        - ** Reviewer Certificates ** [**this link**](https://kaopanboonyuen.github.io/files/IMA_Reviewer_Certificate_2021.pdf)
+        - Invited Reviewer of IETE Technical Review (Q2 Journal)
+        - Invited Reviewer of IETE Journal of Research (Q4 Journal)
+        - Invited Reviewer of Transactions on Neural Systems & Rehabilitation Engineering (Q1, Journal)
+        - Invited Reviewer of Transactions in GIS (Wiley-Blackwell Publishing Ltd, Q1 Journal)
+        - Invited Reviewer of Transactions on Network Science and Engineering (Journal)
+        - Invited Reviewer of Transactions on Multimedia Computing Communications and Applications
+        - Invited Reviewer of Transactions on Transactions on Intelligent Transportation Systems
+        - Invited Reviewer of Chinese Journal of Electronics (Q3, Journal)
+        - Invited Reviewer of Connection Science (Q3, AI, Taylor and Francis AS, Journal)
+        - Invited Reviewer of Computational Intelligence and Neuroscience
+        - Invited Reviewer of Industrial Lubrication and Tribology (Q3, Emerald Group Publishing Ltd., Journal)
+        - Invited Reviewer of Transactions on Consumer Electronics (Q1, IEEE Transactions, Journal)
+        - Invited Reviewer of Transactions of Nanjing University of Aeronautics and Astronautics (Q4, Journal)
+        - Invited Reviewer of Industrial Lubrication and Tribology (Emerald Group Publishing Ltd., Q2, Journal)
+        - Invited Reviewer of Imaging Science Journal (Maney Publishing, Q2, Journal)
+        - Invited Reviewer of Cybernetics and Systems (Taylor and Francis Ltd.)
+        - Invited Reviewer of Applied AI Letters
+        - Invited Reviewer of The Computer Journal
+        - Invited Reviewer of Expert Systems
+        - Invited Reviewer of Open Geosciences
+        - Invited Reviewer of GMSARN International Journal
+        - Invited Reviewer of Geocarto International
+        - Invited Reviewer of Photonics Technology Letters
+        - Invited Reviewer of Engineering Reports
+        - Invited Reviewer of Nuclear Science and Techniques
+        - Invited Reviewer of Journal of Agricultural Engineering
+        - Invited Reviewer of Journal of Chemical Information and Modeling
+        - Invited Reviewer of International Journal of Pattern Recognition and Artificial Intelligence (IJPRAI)
+
+    - role: AI Engineer (Freelance)
+      time: 2016 - 2020
+      company: GISTDA (Geo-informatics and Space Technology Development Agency)
+      details: |
+        - AI research in the laboratory of Siam Lawawirojwong and Panu Srestasathiern
+        - **1st Project:** Automated land-use/land-cover classification (LULC) Map Production using Deep Encoder-Decoder Neural Networks
+        - **2nd Project:** A Multi-class Deep Learning Approach for LULC Classification of LANDSAT-8 Satellite Images
+        - **3rd Project:** Deep Learning Based Forest Fire Classification in LANDSAT-8 Satellite Images
+    - role: Data Technical Support
+      time: Feb 2020 - Mar 2020
+      company: Puey Ungphakorn Institute for Economic Research (Bank of Thailand)
+      details: |
+        - Writing python script to download for various data sources: Sentinel-1 and 2, Landsat 8
+        - Create radiometrically terrain correct (RTC) on Sentinel data using python 
+    - role: Data Science with Hatchability Prediction Project
+      time: 2019 - 2020
+      company: Centaco Farm Company Limited
+      details: |
+        - Implement and design hatchability prediction model of broiler chickens by using regression model
+        - Problem solving for a quadratic relationship between the predicted hatchability and the age of the breeders
+    - role: Research Assistant
+      time: 2018 - 2020
+      company: Digital Economy Promotion Agency (DEPA)
+      details: |
+        - Creating the AI model and computer vision technique to segmenting multi-objects on aerial and satellite image
+        - Constructing and Visualising the large database of the agricultural corpora for research
+    - role: Pathway Assistant in Data Science Program
+      time: 2018 - 2020
+      company: Bangkok Innovation House Co., Ltd
+      details: |
+        Data science pathway team of Chula Mooc achieve
+        with Volunteer Teaching (Practical Data Analytics) at
+        - Metropolitan Electricity Authority (MEA)
+        - Kasikorn Bank Public Company Limited
+        - Government Housing Bank
+        - Metropolitan Waterworks Authority (MWA)
+        - Western Digital (WD)
+    - role: Python Programming Trainer    
+      time: Oct 2019 - Dec 2019
+      company: NetDesign School
+      details: |
+        Teaches: Python Programming at Net Design, Siam Paragon, 4A floor (Bangkok, Thailand) every Saturday morning
+    - role: Computer Technical Support
+      time: 2017 - Present
+      company: Main Shipping Service Co.,Ltd
+      details: |
+        Design and deploy functional networks (WAN, LAN, WLAN) including configure and install software, servers, routers and other network devices. Maintain complete technical documentation and suggest improvements to network performance, capacity and scalability
+    - role: Graduate Teaching Assistant
+      time: 2017 - 2020
+      company: International School of Engineering, Chulalongkorn University
+      details: |
+        Co-instructed the annual offering on machine learning to undergraduate/graduate students, included teaching recitations, developing homework, test material, and revised the course content to include hands-on experience with Python programming
+        I helped teach Chula's undergraduate and graduate-levels courses on:
+        - 2140101 Computer Programming (Java, ISE, Chulalongkorn University)
+        - 2110101 Computer Programming (Python, 1st year bachelor of Faculty of Engineering, Chulalongkorn University)
+        - 2110215 Programming Methodology(Java, 2nd year bachelor of Computer Engineering, Chulalongkorn University)
+        - 2110627 Big Data Tools (Master Student)
+        - 2110446 Data Science and Data Engineering (3rd year bachelor of Computer Engineering, Chulalongkorn University)
+        - (Online Course, Head TA) Intro to Data Analytics and Big Data (https://mooc.chula.ac.th/courses/chulamooc2812)
+        - (Online Course, Head TA) Practical Data Analytics Using Rapid Miner (https://mooc.chula.ac.th/courses/chulamooc2813)
+
+projects:
+    title: Projects, Teaching, Featured Talks, and Research Communities
+    intro: >
+      You can find my projects through https://github.com/kaopanboonyuen
+    assignments:
+
+      - title: Object Detection of Road Assets Using Transformer-Based YOLOX with Feature Pyramid Decoder on Thai Highway Panorama (Project)
+        link: "https://www.mdpi.com/2078-2489/13/1/5"
+        tagline: "Identifying road asset objects in Thailand highway monitoring image sequences is essential for intelligent traffic monitoring and administration of the highway. We introduce transformer-based Feature Pyramid Network (FPN) decoder designs, injecting the FPN style of decoder design into Transformer-based YOLOX reasoning."
+
+      - title: The Bangkok Urbanscapes Dataset for Semantic Urban Scene Understanding Using Deep Learning (Project)
+        link: "https://kaopanboonyuen.github.io/bkkurbanscapes"
+        tagline: "To further study self-driving cars in Thailand, we provide both the proposed methods and the proposed dataset in this project. We hope that our architecture and our dataset would help self-driving autonomous developers improve systems for driving in many cities with unique traffic and driving conditions similar to Bangkok and elsewhere in Thailand."
+
+      - title: Geospatial Big Data Analytics 2022 (Teaching)
+        link: "https://github.com/kaopanboonyuen/kaopanboonyuen.github.io/raw/master/files/talks/panboonyuen_Geospatial_Big_Data_Analytics_2022.jpeg"
+        tagline: "Demonstrate an understanding of the breadth of methods and techniques available for handling large volumes of geospatial data; use AI/ML methods with PySpark and techniques to conduct spatial analyses of big data and apply resulting analyses to problems within the student’s own discipline."
+
+      - title: Geospatial Big Data Analytics 2023 (Teaching)
+        link: "https://github.com/kaopanboonyuen/kaopanboonyuen.github.io/raw/master/files/talks/panboonyuen_Geospatial_Big_Data_Analytics_2023.jpg"
+        tagline: "Extract data using web scraping with python, Visualizations using Looker Studio of Google, and PySpark for Machine Learning"
+
+      - title: Achieve Data Science First Meet (Featured Talks, and Research Communities)
+        link: "https://github.com/kaopanboonyuen/kaopanboonyuen.github.io/raw/master/files/talks/panboonyuen_data_science_talk.jpeg"
+        tagline: "More and more companies realize the importance of data science, AI, and machine learning. Regardless of industry or size, organizations that wish to remain competitive in the age of big data ought to efficiently originate and implement data science capabilities or risk being left behind."
+
+      - title: Transportation Mobility Factor Extraction Using Image Recognition Techniques (Project)
+        link: "https://github.com/kaopanboonyuen/TransportationMobilityFactorExtraction"
+        tagline: "We propose a method that automatically extract mobility indicators using two image recognition techniques: Semantic Segmentation and Object Recognition."
+
+      - title: Semantic Labeling on Remote Sensing Corpora using Deep Learning (Project)
+        link: "https://github.com/kaopanboonyuen/SemanticLabelingOnRemoteSensingCorpora"
+        tagline: "We present a novel global convolutional network for segmenting multi-objects from aerial and satellite images."
+
+      - title: Flood Risk Assessment in Ayutthaya Province (Project)
+        link: "https://github.com/kaopanboonyuen/Rainfall-Prediction-A-Machine-Learning-Approach"
+        tagline: "We described a more efficient method to create flood susceptibility map - using Thailand’s Ayutthaya Province as a case study to assess flood prone areas."
+
+      - title: 110km PTT Virtual Run (Virtual Run)
+        link: "https://kaopanboonyuen.github.io/files/certificate/Panboonyuen_PTT_Virtual_Run_110km.png"
+        tagline: "Work my way up from running continuously over the course of 30 days"
+
+publications:
+    title: Publications
+    intro: |
+      You can find my publications through [**this link**](https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en)
+    papers:
+      - title: Quality of Life Prediction in Driving Scenes on Thailand Roads Using Information Extraction from Deep Convolutional Neural Networks
+        link: "https://www.mdpi.com/2071-1050/15/3/2847"
+        authors: Thitisiriwech, K.; Panboonyuen, T.; Kantavat, P.; Kijsirikul, B.; Iwahori, Y.; Fukui, S.; Hayashi, Y. 
+        conference: Sustainability. 2023; 15(3):2847.
+
+      - title: Enhanced Feature Pyramid Vision Transformer for Semantic Segmentation on Thailand Landsat-8 Corpus
+        link: "https://www.mdpi.com/2078-2489/13/5/259"
+        authors: Intarat, K.; Rakwatin, P.; Panboonyuen, T.
+        conference: Information 13.259 (2022), 5.
+
+      - title: The Bangkok Urbanscapes Dataset for Semantic Urban Scene Understanding Using Enhanced Encoder-Decoder with Atrous Depthwise Separable A1 Convolutional Neural Networks
+        link: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9779212"
+        authors: Thitisiriwech, K., Panboonyuen, T., Kantavat, P., Iwahori, Y., & Kijsirikul, B.
+        conference: IEEE Access 10 (2022), 59327-59349.
+
+      - title: Object Detection of Road Assets Using Transformer-Based YOLOX with Feature Pyramid Decoder on Thai Highway Panorama
+        link: "https://www.mdpi.com/2078-2489/13/1/5"
+        authors: Panboonyuen, Teerapong, et al.
+        conference: Information 13.1 (2022), 5.
+        
+      - title: Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images
+        link: "https://www.mdpi.com/2072-4292/13/24/5100"
+        authors: Panboonyuen, Teerapong, et al.
+        conference: Remote Sensing 13.24 (2021), 5100.
+
+      - title: Semantic Labeling in Remote Sensing Corpora Using Feature Fusion-Based Enhanced Global Convolutional Network with High-Resolution Representations and Depthwise Atrous Convolution
+        link: "https://www.mdpi.com/2072-4292/12/8/1233"
+        authors: Panboonyuen, Teerapong, et al.
+        conference: Remote Sensing 12.8 (2020), 1233.
+
+      - title: Semantic Segmentation on Remotely Sensed Images Using an Enhanced Global Convolutional Network with Channel Attention and Domain Specific Transfer Learning
+        link: "https://www.mdpi.com/2072-4292/11/1/83/htm"
+        authors: Panboonyuen, Teerapong, et al.
+        conference: Remote Sensing 11.1 (2019), 83.
+
+      - title: Road segmentation of remotely-sensed images using deep convolutional neural networks with landscape metrics and conditional random fields
+        link: "https://www.mdpi.com/2072-4292/9/7/680/htm"
+        authors: Panboonyuen, Teerapong, et al.
+        conference: Remote Sensing 9.7 (2017), 680.
+
+      - title: (Best Paper Student Awards 2017) An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery
+        link: "https://link.springer.com/chapter/10.1007/978-3-319-60663-7_18"
+        authors: Panboonyuen, Teerapong, et al.
+        conference: International Conference on Computing and Information Technology. Springer, Cham, 2017.    
+
+      - title: Image Vectorization of Road Satellite Data Sets
+        link: "http://research.gistda.or.th/assets/uploads/pdfs/9ee49-8.-.pdf"
+        authors: Panboonyuen, Teerapong, et al.
+        conference: Journal of Remote Sensing and GIS Association of Thailand (2017)
+
+      - title: Real-Time Polyps Segmentation for Colonoscopy Video Frames Using Compressed Fully Convolutional Network
+        link: "https://link.springer.com/chapter/10.1007/978-3-319-73603-7_32"
+        authors:  Wichakam, I., Panboonyuen, T., Udomcharoenchaikit, C., & Vateekul, P.
+        conference: "International Conference on Multimedia Modeling (pp. 393-404). Springer, Cham. (2018)"
+
+      - title: A Performance Comparison between GIS-based and Neuron Network Methods for Flood Susceptibility Assessment in Ayutthaya Province
+        link: "https://link.springer.com/chapter/10.1007/978-3-319-73603-7_32"
+        authors:  Vajeethaveesin, T., Panboonyuen, T., Lawawironjwong, S., Srestasathiern, P., Jaiyen, S., & Jitkajornwanich, K.
+        conference: "Trends in Sciences 19.2 (2022): 2038-2038."
+
+      - title: Road map extraction from satellite imagery using connected component analysis and landscape metrics
+        link: "https://ieeexplore.ieee.org/document/8258330/"
+        authors: Jitkajornwanich, K., Vateekul, P., Panboonyuen, T., Lawawirojwong, S., & Srisonphan, S.
+        conference: "IEEE International Conference on Big Data (Big Data) (pp. 3435-3442). IEEE. (2017)"
+
+      - title: Semantic Segmentation On Medium-Resolution Satellite Images Using Deep Convolutional Networks With Remote Sensing Derived Indices
+        link: "https://ieeexplore.ieee.org/document/8457378/"
+        authors: Chantharaj, S., Pornratthanapong, K., Chitsinpchayakun, P., Panboonyuen, T., Vateekul, P., Lawavirojwong, S., ... & Jitkajornwanich, K.
+        conference: "15th International Joint Conference on Computer Science and Software Engineering (JCSSE) (pp. 1-6). IEEE. (2018)"
+
+      - title: Transportation Mobility Factor Extraction Using Image Recognition Techniques
+        link: "https://ieeexplore.ieee.org/document/9018796"
+        authors:  Kantavat, P., Hayashi, Y., City, G. S., Kijsirikul, B., Panboonyuen, T., Achariyaviriya, W., ... & Vateekul, P.
+        conference: "First International Conference on Smart Technology & Urban Development (STUD 2019)"
+
+
+# skills:
+#     title: Skills &amp; Proficiency
+
+#     toolset:
+#       - name: Python2 and Python3
+#         level: 90%
+
+#       - name: Tensorflow2 with Keras, PyTorch
+#         level: 85%
+
+#       - name: Google Cloud Platform (GCP)
+#         level: 84%
+
+#       - name: Pandas and Sklearn
+#         level: 83%
+
+#       - name: Seaborn with Matplot
+#         level: 80%
+
+#       - name: RapidMiner Studio
+#         level: 75%
+
+#       - name: PowerBI and Tableau
+#         level: 70%
+
+#       - name: Java
+#         level: 65%
+
+#       - name: SparkML
+#         level: 60%
+
+#       - name: Hadoop
+#         level: 60%
+
+#       - name: GDAL
+#         level: 55%
+
+
+footer: >
+    Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
