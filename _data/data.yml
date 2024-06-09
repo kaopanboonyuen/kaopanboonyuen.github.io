@@ -428,26 +428,21 @@ publications:
     intro: |
       You can find my publications through [**this link**](https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en)
     papers:
-      - title: Quality of Life Prediction in Driving Scenes on Thailand Roads Using Information Extraction from Deep Convolutional Neural Networks
-        link: "https://www.mdpi.com/2071-1050/15/3/2847"
-        authors: Thitisiriwech, K.; Panboonyuen, T.; Kantavat, P.; Kijsirikul, B.; Iwahori, Y.; Fukui, S.; Hayashi, Y. 
-        conference: Sustainability. 2023; 15(3):2847.
+      - title: MARS Mask Attention Refinement with Sequential Quadtree Nodes for Car Damage Instance Segmentation
+        link: "https://link.springer.com/chapter/10.1007/978-3-031-51023-6_3"
+        authors: Panboonyuen, Teerapong, et al.
+        conference: Image Analysis and Processing - ICIAP 2023 Workshops. ICIAP 2023. Lecture Notes in Computer Science, vol 14365. Springer, Cham.
 
-      - title: Enhanced Feature Pyramid Vision Transformer for Semantic Segmentation on Thailand Landsat-8 Corpus
-        link: "https://www.mdpi.com/2078-2489/13/5/259"
-        authors: Intarat, K.; Rakwatin, P.; Panboonyuen, T.
-        conference: Information 13.259 (2022), 5.
-
-      - title: The Bangkok Urbanscapes Dataset for Semantic Urban Scene Understanding Using Enhanced Encoder-Decoder with Atrous Depthwise Separable A1 Convolutional Neural Networks
-        link: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9779212"
-        authors: Thitisiriwech, K., Panboonyuen, T., Kantavat, P., Iwahori, Y., & Kijsirikul, B.
-        conference: IEEE Access 10 (2022), 59327-59349.
+      - title: MeViT A Medium-Resolution Vision Transformer for Semantic Segmentation on Landsat Satellite Imagery for Agriculture in Thailand
+        link: "https://www.mdpi.com/2072-4292/15/21/5124"
+        authors: Panboonyuen, Teerapong, et al.
+        conference: Remote Sensing. 2023; 15(21):5124.
 
       - title: Object Detection of Road Assets Using Transformer-Based YOLOX with Feature Pyramid Decoder on Thai Highway Panorama
         link: "https://www.mdpi.com/2078-2489/13/1/5"
         authors: Panboonyuen, Teerapong, et al.
         conference: Information 13.1 (2022), 5.
-        
+
       - title: Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images
         link: "https://www.mdpi.com/2072-4292/13/24/5100"
         authors: Panboonyuen, Teerapong, et al.
@@ -478,6 +473,21 @@ publications:
         authors: Panboonyuen, Teerapong, et al.
         conference: Journal of Remote Sensing and GIS Association of Thailand (2017)
 
+      - title: Quality of Life Prediction in Driving Scenes on Thailand Roads Using Information Extraction from Deep Convolutional Neural Networks
+        link: "https://www.mdpi.com/2071-1050/15/3/2847"
+        authors: Thitisiriwech, K.; Panboonyuen, T.; Kantavat, P.; Kijsirikul, B.; Iwahori, Y.; Fukui, S.; Hayashi, Y. 
+        conference: Sustainability. 2023; 15(3):2847.
+
+      - title: Enhanced Feature Pyramid Vision Transformer for Semantic Segmentation on Thailand Landsat-8 Corpus
+        link: "https://www.mdpi.com/2078-2489/13/5/259"
+        authors: Intarat, K.; Rakwatin, P.; Panboonyuen, T.
+        conference: Information 13.259 (2022), 5.
+
+      - title: The Bangkok Urbanscapes Dataset for Semantic Urban Scene Understanding Using Enhanced Encoder-Decoder with Atrous Depthwise Separable A1 Convolutional Neural Networks
+        link: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9779212"
+        authors: Thitisiriwech, K., Panboonyuen, T., Kantavat, P., Iwahori, Y., & Kijsirikul, B.
+        conference: IEEE Access 10 (2022), 59327-59349.
+        
       - title: Real-Time Polyps Segmentation for Colonoscopy Video Frames Using Compressed Fully Convolutional Network
         link: "https://link.springer.com/chapter/10.1007/978-3-319-73603-7_32"
         authors:  Wichakam, I., Panboonyuen, T., Udomcharoenchaikit, C., & Vateekul, P.
@@ -502,7 +512,6 @@ publications:
         link: "https://ieeexplore.ieee.org/document/9018796"
         authors:  Kantavat, P., Hayashi, Y., City, G. S., Kijsirikul, B., Panboonyuen, T., Achariyaviriya, W., ... & Vateekul, P.
         conference: "First International Conference on Smart Technology & Urban Development (STUD 2019)"
-
 
 # skills:
 #     title: Skills &amp; Proficiency
