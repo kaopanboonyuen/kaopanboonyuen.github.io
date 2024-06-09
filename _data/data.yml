@@ -141,14 +141,14 @@ education:
         - Best Student Paper Award in International Conference on Computing and Information Technology 2017 (Recent Advances in Information and Communication Technology 2017), https://link.springer.com/book/10.1007/978-3-319-60663-7
         - My publication thesis (Full Text, 2016): http://cuir.car.chula.ac.th/handle/123456789/55593
         - Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University
-    # - degree: B.Eng. in Computer Engineering
-    #   university: King Mongkut's University of Technology North Bangkok
-    #   time: 2011 - 2015
-    #   details: |
-    #     Activities and Societies: Computer Engineering (Cpr.E 9) 
-    #     - Undergraduate research in the laboratory of Waranyu Wongseree 
-    #     - My academic interests mainly Computer Vision on Lumbar Spinal Stenosis corpus
-    #     - Department of Electrical and Computer Engineering, Faculty of Engineering, King Mongkut's University of Technology North Bangkok
+    - degree: B.Eng. in Computer Engineering
+      university: KMUTNB
+      time: 2011 - 2015
+      details: |
+        Activities and Societies: Computer Engineering (Cpr.E 9) 
+        - Undergraduate research in the laboratory of Waranyu Wongseree 
+        - My academic interests mainly Computer Vision on Lumbar Spinal Stenosis corpus
+        - Department of Electrical and Computer Engineering, Faculty of Engineering, King Mongkut's University of Technology North Bangkok
 experiences:
     - role: AI/ML Senior Team Lead, Senior AI Engineer
       time: Jan 2022 - Present
