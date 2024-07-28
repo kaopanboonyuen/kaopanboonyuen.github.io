@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1 | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/publication-type/1/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/publication-type/1/index.xml" rel="self" type="application/rss+xml" />
+    <description>1</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hua4a3b98cd72cc0edea13b445456e64d4_4649875_512x512_fill_lanczos_center_3.png</url>
+      <title>1</title>
+      <link>https://kaopanboonyuen.github.io/publication-type/1/</link>
+    </image>
+    
+    <item>
+      <title>MARS: Mask Attention Refinement with Sequential Quadtree Nodes for Car Damage Instance Segmentation</title>
+      <link>https://kaopanboonyuen.github.io/publication/mars-mask-attention-refinement-with-sequential-quadtree-nodes/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/mars-mask-attention-refinement-with-sequential-quadtree-nodes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Object Detection of Road Assets Using Transformer-Based YOLOX with Feature Pyramid Decoder on Thai Highway Panorama</title>
+      <link>https://kaopanboonyuen.github.io/publication/object-detection-of-road-assets-using-transformer-based-yolox/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/object-detection-of-road-assets-using-transformer-based-yolox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Real-Time Polyps Segmentation for Colonoscopy Video Frames Using Compressed Fully Convolutional Network</title>
+      <link>https://kaopanboonyuen.github.io/publication/real-time-polyps-segmentation-for-colonoscopy-video-frames/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/real-time-polyps-segmentation-for-colonoscopy-video-frames/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery</title>
+      <link>https://kaopanboonyuen.github.io/publication/road-segmentation-on-aerial-imagery/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/road-segmentation-on-aerial-imagery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Road map extraction from satellite imagery using connected component analysis and landscape metrics</title>
+      <link>https://kaopanboonyuen.github.io/publication/road-map-extraction-from-satellite-imagery/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/road-map-extraction-from-satellite-imagery/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

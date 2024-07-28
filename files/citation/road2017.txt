@@ -1,0 +1,8 @@
+@inproceedings{panboonyuen2018enhanced,
+  title={An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery},
+  author={Panboonyuen, Teerapong and Vateekul, Peerapon and Jitkajornwanich, Kulsawasd and Lawawirojwong, Siam},
+  booktitle={Recent Advances in Information and Communication Technology 2017: Proceedings of the 13th International Conference on Computing and Information Technology (IC2IT)},
+  pages={191--201},
+  year={2018},
+  organization={Springer}
+}

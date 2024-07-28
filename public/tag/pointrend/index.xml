@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PointRend | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/pointrend/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/pointrend/index.xml" rel="self" type="application/rss+xml" />
+    <description>PointRend</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hua4a3b98cd72cc0edea13b445456e64d4_4649875_512x512_fill_lanczos_center_3.png</url>
+      <title>PointRend</title>
+      <link>https://kaopanboonyuen.github.io/tag/pointrend/</link>
+    </image>
+    
+    <item>
+      <title>MARS: Mask Attention Refinement with Sequential Quadtree Nodes for Car Damage Instance Segmentation</title>
+      <link>https://kaopanboonyuen.github.io/publication/mars-mask-attention-refinement-with-sequential-quadtree-nodes/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/mars-mask-attention-refinement-with-sequential-quadtree-nodes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Object Detection of Road Assets Using Transformer-Based YOLOX with Feature Pyramid Decoder on Thai Highway Panorama</title>
+      <link>https://kaopanboonyuen.github.io/publication/object-detection-of-road-assets-using-transformer-based-yolox/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/object-detection-of-road-assets-using-transformer-based-yolox/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

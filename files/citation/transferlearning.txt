@@ -1,0 +1,10 @@
+@article{panboonyuen2019semantic,
+  title={Semantic segmentation on remotely sensed images using an enhanced global convolutional network with channel attention and domain specific transfer learning},
+  author={Panboonyuen, Teerapong and Jitkajornwanich, Kulsawasd and Lawawirojwong, Siam and Srestasathiern, Panu and Vateekul, Peerapon},
+  journal={Remote Sensing},
+  volume={11},
+  number={1},
+  pages={83},
+  year={2019},
+  publisher={MDPI}
+}

@@ -1,0 +1,5 @@
+.card .card-image {
+display: block;
+position: relative;
+max-width: 500px;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aerial Imagery | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/aerial-imagery/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/aerial-imagery/index.xml" rel="self" type="application/rss+xml" />
+    <description>Aerial Imagery</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hua4a3b98cd72cc0edea13b445456e64d4_4649875_512x512_fill_lanczos_center_3.png</url>
+      <title>Aerial Imagery</title>
+      <link>https://kaopanboonyuen.github.io/tag/aerial-imagery/</link>
+    </image>
+    
+    <item>
+      <title>Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network</title>
+      <link>https://kaopanboonyuen.github.io/publication/phd-thesis-semantic-segmentation-on-remotely-sensed-images-using-deep-learning/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/phd-thesis-semantic-segmentation-on-remotely-sensed-images-using-deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery</title>
+      <link>https://kaopanboonyuen.github.io/publication/road-segmentation-on-aerial-imagery/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/road-segmentation-on-aerial-imagery/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
