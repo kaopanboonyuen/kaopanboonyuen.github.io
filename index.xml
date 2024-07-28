@@ -180,9 +180,9 @@ The variance of the distribution is $\sigma^{2}$.
     
     <item>
       <title>The Bangkok Urbanscapes Dataset for Semantic Urban Scene Understanding Using Enhanced Encoder-Decoder with Atrous Depthwise Separable A1 Convolutional Neural Networks</title>
-      <link>https://kaopanboonyuen.github.io/publication/the-bangkok-urbanscapes-datase/</link>
+      <link>https://kaopanboonyuen.github.io/publication/the-bangkok-urbanscapes-dataset/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/publication/the-bangkok-urbanscapes-datase/</guid>
+      <guid>https://kaopanboonyuen.github.io/publication/the-bangkok-urbanscapes-dataset/</guid>
       <description></description>
     </item>
     
@@ -211,7 +211,7 @@ The variance of the distribution is $\sigma^{2}$.
     </item>
     
     <item>
-      <title>Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images</title>
+      <title>Semantic Segmentation on Remotely Sensed Images Using an Enhanced Global Convolutional Network with Channel Attention and Domain Specific Transfer Learning</title>
       <link>https://kaopanboonyuen.github.io/publication/an-enhanced-global-convolutional-network-with-channel-attention-and-domain-specific-transfer-learning/</link>
       <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/publication/an-enhanced-global-convolutional-network-with-channel-attention-and-domain-specific-transfer-learning/</guid>
