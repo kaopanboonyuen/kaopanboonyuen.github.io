@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>P. Rakwatin | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/author/p.-rakwatin/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/author/p.-rakwatin/index.xml" rel="self" type="application/rss+xml" />
+    <description>P. Rakwatin</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hua4a3b98cd72cc0edea13b445456e64d4_4649875_512x512_fill_lanczos_center_3.png</url>
+      <title>P. Rakwatin</title>
+      <link>https://kaopanboonyuen.github.io/author/p.-rakwatin/</link>
+    </image>
+    
+    <item>
+      <title>Enhanced Feature Pyramid Vision Transformer for Semantic Segmentation on Thailand Landsat-8 Corpus</title>
+      <link>https://kaopanboonyuen.github.io/publication/enhanced-feature-pyramid-vision-transformert/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/enhanced-feature-pyramid-vision-transformert/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

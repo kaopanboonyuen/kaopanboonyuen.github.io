@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Remote Sensing | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/remote-sensing/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/remote-sensing/index.xml" rel="self" type="application/rss+xml" />
+    <description>Remote Sensing</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 May 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hua4a3b98cd72cc0edea13b445456e64d4_4649875_512x512_fill_lanczos_center_3.png</url>
+      <title>Remote Sensing</title>
+      <link>https://kaopanboonyuen.github.io/tag/remote-sensing/</link>
+    </image>
+    
+    <item>
+      <title>MeViT: A Medium-Resolution Vision Transformer for Semantic Segmentation on Landsat Satellite Imagery for Agriculture in Thailand</title>
+      <link>https://kaopanboonyuen.github.io/publication/mevit-a-medium-resolution-vision-transformer/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/mevit-a-medium-resolution-vision-transformer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Enhanced Feature Pyramid Vision Transformer for Semantic Segmentation on Thailand Landsat-8 Corpus</title>
+      <link>https://kaopanboonyuen.github.io/publication/enhanced-feature-pyramid-vision-transformert/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/enhanced-feature-pyramid-vision-transformert/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Semantic Labeling in Remote Sensing Corpora Using Feature Fusion-Based Enhanced Global Convolutional Network with High-Resolution Representations and Depthwise Atrous Convolution</title>
+      <link>https://kaopanboonyuen.github.io/publication/feature-fusion-based-enhanced-global-convolutional-network-with-high-resolution-representations-and-depthwise-atrous-convolution/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/feature-fusion-based-enhanced-global-convolutional-network-with-high-resolution-representations-and-depthwise-atrous-convolution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images</title>
+      <link>https://kaopanboonyuen.github.io/publication/an-enhanced-global-convolutional-network-with-channel-attention-and-domain-specific-transfer-learning/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/an-enhanced-global-convolutional-network-with-channel-attention-and-domain-specific-transfer-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery</title>
+      <link>https://kaopanboonyuen.github.io/publication/road-segmentation-on-aerial-imagery/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/road-segmentation-on-aerial-imagery/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <description>Teerapong Panboonyuen</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Dec 2023 13:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hua4a3b98cd72cc0edea13b445456e64d4_4649875_512x512_fill_lanczos_center_3.png</url>
+      <title>Teerapong Panboonyuen</title>
+      <link>https://kaopanboonyuen.github.io/</link>
+    </image>
+    
+    <item>
+      <title>Python basics</title>
+      <link>https://kaopanboonyuen.github.io/courses/example/python/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/example/python/</guid>
+      <description>&lt;p&gt;Build a foundation in Python.&lt;/p&gt;
+&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
+&lt;h2 id=&#34;learn&#34;&gt;Learn&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/rfscVS0vtbw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
+  &lt;summary&gt;What is the difference between lists and tuples?&lt;/summary&gt;
+  &lt;p&gt;&lt;p&gt;Lists&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lists are mutable - they can be changed&lt;/li&gt;
+&lt;li&gt;Slower than tuples&lt;/li&gt;
+&lt;li&gt;Syntax: &lt;code&gt;a_list = [1, 2.0, &#39;Hello world&#39;]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tuples&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tuples are immutable - they can&amp;rsquo;t be changed&lt;/li&gt;
+&lt;li&gt;Tuples are faster than lists&lt;/li&gt;
+&lt;li&gt;Syntax: &lt;code&gt;a_tuple = (1, 2.0, &#39;Hello world&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-3&#34;&gt;
+  &lt;summary&gt;Is Python case-sensitive?&lt;/summary&gt;
+  &lt;p&gt;Yes&lt;/p&gt;
+&lt;/details&gt;</description>
+    </item>
+    
+    <item>
+      <title>Visualization</title>
+      <link>https://kaopanboonyuen.github.io/courses/example/visualization/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/example/visualization/</guid>
+      <description>&lt;p&gt;Learn how to visualize data with Plotly.&lt;/p&gt;
+&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
+&lt;h2 id=&#34;learn&#34;&gt;Learn&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/hSPmj7mK6ng&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
+  &lt;summary&gt;When is a heatmap useful?&lt;/summary&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-3&#34;&gt;
+  &lt;summary&gt;Write Plotly code to render a bar chart&lt;/summary&gt;
+  &lt;p&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import plotly.express as px
+data_canada = px.data.gapminder().query(&amp;quot;country == &#39;Canada&#39;&amp;quot;)
+fig = px.bar(data_canada, x=&#39;year&#39;, y=&#39;pop&#39;)
+fig.show()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/p&gt;
+&lt;/details&gt;</description>
+    </item>
+    
+    <item>
+      <title>Statistics</title>
+      <link>https://kaopanboonyuen.github.io/courses/example/stats/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/example/stats/</guid>
+      <description>&lt;p&gt;Introduction to statistics for data science.&lt;/p&gt;
+&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
+&lt;h2 id=&#34;learn&#34;&gt;Learn&lt;/h2&gt;
+&lt;p&gt;The general form of the &lt;strong&gt;normal&lt;/strong&gt; probability density function is:&lt;/p&gt;
+&lt;p&gt;$$
+f(x) = \frac{1}{\sigma \sqrt{2\pi} } e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
+$$&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    The parameter $\mu$ is the mean or expectation of the distribution.
+$\sigma$ is its standard deviation.
+The variance of the distribution is $\sigma^{2}$.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
+  &lt;summary&gt;What is the parameter $\mu$?&lt;/summary&gt;
+  &lt;p&gt;The parameter $\mu$ is the mean or expectation of the distribution.&lt;/p&gt;
+&lt;/details&gt;</description>
+    </item>
+    
+    <item>
+      <title>Geospatial Big Data Analytics</title>
+      <link>https://kaopanboonyuen.github.io/talk/geospatial-big-data-analytics/</link>
+      <pubDate>Fri, 01 Dec 2023 13:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/talk/geospatial-big-data-analytics/</guid>
+      <description>&lt;!-- 
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/traKBhJm4lQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+ --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MeViT: A Medium-Resolution Vision Transformer for Semantic Segmentation on Landsat Satellite Imagery for Agriculture in Thailand</title>
+      <link>https://kaopanboonyuen.github.io/publication/mevit-a-medium-resolution-vision-transformer/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/mevit-a-medium-resolution-vision-transformer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MARS: Mask Attention Refinement with Sequential Quadtree Nodes for Car Damage Instance Segmentation</title>
+      <link>https://kaopanboonyuen.github.io/publication/mars-mask-attention-refinement-with-sequential-quadtree-nodes/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/mars-mask-attention-refinement-with-sequential-quadtree-nodes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Object Detection of Road Assets Using Transformer-Based YOLOX with Feature Pyramid Decoder on Thai Highway Panorama</title>
+      <link>https://kaopanboonyuen.github.io/publication/object-detection-of-road-assets-using-transformer-based-yolox/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/object-detection-of-road-assets-using-transformer-based-yolox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Achieve Data Science First Meet</title>
+      <link>https://kaopanboonyuen.github.io/talk/achieve-data-science-first-meet/</link>
+      <pubDate>Tue, 01 Dec 2020 13:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/talk/achieve-data-science-first-meet/</guid>
+      <description>&lt;!-- 
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/traKBhJm4lQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+ --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ph.D. Thesis Defense</title>
+      <link>https://kaopanboonyuen.github.io/talk/ph.d.-thesis-defense/</link>
+      <pubDate>Fri, 31 Jul 2020 13:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/talk/ph.d.-thesis-defense/</guid>
+      <description>&lt;!-- 
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/a-oWa2CS8jg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+ --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Enhanced Feature Pyramid Vision Transformer for Semantic Segmentation on Thailand Landsat-8 Corpus</title>
+      <link>https://kaopanboonyuen.github.io/publication/enhanced-feature-pyramid-vision-transformert/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/enhanced-feature-pyramid-vision-transformert/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Bangkok Urbanscapes Dataset for Semantic Urban Scene Understanding Using Enhanced Encoder-Decoder with Atrous Depthwise Separable A1 Convolutional Neural Networks</title>
+      <link>https://kaopanboonyuen.github.io/publication/the-bangkok-urbanscapes-datase/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/the-bangkok-urbanscapes-datase/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images</title>
+      <link>https://kaopanboonyuen.github.io/publication/transformer-based-decoder-designs-for-semantic-segmentation/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/transformer-based-decoder-designs-for-semantic-segmentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network</title>
+      <link>https://kaopanboonyuen.github.io/publication/phd-thesis-semantic-segmentation-on-remotely-sensed-images-using-deep-learning/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/phd-thesis-semantic-segmentation-on-remotely-sensed-images-using-deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Semantic Labeling in Remote Sensing Corpora Using Feature Fusion-Based Enhanced Global Convolutional Network with High-Resolution Representations and Depthwise Atrous Convolution</title>
+      <link>https://kaopanboonyuen.github.io/publication/feature-fusion-based-enhanced-global-convolutional-network-with-high-resolution-representations-and-depthwise-atrous-convolution/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/feature-fusion-based-enhanced-global-convolutional-network-with-high-resolution-representations-and-depthwise-atrous-convolution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images</title>
+      <link>https://kaopanboonyuen.github.io/publication/an-enhanced-global-convolutional-network-with-channel-attention-and-domain-specific-transfer-learning/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/an-enhanced-global-convolutional-network-with-channel-attention-and-domain-specific-transfer-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://kaopanboonyuen.github.io/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>https://kaopanboonyuen.github.io/privacy/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Terms</title>
+      <link>https://kaopanboonyuen.github.io/terms/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>https://kaopanboonyuen.github.io/terms/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Real-Time Polyps Segmentation for Colonoscopy Video Frames Using Compressed Fully Convolutional Network</title>
+      <link>https://kaopanboonyuen.github.io/publication/real-time-polyps-segmentation-for-colonoscopy-video-frames/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/real-time-polyps-segmentation-for-colonoscopy-video-frames/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery</title>
+      <link>https://kaopanboonyuen.github.io/publication/road-segmentation-on-aerial-imagery/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/road-segmentation-on-aerial-imagery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Road map extraction from satellite imagery using connected component analysis and landscape metrics</title>
+      <link>https://kaopanboonyuen.github.io/publication/road-map-extraction-from-satellite-imagery/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/road-map-extraction-from-satellite-imagery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kaopanboonyuen.github.io/admin/config.yml</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/admin/config.yml</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

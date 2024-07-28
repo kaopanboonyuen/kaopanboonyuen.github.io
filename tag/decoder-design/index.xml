@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Decoder Design | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/decoder-design/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/decoder-design/index.xml" rel="self" type="application/rss+xml" />
+    <description>Decoder Design</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hua4a3b98cd72cc0edea13b445456e64d4_4649875_512x512_fill_lanczos_center_3.png</url>
+      <title>Decoder Design</title>
+      <link>https://kaopanboonyuen.github.io/tag/decoder-design/</link>
+    </image>
+    
+    <item>
+      <title>Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images</title>
+      <link>https://kaopanboonyuen.github.io/publication/transformer-based-decoder-designs-for-semantic-segmentation/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/transformer-based-decoder-designs-for-semantic-segmentation/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Landsat-8 | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/landsat-8/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/landsat-8/index.xml" rel="self" type="application/rss+xml" />
+    <description>Landsat-8</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 May 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hua4a3b98cd72cc0edea13b445456e64d4_4649875_512x512_fill_lanczos_center_3.png</url>
+      <title>Landsat-8</title>
+      <link>https://kaopanboonyuen.github.io/tag/landsat-8/</link>
+    </image>
+    
+    <item>
+      <title>MeViT: A Medium-Resolution Vision Transformer for Semantic Segmentation on Landsat Satellite Imagery for Agriculture in Thailand</title>
+      <link>https://kaopanboonyuen.github.io/publication/mevit-a-medium-resolution-vision-transformer/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/mevit-a-medium-resolution-vision-transformer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Enhanced Feature Pyramid Vision Transformer for Semantic Segmentation on Thailand Landsat-8 Corpus</title>
+      <link>https://kaopanboonyuen.github.io/publication/enhanced-feature-pyramid-vision-transformert/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/enhanced-feature-pyramid-vision-transformert/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network</title>
+      <link>https://kaopanboonyuen.github.io/publication/phd-thesis-semantic-segmentation-on-remotely-sensed-images-using-deep-learning/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/phd-thesis-semantic-segmentation-on-remotely-sensed-images-using-deep-learning/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

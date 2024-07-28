@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Connected Component Analysis | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/connected-component-analysis/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/connected-component-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <description>Connected Component Analysis</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hua4a3b98cd72cc0edea13b445456e64d4_4649875_512x512_fill_lanczos_center_3.png</url>
+      <title>Connected Component Analysis</title>
+      <link>https://kaopanboonyuen.github.io/tag/connected-component-analysis/</link>
+    </image>
+    
+    <item>
+      <title>Road map extraction from satellite imagery using connected component analysis and landscape metrics</title>
+      <link>https://kaopanboonyuen.github.io/publication/road-map-extraction-from-satellite-imagery/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/road-map-extraction-from-satellite-imagery/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

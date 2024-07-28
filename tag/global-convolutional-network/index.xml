@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Global Convolutional Network | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/global-convolutional-network/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/global-convolutional-network/index.xml" rel="self" type="application/rss+xml" />
+    <description>Global Convolutional Network</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hua4a3b98cd72cc0edea13b445456e64d4_4649875_512x512_fill_lanczos_center_3.png</url>
+      <title>Global Convolutional Network</title>
+      <link>https://kaopanboonyuen.github.io/tag/global-convolutional-network/</link>
+    </image>
+    
+    <item>
+      <title>Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images</title>
+      <link>https://kaopanboonyuen.github.io/publication/transformer-based-decoder-designs-for-semantic-segmentation/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/transformer-based-decoder-designs-for-semantic-segmentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network</title>
+      <link>https://kaopanboonyuen.github.io/publication/phd-thesis-semantic-segmentation-on-remotely-sensed-images-using-deep-learning/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/phd-thesis-semantic-segmentation-on-remotely-sensed-images-using-deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images</title>
+      <link>https://kaopanboonyuen.github.io/publication/an-enhanced-global-convolutional-network-with-channel-attention-and-domain-specific-transfer-learning/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/an-enhanced-global-convolutional-network-with-channel-attention-and-domain-specific-transfer-learning/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

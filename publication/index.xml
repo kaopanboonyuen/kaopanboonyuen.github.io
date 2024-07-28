@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/publication/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 May 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hua4a3b98cd72cc0edea13b445456e64d4_4649875_512x512_fill_lanczos_center_3.png</url>
+      <title>Publications</title>
+      <link>https://kaopanboonyuen.github.io/publication/</link>
+    </image>
+    
+    <item>
+      <title>MeViT: A Medium-Resolution Vision Transformer for Semantic Segmentation on Landsat Satellite Imagery for Agriculture in Thailand</title>
+      <link>https://kaopanboonyuen.github.io/publication/mevit-a-medium-resolution-vision-transformer/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/mevit-a-medium-resolution-vision-transformer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MARS: Mask Attention Refinement with Sequential Quadtree Nodes for Car Damage Instance Segmentation</title>
+      <link>https://kaopanboonyuen.github.io/publication/mars-mask-attention-refinement-with-sequential-quadtree-nodes/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/mars-mask-attention-refinement-with-sequential-quadtree-nodes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Object Detection of Road Assets Using Transformer-Based YOLOX with Feature Pyramid Decoder on Thai Highway Panorama</title>
+      <link>https://kaopanboonyuen.github.io/publication/object-detection-of-road-assets-using-transformer-based-yolox/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/object-detection-of-road-assets-using-transformer-based-yolox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Enhanced Feature Pyramid Vision Transformer for Semantic Segmentation on Thailand Landsat-8 Corpus</title>
+      <link>https://kaopanboonyuen.github.io/publication/enhanced-feature-pyramid-vision-transformert/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/enhanced-feature-pyramid-vision-transformert/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Bangkok Urbanscapes Dataset for Semantic Urban Scene Understanding Using Enhanced Encoder-Decoder with Atrous Depthwise Separable A1 Convolutional Neural Networks</title>
+      <link>https://kaopanboonyuen.github.io/publication/the-bangkok-urbanscapes-datase/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/the-bangkok-urbanscapes-datase/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images</title>
+      <link>https://kaopanboonyuen.github.io/publication/transformer-based-decoder-designs-for-semantic-segmentation/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/transformer-based-decoder-designs-for-semantic-segmentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Semantic Segmentation on Remotely Sensed Images Using Deep Convolutional Encoder-Decoder Neural Network</title>
+      <link>https://kaopanboonyuen.github.io/publication/phd-thesis-semantic-segmentation-on-remotely-sensed-images-using-deep-learning/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/phd-thesis-semantic-segmentation-on-remotely-sensed-images-using-deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Semantic Labeling in Remote Sensing Corpora Using Feature Fusion-Based Enhanced Global Convolutional Network with High-Resolution Representations and Depthwise Atrous Convolution</title>
+      <link>https://kaopanboonyuen.github.io/publication/feature-fusion-based-enhanced-global-convolutional-network-with-high-resolution-representations-and-depthwise-atrous-convolution/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/feature-fusion-based-enhanced-global-convolutional-network-with-high-resolution-representations-and-depthwise-atrous-convolution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images</title>
+      <link>https://kaopanboonyuen.github.io/publication/an-enhanced-global-convolutional-network-with-channel-attention-and-domain-specific-transfer-learning/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/an-enhanced-global-convolutional-network-with-channel-attention-and-domain-specific-transfer-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Real-Time Polyps Segmentation for Colonoscopy Video Frames Using Compressed Fully Convolutional Network</title>
+      <link>https://kaopanboonyuen.github.io/publication/real-time-polyps-segmentation-for-colonoscopy-video-frames/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/real-time-polyps-segmentation-for-colonoscopy-video-frames/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery</title>
+      <link>https://kaopanboonyuen.github.io/publication/road-segmentation-on-aerial-imagery/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/road-segmentation-on-aerial-imagery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Road map extraction from satellite imagery using connected component analysis and landscape metrics</title>
+      <link>https://kaopanboonyuen.github.io/publication/road-map-extraction-from-satellite-imagery/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/road-map-extraction-from-satellite-imagery/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
