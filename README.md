@@ -11,3 +11,5 @@ A big thank you to Hugo and Natasha for their amazing contributions and inspirat
 ## Let's Connect
 
 Feel free to reach out and chat about AI or anything tech-related at [panboonyuen.kao@gmail.com](mailto:panboonyuen.kao@gmail.com). I'm always excited to discuss new ideas and projects!
+
+Teerapong Panboonyuen (Kao), ธีรพงศ์ ปานบุญยืน (เก้า)
