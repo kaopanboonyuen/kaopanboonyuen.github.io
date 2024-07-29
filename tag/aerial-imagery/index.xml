@@ -21,6 +21,14 @@
     </item>
     
     <item>
+      <title>Road segmentation of remotely-sensed images using deep convolutional neural networks with landscape metrics and conditional random fields</title>
+      <link>https://kaopanboonyuen.github.io/publication/road-segmentation-on-remote-sensing/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/road-segmentation-on-remote-sensing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery</title>
       <link>https://kaopanboonyuen.github.io/publication/road-segmentation-on-aerial-imagery/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
