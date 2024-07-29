@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>📊 Learn Data Science | Teerapong Panboonyuen</title>
-    <link>https://kaopanboonyuen.github.io/courses/example/</link>
-      <atom:link href="https://kaopanboonyuen.github.io/courses/example/index.xml" rel="self" type="application/rss+xml" />
-    <description>📊 Learn Data Science</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2024 Kao Panboonyuen</copyright><lastBuildDate>Sun, 24 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <title>🚀 Learn Data Science | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/courses/learn-data-science/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/courses/learn-data-science/index.xml" rel="self" type="application/rss+xml" />
+    <description>🚀 Learn Data Science</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2024 Kao Panboonyuen</copyright><lastBuildDate>Wed, 24 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://kaopanboonyuen.github.io/courses/example/featured.jpg</url>
-      <title>📊 Learn Data Science</title>
-      <link>https://kaopanboonyuen.github.io/courses/example/</link>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>🚀 Learn Data Science</title>
+      <link>https://kaopanboonyuen.github.io/courses/learn-data-science/</link>
     </image>
     
     <item>
-      <title>Python basics</title>
-      <link>https://kaopanboonyuen.github.io/courses/example/python/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/courses/example/python/</guid>
+      <title>Basic Python</title>
+      <link>https://kaopanboonyuen.github.io/courses/learn-data-science/python/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/learn-data-science/python/</guid>
       <description>&lt;p&gt;Build a foundation in Python.&lt;/p&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
 &lt;h2 id=&#34;learn&#34;&gt;Learn&lt;/h2&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/rfscVS0vtbw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/nLRL_NcnK-4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
 &lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
@@ -51,16 +51,16 @@
     
     <item>
       <title>Visualization</title>
-      <link>https://kaopanboonyuen.github.io/courses/example/visualization/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/courses/example/visualization/</guid>
+      <link>https://kaopanboonyuen.github.io/courses/learn-data-science/visualization/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/learn-data-science/visualization/</guid>
       <description>&lt;p&gt;Learn how to visualize data with Plotly.&lt;/p&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
 &lt;h2 id=&#34;learn&#34;&gt;Learn&lt;/h2&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/hSPmj7mK6ng&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/4O_o53ag3ag&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
 &lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
@@ -81,9 +81,9 @@ fig.show()
     
     <item>
       <title>Statistics</title>
-      <link>https://kaopanboonyuen.github.io/courses/example/stats/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/courses/example/stats/</guid>
+      <link>https://kaopanboonyuen.github.io/courses/learn-data-science/stats/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/learn-data-science/stats/</guid>
       <description>&lt;p&gt;Introduction to statistics for data science.&lt;/p&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;

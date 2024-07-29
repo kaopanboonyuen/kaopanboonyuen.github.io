@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kaopanboonyuen.github.io/courses/example/python/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <loc>https://kaopanboonyuen.github.io/courses/learn-data-science/python/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/courses/example/visualization/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <loc>https://kaopanboonyuen.github.io/courses/learn-data-science/visualization/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/courses/example/stats/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <loc>https://kaopanboonyuen.github.io/courses/learn-data-science/stats/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/talk/inspiring-the-future-of-ai-innovations-and-mastering-llm/</loc>
     <lastmod>2024-12-01T13:00:00+00:00</lastmod>
@@ -20,13 +20,64 @@
     <loc>https://kaopanboonyuen.github.io/</loc>
     <lastmod>2024-12-01T13:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://kaopanboonyuen.github.io/category/ai/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/authors/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/blog/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/categories/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/image-classification/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/landsat/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/blog/2024-07-29-leveraging-large-language-models-in-remote-sensing/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/llm/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/lulc/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/category/machine-learning/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/remote-sensing/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/category/remote-sensing/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/sentinel/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tags/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/author/teerapong-panboonyuen/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/theos/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/courses/</loc>
+    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/courses/learn-data-science/</loc>
+    <lastmod>2024-01-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://kaopanboonyuen.github.io/talk/geospatial-big-data-analytics/</loc>
     <lastmod>2023-12-01T13:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/publication-type/2/</loc>
-    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/authors/</loc>
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/author/c.-charoenphon/</loc>
@@ -65,16 +116,7 @@
     <loc>https://kaopanboonyuen.github.io/publication/</loc>
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/remote-sensing/</loc>
-    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/semantic-segmentation/</loc>
-    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/tags/</loc>
-    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/author/teerapong-panboonyuen/</loc>
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/transformer/</loc>
@@ -142,12 +184,6 @@
   </url><url>
     <loc>https://kaopanboonyuen.github.io/author/w.-wongweeranimit/</loc>
     <lastmod>2022-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/courses/</loc>
-    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/courses/example/</loc>
-    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/talk/achieve-data-science-first-meet/</loc>
     <lastmod>2020-12-01T13:00:00+00:00</lastmod>
@@ -306,9 +342,5 @@
     <lastmod>2017-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/admin/</loc>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/categories/</loc>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/post/</loc>
   </url>
 </urlset>

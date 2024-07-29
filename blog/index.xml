@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/blog/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <description>Blog</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2024 Kao Panboonyuen</copyright><lastBuildDate>Sun, 28 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>Blog</title>
+      <link>https://kaopanboonyuen.github.io/blog/</link>
+    </image>
+    
+    <item>
+      <title>Leveraging Large Language Models (LLMs) in Remote Sensing for Land Use/Land Cover (LULC) and Image Classification</title>
+      <link>https://kaopanboonyuen.github.io/blog/2024-07-29-leveraging-large-language-models-in-remote-sensing/</link>
+      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/blog/2024-07-29-leveraging-large-language-models-in-remote-sensing/</guid>
+      <description>&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#understanding-large-language-models-llms&#34;&gt;Understanding Large Language Models (LLMs)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#llms-in-lulc-classification&#34;&gt;LLMs in LULC Classification&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#methodology&#34;&gt;Methodology&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#case-study-lulc-classification-on-sentinel-2-imagery&#34;&gt;Case Study: LULC Classification on Sentinel-2 Imagery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#conclusion&#34;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p align=&#34;justify&#34;&gt;
+Remote sensing has revolutionized the way we observe and understand the Earth’s surface. With the advent of satellites like Sentinel, Landsat-8, and THEOS, we have access to a plethora of high-resolution imagery that can be used for various applications, including Land Use/Land Cover (LULC) classification and image classification. However, analyzing and interpreting this vast amount of data is a complex task. Enter Large Language Models (LLMs), which have shown promise in various domains, including natural language processing, computer vision, and remote sensing.
+&lt;/p&gt;
+&lt;p align=&#34;justify&#34;&gt;
+In this blog, we will explore how LLMs can be applied to remote sensing, particularly in the domains of LULC and image classification. We will delve into the methodologies, algorithms, and techniques that can be utilized to harness the power of LLMs for these applications.
+&lt;/p&gt;
+&lt;h2 id=&#34;understanding-large-language-models-llms&#34;&gt;Understanding Large Language Models (LLMs)&lt;/h2&gt;
+&lt;p align=&#34;justify&#34;&gt;
+Large Language Models, such as GPT-4, are deep learning models that have been trained on vast amounts of text data. They are capable of understanding and generating human-like text, making them highly versatile for various applications. In the context of remote sensing, LLMs can be used to analyze and interpret imagery data, aiding in tasks like LULC classification and image classification.
+&lt;/p&gt;
+&lt;h3 id=&#34;llms-in-lulc-classification&#34;&gt;LLMs in LULC Classification&lt;/h3&gt;
+&lt;p align=&#34;justify&#34;&gt;
+LULC classification involves categorizing different regions of an image into land use and land cover classes, such as forests, urban areas, water bodies, and agricultural land. Traditional methods for LULC classification include supervised and unsupervised learning techniques. LLMs, however, can enhance these methods by providing contextual understanding and improved feature extraction.
+&lt;/p&gt;
+&lt;h4 id=&#34;methodology&#34;&gt;Methodology&lt;/h4&gt;
+&lt;p align=&#34;justify&#34;&gt;
+The process of using LLMs for LULC classification can be summarized as follows:
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Data Preprocessing&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Collect satellite imagery from sources like Sentinel, Landsat-8, and THEOS.&lt;/li&gt;
+&lt;li&gt;Perform image correction and normalization to ensure consistency in the data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Feature Extraction&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use convolutional neural networks (CNNs) to extract features from the satellite images.&lt;/li&gt;
+&lt;li&gt;Integrate LLMs to enhance feature extraction by incorporating contextual information from related text data (e.g., environmental reports, land use documentation).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Model Training&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Train a classification model using the extracted features. The model can be a hybrid of CNNs and LLMs, where the CNN handles the spatial features and the LLM provides contextual understanding.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Classification and Validation&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Apply the trained model to classify the satellite images into LULC categories.&lt;/li&gt;
+&lt;li&gt;Validate the model using ground truth data and performance metrics like accuracy, precision, recall, and F1-score.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;case-study-lulc-classification-on-sentinel-2-imagery&#34;&gt;Case Study: LULC Classification on Sentinel-2 Imagery&lt;/h2&gt;
+&lt;p align=&#34;justify&#34;&gt;
+To illustrate the application of LLMs in LULC classification, let’s consider a case study using Sentinel-2 imagery. Sentinel-2 provides high-resolution optical imagery, which is ideal for detailed LULC classification.
+&lt;/p&gt;
+&lt;h3 id=&#34;data-collection-and-preprocessing&#34;&gt;Data Collection and Preprocessing&lt;/h3&gt;
+&lt;p align=&#34;justify&#34;&gt;
+We collected Sentinel-2 imagery for a region with diverse land cover types. The images were preprocessed to correct for atmospheric effects and normalize the reflectance values.
+&lt;/p&gt;
+&lt;h3 id=&#34;feature-extraction&#34;&gt;Feature Extraction&lt;/h3&gt;
+&lt;p align=&#34;justify&#34;&gt;
+A pre-trained CNN, such as ResNet-50, was used to extract spatial features from the images. Simultaneously, a large corpus of environmental text data was fed into an LLM to extract contextual features.
+&lt;/p&gt;
+&lt;h3 id=&#34;model-training-and-classification&#34;&gt;Model Training and Classification&lt;/h3&gt;
+&lt;p align=&#34;justify&#34;&gt;
+The extracted features were combined and fed into a hybrid classification model. The model was trained using labeled ground truth data. The results showed a significant improvement in classification accuracy compared to traditional methods.
+&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p align=&#34;justify&#34;&gt;
+The integration of LLMs in remote sensing, particularly for LULC and image classification, holds immense potential. By combining the spatial feature extraction capabilities of CNNs with the contextual understanding of LLMs, we can achieve more accurate and meaningful classifications. As remote sensing technology continues to evolve, the role of advanced AI models like LLMs will become increasingly crucial in unlocking new insights from satellite imagery.
+&lt;/p&gt;
+&lt;p align=&#34;justify&#34;&gt;
+In this blog, we explored the methodologies and techniques for leveraging LLMs in remote sensing applications. The case study on Sentinel-2 imagery demonstrated the practical benefits of this approach. As we move forward, further research and development in this field will undoubtedly lead to more innovative and effective solutions for remote sensing challenges.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
