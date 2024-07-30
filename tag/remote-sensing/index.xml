@@ -135,6 +135,14 @@ In this blog, we explored the methodologies and techniques for leveraging LLMs i
     </item>
     
     <item>
+      <title>Semantic Segmentation On Medium-Resolution Satellite Images Using Deep Convolutional Networks With Remote Sensing Derived Indices</title>
+      <link>https://kaopanboonyuen.github.io/publication/semantic-segmentation-on-medium-resolution-satellite-images/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/semantic-segmentation-on-medium-resolution-satellite-images/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Road segmentation of remotely-sensed images using deep convolutional neural networks with landscape metrics and conditional random fields</title>
       <link>https://kaopanboonyuen.github.io/publication/road-segmentation-on-remote-sensing/</link>
       <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
@@ -147,6 +155,14 @@ In this blog, we explored the methodologies and techniques for leveraging LLMs i
       <link>https://kaopanboonyuen.github.io/publication/road-segmentation-on-aerial-imagery/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/publication/road-segmentation-on-aerial-imagery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Image Vectorization of Road Satellite Data Sets</title>
+      <link>https://kaopanboonyuen.github.io/publication/image-vectorization-of-road-satellite-data-sets/</link>
+      <pubDate>Thu, 01 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/image-vectorization-of-road-satellite-data-sets/</guid>
       <description></description>
     </item>
     

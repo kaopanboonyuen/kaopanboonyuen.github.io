@@ -23,7 +23,7 @@
     <item>
       <title>Object Detection of Road Assets Using Transformer-Based YOLOX with Feature Pyramid Decoder on Thai Highway Panorama</title>
       <link>https://kaopanboonyuen.github.io/publication/object-detection-of-road-assets-using-transformer-based-yolox/</link>
-      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/publication/object-detection-of-road-assets-using-transformer-based-yolox/</guid>
       <description></description>
     </item>
@@ -33,6 +33,14 @@
       <link>https://kaopanboonyuen.github.io/publication/real-time-polyps-segmentation-for-colonoscopy-video-frames/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/publication/real-time-polyps-segmentation-for-colonoscopy-video-frames/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Semantic Segmentation On Medium-Resolution Satellite Images Using Deep Convolutional Networks With Remote Sensing Derived Indices</title>
+      <link>https://kaopanboonyuen.github.io/publication/semantic-segmentation-on-medium-resolution-satellite-images/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/semantic-segmentation-on-medium-resolution-satellite-images/</guid>
       <description></description>
     </item>
     
@@ -49,6 +57,14 @@
       <link>https://kaopanboonyuen.github.io/publication/road-map-extraction-from-satellite-imagery/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/publication/road-map-extraction-from-satellite-imagery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Image Vectorization of Road Satellite Data Sets</title>
+      <link>https://kaopanboonyuen.github.io/publication/image-vectorization-of-road-satellite-data-sets/</link>
+      <pubDate>Thu, 01 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/image-vectorization-of-road-satellite-data-sets/</guid>
       <description></description>
     </item>
     

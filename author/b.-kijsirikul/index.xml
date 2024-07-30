@@ -5,7 +5,7 @@
     <link>https://kaopanboonyuen.github.io/author/b.-kijsirikul/</link>
       <atom:link href="https://kaopanboonyuen.github.io/author/b.-kijsirikul/index.xml" rel="self" type="application/rss+xml" />
     <description>B. Kijsirikul</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2024 Kao Panboonyuen</copyright><lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2024 Kao Panboonyuen</copyright><lastBuildDate>Tue, 01 Mar 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>B. Kijsirikul</title>
@@ -13,10 +13,26 @@
     </image>
     
     <item>
+      <title>Quality of Life Prediction in Driving Scenes on Thailand Roads Using Information Extraction from Deep Convolutional Neural Networks</title>
+      <link>https://kaopanboonyuen.github.io/publication/quality-of-life-prediction-in-driving-scenes-on-thailand-roads/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/quality-of-life-prediction-in-driving-scenes-on-thailand-roads/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>The Bangkok Urbanscapes Dataset for Semantic Urban Scene Understanding Using Enhanced Encoder-Decoder with Atrous Depthwise Separable A1 Convolutional Neural Networks</title>
       <link>https://kaopanboonyuen.github.io/publication/the-bangkok-urbanscapes-dataset/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/publication/the-bangkok-urbanscapes-dataset/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transportation Mobility Factor Extraction Using Image Recognition Techniques</title>
+      <link>https://kaopanboonyuen.github.io/publication/transportation-mobility-factor-extraction-using-image-recognition-techniques/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/transportation-mobility-factor-extraction-using-image-recognition-techniques/</guid>
       <description></description>
     </item>
     
