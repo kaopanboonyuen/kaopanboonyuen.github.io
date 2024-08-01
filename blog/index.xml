@@ -5,12 +5,324 @@
     <link>https://kaopanboonyuen.github.io/blog/</link>
       <atom:link href="https://kaopanboonyuen.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2024 Kao Panboonyuen</copyright><lastBuildDate>Sun, 28 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2024 Kao Panboonyuen</copyright><lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>Blog</title>
       <link>https://kaopanboonyuen.github.io/blog/</link>
     </image>
+    
+    <item>
+      <title>Generative AI: Current Trends and Practical Applications</title>
+      <link>https://kaopanboonyuen.github.io/blog/2024-08-02-generative-ai-current-trends-and-practical-applications/</link>
+      <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/blog/2024-08-02-generative-ai-current-trends-and-practical-applications/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    You can view the presentation slides for the talk 😃 &lt;a href=&#34;https://kaopanboonyuen.github.io/files/slides/20240801_Panboonyuen_GenerativeAI.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#key-trends-in-generative-ai&#34;&gt;Key Trends in Generative AI&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#advances-in-model-architectures&#34;&gt;Advances in Model Architectures&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#growth-in-computing-power-and-data-availability&#34;&gt;Growth in Computing Power and Data Availability&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#emerging-techniques-and-approaches&#34;&gt;Emerging Techniques and Approaches&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#applications-of-generative-ai&#34;&gt;Applications of Generative AI&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#content-creation&#34;&gt;Content Creation&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#healthcare&#34;&gt;Healthcare&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#gaming-and-entertainment&#34;&gt;Gaming and Entertainment&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#finance&#34;&gt;Finance&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#autonomous-systems&#34;&gt;Autonomous Systems&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#challenges-and-ethical-considerations&#34;&gt;Challenges and Ethical Considerations&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#bias-and-fairness&#34;&gt;Bias and Fairness&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#security-and-privacy&#34;&gt;Security and Privacy&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#environmental-impact&#34;&gt;Environmental Impact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#future-directions-and-opportunities&#34;&gt;Future Directions and Opportunities&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#diffusion-models&#34;&gt;Diffusion Models&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#conclusion&#34;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#todo-lists&#34;&gt;Todo lists&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
+
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p align=&#34;justify&#34;&gt;
+Generative AI refers to a category of artificial intelligence models designed to generate new content, such as text, images, music, or videos. These models have gained significant attention due to their ability to create high-quality and realistic outputs. The field has evolved rapidly, with breakthroughs in model architectures, training techniques, and applications across various domains. In this blog, we delve into the current trends, practical applications, challenges, and future prospects of generative AI.
+&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;genai_01.png&#34; alt=&#34;Introduction Image&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: -40px;&#34;&gt;Fig. 1. Sample of generative AI task (Image source: Lin et al. 2024, &lt;a href=&#34;https://arxiv.org/abs/2405.01525&#34; target=&#34;_blank&#34;&gt;arXiv:2405.01525&lt;/a&gt;)&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;key-trends-in-generative-ai&#34;&gt;Key Trends in Generative AI&lt;/h2&gt;
+&lt;h3 id=&#34;advances-in-model-architectures&#34;&gt;Advances in Model Architectures&lt;/h3&gt;
+&lt;p align=&#34;justify&#34;&gt;
+One of the most notable trends in generative AI is the development of advanced model architectures, such as Generative Adversarial Networks (GANs) (Goodfellow et al., 2014), Variational Autoencoders (VAEs) (Kingma &amp; Welling, 2013), and Transformer-based models (Vaswani et al., 2017). These architectures have enabled the generation of high-quality content by learning complex data distributions.
+&lt;/p&gt;
+&lt;h3 id=&#34;growth-in-computing-power-and-data-availability&#34;&gt;Growth in Computing Power and Data Availability&lt;/h3&gt;
+&lt;p align=&#34;justify&#34;&gt;
+The exponential growth in computing power and the availability of large datasets have been crucial in advancing generative AI. The use of GPUs and TPUs has accelerated the training of large models, while datasets like ImageNet (Deng et al., 2009) and Common Crawl have provided diverse and extensive training data.
+&lt;/p&gt;
+&lt;h3 id=&#34;emerging-techniques-and-approaches&#34;&gt;Emerging Techniques and Approaches&lt;/h3&gt;
+&lt;p align=&#34;justify&#34;&gt;
+Recent innovations, such as few-shot and zero-shot learning, have expanded the capabilities of generative models. Techniques like fine-tuning and transfer learning allow models to adapt to new tasks with limited data, demonstrating versatility and efficiency in various applications (Radford et al., 2021).
+&lt;/p&gt;
+&lt;h2 id=&#34;applications-of-generative-ai&#34;&gt;Applications of Generative AI&lt;/h2&gt;
+&lt;h3 id=&#34;content-creation&#34;&gt;Content Creation&lt;/h3&gt;
+&lt;p align=&#34;justify&#34;&gt;
+Generative AI has revolutionized content creation, enabling the automatic generation of text, images, music, and videos. For instance, GPT-3 (Brown et al., 2020) has demonstrated remarkable capabilities in generating human-like text, while models like DALL-E (Ramesh et al., 2021) can create novel images from textual descriptions.
+&lt;/p&gt;
+&lt;h3 id=&#34;healthcare&#34;&gt;Healthcare&lt;/h3&gt;
+&lt;p align=&#34;justify&#34;&gt;
+In healthcare, generative AI has shown promise in drug discovery and medical imaging. For example, GANs have been used to generate realistic medical images for training purposes, improving diagnostic accuracy (Frid-Adar et al., 2018). Additionally, AI models can assist in designing new molecules with desired properties, expediting the drug development process.
+&lt;/p&gt;
+&lt;h3 id=&#34;gaming-and-entertainment&#34;&gt;Gaming and Entertainment&lt;/h3&gt;
+&lt;p align=&#34;justify&#34;&gt;
+The gaming and entertainment industries have embraced generative AI to create immersive experiences. AI-generated characters, dialogues, and game levels enhance player engagement. Moreover, deepfake technology, powered by generative models, has opened new avenues in film and media production, allowing for realistic character portrayals and visual effects.
+&lt;/p&gt;
+&lt;h3 id=&#34;finance&#34;&gt;Finance&lt;/h3&gt;
+&lt;p align=&#34;justify&#34;&gt;
+In finance, generative AI is utilized for algorithmic trading, risk management, and fraud detection. AI models can generate synthetic financial data to simulate market scenarios, aiding in the development of robust trading strategies (Wiese et al., 2019). Additionally, generative models can identify unusual patterns in transactions, enhancing fraud detection systems.
+&lt;/p&gt;
+&lt;p align=&#34;justify&#34;&gt;
+For a deeper understanding of how LLMs are transforming finance, you can watch this insightful video:
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/h_GTxRFYETY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;autonomous-systems&#34;&gt;Autonomous Systems&lt;/h3&gt;
+&lt;p align=&#34;justify&#34;&gt;
+Generative AI plays a crucial role in autonomous systems, including robotics and self-driving cars. AI-generated simulations help in training and testing autonomous agents, reducing the reliance on real-world testing. For instance, generative models can simulate complex driving scenarios, improving the safety and reliability of self-driving technology (Dosovitskiy et al., 2017).
+&lt;/p&gt;
+&lt;h2 id=&#34;challenges-and-ethical-considerations&#34;&gt;Challenges and Ethical Considerations&lt;/h2&gt;
+&lt;h3 id=&#34;bias-and-fairness&#34;&gt;Bias and Fairness&lt;/h3&gt;
+&lt;p align=&#34;justify&#34;&gt;
+One of the significant challenges in generative AI is addressing bias and ensuring fairness. AI models may perpetuate societal biases present in the training data, leading to unfair or discriminatory outcomes. Researchers are actively exploring methods to detect and mitigate biases in generative models (Bender et al., 2021).
+&lt;/p&gt;
+&lt;h3 id=&#34;security-and-privacy&#34;&gt;Security and Privacy&lt;/h3&gt;
+&lt;p align=&#34;justify&#34;&gt;
+The rise of generative AI has raised concerns about security and privacy. Deepfake technology, for example, can be misused to create realistic but fake videos, leading to misinformation and privacy violations. Ensuring the responsible use of generative AI and developing techniques to detect synthetic content are crucial to addressing these issues (Chesney &amp; Citron, 2019).
+&lt;/p&gt;
+&lt;h3 id=&#34;environmental-impact&#34;&gt;Environmental Impact&lt;/h3&gt;
+&lt;p align=&#34;justify&#34;&gt;
+The training of large generative models requires substantial computational resources, contributing to the environmental impact. Researchers are exploring ways to reduce the carbon footprint of AI, such as developing energy-efficient algorithms and hardware (Strubell et al., 2019).
+&lt;/p&gt;
+&lt;h2 id=&#34;future-directions-and-opportunities&#34;&gt;Future Directions and Opportunities&lt;/h2&gt;
+&lt;p align=&#34;justify&#34;&gt;
+The future of generative AI holds immense potential, with opportunities for interdisciplinary applications and collaborations between academia and industry. As the technology continues to evolve, it is crucial to consider its societal implications and strive for responsible and ethical deployment. The integration of generative AI in various fields, from art to science, will likely lead to groundbreaking innovations and transformative experiences.
+&lt;/p&gt;
+&lt;p align=&#34;justify&#34;&gt;
+Here is a simple Python code snippet demonstrating the basic structure of a Generative Adversarial Network (GAN) using PyTorch:
+&lt;/p&gt;
+&lt;!-- 
+  &lt;i class=&#34;fas fa-python  pr-1 fa-fw&#34;&gt;&lt;/i&gt;Python --&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import torch
+import torch.nn as nn
+import numpy as np
+
+class Generator(nn.Module):
+    def __init__(self, latent_dim, img_shape):
+        super(Generator, self).__init__()
+        self.model = nn.Sequential(
+            nn.Linear(latent_dim, 128),
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Linear(128, 256),
+            nn.BatchNorm1d(256),
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Linear(256, int(np.prod(img_shape))),
+            nn.Tanh()
+        )
+        self.img_shape = img_shape
+
+    def forward(self, z):
+        img = self.model(z)
+        img = img.view(img.size(0), *self.img_shape)
+        return img
+
+class Discriminator(nn.Module):
+    def __init__(self, img_shape):
+        super(Discriminator, self).__init__()
+        self.model = nn.Sequential(
+            nn.Linear(int(np.prod(img_shape)), 256),
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Linear(256, 128),
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Linear(128, 1),
+            nn.Sigmoid()
+        )
+
+    def forward(self, img):
+        img_flat = img.view(img.size(0), -1)
+        validity = self.model(img_flat)
+        return validity
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;diffusion-models&#34;&gt;Diffusion Models&lt;/h2&gt;
+&lt;p align=&#34;justify&#34;&gt;
+Diffusion models have emerged as a powerful approach in generative AI, especially for tasks involving image generation and editing. These models iteratively denoise images to recover the original data distribution. The objective function for diffusion models can be expressed as:
+&lt;/p&gt;
+&lt;p&gt;$$
+C(x) = -\frac{1}{\sigma \sqrt{2\pi}} \left(\frac{x - \mu}{\sigma}\right)^2 e^{-\frac{1}{2}\left(\frac{x - \mu}{\sigma}\right)^2}
+$$
+&lt;code&gt;Where:&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\theta$ represents the model parameters.&lt;/li&gt;
+&lt;li&gt;$t$ is a time step uniformly sampled from the interval [0, 1].&lt;/li&gt;
+&lt;li&gt;$\lambda(t)$ is a time-dependent weighting function.&lt;/li&gt;
+&lt;li&gt;$x_0$ is the original data point (e.g., an image).&lt;/li&gt;
+&lt;li&gt;$\epsilon$ is Gaussian noise sampled from a normal distribution.&lt;/li&gt;
+&lt;li&gt;$\epsilon_\theta(x_t, t)$ is the predicted noise at time step $t$ by the model.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+L(x) = \frac{1}{2} \left( \frac{x - \mu}{\sigma} \right)^2 + \frac{1}{2} \log(2 \pi \sigma^2)
+$$&lt;/p&gt;
+&lt;p&gt;In this form:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$( \frac{1}{2} \left( \frac{x - \mu}{\sigma} \right)^2 )$ represents the squared deviation from the mean, often used in diffusion models to measure the distance between generated and target distributions.&lt;/li&gt;
+&lt;li&gt;$( \frac{1}{2} \log(2 \pi \sigma^2) )$ represents the entropy term, which accounts for the normalization factor in the Gaussian distribution.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can also represent the diffusion objective function in a more general form related to a stochastic process:&lt;/p&gt;
+&lt;p&gt;$$
+L(x) = \mathbb{E} \left[ \frac{1}{2} | x - \mu |^2 + \frac{1}{2} \log(2 \pi \sigma^2) \right]
+$$&lt;/p&gt;
+&lt;p&gt;Here, $( \mathbb{E} )$ denotes the expectation over the diffusion process, capturing the average cost.&lt;/p&gt;
+&lt;p&gt;This objective function measures the discrepancy between the true noise added to the data and the noise predicted by the model, aiming to train the model to accurately reverse the diffusion process.&lt;/p&gt;
+&lt;p align=&#34;justify&#34;&gt;
+where \(x_t\) is the noised image at timestep \(t\), and \(\epsilon_\theta\) is the noise prediction network. Recent works like DALL-E 2 and Stable Diffusion have demonstrated the remarkable capabilities of diffusion models in text-to-image generation and image editing tasks. These models leverage large-scale training on diverse datasets and incorporate additional conditioning information to enable fine-grained control over generated images.
+&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p align=&#34;justify&#34;&gt;
+Generative AI continues to advance rapidly, with ongoing developments in model architectures, training techniques, and applications across various domains. The ability of generative models to create high-quality content, from text and images to music and videos, underscores their transformative potential. While there are challenges and ethical considerations to address, the future of generative AI is promising, with numerous opportunities for innovation and interdisciplinary collaboration. As we explore these frontiers, it is crucial to remain mindful of the societal impacts and strive for responsible use of these powerful technologies.
+&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Generative AI is revolutionizing various fields by creating new content and enhancing existing applications. This blog explores current trends, practical applications, challenges, and future opportunities of generative models. Key areas include advancements in model architectures, real-world applications like content creation and healthcare, and the integration of techniques such as GANs and diffusion models.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    Generative AI presents both exciting opportunities and significant challenges. This blog covers the latest trends in generative models, their applications across various industries, and critical issues such as ethical considerations and future directions. Learn about the potential of models like GANs and diffusion techniques, and their impact on content creation and other fields.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;todo-lists&#34;&gt;Todo lists&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Understand GANs (Generative Adversarial Networks)
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Study GAN architecture (Generator and Discriminator)&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Review applications and improvements&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Learn about Variational Autoencoders (VAEs)
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Explore VAE structure and loss function&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Examine use cases in generative tasks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Familiarize with Diffusion Models
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Understand diffusion process and objective function&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Review recent advancements (e.g., DALL-E 2, Stable Diffusion)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Explore Transformer Models
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Study transformer architecture and attention mechanisms&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Review its application in language generation and understanding&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Learn about Pretrained Language Models
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Study fine-tuning techniques for specific tasks&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Explore popular models (e.g., GPT, BERT, T5)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Understand Model Evaluation Metrics
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Review metrics like BLEU, ROUGE, and FID for generative models&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Study methods for evaluating model performance in different contexts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Investigate Ethical Considerations
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Explore challenges related to bias, fairness, and security&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Study frameworks for responsible AI development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Panboonyuen, Teerapong. (Aug 2024). &lt;em&gt;Generative AI: Current Trends and Practical Applications&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://yourblogurl.com/generative-ai-current-trends&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/generative-ai-current-trends&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Or&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;@article{panboonyuen2024generativeaitrends,
+  title   = &amp;quot;Generative AI: Current Trends and Practical Applications.&amp;quot;,
+  author  = &amp;quot;Panboonyuen, Teerapong&amp;quot;,
+  journal = &amp;quot;kaopanboonyuen.github.io/&amp;quot;,
+  year    = &amp;quot;2024&amp;quot;,
+  month   = &amp;quot;Aug&amp;quot;,
+  url     = &amp;quot;https://kaopanboonyuen.github.io/generative-ai-current-trends/&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Did you find this page helpful? Consider sharing it 🙌
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Bender, E. M., Gebru, T., McMillan-Major, A., &amp;amp; Shmitchell, S. (2021). On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? &lt;em&gt;Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (FAccT)&lt;/em&gt;. &lt;a href=&#34;https://arxiv.org/abs/2102.02503&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv:2102.02503&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;BROWN, T. B., MANE, D., LANGE, I., &amp;amp; et al. (2020). Language Models are Few-Shot Learners. &lt;em&gt;Proceedings of the 34th Conference on Neural Information Processing Systems (NeurIPS 2020)&lt;/em&gt;. &lt;a href=&#34;https://arxiv.org/abs/2005.14165&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv:2005.14165&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CHESNEY, R., &amp;amp; CITRON, D. K. (2019). Deep Fakes: A Looming Challenge for Privacy, Democracy, and National Security. &lt;em&gt;California Law Review&lt;/em&gt;, 107(6), 1753-1819. &lt;a href=&#34;https://doi.org/10.2139/ssrn.3213954&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;doi:10.2139/ssrn.3213954&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DENG, J., DONAHUE, J., &amp;amp; HAREL, M. (2009). ImageNet: A Large-Scale Hierarchical Image Database. &lt;em&gt;Proceedings of the 2009 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)&lt;/em&gt;. &lt;a href=&#34;https://doi.org/10.1109/CVPR.2009.5206848&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;doi:10.1109/CVPR.2009.5206848&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DOSOVITSKIY, A., BROSSARD, T., &amp;amp; SPRINGENBERG, J. (2017). Discriminative Unsupervised Feature Learning with Exemplar Convolutional Neural Networks. &lt;em&gt;IEEE Transactions on Pattern Analysis and Machine Intelligence (PAMI)&lt;/em&gt;, 39(5), 939-949. &lt;a href=&#34;https://doi.org/10.1109/TPAMI.2016.2593826&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;doi:10.1109/TPAMI.2016.2593826&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;FRID-ADAR, M., ELIYAHU, S., &amp;amp; GOLDY, S. (2018). GAN-based Synthetic Medical Image Augmentation for Increased CNN Performance in Liver Lesion Classification. &lt;em&gt;IEEE Transactions on Medical Imaging&lt;/em&gt;, 37(6), 1334-1343. &lt;a href=&#34;https://doi.org/10.1109/TMI.2018.2813792&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;doi:10.1109/TMI.2018.2813792&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;KINGMA, D. P., &amp;amp; WELLING, M. (2013). Auto-Encoding Variational Bayes. &lt;em&gt;Proceedings of the 2nd International Conference on Learning Representations (ICLR)&lt;/em&gt;. &lt;a href=&#34;https://arxiv.org/abs/1312.6114&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv:1312.6114&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RADFORD, A., WU, J., &amp;amp; AMODEI, D. (2021). Learning Transferable Visual Models From Natural Language Supervision. &lt;em&gt;Proceedings of the 2021 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)&lt;/em&gt;. &lt;a href=&#34;https://arxiv.org/abs/2103.00020&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv:2103.00020&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RAMESH, A., MENG, C., &amp;amp; ZHANG, S. (2021). DALL·E: Creating Images from Text. &lt;em&gt;OpenAI&lt;/em&gt;. &lt;a href=&#34;https://openai.com/research/dall-e&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://openai.com/research/dall-e&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;STRUBELL, E., GANASSI, M., &amp;amp; MCAFEE, P. (2019). Energy and Policy Considerations for Deep Learning in NLP. &lt;em&gt;Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics (ACL 2019)&lt;/em&gt;. &lt;a href=&#34;https://arxiv.org/abs/1906.02243&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv:1906.02243&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;WIESE, S., BOLAND, M., &amp;amp; TONG, A. (2019). A Survey on Machine Learning in Finance. &lt;em&gt;Proceedings of the 26th International Conference on Machine Learning (ICML 2019)&lt;/em&gt;. &lt;a href=&#34;https://arxiv.org/abs/1910.02342&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv:1910.02342&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;VASWANI, A., SHAZEER, N., &amp;amp; PARMAR, N. (2017). Attention Is All You Need. &lt;em&gt;Proceedings of the 31st Conference on Neural Information Processing Systems (NeurIPS 2017)&lt;/em&gt;. &lt;a href=&#34;https://arxiv.org/abs/1706.03762&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv:1706.03762&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>Leveraging Large Language Models (LLMs) in Remote Sensing for Land Use/Land Cover (LULC) and Image Classification</title>

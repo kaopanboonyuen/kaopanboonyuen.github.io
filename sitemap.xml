@@ -20,17 +20,53 @@
     <loc>https://kaopanboonyuen.github.io/</loc>
     <lastmod>2024-12-01T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/category/ai/</loc>
-    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+    <loc>https://kaopanboonyuen.github.io/tag/ai-applications/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/authors/</loc>
-    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/blog/</loc>
-    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/categories/</loc>
-    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/computer-vision/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/category/computer-vision/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/deep-learning/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/category/deep-learning/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/category/diffusion-models/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/category/gans/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/blog/2024-08-02-generative-ai-current-trends-and-practical-applications/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/generative-ai/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/category/generative-ai/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/nlp/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tags/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/author/teerapong-panboonyuen/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/image-classification/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
@@ -44,10 +80,13 @@
     <loc>https://kaopanboonyuen.github.io/tag/llm/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://kaopanboonyuen.github.io/category/llm/</loc>
+    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/lulc/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/category/machine-learning/</loc>
+    <loc>https://kaopanboonyuen.github.io/category/lulc/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/remote-sensing/</loc>
@@ -57,12 +96,6 @@
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/sentinel/</loc>
-    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/tags/</loc>
-    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/author/teerapong-panboonyuen/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/theos/</loc>
@@ -87,9 +120,6 @@
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/convolutional-neural-networks/</loc>
-    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/deep-learning/</loc>
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/encoder-decoder-networks/</loc>
