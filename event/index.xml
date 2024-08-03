@@ -39,6 +39,33 @@
     </item>
     
     <item>
+      <title>Invited to Italy for ICIAP 2023 Presenting MARS Research</title>
+      <link>https://kaopanboonyuen.github.io/talk/invited-to-italy-for-iciap-2023-presenting-mars-research/</link>
+      <pubDate>Fri, 11 Aug 2023 09:30:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/talk/invited-to-italy-for-iciap-2023-presenting-mars-research/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;mars_italy_iciap0001.jpg&#34; alt=&#34;Teerapong Panboonyuen at Italy&#34;&gt;
+&lt;img src=&#34;mars_italy_iciap0002.jpg&#34; alt=&#34;Teerapong Panboonyuen at Italy&#34;&gt;
+&lt;img src=&#34;mars_italy_iciap0003.jpg&#34; alt=&#34;Teerapong Panboonyuen at Italy&#34;&gt;
+&lt;img src=&#34;mars_italy_iciap0004.jpg&#34; alt=&#34;Teerapong Panboonyuen at Italy&#34;&gt;
+&lt;img src=&#34;mars_italy_iciap0005.jpg&#34; alt=&#34;Teerapong Panboonyuen at Italy&#34;&gt;
+&lt;img src=&#34;mars_italy_iciap0006.jpg&#34; alt=&#34;Teerapong Panboonyuen at Italy&#34;&gt;
+&lt;img src=&#34;mars_italy_iciap0007.jpg&#34; alt=&#34;Teerapong Panboonyuen at Italy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I am excited to share that my research, &lt;strong&gt;&amp;ldquo;MARS: Mask Attention Refinement with Sequential Quadtree Nodes,&amp;rdquo;&lt;/strong&gt; was accepted for presentation at the &lt;strong&gt;ICIAP 2023 Workshop&lt;/strong&gt; in Italy. This prestigious conference, held biennially by the CVPL under the International Association for Pattern Recognition (IAPR), brought together leading experts from around the world to discuss the latest advancements in car insurance and computer vision technologies.&lt;/p&gt;
+&lt;p&gt;My research addressed the critical challenge of evaluating car damages with greater accuracy. Current deep learning networks struggle with this task, producing coarse segmented masks that are not suitable for real-world applications. To tackle this issue, I developed MARS, which employs self-attention mechanisms and quadtree transformers to refine instance segmentation accuracy. MARS represents a significant advancement in the field by drawing global dependencies between sequential quadtree nodes and recalibrating channel weights to predict highly accurate instance masks.&lt;/p&gt;
+&lt;p&gt;The extensive experiments conducted as part of my research demonstrated that MARS outperforms several state-of-the-art instance segmentation methods, including Mask R-CNN, PointRend, and Mask Transfiner. Specifically, MARS achieved a substantial improvement in maskAP scores, with a +1.3 increase using the R50-FPN backbone and a +2.3 increase with the R101-FPN backbone on the Thai car-damage dataset. These results highlight the potential of MARS to significantly enhance the accuracy of car damage evaluations, offering promising applications for the car insurance industry.&lt;/p&gt;
+&lt;!-- ![Teerapong Panboonyuen at Italy](mars_italy_iciap0008.jpg) --&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;mars_italy_iciap0008.jpg&#34; alt=&#34;Introduction Image&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: -40px;&#34;&gt;I have published an article with Techsauce. (Image source: techsauce.co, &lt;a href=&#34;https://techsauce.co/news/mars-deep-tech-startup-thaivivat-ai&#34; target=&#34;_blank&#34;&gt;mars-deep-tech-startup-thaivivat-ai&lt;/a&gt;)&lt;/p&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Thank you to Techsauce, the Thai tech news agency, for showcasing my research on the application of AI in the auto insurance and garage industry. You can read the full article here: &lt;a href=&#34;https://techsauce.co/news/mars-deep-tech-startup-thaivivat-ai&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Techsauce&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Presenting my findings at ICIAP 2023 was a fantastic opportunity to engage with fellow researchers and industry professionals, exploring the opportunities, challenges, and future directions in this rapidly evolving field.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Distributed Machine Learning Techniques for Geospatial Data</title>
       <link>https://kaopanboonyuen.github.io/talk/distributed-machine-learning-techniques-for-geospatial-data/</link>
       <pubDate>Thu, 01 Dec 2022 13:00:00 +0000</pubDate>
