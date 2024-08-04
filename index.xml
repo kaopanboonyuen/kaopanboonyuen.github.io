@@ -159,7 +159,12 @@ The variance of the distribution is $\sigma^{2}$.
       &lt;/ul&gt;
     &lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#future-directions-and-opportunities&#34;&gt;Future Directions and Opportunities&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#diffusion-model-implementation-with-gaussian-diffusion&#34;&gt;Diffusion Model Implementation with Gaussian Diffusion&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#diffusion-sample-usage&#34;&gt;Diffusion Sample Usage&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#diffusion-models&#34;&gt;Diffusion Models&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#gans-generative-adversarial-networks&#34;&gt;GANs (Generative Adversarial Networks)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#self-supervised-learning&#34;&gt;Self-Supervised Learning&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#adversarial-attacks&#34;&gt;Adversarial Attacks&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#conclusion&#34;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#todo-lists&#34;&gt;Todo lists&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
@@ -239,47 +244,183 @@ The future of generative AI holds immense potential, with opportunities for inte
 &lt;p align=&#34;justify&#34;&gt;
 Here is a simple Python code snippet demonstrating the basic structure of a Generative Adversarial Network (GAN) using PyTorch:
 &lt;/p&gt;
+&lt;h2 id=&#34;diffusion-model-implementation-with-gaussian-diffusion&#34;&gt;Diffusion Model Implementation with Gaussian Diffusion&lt;/h2&gt;
+&lt;p&gt;This code demonstrates the implementation of a diffusion model using a U-Net-like architecture combined with a Gaussian diffusion process. The model consists of two primary classes:&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;DiffusionModel Class&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Purpose&lt;/strong&gt;: Constructs an autoencoder architecture for processing and reconstructing images. The encoder extracts features from input images, while the decoder reconstructs the images from these features.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Structure&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Encoder&lt;/strong&gt;: A series of convolutional layers that reduce spatial dimensions and increase feature channels.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Decoder&lt;/strong&gt;: A series of transposed convolutional layers that upsample feature maps to the original image size. Uses Tanh activation in the final layer to ensure pixel values are in the range of [-1, 1].&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;GaussianDiffusion Class&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Purpose&lt;/strong&gt;: Implements the Gaussian diffusion process, which includes both the forward (adding noise) and reverse (removing noise) diffusion steps.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Components&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Beta Schedule&lt;/strong&gt;: Linearly increases noise levels over timesteps.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Forward Diffusion Sample&lt;/strong&gt;: Adds noise to the input image according to the current timestep.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reverse Diffusion Step&lt;/strong&gt;: Uses the trained model to predict and remove noise from the image.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Forward Method&lt;/strong&gt;: Executes the reverse diffusion process over all timesteps to reconstruct the image from noisy data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;diffusion-sample-usage&#34;&gt;Diffusion Sample Usage&lt;/h2&gt;
+&lt;p&gt;The example demonstrates how to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Initialize the &lt;code&gt;DiffusionModel&lt;/code&gt; and &lt;code&gt;GaussianDiffusion&lt;/code&gt; classes.&lt;/li&gt;
+&lt;li&gt;Create a dummy image tensor.&lt;/li&gt;
+&lt;li&gt;Perform forward diffusion to add noise and reverse diffusion to reconstruct the image.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The code also includes a print statement to verify the shape of the reconstructed image, ensuring it matches the expected dimensions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    This setup provides a foundational framework for experimenting with diffusion models and can be adapted for various image processing and generation tasks.
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;!-- 
   &lt;i class=&#34;fas fa-python  pr-1 fa-fw&#34;&gt;&lt;/i&gt;Python --&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import torch
 import torch.nn as nn
+import torch.nn.functional as F
 import numpy as np
 
-class Generator(nn.Module):
-    def __init__(self, latent_dim, img_shape):
-        super(Generator, self).__init__()
-        self.model = nn.Sequential(
-            nn.Linear(latent_dim, 128),
-            nn.LeakyReLU(0.2, inplace=True),
-            nn.Linear(128, 256),
-            nn.BatchNorm1d(256),
-            nn.LeakyReLU(0.2, inplace=True),
-            nn.Linear(256, int(np.prod(img_shape))),
-            nn.Tanh()
-        )
-        self.img_shape = img_shape
+# ## Diffusion Models
+#
+# Diffusion models are a cutting-edge approach in generative AI, particularly effective for image generation and editing tasks. They work by iteratively denoising data to recover the original distribution. The key concept is to reverse a diffusion process where noise is added and then removed to reconstruct the original data.
+#
+# The core objective function for diffusion models can be expressed as follows:
+#
+# C(x) = -1 / (σ √(2π)) * ((x - μ) / σ)² * exp(-0.5 * ((x - μ) / σ)²)
+#
+# Where:
+# - x is the data point.
+# - μ is the mean of the data distribution.
+# - σ is the standard deviation of the data distribution.
+#
+# Another formulation for the objective function is:
+#
+# L(x) = 0.5 * ((x - μ) / σ)² + 0.5 * log(2πσ²)
+#
+# Here:
+# - 0.5 * ((x - μ) / σ)² represents the squared deviation from the mean, which measures the distance between generated and target distributions.
+# - 0.5 * log(2πσ²) represents the entropy term that accounts for the normalization factor in the Gaussian distribution.
+#
+# In a more general form, related to a stochastic process:
+#
+# L(x) = E[0.5 * ||x - μ||² + 0.5 * log(2πσ²)]
+#
+# Where E denotes the expectation over the diffusion process, capturing the average cost of deviation.
+#
+# This objective function measures how well the model can reverse the diffusion process, minimizing the discrepancy between the true noise and the predicted noise.
+#
+# Modern diffusion models, such as those used in DALL-E 2 and Stable Diffusion, leverage extensive training on diverse datasets and incorporate additional conditioning information to enable precise control over generated images.
 
-    def forward(self, z):
-        img = self.model(z)
-        img = img.view(img.size(0), *self.img_shape)
-        return img
-
-class Discriminator(nn.Module):
+# Define the main Diffusion Model class
+class DiffusionModel(nn.Module):
     def __init__(self, img_shape):
-        super(Discriminator, self).__init__()
-        self.model = nn.Sequential(
-            nn.Linear(int(np.prod(img_shape)), 256),
+        super(DiffusionModel, self).__init__()
+        # Encoder network: Extracts features from input images
+        self.encoder = nn.Sequential(
+            # Convolutional layer: Reduces spatial dimensions and increases feature channels
+            nn.Conv2d(img_shape[0], 64, kernel_size=4, stride=2, padding=1),
             nn.LeakyReLU(0.2, inplace=True),
-            nn.Linear(256, 128),
+            nn.Conv2d(64, 128, kernel_size=4, stride=2, padding=1),
+            nn.BatchNorm2d(128),
             nn.LeakyReLU(0.2, inplace=True),
-            nn.Linear(128, 1),
-            nn.Sigmoid()
+            nn.Conv2d(128, 256, kernel_size=4, stride=2, padding=1),
+            nn.BatchNorm2d(256),
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Conv2d(256, 512, kernel_size=4, stride=2, padding=1),
+            nn.BatchNorm2d(512),
+            nn.LeakyReLU(0.2, inplace=True)
         )
 
-    def forward(self, img):
-        img_flat = img.view(img.size(0), -1)
-        validity = self.model(img_flat)
-        return validity
+        # Decoder network: Reconstructs images from feature maps
+        self.decoder = nn.Sequential(
+            # Transposed convolution layers: Upsample feature maps to original image size
+            nn.ConvTranspose2d(512, 256, kernel_size=4, stride=2, padding=1),
+            nn.BatchNorm2d(256),
+            nn.ReLU(inplace=True),
+            nn.ConvTranspose2d(256, 128, kernel_size=4, stride=2, padding=1),
+            nn.BatchNorm2d(128),
+            nn.ReLU(inplace=True),
+            nn.ConvTranspose2d(128, 64, kernel_size=4, stride=2, padding=1),
+            nn.BatchNorm2d(64),
+            nn.ReLU(inplace=True),
+            nn.ConvTranspose2d(64, img_shape[0], kernel_size=4, stride=2, padding=1),
+            nn.Tanh()  # Output layer with Tanh activation to match image pixel values
+        )
+
+    def forward(self, x):
+        # Pass through encoder
+        encoded = self.encoder(x)
+        # Pass through decoder to reconstruct the image
+        decoded = self.decoder(encoded)
+        return decoded
+
+# Define the Gaussian Diffusion class
+class GaussianDiffusion(nn.Module):
+    def __init__(self, model, timesteps=1000):
+        super(GaussianDiffusion, self).__init__()
+        self.model = model
+        self.timesteps = timesteps
+        # Initialize beta schedule and alpha parameters
+        self.betas = self._linear_beta_schedule(timesteps)
+        self.alphas = 1.0 - self.betas
+        self.alpha_cumprod = np.cumprod(self.alphas)
+
+    def _linear_beta_schedule(self, timesteps):
+        # Linear schedule for beta values
+        beta_start = 0.0001
+        beta_end = 0.02
+        return np.linspace(beta_start, beta_end, timesteps)
+
+    def forward_diffusion_sample(self, x0, t):
+        # Add noise to the input image based on the current timestep
+        noise = torch.randn_like(x0)
+        alpha_cumprod_t = self.alpha_cumprod[t]
+        return torch.sqrt(alpha_cumprod_t) * x0 + torch.sqrt(1 - alpha_cumprod_t) * noise
+
+    def reverse_diffusion_step(self, xt, t):
+        # Predict noise and denoise the image
+        pred_noise = self.model(xt)
+        alpha_cumprod_t = self.alpha_cumprod[t]
+        return (xt - torch.sqrt(1 - alpha_cumprod_t) * pred_noise) / torch.sqrt(alpha_cumprod_t)
+
+    def forward(self, x):
+        # Reverse diffusion process to reconstruct the image
+        for t in reversed(range(self.timesteps)):
+            x = self.reverse_diffusion_step(x, t)
+        return x
+
+# Sample Input
+img_shape = (3, 64, 64)  # Sample image shape: 3 channels (RGB), 64x64 pixels
+diffusion_model = DiffusionModel(img_shape)
+gaussian_diffusion = GaussianDiffusion(diffusion_model)
+
+# Dummy input: Random image tensor
+x0 = torch.randn((1, *img_shape))  # Batch size of 1
+xt = gaussian_diffusion.forward_diffusion_sample(x0, t=500)  # Add noise at timestep 500
+x_reconstructed = gaussian_diffusion(xt)  # Reconstruct the image from noisy input
+
+# Print the shape of the reconstructed image
+print(x_reconstructed.shape)  # Should print torch.Size([1, 3, 64, 64])
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;diffusion-models&#34;&gt;Diffusion Models&lt;/h2&gt;
 &lt;p align=&#34;justify&#34;&gt;
@@ -290,12 +431,9 @@ C(x) = -\frac{1}{\sigma \sqrt{2\pi}} \left(\frac{x - \mu}{\sigma}\right)^2 e^{-\
 $$
 &lt;code&gt;Where:&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;$\theta$ represents the model parameters.&lt;/li&gt;
-&lt;li&gt;$t$ is a time step uniformly sampled from the interval [0, 1].&lt;/li&gt;
-&lt;li&gt;$\lambda(t)$ is a time-dependent weighting function.&lt;/li&gt;
-&lt;li&gt;$x_0$ is the original data point (e.g., an image).&lt;/li&gt;
-&lt;li&gt;$\epsilon$ is Gaussian noise sampled from a normal distribution.&lt;/li&gt;
-&lt;li&gt;$\epsilon_\theta(x_t, t)$ is the predicted noise at time step $t$ by the model.&lt;/li&gt;
+&lt;li&gt;$x$ represents the data point.&lt;/li&gt;
+&lt;li&gt;$\mu$ represents the mean of the data distribution.&lt;/li&gt;
+&lt;li&gt;$\sigma$ represents the standard deviation of the data distribution.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;$$
 L(x) = \frac{1}{2} \left( \frac{x - \mu}{\sigma} \right)^2 + \frac{1}{2} \log(2 \pi \sigma^2)
@@ -312,8 +450,72 @@ $$&lt;/p&gt;
 &lt;p&gt;Here, $( \mathbb{E} )$ denotes the expectation over the diffusion process, capturing the average cost.&lt;/p&gt;
 &lt;p&gt;This objective function measures the discrepancy between the true noise added to the data and the noise predicted by the model, aiming to train the model to accurately reverse the diffusion process.&lt;/p&gt;
 &lt;p align=&#34;justify&#34;&gt;
-where \(x_t\) is the noised image at timestep \(t\), and \(\epsilon_\theta\) is the noise prediction network. Recent works like DALL-E 2 and Stable Diffusion have demonstrated the remarkable capabilities of diffusion models in text-to-image generation and image editing tasks. These models leverage large-scale training on diverse datasets and incorporate additional conditioning information to enable fine-grained control over generated images.
+&lt;code&gt;Where:&lt;/code&gt; \(x_t\) is the noised image at timestep \(t\), and \(\epsilon_\theta\) is the noise prediction network. Recent works like DALL-E 2 and Stable Diffusion have demonstrated the remarkable capabilities of diffusion models in text-to-image generation and image editing tasks. These models leverage large-scale training on diverse datasets and incorporate additional conditioning information to enable fine-grained control over generated images.
 &lt;/p&gt;
+&lt;h2 id=&#34;gans-generative-adversarial-networks&#34;&gt;GANs (Generative Adversarial Networks)&lt;/h2&gt;
+&lt;p align=&#34;justify&#34;&gt;
+Generative Adversarial Networks (GANs) are a class of machine learning frameworks designed by Goodfellow et al. in 2014. GANs consist of two neural networks, a generator and a discriminator, which compete against each other in a zero-sum game framework. The generator aims to generate realistic data samples, while the discriminator attempts to distinguish between real and generated samples. The objective functions for GANs can be expressed as follows: 
+&lt;/p&gt;
+&lt;p&gt;$$
+L_{\text{GAN}} = \mathbb{E}_{x \sim p_x{\text{data}(x)}} [\log D(x)] + \text{generated data samples}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Where:&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$G$ represents the generator network.&lt;/li&gt;
+&lt;li&gt;$D$ represents the discriminator network.&lt;/li&gt;
+&lt;li&gt;$x$ represents the real data sample.&lt;/li&gt;
+&lt;li&gt;$z$ represents the random noise vector sampled from a prior distribution $p_z(z)$.&lt;/li&gt;
+&lt;li&gt;$p_{\text{data}(x)}$ represents the data distribution.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this form:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\mathbb{E}_{x \sim p_x{\text{data}(x)}} [\log D(x)]$ represents the expected value of the discriminator&amp;rsquo;s output for real data samples.&lt;/li&gt;
+&lt;li&gt;$\mathbb{E}_{z \sim p_z(z)} [\log (1 - D(G(z)))]$ represents the expected value of the discriminator&amp;rsquo;s output for generated data samples.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The generator aims to minimize this objective while the discriminator aims to maximize it.&lt;/p&gt;
+&lt;h2 id=&#34;self-supervised-learning&#34;&gt;Self-Supervised Learning&lt;/h2&gt;
+&lt;p align=&#34;justify&#34;&gt;
+Self-Supervised Learning (SSL) is a paradigm in machine learning where the model learns to generate labels from the input data itself, without requiring manually labeled data. This approach uses pretext tasks to learn representations that can be transferred to downstream tasks. One common objective in self-supervised learning is the contrastive loss, which can be expressed as:
+&lt;/p&gt;
+&lt;p&gt;$$
+L_{\text{contrastive}} = -\log \frac{\exp(\text{sim}(h_i, h_j)/\tau)}{\sum_{k=1}^{2N} \mathbb{1}_{[k \neq i]} \exp(\text{sim}(h_i, h_k)/\tau)}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Where:&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$h_i$ and $h_j$ represent the encoded representations of positive pairs.&lt;/li&gt;
+&lt;li&gt;$\text{sim}(h_i, h_j)$ represents the similarity measure between $h_i$ and $h_j$.&lt;/li&gt;
+&lt;li&gt;$\tau$ represents the temperature parameter.&lt;/li&gt;
+&lt;li&gt;$N$ represents the number of samples.&lt;/li&gt;
+&lt;li&gt;$\mathbb{1}_{[k \neq i]}$ is an indicator function that is 1 if $k \neq i$ and 0 otherwise.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this form:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\exp(\text{sim}(h_i, h_j)/\tau)$ represents the exponential of the similarity between the positive pairs scaled by the temperature.&lt;/li&gt;
+&lt;li&gt;The denominator sums the exponential similarities of all pairs except the identical ones.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This objective encourages the model to bring similar samples closer in the representation space and push dissimilar ones apart.&lt;/p&gt;
+&lt;h2 id=&#34;adversarial-attacks&#34;&gt;Adversarial Attacks&lt;/h2&gt;
+&lt;p align=&#34;justify&#34;&gt;
+Adversarial attacks involve manipulating input data to deceive machine learning models into making incorrect predictions. One common method is the Fast Gradient Sign Method (FGSM), which perturbs the input data in the direction of the gradient of the loss with respect to the input. The formula for generating an adversarial example using FGSM can be expressed as:
+&lt;/p&gt;
+&lt;p&gt;$$
+x_{\text{adv}} = x + \epsilon \cdot \text{sign}(\nabla_x J(\theta, x, y))
+$$&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Where:&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$x_{\text{adv}}$ represents the adversarial example.&lt;/li&gt;
+&lt;li&gt;$x$ represents the original input data.&lt;/li&gt;
+&lt;li&gt;$\epsilon$ represents the perturbation magnitude.&lt;/li&gt;
+&lt;li&gt;$\nabla_x J(\theta, x, y)$ represents the gradient of the loss function $J$ with respect to the input $x$.&lt;/li&gt;
+&lt;li&gt;$J(\theta, x, y)$ represents the loss function of the model.&lt;/li&gt;
+&lt;li&gt;$\theta$ represents the model parameters.&lt;/li&gt;
+&lt;li&gt;$y$ represents the true label of the input data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this form:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\text{sign}(\nabla_x J(\theta, x, y))$ represents the sign of the gradient of the loss with respect to the input, indicating the direction to perturb the input to maximize the loss.&lt;/li&gt;
+&lt;li&gt;The adversarial example $x_{\text{adv}}$ is created by adding this perturbation to the original input.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p align=&#34;justify&#34;&gt;
 Generative AI continues to advance rapidly, with ongoing developments in model architectures, training techniques, and applications across various domains. The ability of generative models to create high-quality content, from text and images to music and videos, underscores their transformative potential. While there are challenges and ethical considerations to address, the future of generative AI is promising, with numerous opportunities for innovation and interdisciplinary collaboration. As we explore these frontiers, it is crucial to remain mindful of the societal impacts and strive for responsible use of these powerful technologies.
