@@ -837,11 +837,35 @@ In this blog, we explored the methodologies and techniques for leveraging LLMs i
       <link>https://kaopanboonyuen.github.io/talk/ph.d.-thesis-defense/</link>
       <pubDate>Fri, 31 Jul 2020 13:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/talk/ph.d.-thesis-defense/</guid>
-      <description>&lt;!-- 
+      <description>&lt;h3 id=&#34;phd-journey-a-milestone-achieved&#34;&gt;PhD Journey: A Milestone Achieved&lt;/h3&gt;
+&lt;p&gt;On May 19, 2022, I proudly completed my PhD at Chulalongkorn University, closing a remarkable chapter in my academic journey. This milestone was not just a moment of personal triumph, but also a time of reflection and deep gratitude. Graduating with a doctoral degree was a dream realized, filled with emotions that I will carry with me forever.&lt;/p&gt;
+&lt;p&gt;Throughout this journey, I was fortunate to have the unwavering support of incredible mentors, advisors, colleagues, and friends. Their guidance and encouragement were instrumental in my success, and having them by my side on this special day was a poignant reminder of the profound impact they&amp;rsquo;ve had on both my academic and personal development.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;kaophd_002.png&#34; alt=&#34;Kao_Panboonyuen_PhD&#34;&gt;
+&lt;img src=&#34;kaophd_001.png&#34; alt=&#34;Kao_Panboonyuen_PhD&#34;&gt;
+&lt;img src=&#34;kaophd_003.png&#34; alt=&#34;Kao_Panboonyuen_PhD&#34;&gt;
+&lt;img src=&#34;kaophd_004.png&#34; alt=&#34;Kao_Panboonyuen_PhD&#34;&gt;
+&lt;img src=&#34;kaophd_005.png&#34; alt=&#34;Kao_Panboonyuen_PhD&#34;&gt;&lt;/p&gt;
+&lt;!-- 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/a-oWa2CS8jg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
  --&gt;
+&lt;p&gt;Completing a PhD is more than just an academic achievement; it&amp;rsquo;s a journey of personal growth. It demands perseverance, resilience, and the ability to navigate and overcome numerous challenges. My passion for machine learning and my commitment to research were the driving forces that kept me moving forward, enabling me to make meaningful contributions to the field.&lt;/p&gt;
+&lt;h3 id=&#34;phd-thesis-highlights&#34;&gt;PhD Thesis Highlights&lt;/h3&gt;
+&lt;p&gt;One of the core challenges in remote sensing is the semantic segmentation of aerial and satellite images, which is crucial for agriculture planning, map updates, route optimization, and navigation. The prevailing model at the time was the Deep Convolutional Encoder-Decoder (DCED), which faced limitations in accuracy due to its inability to recover low-level features, such as rivers and low vegetation, and the scarcity of training data.&lt;/p&gt;
+&lt;p&gt;My thesis tackled these issues by introducing a novel semantic segmentation architecture tailored for remote sensing. Key innovations included:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Global Convolutional Network (GCN)&lt;/strong&gt;: A modern CNN architecture designed to enhance feature extraction.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Channel Attention&lt;/strong&gt;: An approach to select the most discriminative filters for improved feature representation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Domain-Specific Transfer Learning&lt;/strong&gt;: A technique to address the issue of limited training data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Feature Fusion (FF)&lt;/strong&gt;: An addition to capture and integrate low-level features effectively.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Depthwise Atrous Convolution (DA)&lt;/strong&gt;: A method to refine extracted features for greater accuracy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These advancements were validated through experiments on three datasets: two private corpora from Landsat-8 satellite and one public benchmark from the ISPRS Vaihingen challenge. The results demonstrated that our proposed architecture significantly outperformed the baseline model across all remote sensing imagery.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Explore more about my PhD story &lt;a href=&#34;https://kaopanboonyuen.wordpress.com/2022/05/23/the-phd-journey/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Kao Panboonyuen&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
     
