@@ -127,7 +127,7 @@ The variance of the distribution is $\sigma^{2}$.
       <guid>https://kaopanboonyuen.github.io/blog/2024-09-01-career-paths-for-ai-research-scientist/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    You can view the presentation slides for the talk 😃 &lt;a href=&#34;https://kaopanboonyuen.github.io/files/slides/20240902_Career_Paths_for_Research_Scientists.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.
+    You can view the presentation slides for the talk 🌿 &lt;a href=&#34;https://kaopanboonyuen.github.io/files/slides/20240902_Career_Paths_for_Research_Scientists.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
@@ -152,13 +152,19 @@ The variance of the distribution is $\sigma^{2}$.
 &lt;/details&gt;
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Welcome to my blog! I&amp;rsquo;m thrilled to share insights from my journey in the world of Artificial Intelligence (AI) research. My name is Teerapong Panboonyuen, but you can call me Kao. I&amp;rsquo;m a Senior AI Research Scientist at MARS (Motor AI Recognition Solution) and a Postdoctoral Fellow at Chulalongkorn University. In this post, I&amp;rsquo;ll discuss my career path, the balance between academic and industrial research, and some exciting trends in AI.&lt;/p&gt;
+&lt;p&gt;Welcome to my blog! I&amp;rsquo;m thrilled to share insights from my journey in the world of Artificial Intelligence (AI) research. My name is Teerapong Panboonyuen (in Thai: ธีรพงศ์ ปานบุญยืน), but you can call me Kao (เก้า). I&amp;rsquo;m a Senior AI Research Scientist at MARS (Motor AI Recognition Solution) and a Postdoctoral Fellow at Chulalongkorn University. In this post, I&amp;rsquo;ll discuss my career path, the balance between academic and industrial research, and some exciting trends in AI.&lt;/p&gt;
 &lt;h2 id=&#34;my-journey-into-ai-research&#34;&gt;My Journey into AI Research&lt;/h2&gt;
 &lt;p&gt;My passion for AI began during my Master&amp;rsquo;s degree in Computer Engineering at Chulalongkorn University. It was there that I first encountered the intriguing challenges and opportunities that AI research offered. However, my commitment to AI deepened during my Ph.D. studies at the same university. I graduated with a Master&amp;rsquo;s degree at the age of 24 and earned my Ph.D. by 27. Since then, I have been immersed in AI research, focusing on fields like Remote Sensing and Computer Vision.&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Currently, I am a Postdoctoral Fellow in AI research, a role I have held from age 27 to the present, 31. My research spans the development of advanced algorithms in Pattern Recognition, Optimization Theory, and Statistical Learning. At MARS, I am involved in applying AI to real-world problems, particularly in the auto insurance industry.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;balancing-academia-and-industry&#34;&gt;Balancing Academia and Industry&lt;/h2&gt;
 &lt;p&gt;Why do I juggle both academic and industrial roles? The answer lies in the different kinds of excitement each provides. In academia, I&amp;rsquo;m drawn to the elegance and complexity of theoretical work—understanding AI at its core and pushing its boundaries. On the other hand, the industrial side offers the thrill of seeing AI solutions deployed in real-world applications, making a tangible impact.&lt;/p&gt;
-&lt;p&gt;I firmly believe that combining both worlds enriches my research. It&amp;rsquo;s incredibly fulfilling to publish groundbreaking work and even more exhilarating when that research translates into practical solutions that benefit society. This dual approach keeps me grounded in the realities of implementation while allowing me to explore theoretical possibilities.&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    I firmly believe that combining both worlds enriches my research. It&amp;rsquo;s incredibly fulfilling to publish groundbreaking work and even more exhilarating when that research translates into practical solutions that benefit society. This dual approach keeps me grounded in the realities of implementation while allowing me to explore theoretical possibilities.
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;key-qualities-for-ideal-ai-agents&#34;&gt;Key Qualities for Ideal AI Agents&lt;/h2&gt;
 &lt;p&gt;The ideal characteristics (Fig. 1) envisioned for AI agents are numerous, each presenting its own significant research challenge before even considering the automatic acquisition of these traits:&lt;/p&gt;
 &lt;ul&gt;
@@ -176,7 +182,11 @@ The variance of the distribution is $\sigma^{2}$.
 &lt;p&gt;There are various strategies to develop agents with these properties. At GoodAI, they have converged on foundational principles such as the modularity of agents, a shared policy across modules with varying internal states, and a blend of meta-learning in the outer loop followed by open-ended learning in the inner loop. These principles are central to their Badger architectures and will be discussed further in the section &amp;ldquo;Towards Implementation.&amp;rdquo; It is essential to highlight that these desired properties should manifest during the agent&amp;rsquo;s operational phase, specifically in the inner loop (the agent’s lifetime). They often utilize a meta-learning approach, which involves a bi-level optimization process where optimization occurs at two levels [4], [27], [28]. This meta-learning framework is considered the default setting throughout this discussion unless otherwise noted.&lt;/p&gt;
 &lt;h2 id=&#34;the-cool-factor-in-research&#34;&gt;The Cool Factor in Research&lt;/h2&gt;
 &lt;p&gt;One of the key motivators for any researcher is the &amp;ldquo;cool factor&amp;rdquo;—that sense of excitement when working on something groundbreaking. For me, that thrill comes from applying AI to satellite imagery for Land Use and Land Cover (LULC) analysis in agriculture. The very idea of using AI to derive insights from images captured from space is inherently fascinating.&lt;/p&gt;
-&lt;p&gt;Imagine using AI to assist in medical diagnostics. For instance, developing an AI model that can detect polyps or tumors during a colonoscopy more accurately than current state-of-the-art methods. Not only is this research cool, but it also has a profound impact—it can save lives. AI might not yet match human experts in every scenario, but as an early detection tool, its potential is undeniable.&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Imagine using AI to assist in medical diagnostics. For instance, developing an AI model that can detect polyps or tumors during a colonoscopy more accurately than current state-of-the-art methods. Not only is this research cool, but it also has a profound impact—it can save lives. AI might not yet match human experts in every scenario, but as an early detection tool, its potential is undeniable.
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;understanding-the-three-types-of-artificial-intelligence&#34;&gt;Understanding the Three Types of Artificial Intelligence&lt;/h2&gt;
 &lt;p&gt;For those pursuing a career as AI research scientists, it&amp;rsquo;s essential to understand the different categories of AI based on their capabilities:&lt;/p&gt;
 &lt;ol&gt;
@@ -297,16 +307,20 @@ This publication introduces a feature fusion approach for semantic labeling task
 &lt;/ul&gt;
 &lt;h2 id=&#34;inspiration-for-aspiring-researchers&#34;&gt;Inspiration for Aspiring Researchers&lt;/h2&gt;
 &lt;p&gt;For those considering a career in AI research, my advice is simple: find a topic that excites you. Choose projects that you find inherently cool. This passion will sustain you through the challenges of research. Start by exploring current literature to understand what has already been done and identify gaps. Decide whether to build on existing models or innovate from scratch. Focus on how you can improve accuracy, speed, or applicability of AI solutions.&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Remember, research is a journey, not a destination. Be curious, be patient, and never stop learning. The most rewarding part of research is not just the recognition that comes from publishing a paper but seeing your work make a real-world impact. Whether it&amp;rsquo;s through advancing technology or improving lives, your contribution as a researcher can make a difference.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Being part of the AI revolution is a unique privilege. It&amp;rsquo;s a field where theoretical elegance meets real-world impact, offering endless opportunities for those willing to explore. Whether you are inclined toward academia or industry, or like me, both, there is a place for you in AI research. Let&amp;rsquo;s continue to push the boundaries and contribute to a future where AI plays a positive and transformative role in our lives.&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;Thank you for reading! I look forward to hearing your thoughts and engaging in discussions about AI research and career paths. Feel free to leave comments or reach out to me directly.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Panboonyuen, Teerapong. (Sep 2024). &lt;em&gt;Career Paths for AI Research Scientists: My Journey and Insights&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2024-09-01-career-paths-for-ai-research-scientist/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2024-09-01-career-paths-for-ai-research-scientist/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Or&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;@article{panboonyuen2024careerppaths,
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;@article{panboonyuen2024careerpaths,
   title   = &amp;quot;Career Paths for AI Research Scientists: My Journey and Insights.&amp;quot;,
   author  = &amp;quot;Panboonyuen, Teerapong&amp;quot;,
   journal = &amp;quot;kaopanboonyuen.github.io/&amp;quot;,
@@ -338,7 +352,7 @@ This publication introduces a feature fusion approach for semantic labeling task
       <guid>https://kaopanboonyuen.github.io/blog/2024-08-02-generative-ai-current-trends-and-practical-applications/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    You can view the presentation slides for the talk 😃 &lt;a href=&#34;https://kaopanboonyuen.github.io/files/slides/20240802_Panboonyuen_GenerativeAI.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.
+    You can view the presentation slides for the talk 🪴 &lt;a href=&#34;https://kaopanboonyuen.github.io/files/slides/20240802_Panboonyuen_GenerativeAI.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
