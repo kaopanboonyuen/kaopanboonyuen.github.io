@@ -5,7 +5,7 @@
     <link>https://kaopanboonyuen.github.io/</link>
       <atom:link href="https://kaopanboonyuen.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Teerapong Panboonyuen</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2024 Kao Panboonyuen</copyright><lastBuildDate>Sun, 01 Dec 2024 13:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2024 Kao Panboonyuen</copyright><lastBuildDate>Mon, 02 Sep 2024 09:05:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>Teerapong Panboonyuen</title>
@@ -108,15 +108,62 @@ The variance of the distribution is $\sigma^{2}$.
     </item>
     
     <item>
-      <title>Inspiring the Future of AI Innovations and Mastering LLM</title>
-      <link>https://kaopanboonyuen.github.io/talk/inspiring-the-future-of-ai-innovations-and-mastering-llm/</link>
-      <pubDate>Sun, 01 Dec 2024 13:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/talk/inspiring-the-future-of-ai-innovations-and-mastering-llm/</guid>
-      <description>&lt;!-- 
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/traKBhJm4lQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
- --&gt;
+      <title>Exploring Careers as an AI Research Scientist</title>
+      <link>https://kaopanboonyuen.github.io/talk/exploring-careers-as-an-ai-research-scientist/</link>
+      <pubDate>Mon, 02 Sep 2024 09:05:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/talk/exploring-careers-as-an-ai-research-scientist/</guid>
+      <description>&lt;h3 id=&#34;exploring-career-paths-in-ai-research&#34;&gt;Exploring Career Paths in AI Research&lt;/h3&gt;
+&lt;p&gt;I recently had the privilege of engaging with high school students on the topic of “Career Paths for AI Research Scientists.” As Teerapong Panboonyuen, also known as Kao Panboonyuen, I’m a Senior AI Research Scientist at MARS and a Postdoctoral Fellow at Chulalongkorn University. This talk was an excellent opportunity to share my journey and insights into the world of artificial intelligence (AI), and to guide aspiring young minds through the myriad opportunities within this transformative field.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;NSTDA_asGuestSpeaker_AI.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-world-of-ai-a-technical-overview&#34;&gt;The World of AI: A Technical Overview&lt;/h3&gt;
+&lt;p&gt;During the talk, I introduced the students to the complex and exciting realm of AI. My background includes a Ph.D. in Computer Engineering with a focus on Artificial Intelligence, Machine Learning, and Deep Learning from Chulalongkorn University. In my current role, I’m deeply involved in advanced research and development across various AI domains.&lt;/p&gt;
+&lt;h4 id=&#34;understanding-ai-models&#34;&gt;&lt;strong&gt;Understanding AI Models&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;One of the core topics discussed was the creation and application of AI models. My research includes tasks such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Image Classification:&lt;/strong&gt; Developing algorithms that can accurately categorize images into predefined classes. For example, my work on the “MeViT: A Medium-Resolution Vision Transformer for Semantic Segmentation” highlights the use of Vision Transformers (ViTs) for high-accuracy semantic segmentation in satellite imagery.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Object Detection:&lt;/strong&gt; Designing models to identify and locate objects within an image. The “Object Detection of Road Assets Using Transformer-Based YOLOX with Feature Pyramid Decoder” is a key example where we leverage advanced object detection techniques for analyzing road assets in Thai highway panoramas.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Instance Segmentation:&lt;/strong&gt; Extending object detection to not just identify but also segment individual instances of objects. My research, such as “MARS Mask Attention Refinement with Sequential Quadtree Nodes for Car Damage Instance Segmentation,” showcases the use of sophisticated attention mechanisms for precise damage detection.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Domain Adaptation:&lt;/strong&gt; Improving model performance across different but related domains. Techniques I use involve adapting models trained on one dataset to perform well on another, a crucial aspect of making AI systems more versatile and robust.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Explainable AI (XAI) and Interpretable AI:&lt;/strong&gt; Developing methods to make AI decisions more transparent and understandable. My work involves creating models that not only perform well but also provide insights into their decision-making processes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;career-paths-in-ai-research&#34;&gt;Career Paths in AI Research&lt;/h3&gt;
+&lt;p&gt;Exploring the diverse career opportunities in AI, I shared insights into several key roles:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Academic Researcher:&lt;/strong&gt; This role involves advancing theoretical understanding and pushing the boundaries of AI knowledge. My academic contributions, such as those found in “Semantic Labeling in Remote Sensing Corpora Using Feature Fusion-Based Enhanced Global Convolutional Network,” reflect the innovative approaches necessary for academic research.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Industry Research Scientist:&lt;/strong&gt; Applying research to solve real-world problems is the focus here. At MARS, I’m involved in developing practical AI solutions for the auto insurance industry, translating cutting-edge research into deployable technologies.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Data Scientist:&lt;/strong&gt; This role revolves around analyzing complex datasets and applying AI techniques to extract valuable insights. My expertise in platforms like GCP and AWS, coupled with proficiency in tools such as Python, PyTorch, and Hugging Face, is crucial for executing data-driven strategies.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Machine Learning Engineer:&lt;/strong&gt; Implementing and optimizing AI models for production use is key in this role. My skills in managing cloud resources with Docker-Compose and Kubernetes, and using Gradio for model deployment, exemplify the technical proficiency required for this position.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;my-journey-as-a-postdoctoral-researcher&#34;&gt;My Journey as a Postdoctoral Researcher&lt;/h3&gt;
+&lt;p&gt;Reflecting on my experiences as a postdoctoral researcher, I emphasized the continuous learning and adaptation necessary for success in AI. My journey includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Conducting research that spans a wide range of AI applications, from road segmentation using deep convolutional neural networks to semantic segmentation with enhanced global convolutional networks.&lt;/li&gt;
+&lt;li&gt;Publishing key papers such as “Semantic Segmentation on Remotely Sensed Images Using an Enhanced Global Convolutional Network” and “An Enhanced Deep Convolutional Encoder-Decoder Network for Road Segmentation on Aerial Imagery,” which highlight advancements in AI techniques and methodologies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;inspiring-the-next-generation&#34;&gt;Inspiring the Next Generation&lt;/h3&gt;
+&lt;p&gt;Engaging with students and discussing their potential career paths in AI was incredibly rewarding. My aim was to inspire and provide practical guidance on how to enter and excel in the field of AI. As AI continues to evolve, the opportunities for new research and innovations are vast. I hope my insights into the various career paths and my own journey will motivate young minds to explore and pursue their passions in this exciting field.&lt;/p&gt;
+&lt;p&gt;Super excited to share that I’ve snagged a scholarship from Her Royal Highness Princess Maha Chakri Sirindhorn to hit up the Global Young Scientists Summit (GYSS) in Singapore from January 6-10, 2025. It’s a huge boost for my commitment to pushing the boundaries of innovation!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;panboonyuen_GYSS2025.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;Speaking about AI research careers offered a reflective look at my professional journey while providing valuable insights into the field. AI is a rapidly advancing domain with limitless potential. For those passionate about technology and eager to make a difference, diving into AI research presents an exciting and impactful career path. Stay curious, embrace continuous learning, and explore the many possibilities that AI has to offer.&lt;/p&gt;
 </description>
     </item>
     
@@ -144,6 +191,7 @@ The variance of the distribution is $\sigma^{2}$.
     &lt;li&gt;&lt;a href=&#34;#highlighted-publications&#34;&gt;Highlighted Publications&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#key-trends-in-ai-research&#34;&gt;Key Trends in AI Research&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#inspiration-for-aspiring-researchers&#34;&gt;Inspiration for Aspiring Researchers&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#before-i-go-heres-some-exciting-news&#34;&gt;Before I Go: Here’s Some Exciting News!&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#conclusion&#34;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
@@ -158,6 +206,7 @@ The variance of the distribution is $\sigma^{2}$.
 &lt;blockquote&gt;
 &lt;p&gt;Currently, I am a Postdoctoral Fellow in AI research, a role I have held from age 27 to the present, 31. My research spans the development of advanced algorithms in Pattern Recognition, Optimization Theory, and Statistical Learning. At MARS, I am involved in applying AI to real-world problems, particularly in the auto insurance industry.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;featured_vertical.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;balancing-academia-and-industry&#34;&gt;Balancing Academia and Industry&lt;/h2&gt;
 &lt;p&gt;Why do I juggle both academic and industrial roles? The answer lies in the different kinds of excitement each provides. In academia, I&amp;rsquo;m drawn to the elegance and complexity of theoretical work—understanding AI at its core and pushing its boundaries. On the other hand, the industrial side offers the thrill of seeing AI solutions deployed in real-world applications, making a tangible impact.&lt;/p&gt;
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -310,10 +359,19 @@ This publication introduces a feature fusion approach for semantic labeling task
 &lt;blockquote&gt;
 &lt;p&gt;Remember, research is a journey, not a destination. Be curious, be patient, and never stop learning. The most rewarding part of research is not just the recognition that comes from publishing a paper but seeing your work make a real-world impact. Whether it&amp;rsquo;s through advancing technology or improving lives, your contribution as a researcher can make a difference.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h2 id=&#34;before-i-go-heres-some-exciting-news&#34;&gt;Before I Go: Here’s Some Exciting News!&lt;/h2&gt;
+&lt;p&gt;I’m thrilled to announce that I’ve been awarded a prestigious scholarship by Her Royal Highness Princess Maha Chakri Sirindhorn to attend the Global Young Scientists Summit (GYSS) in Singapore from January 6-10, 2025. This recognition is a major boost for my passion and drive to push the envelope in innovation!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;panboonyuen_GYSS2025.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Global Young Scientists Summit (GYSS)&lt;/strong&gt; is a dynamic annual event that brings together exceptional young researchers and leading scientific minds from around the world. Held in Singapore, this summit is a unique platform for discussing groundbreaking research and exploring how it can address major global challenges.&lt;/p&gt;
+&lt;p&gt;With a strong emphasis on innovation and collaboration, GYSS is where future scientific leaders converge to share ideas and shape the future of research. To dive deeper into this inspiring event, visit &lt;a href=&#34;https://www.gyss-one-north.sg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GYSS&lt;/a&gt; and join the conversation using #GYSS!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;GYSS-logo.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Just a heads up—once I wrap up at GYSS, I&amp;rsquo;ll be crafting a new blog to share all the awesome experiences with you. Stay tuned!&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Being part of the AI revolution is a unique privilege. It&amp;rsquo;s a field where theoretical elegance meets real-world impact, offering endless opportunities for those willing to explore. Whether you are inclined toward academia or industry, or like me, both, there is a place for you in AI research. Let&amp;rsquo;s continue to push the boundaries and contribute to a future where AI plays a positive and transformative role in our lives.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Thank you for reading! I look forward to hearing your thoughts and engaging in discussions about AI research and career paths. Feel free to leave comments or reach out to me directly.&lt;/p&gt;
+&lt;p&gt;Thank you for reading! I look forward to hearing your thoughts and engaging in discussions about AI research and career paths.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -949,6 +1007,19 @@ The integration of LLMs in remote sensing, particularly for LULC and image class
 &lt;p align=&#34;justify&#34;&gt;
 In this blog, we explored the methodologies and techniques for leveraging LLMs in remote sensing applications. The case study on Sentinel-2 imagery demonstrated the practical benefits of this approach. As we move forward, further research and development in this field will undoubtedly lead to more innovative and effective solutions for remote sensing challenges.
 &lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Inspiring the Future of AI Innovations and Mastering LLM</title>
+      <link>https://kaopanboonyuen.github.io/talk/inspiring-the-future-of-ai-innovations-and-mastering-llm/</link>
+      <pubDate>Thu, 01 Feb 2024 13:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/talk/inspiring-the-future-of-ai-innovations-and-mastering-llm/</guid>
+      <description>&lt;!-- 
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/traKBhJm4lQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+ --&gt;
+</description>
     </item>
     
     <item>
