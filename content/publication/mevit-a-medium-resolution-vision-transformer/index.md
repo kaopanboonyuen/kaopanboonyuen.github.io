@@ -65,7 +65,7 @@ url_pdf: https://www.mdpi.com/2072-4292/15/21/5124
 url_code: https://github.com/kaopanboonyuen/MeVit
 url_dataset: ''
 url_poster: ''
-url_project: ''
+url_project: 'https://kaopanboonyuen.github.io/MeViT/'
 url_slides: ''
 url_source: ''
 url_video: ''

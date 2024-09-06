@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conditional Random Fields | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/conditional-random-fields/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/conditional-random-fields/index.xml" rel="self" type="application/rss+xml" />
+    <description>Conditional Random Fields</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2024 Kao Panboonyuen</copyright><lastBuildDate>Fri, 01 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>Conditional Random Fields</title>
+      <link>https://kaopanboonyuen.github.io/tag/conditional-random-fields/</link>
+    </image>
+    
+    <item>
+      <title>Road segmentation of remotely-sensed images using deep convolutional neural networks with landscape metrics and conditional random fields</title>
+      <link>https://kaopanboonyuen.github.io/publication/road-segmentation-on-remote-sensing/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/road-segmentation-on-remote-sensing/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

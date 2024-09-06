@@ -67,7 +67,7 @@ main_menu:
 # Localization
 
 date_format: '2006'
-time_format: ''#'3:04 PM'
+time_format: '3:04 PM'
 address_format: en-us
 
 # Site features
@@ -77,8 +77,8 @@ highlight_languages:
   - golang
   - python
   - latex
-math: false
-diagram: false
+math: true
+diagram: true
 privacy_pack: false
 edit_page:
   repo_url: ''

@@ -11,36 +11,39 @@ superuser: true
 # Organizations/Affiliations to show in About widget
 organizations: 
 - name: Senior AI Research Scientist, PostDoc Fellow
-  url: https://research.google/people/NatashaJaques/
+  url: https://kaopanboonyuen.github.io/
 - name: MARS, Chula
 
 # Short bio (displayed in user profile at end of posts)
-bio: My work centers on advanced AI techniques, particularly leveraging deep learning and computer vision to enhance semantic understanding, visual recognition, and data analytics. I develop innovative methods for image recognition, remote sensing, and geospatial data analysis to address real-world challenges.
+bio: My research is focused on leveraging sophisticated AI techniques, specifically deep learning and computer vision, to enhance semantic understanding, pattern recognition, visual recognition, and geospatial data analysis.
 
 # Interests to show in About widget
 interests:
-- Machine Vision
+- Applied Earth Observations
+- Geoscience and Remote Sensing
 - Computer Vision
-- Deep Learning
-- Machine Learning
-- Reinforcement Learning
+- Pattern Recognition
 - Human-AI Interaction
-- Remote Sensing
+- Learning Representations
+
 
 # Education to show in About widget
 education:
   courses:
+  - course: PostDoc Fellow in AI
+    institution: Chulalongkorn University
+    year: 2025
   - course: PhD in Computer Engineering
-    institution: Chulalongkorn University (GPAX 4.00/4.00)
+    institution: Chulalongkorn University
     year: 2020
   - course: MEng in Computer Engineering
-    institution: Chulalongkorn University (GPAX 4.00/4.00)
+    institution: Chulalongkorn University
     year: 2017
   - course: BEng in Computer Engineering
-    institution: KMUTNB (GPAX 3.11/4.00)
+    institution: KMUTNB (Merit-based Admission Quota)
     year: 2015
   - course: Pre-Engineering School (PET21)
-    institution: KMUTNB (Merit-based Admission Quota)
+    institution: KMUTNB (Senior High School, 10th - 12th Grade)
     year: 2012
 
 
@@ -61,12 +64,15 @@ social:
 - icon: graduation-cap  # Alternatively, use `google-scholar` icon from `ai` icon pack
   icon_pack: fas
   link: https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en
+- icon: orcid
+  icon_pack: ai
+  link: https://orcid.org/0000-0001-8464-4476
 - icon: github
   icon_pack: fab
   link: https://github.com/kaopanboonyuen
 - icon: download
   icon_pack: fas
-  link: uploads/panboonyuen_cv.pdf
+  link: https://kaopanboonyuen.github.io/files/panboonyuen_cv.pdf
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/teerapong-panboonyuen
@@ -83,17 +89,17 @@ email: ""
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-My research focuses on **Machine Vision with Deep Learning**—developing algorithms that leverage **Optimization Theory** and **Statistical Learning** to enhance AI capabilities. I work extensively with **Stochastic Gradient Descent (SGD)** and **Attention Mechanisms** in **Transformer architectures**, and have a deep understanding of **Backpropagation** and **Generative Pre-Trained Transformers (GPT)**, including concepts like **Autoregressive Modeling** and **Self-Attention**.
+My research focuses on **Pattern Recognition**—developing cutting-edge algorithms with **Optimization Theory** and **Statistical Learning** to push AI's limits. I work with advanced models like **GANs** and **Diffusion Models**, use **Self-Supervised Learning**, and explore **Adversarial Attacks** and **Large Language Models (LLMs)** to revolutionize AI capabilities.
 
-I am currently a **Senior AI Research Scientist** at [**MARS (Motor AI Recognition Solution)**](https://www.marssolution.io/) and a **Postdoctoral Fellow** at [**Chulalongkorn University**](https://www.chula.ac.th/en/). I earned my [**Ph.D. in Computer Engineering**](https://www.cp.eng.chula.ac.th/en/prospective/graduate/phd-computerengineering/) from [**Chulalongkorn University**](https://www.chula.ac.th/en/), where I specialized in AI.
+I am currently a **Senior AI Research Scientist** at [**MARS (Motor AI Recognition Solution)**](https://www.marssolution.io/) and a **Postdoctoral Fellow** at [**Chulalongkorn University**](https://www.chula.ac.th/en/). I earned my [**Ph.D. in Computer Engineering**](https://www.cp.eng.chula.ac.th/en/prospective/graduate/phd-computerengineering/) from  <a href="https://www.chula.ac.th/en/" style="color:#FF84FB;" target="_blank">**Chulalongkorn University**</a>, where I specialized in AI.
 
-My passion lies in advancing **AI technologies** to amplify human potential, with a focus on **deep learning** and **computer vision**. I am particularly interested in applications in **remote sensing**, where AI can offer new insights into our world.
+My passion is concentrated on advancing **AI Technologies** to unlock human potential. I am particularly interested in **Remote Sensing**, where AI unveils transformative insights and redefines how we perceive and interact with our environment.
 
 You can find summaries of my academic, industry, and teaching experience in my [**CV**](https://kaopanboonyuen.github.io/files/panboonyuen_cv.pdf), and explore more about my personal life on my [**blog**](https://kaopanboonyuen.wordpress.com/). Additionally, check out some of my [**music on SoundCloud**](https://soundcloud.com/kaopanboonyuen).
 
-**English name:** [**Teerapong Panboonyuen (Kao)**](https://kaopanboonyuen.wordpress.com/)  
-**Thai name:** [**ธีรพงศ์ ปานบุญยืน (เก้า)**](https://kaopanboonyuen.wordpress.com/)
+Call me [**Teerapong Panboonyuen**](https://kaopanboonyuen.wordpress.com/), or just Kao (เก้า) in Thai: [**ธีรพงศ์ ปานบุญยืน**](https://kaopanboonyuen.wordpress.com/).
 
-{{< icon name="download" pack="fas" >}}{{< staticref "uploads/panboonyuen_cv.pdf" "newtab" >}}Download my CV{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}}{{< staticref "https://kaopanboonyuen.github.io/files/panboonyuen_cv.pdf" "newtab" >}}Download my CV{{< /staticref >}}.
 
-{{< icon name="download" pack="fas" >}}{{< staticref "uploads/panboonyuen_cv_Thai.pdf" "newtab" >}}Download my Thai CV{{< /staticref >}}.
+<!-- 
+{{< icon name="download" pack="fas" >}}{{< staticref "uploads/panboonyuen_cv_Thai.pdf" "newtab" >}}Download my Thai CV{{< /staticref >}}. -->

@@ -44,6 +44,12 @@ tags:
 - Global Convolutional Network
 - Encoder-Decoder Networks
 - ISPRS Vaihingen
+- Transfer Learning
+- Domain Adaptation
+- Channel Attention
+- Depthwise Atrous Convolution
+- Feature Fusion
+- Remote Sensing
 
 featured: true
 
@@ -57,10 +63,10 @@ links:
 # - name: ICIAP 2017 Best Papers
 #   url: https://link.springer.com/chapter/10.1007/978-3-319-60663-7_18
 url_pdf: https://digital.car.chula.ac.th/chulaetd/8534/
-url_code: https://github.com/kaopanboonyuen/
+url_code: https://github.com/kaopanboonyuen/FusionNetGeoLabel
 url_dataset: https://www.isprs.org/education/benchmarks/UrbanSemLab/2d-sem-label-vaihingen.aspx
 url_poster: ''
-url_project: ''
+url_project: https://kaopanboonyuen.github.io/FusionNetGeoLabel/
 url_slides: https://kaopanboonyuen.github.io/files/panboonyuen_phd_defense_2020.pdf
 url_source: https://kaopanboonyuen.github.io/files/picture/phd_defense_day.jpg
 url_video: ''

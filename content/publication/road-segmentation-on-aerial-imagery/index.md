@@ -3,7 +3,7 @@ title: "An enhanced deep convolutional encoder-decoder network for road segmenta
 authors:
 - admin
 - P. Vateekul
-- P. Srestasathiern
+
 - S. Lawawirojwong
 
 date: "2017-01-01T00:00:00Z"
@@ -57,7 +57,7 @@ links:
 #   url: https://www.facebook.com/watch/live/?v=355035025132741&ref=watch_permalink
 # - name: IEEE Spectrum article
 #   url: https://spectrum.ieee.org/tech-talk/computing/software/deepmind-teaches-ai-teamwork
-- name: ICIAP 2017 Best Papers
+- name: ICIAP 2017 Best Paper Award
   url: https://link.springer.com/chapter/10.1007/978-3-319-60663-7_18
 url_pdf: https://link.springer.com/chapter/10.1007/978-3-319-60663-7_18
 url_code: https://github.com/kaopanboonyuen/

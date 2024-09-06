@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>K-Means Clustering | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/k-means-clustering/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/k-means-clustering/index.xml" rel="self" type="application/rss+xml" />
+    <description>K-Means Clustering</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2024 Kao Panboonyuen</copyright><lastBuildDate>Thu, 01 Sep 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>K-Means Clustering</title>
+      <link>https://kaopanboonyuen.github.io/tag/k-means-clustering/</link>
+    </image>
+    
+    <item>
+      <title>Image Vectorization of Road Satellite Data Sets</title>
+      <link>https://kaopanboonyuen.github.io/publication/image-vectorization-of-road-satellite-data-sets/</link>
+      <pubDate>Thu, 01 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/image-vectorization-of-road-satellite-data-sets/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

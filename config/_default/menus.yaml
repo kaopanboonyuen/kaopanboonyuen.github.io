@@ -25,3 +25,9 @@ main:
   - name: Communities
     url: '#communities'
     weight: 75
+  - name: Blog
+    url: '/blog/'
+    weight: 100
+  - name: Courses
+    url: '/courses/'
+    weight: 120

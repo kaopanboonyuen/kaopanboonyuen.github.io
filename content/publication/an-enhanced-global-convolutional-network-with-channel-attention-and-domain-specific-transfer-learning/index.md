@@ -1,9 +1,9 @@
 ---
-title: "Transformer-Based Decoder Designs for Semantic Segmentation on Remotely Sensed Images"
+title: "Semantic Segmentation on Remotely Sensed Images Using an Enhanced Global Convolutional Network with Channel Attention and Domain Specific Transfer Learning"
 authors:
 - admin
 - P. Vateekul
-- P. Srestasathiern
+
 - S. Lawawirojwong
 
 date: "2019-02-01T00:00:00Z"

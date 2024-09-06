@@ -3,7 +3,7 @@ title: "Semantic Labeling in Remote Sensing Corpora Using Feature Fusion-Based E
 authors:
 - admin
 - P. Vateekul
-- P. Srestasathiern
+
 - S. Lawawirojwong
 
 date: "2019-03-01T00:00:00Z"

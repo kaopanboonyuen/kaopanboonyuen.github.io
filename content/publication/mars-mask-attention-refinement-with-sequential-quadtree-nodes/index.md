@@ -65,7 +65,7 @@ url_pdf: https://link.springer.com/chapter/10.1007/978-3-031-51023-6_3
 url_code: https://github.com/kaopanboonyuen/MARS
 url_dataset: ''
 url_poster: ''
-url_project: ''
+url_project: 'https://kaopanboonyuen.github.io/MARS'
 url_slides: ''
 url_source: ''
 url_video: ''

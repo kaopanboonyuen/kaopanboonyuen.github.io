@@ -3,7 +3,7 @@ title: "Transformer-Based Decoder Designs for Semantic Segmentation on Remotely 
 authors:
 - admin
 - P. Vateekul
-- P. Srestasathiern
+
 - S. Lawawirojwong
 
 date: "2020-02-01T00:00:00Z"

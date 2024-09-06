@@ -8,7 +8,7 @@ authors:
 - K. Suphan
 - C. Charoenphon
 
-date: "2022-01-01T00:00:00Z"
+date: "2022-09-01T00:00:00Z"
 doi: ""
 
 author_notes:
@@ -22,22 +22,22 @@ author_notes:
 - ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2022-01-01T00:00:00Z"
+publishDate: "2022-09-01T00:00:00Z"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["1"]
+publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
 publication: In *Information*
 publication_short: In *Information*
 
-abstract: EDetecting objects of varying sizes, like kilometer stones, remains a significant challenge and directly affects the accuracy of object counts. Transformers have shown remarkable success in natural language processing (NLP) and image processing due to their ability to model long-range dependencies. This paper proposes an enhanced YOLO (You Only Look Once) series with two key contributions, (i) We employ a pre-training objective to obtain original visual tokens from image patches of road assets, using a pre-trained Vision Transformer (ViT) backbone, which is then fine-tuned on downstream tasks with additional task layers. (ii) We incorporate Feature Pyramid Network (FPN) decoder designs into our deep learning network to learn the significance of different input features, avoiding issues like feature mismatch and performance degradation that arise from simple summation or concatenation. Our proposed method, Transformer-Based YOLOX with FPN, effectively learns general representations of objects and significantly outperforms state-of-the-art detectors, including YOLOv5S, YOLOv5M, and YOLOv5L. It achieves a 61.5% AP on the Thailand highway corpus, surpassing the current best practice (YOLOv5L) by 2.56% AP on the test-dev dataset.
+abstract: Detecting objects of varying sizes, like kilometer stones, remains a significant challenge and directly affects the accuracy of object counts. Transformers have shown remarkable success in natural language processing (NLP) and image processing due to their ability to model long-range dependencies. This paper proposes an enhanced YOLO (You Only Look Once) series with two key contributions, (i) We employ a pre-training objective to obtain original visual tokens from image patches of road assets, using a pre-trained Vision Transformer (ViT) backbone, which is then fine-tuned on downstream tasks with additional task layers. (ii) We incorporate Feature Pyramid Network (FPN) decoder designs into our deep learning network to learn the significance of different input features, avoiding issues like feature mismatch and performance degradation that arise from simple summation or concatenation. Our proposed method, Transformer-Based YOLOX with FPN, effectively learns general representations of objects and significantly outperforms state-of-the-art detectors, including YOLOv5S, YOLOv5M, and YOLOv5L. It achieves a 61.5% AP on the Thailand highway corpus, surpassing the current best practice (YOLOv5L) by 2.56% AP on the test-dev dataset.
 
 # Summary. An optional shortened abstract.
-summary: Detecting varying-sized objects, such as kilometer stones, is challenging and impacts accuracy. This paper enhances YOLO with two main contributions, using a pre-trained Vision Transformer (ViT) to fine-tune model weights for road asset images and incorporating Feature Pyramid Network (FPN) decoders to handle different input features. Our method, Transformer-Based YOLOX with FPN, outperforms state-of-the-art detectors, achieving 61.5% AP on the Thailand highway corpus, surpassing YOLOv5L by 2.56% AP.
+summary: Detecting objects of varying sizes, like kilometer stones, remains a significant challenge and directly affects the accuracy of object counts. Transformers have shown remarkable success in natural language processing (NLP) and image processing due to their ability to model long-range dependencies. This paper proposes an enhanced YOLO (You Only Look Once) series with two key contributions, (i) We employ a pre-training objective to obtain original visual tokens from image patches of road assets, using a pre-trained Vision Transformer (ViT) backbone, which is then fine-tuned on downstream tasks with additional task layers. (ii) We incorporate Feature Pyramid Network (FPN) decoder designs into our deep learning network to learn the significance of different input features, avoiding issues like feature mismatch and performance degradation that arise from simple summation or concatenation. Our proposed method, Transformer-Based YOLOX with FPN, effectively learns general representations of objects and significantly outperforms state-of-the-art detectors, including YOLOv5S, YOLOv5M, and YOLOv5L. It achieves a 61.5% AP on the Thailand highway corpus, surpassing the current best practice (YOLOv5L) by 2.56% AP on the test-dev dataset.
 
 tags:
 - Attention

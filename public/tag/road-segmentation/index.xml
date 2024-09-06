@@ -5,12 +5,20 @@
     <link>https://kaopanboonyuen.github.io/tag/road-segmentation/</link>
       <atom:link href="https://kaopanboonyuen.github.io/tag/road-segmentation/index.xml" rel="self" type="application/rss+xml" />
     <description>Road Segmentation</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2024 Kao Panboonyuen</copyright><lastBuildDate>Fri, 01 Sep 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://kaopanboonyuen.github.io/media/icon_hua4a3b98cd72cc0edea13b445456e64d4_4649875_512x512_fill_lanczos_center_3.png</url>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>Road Segmentation</title>
       <link>https://kaopanboonyuen.github.io/tag/road-segmentation/</link>
     </image>
+    
+    <item>
+      <title>Road segmentation of remotely-sensed images using deep convolutional neural networks with landscape metrics and conditional random fields</title>
+      <link>https://kaopanboonyuen.github.io/publication/road-segmentation-on-remote-sensing/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/road-segmentation-on-remote-sensing/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>An enhanced deep convolutional encoder-decoder network for road segmentation on aerial imagery</title>
@@ -25,6 +33,14 @@
       <link>https://kaopanboonyuen.github.io/publication/road-map-extraction-from-satellite-imagery/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/publication/road-map-extraction-from-satellite-imagery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Image Vectorization of Road Satellite Data Sets</title>
+      <link>https://kaopanboonyuen.github.io/publication/image-vectorization-of-road-satellite-data-sets/</link>
+      <pubDate>Thu, 01 Sep 2016 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/image-vectorization-of-road-satellite-data-sets/</guid>
       <description></description>
     </item>
     
