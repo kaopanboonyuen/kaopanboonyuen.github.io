@@ -5,12 +5,50 @@
     <link>https://kaopanboonyuen.github.io/tag/convolutional-neural-networks/</link>
       <atom:link href="https://kaopanboonyuen.github.io/tag/convolutional-neural-networks/index.xml" rel="self" type="application/rss+xml" />
     <description>Convolutional Neural Networks</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2024 Kao Panboonyuen</copyright><lastBuildDate>Mon, 01 May 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2024 Kao Panboonyuen</copyright><lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>Convolutional Neural Networks</title>
       <link>https://kaopanboonyuen.github.io/tag/convolutional-neural-networks/</link>
     </image>
+    
+    <item>
+      <title>Enhanced YOLOv8-Based Object Detection of Road Assets Utilizing Generalized Focal Loss: A Case Study on Thai Highway Imagery</title>
+      <link>https://kaopanboonyuen.github.io/publication/enhanced-yolov8-based-object-detection-of-road-assets-utilizing-generalized-focal-loss-a-case-study-on-thai-highway-imagery/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/enhanced-yolov8-based-object-detection-of-road-assets-utilizing-generalized-focal-loss-a-case-study-on-thai-highway-imagery/</guid>
+      <description>&lt;h3 id=&#34;exciting-news-oral-presentation-at-iche-2024&#34;&gt;Exciting News: Oral Presentation at iCHE 2024!&lt;/h3&gt;
+&lt;p&gt;I am thrilled to share that our paper titled &lt;strong&gt;&amp;ldquo;Enhanced YOLOv8-Based Object Detection of Road Assets Utilizing Generalized Focal Loss: A Case Study on Thai Highway Imagery&amp;rdquo;&lt;/strong&gt; has been accepted for an oral presentation at the &lt;strong&gt;5th International Conference on Highway Engineering (iCHE 2024)&lt;/strong&gt;! After a long absence from international conferences since my Ph.D. studies, I&amp;rsquo;m incredibly excited to rejoin the academic community in person and present our latest research.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dive into the complete details of our research on road asset detection in Thai highways with advanced vision models. Check out the full blog post here: &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2024-09-06-refined-generalized-focal-loss-for-road-asset-detection-on-thai-highways-using-vision-models/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Refined Generalized Focal Loss for Road Asset Detection&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Stay tuned for updates, and a big thank you to my incredible research team:&lt;br&gt;
+&lt;strong&gt;N. Rattanachona&lt;/strong&gt;, &lt;strong&gt;P. Thungthin&lt;/strong&gt;, &lt;strong&gt;N. Subsompon&lt;/strong&gt;, &lt;strong&gt;S. Thongbai&lt;/strong&gt;, &lt;strong&gt;W. Wongweeranimit&lt;/strong&gt;, and &lt;strong&gt;R. Phukham&lt;/strong&gt;. I’m grateful for your hard work and dedication to this project!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_00.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;featured_v3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here I am, presenting our work on the Enhanced YOLOv8 model and its application in detecting road assets!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_02.jpg&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_03.jpg&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_04.jpg&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_05.jpg&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_06.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;paper-highlights&#34;&gt;Paper Highlights:&lt;/h4&gt;
+&lt;p&gt;Our research tackles a critical challenge in road safety and infrastructure management: detecting essential road assets such as pedestrian bridges, pavilions, signs, and concrete guardrails. We introduce an enhanced YOLOv8 model integrated with &lt;strong&gt;Generalized Focal Loss&lt;/strong&gt;, which significantly improves detection accuracy, especially in complex environments with varied lighting and backgrounds.&lt;/p&gt;
+&lt;p&gt;The results speak for themselves:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;mAP50&lt;/strong&gt;: 80.340&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;mAP50-95&lt;/strong&gt;: 60.840&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Precision&lt;/strong&gt;: 79.100&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Recall&lt;/strong&gt;: 76.680&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;F1-Score&lt;/strong&gt;: 77.870&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These metrics highlight the robustness and precision of our method, underscoring its potential to enhance road safety initiatives.&lt;/p&gt;
+&lt;h4 id=&#34;whats-next&#34;&gt;What’s Next?&lt;/h4&gt;
+&lt;p&gt;In addition to being featured in the conference proceedings, our paper will go through a &lt;strong&gt;fast-track formal review process&lt;/strong&gt; for potential publication in the &lt;strong&gt;Transportmetrica A journal&lt;/strong&gt; (published by Taylor and Francis). We’re hopeful that this work will make a meaningful contribution to the field of highway engineering and road asset management.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_01.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I look forward to sharing more about our research and connecting with fellow researchers at iCHE 2024!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>MeViT: A Medium-Resolution Vision Transformer for Semantic Segmentation on Landsat Satellite Imagery for Agriculture in Thailand</title>
