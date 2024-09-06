@@ -30,7 +30,8 @@
 &lt;p&gt;This paper represents a significant step forward in applying cutting-edge computer vision techniques to real-world problems. We are enthusiastic about presenting our findings at iCHE 2024 and engaging with other experts in the field to explore further innovations and collaborations.&lt;/p&gt;
 &lt;p&gt;Stay tuned for updates, and a big thank you to my incredible research team:&lt;br&gt;
 &lt;strong&gt;N. Rattanachona&lt;/strong&gt;, &lt;strong&gt;P. Thungthin&lt;/strong&gt;, &lt;strong&gt;N. Subsompon&lt;/strong&gt;, &lt;strong&gt;S. Thongbai&lt;/strong&gt;, &lt;strong&gt;W. Wongweeranimit&lt;/strong&gt;, and &lt;strong&gt;R. Phukham&lt;/strong&gt;. Your hard work and dedication were essential to this project!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_00.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_00.jpg&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;featured_full.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Here I am, presenting our work on the Enhanced YOLOv8 model and its application in detecting road assets!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_02.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;We have visualizations of the detection results produced by the Enhanced YOLOv8 model. The bounding boxes and labels demonstrate the model’s ability to accurately locate and classify objects. These visuals reflect the high-resolution output and the model’s performance in detecting road assets in various environments. The clarity of these results illustrates the practical utility of our model in real-time applications. It effectively showcases how our model handles complex and dynamic scenes.&lt;/p&gt;
