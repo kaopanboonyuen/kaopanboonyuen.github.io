@@ -2,7 +2,7 @@
 
 title: 'Refined Generalized Focal Loss for Road Asset Detection on Thai Highways Using Vision Models'  
 subtitle: ''  
-summary: A thorough examination of my journey as an AI Research Scientist, including insights into balancing academia and industry, significant publications, and guidance for future researchers. 
+summary: We are pleased to announce that our paper, titled 'Enhanced YOLOv8-Based Object Detection of Road Assets Utilizing Generalized Focal Loss A Case Study on Thai Highway Imagery', has been accepted for oral presentation at the 5th International Conference on Highway Engineering (iCHE 2024).
 authors:  
 - admin  
 tags:  
