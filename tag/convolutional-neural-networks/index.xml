@@ -30,8 +30,7 @@
 &lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_02.jpg&#34; alt=&#34;&#34;&gt;
 &lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_03.jpg&#34; alt=&#34;&#34;&gt;
 &lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_04.jpg&#34; alt=&#34;&#34;&gt;
-&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_05.jpg&#34; alt=&#34;&#34;&gt;
-&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_06.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_05.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;paper-highlights&#34;&gt;Paper Highlights:&lt;/h4&gt;
 &lt;p&gt;Our research tackles a critical challenge in road safety and infrastructure management: detecting essential road assets such as pedestrian bridges, pavilions, signs, and concrete guardrails. We introduce an enhanced YOLOv8 model integrated with &lt;strong&gt;Generalized Focal Loss&lt;/strong&gt;, which significantly improves detection accuracy, especially in complex environments with varied lighting and backgrounds.&lt;/p&gt;
 &lt;p&gt;The results speak for themselves:&lt;/p&gt;

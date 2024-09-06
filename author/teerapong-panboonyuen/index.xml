@@ -39,8 +39,7 @@
 &lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_04.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;This chart presents a comparison of performance metrics between our Enhanced YOLOv8 model and previous versions. We observe significant improvements in precision, recall, and F1-score. The enhancements are particularly evident in challenging conditions, such as varied lighting and traffic scenarios. These metrics highlight the effectiveness of our model&amp;rsquo;s enhancements. By achieving superior results, our approach sets a new benchmark in object detection accuracy.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_05.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Finally, this image illustrates the training process for the Enhanced YOLOv8 model. It depicts the stages of optimization and fine-tuning, with various datasets and augmentation techniques used to enhance the model’s performance. The iterative process shown here is crucial for achieving the high accuracy demonstrated in our results. Observing these training phases provides insights into how we refined the model. This rigorous approach is key to ensuring the model’s effectiveness and reliability in practical applications.
-&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_06.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Finally, this image illustrates the training process for the Enhanced YOLOv8 model. It depicts the stages of optimization and fine-tuning, with various datasets and augmentation techniques used to enhance the model’s performance. The iterative process shown here is crucial for achieving the high accuracy demonstrated in our results. Observing these training phases provides insights into how we refined the model. This rigorous approach is key to ensuring the model’s effectiveness and reliability in practical applications.&lt;/p&gt;
 &lt;h2 id=&#34;paper-highlights&#34;&gt;Paper Highlights:&lt;/h2&gt;
 &lt;p&gt;Our research addresses a critical issue in road safety: detecting key road assets such as pedestrian bridges, pavilions, signs, and concrete guardrails. We implemented an enhanced YOLOv8 model integrated with &lt;strong&gt;Generalized Focal Loss&lt;/strong&gt;, which significantly improves detection accuracy, especially in complex environments with diverse lighting and backgrounds.&lt;/p&gt;
 &lt;h3 id=&#34;formula-1-generalized-focal-loss&#34;&gt;Formula 1: Generalized Focal Loss&lt;/h3&gt;
@@ -421,8 +420,7 @@ This publication introduces a feature fusion approach for semantic labeling task
 &lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_02.jpg&#34; alt=&#34;&#34;&gt;
 &lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_03.jpg&#34; alt=&#34;&#34;&gt;
 &lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_04.jpg&#34; alt=&#34;&#34;&gt;
-&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_05.jpg&#34; alt=&#34;&#34;&gt;
-&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_06.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_05.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;paper-highlights&#34;&gt;Paper Highlights:&lt;/h4&gt;
 &lt;p&gt;Our research tackles a critical challenge in road safety and infrastructure management: detecting essential road assets such as pedestrian bridges, pavilions, signs, and concrete guardrails. We introduce an enhanced YOLOv8 model integrated with &lt;strong&gt;Generalized Focal Loss&lt;/strong&gt;, which significantly improves detection accuracy, especially in complex environments with varied lighting and backgrounds.&lt;/p&gt;
 &lt;p&gt;The results speak for themselves:&lt;/p&gt;
