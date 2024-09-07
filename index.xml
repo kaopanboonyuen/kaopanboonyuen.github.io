@@ -135,18 +135,137 @@ The variance of the distribution is $\sigma^{2}$.
 &lt;p&gt;Finally, this image illustrates the training process for the Enhanced YOLOv8 model. It depicts the stages of optimization and fine-tuning, with various datasets and augmentation techniques used to enhance the model’s performance. The iterative process shown here is crucial for achieving the high accuracy demonstrated in our results. Observing these training phases provides insights into how we refined the model. This rigorous approach is key to ensuring the model’s effectiveness and reliability in practical applications.&lt;/p&gt;
 &lt;h2 id=&#34;paper-highlights&#34;&gt;Paper Highlights:&lt;/h2&gt;
 &lt;p&gt;Our research addresses a critical issue in road safety: detecting key road assets such as pedestrian bridges, pavilions, signs, and concrete guardrails. We implemented an enhanced YOLOv8 model integrated with &lt;strong&gt;Generalized Focal Loss&lt;/strong&gt;, which significantly improves detection accuracy, especially in complex environments with diverse lighting and backgrounds.&lt;/p&gt;
-&lt;h3 id=&#34;formula-1-generalized-focal-loss&#34;&gt;Formula 1: Generalized Focal Loss&lt;/h3&gt;
-&lt;p&gt;We employed &lt;strong&gt;Generalized Focal Loss&lt;/strong&gt;, which reduces the contribution of easily classified examples and focuses more on hard examples.&lt;/p&gt;
+&lt;h3 id=&#34;formula-1-generalized-focal-loss-for-detection-tasks&#34;&gt;Formula 1: Generalized Focal Loss for Detection Tasks&lt;/h3&gt;
+&lt;p&gt;In our detection tasks, which involve identifying seven different types of road assets—Pavilions, Pedestrian Bridges, Information Signs, Single-Arm Poles, Bus Stops, Warning Signs, and Concrete Guardrails—we employ &lt;strong&gt;Generalized Focal Loss&lt;/strong&gt; to handle the class imbalance and emphasize harder-to-detect objects. The formula is as follows:&lt;/p&gt;
 &lt;p&gt;$$
-\mathcal{L}_{\text{GFL}} = - \alpha (1 - p_t)^\gamma \log(p_t)
+\mathcal{L}_{\text{GFL}}^{\text{Detection}} = - \alpha (1 - p_t)^\gamma \log(p_t)
 $$&lt;/p&gt;
 &lt;p&gt;Where:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;$( p_t )$ is the predicted probability for the correct class,&lt;/li&gt;
-&lt;li&gt;$( \alpha )$ balances the importance of positive/negative examples,&lt;/li&gt;
-&lt;li&gt;$( \gamma )$ adjusts the model’s focus on hard examples.&lt;/li&gt;
+&lt;li&gt;$( p_t )$ represents the predicted probability for the correct class (e.g., a probability that an object is a Pavilion),&lt;/li&gt;
+&lt;li&gt;$( \alpha )$ is a balancing factor that weights the importance of positive and negative examples, helping to manage class imbalance,&lt;/li&gt;
+&lt;li&gt;$( \gamma )$ controls how much focus is placed on harder-to-detect examples. Higher values of ( \gamma ) focus more on misclassified and low-confidence predictions, which is crucial for challenging objects like Pedestrian Bridges and Concrete Guardrails that can appear in various conditions.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;This formula highlights our approach to improving object detection, especially for challenging highway assets in varying conditions.&lt;/p&gt;
+&lt;p&gt;For instance, in detecting Pavilions or Pedestrian Bridges, which are common on highways, Generalized Focal Loss helps reduce the contribution from easier examples, such as clear, unobstructed objects, and focuses more on difficult examples where the object might be partially occluded or in poor lighting conditions.&lt;/p&gt;
+&lt;h3 id=&#34;formula-2-generalized-focal-loss-for-segmentation-tasks&#34;&gt;Formula 2: Generalized Focal Loss for Segmentation Tasks&lt;/h3&gt;
+&lt;p&gt;For the segmentation tasks, which involve pixel-level classification of five types of road assets—Pavilions, Pedestrian Bridges, Information Signs, Warning Signs, and Concrete Guardrails—the same &lt;strong&gt;Generalized Focal Loss&lt;/strong&gt; formula is applied but in a more detailed, pixel-based manner. The formula is:&lt;/p&gt;
+&lt;!-- $$
+\mathcal{L}_{\text{GFL}}^{\text{Segmentation}} = - \sum_{i=1}^{N} \alpha_i (1 - p_{t,i})^\gamma \log(p_{t,i})
+$$ --&gt;
+&lt;p&gt;$$
+\mathcal{L}_{\text{GFL}}^{\text{Segmentation}} = - \alpha (1 - p_t)^\gamma \log(p_t)
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$( p_{t,i} )$ is the predicted probability for the correct class at pixel ( i ),&lt;/li&gt;
+&lt;li&gt;$( \alpha_i )$ balances the loss for different classes at pixel ( i ),&lt;/li&gt;
+&lt;li&gt;$( N )$ is the total number of pixels in the image, and&lt;/li&gt;
+&lt;li&gt;$( \gamma )$ focuses the loss on pixels where the model is less confident.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This formula is particularly useful when dealing with segmentation tasks, as it allows us to handle small and intricate objects such as Information Signs and Warning Signs. For instance, detecting the exact boundaries of a Concrete Guardrail in complex scenes can be challenging, and this loss function helps the model concentrate on getting those hard-to-segment areas correct.&lt;/p&gt;
+&lt;p&gt;In deep learning models for computer vision, the last layer differs significantly between detection and segmentation tasks. These differences are key to how each task is performed—whether it&amp;rsquo;s identifying objects with bounding boxes (detection) or labeling each pixel in an image (segmentation). Here&amp;rsquo;s an in-depth explanation, focusing on the mathematical differences and architectural changes.&lt;/p&gt;
+&lt;h3 id=&#34;detection-layer-bounding-box-regression-and-classification&#34;&gt;Detection Layer: Bounding Box Regression and Classification&lt;/h3&gt;
+&lt;p&gt;In object detection, the last layer of the model is typically designed to output two sets of predictions for each detected object:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Bounding Box Regression&lt;/strong&gt;: Predicting the coordinates of the bounding boxes that surround the objects.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Class Prediction&lt;/strong&gt;: Assigning a class label to each detected object.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The detection layer outputs four values per bounding box (representing the coordinates: center (x), center (y), width (w), and height (h)), as well as a class probability distribution for the detected object. This layer is typically a fully connected (dense) layer followed by an activation function.&lt;/p&gt;
+&lt;p&gt;For a detection task involving 7 classes (Pavilions, Pedestrian Bridges, etc.), the final layer can be represented mathematically as:&lt;/p&gt;
+&lt;p&gt;$$
+\hat{y}_\text{det} = \text{Sigmoid}(W \cdot \mathbf{f} + b)
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$( \hat{y}_\text{det} )$ is the final detection output vector.&lt;/li&gt;
+&lt;li&gt;$( W ) and ( b )$ are the weights and biases of the fully connected layer.&lt;/li&gt;
+&lt;li&gt;$( \mathbf{f} )$ is the feature vector from the previous layer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The output is then split into:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Bounding Box Coordinates&lt;/strong&gt; $( [x, y, w, h] )$&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Class Scores&lt;/strong&gt; $( \hat{p}_1, \hat{p}_2, \ldots, \hat{p}_7 )$ (for 7 classes).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The bounding box regression typically uses a &lt;strong&gt;smooth L1 loss&lt;/strong&gt; function:&lt;/p&gt;
+&lt;!-- $$
+\mathcal{L}_{\text{bbox}} = \text{SmoothL1}(\hat{y}_\text{bbox}, y_\text{bbox})
+$$ --&gt;
+&lt;p&gt;$$
+\mathcal{L}_{\text{bbox}} = SmoothL1(pred_bbox, true_bbox)
+$$&lt;/p&gt;
+&lt;p&gt;Where $( y_\text{bbox} )$ is the ground truth bounding box and $( \hat{y}_\text{bbox} )$ is the predicted bounding box.&lt;/p&gt;
+&lt;p&gt;The class prediction uses a &lt;strong&gt;cross-entropy loss&lt;/strong&gt;:&lt;/p&gt;
+&lt;!-- $$
+\mathcal{L}_{\text{cls}} = -\sum_{c=1}^{C} y_\text{cls} \log(\hat{y}_\text{cls})
+$$ --&gt;
+&lt;p&gt;$$
+\mathcal{L}_{\text{cls}} = -sum(y_cls * log(pred_cls))
+$$&lt;/p&gt;
+&lt;p&gt;Where $( C )$ is the number of classes (7 in this case), $( y_\text{cls} )$ is the ground truth label, and $( \hat{y}_\text{cls} )$ is the predicted class probability.&lt;/p&gt;
+&lt;h3 id=&#34;segmentation-layer-pixel-level-classification&#34;&gt;Segmentation Layer: Pixel-Level Classification&lt;/h3&gt;
+&lt;p&gt;In contrast, segmentation requires pixel-level classification rather than bounding boxes. Therefore, the last layer in segmentation models outputs a probability map for each class at each pixel.&lt;/p&gt;
+&lt;p&gt;Instead of a dense layer, segmentation models typically use a &lt;strong&gt;deconvolutional (transposed convolution)&lt;/strong&gt; layer to upsample the feature maps back to the original image resolution. This allows the model to output a segmentation mask, where each pixel is assigned a class label.&lt;/p&gt;
+&lt;p&gt;The final segmentation output can be represented as:&lt;/p&gt;
+&lt;!-- $$
+\hat{y}_\text{seg} = \text{Softmax}(\text{Deconv}(W \cdot \mathbf{f} + b))
+$$ --&gt;
+&lt;p&gt;$$
+\hat{y}_\text{seg} = Softmax(Deconv(W * f + b))
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$( \hat{y}_\text{seg} )$ is the segmentation output, a 3D tensor with dimensions $( H \times W \times C )$ (height, width, number of classes).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Deconv&lt;/strong&gt; refers to the transposed convolution operation that upsamples the feature maps to the input image&amp;rsquo;s spatial resolution$( H \times W )$.&lt;/li&gt;
+&lt;li&gt;$( W )$ and $( b )$ are the weights and biases of the deconvolutional layer.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Softmax&lt;/strong&gt; is applied across the channels to obtain the per-pixel class probabilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For segmentation, we use a &lt;strong&gt;cross-entropy loss&lt;/strong&gt; calculated for each pixel:&lt;/p&gt;
+&lt;p&gt;$$
+\mathcal{L}_{\text{seg}} =  -sum(pixelclass * log(predpixelclass))
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$( H \times W )$ is the total number of pixels.&lt;/li&gt;
+&lt;li&gt;$( C )$ is the number of classes (5 classes in this case: Pavilions, Pedestrian Bridges, etc.).&lt;/li&gt;
+&lt;li&gt;$( y_{\text{seg},i,c} )$ is the ground truth label for pixel $( i )$ and class $( c )$.&lt;/li&gt;
+&lt;li&gt;$( \hat{y}_{\text{seg},i,c} )$ is the predicted probability for pixel $( i )$ belonging to class $( c )$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;key-differences-between-detection-and-segmentation-layers&#34;&gt;Key Differences Between Detection and Segmentation Layers&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Final Layer Type&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Detection&lt;/strong&gt;: Fully connected layers output class probabilities and bounding box coordinates.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Segmentation&lt;/strong&gt;: Deconvolutional layers (transposed convolutions) output pixel-level class probabilities.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Loss Functions&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Detection&lt;/strong&gt;: Combines smooth L1 loss for bounding box regression and cross-entropy loss for class prediction.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Segmentation&lt;/strong&gt;: Cross-entropy loss calculated at the pixel level across the entire image.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Spatial Resolution&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Detection&lt;/strong&gt;: Outputs bounding boxes, which are usually fewer in number than the total pixels in an image.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Segmentation&lt;/strong&gt;: Requires upsampling through deconvolution to match the original image resolution and provide class predictions for each pixel.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Upsampling&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Detection&lt;/strong&gt;: No upsampling is required as the final output is a set of bounding box coordinates.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Segmentation&lt;/strong&gt;: Transposed convolutions (deconvolution) are used to upsample low-resolution feature maps back to the original input image resolution, allowing for pixel-level predictions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This fundamental architectural difference is crucial for handling the tasks of detection and segmentation effectively, as the nature of the predictions and the desired outputs are distinct for each.&lt;/p&gt;
+&lt;h3 id=&#34;explaining-the-two-samples-detection-and-segmentation&#34;&gt;Explaining the Two Samples: Detection and Segmentation&lt;/h3&gt;
+&lt;p&gt;For detection, consider a scenario where we need to locate a Pavilion on a highway. The Generalized Focal Loss helps reduce the loss contribution from easily detected Pavilions—those that are in clear view—and shifts the model&amp;rsquo;s focus to harder cases, like Pavilions that may be partially obscured by other objects or in poor lighting. By emphasizing these challenging examples, the model improves its overall performance on diverse highway scenes.&lt;/p&gt;
+&lt;p&gt;For segmentation, imagine the task of segmenting an Information Sign pixel by pixel. Here, the Generalized Focal Loss works at a finer level, focusing on accurately predicting the boundaries of the sign, even in complex or cluttered backgrounds. The model learns to pay more attention to pixels where it’s less confident, which results in sharper and more accurate segmentation outcomes.&lt;/p&gt;
+&lt;p&gt;This dual application of the Generalized Focal Loss—both for bounding box detection and for pixel-level segmentation—enables our model to excel in both tasks, effectively handling the complexities of road asset management in real-world highway conditions.&lt;/p&gt;
 &lt;h3 id=&#34;key-metrics&#34;&gt;Key Metrics:&lt;/h3&gt;
 &lt;p&gt;The results demonstrate our model&amp;rsquo;s superior performance:&lt;/p&gt;
 &lt;ul&gt;
@@ -223,6 +342,13 @@ $$&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;In this comparison, YOLOv8x demonstrates the best mAP50-95 performance, while YOLOv8l leads in F1-Score. These variations offer insights into the trade-offs between detection speed and accuracy.&lt;/p&gt;
+&lt;p&gt;In the images, we’re showcasing a progression of deep learning techniques. Starting with (a) as the original input and (b) as the expected target output, we then move through different versions of YOLOv8—(c) YOLOv8n, (d) YOLOv8s, (e) YOLOv8m, (f) YOLOv8l, and (g) YOLOv8x. Now, the key point to note is that (f) and (g) highlight our proposed enhancement, where we’ve integrated a refined Generalized Focal Loss into YOLO. What’s impressive here is that you’ll see it clearly outperforms the other methods, especially in both detection (bounding boxes) and segmentation (pixel-based).&lt;/p&gt;
+&lt;p&gt;The first image focuses on detection, showing the bounding box results. Meanwhile, the second image dives deeper into instance segmentation, illustrating pixel-level accuracy.&lt;/p&gt;
+&lt;p&gt;So, let&amp;rsquo;s break it down. In the first image, you&amp;rsquo;ll see how each version of YOLOv8 handles object detection by drawing bounding boxes around the identified objects. This is a core task in computer vision, and we can compare the accuracy and precision of the various YOLO models. With our enhanced method using the refined Generalized Focal Loss, which we&amp;rsquo;ve integrated into YOLOv8l and YOLOv8x, you’ll notice a significant improvement in the clarity and correctness of the bounding boxes. These results indicate that our approach performs better at accurately locating objects in the images.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/results_01.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Next, in the second image, the focus shifts to instance segmentation, where instead of just detecting objects with boxes, we’re identifying the exact pixel regions for each object. This is a more complex task that requires higher precision. Here again, our enhanced YOLOv8 models stand out. The pixel-level accuracy is much more refined, capturing object boundaries more precisely, thanks to the integration of our proposed method. This allows for a more detailed and accurate segmentation of objects within the images.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/results_02.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;To summarize, our proposed enhancements to the YOLOv8 model—through the integration of refined Generalized Focal Loss—deliver significant improvements in both object detection and instance segmentation. The results across both images clearly demonstrate that our approach excels at accurately detecting and precisely segmenting objects. Whether it’s drawing clean bounding boxes or defining exact pixel regions, our method proves to be the clear winner. This shows that refining loss functions can have a big impact on model performance, pushing the boundaries of what’s possible with deep learning in computer vision.&lt;/p&gt;
 &lt;h3 id=&#34;whats-next&#34;&gt;What’s Next?&lt;/h3&gt;
 &lt;p&gt;Our paper will undergo a &lt;strong&gt;fast-track formal review process&lt;/strong&gt; for potential publication in the &lt;strong&gt;Transportmetrica A journal&lt;/strong&gt;. We’re optimistic that this research will significantly contribute to highway engineering and road asset management fields.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_01.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
@@ -578,10 +704,14 @@ This publication introduces a feature fusion approach for semantic labeling task
 &lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_00.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;featured_v3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Here I am, presenting our work on the Enhanced YOLOv8 model and its application in detecting road assets!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_02.jpg&#34; alt=&#34;&#34;&gt;
-&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_03.jpg&#34; alt=&#34;&#34;&gt;
-&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_04.jpg&#34; alt=&#34;&#34;&gt;
-&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_05.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_02.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;We have visualizations of the detection results produced by the Enhanced YOLOv8 model. The bounding boxes and labels demonstrate the model’s ability to accurately locate and classify objects. These visuals reflect the high-resolution output and the model’s performance in detecting road assets in various environments. The clarity of these results illustrates the practical utility of our model in real-time applications. It effectively showcases how our model handles complex and dynamic scenes.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_03.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now, let’s look at a real-world application of our Enhanced YOLOv8 model in detecting road assets. This image showcases how effectively our model identifies and classifies different road features such as signs and markings. The accuracy of these detections is vital for applications like autonomous driving and urban infrastructure management. As you can see, the model handles a variety of objects with high precision, demonstrating its robustness in practical scenarios. This performance underscores the model&amp;rsquo;s potential for real-world deployment.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_04.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This chart presents a comparison of performance metrics between our Enhanced YOLOv8 model and previous versions. We observe significant improvements in precision, recall, and F1-score. The enhancements are particularly evident in challenging conditions, such as varied lighting and traffic scenarios. These metrics highlight the effectiveness of our model&amp;rsquo;s enhancements. By achieving superior results, our approach sets a new benchmark in object detection accuracy.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_05.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Finally, this image illustrates the training process for the Enhanced YOLOv8 model. It depicts the stages of optimization and fine-tuning, with various datasets and augmentation techniques used to enhance the model’s performance. The iterative process shown here is crucial for achieving the high accuracy demonstrated in our results. Observing these training phases provides insights into how we refined the model. This rigorous approach is key to ensuring the model’s effectiveness and reliability in practical applications.&lt;/p&gt;
 &lt;h4 id=&#34;paper-highlights&#34;&gt;Paper Highlights:&lt;/h4&gt;
 &lt;p&gt;Our research tackles a critical challenge in road safety and infrastructure management: detecting essential road assets such as pedestrian bridges, pavilions, signs, and concrete guardrails. We introduce an enhanced YOLOv8 model integrated with &lt;strong&gt;Generalized Focal Loss&lt;/strong&gt;, which significantly improves detection accuracy, especially in complex environments with varied lighting and backgrounds.&lt;/p&gt;
 &lt;p&gt;The results speak for themselves:&lt;/p&gt;
@@ -593,6 +723,13 @@ This publication introduces a feature fusion approach for semantic labeling task
 &lt;li&gt;&lt;strong&gt;F1-Score&lt;/strong&gt;: 77.870&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;These metrics highlight the robustness and precision of our method, underscoring its potential to enhance road safety initiatives.&lt;/p&gt;
+&lt;p&gt;In the images, we’re showcasing a progression of deep learning techniques. Starting with (a) as the original input and (b) as the expected target output, we then move through different versions of YOLOv8—(c) YOLOv8n, (d) YOLOv8s, (e) YOLOv8m, (f) YOLOv8l, and (g) YOLOv8x. Now, the key point to note is that (f) and (g) highlight our proposed enhancement, where we’ve integrated a refined Generalized Focal Loss into YOLO. What’s impressive here is that you’ll see it clearly outperforms the other methods, especially in both detection (bounding boxes) and segmentation (pixel-based).&lt;/p&gt;
+&lt;p&gt;The first image focuses on detection, showing the bounding box results. Meanwhile, the second image dives deeper into instance segmentation, illustrating pixel-level accuracy.&lt;/p&gt;
+&lt;p&gt;So, let&amp;rsquo;s break it down. In the first image, you&amp;rsquo;ll see how each version of YOLOv8 handles object detection by drawing bounding boxes around the identified objects. This is a core task in computer vision, and we can compare the accuracy and precision of the various YOLO models. With our enhanced method using the refined Generalized Focal Loss, which we&amp;rsquo;ve integrated into YOLOv8l and YOLOv8x, you’ll notice a significant improvement in the clarity and correctness of the bounding boxes. These results indicate that our approach performs better at accurately locating objects in the images.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/results_01.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Next, in the second image, the focus shifts to instance segmentation, where instead of just detecting objects with boxes, we’re identifying the exact pixel regions for each object. This is a more complex task that requires higher precision. Here again, our enhanced YOLOv8 models stand out. The pixel-level accuracy is much more refined, capturing object boundaries more precisely, thanks to the integration of our proposed method. This allows for a more detailed and accurate segmentation of objects within the images.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/results_02.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;To summarize, our proposed enhancements to the YOLOv8 model—through the integration of refined Generalized Focal Loss—deliver significant improvements in both object detection and instance segmentation. The results across both images clearly demonstrate that our approach excels at accurately detecting and precisely segmenting objects. Whether it’s drawing clean bounding boxes or defining exact pixel regions, our method proves to be the clear winner. This shows that refining loss functions can have a big impact on model performance, pushing the boundaries of what’s possible with deep learning in computer vision.&lt;/p&gt;
 &lt;h4 id=&#34;whats-next&#34;&gt;What’s Next?&lt;/h4&gt;
 &lt;p&gt;In addition to being featured in the conference proceedings, our paper will go through a &lt;strong&gt;fast-track formal review process&lt;/strong&gt; for potential publication in the &lt;strong&gt;Transportmetrica A journal&lt;/strong&gt; (published by Taylor and Francis). We’re hopeful that this work will make a meaningful contribution to the field of highway engineering and road asset management.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_01.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
