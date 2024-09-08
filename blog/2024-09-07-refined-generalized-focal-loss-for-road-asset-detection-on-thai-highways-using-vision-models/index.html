@@ -931,102 +931,102 @@
 <p>This chart presents a comparison of performance metrics between our Enhanced YOLOv8 model and previous versions. We observe significant improvements in precision, recall, and F1-score. The enhancements are particularly evident in challenging conditions, such as varied lighting and traffic scenarios. These metrics highlight the effectiveness of our model&rsquo;s enhancements. By achieving superior results, our approach sets a new benchmark in object detection accuracy.</p>
 <p><img src="Kao_iCHE2024/kao_mars_x_iche2024_05.jpg" alt=""></p>
 <p>Finally, this image illustrates the training process for the Enhanced YOLOv8 model. It depicts the stages of optimization and fine-tuning, with various datasets and augmentation techniques used to enhance the model’s performance. The iterative process shown here is crucial for achieving the high accuracy demonstrated in our results. Observing these training phases provides insights into how we refined the model. This rigorous approach is key to ensuring the model’s effectiveness and reliability in practical applications.</p>
+<h2 id="a-journey-through-road-asset-detection-and-segmentation-on-thai-highways">A Journey Through Road Asset Detection and Segmentation on Thai Highways</h2>
+<h3 id="understanding-the-scene">Understanding the Scene</h3>
+<p>Imagine you&rsquo;re driving along a bustling Thai highway, surrounded by a landscape dotted with various road assets. These assets include everything from pavilions providing shade and rest areas, pedestrian bridges allowing safe crossing, and information signs guiding motorists, to single-arm poles supporting traffic signals, bus stops, warning signs alerting drivers of upcoming hazards, and concrete guardrails safeguarding the road&rsquo;s edge. Each of these elements plays a critical role in ensuring the safety and efficiency of the highway system.</p>
+<h3 id="the-challenge-detection-and-segmentation">The Challenge: Detection and Segmentation</h3>
+<p>To manage and maintain these assets effectively, automated systems are employed to detect and segment these features from images captured along the highway. This process involves two main tasks: detection and segmentation.</p>
+<p><strong>Detection Tasks:</strong></p>
+<p>In detection, the goal is to identify and locate these assets within images. For the Thai highways, there are seven specific classes of road assets to detect:</p>
+<ol>
+<li><strong>Pavilions:</strong> Structures offering shade and rest for travelers.</li>
+<li><strong>Pedestrian Bridges:</strong> Elevated walkways ensuring safe crossing over the highway.</li>
+<li><strong>Information Signs:</strong> Signs providing crucial information to drivers.</li>
+<li><strong>Single-Arm Poles:</strong> Posts supporting traffic signals or cameras.</li>
+<li><strong>Bus Stops:</strong> Designated areas where buses pick up and drop off passengers.</li>
+<li><strong>Warning Signs:</strong> Signs alerting drivers to potential hazards ahead.</li>
+<li><strong>Concrete Guardrails:</strong> Barriers designed to prevent vehicles from veering off the road.</li>
+</ol>
+<p><strong>Segmentation Tasks:</strong></p>
+<p>Segmentation takes this a step further by assigning a specific class label to each pixel in the image, providing a detailed map of where each type of asset is located. For the Thai highways, the segmentation focuses on five classes:</p>
+<ol>
+<li><strong>Pavilions:</strong> Highlighted as areas of rest and shelter.</li>
+<li><strong>Pedestrian Bridges:</strong> Marked to show their location and coverage.</li>
+<li><strong>Information Signs:</strong> Detailed to ensure visibility and accessibility.</li>
+<li><strong>Warning Signs:</strong> Identified to enhance hazard awareness.</li>
+<li><strong>Concrete Guardrails:</strong> Outlined to confirm their placement along the road.</li>
+</ol>
+<h3 id="the-process-in-action">The Process in Action</h3>
+<p><strong>1. Detection:</strong></p>
+<p>Picture an advanced AI system analyzing highway images. It scans each image to detect the seven classes of road assets. Using bounding boxes, the system outlines each asset&rsquo;s location, distinguishing between the pavilions providing shade and the concrete guardrails ensuring safety. This detection process helps in cataloging and managing each asset efficiently.</p>
+<p><strong>2. Segmentation:</strong></p>
+<p>Moving to segmentation, the AI system processes the same images to create a detailed pixel-level map. Each pixel in the image is classified into one of the five categories, such as pavilions, pedestrian bridges, and warning signs. This precise classification allows for a thorough understanding of where each asset is situated, helping with tasks like maintenance scheduling and safety assessments.</p>
+<h3 id="real-world-impact">Real-World Impact</h3>
+<p>This dual approach—detection and segmentation—ensures that every asset along the Thai highways is accurately identified and mapped. For instance, knowing the exact location of warning signs can help in assessing their visibility and effectiveness. Similarly, detailed segmentation of concrete guardrails aids in monitoring their condition and integrity.</p>
 <h2 id="paper-highlights">Paper Highlights:</h2>
 <p>Our research addresses a critical issue in road safety: detecting key road assets such as pedestrian bridges, pavilions, signs, and concrete guardrails. We implemented an enhanced YOLOv8 model integrated with <strong>Generalized Focal Loss</strong>, which significantly improves detection accuracy, especially in complex environments with diverse lighting and backgrounds.</p>
-<h3 id="formula-1-generalized-focal-loss-for-detection-tasks">Formula 1: Generalized Focal Loss for Detection Tasks</h3>
-<p>In our detection tasks, which involve identifying seven different types of road assets—Pavilions, Pedestrian Bridges, Information Signs, Single-Arm Poles, Bus Stops, Warning Signs, and Concrete Guardrails—we employ <strong>Generalized Focal Loss</strong> to handle the class imbalance and emphasize harder-to-detect objects. The formula is as follows:</p>
+<h2 id="comprehensive-analysis-of-generalized-focal-loss-and-last-layer-architectures">Comprehensive Analysis of Generalized Focal Loss and Last Layer Architectures</h2>
+<p>In computer vision, both object detection and semantic segmentation are crucial tasks that leverage different approaches and final layer architectures in deep learning models. This document provides an in-depth technical overview of Generalized Focal Loss applied to both tasks, and a detailed comparison of the final layers used in each.</p>
+<h3 id="generalized-focal-loss-for-detection-and-segmentation-tasks">Generalized Focal Loss for Detection and Segmentation Tasks</h3>
+<p><strong>Generalized Focal Loss (GFL)</strong> is designed to address class imbalance and focus learning on hard-to-detect objects by adjusting the standard focal loss. This approach is applicable to both detection and segmentation tasks but is formulated slightly differently for each.</p>
+<h4 id="1-generalized-focal-loss-for-detection-tasks">1. Generalized Focal Loss for Detection Tasks</h4>
+<p><strong>Objective:</strong>
+In object detection, GFL helps to improve the accuracy of detecting objects and managing class imbalance by focusing on harder-to-detect objects.</p>
+<p><strong>Mathematical Formula:</strong></p>
+<p>For detection tasks involving multiple classes (e.g., Pavilions, Pedestrian Bridges, etc.), the Generalized Focal Loss is given by:</p>
 <p>$$
-\mathcal{L}_{\text{GFL}}^{\text{Detection}} = - \alpha (1 - p_t)^\gamma \log(p_t)
+\mathcal{L}_{\text{GFL}}^{\text{Detection}} = - \alpha \left(1 - p_t\right)^\gamma \log(p_t)
 $$</p>
 <p>Where:</p>
 <ul>
-<li>$( p_t )$ represents the predicted probability for the correct class (e.g., a probability that an object is a Pavilion),</li>
-<li>$( \alpha )$ is a balancing factor that weights the importance of positive and negative examples, helping to manage class imbalance,</li>
-<li>$( \gamma )$ controls how much focus is placed on harder-to-detect examples. Higher values of ( \gamma ) focus more on misclassified and low-confidence predictions, which is crucial for challenging objects like Pedestrian Bridges and Concrete Guardrails that can appear in various conditions.</li>
+<li>$p_t$ represents the predicted probability for the correct class.</li>
+<li>$\alpha$ is a balancing factor that adjusts the importance of positive and negative examples to handle class imbalance.</li>
+<li>$\gamma$ is the focusing parameter that controls the extent to which hard examples are emphasized. Higher values of $\gamma$ increase the focus on difficult examples.</li>
 </ul>
-<p>For instance, in detecting Pavilions or Pedestrian Bridges, which are common on highways, Generalized Focal Loss helps reduce the contribution from easier examples, such as clear, unobstructed objects, and focuses more on difficult examples where the object might be partially occluded or in poor lighting conditions.</p>
-<h3 id="formula-2-generalized-focal-loss-for-segmentation-tasks">Formula 2: Generalized Focal Loss for Segmentation Tasks</h3>
-<p>For the segmentation tasks, which involve pixel-level classification of five types of road assets—Pavilions, Pedestrian Bridges, Information Signs, Warning Signs, and Concrete Guardrails—the same <strong>Generalized Focal Loss</strong> formula is applied but in a more detailed, pixel-based manner. The formula is:</p>
-<!-- $$
-\mathcal{L}_{\text{GFL}}^{\text{Segmentation}} = - \sum_{i=1}^{N} \alpha_i (1 - p_{t,i})^\gamma \log(p_{t,i})
-$$ -->
-<p>$$
-\mathcal{L}_{\text{GFL}}^{\text{Segmentation}} = - \alpha (1 - p_t)^\gamma \log(p_t)
-$$</p>
-<p>Where:</p>
-<ul>
-<li>$( p_{t,i} )$ is the predicted probability for the correct class at pixel ( i ),</li>
-<li>$( \alpha_i )$ balances the loss for different classes at pixel ( i ),</li>
-<li>$( N )$ is the total number of pixels in the image, and</li>
-<li>$( \gamma )$ focuses the loss on pixels where the model is less confident.</li>
-</ul>
-<p>This formula is particularly useful when dealing with segmentation tasks, as it allows us to handle small and intricate objects such as Information Signs and Warning Signs. For instance, detecting the exact boundaries of a Concrete Guardrail in complex scenes can be challenging, and this loss function helps the model concentrate on getting those hard-to-segment areas correct.</p>
-<p>In deep learning models for computer vision, the last layer differs significantly between detection and segmentation tasks. These differences are key to how each task is performed—whether it&rsquo;s identifying objects with bounding boxes (detection) or labeling each pixel in an image (segmentation). Here&rsquo;s an in-depth explanation, focusing on the mathematical differences and architectural changes.</p>
-<h3 id="detection-layer-bounding-box-regression-and-classification">Detection Layer: Bounding Box Regression and Classification</h3>
-<p>In object detection, the last layer of the model is typically designed to output two sets of predictions for each detected object:</p>
+<p><strong>Application:</strong>
+For detecting objects like Pedestrian Bridges or Concrete Guardrails, which may appear in challenging conditions, GFL reduces the weight of easy examples and enhances the learning from complex cases, such as those with partial occlusions or poor lighting.</p>
+<h4 id="2-generalized-focal-loss-for-segmentation-tasks">2. Generalized Focal Loss for Segmentation Tasks</h4>
+<p><strong>Objective:</strong>
+In semantic segmentation, GFL is employed to address class imbalance at the pixel level. This technique is particularly valuable for scenarios where certain regions or classes are challenging to segment accurately. By focusing on these difficult regions, GFL enhances the model&rsquo;s performance in identifying and classifying every pixel in an image.</p>
+<p><strong>How It Works:</strong>
+GFL modifies the traditional focal loss by introducing a balancing factor and a focusing parameter specific to each pixel. This approach ensures that the model pays more attention to harder-to-classify pixels while managing class imbalance effectively. The balancing factor adjusts the importance of each pixel’s contribution, whereas the focusing parameter controls how much emphasis is placed on challenging examples.</p>
+<p><strong>Application Example:</strong>
+When applied to tasks like detecting Concrete Guardrails, GFL ensures that the model pays special attention to complex and intricate areas. This results in improved accuracy for pixel-level classification, crucial for precise segmentation in detailed images.</p>
+<h4 id="differences-in-final-layers-detection-vs-segmentation">Differences in Final Layers: Detection vs. Segmentation</h4>
+<p>The final layers in object detection and semantic segmentation models are tailored to their specific objectives, leading to different designs and functionalities.</p>
+<h5 id="1-detection-layer-bounding-box-regression-and-classification">1. Detection Layer: Bounding Box Regression and Classification</h5>
+<p><strong>Objective:</strong>
+In object detection, the final layer&rsquo;s primary task is to predict the location of objects through bounding boxes and classify each object into one of the predefined classes.</p>
+<p><strong>Architecture:</strong></p>
 <ol>
-<li><strong>Bounding Box Regression</strong>: Predicting the coordinates of the bounding boxes that surround the objects.</li>
-<li><strong>Class Prediction</strong>: Assigning a class label to each detected object.</li>
+<li>
+<p><strong>Bounding Box Regression:</strong>
+The detection model predicts the coordinates of bounding boxes that enclose detected objects. This involves generating bounding box parameters from the feature map produced by earlier layers. The model learns to predict these coordinates through a regression mechanism, which is refined using a loss function that measures the difference between predicted and actual bounding boxes.</p>
+</li>
+<li>
+<p><strong>Class Prediction:</strong>
+Alongside bounding box coordinates, the model also predicts the probability distribution over classes for each detected object. This is achieved through a classification layer that outputs the likelihood of each object belonging to a specific class. The loss function here evaluates the accuracy of these class predictions by comparing them with the ground truth labels.</p>
+</li>
 </ol>
-<p>The detection layer outputs four values per bounding box (representing the coordinates: center (x), center (y), width (w), and height (h)), as well as a class probability distribution for the detected object. This layer is typically a fully connected (dense) layer followed by an activation function.</p>
-<p>For a detection task involving 7 classes (Pavilions, Pedestrian Bridges, etc.), the final layer can be represented mathematically as:</p>
-<p>$$
-\hat{y}_\text{det} = \text{Sigmoid}(W \cdot \mathbf{f} + b)
-$$</p>
-<p>Where:</p>
-<ul>
-<li>$( \hat{y}_\text{det} )$ is the final detection output vector.</li>
-<li>$( W ) and ( b )$ are the weights and biases of the fully connected layer.</li>
-<li>$( \mathbf{f} )$ is the feature vector from the previous layer.</li>
-</ul>
-<p>The output is then split into:</p>
+<h5 id="2-segmentation-layer-pixel-level-classification">2. Segmentation Layer: Pixel-Level Classification</h5>
+<p><strong>Objective:</strong>
+In semantic segmentation, the final layer generates a probability map for each class at every pixel in the image. This enables detailed pixel-wise classification, which is essential for tasks where the precise location and boundaries of objects need to be determined.</p>
+<p><strong>Architecture:</strong></p>
 <ol>
-<li><strong>Bounding Box Coordinates</strong> $( [x, y, w, h] )$</li>
-<li><strong>Class Scores</strong> $( \hat{p}_1, \hat{p}_2, \ldots, \hat{p}_7 )$ (for 7 classes).</li>
+<li><strong>Pixel-Level Classification:</strong>
+The segmentation model produces an output tensor that contains class probabilities for each pixel. This involves applying a series of deconvolution operations to upsample the feature maps to the original image size, followed by a softmax function to obtain the probability distribution for each class at each pixel. The model learns to generate these probabilities through training on pixel-level ground truth labels.</li>
 </ol>
-<p>The bounding box regression typically uses a <strong>smooth L1 loss</strong> function:</p>
-<!-- $$
-\mathcal{L}_{\text{bbox}} = \text{SmoothL1}(\hat{y}_\text{bbox}, y_\text{bbox})
-$$ -->
-<p>$$
-\mathcal{L}_{\text{bbox}} = SmoothL1(pred_bbox, true_bbox)
-$$</p>
-<p>Where $( y_\text{bbox} )$ is the ground truth bounding box and $( \hat{y}_\text{bbox} )$ is the predicted bounding box.</p>
-<p>The class prediction uses a <strong>cross-entropy loss</strong>:</p>
-<!-- $$
-\mathcal{L}_{\text{cls}} = -\sum_{c=1}^{C} y_\text{cls} \log(\hat{y}_\text{cls})
-$$ -->
-<p>$$
-\mathcal{L}_{\text{cls}} = -sum(y_cls * log(pred_cls))
-$$</p>
-<p>Where $( C )$ is the number of classes (7 in this case), $( y_\text{cls} )$ is the ground truth label, and $( \hat{y}_\text{cls} )$ is the predicted class probability.</p>
-<h3 id="segmentation-layer-pixel-level-classification">Segmentation Layer: Pixel-Level Classification</h3>
-<p>In contrast, segmentation requires pixel-level classification rather than bounding boxes. Therefore, the last layer in segmentation models outputs a probability map for each class at each pixel.</p>
-<p>Instead of a dense layer, segmentation models typically use a <strong>deconvolutional (transposed convolution)</strong> layer to upsample the feature maps back to the original image resolution. This allows the model to output a segmentation mask, where each pixel is assigned a class label.</p>
-<p>The final segmentation output can be represented as:</p>
-<!-- $$
-\hat{y}_\text{seg} = \text{Softmax}(\text{Deconv}(W \cdot \mathbf{f} + b))
-$$ -->
-<p>$$
-\hat{y}_\text{seg} = Softmax(Deconv(W * f + b))
-$$</p>
-<p>Where:</p>
+<p><strong>Summary</strong></p>
 <ul>
-<li>$( \hat{y}_\text{seg} )$ is the segmentation output, a 3D tensor with dimensions $( H \times W \times C )$ (height, width, number of classes).</li>
-<li><strong>Deconv</strong> refers to the transposed convolution operation that upsamples the feature maps to the input image&rsquo;s spatial resolution$( H \times W )$.</li>
-<li>$( W )$ and $( b )$ are the weights and biases of the deconvolutional layer.</li>
-<li><strong>Softmax</strong> is applied across the channels to obtain the per-pixel class probabilities.</li>
-</ul>
-<p>For segmentation, we use a <strong>cross-entropy loss</strong> calculated for each pixel:</p>
-<p>$$
-\mathcal{L}_{\text{seg}} =  -sum(pixelclass * log(predpixelclass))
-$$</p>
-<p>Where:</p>
-<ul>
-<li>$( H \times W )$ is the total number of pixels.</li>
-<li>$( C )$ is the number of classes (5 classes in this case: Pavilions, Pedestrian Bridges, etc.).</li>
-<li>$( y_{\text{seg},i,c} )$ is the ground truth label for pixel $( i )$ and class $( c )$.</li>
-<li>$( \hat{y}_{\text{seg},i,c} )$ is the predicted probability for pixel $( i )$ belonging to class $( c )$.</li>
+<li>
+<p><strong>Generalized Focal Loss:</strong> Utilized in both detection and segmentation to handle class imbalance and emphasize difficult examples. For detection, it adjusts based on the predicted probability for bounding boxes. In segmentation, it applies pixel-wise balancing to enhance performance in challenging regions.</p>
+</li>
+<li>
+<p><strong>Detection Layer:</strong> Focuses on predicting bounding boxes and class labels, employing separate mechanisms for spatial localization and classification.</p>
+</li>
+<li>
+<p><strong>Segmentation Layer:</strong> Generates a detailed probability map for each pixel, using deconvolution and softmax to enable precise pixel-level classification. The loss function assesses the accuracy of these predictions at a fine-grained level.</p>
+</li>
 </ul>
 <h3 id="key-differences-between-detection-and-segmentation-layers">Key Differences Between Detection and Segmentation Layers</h3>
 <ol>
@@ -1074,7 +1074,7 @@ $$</p>
 <li><strong>F1-Score</strong>: 77.870</li>
 </ul>
 <p>These results show that our method consistently delivers high precision and recall, emphasizing its robustness and accuracy.</p>
-<h3 id="formula-2-map-calculation">Formula 2: mAP Calculation</h3>
+<h3 id="map-calculation">mAP Calculation</h3>
 <p>The mean Average Precision (mAP) is used to evaluate detection accuracy. For our model, mAP is calculated as follows:</p>
 <p>$$
 \text{mAP} = \frac{1}{n} \sum_{i=1}^{n} \text{AP}_i
