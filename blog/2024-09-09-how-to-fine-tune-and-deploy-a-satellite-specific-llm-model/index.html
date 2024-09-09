@@ -1,0 +1,1765 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Teerapong Panboonyuen" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Fine-tuning a Large Language Model (LLM) for satellite imagery requires a deep understanding of both theoretical concepts and practical techniques. This blog post will guide you through the process, incorporating mathematical formulations and theoretical explanations to provide a comprehensive view of the fine-tuning and deployment process." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/blog/2024-09-09-how-to-fine-tune-and-deploy-a-satellite-specific-llm-model/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08f2e04360a1c87f5ad39547c02bf219.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/blog/2024-09-09-how-to-fine-tune-and-deploy-a-satellite-specific-llm-model/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/blog/2024-09-09-how-to-fine-tune-and-deploy-a-satellite-specific-llm-model/" />
+  <meta property="og:title" content="How to Fine-Tune and Deploy a Satellite-Specific LLM Model for Satellite Images | Teerapong Panboonyuen" />
+  <meta property="og:description" content="Fine-tuning a Large Language Model (LLM) for satellite imagery requires a deep understanding of both theoretical concepts and practical techniques. This blog post will guide you through the process, incorporating mathematical formulations and theoretical explanations to provide a comprehensive view of the fine-tuning and deployment process." /><meta property="og:image" content="https://kaopanboonyuen.github.io/blog/2024-09-09-how-to-fine-tune-and-deploy-a-satellite-specific-llm-model/featured.png" />
+    <meta property="twitter:image" content="https://kaopanboonyuen.github.io/blog/2024-09-09-how-to-fine-tune-and-deploy-a-satellite-specific-llm-model/featured.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2024-09-08T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2024-09-08T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>How to Fine-Tune and Deploy a Satellite-Specific LLM Model for Satellite Images | Teerapong Panboonyuen</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="317bc4e823c0e63dc9bad08d98381ad4" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.4be02a3b391999348b0c7478778a0e4b.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#awards"><span>Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#press"><span>Press</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Featured</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#tags"><span>Topics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#communities"><span>Communities</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://x.com/kaopanboonyuen" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>How to Fine-Tune and Deploy a Satellite-Specific LLM Model for Satellite Images</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span class="author-highlighted">Teerapong Panboonyuen</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    2024
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/deep-learning/">deep-learning</a>, <a href="/category/computer-vision/">computer-vision</a>, <a href="/category/object-detection/">object-detection</a>, <a href="/category/instance-segmentation/">instance-segmentation</a></span>
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 1200px; max-height: 422px;">
+  <div style="position: relative">
+    <img src="/blog/2024-09-09-how-to-fine-tune-and-deploy-a-satellite-specific-llm-model/featured_hua249ad0feb26ead7729c74167be9a42b_396872_1200x0_resize_lanczos_3.png" alt="" class="featured-image">
+    <span class="article-header-caption">ArXiv: Good at captioning, bad at counting: Benchmarking gpt-4v on earth observation data. arXiv:2401.17600.</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <div class="alert alert-note">
+  <div>
+    You can view the presentation slides for the talk 🌎 <a href="https://kaopanboonyuen.github.io/files/slides/20240906_Panboonyuen_AI_ThaiHighway.pdf" target="_blank" rel="noopener">here</a>.
+  </div>
+</div>
+<details class="toc-inpage d-print-none  " open>
+  <summary class="font-weight-bold">Table of Contents</summary>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction-to-large-language-models-llms">Introduction to Large Language Models (LLMs)</a></li>
+    <li><a href="#key-vocabulary">Key Vocabulary</a></li>
+    <li><a href="#architecture-of-llms">Architecture of LLMs</a>
+      <ul>
+        <li><a href="#transformer-architecture-formula">Transformer Architecture Formula</a></li>
+      </ul>
+    </li>
+    <li><a href="#training-llms">Training LLMs</a></li>
+    <li><a href="#introduction-to-llms-for-satellite-images">Introduction to LLMs for Satellite Images</a></li>
+    <li><a href="#overview-of-the-fine-tuning-process">Overview of the Fine-Tuning Process</a></li>
+    <li><a href="#step-by-step-fine-tuning-of-satgpt-for-satellite-imagery">Step-by-Step Fine-Tuning of SatGPT for Satellite Imagery</a>
+      <ul>
+        <li><a href="#1-data-preparation">1. Data Preparation</a></li>
+        <li><a href="#2-model-selection">2. Model Selection</a></li>
+        <li><a href="#3-fine-tuning-paradigm">3. Fine-Tuning Paradigm</a></li>
+        <li><a href="#4-model-validation-and-evaluation">4. Model Validation and Evaluation</a></li>
+        <li><a href="#5-export-and-deployment-to-hugging-face">5. Export and Deployment to Hugging Face</a></li>
+      </ul>
+    </li>
+    <li><a href="#additional-concepts">Additional Concepts</a>
+      <ul>
+        <li><a href="#formula-for-self-attention-in-rag">Formula for Self-Attention in RAG</a></li>
+        <li><a href="#vision-transformer-vit">Vision Transformer (ViT)</a></li>
+      </ul>
+    </li>
+    <li><a href="#full-flow-diagram">Full Flow Diagram</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#citation">Citation</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+</details>
+
+<h2 id="introduction-to-large-language-models-llms">Introduction to Large Language Models (LLMs)</h2>
+<p>Large Language Models (LLMs) are revolutionizing the field of Natural Language Processing (NLP) and Artificial Intelligence (AI). They leverage advanced deep learning architectures to understand, generate, and manipulate human language. In this blog post, we&rsquo;ll explore the technical depths of LLMs, including their architecture, training, fine-tuning, and deployment.</p>
+<h2 id="key-vocabulary">Key Vocabulary</h2>
+<p>Here are some essential terms and acronyms related to LLMs:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Acronym</strong></th>
+<th><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AI</strong></td>
+<td>Artificial Intelligence: The simulation of human intelligence in machines that are programmed to think and learn.</td>
+</tr>
+<tr>
+<td><strong>ANN</strong></td>
+<td>Artificial Neural Network: A computational model inspired by biological neural networks.</td>
+</tr>
+<tr>
+<td><strong>BERT</strong></td>
+<td>Bidirectional Encoder Representations from Transformers: A model for natural language understanding tasks.</td>
+</tr>
+<tr>
+<td><strong>CNN</strong></td>
+<td>Convolutional Neural Network: Effective for processing grid-like data such as images.</td>
+</tr>
+<tr>
+<td><strong>CRF</strong></td>
+<td>Conditional Random Field: A statistical modeling method for structured prediction.</td>
+</tr>
+<tr>
+<td><strong>DNN</strong></td>
+<td>Deep Neural Network: A neural network with multiple layers.</td>
+</tr>
+<tr>
+<td><strong>DL</strong></td>
+<td>Deep Learning: A subset of machine learning with neural networks containing many layers.</td>
+</tr>
+<tr>
+<td><strong>GPT</strong></td>
+<td>Generative Pre-trained Transformer: A transformer-based model for generating human-like text.</td>
+</tr>
+<tr>
+<td><strong>HMM</strong></td>
+<td>Hidden Markov Model: A model for systems that transition between states with certain probabilities.</td>
+</tr>
+<tr>
+<td><strong>LSTM</strong></td>
+<td>Long Short-Term Memory: A type of RNN designed to remember long-term dependencies.</td>
+</tr>
+<tr>
+<td><strong>LLM</strong></td>
+<td>Large Language Model: Trained on vast amounts of text data to understand and generate text.</td>
+</tr>
+<tr>
+<td><strong>ML</strong></td>
+<td>Machine Learning: Training algorithms to make predictions based on data.</td>
+</tr>
+<tr>
+<td><strong>NLP</strong></td>
+<td>Natural Language Processing: The interaction between computers and human language.</td>
+</tr>
+<tr>
+<td><strong>RAG</strong></td>
+<td>Retrieval-Augmented Generation: Combines document retrieval with generative models.</td>
+</tr>
+<tr>
+<td><strong>RNN</strong></td>
+<td>Recurrent Neural Network: Designed for sequential data.</td>
+</tr>
+<tr>
+<td><strong>T5</strong></td>
+<td>Text-to-Text Transfer Transformer: Converts various tasks into a text-to-text format.</td>
+</tr>
+<tr>
+<td><strong>Transformer</strong></td>
+<td>A model architecture that uses self-attention mechanisms.</td>
+</tr>
+<tr>
+<td><strong>ViT</strong></td>
+<td>Vision Transformer: A transformer model for image processing.</td>
+</tr>
+<tr>
+<td><strong>VQA</strong></td>
+<td>Visual Question Answering: Combining vision and language understanding.</td>
+</tr>
+<tr>
+<td><strong>VLMs</strong></td>
+<td>Vision-Language Models: Close the divide between visual and language comprehension in AI.</td>
+</tr>
+<tr>
+<td><strong>XLNet</strong></td>
+<td>An extension of BERT with permutation-based training.</td>
+</tr>
+<tr>
+<td><strong>Hugging Face</strong></td>
+<td>Platform for NLP with pre-trained models, datasets, and tools.</td>
+</tr>
+<tr>
+<td><strong>Transformers</strong></td>
+<td>Library for transformer-based models by Hugging Face.</td>
+</tr>
+<tr>
+<td><strong>datasets</strong></td>
+<td>Library for managing datasets, by Hugging Face.</td>
+</tr>
+<tr>
+<td><strong>Gradio</strong></td>
+<td>Library for creating machine learning demos with simple UIs.</td>
+</tr>
+<tr>
+<td><strong>LangChain</strong></td>
+<td>Facilitates development using LLMs with tools for managing language-based tasks.</td>
+</tr>
+<tr>
+<td><strong>spaCy</strong></td>
+<td>Advanced NLP library in Python.</td>
+</tr>
+<tr>
+<td><strong>NLTK</strong></td>
+<td>Natural Language Toolkit: Tools for text processing and linguistic analysis.</td>
+</tr>
+<tr>
+<td><strong>StanfordNLP</strong></td>
+<td>Library by Stanford University for NLP tasks.</td>
+</tr>
+<tr>
+<td><strong>OpenCV</strong></td>
+<td>Library for computer vision tasks.</td>
+</tr>
+<tr>
+<td><strong>PyTorch</strong></td>
+<td>Deep learning framework with tensor computations and automatic differentiation.</td>
+</tr>
+<tr>
+<td><strong>TensorFlow</strong></td>
+<td>Framework for building and deploying machine learning models.</td>
+</tr>
+<tr>
+<td><strong>Keras</strong></td>
+<td>High-level neural networks API running on top of TensorFlow.</td>
+</tr>
+<tr>
+<td><strong>Fastai</strong></td>
+<td>Simplifies neural network training with PyTorch.</td>
+</tr>
+<tr>
+<td><strong>ONNX</strong></td>
+<td>Open Neural Network Exchange format for model transfer between frameworks.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="architecture-of-llms">Architecture of LLMs</h2>
+<p>LLMs are built on advanced architectures that often include transformer models. A transformer model utilizes self-attention mechanisms to process input sequences. The core components of a transformer are:</p>
+<ul>
+<li><strong>Encoder</strong>: Processes the input data.</li>
+<li><strong>Decoder</strong>: Generates the output sequence.</li>
+</ul>
+<h3 id="transformer-architecture-formula">Transformer Architecture Formula</h3>
+<p>The key mathematical operation in transformers is the self-attention mechanism, which can be described as follows:</p>
+<p>$[ \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V ]$</p>
+<p>where:</p>
+<ul>
+<li>$( Q )$ is the query matrix,</li>
+<li>$( K )$ is the key matrix,</li>
+<li>$( V )$ is the value matrix,</li>
+<li>$( d_k )$ is the dimensionality of the keys.</li>
+</ul>
+<h2 id="training-llms">Training LLMs</h2>
+<p>Training LLMs involves several steps:</p>
+<ol>
+<li><strong>Data Preparation</strong>: Collect and preprocess large text corpora.</li>
+<li><strong>Model Initialization</strong>: Start with a pre-trained model or initialize from scratch.</li>
+<li><strong>Training</strong>: Use gradient descent and backpropagation to minimize the loss function.</li>
+</ol>
+<h2 id="introduction-to-llms-for-satellite-images">Introduction to LLMs for Satellite Images</h2>
+<p>Fine-tuning a Large Language Model (LLM) like SatGPT for satellite imagery involves several critical stages. This process transforms a pre-trained model into a specialized tool capable of analyzing and generating insights from satellite images. This blog post provides a step-by-step guide to fine-tuning and deploying SatGPT, covering each phase in detail.</p>
+<p><strong>Figure 1: Scenarios and Performance Metrics from Zhang &amp; Wang&rsquo;s Study</strong></p>
+<p>In their paper <em>“Good at Captioning, Bad at Counting: Benchmarking GPT-4V on Earth Observation Data”</em> (<a href="https://arxiv.org/abs/2401.17600" target="_blank" rel="noopener">arXiv:2401.17600</a>), Zhang and Wang (2024) present a detailed analysis of how GPT-4V performs across various tasks. Figure 1 highlights key scenarios and the model’s performance:</p>
+<ol>
+<li>
+<p><strong>Location Recognition</strong><br>
+<strong>Scenario:</strong> Guess the name of the landmark based on features like its dome and layout.<br>
+<strong>Example Answer:</strong> With its distinctive style and layout, the landmark is identified as the Nebraska State Capitol.</p>
+</li>
+<li>
+<p><strong>Image Captioning</strong><br>
+<strong>Scenario:</strong> Provide a one-sentence caption for the given image.<br>
+<strong>Example Caption:</strong> An aerial view of an airport terminal, featuring nearby aircraft, taxiways, and parking areas.</p>
+</li>
+<li>
+<p><strong>Land Use &amp; Land Cover Classification</strong><br>
+<strong>Scenario:</strong> Classify the image into one of several categories.<br>
+<strong>Example Classification:</strong> The best description for the image is a Shipping Yard.</p>
+</li>
+<li>
+<p><strong>Object Localization</strong><br>
+<strong>Scenario:</strong> Identify the coordinates of the described object in the image.<br>
+<strong>Example Description:</strong> The gray windmill in the center.<br>
+<strong>Coordinates:</strong> [233, 383, 376, 542]</p>
+</li>
+<li>
+<p><strong>Object Counting</strong><br>
+<strong>Scenario:</strong> Estimate the number of trees visible in the image.<br>
+<strong>Count:</strong> 134</p>
+</li>
+<li>
+<p><strong>Change Detection</strong><br>
+<strong>Scenario:</strong> Count buildings in various damage categories and present in JSON format.<br>
+<strong>JSON Format:</strong></p>
+<pre><code class="language-json">{
+  &quot;count_before&quot;: 75,
+  &quot;no_damage&quot;: 2,
+  &quot;minor_damage&quot;: 73,
+  &quot;major_damage&quot;: 0,
+  &quot;destroyed&quot;: 1
+}
+</code></pre>
+</li>
+</ol>
+<p><strong>Performance Metrics:</strong></p>
+<ul>
+<li><strong>RefCLIP Score:</strong> Shows how well the model performs on reference-based tasks.</li>
+<li><strong>F1 Score:</strong> Reflects the model’s accuracy in classification tasks.</li>
+<li><strong>Mean IoU:</strong> Measures the model’s performance in object localization.</li>
+<li><strong>R2 Score:</strong> Assesses the model’s predictive accuracy in various tasks.</li>
+</ul>
+<p>These results provide valuable insights into GPT-4V’s strengths and limitations, particularly in the realm of earth observation data.</p>
+<div style="text-align: center;"> <img src="sample_apps.png" alt="Earth observation data"> <p style="font-style: italic; margin-top: 0px;">Fig. 1. Here are examples of inputs and outputs from various benchmark tasks and how five different VLMs stack up. We’ve included just a snippet of the user prompts and model responses to highlight the key points. <a href="https://arxiv.org/pdf/2401.17600v1" target="_blank">[Good at captioning, bad at counting]</a></p> </div>
+<h2 id="overview-of-the-fine-tuning-process">Overview of the Fine-Tuning Process</h2>
+<p>The process of fine-tuning and deploying a satellite-specific LLM model involves the following stages:</p>
+<ol>
+<li><strong>Data Preparation</strong></li>
+<li><strong>Model Selection</strong></li>
+<li><strong>Fine-Tuning Paradigm</strong></li>
+<li><strong>Model Validation and Evaluation</strong></li>
+<li><strong>Export and Deployment to Hugging Face</strong></li>
+</ol>
+<h2 id="step-by-step-fine-tuning-of-satgpt-for-satellite-imagery">Step-by-Step Fine-Tuning of SatGPT for Satellite Imagery</h2>
+<h3 id="1-data-preparation">1. Data Preparation</h3>
+<p><strong>Objective</strong>: Collect, preprocess, and format satellite images and associated textual annotations.</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>
+<p><strong>Collect Satellite Images</strong>: Obtain satellite images from sources such as commercial providers or public datasets (e.g., Sentinel, Landsat).</p>
+</li>
+<li>
+<p><strong>Annotate Images</strong>: Label images with relevant information (e.g., land cover types, objects of interest).</p>
+</li>
+<li>
+<p><strong>Preprocess Images</strong>: Resize and normalize images to match the input requirements of the Vision Transformer (ViT) model.</p>
+</li>
+<li>
+<p><strong>Prepare Textual Descriptions</strong>: Generate textual descriptions or annotations for each image, which will be used for training the text generation component.</p>
+</li>
+</ol>
+<p><strong>Example</strong>:</p>
+<pre><code class="language-python">from transformers import ViTFeatureExtractor, GPT2Tokenizer
+
+# Initialize feature extractor and tokenizer
+feature_extractor = ViTFeatureExtractor.from_pretrained('google/vit-base-patch16-224-in21k')
+tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+
+# Sample image and text
+image = ... # Load satellite image
+text = &quot;This is a description of the satellite image.&quot;
+
+# Prepare inputs
+inputs = feature_extractor(images=image, return_tensors=&quot;pt&quot;)
+labels = tokenizer(text, return_tensors=&quot;pt&quot;).input_ids
+</code></pre>
+<h3 id="2-model-selection">2. Model Selection</h3>
+<p><strong>Objective</strong>: Choose an appropriate pre-trained model as the foundation for SatGPT.</p>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><strong>Vision Transformer (ViT)</strong>: For processing and extracting features from satellite images.</li>
+<li><strong>GPT-2 or GPT-3</strong>: For generating textual descriptions or insights based on image features.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<pre><code class="language-python">from transformers import GPT2LMHeadModel, ViTModel
+
+# Load pre-trained models
+image_model = ViTModel.from_pretrained('google/vit-base-patch16-224-in21k')
+text_model = GPT2LMHeadModel.from_pretrained('gpt2')
+</code></pre>
+<h3 id="3-fine-tuning-paradigm">3. Fine-Tuning Paradigm</h3>
+<p><strong>Objective</strong>: Adapt the selected models to work together for the specific task of analyzing satellite imagery.</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>
+<p><strong>Combine Models</strong>: Integrate ViT for image feature extraction and GPT for text generation.</p>
+</li>
+<li>
+<p><strong>Define Loss Functions</strong>: Use suitable loss functions for image and text components.</p>
+</li>
+<li>
+<p><strong>Training Loop</strong>: Implement a training loop to update model parameters based on the image-text pairs.</p>
+</li>
+</ol>
+<p><strong>Example</strong>:</p>
+<pre><code class="language-python">from transformers import Trainer, TrainingArguments
+
+# Define training arguments
+training_args = TrainingArguments(
+    output_dir='./results',
+    num_train_epochs=3,
+    per_device_train_batch_size=4,
+    logging_dir='./logs',
+)
+
+# Initialize Trainer
+trainer = Trainer(
+    model=image_model,  # This would be a combined model in practice
+    args=training_args,
+    train_dataset=train_dataset,  # Prepare your dataset
+)
+
+# Train the model
+trainer.train()
+</code></pre>
+<h3 id="4-model-validation-and-evaluation">4. Model Validation and Evaluation</h3>
+<p><strong>Objective</strong>: Assess the performance of the fine-tuned model to ensure it meets the desired criteria.</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>
+<p><strong>Validation Set</strong>: Use a separate dataset to validate the model’s performance during training.</p>
+</li>
+<li>
+<p><strong>Evaluation Metrics</strong>: Measure performance using metrics such as accuracy, F1 score, or BLEU score (for text generation).</p>
+</li>
+</ol>
+<p><strong>Example</strong>:</p>
+<pre><code class="language-python"># Evaluate the model
+eval_results = trainer.evaluate()
+print(eval_results)
+</code></pre>
+<h3 id="5-export-and-deployment-to-hugging-face">5. Export and Deployment to Hugging Face</h3>
+<p><strong>Objective</strong>: Make the fine-tuned model available for inference and integration through Hugging Face.</p>
+<p><strong>Steps</strong>:</p>
+<ol>
+<li>
+<p><strong>Export the Model</strong>: Save the fine-tuned model and tokenizer.</p>
+</li>
+<li>
+<p><strong>Upload to Hugging Face</strong>: Use the <code>transformers</code> library to push the model to the Hugging Face Hub.</p>
+</li>
+<li>
+<p><strong>Create an Inference Endpoint</strong>: Deploy the model and set up an API endpoint for user interactions.</p>
+</li>
+</ol>
+<p><strong>Example</strong>:</p>
+<pre><code class="language-python">from transformers import pipeline
+
+# Load model from Hugging Face Hub
+nlp = pipeline(&quot;text-generation&quot;, model=&quot;username/satgpt-model&quot;)
+
+# Use the model
+result = nlp(&quot;Describe the land cover of this satellite image.&quot;)
+print(result)
+</code></pre>
+<h2 id="additional-concepts">Additional Concepts</h2>
+<ul>
+<li><strong>Retrieval-Augmented Generation (RAG)</strong>: Combines document retrieval with generative models to improve response accuracy.</li>
+<li><strong>Vision Transformers (ViT)</strong>: Adapt transformers for image processing by treating images as sequences of patches.</li>
+</ul>
+<h3 id="formula-for-self-attention-in-rag">Formula for Self-Attention in RAG</h3>
+<p>In RAG, the attention mechanism can be described as:</p>
+<p>$[ \text{RAG}(Q, K, V, D) = \text{Attention}(Q, K, V) + \text{Retrieval}(D) ]$</p>
+<p>where $( D )$ represents retrieved documents.</p>
+<h3 id="vision-transformer-vit">Vision Transformer (ViT)</h3>
+<p>The Vision Transformer treats images as sequences of patches and processes them with transformer architectures. The key operation in ViT involves:</p>
+<p>$[ \text{Patch Embedding}(I) = \text{Linear}(I) + \text{Positional Encoding} ]$</p>
+<p>where $( I )$ is the image and the output is a sequence of patch embeddings.</p>
+<h2 id="full-flow-diagram">Full Flow Diagram</h2>
+<p>Here&rsquo;s a conceptual flow of how data is processed through SatGPT, from input to output:</p>
+<ol>
+<li><strong>Input</strong>: Satellite Image + Textual Description</li>
+<li><strong>Image Processing</strong>: ViT processes image into feature vectors.</li>
+<li><strong>Text Generation</strong>: GPT-2 generates textual descriptions from image features.</li>
+<li><strong>Output</strong>: Generated Text</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>Fine-tuning and deploying a satellite-specific LLM like SatGPT involves several critical stages: data preparation, model selection, fine-tuning, validation, and deployment. By following these steps, you can create a powerful tool for analyzing satellite imagery and generating valuable insights.</p>
+<h2 id="citation">Citation</h2>
+<blockquote>
+<p>Panboonyuen, Teerapong. (Sep 2024). <em>How to Fine-Tune and Deploy a Satellite-Specific LLM Model for Satellite Images</em>. Blog post on Kao Panboonyuen. <a href="https://kaopanboonyuen.github.io/blog/2024-09-09-how-to-fine-tune-and-deploy-a-satellite-specific-llm-model/" target="_blank" rel="noopener">https://kaopanboonyuen.github.io/blog/2024-09-09-how-to-fine-tune-and-deploy-a-satellite-specific-llm-model/</a></p>
+</blockquote>
+<p><strong>For a BibTeX citation:</strong></p>
+<pre><code class="language-bash">@article{panboonyuen2024finetune,
+  title   = &quot;How to Fine-Tune and Deploy a Satellite-Specific LLM Model for Satellite Images&quot;,
+  author  = &quot;Panboonyuen, Teerapong&quot;,
+  journal = &quot;kaopanboonyuen.github.io/&quot;,
+  year    = &quot;2024&quot;,
+  month   = &quot;Sep&quot;,
+  url     = &quot;https://kaopanboonyuen.github.io/blog/2024-09-09-how-to-fine-tune-and-deploy-a-satellite-specific-llm-model/&quot;}
+</code></pre>
+<div class="alert alert-note">
+  <div>
+    Did you find this page helpful? Consider sharing it 🙌
+  </div>
+</div>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p><strong>Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Kaiser, Ł., Polosukhin, I. (NeurIPS 2017).</strong> &ldquo;Attention Is All You Need.&rdquo; <em>Neural Information Processing Systems (NeurIPS)</em>, 5998-6008. <a href="https://doi.org/10.5555/3295222.3295349" target="_blank" rel="noopener">doi:10.5555/3295222.3295349</a></p>
+</li>
+<li>
+<p><strong>Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., Shinn, E., Ramesh, A., Muthukrishnan, P., and others. (NeurIPS 2020).</strong> &ldquo;Language Models are Few-Shot Learners.&rdquo; <em>Neural Information Processing Systems (NeurIPS)</em>, 1877-1901. <a href="https://doi.org/10.5555/3454337.3454731" target="_blank" rel="noopener">doi:10.5555/3454337.3454731</a></p>
+</li>
+<li>
+<p><strong>Devlin, J., Chang, M. W., Lee, K., &amp; Toutanova, K. (NAACL 2019).</strong> &ldquo;BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.&rdquo; <em>North American Chapter of the Association for Computational Linguistics (NAACL)</em>, 4171-4186. <a href="https://doi.org/10.5555/3331189.3331190" target="_blank" rel="noopener">doi:10.5555/3331189.3331190</a></p>
+</li>
+<li>
+<p><strong>Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., &amp; others. (ICLR 2021).</strong> &ldquo;An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale.&rdquo; <em>International Conference on Learning Representations (ICLR)</em>. <a href="https://doi.org/10.5555/3453424.3453670" target="_blank" rel="noopener">doi:10.5555/3453424.3453670</a></p>
+</li>
+<li>
+<p><strong>Radford, A., Wu, J., Child, R., Mehri, S., &amp; others. (ICLR 2019).</strong> &ldquo;Language Models are Unsupervised Multitask Learners.&rdquo; <em>International Conference on Learning Representations (ICLR)</em>. <a href="https://doi.org/10.5555/3326452.3326458" target="_blank" rel="noopener">doi:10.5555/3326452.3326458</a></p>
+</li>
+<li>
+<p><strong>Clark, K., Luong, M. T., Le, Q. V., &amp; Manning, C. D. (ACL 2019).</strong> &ldquo;ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators.&rdquo; <em>Association for Computational Linguistics (ACL)</em>, 2251-2261. <a href="https://doi.org/10.5555/3454375.3454420" target="_blank" rel="noopener">doi:10.5555/3454375.3454420</a></p>
+</li>
+<li>
+<p><strong>Zhang, Y., Zhao, Y., Saleh, M., &amp; Liu, P. J. (ICLR 2021).</strong> &ldquo;PEGASUS: Pre-training with Extracted Gap-sentences for Abstractive Summarization.&rdquo; <em>International Conference on Learning Representations (ICLR)</em>. <a href="https://doi.org/10.5555/3453104.3453140" target="_blank" rel="noopener">doi:10.5555/3453104.3453140</a></p>
+</li>
+<li>
+<p><strong>Kenton, J., &amp; Toutanova, K. (NAACL 2019).</strong> &ldquo;BERT: Bidirectional Encoder Representations from Transformers.&rdquo; <em>North American Chapter of the Association for Computational Linguistics (NAACL)</em>, 4171-4186. <a href="https://doi.org/10.5555/3331189.3331190" target="_blank" rel="noopener">doi:10.5555/3331189.3331190</a></p>
+</li>
+<li>
+<p><strong>Yang, Z., Yang, D., Dineen, C., &amp; others. (ICLR 2020).</strong> &ldquo;XLNet: Generalized Autoregressive Pretraining for Language Understanding.&rdquo; <em>International Conference on Learning Representations (ICLR)</em>. <a href="https://doi.org/10.5555/3456141.3456151" target="_blank" rel="noopener">doi:10.5555/3456141.3456151</a></p>
+</li>
+<li>
+<p><strong>Raffel, C., Shinn, E., S. J. McDonell, C. Lee, K., &amp; others. (ICLR 2021).</strong> &ldquo;Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer.&rdquo; <em>International Conference on Learning Representations (ICLR)</em>. <a href="https://doi.org/10.5555/3456181.3456210" target="_blank" rel="noopener">doi:10.5555/3456181.3456210</a></p>
+</li>
+<li>
+<p><strong>Zhang, C., &amp; Wang, S. (arXiv 2024).</strong> &ldquo;Good at Captioning, Bad at Counting: Benchmarking GPT-4V on Earth Observation Data.&rdquo; <em>arXiv preprint arXiv:2401.17600</em>. <a href="https://arxiv.org/abs/2401.17600" target="_blank" rel="noopener">arxiv.org/abs/2401.17600</a></p>
+</li>
+</ol>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/deep-learning/">deep-learning</a>
+  
+  <a class="badge badge-light" href="/tag/computer-vision/">computer-vision</a>
+  
+  <a class="badge badge-light" href="/tag/object-detection/">object-detection</a>
+  
+  <a class="badge badge-light" href="/tag/instance-segmentation/">instance-segmentation</a>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://kaopanboonyuen.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/teerapong-panboonyuen/avatar_hu3bf8c3b6af25e9d1c9865942b827a76a_6860848_270x270_fill_q75_lanczos_center.jpg" alt="Teerapong Panboonyuen"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://kaopanboonyuen.github.io/">Teerapong Panboonyuen</a></h5>
+      
+      <p class="card-text">My research focuses on leveraging advanced machine intelligence techniques, specifically computer vision, to enhance semantic understanding, learning representations, visual recognition, and geospatial data interpretation.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:teerapong.panboonyuen@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://x.com/kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://orcid.org/0000-0001-8464-4476" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://kaopanboonyuen.github.io/files/panboonyuen_cv.pdf" target="_blank" rel="noopener">
+        <i class="fas fa-download"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/teerapong-panboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    ©2024 Kao Panboonyuen
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Built using <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> and the <a href="https://github.com/wowchemy/starter-hugo-academic" target="_blank" rel="noopener">Wowchemy academic template</a>. View <a href="https://github.com/kaopanboonyuen/kaopanboonyuen.github.io" target="_blank" rel="noopener">source</a>.
+        
+  </p>
+</footer>
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/golang.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.b36873e4e886c7b03b21e4eb97d9b6d7.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>
