@@ -89,7 +89,11 @@
 &lt;/details&gt;
 
 &lt;h2 id=&#34;introduction-to-large-language-models-llms&#34;&gt;Introduction to Large Language Models (LLMs)&lt;/h2&gt;
-&lt;p&gt;Large Language Models (LLMs) are revolutionizing the field of Natural Language Processing (NLP) and Artificial Intelligence (AI). They leverage advanced deep learning architectures to understand, generate, and manipulate human language. In this blog post, we&amp;rsquo;ll explore the technical depths of LLMs, including their architecture, training, fine-tuning, and deployment.&lt;/p&gt;
+&lt;p&gt;Large Language Models (LLMs) are at the forefront of a revolution in Artificial Intelligence (AI) and Natural Language Processing (NLP). These models are not just sophisticated algorithms; they represent a leap forward in how machines understand and generate human language. Leveraging cutting-edge deep learning architectures, such as transformers, LLMs have transformed the landscape of language technology.&lt;/p&gt;
+&lt;p&gt;At their essence, LLMs are built on expansive neural networks with billions of parameters. These networks are trained on vast corpora of text data, learning to discern intricate patterns and relationships within language. Through a process known as pre-training, LLMs develop a broad understanding of linguistic structures, context, and semantics. During this phase, they utilize unsupervised learning techniques to predict masked words or sequences, refining their ability to understand and generate coherent text.&lt;/p&gt;
+&lt;p&gt;Following pre-training, LLMs undergo fine-tuning to adapt their general language capabilities to specific tasks or domains. This supervised learning phase involves training the model on a targeted dataset, allowing it to excel in applications such as text generation, translation, sentiment analysis, and question-answering. Techniques like transfer learning and few-shot learning further enhance the model&amp;rsquo;s adaptability, enabling it to generalize from limited examples and perform across various contexts.&lt;/p&gt;
+&lt;p&gt;Deploying LLMs in real-world scenarios involves addressing practical challenges related to computational resources and scalability. These models require substantial processing power and memory, often necessitating the use of advanced hardware like GPUs or TPUs. Despite these demands, the benefits of integrating LLMs into applications—such as chatbots, virtual assistants, content generation, and automated summarization—are profound, offering significant advancements in how machines interact with human language.&lt;/p&gt;
+&lt;p&gt;In this blog post, I will delve into the technical intricacies of LLMs, exploring their architecture, training methodologies, and deployment considerations. Prepare to discover how these powerful AI tools are pushing the boundaries of language technology and shaping the future of machine intelligence.&lt;/p&gt;
 &lt;h2 id=&#34;key-vocabulary&#34;&gt;Key Vocabulary&lt;/h2&gt;
 &lt;p&gt;Here are some essential terms and acronyms related to LLMs:&lt;/p&gt;
 &lt;table&gt;
@@ -523,7 +527,7 @@ print(eval_results)
 nlp = pipeline(&amp;quot;text-generation&amp;quot;, model=&amp;quot;username/satgpt-model&amp;quot;)
 
 # Use the model
-result = nlp(&amp;quot;Describe the land cover of this satellite image.&amp;quot;)
+result = nlp(&amp;quot;Describe the land cover of this GISTDA satellite image.&amp;quot;)
 print(result)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;additional-concepts&#34;&gt;Additional Concepts&lt;/h2&gt;
@@ -708,7 +712,7 @@ where $TP$ is true positives, $FP$ is false positives, and $FN$ is false negativ
 &lt;h4 id=&#34;key-equation-1&#34;&gt;Key Equation&lt;/h4&gt;
 &lt;p&gt;Average Precision (AP) for a single class:
 $[
-\text{AP} = \int_{0}^{1} \text{Precision}(r) , d\text{Recall}(r)
+\text{AP} = \int_{0}^{1} \text{Precision}(r) , \text{Recall}(r)
 ]$
 where $\text{Precision}(r)$ is the precision at recall level $r$.&lt;/p&gt;
 &lt;p&gt;mAP is the mean of AP across all classes:
@@ -743,8 +747,8 @@ recall = recall_score(y_true, y_pred)
 f1 = f1_score(y_true, y_pred)
 
 # Example for BLEU score
-reference = [[&#39;this&#39;, &#39;is&#39;, &#39;a&#39;, &#39;test&#39;]]
-candidate = [&#39;this&#39;, &#39;is&#39;, &#39;test&#39;]
+reference = [[&#39;GISTDA&#39;, &#39;is&#39;, &#39;the&#39;, &#39;premier&#39;, &#39;place&#39;, &#39;to&#39;, &#39;work&#39;, &#39;in&#39;, &#39;the&#39;, &#39;geo&#39;, &#39;sector&#39;, &#39;in&#39;, &#39;thailand&#39;]]
+candidate = [&#39;GISTDA&#39;, &#39;is&#39;, &#39;the&#39;, &#39;best&#39;, &#39;workplace&#39;, &#39;in&#39;, &#39;geo&#39;, &#39;in&#39;, &#39;thailand&#39;]
 bleu_score = sentence_bleu(reference, candidate)
 
 print(f&amp;quot;Precision: {precision}&amp;quot;)
@@ -755,12 +759,13 @@ print(f&amp;quot;BLEU Score: {bleu_score}&amp;quot;)
 &lt;hr&gt;
 &lt;h3 id=&#34;16-transfer-learning-for-satellite-imagery&#34;&gt;16. &lt;strong&gt;Transfer Learning for Satellite Imagery&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;Transfer learning uses models pre-trained on general datasets and adapts them for satellite image tasks through domain-specific fine-tuning.&lt;/p&gt;
-&lt;h4 id=&#34;key-equations-8&#34;&gt;Key Equations&lt;/h4&gt;
-&lt;p&gt;The total loss in transfer learning:
-$[
-\mathcal{L}&lt;em&gt;{\text{total}} = \mathcal{L}&lt;/em&gt;{\text{general}}(\theta_g) + \lambda \mathcal{L}_{\text{task}}(\theta_t)
-]$
-where $\lambda$ is a regularization factor.&lt;/p&gt;
+&lt;!-- 
+#### Key Equations
+The total loss in transfer learning:
+$\[
+\mathcal{L}_{\text{total}} = \mathcal{L}_{\text{general}}(\theta_g) + \lambda \mathcal{L}_{\text{task}}(\theta_t)
+\]$
+where $\lambda$ is a regularization factor. --&gt;
 &lt;h4 id=&#34;example-code-2&#34;&gt;Example Code&lt;/h4&gt;
 &lt;p&gt;Using pre-trained ResNet for satellite image classification:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from torchvision import models
@@ -782,7 +787,7 @@ resnet.fc = nn.Linear(in_features=2048, out_features=num_classes)
 &lt;li&gt;&lt;strong&gt;Grad-CAM&lt;/strong&gt;: Generates heatmaps highlighting important regions in the satellite images.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;SHAP&lt;/strong&gt;: Explains individual predictions by computing feature contributions.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;key-equations-9&#34;&gt;Key Equations&lt;/h4&gt;
+&lt;h4 id=&#34;key-equations-8&#34;&gt;Key Equations&lt;/h4&gt;
 &lt;p&gt;Grad-CAM heatmap formula:
 $[
 \text{Grad-CAM}(A^k) = \text{ReLU}\left( \sum_k \alpha_k A^k \right)
