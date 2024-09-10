@@ -34,7 +34,15 @@
       &lt;/ul&gt;
     &lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#training-llms&#34;&gt;Training LLMs&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#introduction-to-llms-for-satellite-images&#34;&gt;Introduction to LLMs for Satellite Images&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#introduction-to-llms-for-satellite-images&#34;&gt;Introduction to LLMs for Satellite Images&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#exploring-vision-language-models-vlms-to-understand-high-level-features-in-remotely-sensed-images&#34;&gt;Exploring Vision-Language Models (VLMs) to Understand High-Level Features in Remotely Sensed Images&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#what-makes-vision-language-models-vlms-special&#34;&gt;What Makes Vision-Language Models (VLMs) Special?&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#challenges-in-remote-sensing-with-vlms&#34;&gt;Challenges in Remote Sensing with VLMs&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#benchmarking-vlms-on-landmark-recognition&#34;&gt;Benchmarking VLMs on Landmark Recognition&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#diving-deeper-into-vlms-case-studies-of-landmark-recognition-and-scene-interpretation&#34;&gt;Diving Deeper into VLMs: Case Studies of Landmark Recognition and Scene Interpretation&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#overview-of-the-fine-tuning-process&#34;&gt;Overview of the Fine-Tuning Process&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#step-by-step-fine-tuning-of-satgpt-for-satellite-imagery&#34;&gt;Step-by-Step Fine-Tuning of SatGPT for Satellite Imagery&lt;/a&gt;
       &lt;ul&gt;
@@ -52,6 +60,27 @@
       &lt;/ul&gt;
     &lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#full-flow-diagram&#34;&gt;Full Flow Diagram&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#quick-thoughts-on-llms-before-we-wrap-up-this-blog&#34;&gt;Quick thoughts on LLMs before we wrap up this blog:&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#1-introduction-to-large-language-models-llms-in-remote-sensing&#34;&gt;1. &lt;strong&gt;Introduction to Large Language Models (LLMs) in Remote Sensing&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#2-foundation-models-and-their-role-in-llms&#34;&gt;2. &lt;strong&gt;Foundation Models and Their Role in LLMs&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#3-training-vs-fine-tuning-vs-pre-trained-models-in-llms&#34;&gt;3. &lt;strong&gt;Training vs Fine-tuning vs Pre-trained Models in LLMs&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#4-how-to-train-llms-on-satellite-images&#34;&gt;4. &lt;strong&gt;How to Train LLMs on Satellite Images&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#5-retrieval-augmented-generation-rag-for-satellite-image-analysis&#34;&gt;5. &lt;strong&gt;Retrieval-Augmented Generation (RAG) for Satellite Image Analysis&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#6-using-langchain-for-satellite-image-llm-applications&#34;&gt;6. &lt;strong&gt;Using LangChain for Satellite Image LLM Applications&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#7-sample-datasets-for-llm-fine-tuning-in-remote-sensing&#34;&gt;7. &lt;strong&gt;Sample Datasets for LLM Fine-Tuning in Remote Sensing&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#8-mathematical-foundations-of-attention-mechanisms-in-llms&#34;&gt;8. &lt;strong&gt;Mathematical Foundations of Attention Mechanisms in LLMs&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#9-multimodal-llm-architectures-for-satellite-images&#34;&gt;9. &lt;strong&gt;Multimodal LLM Architectures for Satellite Images&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#10-preprocessing-techniques-for-satellite-images-in-llms&#34;&gt;10. &lt;strong&gt;Preprocessing Techniques for Satellite Images in LLMs&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#11-handling-illumination-and-atmospheric-effects-in-llms&#34;&gt;11. &lt;strong&gt;Handling Illumination and Atmospheric Effects in LLMs&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#12-self-supervised-learning-ssl-for-satellite-image-analysis&#34;&gt;12. &lt;strong&gt;Self-Supervised Learning (SSL) for Satellite Image Analysis&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#13-open-source-tools-for-llms-in-satellite-image-analysis&#34;&gt;13. &lt;strong&gt;Open-Source Tools for LLMs in Satellite Image Analysis&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#14-fine-tuning-llms-for-specific-satellite-image-tasks&#34;&gt;14. &lt;strong&gt;Fine-Tuning LLMs for Specific Satellite Image Tasks&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#15-evaluation-metrics-for-llms-in-remote-sensing&#34;&gt;15. &lt;strong&gt;Evaluation Metrics for LLMs in Remote Sensing&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#16-transfer-learning-for-satellite-imagery&#34;&gt;16. &lt;strong&gt;Transfer Learning for Satellite Imagery&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#17-explainability-in-llms-for-remote-sensing-xai&#34;&gt;17. &lt;strong&gt;Explainability in LLMs for Remote Sensing (XAI)&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#conclusion&#34;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
@@ -236,29 +265,37 @@
 &lt;li&gt;&lt;strong&gt;Model Initialization&lt;/strong&gt;: Start with a pre-trained model or initialize from scratch.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Training&lt;/strong&gt;: Use gradient descent and backpropagation to minimize the loss function.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;introduction-to-llms-for-satellite-images&#34;&gt;Introduction to LLMs for Satellite Images&lt;/h2&gt;
 &lt;p&gt;Fine-tuning a Large Language Model (LLM) like SatGPT for satellite imagery involves several critical stages. This process transforms a pre-trained model into a specialized tool capable of analyzing and generating insights from satellite images. This blog post provides a step-by-step guide to fine-tuning and deploying SatGPT, covering each phase in detail.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Figure 1: Scenarios and Performance Metrics from Zhang &amp;amp; Wang&amp;rsquo;s Study&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;In their paper &lt;em&gt;“Good at Captioning, Bad at Counting: Benchmarking GPT-4V on Earth Observation Data”&lt;/em&gt; (&lt;a href=&#34;https://arxiv.org/abs/2401.17600&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv:2401.17600&lt;/a&gt;), Zhang and Wang (2024) present a detailed analysis of how GPT-4V performs across various tasks. Figure 1 highlights key scenarios and the model’s performance:&lt;/p&gt;
+&lt;p&gt;In their 2024 paper, &lt;em&gt;“Good at Captioning, Bad at Counting: Benchmarking GPT-4V on Earth Observation Data”&lt;/em&gt; (&lt;a href=&#34;https://arxiv.org/abs/2401.17600&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv:2401.17600&lt;/a&gt;), Zhang and Wang focus on developing a benchmark for Vision-Language Models (VLMs) applied to Earth Observation (EO) data. Their initial framework addresses three main areas: scene understanding, localization and counting, and change detection. To assess VLM performance across these areas, they design evaluations that span various applications, from wildlife conservation to urban monitoring, as illustrated in Figure 1. Their goals are to evaluate existing VLMs, provide insights into effective prompting techniques for EO tasks, and establish a flexible system for ongoing benchmark updates and future VLM evaluations.&lt;/p&gt;
+&lt;p&gt;For scene understanding, Zhang and Wang assess how VLMs integrate high-level image information with latent knowledge from language modeling. They use several datasets for this purpose: a new dataset for aerial landmark recognition to test the model’s ability to identify and geolocate U.S. landmarks, the RSICD dataset to evaluate the model’s capability to generate captions for Google Earth images, the BigEarthNet dataset to probe land cover identification in medium-resolution satellite images, and the fMoW-WILDS and PatternNet datasets to assess land use classification in high-resolution satellite images.&lt;/p&gt;
+&lt;p&gt;In the domain of localization and counting, Zhang and Wang evaluate whether VLMs can extract detailed information about specific objects and understand their spatial relationships. They create datasets for this purpose, including the DIOR-RSVG dataset to test Referring Expression Comprehension (REC) abilities, where the model localizes objects based on natural language descriptions. Additionally, they use the NEON-Tree, COWC, and xBD datasets to evaluate the counting of small objects like trees, cars, and buildings in aerial and satellite images, and the aerial animal detection dataset to assess the model’s ability to count animals in tilted aerial images.&lt;/p&gt;
+&lt;p&gt;For change detection, the focus is on evaluating how VLMs track changes over time. Zhang and Wang use a dataset that categorizes buildings by damage levels and presents the data in JSON format, tracking counts before and after damage across various categories.&lt;/p&gt;
+&lt;p&gt;The paper highlights several challenges and areas for future work. One major challenge is detecting data contamination, which is crucial for maintaining the fairness and effectiveness of benchmarks as VLMs evolve. Additionally, a more detailed analysis of model failures—such as knowledge gaps, reasoning errors, perceptual mistakes, and text misunderstandings—could provide deeper insights into current VLM capabilities. Zhang and Wang also note the static nature of benchmarks as a limitation, suggesting that dynamic updates may be necessary to keep benchmarks relevant and challenging as VLMs advance.&lt;/p&gt;
+&lt;p&gt;In the context of image captioning, Zhang and Wang evaluate the ability of instruction-following VLMs to describe aerial or satellite images. Their evaluation uses the RSICD dataset to compare VLM-generated captions with human-annotated examples both qualitatively and quantitatively, assessing how well VLMs describe images at various levels of detail.&lt;/p&gt;
+&lt;p&gt;For land use and land cover (LULC) classification, Zhang and Wang assess VLMs&amp;rsquo; performance on multiple-choice classification tasks using datasets like fMoW-WILDS, PatternNet, and BigEarthNet. Their aim is to determine which models excel in zero-shot classification and how image resolution impacts classification accuracy. They find that VLM performance varies based on image resolution, label ambiguity, and granularity. Specifically, GPT-4V shows lower performance in land cover classification compared to specialized models but performs better on certain datasets like fMoW-WILDS and PatternNet. The challenges of ambiguous class labels and limited multi-spectral information in the BigEarthNet dataset also affect GPT-4V&amp;rsquo;s performance.&lt;/p&gt;
+&lt;p&gt;Overall, Zhang and Wang’s work underscores the importance of evolving benchmarks and VLM capabilities to address the challenges in EO data applications.&lt;/p&gt;
+&lt;p&gt;They deliver an in-depth analysis of GPT-4V’s performance across different tasks. Figure 1 illustrates key scenarios and the model’s performance:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Location Recognition&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;Scenario:&lt;/strong&gt; Guess the name of the landmark based on features like its dome and layout.&lt;br&gt;
-&lt;strong&gt;Example Answer:&lt;/strong&gt; With its distinctive style and layout, the landmark is identified as the Nebraska State Capitol.&lt;/p&gt;
+&lt;strong&gt;Scenario:&lt;/strong&gt; Identify the landmark based on its features, such as its dome and layout.&lt;br&gt;
+&lt;strong&gt;Example Answer:&lt;/strong&gt; The landmark, recognized by its distinctive style and layout, is the Nebraska State Capitol.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Image Captioning&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;Scenario:&lt;/strong&gt; Provide a one-sentence caption for the given image.&lt;br&gt;
-&lt;strong&gt;Example Caption:&lt;/strong&gt; An aerial view of an airport terminal, featuring nearby aircraft, taxiways, and parking areas.&lt;/p&gt;
+&lt;strong&gt;Scenario:&lt;/strong&gt; Generate a one-sentence caption for the provided image.&lt;br&gt;
+&lt;strong&gt;Example Caption:&lt;/strong&gt; An aerial view of an airport terminal, showcasing nearby aircraft, taxiways, and parking areas.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Land Use &amp;amp; Land Cover Classification&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;Scenario:&lt;/strong&gt; Classify the image into one of several categories.&lt;br&gt;
-&lt;strong&gt;Example Classification:&lt;/strong&gt; The best description for the image is a Shipping Yard.&lt;/p&gt;
+&lt;strong&gt;Scenario:&lt;/strong&gt; Categorize the image into one of several predefined categories.&lt;br&gt;
+&lt;strong&gt;Example Classification:&lt;/strong&gt; The image is best described as a Shipping Yard.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Object Localization&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;Scenario:&lt;/strong&gt; Identify the coordinates of the described object in the image.&lt;br&gt;
+&lt;strong&gt;Scenario:&lt;/strong&gt; Pinpoint the coordinates of a described object in the image.&lt;br&gt;
 &lt;strong&gt;Example Description:&lt;/strong&gt; The gray windmill in the center.&lt;br&gt;
 &lt;strong&gt;Coordinates:&lt;/strong&gt; [233, 383, 376, 542]&lt;/p&gt;
 &lt;/li&gt;
@@ -269,7 +306,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Change Detection&lt;/strong&gt;&lt;br&gt;
-&lt;strong&gt;Scenario:&lt;/strong&gt; Count buildings in various damage categories and present in JSON format.&lt;br&gt;
+&lt;strong&gt;Scenario:&lt;/strong&gt; Count buildings in various damage categories and present the data in JSON format.&lt;br&gt;
 &lt;strong&gt;JSON Format:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
   &amp;quot;count_before&amp;quot;: 75,
@@ -283,13 +320,81 @@
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;Performance Metrics:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;RefCLIP Score:&lt;/strong&gt; Shows how well the model performs on reference-based tasks.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;F1 Score:&lt;/strong&gt; Reflects the model’s accuracy in classification tasks.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mean IoU:&lt;/strong&gt; Measures the model’s performance in object localization.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;R2 Score:&lt;/strong&gt; Assesses the model’s predictive accuracy in various tasks.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RefCLIP Score:&lt;/strong&gt; Evaluates the model’s performance on reference-based tasks.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;F1 Score:&lt;/strong&gt; Measures the model’s accuracy in classification tasks.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mean IoU:&lt;/strong&gt; Assesses the model’s performance in object localization.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;R2 Score:&lt;/strong&gt; Gauges the model’s predictive accuracy across various tasks.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;These results provide valuable insights into GPT-4V’s strengths and limitations, particularly in the realm of earth observation data.&lt;/p&gt;
+&lt;p&gt;These findings offer valuable insights into GPT-4V’s capabilities and limitations, especially in the context of earth observation data.&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt; &lt;img src=&#34;sample_apps.png&#34; alt=&#34;Earth observation data&#34;&gt; &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Fig. 1. Here are examples of inputs and outputs from various benchmark tasks and how five different VLMs stack up. We’ve included just a snippet of the user prompts and model responses to highlight the key points. &lt;a href=&#34;https://arxiv.org/pdf/2401.17600v1&#34; target=&#34;_blank&#34;&gt;[Good at captioning, bad at counting]&lt;/a&gt;&lt;/p&gt; &lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;exploring-vision-language-models-vlms-to-understand-high-level-features-in-remotely-sensed-images&#34;&gt;Exploring Vision-Language Models (VLMs) to Understand High-Level Features in Remotely Sensed Images&lt;/h3&gt;
+&lt;p&gt;In my recent work, I&amp;rsquo;ve been diving deep into Vision-Language Models (VLMs) to see how well they perform in tasks that require understanding both visual and textual data. With the explosion of AI models that can interpret images and generate coherent, detailed text, it’s become increasingly important to assess these models not just on general benchmarks, but in specific, high-stakes domains like remotely sensed imagery.&lt;/p&gt;
+&lt;p&gt;Remotely sensed images, which are collected from satellite or aerial platforms, provide a unique challenge for VLMs. They are dense with data, full of patterns, and often contain complex interactions between natural and man-made objects. The ability of a model to not only caption these images but also understand high-level features—such as differentiating between natural landmarks, infrastructure, and potential environmental changes—can have far-reaching applications in fields like agriculture, urban planning, and disaster response.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt; 
+  &lt;img src=&#34;Figure2.png&#34; alt=&#34;VLM Comparison for Benchmark Tasks&#34;&gt; 
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Fig. 1. A comparison of inputs and outputs from benchmark tasks using different VLMs. The snippet includes user prompts and model responses, highlighting key areas of model performance.
+  &lt;a href=&#34;https://arxiv.org/pdf/2401.17600v1&#34; target=&#34;_blank&#34;&gt;[Good at captioning, bad at counting]&lt;/a&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;h3 id=&#34;what-makes-vision-language-models-vlms-special&#34;&gt;What Makes Vision-Language Models (VLMs) Special?&lt;/h3&gt;
+&lt;p&gt;VLMs operate at the intersection of vision and language, giving them the ability to describe images with textual explanations. This makes them incredibly useful for analyzing and interpreting remote sensing data. In these images, VLMs can recognize patterns, identify important landmarks, and even offer insights into the features present within the scene.&lt;/p&gt;
+&lt;p&gt;However, while these models excel at captioning tasks—offering detailed and sometimes creative descriptions—they can struggle with more precise tasks like counting objects or recognizing certain functional categories. This is a critical gap that must be addressed, especially in applications where accuracy is paramount.&lt;/p&gt;
+&lt;h3 id=&#34;challenges-in-remote-sensing-with-vlms&#34;&gt;Challenges in Remote Sensing with VLMs&lt;/h3&gt;
+&lt;p&gt;One of the major challenges I’ve observed while working with VLMs on remotely sensed images is the models&amp;rsquo; difficulty in consistently recognizing high-level features, especially when dealing with complex or less common landmarks. This can lead to a high rate of refusal or incorrect identification in certain categories.&lt;/p&gt;
+&lt;p&gt;For instance, a model might easily recognize a natural park or large urban feature, but struggle to identify a specific sports venue or government building. These variances are especially pronounced when analyzing remote imagery, where the perspective and scale can make recognition even more difficult.&lt;/p&gt;
+&lt;h3 id=&#34;benchmarking-vlms-on-landmark-recognition&#34;&gt;Benchmarking VLMs on Landmark Recognition&lt;/h3&gt;
+&lt;p&gt;I ran some experiments using five different VLMs (GPT-4V, InstructBLIP-TS-XXL, InstructBLIP-Vicuna-13b, LLaVA-v1.5, Qwen-VL-Chat) to see how well they could identify landmarks in a set of remotely sensed images. Below is the summary of the results for landmark recognition accuracy (Table 1) and refusal rate (Table 2).&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;Table1and2.png&#34; alt=&#34;Table 1 and 2: Landmark Recognition Accuracy and Refusal Rate&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Table 1: Landmark recognition accuracy by functional category and Table 2: Landmark recognition refusal rate.
+  &lt;a href=&#34;https://arxiv.org/pdf/2401.17600v1&#34; target=&#34;_blank&#34;&gt;[Good at captioning, bad at counting]&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;As you can see, there are significant variances in how different models perform across these categories. GPT-4V and InstructBLIP tend to outperform other models in recognizing large, prominent landmarks like natural parks and urban infrastructure. However, there’s still considerable room for improvement, especially when identifying more specific or niche features, like places of worship or government buildings.&lt;/p&gt;
+&lt;h3 id=&#34;diving-deeper-into-vlms-case-studies-of-landmark-recognition-and-scene-interpretation&#34;&gt;Diving Deeper into VLMs: Case Studies of Landmark Recognition and Scene Interpretation&lt;/h3&gt;
+&lt;p&gt;The nuances of how Vision-Language Models (VLMs) understand and interpret images can be observed more clearly in specific examples. Below, I’ve analyzed a few key scenarios where GPT-4V has demonstrated both its strengths and limitations.&lt;/p&gt;
+&lt;h4 id=&#34;visual-recognition-with-architectural-context&#34;&gt;Visual Recognition with Architectural Context&lt;/h4&gt;
+&lt;p&gt;One fascinating case is GPT-4V’s ability to link visual cues with its knowledge of architecture. In &lt;strong&gt;Figure 3&lt;/strong&gt;, the model successfully identifies a landmark by connecting the architectural style with its vast knowledge base, arriving at the correct answer. This demonstrates its ability to use contextual clues beyond just object recognition.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt; 
+  &lt;img src=&#34;Figure3.png&#34; alt=&#34;Architectural Landmark Identification&#34;&gt; 
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Fig. 3. GPT-4V successfully corresponds visual cues with its knowledge about the architectural style of the landmark to arrive at the correct answer.
+  &lt;a href=&#34;https://arxiv.org/pdf/2401.17600v1&#34; target=&#34;_blank&#34;&gt;[Good at captioning, bad at counting]&lt;/a&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;h4 id=&#34;the-problem-of-visual-misinterpretation&#34;&gt;The Problem of Visual Misinterpretation&lt;/h4&gt;
+&lt;p&gt;However, VLMs aren&amp;rsquo;t infallible. One case where GPT-4V struggled is in the identification of the &lt;strong&gt;Nebraska State Capitol&lt;/strong&gt;. In &lt;strong&gt;Figure 4&lt;/strong&gt;, the model incorrectly eliminates the correct answer due to misidentifying the tower-like structure. This reveals a significant gap in its ability to distinguish more subtle architectural details, leading to incorrect conclusions.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt; 
+  &lt;img src=&#34;Figure4.png&#34; alt=&#34;Misidentification of Nebraska State Capitol&#34;&gt; 
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Fig. 4. GPT-4V fails to identify the tower-like structure of the Nebraska State Capitol, leading to incorrect elimination.
+  &lt;a href=&#34;https://arxiv.org/pdf/2401.17600v1&#34; target=&#34;_blank&#34;&gt;[Good at captioning, bad at counting]&lt;/a&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;h4 id=&#34;correct-identification-but-weak-justifications&#34;&gt;Correct Identification but Weak Justifications&lt;/h4&gt;
+&lt;p&gt;Interestingly, even when GPT-4V identifies a landmark correctly, it sometimes provides insufficient reasoning. In &lt;strong&gt;Figure 5&lt;/strong&gt;, the model identifies the landmark, but the reasoning lacks depth, which could be a hindrance in scenarios requiring detailed explanations, such as educational or research-oriented applications.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt; 
+  &lt;img src=&#34;Figure5.png&#34; alt=&#34;Correct Identification but Weak Reasoning&#34;&gt; 
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Fig. 5. GPT-4V correctly identifies the landmark but gives insufficient reasoning.
+  &lt;a href=&#34;https://arxiv.org/pdf/2401.17600v1&#34; target=&#34;_blank&#34;&gt;[Good at captioning, bad at counting]&lt;/a&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;h4 id=&#34;generating-image-captions-for-complex-scenes&#34;&gt;Generating Image Captions for Complex Scenes&lt;/h4&gt;
+&lt;p&gt;Another interesting scenario is when the model is tasked with generating captions for complex images. In &lt;strong&gt;Figure 6&lt;/strong&gt;, GPT-4V generates several captions for an airport image. While the captions are coherent, they sometimes miss finer details, like the specific types of airplanes or terminal features, which could be crucial in more technical applications like surveillance or logistics planning.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt; 
+  &lt;img src=&#34;Figure6.png&#34; alt=&#34;Airport Caption Generation&#34;&gt; 
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Fig. 6. Example captions generated for an airport image.
+  &lt;a href=&#34;https://arxiv.org/pdf/2401.17600v1&#34; target=&#34;_blank&#34;&gt;[Good at captioning, bad at counting]&lt;/a&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;h4 id=&#34;object-localization-in-remote-sensing&#34;&gt;Object Localization in Remote Sensing&lt;/h4&gt;
+&lt;p&gt;Object localization is another key area where VLMs need to perform exceptionally well. In &lt;strong&gt;Figure 7&lt;/strong&gt;, GPT-4V is tasked with localizing objects in a DIOR-RSVG dataset image. While it performs reasonably well, there are still challenges in precisely identifying and categorizing certain objects, especially in cluttered or low-contrast scenes.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt; 
+  &lt;img src=&#34;Figure7.png&#34; alt=&#34;Object Localization in DIOR-RSVG Dataset&#34;&gt; 
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Fig. 7. Example prompt and response for DIOR-RSVG object localization.
+  &lt;a href=&#34;https://arxiv.org/pdf/2401.17600v1&#34; target=&#34;_blank&#34;&gt;[Good at captioning, bad at counting]&lt;/a&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;h4 id=&#34;detecting-changes-in-xview2-imagery&#34;&gt;Detecting Changes in xView2 Imagery&lt;/h4&gt;
+&lt;p&gt;Finally, in &lt;strong&gt;Figure 8&lt;/strong&gt;, the model is put to the test with change detection using the xView2 dataset, where it must identify changes in infrastructure and the environment. This kind of task is essential in applications like disaster response or urban monitoring, where rapid and accurate assessments can make a significant difference. GPT-4V’s performance is promising, but it still leaves room for improvement, especially in recognizing more subtle changes or those happening over time.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt; 
+  &lt;img src=&#34;Figure8.png&#34; alt=&#34;Change Detection in xView2 Dataset&#34;&gt; 
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Fig. 8. Example prompt and response for xView2 change detection.
+  &lt;a href=&#34;https://arxiv.org/pdf/2401.17600v1&#34; target=&#34;_blank&#34;&gt;[Good at captioning, bad at counting]&lt;/a&gt;&lt;/p&gt; 
+&lt;/div&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;overview-of-the-fine-tuning-process&#34;&gt;Overview of the Fine-Tuning Process&lt;/h2&gt;
 &lt;p&gt;The process of fine-tuning and deploying a satellite-specific LLM model involves the following stages:&lt;/p&gt;
 &lt;ol&gt;
@@ -442,8 +547,270 @@ print(result)
 &lt;li&gt;&lt;strong&gt;Text Generation&lt;/strong&gt;: GPT-2 generates textual descriptions from image features.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Output&lt;/strong&gt;: Generated Text&lt;/li&gt;
 &lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;quick-thoughts-on-llms-before-we-wrap-up-this-blog&#34;&gt;Quick thoughts on LLMs before we wrap up this blog:&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;1-introduction-to-large-language-models-llms-in-remote-sensing&#34;&gt;1. &lt;strong&gt;Introduction to Large Language Models (LLMs) in Remote Sensing&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Large Language Models (LLMs) are advanced models designed to understand and generate human-like text. They can be adapted for analyzing satellite imagery by combining multimodal inputs, like images and textual descriptions.&lt;/p&gt;
+&lt;h4 id=&#34;key-equations&#34;&gt;Key Equations&lt;/h4&gt;
+&lt;p&gt;The underlying architecture for LLMs is based on the Transformer model, which is governed by:
+$[
+\mathbf{Z} = \text{softmax}\left(\frac{\mathbf{QK}^\top}{\sqrt{d_k}}\right)\mathbf{V}
+]$
+where $\mathbf{Q}, \mathbf{K}, \mathbf{V}$ are query, key, and value matrices respectively.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-foundation-models-and-their-role-in-llms&#34;&gt;2. &lt;strong&gt;Foundation Models and Their Role in LLMs&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Foundation models are pre-trained on extensive datasets and serve as the base for fine-tuning on specific tasks, such as satellite image analysis.&lt;/p&gt;
+&lt;h4 id=&#34;key-equations-1&#34;&gt;Key Equations&lt;/h4&gt;
+&lt;p&gt;The objective during pre-training is to minimize:
+$[
+MLM = - \sum_{i=1}^{N} \log P(x_i | x_{-i}; \theta)
+]$
+where ${MLM}$ is the masked language modeling loss.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-training-vs-fine-tuning-vs-pre-trained-models-in-llms&#34;&gt;3. &lt;strong&gt;Training vs Fine-tuning vs Pre-trained Models in LLMs&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Pre-trained Models&lt;/strong&gt;: Trained on large-scale datasets.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fine-tuning&lt;/strong&gt;: Adapting a pre-trained model to a specific task or dataset.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Training&lt;/strong&gt;: Training a model from scratch using a domain-specific dataset.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;key-equations-2&#34;&gt;Key Equations&lt;/h4&gt;
+&lt;p&gt;Cross-entropy loss function used during fine-tuning:
+$[
+\mathcal{L} = - \sum_{i=1}^{N} y_i \log(\hat{y}_i)
+]$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-how-to-train-llms-on-satellite-images&#34;&gt;4. &lt;strong&gt;How to Train LLMs on Satellite Images&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Training LLMs on satellite images involves using multimodal inputs and embeddings to represent both images and textual descriptions.&lt;/p&gt;
+&lt;!-- #### Key Equations
+The multimodal training objective is:
+$\[
+\mathcal{L}_{\text{multimodal}} = \lambda \cdot \mathcal{L}_{\text{img}} + (1-\lambda) \cdot \mathcal{L}_{\text{text}}
+\]$ --&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;5-retrieval-augmented-generation-rag-for-satellite-image-analysis&#34;&gt;5. &lt;strong&gt;Retrieval-Augmented Generation (RAG) for Satellite Image Analysis&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;RAG combines document retrieval with generation capabilities to enhance satellite image analysis by incorporating additional contextual information.&lt;/p&gt;
+&lt;h4 id=&#34;key-equations-3&#34;&gt;Key Equations&lt;/h4&gt;
+&lt;p&gt;RAG combines retrieval and generation via:
+$[
+P(x|c) = \sum_{i} P(x | c_i, q)P(c_i | q)
+]$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;6-using-langchain-for-satellite-image-llm-applications&#34;&gt;6. &lt;strong&gt;Using LangChain for Satellite Image LLM Applications&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;LangChain facilitates chaining LLMs together for various tasks, such as preprocessing, analysis, and post-processing of satellite images.&lt;/p&gt;
+&lt;h4 id=&#34;example&#34;&gt;Example&lt;/h4&gt;
+&lt;p&gt;Using LangChain to preprocess satellite metadata:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from langchain import SimplePromptTemplate
+template = SimplePromptTemplate(prompt=&amp;quot;Summarize satellite data: {data}&amp;quot;)
+summary = template.run(data=satellite_metadata)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;7-sample-datasets-for-llm-fine-tuning-in-remote-sensing&#34;&gt;7. &lt;strong&gt;Sample Datasets for LLM Fine-Tuning in Remote Sensing&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Datasets such as UC Merced Land Use, EuroSAT, and BigEarthNet are used for fine-tuning LLMs to handle specific satellite image tasks.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;8-mathematical-foundations-of-attention-mechanisms-in-llms&#34;&gt;8. &lt;strong&gt;Mathematical Foundations of Attention Mechanisms in LLMs&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The attention mechanism in LLMs is crucial for focusing on specific parts of the input data, such as regions in a satellite image.&lt;/p&gt;
+&lt;h4 id=&#34;key-equations-4&#34;&gt;Key Equations&lt;/h4&gt;
+&lt;p&gt;Self-attention mechanism:
+$[
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
+]$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;9-multimodal-llm-architectures-for-satellite-images&#34;&gt;9. &lt;strong&gt;Multimodal LLM Architectures for Satellite Images&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Multimodal LLMs integrate both text and image data, allowing for comprehensive analysis of satellite imagery.&lt;/p&gt;
+&lt;h4 id=&#34;key-equations-5&#34;&gt;Key Equations&lt;/h4&gt;
+&lt;p&gt;For multimodal learning, image and text representations are combined:
+$[
+\mathbf{Z} = \text{Concat}(Z_{\text{img}}, Z_{\text{text}})
+]$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;10-preprocessing-techniques-for-satellite-images-in-llms&#34;&gt;10. &lt;strong&gt;Preprocessing Techniques for Satellite Images in LLMs&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Preprocessing techniques like normalization and histogram equalization are essential for preparing satellite images for analysis.&lt;/p&gt;
+&lt;h4 id=&#34;key-formulas&#34;&gt;Key Formulas&lt;/h4&gt;
+&lt;p&gt;Image normalization:
+$[
+X&amp;rsquo; = \frac{X - \mu}{\sigma}
+]$
+where $X$ is the pixel value, $\mu$ is the mean, and $\sigma$ is the standard deviation.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;11-handling-illumination-and-atmospheric-effects-in-llms&#34;&gt;11. &lt;strong&gt;Handling Illumination and Atmospheric Effects in LLMs&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Illumination and atmospheric distortions can affect satellite images, and models must be trained to handle these variations.&lt;/p&gt;
+&lt;h4 id=&#34;key-equations-6&#34;&gt;Key Equations&lt;/h4&gt;
+&lt;p&gt;Illumination adjustment formula:
+$[
+I&amp;rsquo; = \frac{I}{\cos(\theta) + \epsilon}
+]$
+where $\theta$ is the solar zenith angle.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;12-self-supervised-learning-ssl-for-satellite-image-analysis&#34;&gt;12. &lt;strong&gt;Self-Supervised Learning (SSL) for Satellite Image Analysis&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;SSL techniques allow models to learn from unlabelled satellite data by setting up proxy tasks such as predicting missing data.&lt;/p&gt;
+&lt;!-- 
+#### Key Equations
+Contrastive loss function in SSL:
+$\[
+\mathcal{L}_{\text{contrastive}} = - \log \frac{\exp(\mathbf{z}_i^\top \mathbf{z}_j / \tau)}{\sum_{k} \exp(\mathbf{z}_i^\top \mathbf{z}_k / \tau)}
+\]$ --&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;13-open-source-tools-for-llms-in-satellite-image-analysis&#34;&gt;13. &lt;strong&gt;Open-Source Tools for LLMs in Satellite Image Analysis&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Useful tools include Hugging Face Transformers for fine-tuning, LangChain for chaining models, and FastAI for data augmentation.&lt;/p&gt;
+&lt;h4 id=&#34;example-code&#34;&gt;Example Code&lt;/h4&gt;
+&lt;p&gt;Using Hugging Face Transformers:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from transformers import BertTokenizer, BertModel
+tokenizer = BertTokenizer.from_pretrained(&amp;quot;bert-base-uncased&amp;quot;)
+model = BertModel.from_pretrained(&amp;quot;bert-base-uncased&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;14-fine-tuning-llms-for-specific-satellite-image-tasks&#34;&gt;14. &lt;strong&gt;Fine-Tuning LLMs for Specific Satellite Image Tasks&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Fine-tuning involves adjusting a pre-trained model using satellite data to improve performance on specific tasks.&lt;/p&gt;
+&lt;h4 id=&#34;key-steps&#34;&gt;Key Steps&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Load a pre-trained model.&lt;/li&gt;
+&lt;li&gt;Freeze initial layers and fine-tune top layers.&lt;/li&gt;
+&lt;li&gt;Train with domain-specific data.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;15-evaluation-metrics-for-llms-in-remote-sensing&#34;&gt;15. &lt;strong&gt;Evaluation Metrics for LLMs in Remote Sensing&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Evaluating the performance of Large Language Models (LLMs) in remote sensing involves several metrics, including precision, recall, F1 score, mean Average Precision (mAP), and BLEU score. These metrics help assess the quality of predictions and the relevance of generated content.&lt;/p&gt;
+&lt;h4 id=&#34;key-metrics&#34;&gt;Key Metrics&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Precision and Recall&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Precision&lt;/strong&gt; measures the proportion of true positive results among all positive results predicted by the model.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Recall&lt;/strong&gt; measures the proportion of true positive results among all actual positive results.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;key-equations-7&#34;&gt;Key Equations&lt;/h4&gt;
+&lt;p&gt;Precision:
+$[
+\text{Precision} = \frac{TP}{TP + FP}
+]$
+Recall:
+$[
+\text{Recall} = \frac{TP}{TP + FN}
+]$
+where $TP$ is true positives, $FP$ is false positives, and $FN$ is false negatives.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;F1 Score&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;F1 Score&lt;/strong&gt; is the harmonic mean of precision and recall, providing a single metric that balances both.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;key-equation&#34;&gt;Key Equation&lt;/h4&gt;
+&lt;p&gt;$[
+\text{F1} = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}
+]$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;mean Average Precision (mAP)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;mAP&lt;/strong&gt; evaluates the precision of object detection models, averaging the precision across different recall levels.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;key-equation-1&#34;&gt;Key Equation&lt;/h4&gt;
+&lt;p&gt;Average Precision (AP) for a single class:
+$[
+\text{AP} = \int_{0}^{1} \text{Precision}(r) , d\text{Recall}(r)
+]$
+where $\text{Precision}(r)$ is the precision at recall level $r$.&lt;/p&gt;
+&lt;p&gt;mAP is the mean of AP across all classes:
+$[
+\text{mAP} = \frac{1}{C} \sum_{i=1}^{C} \text{AP}_i
+]$
+where $C$ is the number of classes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;BLEU Score&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;BLEU Score&lt;/strong&gt; evaluates the quality of generated text by comparing it to reference texts, commonly used for tasks like image captioning.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;key-equation-2&#34;&gt;Key Equation&lt;/h4&gt;
+&lt;p&gt;BLEU score is calculated using n-gram precision:
+$[
+\text{BLEU} = \text{exp}\left(\sum_{n=1}^{N} w_n \cdot \log P_n\right)
+]$
+where $P_n$ is the precision of n-grams, and $w_n$ is the weight for n-grams of length $n$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;example-code-1&#34;&gt;Example Code&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from sklearn.metrics import precision_score, recall_score, f1_score
+from sklearn.metrics import average_precision_score, precision_recall_curve
+from nltk.translate.bleu_score import sentence_bleu
+
+# Example for precision, recall, F1 score
+y_true = [0, 1, 1, 0, 1, 1, 0]
+y_pred = [0, 1, 0, 0, 1, 1, 1]
+precision = precision_score(y_true, y_pred)
+recall = recall_score(y_true, y_pred)
+f1 = f1_score(y_true, y_pred)
+
+# Example for BLEU score
+reference = [[&#39;this&#39;, &#39;is&#39;, &#39;a&#39;, &#39;test&#39;]]
+candidate = [&#39;this&#39;, &#39;is&#39;, &#39;test&#39;]
+bleu_score = sentence_bleu(reference, candidate)
+
+print(f&amp;quot;Precision: {precision}&amp;quot;)
+print(f&amp;quot;Recall: {recall}&amp;quot;)
+print(f&amp;quot;F1 Score: {f1}&amp;quot;)
+print(f&amp;quot;BLEU Score: {bleu_score}&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;16-transfer-learning-for-satellite-imagery&#34;&gt;16. &lt;strong&gt;Transfer Learning for Satellite Imagery&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Transfer learning uses models pre-trained on general datasets and adapts them for satellite image tasks through domain-specific fine-tuning.&lt;/p&gt;
+&lt;h4 id=&#34;key-equations-8&#34;&gt;Key Equations&lt;/h4&gt;
+&lt;p&gt;The total loss in transfer learning:
+$[
+\mathcal{L}&lt;em&gt;{\text{total}} = \mathcal{L}&lt;/em&gt;{\text{general}}(\theta_g) + \lambda \mathcal{L}_{\text{task}}(\theta_t)
+]$
+where $\lambda$ is a regularization factor.&lt;/p&gt;
+&lt;h4 id=&#34;example-code-2&#34;&gt;Example Code&lt;/h4&gt;
+&lt;p&gt;Using pre-trained ResNet for satellite image classification:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from torchvision import models
+resnet = models.resnet50(pretrained=True)
+
+# Freeze general layers
+for param in resnet.parameters():
+    param.requires_grad = False
+
+# Fine-tune top layers
+resnet.fc = nn.Linear(in_features=2048, out_features=num_classes)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;17-explainability-in-llms-for-remote-sensing-xai&#34;&gt;17. &lt;strong&gt;Explainability in LLMs for Remote Sensing (XAI)&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Explainable AI (XAI) methods enhance the transparency of LLM predictions, allowing users to understand how models make decisions based on satellite imagery.&lt;/p&gt;
+&lt;h4 id=&#34;key-techniques&#34;&gt;Key Techniques&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Attention Visualization&lt;/strong&gt;: Shows which parts of the input data are focused on by the model.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Grad-CAM&lt;/strong&gt;: Generates heatmaps highlighting important regions in the satellite images.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SHAP&lt;/strong&gt;: Explains individual predictions by computing feature contributions.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;key-equations-9&#34;&gt;Key Equations&lt;/h4&gt;
+&lt;p&gt;Grad-CAM heatmap formula:
+$[
+\text{Grad-CAM}(A^k) = \text{ReLU}\left( \sum_k \alpha_k A^k \right)
+]$
+where $\alpha_k$ is the gradient of the loss with respect to the feature map $A^k$.&lt;/p&gt;
+&lt;h4 id=&#34;example-code-3&#34;&gt;Example Code&lt;/h4&gt;
+&lt;p&gt;Using Grad-CAM for explainability:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import torch
+import cv2
+import numpy as np
+
+# Compute gradients
+def grad_cam(model, img):
+    gradients = torch.autograd.grad(outputs=model(img), inputs=model.layer4)
+    weights = torch.mean(gradients[0], dim=[2, 3], keepdim=True)
+    cam = torch.sum(weights * model.layer4(img), dim=1)
+    return cam
+
+# Apply Grad-CAM on an image
+cam_output = grad_cam(resnet, satellite_image)
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Fine-tuning and deploying a satellite-specific LLM like SatGPT involves several critical stages: data preparation, model selection, fine-tuning, validation, and deployment. By following these steps, you can create a powerful tool for analyzing satellite imagery and generating valuable insights.&lt;/p&gt;
+&lt;p&gt;In conclusion, large language models (LLMs) are making impressive strides in the realm of satellite data analysis, showcasing their potential across scene understanding, localization, counting, and change detection. These models are beginning to transform how we interpret complex satellite imagery, offering valuable insights for everything from environmental monitoring to urban development.&lt;/p&gt;
+&lt;p&gt;Despite these advancements, challenges remain. Current benchmarks reveal that while LLMs excel in tasks like generating descriptive captions and recognizing landmarks, they sometimes fall short in areas requiring detailed object counting and nuanced change detection. This highlights the need for more refined evaluation methods to fully capture and enhance LLM capabilities.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As both satellite technology and LLMs continue to evolve, the path forward promises exciting developments. By refining benchmarks and exploring new methodologies, we can unlock even greater potential in this technology.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I hope you enjoyed this deep dive into the intersection of LLMs and satellite data. If you found this blog insightful, please consider sharing it with others who might be interested. Stay tuned for more updates and innovations in this thrilling field!&lt;/p&gt;
 &lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Panboonyuen, Teerapong. (Sep 2024). &lt;em&gt;How to Fine-Tune and Deploy a Satellite-Specific LLM Model for Satellite Images&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2024-09-09-how-to-fine-tune-and-deploy-a-satellite-specific-llm-model/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2024-09-09-how-to-fine-tune-and-deploy-a-satellite-specific-llm-model/&lt;/a&gt;&lt;/p&gt;
@@ -538,9 +905,17 @@ print(result)
         &lt;li&gt;&lt;a href=&#34;#key-metrics&#34;&gt;Key Metrics:&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&#34;#map-calculation&#34;&gt;mAP Calculation&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&#34;#comparison-of-yolov8-variants&#34;&gt;Comparison of YOLOv8 Variants:&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#whats-next&#34;&gt;What’s Next?&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;
     &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#quick-thoughts-on-refined-generalized-focal-loss-for-road-asset-detection-on-thai-highways&#34;&gt;Quick Thoughts on Refined Generalized Focal Loss for Road Asset Detection on Thai Highways&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#1-introduction-to-generalized-focal-loss&#34;&gt;1. &lt;strong&gt;Introduction to Generalized Focal Loss&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#2-formula-for-difference-between-detection-and-segmentation-models&#34;&gt;2. &lt;strong&gt;Formula for Difference Between Detection and Segmentation Models&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#3-optimization-in-object-detection-and-segmentation&#34;&gt;3. &lt;strong&gt;Optimization in Object Detection and Segmentation&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#4-mathematical-formulas-to-know&#34;&gt;4. &lt;strong&gt;Mathematical Formulas to Know&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#whats-next&#34;&gt;What’s Next?&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
@@ -784,7 +1159,76 @@ $$&lt;/p&gt;
 &lt;p&gt;Next, in the second image, the focus shifts to instance segmentation, where instead of just detecting objects with boxes, we’re identifying the exact pixel regions for each object. This is a more complex task that requires higher precision. Here again, our enhanced YOLOv8 models stand out. The pixel-level accuracy is much more refined, capturing object boundaries more precisely, thanks to the integration of our proposed method. This allows for a more detailed and accurate segmentation of objects within the images.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/results_02.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;To summarize, our proposed enhancements to the YOLOv8 model—through the integration of refined Generalized Focal Loss—deliver significant improvements in both object detection and instance segmentation. The results across both images clearly demonstrate that our approach excels at accurately detecting and precisely segmenting objects. Whether it’s drawing clean bounding boxes or defining exact pixel regions, our method proves to be the clear winner. This shows that refining loss functions can have a big impact on model performance, pushing the boundaries of what’s possible with deep learning in computer vision.&lt;/p&gt;
-&lt;h3 id=&#34;whats-next&#34;&gt;What’s Next?&lt;/h3&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;quick-thoughts-on-refined-generalized-focal-loss-for-road-asset-detection-on-thai-highways&#34;&gt;Quick Thoughts on Refined Generalized Focal Loss for Road Asset Detection on Thai Highways&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;1-introduction-to-generalized-focal-loss&#34;&gt;1. &lt;strong&gt;Introduction to Generalized Focal Loss&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;In our paper, &lt;em&gt;&amp;lsquo;Refined Generalized Focal Loss for Road Asset Detection on Thai Highways Using Vision-Based Detection and Segmentation Models&amp;rsquo;&lt;/em&gt;, we explore advancements in object detection and segmentation models tailored for detecting road assets on Thai highways. These assets include a variety of elements crucial for road safety and efficiency.&lt;/p&gt;
+&lt;h4 id=&#34;generalized-focal-loss-for-detection-tasks&#34;&gt;Generalized Focal Loss for Detection Tasks&lt;/h4&gt;
+&lt;p&gt;Generalized Focal Loss (GFL) is an enhancement over traditional focal loss, which aims to address class imbalance by focusing more on hard-to-detect objects. It introduces a dynamic focal weight that is adaptive to different classes, improving detection performance in complex scenarios.&lt;/p&gt;
+&lt;h4 id=&#34;key-equation-for-detection&#34;&gt;Key Equation for Detection&lt;/h4&gt;
+&lt;p&gt;The Generalized Focal Loss is formulated as:
+$[
+\text{GFL}_{\text{det}} = - \frac{1 - \text{p}_i^{\gamma}}{1 - \text{p}_i} \cdot \text{log}(\text{p}_i)
+]$
+where $\text{p}_i$ is the predicted probability for the $i$-th class, and $\gamma$ is the focusing parameter.&lt;/p&gt;
+&lt;h4 id=&#34;generalized-focal-loss-for-segmentation-tasks&#34;&gt;Generalized Focal Loss for Segmentation Tasks&lt;/h4&gt;
+&lt;p&gt;For segmentation tasks, GFL adapts by focusing on pixel-wise predictions, enhancing the model&amp;rsquo;s ability to handle imbalanced data and challenging regions within the images.&lt;/p&gt;
+&lt;!-- #### Key Equation for Segmentation
+The Generalized Focal Loss for segmentation is:
+$\[
+\text{GFL}_{\text{seg}} = - \frac{(1 - \text{p}_{i,j}^{\gamma})}{(1 - \text{p}_{i,j})} \cdot \text{log}(\text{p}_{i,j})
+\]$
+where $\text{p}_{i,j}$ represents the predicted probability for pixel $(i, j)$. --&gt;
+&lt;h3 id=&#34;2-formula-for-difference-between-detection-and-segmentation-models&#34;&gt;2. &lt;strong&gt;Formula for Difference Between Detection and Segmentation Models&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The primary difference in the loss functions for detection and segmentation tasks is how they handle spatial versus class-level data. Detection models often deal with bounding boxes and class predictions, while segmentation models handle pixel-wise classification.&lt;/p&gt;
+&lt;!-- #### Detection vs. Segmentation Loss Formula
+For detection:
+$\[
+\text{Loss}_{\text{det}} = \text{GFL}_{\text{det}} + \text{Reg}_{\text{det}}
+\]$
+where $\text{Reg}_{\text{det}}$ is the regression loss for bounding box coordinates.
+
+For segmentation:
+$\[
+\text{Loss}_{\text{seg}} = \text{GFL}_{\text{seg}} + \text{Dice}_{\text{seg}}
+\]$
+where $\text{Dice}_{\text{seg}}$ is the Dice coefficient for measuring overlap between predicted and ground truth masks. --&gt;
+&lt;h3 id=&#34;3-optimization-in-object-detection-and-segmentation&#34;&gt;3. &lt;strong&gt;Optimization in Object Detection and Segmentation&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Optimization in object detection and segmentation models involves tuning hyperparameters and adjusting learning rates to improve convergence and performance.&lt;/p&gt;
+&lt;!-- #### Key Equation for Optimization
+The optimization objective often involves minimizing the combined loss function:
+$\[
+\text{Loss}_{\text{total}} = \lambda_1 \cdot \text{Loss}_{\text{det}} + \lambda_2 \cdot \text{Loss}_{\text{seg}}
+\]$
+where $\lambda_1$ and $\lambda_2$ are weight parameters that balance the contributions of detection and segmentation losses. --&gt;
+&lt;h3 id=&#34;4-mathematical-formulas-to-know&#34;&gt;4. &lt;strong&gt;Mathematical Formulas to Know&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Understanding the following formulas is crucial for implementing and refining GFL in detection and segmentation tasks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Softmax Function&lt;/strong&gt;:
+$[
+\text{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j} e^{z_j}}
+]$
+where $z_i$ is the score for class $i$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Cross-Entropy Loss&lt;/strong&gt;:
+$[
+\text{CrossEntropy}(y, \hat{y}) = - \sum_{i} y_i \log(\hat{y}_i)
+]$
+where $y_i$ is the ground truth and $\hat{y}_i$ is the predicted probability.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Dice Coefficient&lt;/strong&gt;:
+$[
+\text{Dice} = \frac{2 |A \cap B|}{|A| + |B|}
+]$
+where $A$ and $B$ are the predicted and true segmentation masks.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;whats-next&#34;&gt;What’s Next?&lt;/h2&gt;
 &lt;p&gt;Our paper will undergo a &lt;strong&gt;fast-track formal review process&lt;/strong&gt; for potential publication in the &lt;strong&gt;Transportmetrica A journal&lt;/strong&gt;. We’re optimistic that this research will significantly contribute to highway engineering and road asset management fields.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;Kao_iCHE2024/kao_mars_x_iche2024_01.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;I’m genuinely excited to share our findings at iCHE 2024 and connect with the incredible minds in the field. I hope our research sparks inspiration in others, pushing the boundaries of what’s possible. It would be truly rewarding if our work motivates even one person to contribute to something extraordinary in the world. Research is not just about discovering new things—it&amp;rsquo;s about igniting ideas, fostering collaboration, and collectively making a positive impact. Here’s to all the future breakthroughs, and may this be just the beginning of many more amazing contributions ahead!&lt;/p&gt;

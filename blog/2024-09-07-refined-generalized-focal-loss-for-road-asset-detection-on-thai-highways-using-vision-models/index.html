@@ -942,9 +942,17 @@
         <li><a href="#key-metrics">Key Metrics:</a></li>
         <li><a href="#map-calculation">mAP Calculation</a></li>
         <li><a href="#comparison-of-yolov8-variants">Comparison of YOLOv8 Variants:</a></li>
-        <li><a href="#whats-next">What’s Next?</a></li>
       </ul>
     </li>
+    <li><a href="#quick-thoughts-on-refined-generalized-focal-loss-for-road-asset-detection-on-thai-highways">Quick Thoughts on Refined Generalized Focal Loss for Road Asset Detection on Thai Highways</a>
+      <ul>
+        <li><a href="#1-introduction-to-generalized-focal-loss">1. <strong>Introduction to Generalized Focal Loss</strong></a></li>
+        <li><a href="#2-formula-for-difference-between-detection-and-segmentation-models">2. <strong>Formula for Difference Between Detection and Segmentation Models</strong></a></li>
+        <li><a href="#3-optimization-in-object-detection-and-segmentation">3. <strong>Optimization in Object Detection and Segmentation</strong></a></li>
+        <li><a href="#4-mathematical-formulas-to-know">4. <strong>Mathematical Formulas to Know</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#whats-next">What’s Next?</a></li>
     <li><a href="#citation">Citation</a></li>
     <li><a href="#references">References</a></li>
   </ul>
@@ -1188,7 +1196,76 @@ $$</p>
 <p>Next, in the second image, the focus shifts to instance segmentation, where instead of just detecting objects with boxes, we’re identifying the exact pixel regions for each object. This is a more complex task that requires higher precision. Here again, our enhanced YOLOv8 models stand out. The pixel-level accuracy is much more refined, capturing object boundaries more precisely, thanks to the integration of our proposed method. This allows for a more detailed and accurate segmentation of objects within the images.</p>
 <p><img src="Kao_iCHE2024/results_02.png" alt=""></p>
 <p>To summarize, our proposed enhancements to the YOLOv8 model—through the integration of refined Generalized Focal Loss—deliver significant improvements in both object detection and instance segmentation. The results across both images clearly demonstrate that our approach excels at accurately detecting and precisely segmenting objects. Whether it’s drawing clean bounding boxes or defining exact pixel regions, our method proves to be the clear winner. This shows that refining loss functions can have a big impact on model performance, pushing the boundaries of what’s possible with deep learning in computer vision.</p>
-<h3 id="whats-next">What’s Next?</h3>
+<hr>
+<h2 id="quick-thoughts-on-refined-generalized-focal-loss-for-road-asset-detection-on-thai-highways">Quick Thoughts on Refined Generalized Focal Loss for Road Asset Detection on Thai Highways</h2>
+<hr>
+<h3 id="1-introduction-to-generalized-focal-loss">1. <strong>Introduction to Generalized Focal Loss</strong></h3>
+<p>In our paper, <em>&lsquo;Refined Generalized Focal Loss for Road Asset Detection on Thai Highways Using Vision-Based Detection and Segmentation Models&rsquo;</em>, we explore advancements in object detection and segmentation models tailored for detecting road assets on Thai highways. These assets include a variety of elements crucial for road safety and efficiency.</p>
+<h4 id="generalized-focal-loss-for-detection-tasks">Generalized Focal Loss for Detection Tasks</h4>
+<p>Generalized Focal Loss (GFL) is an enhancement over traditional focal loss, which aims to address class imbalance by focusing more on hard-to-detect objects. It introduces a dynamic focal weight that is adaptive to different classes, improving detection performance in complex scenarios.</p>
+<h4 id="key-equation-for-detection">Key Equation for Detection</h4>
+<p>The Generalized Focal Loss is formulated as:
+$[
+\text{GFL}_{\text{det}} = - \frac{1 - \text{p}_i^{\gamma}}{1 - \text{p}_i} \cdot \text{log}(\text{p}_i)
+]$
+where $\text{p}_i$ is the predicted probability for the $i$-th class, and $\gamma$ is the focusing parameter.</p>
+<h4 id="generalized-focal-loss-for-segmentation-tasks">Generalized Focal Loss for Segmentation Tasks</h4>
+<p>For segmentation tasks, GFL adapts by focusing on pixel-wise predictions, enhancing the model&rsquo;s ability to handle imbalanced data and challenging regions within the images.</p>
+<!-- #### Key Equation for Segmentation
+The Generalized Focal Loss for segmentation is:
+$\[
+\text{GFL}_{\text{seg}} = - \frac{(1 - \text{p}_{i,j}^{\gamma})}{(1 - \text{p}_{i,j})} \cdot \text{log}(\text{p}_{i,j})
+\]$
+where $\text{p}_{i,j}$ represents the predicted probability for pixel $(i, j)$. -->
+<h3 id="2-formula-for-difference-between-detection-and-segmentation-models">2. <strong>Formula for Difference Between Detection and Segmentation Models</strong></h3>
+<p>The primary difference in the loss functions for detection and segmentation tasks is how they handle spatial versus class-level data. Detection models often deal with bounding boxes and class predictions, while segmentation models handle pixel-wise classification.</p>
+<!-- #### Detection vs. Segmentation Loss Formula
+For detection:
+$\[
+\text{Loss}_{\text{det}} = \text{GFL}_{\text{det}} + \text{Reg}_{\text{det}}
+\]$
+where $\text{Reg}_{\text{det}}$ is the regression loss for bounding box coordinates.
+
+For segmentation:
+$\[
+\text{Loss}_{\text{seg}} = \text{GFL}_{\text{seg}} + \text{Dice}_{\text{seg}}
+\]$
+where $\text{Dice}_{\text{seg}}$ is the Dice coefficient for measuring overlap between predicted and ground truth masks. -->
+<h3 id="3-optimization-in-object-detection-and-segmentation">3. <strong>Optimization in Object Detection and Segmentation</strong></h3>
+<p>Optimization in object detection and segmentation models involves tuning hyperparameters and adjusting learning rates to improve convergence and performance.</p>
+<!-- #### Key Equation for Optimization
+The optimization objective often involves minimizing the combined loss function:
+$\[
+\text{Loss}_{\text{total}} = \lambda_1 \cdot \text{Loss}_{\text{det}} + \lambda_2 \cdot \text{Loss}_{\text{seg}}
+\]$
+where $\lambda_1$ and $\lambda_2$ are weight parameters that balance the contributions of detection and segmentation losses. -->
+<h3 id="4-mathematical-formulas-to-know">4. <strong>Mathematical Formulas to Know</strong></h3>
+<p>Understanding the following formulas is crucial for implementing and refining GFL in detection and segmentation tasks:</p>
+<ul>
+<li>
+<p><strong>Softmax Function</strong>:
+$[
+\text{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j} e^{z_j}}
+]$
+where $z_i$ is the score for class $i$.</p>
+</li>
+<li>
+<p><strong>Cross-Entropy Loss</strong>:
+$[
+\text{CrossEntropy}(y, \hat{y}) = - \sum_{i} y_i \log(\hat{y}_i)
+]$
+where $y_i$ is the ground truth and $\hat{y}_i$ is the predicted probability.</p>
+</li>
+<li>
+<p><strong>Dice Coefficient</strong>:
+$[
+\text{Dice} = \frac{2 |A \cap B|}{|A| + |B|}
+]$
+where $A$ and $B$ are the predicted and true segmentation masks.</p>
+</li>
+</ul>
+<hr>
+<h2 id="whats-next">What’s Next?</h2>
 <p>Our paper will undergo a <strong>fast-track formal review process</strong> for potential publication in the <strong>Transportmetrica A journal</strong>. We’re optimistic that this research will significantly contribute to highway engineering and road asset management fields.</p>
 <p><img src="Kao_iCHE2024/kao_mars_x_iche2024_01.jpg" alt=""></p>
 <p>I’m genuinely excited to share our findings at iCHE 2024 and connect with the incredible minds in the field. I hope our research sparks inspiration in others, pushing the boundaries of what’s possible. It would be truly rewarding if our work motivates even one person to contribute to something extraordinary in the world. Research is not just about discovering new things—it&rsquo;s about igniting ideas, fostering collaboration, and collectively making a positive impact. Here’s to all the future breakthroughs, and may this be just the beginning of many more amazing contributions ahead!</p>
