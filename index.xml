@@ -114,7 +114,7 @@ The variance of the distribution is $\sigma^{2}$.
       <guid>https://kaopanboonyuen.github.io/blog/2024-09-09-how-to-fine-tune-and-deploy-a-satellite-specific-llm-model/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    You can view the presentation slides for the talk 🌎 &lt;a href=&#34;https://kaopanboonyuen.github.io/files/slides/20240906_Panboonyuen_AI_ThaiHighway.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.
+    You can view the presentation slides for the talk 🌎 &lt;a href=&#34;https://kaopanboonyuen.github.io/files/slides/20240910_Panboonyuen_How_to_Fine_Tune_Satellite_Specific_LLM.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
@@ -428,7 +428,7 @@ The variance of the distribution is $\sigma^{2}$.
 &lt;p&gt;Remotely sensed images, which are collected from satellite or aerial platforms, provide a unique challenge for VLMs. They are dense with data, full of patterns, and often contain complex interactions between natural and man-made objects. The ability of a model to not only caption these images but also understand high-level features—such as differentiating between natural landmarks, infrastructure, and potential environmental changes—can have far-reaching applications in fields like agriculture, urban planning, and disaster response.&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt; 
   &lt;img src=&#34;Figure2.png&#34; alt=&#34;VLM Comparison for Benchmark Tasks&#34;&gt; 
-  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Fig. 1. A comparison of inputs and outputs from benchmark tasks using different VLMs. The snippet includes user prompts and model responses, highlighting key areas of model performance.
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Fig. 2. A comparison of inputs and outputs from benchmark tasks using different VLMs. The snippet includes user prompts and model responses, highlighting key areas of model performance.
   &lt;a href=&#34;https://arxiv.org/pdf/2401.17600v1&#34; target=&#34;_blank&#34;&gt;[Good at captioning, bad at counting]&lt;/a&gt;&lt;/p&gt; 
 &lt;/div&gt;
 &lt;h3 id=&#34;what-makes-vision-language-models-vlms-special&#34;&gt;What Makes Vision-Language Models (VLMs) Special?&lt;/h3&gt;
@@ -977,12 +977,8 @@ cam_output = grad_cam(resnet, satellite_image)
   &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
   &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
-    &lt;li&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&#34;#introduction-and-motivation&#34;&gt;Introduction and Motivation&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&#34;#motivation-and-relevance&#34;&gt;Motivation and Relevance&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#motivation-and-relevance&#34;&gt;Motivation and Relevance&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#a-journey-through-road-asset-detection-and-segmentation-on-thai-highways&#34;&gt;A Journey Through Road Asset Detection and Segmentation on Thai Highways&lt;/a&gt;
       &lt;ul&gt;
         &lt;li&gt;&lt;a href=&#34;#understanding-the-scene&#34;&gt;Understanding the Scene&lt;/a&gt;&lt;/li&gt;
@@ -1017,9 +1013,9 @@ cam_output = grad_cam(resnet, satellite_image)
 &lt;/nav&gt;
 &lt;/details&gt;
 
-&lt;h3 id=&#34;introduction-and-motivation&#34;&gt;Introduction and Motivation&lt;/h3&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;We are pleased to announce that our paper, titled &lt;em&gt;“Enhanced YOLOv8-Based Object Detection of Road Assets Utilizing Generalized Focal Loss: A Case Study on Thai Highway Imagery”&lt;/em&gt;, has been accepted for oral presentation at the 5th International Conference on Highway Engineering (iCHE 2024). This opportunity marks a significant moment in our academic journey, especially after a hiatus from international conferences since completing my Ph.D. I am eager to re-engage with the academic community and share our recent advancements in person.&lt;/p&gt;
-&lt;h3 id=&#34;motivation-and-relevance&#34;&gt;Motivation and Relevance&lt;/h3&gt;
+&lt;h2 id=&#34;motivation-and-relevance&#34;&gt;Motivation and Relevance&lt;/h2&gt;
 &lt;p&gt;Thailand&amp;rsquo;s highway infrastructure plays a critical role in its economic development and connectivity. However, managing and maintaining these extensive road networks presents numerous challenges, particularly in detecting and assessing road assets. Accurate identification of road features such as signs, barriers, and markings is essential for effective maintenance and safety management.&lt;/p&gt;
 &lt;p&gt;In this context, our research addresses a pressing need in highway engineering: improving road asset detection on Thai highways. Traditional object detection methods often struggle with the diverse and complex conditions found on roadways, leading to inaccuracies and inefficiencies. To tackle this challenge, we have developed a novel approach that leverages an advanced vision model with a refined Generalized Focal Loss.&lt;/p&gt;
 &lt;p&gt;Our proposed method (Fig. 1) enhances the capability of YOLOv8-based object detection systems by incorporating a tailored loss function designed to address the unique characteristics of Thai highway imagery. By optimizing the detection process, our approach aims to provide more reliable and precise data for road asset management. This advancement not only contributes to the field of highway engineering but also supports the development of more efficient infrastructure management practices in Thailand.&lt;/p&gt;
