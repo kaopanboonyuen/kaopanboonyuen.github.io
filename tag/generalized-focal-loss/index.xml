@@ -90,7 +90,7 @@
 &lt;p&gt;To further refine REG, we incorporated prediction uncertainty using a Gaussian distribution (Fig. 7). This technique accounts for the inherent noise and ambiguity in complex environments, particularly under varying lighting and cluttered backgrounds, thereby improving both robustness and accuracy.&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
     &lt;img src=&#34;REG_6.png&#34; alt=&#34;Incorporating Prediction Uncertainty&#34;&gt;
-    &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Fig. . We model prediction uncertainty using a Gaussian distribution to handle noise and ambiguity, particularly in challenging road scenes.&lt;/p&gt;
+    &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Fig. 7. We model prediction uncertainty using a Gaussian distribution to handle noise and ambiguity, particularly in challenging road scenes.&lt;/p&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;mathematical-foundations-for-optimization-in-reg&#34;&gt;Mathematical Foundations for Optimization in REG&lt;/h3&gt;
 &lt;p&gt;The optimization of REG is based on advanced techniques in stochastic optimization, where we extend traditional gradient descent to operate on &lt;strong&gt;Riemannian Manifolds&lt;/strong&gt; (Fig. 8). Given the non-convex nature of the loss landscape, we utilize variational inference, proximal gradient methods, and Lagrangian multipliers, allowing for efficient optimization in multi-task learning.&lt;/p&gt;
