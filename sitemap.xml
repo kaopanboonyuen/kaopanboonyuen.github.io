@@ -20,12 +20,6 @@
     <loc>https://kaopanboonyuen.github.io/categories/</loc>
     <lastmod>2024-09-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/computer-vision/</loc>
-    <lastmod>2024-09-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/category/computer-vision/</loc>
-    <lastmod>2024-09-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/deep-learning/</loc>
     <lastmod>2024-09-08T00:00:00+00:00</lastmod>
   </url><url>
@@ -35,16 +29,22 @@
     <loc>https://kaopanboonyuen.github.io/blog/2024-09-09-how-to-fine-tune-and-deploy-a-satellite-specific-llm-model/</loc>
     <lastmod>2024-09-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/instance-segmentation/</loc>
+    <loc>https://kaopanboonyuen.github.io/tag/llms/</loc>
     <lastmod>2024-09-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/category/instance-segmentation/</loc>
+    <loc>https://kaopanboonyuen.github.io/category/llms/</loc>
     <lastmod>2024-09-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/object-detection/</loc>
+    <loc>https://kaopanboonyuen.github.io/tag/lulc/</loc>
     <lastmod>2024-09-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/category/object-detection/</loc>
+    <loc>https://kaopanboonyuen.github.io/category/lulc/</loc>
+    <lastmod>2024-09-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/satellite-images/</loc>
+    <lastmod>2024-09-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/category/satellite-images/</loc>
     <lastmod>2024-09-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tags/</loc>
@@ -55,6 +55,24 @@
   </url><url>
     <loc>https://kaopanboonyuen.github.io/author/teerapong-panboonyuen/</loc>
     <lastmod>2024-09-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/computer-vision/</loc>
+    <lastmod>2024-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/category/computer-vision/</loc>
+    <lastmod>2024-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/instance-segmentation/</loc>
+    <lastmod>2024-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/category/instance-segmentation/</loc>
+    <lastmod>2024-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/object-detection/</loc>
+    <lastmod>2024-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/category/object-detection/</loc>
+    <lastmod>2024-09-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/blog/2024-09-07-refined-generalized-focal-loss-for-road-asset-detection-on-thai-highways-using-vision-models/</loc>
     <lastmod>2024-09-06T00:00:00+00:00</lastmod>
@@ -116,6 +134,9 @@
     <loc>https://kaopanboonyuen.github.io/author/r.-phukham/</loc>
     <lastmod>2024-09-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/reg/</loc>
+    <lastmod>2024-09-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://kaopanboonyuen.github.io/publication/refined-generalized-focal-loss-for-road-asset-detection-on-thai-highways-using-vision-based-detection-and-segmentation-models/</loc>
     <lastmod>2024-09-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -168,12 +189,6 @@
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/category/llm/</loc>
-    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/lulc/</loc>
-    <lastmod>2024-07-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/category/lulc/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/remote-sensing/</loc>
