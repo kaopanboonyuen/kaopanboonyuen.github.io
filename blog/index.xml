@@ -1339,7 +1339,7 @@ where $A$ and $B$ are the predicted and true segmentation masks.&lt;/p&gt;
     You can view the presentation slides for the talk 🌿 &lt;a href=&#34;https://kaopanboonyuen.github.io/files/slides/20240902_Career_Paths_for_Research_Scientists.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+&lt;!-- &lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
   &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
   &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
@@ -1360,9 +1360,16 @@ where $A$ and $B$ are the predicted and true segmentation masks.&lt;/p&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
 &lt;/details&gt;
-
+ --&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Hi guys! Welcome to my blog—I’m stoked to have you here. I’m Teerapong Panboonyuen (ธีรพงศ์ ปานบุญยืน), but you can call me Kao (เก้า). I’m currently rocking the roles of Senior Research Scientist at MARS (Motor AI Recognition Solution) and Postdoctoral Fellow at Chulalongkorn University. In this space, I’m excited to share the highs and lows of my AI journey, how I juggle between academic and industry work, and the coolest trends shaking up the AI world. Stick around and dive into the world of AI with me!&lt;/p&gt;
+&lt;p&gt;Hi guys! Welcome to my blog—I’m stoked to have you here. I’m currently rocking the roles of Senior Research Scientist at MARS (Motor AI Recognition Solution) and Postdoctoral Fellow at Chulalongkorn University.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Teerapong Panboonyuen (ธีรพงศ์ ปานบุญยืน)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;but you can call me Kao (เก้า).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In this space, I’m excited to share the highs and lows of my AI journey, how I juggle between academic and industry work, and the coolest trends shaking up the AI world. Stick around and dive into the world of AI with me!&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Wrote about generative AI trends and practical applications. &lt;a href=&#34;https://t.co/SphjkqXjNk&#34;&gt;https://t.co/SphjkqXjNk&lt;/a&gt;&lt;br&gt;&lt;br&gt;Here is what ChatGPT suggested as a fun tweet for the blog:&lt;br&gt;&lt;br&gt;🚀 Explore the future of Generative AI!  &lt;br&gt;🤖 Uncover the latest trends and see how AI is revolutionizing various industries.&lt;/p&gt;&amp;mdash; Kao Panboonyuen (@kaopanboonyuen) &lt;a href=&#34;https://twitter.com/kaopanboonyuen/status/1819576227579212096?ref_src=twsrc%5Etfw&#34;&gt;August 3, 2024&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
@@ -1607,7 +1614,7 @@ This publication introduces a feature fusion approach for semantic labeling task
     You can view the presentation slides for the talk 🪴 &lt;a href=&#34;https://kaopanboonyuen.github.io/files/slides/20240802_Panboonyuen_GenerativeAI.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+&lt;!-- &lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
   &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
   &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
@@ -1649,7 +1656,7 @@ This publication introduces a feature fusion approach for semantic labeling task
   &lt;/ul&gt;
 &lt;/nav&gt;
 &lt;/details&gt;
-
+ --&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p align=&#34;justify&#34;&gt;
 Generative AI refers to a category of artificial intelligence models designed to generate new content, such as text, images, music, or videos. These models have gained significant attention due to their ability to create high-quality and realistic outputs. The field has evolved rapidly, with breakthroughs in model architectures, training techniques, and applications across various domains. In this blog, we delve into the current trends, practical applications, challenges, and future prospects of generative AI.

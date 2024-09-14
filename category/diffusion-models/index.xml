@@ -22,7 +22,7 @@
     You can view the presentation slides for the talk 🪴 &lt;a href=&#34;https://kaopanboonyuen.github.io/files/slides/20240802_Panboonyuen_GenerativeAI.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.
   &lt;/div&gt;
 &lt;/div&gt;
-&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+&lt;!-- &lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
   &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
   &lt;nav id=&#34;TableOfContents&#34;&gt;
   &lt;ul&gt;
@@ -64,7 +64,7 @@
   &lt;/ul&gt;
 &lt;/nav&gt;
 &lt;/details&gt;
-
+ --&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p align=&#34;justify&#34;&gt;
 Generative AI refers to a category of artificial intelligence models designed to generate new content, such as text, images, music, or videos. These models have gained significant attention due to their ability to create high-quality and realistic outputs. The field has evolved rapidly, with breakthroughs in model architectures, training techniques, and applications across various domains. In this blog, we delve into the current trends, practical applications, challenges, and future prospects of generative AI.
