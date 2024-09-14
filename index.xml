@@ -1430,7 +1430,14 @@ where $A$ and $B$ are the predicted and true segmentation masks.&lt;/p&gt;
       <pubDate>Mon, 02 Sep 2024 09:05:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/talk/exploring-careers-as-an-ai-research-scientist/</guid>
       <description>&lt;h3 id=&#34;exploring-career-paths-in-ai-research&#34;&gt;Exploring Career Paths in AI Research&lt;/h3&gt;
-&lt;p&gt;Hi guys! Welcome to my blog—I’m stoked to have you here. I’m Teerapong Panboonyuen (ธีรพงศ์ ปานบุญยืน), but you can call me Kao (เก้า). I’m currently rocking the roles of Senior Research Scientist at MARS (Motor AI Recognition Solution) and Postdoctoral Fellow at Chulalongkorn University. In this space, I’m excited to share the highs and lows of my AI journey, how I juggle between academic and industry work, and the coolest trends shaking up the AI world. Stick around and dive into the world of AI with me!&lt;/p&gt;
+&lt;p&gt;Hi guys! Welcome to my posts—I’m stoked to have you here. I’m currently rocking the roles of Senior Research Scientist at MARS (Motor AI Recognition Solution) and Postdoctoral Fellow at Chulalongkorn University.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Teerapong Panboonyuen (ธีรพงศ์ ปานบุญยืน)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;but you can call me Kao (เก้า).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In this space, I’m excited to share the highs and lows of my AI journey, how I juggle between academic and industry work, and the coolest trends shaking up the AI world. Stick around and dive into the world of AI with me!&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Wrote about generative AI trends and practical applications. &lt;a href=&#34;https://t.co/SphjkqXjNk&#34;&gt;https://t.co/SphjkqXjNk&lt;/a&gt;&lt;br&gt;&lt;br&gt;Here is what ChatGPT suggested as a fun tweet for the blog:&lt;br&gt;&lt;br&gt;🚀 Explore the future of Generative AI!  &lt;br&gt;🤖 Uncover the latest trends and see how AI is revolutionizing various industries.&lt;/p&gt;&amp;mdash; Kao Panboonyuen (@kaopanboonyuen) &lt;a href=&#34;https://twitter.com/kaopanboonyuen/status/1819576227579212096?ref_src=twsrc%5Etfw&#34;&gt;August 3, 2024&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
@@ -1456,7 +1463,7 @@ where $A$ and $B$ are the predicted and true segmentation masks.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Right now, I’m diving deep as a Postdoctoral Fellow in AI research, a role I’ve embraced from the age of 27 to now, at 31. My journey involves crafting next-gen algorithms in Pattern Recognition, Optimization Theory, and Statistical Learning. At MARS, I’m on the front lines, applying AI to tackle real-world challenges, especially in the auto insurance sector.&lt;/p&gt;
 &lt;p&gt;Curious to know more about my work and adventures? Check out my profile here: &lt;a href=&#34;https://kaopanboonyuen.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;kaopanboonyuen.github.io&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;featured_vertical.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;!-- ![](featured_vertical.png) --&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;balancing-academia-and-industry&#34;&gt;Balancing Academia and Industry&lt;/h2&gt;
 &lt;p&gt;Why do I juggle both academic and industrial roles? The answer lies in the different kinds of excitement each provides. In academia, I&amp;rsquo;m drawn to the elegance and complexity of theoretical work—understanding AI at its core and pushing its boundaries. On the other hand, the industrial side offers the thrill of seeing AI solutions deployed in real-world applications, making a tangible impact.&lt;/p&gt;
@@ -1480,7 +1487,7 @@ where $A$ and $B$ are the predicted and true segmentation masks.&lt;/p&gt;
   &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Fig. 1. TA Badger agent is trained with bi-level optimization, involving two loops: the outer loop, which focuses on lifelong learning and other requirements, and the inner loop, where the agent undergoes extensive training on various curricula to develop skills approaching human-level proficiency. &lt;a href=&#34;https://www.goodai.com/goodai-research-roadmap-2021-2022/&#34; target=&#34;_blank&#34;&gt;Goodai-Research-Roadmap&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
-  &lt;img src=&#34;featured.png&#34; alt=&#34;Kao&#34;&gt;
+  &lt;img src=&#34;featured_03.png&#34; alt=&#34;Kao&#34;&gt;
   &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Fig. 2. I had the chance to dive into &#34;Career Paths for AI Research Scientists: My Journey and Insights&#34; during a talk at Sirindhorn Science Home (SSH). It was a great opportunity to share my experiences and offer some tips on navigating the exciting world of AI research. &lt;a href=&#34;https://www.nstda.or.th/ssh/&#34; target=&#34;_blank&#34;&gt;Sirindhorn Science Home (SSH)&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;There are various strategies to develop agents with these properties. At GoodAI, they have converged on foundational principles such as the modularity of agents, a shared policy across modules with varying internal states, and a blend of meta-learning in the outer loop followed by open-ended learning in the inner loop. These principles are central to their Badger architectures and will be discussed further in the section &amp;ldquo;Towards Implementation.&amp;rdquo; It is essential to highlight that these desired properties should manifest during the agent&amp;rsquo;s operational phase, specifically in the inner loop (the agent’s lifetime). They often utilize a meta-learning approach, which involves a bi-level optimization process where optimization occurs at two levels [4], [27], [28]. This meta-learning framework is considered the default setting throughout this discussion unless otherwise noted.&lt;/p&gt;
