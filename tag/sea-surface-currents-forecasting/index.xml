@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sea Surface Currents Forecasting | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/sea-surface-currents-forecasting/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/sea-surface-currents-forecasting/index.xml" rel="self" type="application/rss+xml" />
+    <description>Sea Surface Currents Forecasting</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2024 Kao Panboonyuen</copyright><lastBuildDate>Mon, 09 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>Sea Surface Currents Forecasting</title>
+      <link>https://kaopanboonyuen.github.io/tag/sea-surface-currents-forecasting/</link>
+    </image>
+    
+    <item>
+      <title>SEA-ViT: Sea Surface Currents Forecasting Using Vision Transformer and GRU-Based Spatio-Temporal Covariance Modeling</title>
+      <link>https://kaopanboonyuen.github.io/publication/sea-vit-sea-surface-currents-forecasting/</link>
+      <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/sea-vit-sea-surface-currents-forecasting/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

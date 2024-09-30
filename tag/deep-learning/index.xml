@@ -5,12 +5,20 @@
     <link>https://kaopanboonyuen.github.io/tag/deep-learning/</link>
       <atom:link href="https://kaopanboonyuen.github.io/tag/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>deep-learning</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2024 Kao Panboonyuen</copyright><lastBuildDate>Sun, 08 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2024 Kao Panboonyuen</copyright><lastBuildDate>Mon, 09 Sep 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>deep-learning</title>
       <link>https://kaopanboonyuen.github.io/tag/deep-learning/</link>
     </image>
+    
+    <item>
+      <title>SEA-ViT: Sea Surface Currents Forecasting Using Vision Transformer and GRU-Based Spatio-Temporal Covariance Modeling</title>
+      <link>https://kaopanboonyuen.github.io/publication/sea-vit-sea-surface-currents-forecasting/</link>
+      <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/sea-vit-sea-surface-currents-forecasting/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>How to Fine-Tune and Deploy a Satellite-Specific LLMs Model for Satellite Images</title>

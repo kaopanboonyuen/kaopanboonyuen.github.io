@@ -263,6 +263,14 @@ The variance of the distribution is $\sigma^{2}$.
     </item>
     
     <item>
+      <title>SEA-ViT: Sea Surface Currents Forecasting Using Vision Transformer and GRU-Based Spatio-Temporal Covariance Modeling</title>
+      <link>https://kaopanboonyuen.github.io/publication/sea-vit-sea-surface-currents-forecasting/</link>
+      <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/sea-vit-sea-surface-currents-forecasting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>How to Fine-Tune and Deploy a Satellite-Specific LLMs Model for Satellite Images</title>
       <link>https://kaopanboonyuen.github.io/blog/2024-09-09-how-to-fine-tune-and-deploy-a-satellite-specific-llm-model/</link>
       <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
