@@ -397,7 +397,25 @@ where $A$ and $B$ are the predicted and true segmentation masks.&lt;/p&gt;
       <link>https://kaopanboonyuen.github.io/publication/mevit-a-medium-resolution-vision-transformer/</link>
       <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/publication/mevit-a-medium-resolution-vision-transformer/</guid>
-      <description></description>
+      <description>
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/tgcKR97Ea8I&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Semantic segmentation is vital in remote sensing, particularly for identifying and categorizing different land use and land cover types. In regions like Thailand, where agriculture is central to the economy, precise segmentation of satellite imagery can enhance our ability to track crop health, predict yields, and improve resource management. Our model, &lt;em&gt;MeViT&lt;/em&gt; (Medium-Resolution Vision Transformer), is specifically designed to classify agricultural crops like para rubber, corn, and pineapple across Thailand’s varied landscapes.&lt;/p&gt;
+&lt;h2 id=&#34;background-on-vision-transformers&#34;&gt;Background on Vision Transformers&lt;/h2&gt;
+&lt;p&gt;Unlike traditional convolutional neural networks (CNNs), which are excellent at capturing local spatial hierarchies, Vision Transformers excel at modeling long-range dependencies through self-attention mechanisms. This unique structure allows &lt;em&gt;MeViT&lt;/em&gt; to interpret both local and global features, enhancing its effectiveness in agricultural land segmentation tasks where accuracy and detail are paramount.&lt;/p&gt;
+&lt;h2 id=&#34;mevit-architecture&#34;&gt;MeViT Architecture&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;MeViT&lt;/em&gt; leverages a multi-branch architecture tailored for medium-resolution images, balancing computational efficiency with high-quality feature extraction. This design approach enables the model to capture details across multiple spatial scales, which is crucial for segmenting complex land use patterns in agricultural imagery.&lt;/p&gt;
+&lt;p&gt;In particular, the revised mixed-scale convolutional feedforward network (MixCFN) in &lt;em&gt;MeViT&lt;/em&gt; incorporates multiple depth-wise convolution paths, further refining feature extraction by allowing the model to focus on different spatial scales. This enhanced architecture achieves an efficient trade-off between model complexity and performance, making it well-suited for large-scale image analysis tasks.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;featured_backup.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;experimental-results-and-evaluation&#34;&gt;Experimental Results and Evaluation&lt;/h2&gt;
+&lt;p&gt;We extensively tested &lt;em&gt;MeViT&lt;/em&gt; on Thailand’s Landsat-8 dataset, focusing on para rubber, corn, and pineapple classifications. Compared to other models, including state-of-the-art architectures like HRViT and SegFormer, &lt;em&gt;MeViT&lt;/em&gt; demonstrated notable improvements in precision and segmentation accuracy, proving its efficacy in challenging, real-world datasets. This establishes &lt;em&gt;MeViT&lt;/em&gt; as a leading tool in medium-resolution satellite imagery analysis, surpassing previous Vision Transformer models and CNN-based methods in delivering high-quality semantic segmentation.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;MeViT&lt;/em&gt; presents a significant advancement in Vision Transformer applications, setting a new standard for semantic segmentation in remote sensing. By combining multi-branch ViT architectures with optimized convolutional modules, &lt;em&gt;MeViT&lt;/em&gt; delivers efficient, accurate LULC classification on satellite imagery, supporting agricultural insights and sustainable resource management across Thailand. This work contributes to the broader field of environmental monitoring and opens up new possibilities for enhanced remote sensing techniques globally.&lt;/p&gt;
+</description>
     </item>
     
     <item>

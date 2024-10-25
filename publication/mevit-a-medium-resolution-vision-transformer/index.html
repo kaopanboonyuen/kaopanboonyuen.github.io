@@ -992,12 +992,60 @@
 
 
 
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="/files/GYSS/panboonyuen_MeViT_Poster_toGYSS2025.pdf" target="_blank" rel="noopener">
+  Poster
+</a>
 
 
 
 
 
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://www.youtube.com/watch?v=tgcKR97Ea8I" target="_blank" rel="noopener">
+  Video
+</a>
 
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header" href="https://kaopanboonyuen.github.io/files/GYSS/panboonyuen_MeViT_Poster_toGYSS2025.pdf" target="_blank" rel="noopener">
+    
+    GYSS Poster
+  </a>
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header" href="https://www.youtube.com/watch?v=tgcKR97Ea8I" target="_blank" rel="noopener">
+    
+    GYSS Quickfire Pitch
+  </a>
 
 </div>
 
@@ -1005,9 +1053,9 @@
 </div>
 
 
-<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 443px;">
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 408px;">
   <div style="position: relative">
-    <img src="/publication/mevit-a-medium-resolution-vision-transformer/featured_hubb2d2a67c4b44c04dfd372ab97ed06f7_2102839_720x0_resize_lanczos_3.png" alt="" class="featured-image">
+    <img src="/publication/mevit-a-medium-resolution-vision-transformer/featured_hu2566589e50ddbcf907e3db04a18e97f9_1751783_720x0_resize_lanczos_3.png" alt="" class="featured-image">
     
   </div>
 </div>
@@ -1018,7 +1066,7 @@
 
     
     <h3>Abstract</h3>
-    <p class="pub-abstract">Semantic segmentation is a fundamental task in remote sensing image analysis that aims to classify each pixel in an image into different land use and land cover (LULC) segmentation tasks. In this paper, we propose MeViT (Medium-Resolution Vision Transformer) on Landsat satellite imagery for the main economic crops in Thailand as follows (i) para rubber, (ii) corn, and (iii) pineapple. Therefore, our proposed MeViT enhances vision transformers (ViTs), one of the modern deep learning on computer vision tasks, to learn semantically rich and spatially precise multi-scale representations by integrating medium-resolution multi-branch architectures with ViTs. We revised mixed-scale convolutional feedforward networks (MixCFN) by incorporating multiple depth-wise convolution paths to extract multi-scale local information to balance the model’s performance and efficiency. To evaluate the effectiveness of our proposed method, we conduct extensive experiments on the publicly available dataset of Thailand scenes and compare the results with several state-of-the-art deep learning methods. The experimental results demonstrate that our proposed MeViT outperforms existing methods and performs better in the semantic segmentation of Thailand scenes. The evaluation metrics used are precision, recall, F1 score, and mean intersection over union (IoU). Among the models compared, MeViT, our proposed model, achieves the best performance in all evaluation metrics. MeViT achieves a precision of 92.22%, a recall of 94.69%, an F1 score of 93.44%, and a mean IoU of 83.63%. These results demonstrate the effectiveness of our proposed approach in accurately segmenting Thai Landsat-8 data. The achieved F1 score overall, using our proposed MeViT, is 93.44%, which is a major significance of this work.</p>
+    <p class="pub-abstract">Semantic segmentation is crucial in remote sensing for classifying each pixel in images into land use and land cover (LULC) categories. This paper presents MeViT (Medium-Resolution Vision Transformer), designed for key economic crops in Thailand such as para rubber, corn, and pineapple. MeViT enhances vision transformers by integrating medium-resolution multi-branch architectures, allowing for semantically rich and spatially precise representations. We improve mixed-scale convolutional feedforward networks (MixCFN) with multiple depth-wise convolution paths for better local information extraction, optimizing performance and efficiency. Extensive experiments on a publicly available Thai dataset show that MeViT outperforms state-of-the-art methods, achieving a precision of 92.22%, recall of 94.69%, F1 score of 93.44%, and mean IoU of 83.63%, highlighting its effectiveness in segmenting Landsat-8 data.</p>
     
 
     
@@ -1056,7 +1104,25 @@
 
     <div class="space-below"></div>
 
-    <div class="article-style"></div>
+    <div class="article-style">
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/tgcKR97Ea8I" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="introduction">Introduction</h2>
+<p>Semantic segmentation is vital in remote sensing, particularly for identifying and categorizing different land use and land cover types. In regions like Thailand, where agriculture is central to the economy, precise segmentation of satellite imagery can enhance our ability to track crop health, predict yields, and improve resource management. Our model, <em>MeViT</em> (Medium-Resolution Vision Transformer), is specifically designed to classify agricultural crops like para rubber, corn, and pineapple across Thailand’s varied landscapes.</p>
+<h2 id="background-on-vision-transformers">Background on Vision Transformers</h2>
+<p>Unlike traditional convolutional neural networks (CNNs), which are excellent at capturing local spatial hierarchies, Vision Transformers excel at modeling long-range dependencies through self-attention mechanisms. This unique structure allows <em>MeViT</em> to interpret both local and global features, enhancing its effectiveness in agricultural land segmentation tasks where accuracy and detail are paramount.</p>
+<h2 id="mevit-architecture">MeViT Architecture</h2>
+<p><em>MeViT</em> leverages a multi-branch architecture tailored for medium-resolution images, balancing computational efficiency with high-quality feature extraction. This design approach enables the model to capture details across multiple spatial scales, which is crucial for segmenting complex land use patterns in agricultural imagery.</p>
+<p>In particular, the revised mixed-scale convolutional feedforward network (MixCFN) in <em>MeViT</em> incorporates multiple depth-wise convolution paths, further refining feature extraction by allowing the model to focus on different spatial scales. This enhanced architecture achieves an efficient trade-off between model complexity and performance, making it well-suited for large-scale image analysis tasks.</p>
+<p><img src="featured_backup.png" alt=""></p>
+<h2 id="experimental-results-and-evaluation">Experimental Results and Evaluation</h2>
+<p>We extensively tested <em>MeViT</em> on Thailand’s Landsat-8 dataset, focusing on para rubber, corn, and pineapple classifications. Compared to other models, including state-of-the-art architectures like HRViT and SegFormer, <em>MeViT</em> demonstrated notable improvements in precision and segmentation accuracy, proving its efficacy in challenging, real-world datasets. This establishes <em>MeViT</em> as a leading tool in medium-resolution satellite imagery analysis, surpassing previous Vision Transformer models and CNN-based methods in delivering high-quality semantic segmentation.</p>
+<p><img src="compact.png" alt=""></p>
+<h2 id="conclusion">Conclusion</h2>
+<p><em>MeViT</em> presents a significant advancement in Vision Transformer applications, setting a new standard for semantic segmentation in remote sensing. By combining multi-branch ViT architectures with optimized convolutional modules, <em>MeViT</em> delivers efficient, accurate LULC classification on satellite imagery, supporting agricultural insights and sustainable resource management across Thailand. This work contributes to the broader field of environmental monitoring and opens up new possibilities for enhanced remote sensing techniques globally.</p>
+</div>
 
     
 
