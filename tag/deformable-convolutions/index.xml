@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deformable Convolutions | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/deformable-convolutions/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/deformable-convolutions/index.xml" rel="self" type="application/rss+xml" />
+    <description>Deformable Convolutions</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Tue, 25 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>Deformable Convolutions</title>
+      <link>https://kaopanboonyuen.github.io/tag/deformable-convolutions/</link>
+    </image>
+    
+    <item>
+      <title>DOTA: Deformable Optimized Transformer Architecture for End-to-End Text Recognition with Retrieval-Augmented Generation</title>
+      <link>https://kaopanboonyuen.github.io/publication/dota-deformable-optimized-transformer-architecture/</link>
+      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/dota-deformable-optimized-transformer-architecture/</guid>
+      <description>&lt;h3 id=&#34;dota-deformable-optimized-transformer-architecture-for-end-to-end-text-recognition-with-retrieval-augmented-generation&#34;&gt;&lt;strong&gt;DOTA: Deformable Optimized Transformer Architecture for End-to-End Text Recognition with Retrieval-Augmented Generation&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Text recognition in natural images remains one of the most challenging yet essential tasks within the fields of computer vision and natural language processing. With applications ranging from document digitization to autonomous navigation, effective text recognition is more critical than ever before. In this paper, we introduce &lt;strong&gt;DOTA&lt;/strong&gt;, a novel end-to-end framework that combines ResNet and Vision Transformer (ViT) backbones with advanced methodologies such as &lt;strong&gt;Deformable Convolutions&lt;/strong&gt;, &lt;strong&gt;Retrieval-Augmented Generation&lt;/strong&gt;, and &lt;strong&gt;Conditional Random Fields (CRF)&lt;/strong&gt; to significantly enhance Optical Character Recognition (OCR) performance.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;At the heart of DOTA is a revolutionary approach where traditional convolution layers in the third and fourth blocks of the network are replaced with &lt;strong&gt;Deformable Convolutions&lt;/strong&gt;—a technique that offers adaptive and robust feature extraction, making it ideal for recognizing text in complex and irregular layouts. Furthermore, &lt;strong&gt;adaptive dropout&lt;/strong&gt; is integrated to ensure regularization, helping to prevent overfitting and boosting generalization. To refine the sequential modeling of text, we leverage &lt;strong&gt;CRFs&lt;/strong&gt;, which excel in capturing intricate dependencies inherent in text recognition tasks.&lt;/p&gt;
+&lt;p&gt;We conducted extensive experiments on six benchmark OCR datasets—IC13, IC15, SVT, IIIT5K, SVTP, and CUTE80. Our results demonstrate the exceptional performance of DOTA, achieving remarkable accuracies:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IC13&lt;/strong&gt;: 97.32%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IC15&lt;/strong&gt;: 58.26%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SVT&lt;/strong&gt;: 88.10%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IIIT5K&lt;/strong&gt;: 74.13%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SVTP&lt;/strong&gt;: 82.17%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CUTE80&lt;/strong&gt;: 66.67%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This gives us an &lt;strong&gt;average accuracy of 77.77%&lt;/strong&gt;, setting a new state-of-the-art in the field of text recognition. The results clearly highlight the robustness of DOTA across a variety of challenging datasets.&lt;/p&gt;
+&lt;h4 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Text recognition from images has long been a challenging problem, with significant implications for applications in document processing, automated data entry, and even autonomous systems. With traditional &lt;strong&gt;Optical Character Recognition (OCR)&lt;/strong&gt; systems heavily relying on &lt;strong&gt;Convolutional Neural Networks (CNNs)&lt;/strong&gt;, we’ve seen progress in extracting features from images. However, as text layouts become more complex—such as when dealing with varying fonts, orientations, and complex backgrounds—CNNs often fall short. Enter the &lt;strong&gt;Transformer architectures&lt;/strong&gt;: these models have revolutionized many areas in computer vision, particularly in handling long-range dependencies through their self-attention mechanisms, offering significant improvements for text recognition tasks.&lt;/p&gt;
+&lt;p&gt;While Transformer-based models have pushed the boundaries of OCR performance, there is still a need for further improvements, especially in the area of feature extraction and sequence modeling. That&amp;rsquo;s where &lt;strong&gt;DOTA&lt;/strong&gt; comes in. By combining the strengths of &lt;strong&gt;ResNet&lt;/strong&gt; and &lt;strong&gt;Vision Transformer (ViT)&lt;/strong&gt; backbones, this novel approach leverages &lt;strong&gt;Deformable Convolutions&lt;/strong&gt;, &lt;strong&gt;Retrieval-Augmented Generation&lt;/strong&gt;, and &lt;strong&gt;Conditional Random Fields (CRF)&lt;/strong&gt; to achieve new levels of OCR accuracy.&lt;/p&gt;
+&lt;h4 id=&#34;the-dota-framework&#34;&gt;&lt;strong&gt;The DOTA Framework&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;The architecture of DOTA is designed to enhance both feature extraction and sequence modeling, key areas in text recognition:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Deformable Convolutions&lt;/strong&gt;: By replacing standard convolutions in the network’s third and fourth blocks with &lt;strong&gt;Deformable Convolutions&lt;/strong&gt;, we allow for more flexible and adaptive feature extraction. This helps capture irregular text patterns and varying layouts more effectively.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Retrieval-Augmented Generation&lt;/strong&gt;: The integration of this approach provides context-aware enhancements, further refining the recognition process.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Conditional Random Fields (CRFs)&lt;/strong&gt;: CRFs have been incorporated into the framework to better model the sequential nature of text, providing the necessary context to improve recognition accuracy, especially for more complex sequences of characters.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Together, these components form the backbone of &lt;strong&gt;DOTA&lt;/strong&gt;, providing a more robust, adaptable, and precise model for OCR tasks. The effectiveness of DOTA is clearly demonstrated in its impressive performance across several standard OCR benchmark datasets.&lt;/p&gt;
+&lt;h4 id=&#34;experimental-results&#34;&gt;&lt;strong&gt;Experimental Results&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;We evaluated DOTA using six widely-used OCR benchmark datasets:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IC13&lt;/strong&gt;: 97.32%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IC15&lt;/strong&gt;: 58.26%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SVT&lt;/strong&gt;: 88.10%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IIIT5K&lt;/strong&gt;: 74.13%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SVTP&lt;/strong&gt;: 82.17%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CUTE80&lt;/strong&gt;: 66.67%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With an average accuracy of 77.77%, DOTA has set a new state-of-the-art in OCR performance. The results show that the combination of Deformable Convolutions, Vision Transformers, and CRFs significantly improves recognition, even in challenging conditions where traditional methods struggle.&lt;/p&gt;
+&lt;h4 id=&#34;conclusion&#34;&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;The DOTA framework represents a major leap forward in the field of text recognition. By effectively combining ResNet and Vision Transformer backbones with advanced techniques like &lt;strong&gt;Deformable Convolutions&lt;/strong&gt;, &lt;strong&gt;Retrieval-Augmented Generation&lt;/strong&gt;, and &lt;strong&gt;Conditional Random Fields&lt;/strong&gt;, it achieves impressive accuracy across a variety of challenging datasets. This work sets a new benchmark for OCR performance, providing a powerful tool for tackling the complexities of text recognition in real-world scenarios.&lt;/p&gt;
+&lt;p&gt;With this new approach, we’ve laid the foundation for even more accurate and robust text recognition systems, paving the way for smarter applications in everything from document processing to autonomous navigation.&lt;/p&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

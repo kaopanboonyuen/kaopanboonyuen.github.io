@@ -5,7 +5,7 @@
     <link>https://kaopanboonyuen.github.io/</link>
       <atom:link href="https://kaopanboonyuen.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Teerapong Panboonyuen</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Mon, 20 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Wed, 26 Feb 2025 09:30:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>Teerapong Panboonyuen</title>
@@ -105,6 +105,176 @@ The variance of the distribution is $\sigma^{2}$.
   &lt;summary&gt;What is the parameter $\mu$?&lt;/summary&gt;
   &lt;p&gt;The parameter $\mu$ is the mean or expectation of the distribution.&lt;/p&gt;
 &lt;/details&gt;</description>
+    </item>
+    
+    <item>
+      <title>NAC2025 (NSTDA Annual Conference 2025)</title>
+      <link>https://kaopanboonyuen.github.io/talk/nac2025-nstda-annual-conference-2025/</link>
+      <pubDate>Wed, 26 Feb 2025 09:30:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/talk/nac2025-nstda-annual-conference-2025/</guid>
+      <description>&lt;!-- 
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/traKBhJm4lQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+ --&gt;
+&lt;h2 id=&#34;join-the-fun-world-of-ai-train-a-model-to-find-wheres-waldo&#34;&gt;&lt;strong&gt;Join the Fun World of AI: Train a Model to Find “Where’s Waldo”!&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Hey there, AI enthusiasts and curious minds! Are you ready to take a deep dive into the fascinating world of artificial intelligence? Get ready for a fun and hands-on experience where we’ll unravel the mysteries of &lt;strong&gt;Deep Learning&lt;/strong&gt; 🧠, &lt;strong&gt;Computer Vision&lt;/strong&gt; 👀, and &lt;strong&gt;Vision Transformers&lt;/strong&gt;—the game-changing technology behind image recognition. But here’s the twist: we’re going to train an AI to solve the ultimate challenge—finding &lt;strong&gt;Where’s Waldo&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;Yep, you heard it right. We’ll be combining cutting-edge AI techniques with a classic puzzle, and by the end of the session, you’ll be equipped to build and train an AI model that can spot Waldo in a sea of distractions. Ready to unlock the magic? Let’s go!&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/e37dSDJeLos&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;p&gt;If this sounds exciting to you, don’t miss out on the chance to be part of this hands-on AI experience at &lt;strong&gt;&lt;a href=&#34;https://www.nstda.or.th/nac/2025/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NAC2025&lt;/a&gt;&lt;/strong&gt;. Whether you’re just starting to explore the world of artificial intelligence or looking to enhance your skills, this session is your perfect opportunity to learn, build, and innovate.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Join me and other AI enthusiasts on &lt;strong&gt;March 26th&lt;/strong&gt;, and together we’ll dive into this challenge while discovering the potential of AI in real-world applications. &lt;strong&gt;Click &lt;a href=&#34;https://www.nstda.or.th/nac/2025/youth-activities/youth-activity-2/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;&lt;/strong&gt; to secure your spot and be part of the future of AI-driven innovation at NAC2025. Let’s train some AI and find Waldo—together!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;what-youll-learn&#34;&gt;&lt;strong&gt;What You’ll Learn&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;If you’ve ever wondered how self-driving cars “see” the world, or how facial recognition software works, you’re in for a treat. In this session, we’ll break down the essentials of &lt;strong&gt;Deep Learning&lt;/strong&gt; and &lt;strong&gt;Computer Vision&lt;/strong&gt;—two critical components that enable machines to understand and interpret the visual world, just like humans do.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;The Basics of Deep Learning&lt;/strong&gt;&lt;br&gt;
+At the core of modern AI, &lt;strong&gt;Deep Learning&lt;/strong&gt; involves training algorithms to recognize patterns and make decisions based on data. We’ll start by exploring how these algorithms learn from massive datasets, allowing them to &amp;ldquo;see&amp;rdquo; and make sense of images, sounds, and even text.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Understanding Computer Vision&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;Computer Vision&lt;/strong&gt; is a field within AI that teaches computers to interpret and analyze visual information from the world. It&amp;rsquo;s the backbone behind everything from image classification to object detection, and it&amp;rsquo;s what powers applications like Google Images, Snapchat filters, and even medical imaging. We’ll cover how vision systems break down images into recognizable patterns, enabling the AI to understand what it’s looking at.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;The Rise of Vision Transformers&lt;/strong&gt;&lt;br&gt;
+Here’s where it gets really cool. &lt;strong&gt;Vision Transformers&lt;/strong&gt; (ViTs) have emerged as a breakthrough in image recognition. Unlike traditional Convolutional Neural Networks (CNNs), which process images in a grid-like manner, Vision Transformers work by treating images as sequences, similar to how we process language. These models capture global relationships within an image, allowing them to recognize complex patterns with remarkable accuracy. We’ll explore how ViTs work, and why they’re the future of computer vision.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Building an AI Model to Find Waldo&lt;/strong&gt;&lt;br&gt;
+This is where you roll up your sleeves! In this hands-on segment, we’ll show you how to train an AI model to identify Waldo in various images. We’ll walk through the entire process—preparing the data, building the model, training it, and evaluating its performance. Along the way, we’ll use the power of &lt;strong&gt;Vision Transformers&lt;/strong&gt; to detect Waldo, just like how cutting-edge AI models are trained to spot objects, faces, or animals in any image. It&amp;rsquo;s going to be a blast as you watch your AI model get better and better at solving the “Where’s Waldo” puzzle!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;why-vision-transformers&#34;&gt;&lt;strong&gt;Why Vision Transformers?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;So, why are we focusing on &lt;strong&gt;Vision Transformers&lt;/strong&gt;? It all comes down to performance. Traditional CNNs have been the go-to for image recognition for years, but ViTs are changing the game. Here’s why they’re so exciting:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Global Context Understanding&lt;/strong&gt;&lt;br&gt;
+Vision Transformers are great at understanding the entire image as a whole. Instead of focusing on small patches, like CNNs, ViTs look at the global context, allowing them to capture relationships between distant parts of an image. This makes them excellent for complex recognition tasks, like identifying Waldo in a crowded scene where he could be hiding behind multiple objects.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Scalability&lt;/strong&gt;&lt;br&gt;
+Vision Transformers scale well with large datasets, which is essential for training models on more complex images. They can process thousands of images simultaneously, learning from a massive variety of examples to improve their performance. So, whether you’re training a model to find Waldo or doing more advanced tasks like facial recognition, ViTs can handle it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Adaptability&lt;/strong&gt;&lt;br&gt;
+ViTs are highly adaptable to various image types and problems. Whether you’re working with low-resolution images or high-quality satellite photos, Vision Transformers can be fine-tuned to deliver impressive results across different domains.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;hands-on-training-your-own-wheres-waldo-model&#34;&gt;&lt;strong&gt;Hands-on: Training Your Own “Where’s Waldo” Model&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Now that we’ve got the basics covered, it’s time to get your hands dirty! During this interactive session, you’ll have the chance to train your very own AI model. Here’s a sneak peek at the process:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Preparing the Data&lt;/strong&gt;&lt;br&gt;
+Before we can train our AI, we need to prepare a dataset of images featuring Waldo. You’ll learn how to curate and preprocess images for training—an essential skill for any AI project. You’ll also get hands-on experience labeling images to help your model recognize Waldo in the wild.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Building the Model&lt;/strong&gt;&lt;br&gt;
+Once we have the data, we’ll build our &lt;strong&gt;Vision Transformer&lt;/strong&gt; model from scratch. You’ll learn the key concepts behind Vision Transformers—how they work, what makes them different from traditional CNNs, and why they’re so powerful for image recognition.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Training the Model&lt;/strong&gt;&lt;br&gt;
+This is where the magic happens. We’ll train our model using the images and labels you’ve prepared. You’ll see how the model starts to “learn” and get better at recognizing Waldo over time. We’ll guide you through each step, from selecting the right optimizer to tuning the model’s hyperparameters for maximum performance.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Evaluating the Results&lt;/strong&gt;&lt;br&gt;
+After training your model, it’s time to evaluate how well it does at finding Waldo in new, unseen images. We’ll show you how to measure accuracy and fine-tune the model to improve its performance. You’ll walk away with a trained model that can spot Waldo with impressive accuracy.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;whats-the-big-deal-about-wheres-waldo&#34;&gt;&lt;strong&gt;What’s the Big Deal About “Where’s Waldo”?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;You might be wondering, why use a “Where’s Waldo” puzzle to teach AI? The answer is simple: it’s a fun, relatable challenge that’s perfect for learning the basics of image recognition. But it’s also a great example of real-world AI applications, where the task is to identify a specific object (Waldo) in a noisy environment (a crowded scene). By building this model, you’re learning the same techniques that power cutting-edge AI applications used by companies like Google, Facebook, and even self-driving car manufacturers!&lt;/p&gt;
+&lt;h3 id=&#34;why-you-should-join-us&#34;&gt;&lt;strong&gt;Why You Should Join Us&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;This isn’t just another dry lecture on AI. This is your chance to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Learn in a fun, hands-on environment&lt;/strong&gt; with practical examples you can apply to your own projects.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Master the basics of deep learning and computer vision&lt;/strong&gt; while exploring one of the most exciting advancements in AI.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Get a taste of the future&lt;/strong&gt; by learning about Vision Transformers, a breakthrough technology that’s revolutionizing image recognition.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Walk away with a trained AI model&lt;/strong&gt; you can proudly say you built yourself!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Whether you&amp;rsquo;re a beginner eager to learn about AI or someone looking to deepen your understanding of computer vision, this session is for you. So, come join the fun, unleash your creativity, and let’s train a model that finds Waldo in no time! 🚀&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Looking forward to seeing you at NAC2025, where AI meets fun! Let’s make the world of AI an adventure, one Waldo at a time! 🎯&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;meet-me-at-nac2025-wheres-waldo-ai-challenge-on-march-26th&#34;&gt;&lt;strong&gt;Meet Me at NAC2025: Where&amp;rsquo;s Waldo AI Challenge on March 26th!&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Get ready for a one-of-a-kind experience at &lt;strong&gt;NAC2025&lt;/strong&gt;—the 20th NSTDA Annual Conference! While the conference runs from &lt;strong&gt;March 26-28, 2025&lt;/strong&gt;, &lt;strong&gt;I’m inviting you to join me on March 26th&lt;/strong&gt; for an exclusive, hands-on session where we’ll dive deep into the world of &lt;strong&gt;AI and computer vision&lt;/strong&gt; with the ultimate challenge: &lt;strong&gt;Finding Where’s Waldo!&lt;/strong&gt; 🎯&lt;/p&gt;
+&lt;p&gt;At &lt;strong&gt;NAC2025&lt;/strong&gt;, we’re exploring how AI is transforming industries and driving a more sustainable future for Thailand. But on &lt;strong&gt;March 26th&lt;/strong&gt;, I’m turning the spotlight on a super fun and interactive topic—teaching AI to spot &lt;strong&gt;Waldo&lt;/strong&gt; in a crowd! With &lt;strong&gt;Vision Transformers&lt;/strong&gt; and &lt;strong&gt;Deep Learning&lt;/strong&gt;, we’ll break down how AI can “see” the world just like humans and even find that elusive red-and-white-striped figure hiding among distractions.&lt;/p&gt;
+&lt;p&gt;So, if you’re ready to learn the basics of AI, dive into &lt;strong&gt;computer vision&lt;/strong&gt;, and have a blast solving the “Where’s Waldo?” puzzle, don’t miss this exclusive event on March 26th! The rest of the &lt;strong&gt;NAC2025&lt;/strong&gt; conference is packed with innovation, but this hands-on workshop is your chance to get involved, ask questions, and &lt;strong&gt;train your very own AI model&lt;/strong&gt;. Trust me, it’s going to be a lot of fun!&lt;/p&gt;
+&lt;p&gt;See you there on March 26th—let&amp;rsquo;s crack the code and find Waldo together! 🔍&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;references&#34;&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Where&amp;rsquo;s Waldo Dataset&lt;/strong&gt;: &lt;a href=&#34;https://www.kaggle.com/datasets/residentmario/wheres-waldo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kaggle - Where&amp;rsquo;s Waldo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Finding Waldo - A Primer&lt;/strong&gt;: &lt;a href=&#34;https://www.kaggle.com/code/residentmario/finding-waldo-a-primer&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kaggle - Finding Waldo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;image-credits&#34;&gt;&lt;strong&gt;Image Credits&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.imdb.com/title/tt0213376/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;IMDB - Where&amp;rsquo;s Waldo (1992 TV series)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.in/Wheres-Waldo-Martin-Handford/dp/153621065X&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Where&amp;rsquo;s Waldo - Book on Amazon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>DOTA: Deformable Optimized Transformer Architecture for End-to-End Text Recognition with Retrieval-Augmented Generation</title>
+      <link>https://kaopanboonyuen.github.io/publication/dota-deformable-optimized-transformer-architecture/</link>
+      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/dota-deformable-optimized-transformer-architecture/</guid>
+      <description>&lt;h3 id=&#34;dota-deformable-optimized-transformer-architecture-for-end-to-end-text-recognition-with-retrieval-augmented-generation&#34;&gt;&lt;strong&gt;DOTA: Deformable Optimized Transformer Architecture for End-to-End Text Recognition with Retrieval-Augmented Generation&lt;/strong&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;abstract&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Text recognition in natural images remains one of the most challenging yet essential tasks within the fields of computer vision and natural language processing. With applications ranging from document digitization to autonomous navigation, effective text recognition is more critical than ever before. In this paper, we introduce &lt;strong&gt;DOTA&lt;/strong&gt;, a novel end-to-end framework that combines ResNet and Vision Transformer (ViT) backbones with advanced methodologies such as &lt;strong&gt;Deformable Convolutions&lt;/strong&gt;, &lt;strong&gt;Retrieval-Augmented Generation&lt;/strong&gt;, and &lt;strong&gt;Conditional Random Fields (CRF)&lt;/strong&gt; to significantly enhance Optical Character Recognition (OCR) performance.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;At the heart of DOTA is a revolutionary approach where traditional convolution layers in the third and fourth blocks of the network are replaced with &lt;strong&gt;Deformable Convolutions&lt;/strong&gt;—a technique that offers adaptive and robust feature extraction, making it ideal for recognizing text in complex and irregular layouts. Furthermore, &lt;strong&gt;adaptive dropout&lt;/strong&gt; is integrated to ensure regularization, helping to prevent overfitting and boosting generalization. To refine the sequential modeling of text, we leverage &lt;strong&gt;CRFs&lt;/strong&gt;, which excel in capturing intricate dependencies inherent in text recognition tasks.&lt;/p&gt;
+&lt;p&gt;We conducted extensive experiments on six benchmark OCR datasets—IC13, IC15, SVT, IIIT5K, SVTP, and CUTE80. Our results demonstrate the exceptional performance of DOTA, achieving remarkable accuracies:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IC13&lt;/strong&gt;: 97.32%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IC15&lt;/strong&gt;: 58.26%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SVT&lt;/strong&gt;: 88.10%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IIIT5K&lt;/strong&gt;: 74.13%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SVTP&lt;/strong&gt;: 82.17%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CUTE80&lt;/strong&gt;: 66.67%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This gives us an &lt;strong&gt;average accuracy of 77.77%&lt;/strong&gt;, setting a new state-of-the-art in the field of text recognition. The results clearly highlight the robustness of DOTA across a variety of challenging datasets.&lt;/p&gt;
+&lt;h4 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Text recognition from images has long been a challenging problem, with significant implications for applications in document processing, automated data entry, and even autonomous systems. With traditional &lt;strong&gt;Optical Character Recognition (OCR)&lt;/strong&gt; systems heavily relying on &lt;strong&gt;Convolutional Neural Networks (CNNs)&lt;/strong&gt;, we’ve seen progress in extracting features from images. However, as text layouts become more complex—such as when dealing with varying fonts, orientations, and complex backgrounds—CNNs often fall short. Enter the &lt;strong&gt;Transformer architectures&lt;/strong&gt;: these models have revolutionized many areas in computer vision, particularly in handling long-range dependencies through their self-attention mechanisms, offering significant improvements for text recognition tasks.&lt;/p&gt;
+&lt;p&gt;While Transformer-based models have pushed the boundaries of OCR performance, there is still a need for further improvements, especially in the area of feature extraction and sequence modeling. That&amp;rsquo;s where &lt;strong&gt;DOTA&lt;/strong&gt; comes in. By combining the strengths of &lt;strong&gt;ResNet&lt;/strong&gt; and &lt;strong&gt;Vision Transformer (ViT)&lt;/strong&gt; backbones, this novel approach leverages &lt;strong&gt;Deformable Convolutions&lt;/strong&gt;, &lt;strong&gt;Retrieval-Augmented Generation&lt;/strong&gt;, and &lt;strong&gt;Conditional Random Fields (CRF)&lt;/strong&gt; to achieve new levels of OCR accuracy.&lt;/p&gt;
+&lt;h4 id=&#34;the-dota-framework&#34;&gt;&lt;strong&gt;The DOTA Framework&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;The architecture of DOTA is designed to enhance both feature extraction and sequence modeling, key areas in text recognition:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Deformable Convolutions&lt;/strong&gt;: By replacing standard convolutions in the network’s third and fourth blocks with &lt;strong&gt;Deformable Convolutions&lt;/strong&gt;, we allow for more flexible and adaptive feature extraction. This helps capture irregular text patterns and varying layouts more effectively.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Retrieval-Augmented Generation&lt;/strong&gt;: The integration of this approach provides context-aware enhancements, further refining the recognition process.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Conditional Random Fields (CRFs)&lt;/strong&gt;: CRFs have been incorporated into the framework to better model the sequential nature of text, providing the necessary context to improve recognition accuracy, especially for more complex sequences of characters.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Together, these components form the backbone of &lt;strong&gt;DOTA&lt;/strong&gt;, providing a more robust, adaptable, and precise model for OCR tasks. The effectiveness of DOTA is clearly demonstrated in its impressive performance across several standard OCR benchmark datasets.&lt;/p&gt;
+&lt;h4 id=&#34;experimental-results&#34;&gt;&lt;strong&gt;Experimental Results&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;We evaluated DOTA using six widely-used OCR benchmark datasets:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IC13&lt;/strong&gt;: 97.32%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IC15&lt;/strong&gt;: 58.26%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SVT&lt;/strong&gt;: 88.10%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IIIT5K&lt;/strong&gt;: 74.13%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SVTP&lt;/strong&gt;: 82.17%&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CUTE80&lt;/strong&gt;: 66.67%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With an average accuracy of 77.77%, DOTA has set a new state-of-the-art in OCR performance. The results show that the combination of Deformable Convolutions, Vision Transformers, and CRFs significantly improves recognition, even in challenging conditions where traditional methods struggle.&lt;/p&gt;
+&lt;h4 id=&#34;conclusion&#34;&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;The DOTA framework represents a major leap forward in the field of text recognition. By effectively combining ResNet and Vision Transformer backbones with advanced techniques like &lt;strong&gt;Deformable Convolutions&lt;/strong&gt;, &lt;strong&gt;Retrieval-Augmented Generation&lt;/strong&gt;, and &lt;strong&gt;Conditional Random Fields&lt;/strong&gt;, it achieves impressive accuracy across a variety of challenging datasets. This work sets a new benchmark for OCR performance, providing a powerful tool for tackling the complexities of text recognition in real-world scenarios.&lt;/p&gt;
+&lt;p&gt;With this new approach, we’ve laid the foundation for even more accurate and robust text recognition systems, paving the way for smarter applications in everything from document processing to autonomous navigation.&lt;/p&gt;
+&lt;hr&gt;
+</description>
     </item>
     
     <item>
