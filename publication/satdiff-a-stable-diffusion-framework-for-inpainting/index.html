@@ -1,0 +1,1486 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Teerapong Panboonyuen" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Satellite image inpainting is a critical task in remote sensing, requiring accurate restoration of missing or occluded regions for reliable image analysis. In this paper, we present SatDiff, an advanced inpainting framework based on diffusion models, specifically designed to tackle the challenges posed by very high-resolution (VHR) satellite datasets such as DeepGlobe and the Massachusetts Roads Dataset. Building on insights from our previous work, SatInPaint, we enhance the approach to achieve even higher recall and overall performance. SatDiff introduces a novel Latent Space Conditioning technique that leverages a compact latent space for efficient and precise inpainting. Additionally, we integrate Explicit Propagation into the diffusion process, enabling forward-backward fusion for improved stability and accuracy. Inspired by encoder-decoder architectures like the Segment Anything Model (SAM), SatDiff is seamlessly adaptable to diverse satellite imagery scenarios. By balancing the efficiency of preconditioned models with the flexibility of postconditioned approaches, SatDiff establishes a new benchmark in VHR satellite datasets, offering a scalable and high-performance solution for satellite image restoration. The code for SatDiff is publicly available at https://github.com/kaopanboonyuen/SatDiff." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/publication/satdiff-a-stable-diffusion-framework-for-inpainting/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08f2e04360a1c87f5ad39547c02bf219.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/publication/satdiff-a-stable-diffusion-framework-for-inpainting/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/publication/satdiff-a-stable-diffusion-framework-for-inpainting/" />
+  <meta property="og:title" content="SatDiff: A Stable Diffusion Framework for Inpainting Very High-Resolution Satellite Imagery | Teerapong Panboonyuen" />
+  <meta property="og:description" content="Satellite image inpainting is a critical task in remote sensing, requiring accurate restoration of missing or occluded regions for reliable image analysis. In this paper, we present SatDiff, an advanced inpainting framework based on diffusion models, specifically designed to tackle the challenges posed by very high-resolution (VHR) satellite datasets such as DeepGlobe and the Massachusetts Roads Dataset. Building on insights from our previous work, SatInPaint, we enhance the approach to achieve even higher recall and overall performance. SatDiff introduces a novel Latent Space Conditioning technique that leverages a compact latent space for efficient and precise inpainting. Additionally, we integrate Explicit Propagation into the diffusion process, enabling forward-backward fusion for improved stability and accuracy. Inspired by encoder-decoder architectures like the Segment Anything Model (SAM), SatDiff is seamlessly adaptable to diverse satellite imagery scenarios. By balancing the efficiency of preconditioned models with the flexibility of postconditioned approaches, SatDiff establishes a new benchmark in VHR satellite datasets, offering a scalable and high-performance solution for satellite image restoration. The code for SatDiff is publicly available at https://github.com/kaopanboonyuen/SatDiff." /><meta property="og:image" content="https://kaopanboonyuen.github.io/publication/satdiff-a-stable-diffusion-framework-for-inpainting/featured.png" />
+    <meta property="twitter:image" content="https://kaopanboonyuen.github.io/publication/satdiff-a-stable-diffusion-framework-for-inpainting/featured.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2025-03-13T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2025-03-13T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kaopanboonyuen.github.io/publication/satdiff-a-stable-diffusion-framework-for-inpainting/"
+  },
+  "headline": "SatDiff: A Stable Diffusion Framework for Inpainting Very High-Resolution Satellite Imagery",
+  
+  "image": [
+    "https://kaopanboonyuen.github.io/publication/satdiff-a-stable-diffusion-framework-for-inpainting/featured.png"
+  ],
+  
+  "datePublished": "2025-03-13T00:00:00Z",
+  "dateModified": "2025-03-13T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Teerapong Panboonyuen"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Teerapong Panboonyuen",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Satellite image inpainting is a critical task in remote sensing, requiring accurate restoration of missing or occluded regions for reliable image analysis. In this paper, we present SatDiff, an advanced inpainting framework based on diffusion models, specifically designed to tackle the challenges posed by very high-resolution (VHR) satellite datasets such as DeepGlobe and the Massachusetts Roads Dataset. Building on insights from our previous work, SatInPaint, we enhance the approach to achieve even higher recall and overall performance. SatDiff introduces a novel Latent Space Conditioning technique that leverages a compact latent space for efficient and precise inpainting. Additionally, we integrate Explicit Propagation into the diffusion process, enabling forward-backward fusion for improved stability and accuracy. Inspired by encoder-decoder architectures like the Segment Anything Model (SAM), SatDiff is seamlessly adaptable to diverse satellite imagery scenarios. By balancing the efficiency of preconditioned models with the flexibility of postconditioned approaches, SatDiff establishes a new benchmark in VHR satellite datasets, offering a scalable and high-performance solution for satellite image restoration. The code for SatDiff is publicly available at https://github.com/kaopanboonyuen/SatDiff."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>SatDiff: A Stable Diffusion Framework for Inpainting Very High-Resolution Satellite Imagery | Teerapong Panboonyuen</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="2a8e156dea8103007790cee0c506ecc0" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.4be02a3b391999348b0c7478778a0e4b.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#awards"><span>Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#press"><span>Press</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Featured</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#tags"><span>Topics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#communities"><span>Communities</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://x.com/kaopanboonyuen" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+
+
+
+<div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>SatDiff: A Stable Diffusion Framework for Inpainting Very High-Resolution Satellite Imagery</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span class="author-highlighted">Teerapong Panboonyuen</span>, <span >C. Satirapod</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    2025
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header" href="https://ieeeaccess.ieee.org/featured-articles/" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+<a href="#" class="btn btn-outline-primary btn-page-header js-cite-modal"
+        data-filename="/publication/satdiff-a-stable-diffusion-framework-for-inpainting/cite.bib">
+  Cite
+</a>
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary btn-page-header" href="https://github.com/kaopanboonyuen/SatDiff" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+<a class="btn btn-outline-primary btn-page-header" href="https://github.com/kaopanboonyuen/SatDiff" target="_blank" rel="noopener">
+  Project
+</a>
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="btn btn-outline-primary btn-page-header" href="https://arxiv.org/" target="_blank" rel="noopener">
+    
+    ArXiv
+  </a>
+
+</div>
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 420px;">
+  <div style="position: relative">
+    <img src="/publication/satdiff-a-stable-diffusion-framework-for-inpainting/featured_hu484ab21b99b63a5cc25b9600d463d14c_737417_720x0_resize_lanczos_3.png" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    
+    <h3>Abstract</h3>
+    <p class="pub-abstract">Satellite image inpainting is a critical task in remote sensing, requiring accurate restoration of missing or occluded regions for reliable image analysis. In this paper, we present SatDiff, an advanced inpainting framework based on diffusion models, specifically designed to tackle the challenges posed by very high-resolution (VHR) satellite datasets such as DeepGlobe and the Massachusetts Roads Dataset. Building on insights from our previous work, SatInPaint, we enhance the approach to achieve even higher recall and overall performance. SatDiff introduces a novel Latent Space Conditioning technique that leverages a compact latent space for efficient and precise inpainting. Additionally, we integrate Explicit Propagation into the diffusion process, enabling forward-backward fusion for improved stability and accuracy. Inspired by encoder-decoder architectures like the Segment Anything Model (SAM), SatDiff is seamlessly adaptable to diverse satellite imagery scenarios. By balancing the efficiency of preconditioned models with the flexibility of postconditioned approaches, SatDiff establishes a new benchmark in VHR satellite datasets, offering a scalable and high-performance solution for satellite image restoration. The code for SatDiff is publicly available at <a href="https://github.com/kaopanboonyuen/SatDiff" target="_blank" rel="noopener">https://github.com/kaopanboonyuen/SatDiff</a>.</p>
+    
+
+    
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Type</div>
+          <div class="col-12 col-md-9">
+            <a href="/publication/#3">
+              Preprint
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
+          <div class="col-12 col-md-9">IEEE Access 2025</div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style"><p><img src="featured.png" alt=""></p>
+<h2 id="keywords">Keywords</h2>
+<ul>
+<li>Diffusion Models</li>
+<li>High-Resolution Satellite Imagery</li>
+<li>Inpainting</li>
+<li>Latent Space Conditioning</li>
+<li>Remote Sensing</li>
+<li>Stable Diffusion</li>
+<li>Satellite Image Restoration</li>
+<li>Very High-Resolution Images</li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>Satellite image inpainting is a crucial process in remote sensing, aimed at recovering missing or damaged areas to ensure precise data analysis. Satellite images are often affected by occlusions from factors like clouds, atmospheric disturbances, or physical obstructions, making it challenging to obtain fully clear and complete data. To overcome these challenges, especially in high-resolution satellite imagery, effective inpainting methods are required that can reconstruct the missing portions while maintaining the overall structural coherence of the image.</p>
+<p>Diffusion models have emerged as powerful tools in image inpainting, representing a significant advancement in the field. They have been applied to a wide array of tasks, such as object removal, generative inpainting with contextual attention, and addressing semantic differences between masked and unmasked regions. These models excel in maintaining structural consistency while producing high-quality restorations, making them effective for complex tasks, such as video inpainting, text-based object removal, and sketch-based inpainting.</p>
+<p><img src="main_arch_01.png" alt=""></p>
+<p>In recent years, diffusion models have become prominent for image inpainting due to their ability to generate high-fidelity results. Traditionally, inpainting with diffusion models has been approached through either preconditioned or postconditioned techniques. Preconditioned models are designed explicitly for inpainting tasks, enabling efficient inference but requiring extensive domain-specific training. In contrast, postconditioned models do not necessitate retraining but involve slower inference, as they rely on multiple forward-backward iterations to achieve optimal solutions.</p>
+<p>The two primary strategies—preconditioning and postconditioning—differ in how they incorporate inpainting into diffusion models. Preconditioning integrates inpainting into the training phase, where a conditional model predicts missing regions based on the masked input. While effective for specific domains, this approach requires retraining for new applications. Postconditioning, on the other hand, employs an unconditioned generative model, applying forward diffusion to unmasked pixels and reverse diffusion to fill in masked areas. Although this eliminates the need for retraining, it is computationally intensive, requiring numerous diffusion passes to refine the final image.</p>
+<p>Achieving effective image inpainting requires seamless propagation of information from unmasked to masked regions to ensure semantic consistency and a coherent final image. Inspired by our previous work, SatInPaint, we introduce <strong>SatDiff</strong>, a novel diffusion-based framework that builds on this foundation to achieve improved recall and overall performance. SatDiff employs a <strong>Latent Space Conditioning</strong> approach to facilitate inpainting within the latent space, rather than the image space, enabling efficient and precise reconstruction. Additionally, we integrate a forward-backward fusion mechanism within the latent space, enhancing stability and accuracy. SatDiff further incorporates the <strong>Segment Anything Model (SAM)</strong> to refine the propagation process, boosting reconstruction quality and preserving semantic coherence.</p>
+<p><img src="main_arch_02.png" alt=""></p>
+<p>Through extensive experimentation on very high-resolution (VHR) satellite datasets, including DeepGlobe and the Massachusetts Roads Dataset, we validate the contributions of each component in our proposed method. Our results demonstrate that SatDiff not only surpasses state-of-the-art methods in inpainting accuracy and runtime efficiency but also excels in reconstructing realistic satellite images that closely resemble the ground truth. Building on the strengths of SatInPaint, SatDiff sets a new benchmark for high-quality and scalable satellite image restoration solutions.</p>
+<h2 id="results-and-examples">Results and Examples</h2>
+<p><img src="satdif_result_01.png" alt="">
+<img src="satdif_result_02.png" alt="">
+<img src="satdif_result_03.png" alt=""></p>
+<h3 id="satellite-image-inpainting-results">Satellite Image Inpainting Results</h3>
+<p>We present examples of satellite image inpainting results across different object sizes. The comparison showcases the input images (with occlusions), the ground truth targets (without occlusions), and the outputs generated by our method, SatDiff. These results highlight SatDiff&rsquo;s capability to address real-world challenges, such as reconstructing satellite imagery obscured by clouds or other obstacles, with high accuracy.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this work, we introduced <strong>SatDiff</strong>, a novel framework for satellite image inpainting based on diffusion models. By incorporating Latent Space Conditioning and Explicit Propagation, SatDiff achieves improved accuracy and efficiency for high-resolution satellite datasets. The results demonstrate the effectiveness of the proposed method in addressing real-world satellite inpainting challenges.</p>
+<p>For more details, visit the official <a href="https://github.com/kaopanboonyuen/SatDiff" target="_blank" rel="noopener">SatDiff GitHub repository</a>.</p>
+</div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/satellite-image-inpainting/">Satellite Image Inpainting</a>
+  
+  <a class="badge badge-light" href="/tag/diffusion-models/">Diffusion Models</a>
+  
+  <a class="badge badge-light" href="/tag/latent-space-conditioning/">Latent Space Conditioning</a>
+  
+  <a class="badge badge-light" href="/tag/vhr-satellite-datasets/">VHR Satellite Datasets</a>
+  
+  <a class="badge badge-light" href="/tag/image-restoration/">Image Restoration</a>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://kaopanboonyuen.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/teerapong-panboonyuen/avatar_hu3c429e132ccde7f98e52ca20c1f589ef_2676345_270x270_fill_q75_lanczos_center.jpg" alt="Teerapong Panboonyuen"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://kaopanboonyuen.github.io/">Teerapong Panboonyuen</a></h5>
+      
+      <p class="card-text">My research focuses on leveraging advanced machine intelligence techniques, specifically computer vision, to enhance semantic understanding, learning representations, visual recognition, and geospatial data interpretation.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:teerapong.panboonyuen@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://x.com/kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.youtube.com/@kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/teerapong-panboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://kaopanboonyuen.github.io/files/panboonyuen_cv.pdf" target="_blank" rel="noopener">
+        <i class="fas fa-download"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  </div>
+</div>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    ©2025 Kao Panboonyuen
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Built using <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> and the <a href="https://github.com/wowchemy/starter-hugo-academic" target="_blank" rel="noopener">Wowchemy academic template</a>. View <a href="https://github.com/kaopanboonyuen/kaopanboonyuen.github.io" target="_blank" rel="noopener">source</a>.
+        
+  </p>
+</footer>
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/golang.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.b36873e4e886c7b03b21e4eb97d9b6d7.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

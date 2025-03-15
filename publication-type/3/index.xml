@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3 | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/publication-type/3/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/publication-type/3/index.xml" rel="self" type="application/rss+xml" />
+    <description>3</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Thu, 13 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>3</title>
+      <link>https://kaopanboonyuen.github.io/publication-type/3/</link>
+    </image>
+    
+    <item>
+      <title>SatDiff: A Stable Diffusion Framework for Inpainting Very High-Resolution Satellite Imagery</title>
+      <link>https://kaopanboonyuen.github.io/publication/satdiff-a-stable-diffusion-framework-for-inpainting/</link>
+      <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/satdiff-a-stable-diffusion-framework-for-inpainting/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;keywords&#34;&gt;Keywords&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Diffusion Models&lt;/li&gt;
+&lt;li&gt;High-Resolution Satellite Imagery&lt;/li&gt;
+&lt;li&gt;Inpainting&lt;/li&gt;
+&lt;li&gt;Latent Space Conditioning&lt;/li&gt;
+&lt;li&gt;Remote Sensing&lt;/li&gt;
+&lt;li&gt;Stable Diffusion&lt;/li&gt;
+&lt;li&gt;Satellite Image Restoration&lt;/li&gt;
+&lt;li&gt;Very High-Resolution Images&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Satellite image inpainting is a crucial process in remote sensing, aimed at recovering missing or damaged areas to ensure precise data analysis. Satellite images are often affected by occlusions from factors like clouds, atmospheric disturbances, or physical obstructions, making it challenging to obtain fully clear and complete data. To overcome these challenges, especially in high-resolution satellite imagery, effective inpainting methods are required that can reconstruct the missing portions while maintaining the overall structural coherence of the image.&lt;/p&gt;
+&lt;p&gt;Diffusion models have emerged as powerful tools in image inpainting, representing a significant advancement in the field. They have been applied to a wide array of tasks, such as object removal, generative inpainting with contextual attention, and addressing semantic differences between masked and unmasked regions. These models excel in maintaining structural consistency while producing high-quality restorations, making them effective for complex tasks, such as video inpainting, text-based object removal, and sketch-based inpainting.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;main_arch_01.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In recent years, diffusion models have become prominent for image inpainting due to their ability to generate high-fidelity results. Traditionally, inpainting with diffusion models has been approached through either preconditioned or postconditioned techniques. Preconditioned models are designed explicitly for inpainting tasks, enabling efficient inference but requiring extensive domain-specific training. In contrast, postconditioned models do not necessitate retraining but involve slower inference, as they rely on multiple forward-backward iterations to achieve optimal solutions.&lt;/p&gt;
+&lt;p&gt;The two primary strategies—preconditioning and postconditioning—differ in how they incorporate inpainting into diffusion models. Preconditioning integrates inpainting into the training phase, where a conditional model predicts missing regions based on the masked input. While effective for specific domains, this approach requires retraining for new applications. Postconditioning, on the other hand, employs an unconditioned generative model, applying forward diffusion to unmasked pixels and reverse diffusion to fill in masked areas. Although this eliminates the need for retraining, it is computationally intensive, requiring numerous diffusion passes to refine the final image.&lt;/p&gt;
+&lt;p&gt;Achieving effective image inpainting requires seamless propagation of information from unmasked to masked regions to ensure semantic consistency and a coherent final image. Inspired by our previous work, SatInPaint, we introduce &lt;strong&gt;SatDiff&lt;/strong&gt;, a novel diffusion-based framework that builds on this foundation to achieve improved recall and overall performance. SatDiff employs a &lt;strong&gt;Latent Space Conditioning&lt;/strong&gt; approach to facilitate inpainting within the latent space, rather than the image space, enabling efficient and precise reconstruction. Additionally, we integrate a forward-backward fusion mechanism within the latent space, enhancing stability and accuracy. SatDiff further incorporates the &lt;strong&gt;Segment Anything Model (SAM)&lt;/strong&gt; to refine the propagation process, boosting reconstruction quality and preserving semantic coherence.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;main_arch_02.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Through extensive experimentation on very high-resolution (VHR) satellite datasets, including DeepGlobe and the Massachusetts Roads Dataset, we validate the contributions of each component in our proposed method. Our results demonstrate that SatDiff not only surpasses state-of-the-art methods in inpainting accuracy and runtime efficiency but also excels in reconstructing realistic satellite images that closely resemble the ground truth. Building on the strengths of SatInPaint, SatDiff sets a new benchmark for high-quality and scalable satellite image restoration solutions.&lt;/p&gt;
+&lt;h2 id=&#34;results-and-examples&#34;&gt;Results and Examples&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;satdif_result_01.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;satdif_result_02.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;satdif_result_03.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;satellite-image-inpainting-results&#34;&gt;Satellite Image Inpainting Results&lt;/h3&gt;
+&lt;p&gt;We present examples of satellite image inpainting results across different object sizes. The comparison showcases the input images (with occlusions), the ground truth targets (without occlusions), and the outputs generated by our method, SatDiff. These results highlight SatDiff&amp;rsquo;s capability to address real-world challenges, such as reconstructing satellite imagery obscured by clouds or other obstacles, with high accuracy.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In this work, we introduced &lt;strong&gt;SatDiff&lt;/strong&gt;, a novel framework for satellite image inpainting based on diffusion models. By incorporating Latent Space Conditioning and Explicit Propagation, SatDiff achieves improved accuracy and efficiency for high-resolution satellite datasets. The results demonstrate the effectiveness of the proposed method in addressing real-world satellite inpainting challenges.&lt;/p&gt;
+&lt;p&gt;For more details, visit the official &lt;a href=&#34;https://github.com/kaopanboonyuen/SatDiff&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SatDiff GitHub repository&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
