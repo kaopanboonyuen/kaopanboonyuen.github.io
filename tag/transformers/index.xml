@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>transformers | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/transformers/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/transformers/index.xml" rel="self" type="application/rss+xml" />
+    <description>transformers</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Wed, 02 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>transformers</title>
+      <link>https://kaopanboonyuen.github.io/tag/transformers/</link>
+    </image>
+    
+    <item>
+      <title>ALBERT vs SLICK: MARSAIL’s New AI Fashion for Real-Time Car Insurance</title>
+      <link>https://kaopanboonyuen.github.io/blog/2025-07-02-albert-vs-slick-marsail-new-ai-fashion/</link>
+      <pubDate>Wed, 02 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/blog/2025-07-02-albert-vs-slick-marsail-new-ai-fashion/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    You can explore our GitHub project page 📦 &lt;a href=&#34;https://kaopanboonyuen.github.io/MARS/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- &lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#albert-vs-slick-the-new-ai-fashion-at-marsail&#34;&gt;ALBERT vs SLICK: The New AI Fashion at MARSAIL&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#albert-the-teacher-model--precision-at-a-cost&#34;&gt;ALBERT: The Teacher Model — Precision at a Cost&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#slick-the-student-model--lightning-speed-meets-smart-knowledge&#34;&gt;SLICK: The Student Model — Lightning Speed Meets Smart Knowledge&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#why-this-matters-for-car-insurance&#34;&gt;Why This Matters for Car Insurance&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#mathematical-insight-simplified&#34;&gt;Mathematical Insight (Simplified)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#published-research&#34;&gt;Published Research&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#looking-ahead&#34;&gt;Looking Ahead&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
+ --&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;albert-vs-slick-the-new-ai-fashion-at-marsail&#34;&gt;ALBERT vs SLICK: The New AI Fashion at MARSAIL&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;In 2025, MARSAIL (Motor AI Recognition Solution Artificial Intelligence Laboratory) is proud to introduce two groundbreaking AI models that are redefining car damage assessment for insurance — &lt;strong&gt;ALBERT&lt;/strong&gt; and &lt;strong&gt;SLICK&lt;/strong&gt;. These models embody a teacher-student relationship: ALBERT, the teacher, delivers uncompromising accuracy, while SLICK, the student, achieves blazing-fast speeds tailored for real-time insurance applications.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;albert-the-teacher-model--precision-at-a-cost&#34;&gt;ALBERT: The Teacher Model — Precision at a Cost&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;ALBERT stands for &lt;em&gt;Advanced Localization and Bidirectional Encoder Representations from Transformers&lt;/em&gt;. This model is designed to be highly accurate and detailed in detecting subtle damages such as small scratches, dents, and cracks on vehicles. It leverages a vision transformer architecture enhanced with localized deformable tokens and parameter sharing to precisely focus on critical damage regions.&lt;/p&gt;
+&lt;p&gt;However, this precision comes with a computational cost. ALBERT requires powerful CUDA-enabled GPUs and is relatively slow, making it ideal for offline batch processing or scenarios where accuracy takes precedence over speed.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/ALBERT_01.png&#34; alt=&#34;MARSAIL ALBERT Model Result&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 2: MARSAIL-ALBERT model showcasing detailed and precise damage segmentation results.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;slick-the-student-model--lightning-speed-meets-smart-knowledge&#34;&gt;SLICK: The Student Model — Lightning Speed Meets Smart Knowledge&lt;/h3&gt;
+&lt;p&gt;To address real-time insurance needs, MARSAIL developed &lt;strong&gt;SLICK&lt;/strong&gt; — &lt;em&gt;Selective Localization and Instance Calibration with Knowledge&lt;/em&gt;. This model distills knowledge from ALBERT and integrates domain-specific insurance metadata like bumper zones and vehicle model weak points.&lt;/p&gt;
+&lt;p&gt;SLICK boosts processing speed by over &lt;strong&gt;700%&lt;/strong&gt; compared to ALBERT, enabling instant damage assessments on edge devices or mobile apps without sacrificing much accuracy. Its adaptive attention mechanism dynamically calibrates segmentation proposals using contextual knowledge graphs, making it robust under varying light, weather, and occlusion conditions.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/SLICK_01.png&#34; alt=&#34;MARSAIL SLICK Model Result&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 3: MARSAIL-SLICK model delivering rapid, knowledge-enhanced damage segmentation optimized for real-time insurance workflows.&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;why-this-matters-for-car-insurance&#34;&gt;Why This Matters for Car Insurance&lt;/h3&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Accuracy vs. Speed:&lt;/strong&gt; ALBERT excels in detailed offline analysis, perfect for complex claim investigations. SLICK offers instant, reliable damage detection to accelerate frontline claim approvals and garage estimates.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Hardware Flexibility:&lt;/strong&gt; ALBERT demands high-end GPUs; SLICK can run efficiently on more modest, real-world devices — a game changer for field agents and repair shops.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Knowledge Integration:&lt;/strong&gt; SLICK’s use of insurance-specific metadata bridges the gap between raw image analysis and domain expertise, improving real-world applicability.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;mathematical-insight-simplified&#34;&gt;Mathematical Insight (Simplified)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;ALBERT refines its internal feature embeddings ( z^{(l)} ) at layer ( l ) through multi-scale self-attention (MSA) and multilayer perceptron (MLP) modules with layer normalization (LN):&lt;/p&gt;
+&lt;p&gt;$$
+z^{(l+1)} = z^{(l)} + \text{MSA}(\text{LN}(z^{(l)})) + \text{MLP}(\text{LN}(z^{(l)}))
+$$&lt;/p&gt;
+&lt;p&gt;Meanwhile, SLICK enhances mask quality scores ( s_{mask} ) by combining image features ( f_{img} ) with knowledge graph embeddings ( f_{kg} ) gated by a sigmoid activation ( \sigma ):&lt;/p&gt;
+&lt;p&gt;$$
+s_{mask} = \sigma(W_q [f_{img} | f_{kg}]) + b
+$$&lt;/p&gt;
+&lt;p&gt;This formula reflects how SLICK intelligently modulates attention using both visual and domain knowledge.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;published-research&#34;&gt;Published Research&lt;/h2&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;ALBERT: &lt;a href=&#34;https://arxiv.org/abs/2506.10524&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/abs/2506.10524&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SLICK: &lt;a href=&#34;https://arxiv.org/abs/2506.10528&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/abs/2506.10528&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;looking-ahead&#34;&gt;Looking Ahead&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;MARSAIL continues to innovate by balancing AI model accuracy and deployment efficiency. ALBERT and SLICK represent the cutting edge of automotive AI, ready to transform insurance claim processes in Thailand and beyond — enabling smarter, faster, and fairer car insurance.&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Panboonyuen, Teerapong. (Jul 2025). &lt;em&gt;ALBERT vs SLICK: MARSAIL’s New AI Fashion for Car Insurance&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2025-07-02-albert-vs-slick-marsail-new-ai-fashion/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2025-07-02-albert-vs-slick-marsail-new-ai-fashion/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Or&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bibtex&#34;&gt;@article{panboonyuen2025albert_slick,
+  title={ALBERT: Advanced Localization and Bidirectional Encoder Representations from Transformers for Automotive Damage Evaluation},
+  author={Panboonyuen, Teerapong},
+  journal={arXiv preprint arXiv:2506.10524},
+  year={2025},
+  url={https://arxiv.org/abs/2506.10524}
+}
+
+@article{panboonyuen2025slick,
+  title={SLICK: Selective Localization and Instance Calibration for Knowledge-Enhanced Car Damage Segmentation in Automotive Insurance},
+  author={Panboonyuen, Teerapong},
+  journal={arXiv preprint arXiv:2506.10528},
+  year={2025},
+  url={https://arxiv.org/abs/2506.10528}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Found this blog insightful? Consider sharing it with friends or researchers in the automotive or insurance tech industry. 🚗
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Panboonyuen, Teerapong.  &amp;ldquo;ALBERT: Advanced Localization and Bidirectional Encoder Representations from Transformers for Automotive Damage Evaluation.&amp;rdquo; arXiv preprint arXiv:2506.10524 (2025). &lt;a href=&#34;https://arxiv.org/abs/2506.10524&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/abs/2506.10524&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Panboonyuen, Teerapong.  &amp;ldquo;SLICK: Selective Localization and Instance Calibration for Knowledge-Enhanced Car Damage Segmentation in Automotive Insurance.&amp;rdquo; arXiv preprint arXiv:2506.10528 (2025). &lt;a href=&#34;https://arxiv.org/abs/2506.10528&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/abs/2506.10528&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

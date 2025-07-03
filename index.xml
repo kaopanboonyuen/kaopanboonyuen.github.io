@@ -5,7 +5,7 @@
     <link>https://kaopanboonyuen.github.io/</link>
       <atom:link href="https://kaopanboonyuen.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Teerapong Panboonyuen</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Thu, 27 Mar 2025 13:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Wed, 02 Jul 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>Teerapong Panboonyuen</title>
@@ -105,6 +105,310 @@ The variance of the distribution is $\sigma^{2}$.
   &lt;summary&gt;What is the parameter $\mu$?&lt;/summary&gt;
   &lt;p&gt;The parameter $\mu$ is the mean or expectation of the distribution.&lt;/p&gt;
 &lt;/details&gt;</description>
+    </item>
+    
+    <item>
+      <title>ALBERT vs SLICK: MARSAIL’s New AI Fashion for Real-Time Car Insurance</title>
+      <link>https://kaopanboonyuen.github.io/blog/2025-07-02-albert-vs-slick-marsail-new-ai-fashion/</link>
+      <pubDate>Wed, 02 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/blog/2025-07-02-albert-vs-slick-marsail-new-ai-fashion/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    You can explore our GitHub project page 📦 &lt;a href=&#34;https://kaopanboonyuen.github.io/MARS/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- &lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#albert-vs-slick-the-new-ai-fashion-at-marsail&#34;&gt;ALBERT vs SLICK: The New AI Fashion at MARSAIL&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#albert-the-teacher-model--precision-at-a-cost&#34;&gt;ALBERT: The Teacher Model — Precision at a Cost&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#slick-the-student-model--lightning-speed-meets-smart-knowledge&#34;&gt;SLICK: The Student Model — Lightning Speed Meets Smart Knowledge&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#why-this-matters-for-car-insurance&#34;&gt;Why This Matters for Car Insurance&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#mathematical-insight-simplified&#34;&gt;Mathematical Insight (Simplified)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#published-research&#34;&gt;Published Research&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#looking-ahead&#34;&gt;Looking Ahead&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
+ --&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;albert-vs-slick-the-new-ai-fashion-at-marsail&#34;&gt;ALBERT vs SLICK: The New AI Fashion at MARSAIL&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;In 2025, MARSAIL (Motor AI Recognition Solution Artificial Intelligence Laboratory) is proud to introduce two groundbreaking AI models that are redefining car damage assessment for insurance — &lt;strong&gt;ALBERT&lt;/strong&gt; and &lt;strong&gt;SLICK&lt;/strong&gt;. These models embody a teacher-student relationship: ALBERT, the teacher, delivers uncompromising accuracy, while SLICK, the student, achieves blazing-fast speeds tailored for real-time insurance applications.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;albert-the-teacher-model--precision-at-a-cost&#34;&gt;ALBERT: The Teacher Model — Precision at a Cost&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;ALBERT stands for &lt;em&gt;Advanced Localization and Bidirectional Encoder Representations from Transformers&lt;/em&gt;. This model is designed to be highly accurate and detailed in detecting subtle damages such as small scratches, dents, and cracks on vehicles. It leverages a vision transformer architecture enhanced with localized deformable tokens and parameter sharing to precisely focus on critical damage regions.&lt;/p&gt;
+&lt;p&gt;However, this precision comes with a computational cost. ALBERT requires powerful CUDA-enabled GPUs and is relatively slow, making it ideal for offline batch processing or scenarios where accuracy takes precedence over speed.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/ALBERT_01.png&#34; alt=&#34;MARSAIL ALBERT Model Result&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 2: MARSAIL-ALBERT model showcasing detailed and precise damage segmentation results.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;slick-the-student-model--lightning-speed-meets-smart-knowledge&#34;&gt;SLICK: The Student Model — Lightning Speed Meets Smart Knowledge&lt;/h3&gt;
+&lt;p&gt;To address real-time insurance needs, MARSAIL developed &lt;strong&gt;SLICK&lt;/strong&gt; — &lt;em&gt;Selective Localization and Instance Calibration with Knowledge&lt;/em&gt;. This model distills knowledge from ALBERT and integrates domain-specific insurance metadata like bumper zones and vehicle model weak points.&lt;/p&gt;
+&lt;p&gt;SLICK boosts processing speed by over &lt;strong&gt;700%&lt;/strong&gt; compared to ALBERT, enabling instant damage assessments on edge devices or mobile apps without sacrificing much accuracy. Its adaptive attention mechanism dynamically calibrates segmentation proposals using contextual knowledge graphs, making it robust under varying light, weather, and occlusion conditions.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/SLICK_01.png&#34; alt=&#34;MARSAIL SLICK Model Result&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 3: MARSAIL-SLICK model delivering rapid, knowledge-enhanced damage segmentation optimized for real-time insurance workflows.&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;why-this-matters-for-car-insurance&#34;&gt;Why This Matters for Car Insurance&lt;/h3&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Accuracy vs. Speed:&lt;/strong&gt; ALBERT excels in detailed offline analysis, perfect for complex claim investigations. SLICK offers instant, reliable damage detection to accelerate frontline claim approvals and garage estimates.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Hardware Flexibility:&lt;/strong&gt; ALBERT demands high-end GPUs; SLICK can run efficiently on more modest, real-world devices — a game changer for field agents and repair shops.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Knowledge Integration:&lt;/strong&gt; SLICK’s use of insurance-specific metadata bridges the gap between raw image analysis and domain expertise, improving real-world applicability.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;mathematical-insight-simplified&#34;&gt;Mathematical Insight (Simplified)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;ALBERT refines its internal feature embeddings ( z^{(l)} ) at layer ( l ) through multi-scale self-attention (MSA) and multilayer perceptron (MLP) modules with layer normalization (LN):&lt;/p&gt;
+&lt;p&gt;$$
+z^{(l+1)} = z^{(l)} + \text{MSA}(\text{LN}(z^{(l)})) + \text{MLP}(\text{LN}(z^{(l)}))
+$$&lt;/p&gt;
+&lt;p&gt;Meanwhile, SLICK enhances mask quality scores ( s_{mask} ) by combining image features ( f_{img} ) with knowledge graph embeddings ( f_{kg} ) gated by a sigmoid activation ( \sigma ):&lt;/p&gt;
+&lt;p&gt;$$
+s_{mask} = \sigma(W_q [f_{img} | f_{kg}]) + b
+$$&lt;/p&gt;
+&lt;p&gt;This formula reflects how SLICK intelligently modulates attention using both visual and domain knowledge.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;published-research&#34;&gt;Published Research&lt;/h2&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;ALBERT: &lt;a href=&#34;https://arxiv.org/abs/2506.10524&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/abs/2506.10524&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SLICK: &lt;a href=&#34;https://arxiv.org/abs/2506.10528&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/abs/2506.10528&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;looking-ahead&#34;&gt;Looking Ahead&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;MARSAIL continues to innovate by balancing AI model accuracy and deployment efficiency. ALBERT and SLICK represent the cutting edge of automotive AI, ready to transform insurance claim processes in Thailand and beyond — enabling smarter, faster, and fairer car insurance.&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Panboonyuen, Teerapong. (Jul 2025). &lt;em&gt;ALBERT vs SLICK: MARSAIL’s New AI Fashion for Car Insurance&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2025-07-02-albert-vs-slick-marsail-new-ai-fashion/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2025-07-02-albert-vs-slick-marsail-new-ai-fashion/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Or&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bibtex&#34;&gt;@article{panboonyuen2025albert_slick,
+  title={ALBERT: Advanced Localization and Bidirectional Encoder Representations from Transformers for Automotive Damage Evaluation},
+  author={Panboonyuen, Teerapong},
+  journal={arXiv preprint arXiv:2506.10524},
+  year={2025},
+  url={https://arxiv.org/abs/2506.10524}
+}
+
+@article{panboonyuen2025slick,
+  title={SLICK: Selective Localization and Instance Calibration for Knowledge-Enhanced Car Damage Segmentation in Automotive Insurance},
+  author={Panboonyuen, Teerapong},
+  journal={arXiv preprint arXiv:2506.10528},
+  year={2025},
+  url={https://arxiv.org/abs/2506.10528}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Found this blog insightful? Consider sharing it with friends or researchers in the automotive or insurance tech industry. 🚗
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Panboonyuen, Teerapong.  &amp;ldquo;ALBERT: Advanced Localization and Bidirectional Encoder Representations from Transformers for Automotive Damage Evaluation.&amp;rdquo; arXiv preprint arXiv:2506.10524 (2025). &lt;a href=&#34;https://arxiv.org/abs/2506.10524&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/abs/2506.10524&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Panboonyuen, Teerapong.  &amp;ldquo;SLICK: Selective Localization and Instance Calibration for Knowledge-Enhanced Car Damage Segmentation in Automotive Insurance.&amp;rdquo; arXiv preprint arXiv:2506.10528 (2025). &lt;a href=&#34;https://arxiv.org/abs/2506.10528&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/abs/2506.10528&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MARSAIL: Driving the Future of Car Insurance with AI</title>
+      <link>https://kaopanboonyuen.github.io/blog/2025-07-01-marsail-driving-the-future-of-car-insurance-with-ai/</link>
+      <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/blog/2025-07-01-marsail-driving-the-future-of-car-insurance-with-ai/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    You can explore our GitHub project page 📦 &lt;a href=&#34;https://kaopanboonyuen.github.io/MARS/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- &lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#mars-our-flagship-ai&#34;&gt;MARS: Our Flagship AI&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#marsail-2025-research-highlights&#34;&gt;MARSAIL 2025: Research Highlights&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#1-albert-efficient-transformer-for-automotive-localization&#34;&gt;1. ALBERT: Efficient Transformer for Automotive Localization&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#2-slick-knowledge-enhanced-instance-segmentation&#34;&gt;2. SLICK: Knowledge-Enhanced Instance Segmentation&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#3-dota-deformable-optimized-transformer-for-ocr&#34;&gt;3. DOTA: Deformable Optimized Transformer for OCR&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#future-work-beyond-damage--toward-full-lifecycle-intelligence&#34;&gt;Future Work: Beyond Damage – Toward Full-Lifecycle Intelligence&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#citation&#34;&gt;Citation&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
+ --&gt;
+&lt;p&gt;MARSAIL, or the Motor AI Recognition Solution Artificial Intelligence Laboratory, is Thailand’s pioneering AI research hub dedicated to automotive insurance and repair. Under the direction of Dr. Teerapong Panboonyuen (Dr. Kao), the lab develops deep learning models to analyze car damage, estimate repair costs, and automate claim handling — empowering insurers and garages with intelligence, precision, and speed.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;https://github.com/kaopanboonyuen/kaopanboonyuen.github.io/raw/main/files/MARS/MARSAIL.png&#34; alt=&#34;MARSAIL Logo&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 1: MARSAIL logo — symbolizing excellence in automotive AI research.
+&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The journey of MARSAIL began with a bold, urgent question: “Can we make car insurance in Thailand smarter, faster, and fraud-free using AI?” For decades, first-class auto insurance underwriting in Thailand has been heavily reliant on manual inspections and human judgments — prone to delays, inconsistencies, and at times, manipulation. Garage estimates for labor and parts are also far from standardized, often resulting in disputes, inefficiencies, and customer dissatisfaction. Seeing these gaps not as limitations but as opportunities, MARSAIL was born with a national mission in mind: to revolutionize Thailand’s automotive insurance ecosystem through scalable, verifiable, and explainable artificial intelligence.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We envisioned a future where a single image of a damaged vehicle could trigger an accurate AI-driven diagnosis — identifying every dent, crack, and broken part, then instantly calculating the repair cost and parts required. This would not only expedite claims processing but also create a tamper-proof digital trail, significantly reducing fraud in the industry. At the same time, garage operators would benefit from AI-driven estimates that standardize costs and accelerate service turnaround time — allowing businesses to grow with transparency and trust.&lt;/p&gt;
+&lt;p&gt;But we didn’t stop at computer vision. We realized that to fully automate the claims process, we also needed to read and understand the documents involved — from the front of a Thai driver’s license to the Vehicle Identification Number (VIN), mileage, license plate, or even the Thai National ID card of the claimant. That’s why MARSAIL also expanded into NLP and OCR research, building powerful models that combine vision and language to intelligently extract, verify, and reason over structured and unstructured vehicle-related data.&lt;/p&gt;
+&lt;p&gt;This work is now powering what we call the “Digital Insurance Twin” — a complete AI ecosystem that mirrors and manages every car’s insurance lifecycle. For example, an insurer can use our models to approve or reject first-class coverage applications by automatically analyzing the condition of a vehicle and matching it against risk profiles. Garages can plug into our engine to generate real-time quotes validated by AI, reducing negotiation overhead and instilling transparency. For every photo and every document, there’s an AI model working behind the scenes to ensure authenticity, consistency, and fairness.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;At the heart of MARSAIL’s vision is not just efficiency but integrity. By minimizing human subjectivity and manual paperwork, our AI platform safeguards against inflated repairs, ghost accidents, and fraudulent identity claims. This builds long-term trust across the ecosystem: between insurers and policyholders, garages and customers, and regulators and service providers.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Today, we train not only car damage models but also multimodal models that fuse vision and language, including transformer-based LLMs optimized for the insurance domain. We’re teaching machines to reason with documents, anticipate inconsistencies, and provide contextual understanding — allowing for seamless automation of tasks that previously required expert-level human input. Whether it’s reading a worn-out VIN from an old pickup truck or parsing a scanned Thai ID under poor lighting, MARSAIL&amp;rsquo;s AI agents are learning, adapting, and improving with every new sample.&lt;/p&gt;
+&lt;p&gt;Let us drive this transformation — not just with code and data, but with vision, integrity, and purpose.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;mars-our-flagship-ai&#34;&gt;MARS: Our Flagship AI&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;At MARSAIL’s mission lies our flagship model — MARS (Mask Attention Refinement with Sequential Quadtree Nodes). This architecture was designed with a singular goal: to perform fine-grained instance segmentation of car damage in a real-world automotive insurance setting, under various lighting, angle, and occlusion conditions. Unlike conventional approaches like Mask R-CNN or PointRend, MARS integrates hierarchical spatial reasoning using a quadtree decomposition fused with multi-level self-attention to enable both coarse-to-fine detection and spatial localization of subtle visual cues.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;https://kaopanboonyuen.github.io/MARS/img/MARS_003.png&#34; alt=&#34;MARS Example Output&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 2: Visual example of MARS model detecting vehicle damage areas with high precision across complex body surfaces.
+&lt;/div&gt;
+&lt;p&gt;The core idea of MARS is inspired by classical quadtree spatial partitioning. A standard convolutional encoder struggles to retain structural priors in large feature maps due to the limitations of fixed receptive fields. In contrast, we define a learnable partitioning function ( Q(x, \theta) ) that hierarchically splits an input image region ( x ) based on its visual entropy or variance — allocating deeper refinement to more complex regions. This enables what we call Sequential Quadtree Nodes (SQN), which dynamically expand only where the model requires increased focus.&lt;/p&gt;
+&lt;p&gt;Each node ( q_i ) in the quadtree contributes to the global segmentation mask through a combination of spatial attention ( A(q_i) ), confidence gating ( g(q_i) ), and localized refinement. Mathematically, the final segmentation map ( M ) is formed by a recursive mask integration:&lt;/p&gt;
+&lt;p&gt;$$
+M = \sum_{i=1}^{N} g(q_i) \cdot A(q_i) \cdot F(q_i)
+$$&lt;/p&gt;
+&lt;p&gt;Where ( F(q_i) ) is the feature vector derived from node ( q_i ), and ( g(q_i) \in [0, 1] ) is a learned gate controlling its contribution to the final prediction. The gating is modeled as a sigmoid activation over a relevance score computed via a learned MLP with residual feedback from previous nodes.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;https://kaopanboonyuen.github.io/MARS/img/featured.png&#34; alt=&#34;MARS Model Architecture&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 3: MARS architecture integrates attention refinement, quadtree partitioning, and sequential mask propagation modules to enable instance-level car damage segmentation.
+&lt;/div&gt;
+&lt;p&gt;In our experiments on Thai car damage datasets, MARS with a ResNet101-FPN backbone outperforms all existing baselines, yielding a +2.3 maskAP improvement over PointRend and +1.8 over Mask Transfiner (Panboonyuen et al. 2023). More impressively, MARS demonstrates resilience in heavily occluded scenes, where traditional architectures often over-segment or misclassify minor damages such as scratches, dents, and broken trims.&lt;/p&gt;
+&lt;p&gt;Beyond segmentation accuracy, MARS was designed with inference cost and deployment scalability in mind. The attention and SQN modules are modular and parallelizable, allowing fast inference on GPU-based edge devices commonly deployed in insurance claim centers. In practice, MARS processes a high-resolution damage image in under 180ms on an NVIDIA T4 GPU, enabling real-time integration into mobile claim apps and garage estimation tools.&lt;/p&gt;
+&lt;p&gt;For a comprehensive explanation of the method, experimental protocol, and benchmark comparisons, readers are encouraged to refer to our full publication &lt;a href=&#34;https://arxiv.org/abs/2305.04743&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; (Panboonyuen et al. 2023).&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;marsail-2025-research-highlights&#34;&gt;MARSAIL 2025: Research Highlights&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;As we move into 2025, MARSAIL continues to push the frontier of AI for automotive insurance and repair through multimodal AI systems, low-parameter transformer architectures, and high-resolution OCR solutions tailored for real-world document processing. These efforts aim to expand our automation ecosystem beyond just car damage detection — now encompassing risk prediction, document understanding, vehicle condition analytics, and identity verification pipelines. Below we highlight three key models from our most recent research drop.&lt;/p&gt;
+&lt;h3 id=&#34;1-albert-efficient-transformer-for-automotive-localization&#34;&gt;1. ALBERT: Efficient Transformer for Automotive Localization&lt;/h3&gt;
+&lt;p&gt;ALBERT (Advanced Localization and Bidirectional Encoder Representations from Transformers) is our compact vision transformer (ViT) tailored for car damage assessment. Unlike standard ViT and DETR-based approaches, ALBERT introduces structural inductive biases using localized deformable tokens and parameter sharing to reduce model size and memory usage while preserving high-resolution localization.&lt;/p&gt;
+&lt;p&gt;Mathematically, the ALBERT encoder layer refines input embeddings using the following formulation:&lt;/p&gt;
+&lt;p&gt;$$
+z^{(l+1)} = z^{(l)} + \text{MSA}(\text{LN}(z^{(l)})) + \text{MLP}(\text{LN}(z^{(l)}))
+$$&lt;/p&gt;
+&lt;p&gt;Where MSA is a multi-scale self-attention with learnable spatial offsets adapted to car damage priors. Through selective hard sampling and token grouping, ALBERT reduces GPU memory by 40% during training while achieving higher IoU for small scratches and localized bumper cracks. This model is ideal for mobile deployments in insurance apps and in-vehicle camera assessments (&lt;a href=&#34;http://arxiv.org/abs/2506.10524&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv:2506.10524&lt;/a&gt;).&lt;/p&gt;
+&lt;h3 id=&#34;2-slick-knowledge-enhanced-instance-segmentation&#34;&gt;2. SLICK: Knowledge-Enhanced Instance Segmentation&lt;/h3&gt;
+&lt;p&gt;SLICK (Selective Localization and Instance Calibration with Knowledge) augments vision transformer-based instance segmentation using both spatial priors and domain knowledge graphs. By integrating policy-driven insurance metadata — e.g., bumper policy zones, model-specific weak points — SLICK dynamically adjusts attention weights and segmentation proposals. This results in better prediction under diverse lighting, weather, and occlusion scenarios, especially for aging or modified vehicles.&lt;/p&gt;
+&lt;p&gt;We define a mask quality score enhanced by contextual gating:&lt;/p&gt;
+&lt;p&gt;$$
+s_{mask} = \sigma(W_q [f_{img} | f_{kg}]) + b
+$$&lt;/p&gt;
+&lt;p&gt;SLICK delivers +2.5 maskAP improvement over MARS in high-noise scenes, setting a new benchmark in our internal Thai Vehicle Damage dataset (&lt;a href=&#34;http://arxiv.org/abs/2506.10528&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv:2506.10528&lt;/a&gt;).&lt;/p&gt;
+&lt;h3 id=&#34;3-dota-deformable-optimized-transformer-for-ocr&#34;&gt;3. DOTA: Deformable Optimized Transformer for OCR&lt;/h3&gt;
+&lt;p&gt;DOTA (Deformable Optimized Transformer Architecture) is our OCR engine designed for reading Thai ID cards, driver licenses, vehicle registration books, VIN plates, and inspection forms in real-world garage conditions. Using a retrieval-augmented architecture and deformable attention blocks, DOTA can accurately recognize text even under motion blur, glare, or partial occlusion.&lt;/p&gt;
+&lt;p&gt;Unlike traditional CRNN or standard transformer OCRs, DOTA uses a hybrid vision-language training objective:&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;future-work-beyond-damage--toward-full-lifecycle-intelligence&#34;&gt;Future Work: Beyond Damage – Toward Full-Lifecycle Intelligence&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Looking forward, our roadmap involves the development of a unified AI engine that combines damage reasoning, document verification, driving behavior analysis, and vehicle lifecycle forecasting. This would support real-time insurance pricing, repair prioritization, fraud detection, and second-hand vehicle valuation. MARSAIL is also training domain-specific large language models (LLMs) to interact with policyholders in Thai, automatically generate claim reports, and retrieve legal clauses for garage–insurance negotiations.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;re collaborating with garages and insurers across Thailand to create a national automotive data lake for federated learning — enabling privacy-respecting model training across decentralized garages without centralizing sensitive vehicle data. Our ultimate goal is to support the Thai government’s vision for a Smart Nation and to make MARSAIL the Southeast Asian leader in Automotive Intelligence Infrastructure.&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Panboonyuen, Teerapong. (Jul 2025). &lt;em&gt;MARSAIL: Driving the Future of Car Insurance with AI&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2025-07-01-marsail-driving-the-future-of-car-insurance-with-ai/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2025-07-01-marsail-driving-the-future-of-car-insurance-with-ai/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Or&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bibtex&#34;&gt;@inproceedings{panboonyuen2023mars,
+  title={MARS: Mask Attention Refinement with Sequential Quadtree Nodes for Car Damage Instance Segmentation},
+  author={Panboonyuen, Teerapong, et al.},
+  booktitle={International Conference on Image Analysis and Processing},
+  year={2023},
+  organization={Springer}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Found this blog insightful? Consider sharing it with friends or researchers in the automotive or insurance tech industry. 🚗
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Panboonyuen, T., et al.&lt;/strong&gt; (2023). &lt;em&gt;MARS: Mask Attention Refinement with Sequential Quadtree Nodes for Car Damage Instance Segmentation&lt;/em&gt;. ICIAP 2023. Springer. &lt;a href=&#34;https://link.springer.com/chapter/10.1007/978-3-031-51023-6_3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Wang, X., X. Li, and Z. Wu. (2023). &lt;em&gt;Cardd: A new dataset for vision-based car damage detection&lt;/em&gt;. IEEE Transactions on Intelligent Transportation Systems, 24(7), 7202-7214.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Elbhrawy, A. S., M. A. Belal, and M. S. Hassanein. (2024). &lt;em&gt;CES: Cost Estimation System for Enhancing the Processing of Car Insurance Claims&lt;/em&gt;. Journal of Computing and Communication, 3(1), 55-69.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Amirfakhrian, M., and M. Parhizkar. (2021). &lt;em&gt;Integration of image segmentation and fuzzy theory to improve the accuracy of damage detection areas in traffic accidents&lt;/em&gt;. Journal of Big Data, 8(1), 1–17.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Arnab, A., and P. H. S. Torr. (2017). &lt;em&gt;Pixelwise instance segmentation with a dynamically instantiated network&lt;/em&gt;. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 441-450.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bolya, D., C. Zhou, F. Xiao, and Y. J. Lee. (2019). &lt;em&gt;Yolact: Real-time instance segmentation&lt;/em&gt;. Proceedings of the IEEE/CVF International Conference on Computer Vision, 9157–9166.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Chen, K., J. Pang, J. Wang, Y. Xiong, X. Li, S. Sun, W. Feng, Z. Liu, J. Shi, W. Ouyang, et al. (2019). &lt;em&gt;Hybrid task cascade for instance segmentation&lt;/em&gt;. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 4974–4983.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Chen, H., K. Sun, Z. Tian, C. Shen, Y. Huang, and Y. Yan. (2020). &lt;em&gt;Blendmask: Top-down meets bottom-up for instance segmentation&lt;/em&gt;. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 8573–8581.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Girshick, R. (2015). &lt;em&gt;Fast R-CNN&lt;/em&gt;. Proceedings of the IEEE International Conference on Computer Vision, 1440–1448.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;He, K., G. Gkioxari, P. Dollár, and R. Girshick. (2017). &lt;em&gt;Mask R-CNN&lt;/em&gt;. Proceedings of the IEEE International Conference on Computer Vision, 2961–2969.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Jõeveer, K., and K. Kepp. (2023). &lt;em&gt;What drives drivers? Switching, learning, and the impact of claims in car insurance&lt;/em&gt;. Journal of Behavioral and Experimental Economics, 103, 101993.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ke, L., M. Danelljan, X. Li, Y.-W. Tai, C.-K. Tang, and F. Yu. (2022). &lt;em&gt;Mask Transfiner for high-quality instance segmentation&lt;/em&gt;. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 4412–4421.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Kirillov, A., Y. Wu, K. He, and R. Girshick. (2020). &lt;em&gt;PointRend: Image segmentation as rendering&lt;/em&gt;. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 9799–9808.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Macedo, A. M., C. V. Cardoso, J. S. M. Neto, et al. (2021). &lt;em&gt;Car insurance fraud: The role of vehicle repair workshops&lt;/em&gt;. International Journal of Law, Crime and Justice, 65, 100456.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Parhizkar, M., and M. Amirfakhrian. (2022). &lt;em&gt;Car detection and damage segmentation in the real scene using a deep learning approach&lt;/em&gt;. International Journal of Intelligent Robotics and Applications, 6(2), 231–245.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Panboonyuen, T. (2019). &lt;em&gt;Semantic segmentation on remotely sensed images using deep convolutional encoder-decoder neural network&lt;/em&gt;. Ph.D. Thesis, Chulalongkorn University.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pasupa, K., P. Kittiworapanya, N. Hongngern, and K. Woraratpanya. (2022). &lt;em&gt;Evaluation of deep learning algorithms for semantic segmentation of car parts&lt;/em&gt;. Complex &amp;amp; Intelligent Systems, 8(5), 3613–3625.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Weisburd, S. (2015). &lt;em&gt;Identifying moral hazard in car insurance contracts&lt;/em&gt;. Review of Economics and Statistics, 97(2), 301–313.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Wang, X., R. Zhang, T. Kong, L. Li, and C. Shen. (2020). &lt;em&gt;Solov2: Dynamic and fast instance segmentation&lt;/em&gt;. Advances in Neural Information Processing Systems, 33, 17721–17732.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Xie, E., P. Sun, X. Song, W. Wang, X. Liu, D. Liang, C. Shen, and P. Luo. (2020). &lt;em&gt;Polarmask: Single shot instance segmentation with polar representation&lt;/em&gt;. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 12193–12202.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Zhang, Q., X. Chang, and S. Bian. (2020). &lt;em&gt;Vehicle-damage-detection segmentation algorithm based on improved Mask R-CNN&lt;/em&gt;. IEEE Access, 8, 6997–7004.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
     <item>
