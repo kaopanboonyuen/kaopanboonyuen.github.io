@@ -378,7 +378,7 @@ $$&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;4-mars-mask-attention-refinement-with-sequential-quadtree-nodes-for-car-damage-instance-segmentation&#34;&gt;4. MARS: Mask Attention Refinement with Sequential Quadtree Nodes for Car Damage Instance Segmentation&lt;/h3&gt;
 &lt;hr&gt;
-&lt;p&gt;At &lt;strong&gt;MARSAIL&lt;/strong&gt;, under the guidance of Dr. Teerapong Panboonyuen (ดร. ธีรพงศ์ ปานบุญยืน) or Dr.Kao (ดร. เก้า), our team is on a mission: to fuse cutting-edge &lt;strong&gt;vision systems&lt;/strong&gt; with real-world auto insurance workflows. Our latest work—published in Springer—introduces a dynamic way to analyze vehicle damage and process claims faster, smarter, and more precisely than ever before.&lt;/p&gt;
+&lt;p&gt;At &lt;strong&gt;MARSAIL&lt;/strong&gt;, under the guidance of Dr. Teerapong Panboonyuen (ดร. ธีรพงศ์ ปานบุญยืน) or Dr. Kao (ดร. เก้า), our team is on a mission: to fuse cutting-edge &lt;strong&gt;vision systems&lt;/strong&gt; with real-world auto insurance workflows. Our latest work—published in Springer—introduces a dynamic way to analyze vehicle damage and process claims faster, smarter, and more precisely than ever before.&lt;/p&gt;
 &lt;h3 id=&#34;-what-sets-our-approach-apart&#34;&gt;🔍 what sets our approach apart&lt;/h3&gt;
 &lt;p&gt;Standard image-analysis tools often struggle to keep structural details intact when dealing with complex scenes or large images. In our paper (Springer, Chapter 3), we introduce a &lt;strong&gt;hierarchical, attention-driven method&lt;/strong&gt; that adapts dynamically to the visual complexity of each region:&lt;/p&gt;
 &lt;ul&gt;
