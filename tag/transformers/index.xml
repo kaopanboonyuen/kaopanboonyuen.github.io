@@ -28,6 +28,8 @@
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&#34;#albert-vs-slick-the-new-ai-fashion-at-marsail&#34;&gt;ALBERT vs SLICK: The New AI Fashion at MARSAIL&lt;/a&gt;
       &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#slick-revolutionizing-car-damage-segmentation-with-knowledge-enhanced-ai-at-marsail&#34;&gt;SLICK: Revolutionizing Car Damage Segmentation with Knowledge-Enhanced AI at MARSAIL&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#inspiration-from-andrej-karpathy-embracing-the-new-era-of-ai-innovation-at-marsail&#34;&gt;Inspiration from Andrej Karpathy: Embracing the New Era of AI Innovation at MARSAIL&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&#34;#albert-the-teacher-model--precision-at-a-cost&#34;&gt;ALBERT: The Teacher Model — Precision at a Cost&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&#34;#slick-the-student-model--lightning-speed-meets-smart-knowledge&#34;&gt;SLICK: The Student Model — Lightning Speed Meets Smart Knowledge&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&#34;#-teaching-machines-to-see-smarter-and-faster-the-marsail-teacher-student-model&#34;&gt;🚘 Teaching machines to see smarter and faster: the MARSAIL teacher-student model&lt;/a&gt;&lt;/li&gt;
@@ -59,8 +61,37 @@
 &lt;p&gt;These models represent more than just technological progress; they embody a new philosophy in AI-powered insurance: a seamless synergy between &lt;strong&gt;uncompromising accuracy&lt;/strong&gt; and &lt;strong&gt;lightning-fast efficiency&lt;/strong&gt;, inspired by the teacher-student paradigm.&lt;/p&gt;
 &lt;p&gt;At the core of this paradigm lies &lt;strong&gt;ALBERT&lt;/strong&gt;, the “teacher” — a powerhouse model meticulously engineered for razor-sharp precision. ALBERT dives deep into images, discerning the finest scratches, dents, and cracks with near-human expertise. It’s a master of detail, leaving no nuance unseen, perfect for complex offline investigations and comprehensive damage evaluations where absolute accuracy is essential.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Yet, speed is just as critical in today’s insurance ecosystem, especially for frontline claim processing and on-site damage assessments. This is where &lt;strong&gt;SLICK&lt;/strong&gt;, the “student,” steps in. Trained and guided by ALBERT’s expert knowledge, SLICK is designed to be nimble, agile, and incredibly fast — capable of delivering reliable damage detection results instantly on edge devices or even mobile phones. Its streamlined architecture empowers insurance agents and repair shops to operate smarter and faster without compromising quality.&lt;/p&gt;
+&lt;p&gt;In today’s fast-paced insurance ecosystem, speed is just as crucial as accuracy, particularly when it comes to frontline claim processing and on-the-spot damage assessments. This is where SLICK, the &amp;ldquo;student&amp;rdquo; model, truly shines. Guided by the advanced expertise of ALBERT, SLICK is engineered for agility and lightning-fast performance, delivering precise damage detection results in real-time. Whether running on edge devices or mobile phones, its optimized architecture allows insurance agents and repair shops to streamline their operations, making decisions faster without ever sacrificing quality.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;slick-revolutionizing-car-damage-segmentation-with-knowledge-enhanced-ai-at-marsail&#34;&gt;SLICK: Revolutionizing Car Damage Segmentation with Knowledge-Enhanced AI at MARSAIL&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;The recent Google AI video on Knowledge Distillation: A Good Teacher is Patient and Consistent offers valuable insights into how AI models can be trained efficiently by leveraging a &amp;ldquo;teacher-student&amp;rdquo; framework. The key takeaway from this approach is that a well-trained teacher model can pass down its knowledge to a student model, significantly improving performance and generalization. This technique has sparked new ideas for MARSAIL and our work on SLICK (Selective Localization and Instance Calibration for Knowledge-Enhanced Car Damage Segmentation).&lt;/p&gt;
+&lt;p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/gZPUGje1PCI&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Today, we introduced Gemini Robotics On-Device 🤖&lt;br&gt;&lt;br&gt;🧪 Designed for rapid experimentation with dexterous manipulation.&lt;br&gt;🦾 Adaptable to new tasks through fine-tuning to improve performance.&lt;br&gt;👟 Optimized to run locally with low-latency inference.&lt;br&gt;&lt;br&gt;Learn more… &lt;a href=&#34;https://t.co/h2d1TZ49qm&#34;&gt;https://t.co/h2d1TZ49qm&lt;/a&gt;&lt;/p&gt;&amp;mdash; Google AI (@GoogleAI) &lt;a href=&#34;https://twitter.com/GoogleAI/status/1937554536966619399?ref_src=twsrc%5Etfw&#34;&gt;June 24, 2025&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;/p&gt;
+&lt;p&gt;In the same spirit of knowledge transfer, SLICK takes inspiration from the concept of &amp;ldquo;distilling&amp;rdquo; knowledge from large, complex models to create an AI system capable of precise, real-world car damage segmentation. Through components like Selective Part Segmentation, Localization-Aware Attention, and Knowledge Fusion, SLICK enhances the ability of AI models to focus on and accurately segment vehicle parts—even under challenging conditions like occlusions and deformations. Much like the patient and consistent teacher-student relationship in knowledge distillation, SLICK learns from vast datasets (including synthetic crash data and real-world insurance records) to ensure robustness and adaptability across a variety of damage scenarios.&lt;/p&gt;
+&lt;p&gt;At MARSAIL, inspired by Google AI&amp;rsquo;s knowledge distillation, we’re applying these principles to create an AI system that not only improves segmentation accuracy but also optimizes the entire automotive insurance and repair workflow. With SLICK, we are ready to bring this advanced AI to Thailand, enhancing efficiency, reducing fraud, and setting new standards for the industry.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;inspiration-from-andrej-karpathy-embracing-the-new-era-of-ai-innovation-at-marsail&#34;&gt;Inspiration from Andrej Karpathy: Embracing the New Era of AI Innovation at MARSAIL&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;In the video &amp;ldquo;Andrej Karpathy: Software Is Changing (Again)&amp;rdquo;, Karpathy discusses how artificial intelligence and deep learning are driving a new wave of transformation across industries. At MARSAIL, we deeply resonate with his perspective that AI is not just evolving—it’s fundamentally reshaping how we approach problem-solving and automation. Inspired by Karpathy’s vision, we’re applying the latest in AI research to redefine the way car damage estimation, insurance claims, and repair workflows are handled. Just as Karpathy highlights the importance of AI in software development, MARSAIL is leveraging cutting-edge AI models like SLICK to bring accuracy, speed, and efficiency to the automotive sector, helping to transform the Thai automotive insurance ecosystem into a more intelligent and scalable system.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/LCEmiRjPEtQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;🔥 New (1h56m) video lecture: &amp;quot;Let&amp;#39;s build GPT: from scratch, in code, spelled out.&amp;quot;&lt;a href=&#34;https://t.co/2pKsvgi3dE&#34;&gt;https://t.co/2pKsvgi3dE&lt;/a&gt; &lt;br&gt;We build and train a Transformer following the &amp;quot;Attention Is All You Need&amp;quot; paper in the language modeling setting and end up with the core of nanoGPT. &lt;a href=&#34;https://t.co/6dzimsYPB9&#34;&gt;pic.twitter.com/6dzimsYPB9&lt;/a&gt;&lt;/p&gt;&amp;mdash; Andrej Karpathy (@karpathy) &lt;a href=&#34;https://twitter.com/karpathy/status/1615398117683388417?ref_src=twsrc%5Etfw&#34;&gt;January 17, 2023&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;By aligning our research with the principles Karpathy discusses, MARSAIL is at the forefront of AI-driven innovation in the automotive space, bringing faster, more reliable, and trustworthy solutions to insurers, garages, and customers alike.&lt;/p&gt;
 &lt;p&gt;Together, &lt;strong&gt;ALBERT&lt;/strong&gt; and &lt;strong&gt;SLICK&lt;/strong&gt; form a powerful duo that bridges the traditional divide between accuracy and efficiency — offering the best of both worlds to revolutionize car insurance workflows across Thailand and beyond.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;albert-the-teacher-model--precision-at-a-cost&#34;&gt;ALBERT: The Teacher Model — Precision at a Cost&lt;/h3&gt;
