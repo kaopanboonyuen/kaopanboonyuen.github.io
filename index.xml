@@ -260,7 +260,6 @@ $$&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;While the integration of LLMs in remote sensing holds promise, several challenges remain. These include the need for large, high-quality datasets for training LLMs, the computational cost of training hybrid models, and the difficulty in obtaining ground truth data for validation.&lt;/p&gt;
 &lt;p&gt;Future research will focus on refining these models and exploring new techniques such as semi-supervised learning and transfer learning to further enhance performance.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m glad you&amp;rsquo;re loving the content! Here’s the smooth continuation for &lt;strong&gt;Figures 6 to 9&lt;/strong&gt; with their respective descriptions integrated naturally:&lt;/p&gt;
 &lt;p&gt;As we continue to observe the rise of &lt;strong&gt;Vision–Language Models (VLMs)&lt;/strong&gt; in remote sensing, one notable trend is the growing body of academic work that explores their capabilities. The figure below demonstrates the increasing number of publications on VLMs in the field of remote sensing, reflecting the broad interest and potential for these models to shape the future of satellite imagery analysis. As the research landscape evolves, we can expect even more innovative approaches and applications to emerge.&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
   &lt;img src=&#34;img/KAO_SAMPLE_RS_LLMS_00006.png&#34; alt=&#34;Number of publications for Vision–Language Models (VLMs) in remote sensing&#34;&gt;
