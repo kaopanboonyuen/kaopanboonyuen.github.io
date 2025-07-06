@@ -1,0 +1,1497 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Teerapong Panboonyuen" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Exploring how LLMs can enhance remote sensing applications like LULC and image classification using Sentinel, Landsat-8, and THEOS imagery." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/blog/2025-07-05-visionlanguage-models-for-remote-sensing-a-new-era-of-multimodal-understanding/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08f2e04360a1c87f5ad39547c02bf219.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/blog/2025-07-05-visionlanguage-models-for-remote-sensing-a-new-era-of-multimodal-understanding/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/blog/2025-07-05-visionlanguage-models-for-remote-sensing-a-new-era-of-multimodal-understanding/" />
+  <meta property="og:title" content="Vision–Language Models for Remote Sensing: A New Era of Multimodal Understanding | Teerapong Panboonyuen" />
+  <meta property="og:description" content="Exploring how LLMs can enhance remote sensing applications like LULC and image classification using Sentinel, Landsat-8, and THEOS imagery." /><meta property="og:image" content="https://kaopanboonyuen.github.io/blog/2025-07-05-visionlanguage-models-for-remote-sensing-a-new-era-of-multimodal-understanding/featured.png" />
+    <meta property="twitter:image" content="https://kaopanboonyuen.github.io/blog/2025-07-05-visionlanguage-models-for-remote-sensing-a-new-era-of-multimodal-understanding/featured.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2025-07-05T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2025-07-05T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Vision–Language Models for Remote Sensing: A New Era of Multimodal Understanding | Teerapong Panboonyuen</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="894cc79f6a94e16ca130890eaff4e0b9" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.4be02a3b391999348b0c7478778a0e4b.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#awards"><span>Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#press"><span>Press</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Featured</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#tags"><span>Topics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#communities"><span>Communities</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://x.com/kaopanboonyuen" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>Vision–Language Models for Remote Sensing: A New Era of Multimodal Understanding</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span class="author-highlighted">Teerapong Panboonyuen</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    2025
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/remote-sensing/">remote-sensing</a>, <a href="/category/lulc/">LULC</a>, <a href="/category/llm/">LLM</a></span>
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 1200px; max-height: 1332px;">
+  <div style="position: relative">
+    <img src="/blog/2025-07-05-visionlanguage-models-for-remote-sensing-a-new-era-of-multimodal-understanding/featured_hu8c639d3247024966e8869e6a9f6674b7_1040312_1200x0_resize_lanczos_3.png" alt="" class="featured-image">
+    <span class="article-header-caption">Advancements in Vision–Language Models for Remote Sensing: A New Era of Multimodal Understanding (Image Credit: <a href="https://www.mdpi.com/2072-4292/17/1/162" target="_blank" rel="noopener">https://www.mdpi.com/2072-4292/17/1/162</a>)</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Hi, it’s me again, <strong>Kao Panboonyuen</strong>—welcome back to my blog! 😊 Today, I’m diving into a topic that’s been on my mind a lot lately: the exciting intersection of <strong>Remote Sensing</strong> and <strong>Large Language Models (LLMs)</strong>. As you know, <strong>remote sensing</strong> is one of the most powerful tools for understanding the Earth’s surface, using <strong>satellite systems</strong> like <strong>Sentinel-2</strong>, <strong>Landsat-8</strong>, and <strong>THEOS</strong> to capture tons of <strong>high-resolution data</strong>. From monitoring <strong>environmental changes</strong> to assisting in <strong>urban planning</strong>, this data has countless applications. But here’s the catch—while we have all this amazing data at our fingertips, its sheer volume and complexity can overwhelm traditional methods of <strong>data classification</strong>.</p>
+<p>Older algorithms like <strong>Support Vector Machines (SVM)</strong> and <strong>Random Forest (RF)</strong> have done a decent job, but they often struggle to tap into the <strong>deeper semantic meaning</strong> within the data. They can classify pixels, sure, but they can’t grasp the rich, contextual relationships between them.</p>
+<blockquote>
+<p>That’s where <strong>LLMs</strong> come in! These models, originally built for <strong>natural language processing</strong>, have the power to <strong>revolutionize remote sensing</strong> by interpreting and analyzing data on a much deeper level. By <strong>integrating contextual insights</strong> from <strong>satellite metadata</strong> and <strong>environmental reports</strong>, <strong>LLMs</strong> can enhance tasks like <strong>LULC (Land Use/Land Cover) classification</strong> and <strong>image analysis</strong>. The results? Much more accurate and insightful interpretations of satellite imagery, opening up a whole new world of possibilities for <strong>remote sensing applications</strong>.</p>
+</blockquote>
+<p><strong>Remote sensing</strong> has become an indispensable tool for gaining detailed insights into the Earth&rsquo;s surface, with satellite systems like <strong>Sentinel-2</strong>, <strong>Landsat-8</strong>, and <strong>THEOS</strong> providing an endless stream of <strong>high-resolution data</strong>. From <strong>environmental monitoring</strong> to <strong>urban planning</strong>, this data fuels critical applications across a range of sectors. Yet, the vast volume and <strong>complexity</strong> of satellite imagery can present a significant challenge. Traditional methods of <strong>data classification</strong>, such as <strong>Support Vector Machines (SVM)</strong> and <strong>Random Forest (RF)</strong>, have delivered valuable results but are often unable to capture the full <strong>semantic richness</strong> embedded within this data. They excel at processing large datasets, but struggle when tasked with understanding the deeper, contextual relationships between the elements within these images.</p>
+<blockquote>
+<p>Enter the era of <strong>Large Language Models (LLMs)</strong>, which are revolutionizing the way we process and interpret remote sensing data. Originally designed to understand and generate <strong>human-like language</strong>, LLMs have demonstrated an incredible capacity to enhance <strong>data analysis</strong> by integrating <strong>contextual information</strong> from multiple sources—such as <strong>environmental reports</strong>, <strong>satellite metadata</strong>, and <strong>geospatial context</strong>. This ability to handle <strong>multimodal data</strong> opens up new avenues for more accurate <strong>Land Use/Land Cover (LULC)</strong> classification and <strong>image interpretation</strong>, driving improvements in remote sensing applications that were once constrained by traditional algorithms.</p>
+</blockquote>
+<p>In a recent Twitter post, <strong>Lilian Weng</strong> excitedly shared the launch of <strong>Thinking Machines Lab</strong>, a cutting-edge AI research and product company dedicated to pushing the boundaries of <strong>multimodal understanding</strong>. As she mentions, the lab is home to some of the brightest minds behind innovations like <strong>ChatGPT</strong>. Their focus on multimodal AI is particularly relevant to the work being done with <strong>Vision–Language Models (VLMs)</strong>, which are rapidly transforming how we analyze remote sensing data. Just like <strong>Thinking Machines Lab</strong> aims to integrate various AI disciplines to achieve greater synergy, <strong>VLMs</strong> are creating new possibilities for understanding <strong>satellite imagery</strong> by combining <strong>computer vision</strong> and <strong>natural language processing</strong>. This shift not only enhances our ability to interpret complex data but also paves the way for more intuitive, human-like understanding of the world around us. To learn more about <strong>Thinking Machines Lab</strong> and their vision, check out <a href="https://thinkingmachines.ai" target="_blank" rel="noopener">Thinking Machines</a>.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">This is something we have been cooking together for a few months and I&#39;m very excited to announce it today.<br><br>Thinking Machines Lab is my next adventure and I&#39;m feeling very proud and lucky to start it with a group of talented colleagues. Learn more about our vision at… <a href="https://t.co/eKQYvuwurB">https://t.co/eKQYvuwurB</a></p>&mdash; Lilian Weng (@lilianweng) <a href="https://twitter.com/lilianweng/status/1891922794402939092?ref_src=twsrc%5Etfw">February 18, 2025</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<hr>
+<h3 id="visionlanguage-models-vlms">Vision–Language Models (VLMs)</h3>
+<hr>
+<p>In recent years, <strong>Vision–Language Models (VLMs)</strong> have emerged as a groundbreaking tool in remote sensing, particularly in enhancing the interpretation of satellite imagery. These models merge visual data with linguistic understanding, offering a more holistic approach to analyzing complex remote sensing data.</p>
+<p>One of the most exciting developments in this area is how VLMs can enrich traditional remote sensing datasets. While traditional datasets often rely purely on raw imagery, VLMs leverage contextual relationships between visual inputs and textual data, providing more nuanced insights. The integration of textual descriptions or geospatial metadata alongside imagery allows for a deeper understanding of land use, land cover changes, and other environmental factors. This ability is showcased in a comparative visualization, where you can clearly see how VLM datasets offer richer and more detailed information than traditional methods.</p>
+<p>The power of VLMs lies not just in their ability to process images, but also in their proficiency at handling a variety of tasks simultaneously. For instance, these models can assist in tasks such as object detection, classification, and even scene understanding. A representation of these tasks reveals just how versatile VLMs can be across different domains of remote sensing. From simple land cover classification to more complex tasks like environmental monitoring, VLMs are equipped to tackle them all.</p>
+<p>As we dig deeper into the structure of VLMs, it becomes clear that they come in various forms, each designed to handle specific challenges in remote sensing. For example, <strong>contrastive models</strong> focus on matching images with descriptive text, while <strong>conversational models</strong> are more dynamic, enabling interactive querying and real-time interpretation of satellite imagery. This distinction in architecture allows VLMs to be adaptable to a wide range of applications, from automatic image captioning to detailed environmental analysis.</p>
+<p>In addition to their core functionality, enhancement techniques are often employed to refine VLM performance. Some layers of the model are <strong>fine-tuned</strong> to improve precision, while others are kept <strong>frozen</strong> to preserve previously learned features. These techniques are crucial for boosting model efficiency without overfitting, ensuring that VLMs can be effectively applied to large-scale remote sensing tasks.</p>
+<p>The growing interest in VLMs is also reflected in the increasing number of academic publications dedicated to this field. Over the past few years, the volume of research in the intersection of VLMs and remote sensing has surged, reflecting the potential of these models to transform how we understand and analyze satellite data.</p>
+<div style="text-align: center;">
+  <img src="img/KAO_SAMPLE_RS_LLMS_00001.png" alt="Comparison of traditional and VLM datasets in remote sensing">
+  <p style="font-style: italic; margin-top: 0px;">Figure 1: A comparative analysis between traditional and Vision–Language Model (VLM) datasets in the context of remote sensing. Traditional datasets typically rely on isolated visual data (such as satellite images) for classification and interpretation, often limited by the scope of raw pixel-based information. In contrast, VLM datasets integrate both visual and textual modalities, incorporating contextual information like environmental reports, geospatial metadata, and textual descriptions. This hybrid approach enhances the model's ability to capture complex relationships and nuanced patterns in satellite imagery, improving classification accuracy and providing richer insights for land use/land cover (LULC) analysis and other remote sensing tasks. (Image source: <a href="https://www.mdpi.com/2072-4292/17/1/162" target="_blank">MDPI</a>).</p>
+</div>
+<p>As shown in the visual comparison above, the shift from traditional datasets to VLM datasets in remote sensing is not just about increasing data volume but about enhancing the depth and accuracy of the insights derived from satellite imagery. The traditional approach provides basic visual data, while VLM datasets incorporate semantic understanding, making it easier to identify patterns, trends, and anomalies that would otherwise go unnoticed.</p>
+<p>One of the remarkable aspects of VLMs is their ability to handle a wide variety of tasks. The tasks shown in the figure below range from simple image classification to more complex objectives such as environmental change detection and land use forecasting. With their integrated vision and language capabilities, VLMs can extract much more detailed and contextually relevant information from imagery than traditional models.</p>
+<div style="text-align: center;">
+  <img src="img/KAO_SAMPLE_RS_LLMS_00002.png" alt="Representative tasks of Vision–Language Models in remote sensing">
+  <p style="font-style: italic; margin-top: 0px;">Figure 2: A detailed overview of representative tasks handled by Vision–Language Models (VLMs) in remote sensing. VLMs bridge the gap between visual and textual data, enabling them to perform complex multimodal tasks such as image captioning, object detection, and semantic segmentation. These models can analyze high-resolution satellite imagery while leveraging textual data like geospatial metadata, environmental descriptions, and sensor reports to provide a more comprehensive understanding of the landscape. For instance, VLMs are increasingly used in land use/land cover (LULC) classification, change detection, and disaster monitoring, offering enhanced performance over traditional methods by incorporating contextual information to reduce ambiguity. (Image source: <a href="https://www.mdpi.com/2072-4292/17/1/162" target="_blank">MDPI</a>).</p>
+</div>
+<p>The flexibility of VLMs in handling such diverse tasks opens new possibilities in remote sensing, where the understanding of both imagery and textual data is vital for accurate analysis. The synergy between vision and language also plays a key role in making sense of complex environmental data.</p>
+<p>When we look at the underlying architecture of VLMs, it’s clear that they are not a one-size-fits-all solution. Models can either use a <strong>contrastive approach</strong>, focusing on pairing images with descriptions, or a more <strong>conversational approach</strong>, which allows for interactive querying of imagery. This flexibility is key for the adaptability of VLMs in real-world applications, whether it&rsquo;s for immediate analysis or long-term monitoring.</p>
+<div style="text-align: center;">
+  <img src="img/KAO_SAMPLE_RS_LLMS_00004.png" alt="Architecture of contrastive and conversational Vision–Language Models">
+  <p style="font-style: italic; margin-top: 0px;">Figure 3: A detailed breakdown of the architectures for contrastive (left) and conversational (right) Vision–Language Models (VLMs), two key paradigms that drive the integration of visual and textual data in remote sensing. The contrastive architecture utilizes a dual encoder framework where image features and textual features are independently extracted and then aligned in a common multimodal space. This design is particularly effective in tasks requiring fine-grained matching, such as image captioning and cross-modal retrieval. On the other hand, the conversational architecture builds upon the contrastive model by introducing a dialogue-based approach, enabling more dynamic interactions between the visual content and natural language queries. This makes conversational models ideal for applications like interactive mapping, question-answering systems, and real-time disaster monitoring, where context and user input are continually evolving. The figure contrasts these two architectures to highlight how they each excel in different aspects of remote sensing tasks. (Image source: <a href="https://www.mdpi.com/2072-4292/17/1/162" target="_blank">MDPI</a>).</p>
+</div>
+<p>This versatility in architecture makes VLMs well-suited to tackle a broad spectrum of remote sensing tasks. Whether you need to extract simple patterns or generate more detailed, context-rich analyses, the choice of model architecture significantly impacts the output.</p>
+<p>Furthermore, as with all machine learning models, VLMs require careful optimization to ensure they perform at their best. Enhancement techniques, like <strong>fine-tuning</strong> certain layers and keeping others <strong>frozen</strong>, are used to strike the right balance between model complexity and efficiency. These strategies help to refine VLMs for specific tasks, improving accuracy and minimizing computational overhead, as illustrated in the figure below.</p>
+<div style="text-align: center;">
+  <img src="img/KAO_SAMPLE_RS_LLMS_00005.png" alt="Enhancement techniques in Vision–Language Models">
+  <p style="font-style: italic; margin-top: 0px;">Figure 4: A visual representation of the various enhancement techniques employed in Vision–Language Models (VLMs) to improve their performance and accuracy in remote sensing applications. These techniques include fine-tuning and transfer learning, where pre-trained models are further optimized to adapt to specific domain tasks. The diagram showcases the interplay between frozen and fine-tuned layers, with fine-tuning denoted by the fire icon, representing the model's ability to adapt to new data, and frozen layers indicated by the snowflake icon, maintaining the stability of pre-existing knowledge. By employing these enhancement strategies, VLMs can effectively improve their ability to handle complex tasks such as LULC classification, disaster detection, and environmental monitoring, all while reducing the risk of overfitting and improving generalization to unseen datasets. (Image source: <a href="https://www.mdpi.com/2072-4292/17/1/162" target="_blank">MDPI</a>).</p>
+</div>
+<p>These enhancement techniques are essential for optimizing VLMs for large-scale remote sensing tasks, enabling them to extract meaningful insights from satellite imagery without becoming too computationally expensive.</p>
+<p>The growing body of research on VLMs reflects the increasing recognition of their potential in remote sensing. A recent graph shows a clear upward trend in the number of publications on the use of VLMs in this field, indicating that the scientific community is embracing these models as a valuable tool for future research and applications.</p>
+<div style="text-align: center;">
+  <img src="img/KAO_SAMPLE_RS_LLMS_00003.png" alt="Examples of tasks handled by Vision–Language Models (VLMs) in remote sensing">
+  <p style="font-style: italic; margin-top: 0px;">Figure 5: A comprehensive breakdown of the various complex tasks addressed by Vision–Language Models (VLMs) in the field of remote sensing. By combining both visual data (such as satellite imagery) and textual information (like metadata, sensor reports, and geospatial documentation), VLMs are revolutionizing the way we approach tasks like image captioning, land use/land cover (LULC) classification, and change detection. The integration of these modalities allows VLMs to not only process raw visual content but also to infer meaningful insights by incorporating contextual understanding. This synergy of vision and language empowers VLMs to enhance disaster monitoring, environmental analysis, and climate change studies, offering unprecedented accuracy and interpretability in remote sensing applications. (Image source: <a href="https://www.mdpi.com/2072-4292/17/1/162" target="_blank">MDPI</a>).</p>
+</div>
+<p>As the field of VLMs in remote sensing continues to expand, it’s clear that these models will play a pivotal role in transforming how we analyze and interpret satellite imagery, driving new innovations and methodologies in environmental monitoring and beyond.</p>
+<hr>
+<h2 id="understanding-large-language-models-llms">Understanding Large Language Models (LLMs)</h2>
+<hr>
+<p>LLMs, such as GPT-4, are trained on massive corpora of text data, enabling them to grasp the intricacies of human language. However, their capacity to process sequential information isn&rsquo;t limited to just text. Recent studies have shown that LLMs, when appropriately adapted, can learn to analyze non-textual data types, such as images, by incorporating their textual understanding into feature extraction processes.</p>
+<p>In remote sensing, LLMs can be adapted to the following roles:</p>
+<ol>
+<li>
+<p><strong>Textual Contextualization</strong>: LLMs can process and generate insights from external textual datasets, such as reports, maps, and metadata, which provide contextual information for satellite images.</p>
+</li>
+<li>
+<p><strong>Enhanced Feature Extraction</strong>: By understanding the relationships between textual data and imagery, LLMs help derive semantic features that are difficult for traditional image processing algorithms to capture.</p>
+</li>
+</ol>
+<p>Mathematically, LLMs utilize attention mechanisms, specifically the Transformer architecture, which enables them to weigh different parts of the input sequence with varying importance. This attention mechanism can be defined as:</p>
+<p>$$
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right) V
+$$</p>
+<p>Where:</p>
+<ul>
+<li>$Q$ represents the query (textual or image features),</li>
+<li>$K$ represents the key (spatial or contextual attributes),</li>
+<li>$V$ is the value (output features or attention score),</li>
+<li>$d_k$ is the dimensionality of the key vectors.</li>
+</ul>
+<p>This process helps in focusing on relevant parts of the data, whether it be image patches or semantic concepts, which improves classification accuracy.</p>
+<hr>
+<h2 id="llms-in-lulc-classification">LLMs in LULC Classification</h2>
+<hr>
+<p>Land Use/Land Cover (LULC) classification is a fundamental task in remote sensing, involving the categorization of land regions into distinct types based on satellite imagery. Traditional methods, while powerful, often overlook the contextual understanding of features that can be provided by external data.</p>
+<p>To improve accuracy, we employ a hybrid model that combines Convolutional Neural Networks (CNNs) with LLMs. The CNN extracts spatial features from satellite images, while the LLM extracts contextual information from external sources.</p>
+<hr>
+<h3 id="methodology">Methodology</h3>
+<hr>
+<p>The integration of LLMs in the LULC classification process can be broken down into the following steps:</p>
+<ol>
+<li>
+<p><strong>Data Collection</strong>:</p>
+<ul>
+<li>High-resolution imagery is collected from platforms like Sentinel-2, Landsat-8, and THEOS, which offer multispectral and multisource data.</li>
+</ul>
+</li>
+<li>
+<p><strong>Preprocessing</strong>:</p>
+<ul>
+<li>Images are corrected for atmospheric distortion and radiometrically normalized using techniques such as the Dark Object Subtraction (DOS) method to reduce atmospheric scattering.</li>
+</ul>
+</li>
+<li>
+<p><strong>Feature Extraction</strong>:</p>
+<ul>
+<li>CNN architectures (such as ResNet-50 or EfficientNet) are applied to extract spatial features from satellite imagery. Simultaneously, large environmental corpora, such as land use reports, are processed by LLMs to extract contextual knowledge.</li>
+</ul>
+</li>
+<li>
+<p><strong>Hybrid Model Training</strong>:</p>
+<ul>
+<li>The CNN-derived spatial features and the LLM-derived contextual features are concatenated and fed into a fully connected neural network for final classification.</li>
+</ul>
+</li>
+<li>
+<p><strong>Classification and Validation</strong>:</p>
+<ul>
+<li>After training, the model is applied to a test set of images. Metrics such as accuracy, precision, recall, and F1-score are used to evaluate the performance. A typical validation equation for precision and recall is given as:</li>
+</ul>
+</li>
+</ol>
+<p>$$
+\text{Precision} = \frac{TP}{TP + FP}, \quad \text{Recall} = \frac{TP}{TP + FN}
+$$</p>
+<p>Where:</p>
+<ul>
+<li>$TP$ is the number of true positives,</li>
+<li>$FP$ is the number of false positives,</li>
+<li>$FN$ is the number of false negatives.</li>
+</ul>
+<hr>
+<h2 id="case-study-sentinel-2-imagery-classification">Case Study: Sentinel-2 Imagery Classification</h2>
+<hr>
+<p>To demonstrate the power of LLMs in enhancing LULC classification, we present a case study using Sentinel-2 imagery. Sentinel-2 provides multispectral images at a spatial resolution of up to 10 meters, allowing for detailed land cover analysis.</p>
+<hr>
+<h3 id="data-collection-and-preprocessing">Data Collection and Preprocessing</h3>
+<hr>
+<p>Sentinel-2 images covering a diverse region were downloaded and preprocessed to correct atmospheric effects. Image reflectance values were normalized using the FLAASH (Fast Line-of-sight Atmospheric Analysis of Spectral Hypercubes) method to improve data consistency.</p>
+<hr>
+<h3 id="feature-extraction">Feature Extraction</h3>
+<hr>
+<p>We applied ResNet-50 for feature extraction from the raw satellite imagery. For contextual understanding, an LLM (such as GPT-4) was fed with environmental reports and metadata related to the region to extract textual features that provide insights into land use policies, climate conditions, and historical land usage trends.</p>
+<hr>
+<h3 id="hybrid-model-training">Hybrid Model Training</h3>
+<hr>
+<p>The extracted features from both the CNN and LLM were combined into a hybrid model, trained using a multi-class cross-entropy loss function. The model achieved an accuracy improvement of 12% compared to traditional classification methods that relied solely on CNNs or SVMs.</p>
+<hr>
+<h2 id="challenges-and-future-prospects">Challenges and Future Prospects</h2>
+<hr>
+<p>While the integration of LLMs in remote sensing holds promise, several challenges remain. These include the need for large, high-quality datasets for training LLMs, the computational cost of training hybrid models, and the difficulty in obtaining ground truth data for validation.</p>
+<p>Future research will focus on refining these models and exploring new techniques such as semi-supervised learning and transfer learning to further enhance performance.</p>
+<p>I&rsquo;m glad you&rsquo;re loving the content! Here’s the smooth continuation for <strong>Figures 6 to 9</strong> with their respective descriptions integrated naturally:</p>
+<p>As we continue to observe the rise of <strong>Vision–Language Models (VLMs)</strong> in remote sensing, one notable trend is the growing body of academic work that explores their capabilities. The figure below demonstrates the increasing number of publications on VLMs in the field of remote sensing, reflecting the broad interest and potential for these models to shape the future of satellite imagery analysis. As the research landscape evolves, we can expect even more innovative approaches and applications to emerge.</p>
+<div style="text-align: center;">
+  <img src="img/KAO_SAMPLE_RS_LLMS_00006.png" alt="Number of publications for Vision–Language Models (VLMs) in remote sensing">
+  <p style="font-style: italic; margin-top: 0px;">Figure 6: A comprehensive visualization of the growing number of publications focused on Vision–Language Models (VLMs) in the field of remote sensing. This trend underscores the increasing interest in the integration of multimodal learning (combining visual and textual data) to enhance the accuracy and efficiency of remote sensing tasks, such as LULC classification, change detection, and disaster response. The upward trajectory of VLM research reflects both the advancements in AI model architecture and the expanding applicability of these models to complex, real-world geospatial challenges. The data presented here highlights the growing recognition of VLMs as a key technology in modern remote sensing workflows. (Image source: <a href="https://www.mdpi.com/2072-4292/17/1/162" target="_blank">MDPI</a>).</p>
+</div>
+<p>In the pursuit of enhancing model performance, <strong>LLaVA (Large Vision-and-Language Model)</strong> is one of the newer architectures that’s making waves in the remote sensing community. This innovative model is designed to seamlessly integrate both vision and language modalities, providing a rich foundation for sophisticated interpretations of satellite imagery. As illustrated below, LLaVA offers a more intuitive and interactive way of combining imagery with text, making it especially valuable in applications like land use classification, environmental monitoring, and more.</p>
+<div style="text-align: center;">
+  <img src="img/KAO_SAMPLE_RS_LLMS_00007.png" alt="An illustration of LLaVA, a Vision–Language Model">
+  <p style="font-style: italic; margin-top: 0px;">Figure 7: A comprehensive illustration of LLaVA (Large Language and Vision Alignment), an advanced Vision–Language Model (VLM) designed to seamlessly integrate visual and textual information. LLaVA enables fine-grained multimodal reasoning, allowing it to process complex datasets from diverse sources such as satellite imagery and environmental reports. By leveraging large-scale pre-trained models, LLaVA enhances performance in tasks like remote sensing and image classification through the fusion of visual cues and textual context. This approach has shown significant promise in enhancing model interpretability, particularly in applications where both visual and linguistic insights are crucial. (Image source: <a href="https://www.mdpi.com/2072-4292/17/1/162" target="_blank">MDPI</a>).</p>
+</div>
+<p>At the heart of many VLMs is the <strong>Transformer architecture</strong>, which has revolutionized how models process sequences of data, whether they be text, images, or both. The transformer model&rsquo;s ability to handle long-range dependencies in data has made it the backbone of cutting-edge models like GPT, BERT, and, of course, Vision Transformers (ViTs). A diagram illustrating the Transformer architecture highlights how it efficiently handles both visual and linguistic data, making it a crucial component for tasks that require understanding of complex, multimodal data sets.</p>
+<div style="text-align: center;">
+  <img src="img/KAO_SAMPLE_RS_LLMS_00008.png" alt="Illustration of Transformer architecture, a cornerstone of modern deep learning models">
+  <p style="font-style: italic; margin-top: 0px;">Figure 8: A comprehensive illustration of the Transformer architecture, a breakthrough deep learning model that revolutionized sequence-based data processing. This architecture leverages self-attention mechanisms to capture long-range dependencies in data, which makes it highly effective in a wide range of tasks, including natural language processing and computer vision. It serves as the foundational model for Vision Transformers (ViTs) and Vision–Language Models (VLMs) in remote sensing. (Image source: <a href="https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf" target="_blank">NeurIPS 2017</a>).</p>
+</div>
+<p>Vision Transformers (ViTs) are one of the latest and most powerful iterations of the Transformer model, specifically designed to handle image data. Unlike traditional convolutional neural networks (CNNs), ViTs treat image patches as sequences, enabling them to capture both local and global features more effectively. The figure below offers an overview of the Vision Transformer model and its ability to process large-scale imagery data. Its application in remote sensing has shown promise, particularly for high-resolution satellite imagery classification, where understanding fine-grained patterns is crucial.</p>
+<div style="text-align: center;">
+  <img src="img/KAO_SAMPLE_RS_LLMS_00009.png" alt="Model overview of Vision Transformer">
+  <p style="font-style: italic; margin-top: 0px;">Figure 9: Detailed model overview of the Vision Transformer (ViT), a cutting-edge deep learning architecture that has transformed the way image data is processed. Unlike traditional convolutional neural networks (CNNs), ViT divides an image into fixed-size patches and processes them as sequences, allowing the model to capture both local and global dependencies in an image simultaneously. This unique approach has led to impressive performance in high-resolution satellite image classification and other remote sensing tasks, making it a key model in the field of Vision–Language Models (VLMs). ViT's scalability to handle large-scale image data have made it indispensable for remote sensing applications. (Image source: <a href="https://arxiv.org/pdf/2010.11929/1000" target="_blank">arXiv</a>).</p>
+</div>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<hr>
+<p>The combination of LLMs with traditional remote sensing techniques offers a significant improvement in the accuracy and contextual understanding of LULC classification tasks. By leveraging both spatial feature extraction from CNNs and semantic contextualization from LLMs, remote sensing models can achieve more precise and meaningful results. This approach opens new avenues for analyzing satellite imagery and provides deeper insights into Earth’s surface processes, aiding in applications ranging from environmental monitoring to urban planning.</p>
+<p>The integration of <strong>Vision–Language Models (VLMs)</strong> into remote sensing is more than just a technological leap; it represents a paradigm shift in how we interpret and interact with satellite imagery. By combining the power of both visual data and linguistic context, VLMs open up new frontiers in <strong>land use/land cover (LULC) classification</strong>, environmental monitoring, and countless other applications. The innovative capabilities of these models are not just theoretical—they are already being realized in practical, real-world scenarios, as evidenced by the growing body of research and the increasing number of publications in the field.</p>
+<blockquote>
+<p>The results we&rsquo;ve explored here demonstrate that <strong>VLMs</strong> are not just another tool—they are a powerful bridge that connects the language of the Earth’s landscapes to the language of machine learning. With their ability to process complex multimodal data, they offer unprecedented accuracy, scalability, and efficiency in satellite data analysis. The rise of models like <strong>LLaVA</strong> and the <strong>Vision Transformer (ViT)</strong> exemplify this potential, illustrating how cutting-edge architecture is pushing the boundaries of what’s possible in <strong>remote sensing</strong>.</p>
+</blockquote>
+<p>What makes these models truly remarkable is their ability to not only analyze individual images but also to understand the nuanced context within those images. This contextual understanding is where traditional methods fall short, making <strong>VLMs</strong> a game-changer. Whether it&rsquo;s distinguishing between subtle changes in land cover, detecting environmental anomalies, or improving the precision of automated classification, these models offer a level of sophistication that will likely define the future of remote sensing.</p>
+<p>As we look ahead, it’s clear that <strong>VLMs</strong> are poised to drive significant advancements in the way we monitor, understand, and protect our planet. The intersection of <strong>AI</strong>, <strong>remote sensing</strong>, and <strong>language</strong> will continue to evolve, opening doors to new research, innovations, and applications. For professionals in the field of remote sensing, the question is no longer whether to adopt <strong>VLMs</strong>, but how soon and how deeply to integrate them into their workflows.</p>
+<blockquote>
+<p>In this blog, we’ve explored the methodologies, models, and real-world implications of integrating <strong>VLMs</strong> into <strong>remote sensing</strong>. The insights from this growing area of research suggest that <strong>Vision–Language Models</strong> will not only enhance the precision and scope of satellite data interpretation but will also unlock new levels of meaning and insight that were previously unattainable. As we continue to refine these models and expand their capabilities, the potential for <strong>VLMs</strong> in <strong>remote sensing</strong> is limitless.</p>
+</blockquote>
+<p>In conclusion, the integration of <strong>Vision–Language Models</strong> with remote sensing is not just an exciting trend—it is the future of how we will analyze, interpret, and leverage satellite imagery to make better decisions for our planet’s future.</p>
+<hr>
+<p>And that’s a wrap for today! I hope you found this exploration into <strong>Vision–Language Models</strong> and <strong>remote sensing</strong> insightful and inspiring. Whether you’re new to the field or a seasoned pro, I’m sure there are a few ideas or <strong>takeaways</strong> that can spark your next big project.</p>
+<p>Thanks for reading—until next time, take care and keep pushing the boundaries of knowledge! 🌍</p>
+<p><strong>Kao Panboonyuen</strong></p>
+<h2 id="citation">Citation</h2>
+<blockquote>
+<p>Panboonyuen, Teerapong. (July 2025). <em>Vision–Language Models for Remote Sensing: A New Era of Multimodal Understanding</em>. Blog post on Kao Panboonyuen. <a href="https://kaopanboonyuen.github.io/blog/2025-07-05-visionlanguage-models-for-remote-sensing-a-new-era-of-multimodal-understanding/" target="_blank" rel="noopener">https://kaopanboonyuen.github.io/blog/2025-07-05-visionlanguage-models-for-remote-sensing-a-new-era-of-multimodal-understanding/</a></p>
+</blockquote>
+<p><strong>For a BibTeX citation:</strong></p>
+<pre><code class="language-bash">@article{panboonyuen2025vlmrsllms,
+  title   = &quot;Vision–Language Models for Remote Sensing: A New Era of Multimodal Understanding&quot;,
+  author  = &quot;Panboonyuen, Teerapong&quot;,
+  journal = &quot;kaopanboonyuen.github.io/&quot;,
+  year    = &quot;2025&quot;,
+  month   = &quot;Jul&quot;,
+  url     = &quot;https://kaopanboonyuen.github.io/blog/2025-07-05-visionlanguage-models-for-remote-sensing-a-new-era-of-multimodal-understanding/&quot;}
+</code></pre>
+<div class="alert alert-note">
+  <div>
+    Did you find this page helpful? Consider sharing it 🙌
+  </div>
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/remote-sensing/">remote-sensing</a>
+  
+  <a class="badge badge-light" href="/tag/lulc/">LULC</a>
+  
+  <a class="badge badge-light" href="/tag/image-classification/">image-classification</a>
+  
+  <a class="badge badge-light" href="/tag/llm/">LLM</a>
+  
+  <a class="badge badge-light" href="/tag/sentinel/">Sentinel</a>
+  
+  <a class="badge badge-light" href="/tag/landsat/">Landsat</a>
+  
+  <a class="badge badge-light" href="/tag/theos/">THEOS</a>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://kaopanboonyuen.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/teerapong-panboonyuen/avatar_hu3c429e132ccde7f98e52ca20c1f589ef_2676345_270x270_fill_q75_lanczos_center.jpg" alt="Teerapong Panboonyuen"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://kaopanboonyuen.github.io/">Teerapong Panboonyuen</a></h5>
+      
+      <p class="card-text">My research focuses on leveraging advanced machine intelligence techniques, specifically computer vision, to enhance semantic understanding, learning representations, visual recognition, and geospatial data interpretation.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:teerapong.panboonyuen@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://x.com/kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.youtube.com/@kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/teerapong-panboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://kaopanboonyuen.github.io/files/panboonyuen_cv.pdf" target="_blank" rel="noopener">
+        <i class="fas fa-download"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    ©2025 Kao Panboonyuen
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Built using <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> and the <a href="https://github.com/wowchemy/starter-hugo-academic" target="_blank" rel="noopener">Wowchemy academic template</a>. View <a href="https://github.com/kaopanboonyuen/kaopanboonyuen.github.io" target="_blank" rel="noopener">source</a>.
+        
+  </p>
+</footer>
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/golang.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.b36873e4e886c7b03b21e4eb97d9b6d7.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

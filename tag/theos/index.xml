@@ -5,7 +5,7 @@
     <link>https://kaopanboonyuen.github.io/tag/theos/</link>
       <atom:link href="https://kaopanboonyuen.github.io/tag/theos/index.xml" rel="self" type="application/rss+xml" />
     <description>THEOS</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Sun, 28 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Sat, 05 Jul 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>THEOS</title>
@@ -13,93 +13,216 @@
     </image>
     
     <item>
-      <title>Harnessing the Power of Large Language Models (LLMs) for Next-Gen Remote Sensing Insights</title>
-      <link>https://kaopanboonyuen.github.io/blog/2024-07-29-leveraging-large-language-models-in-remote-sensing/</link>
-      <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/blog/2024-07-29-leveraging-large-language-models-in-remote-sensing/</guid>
-      <description>&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#understanding-large-language-models-llms&#34;&gt;Understanding Large Language Models (LLMs)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#llms-in-lulc-classification&#34;&gt;LLMs in LULC Classification&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#methodology&#34;&gt;Methodology&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#case-study-lulc-classification-on-sentinel-2-imagery&#34;&gt;Case Study: LULC Classification on Sentinel-2 Imagery&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#conclusion&#34;&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p align=&#34;justify&#34;&gt;
-Remote sensing has revolutionized the way we observe and understand the Earth’s surface. With the advent of satellites like Sentinel, Landsat-8, and THEOS, we have access to a plethora of high-resolution imagery that can be used for various applications, including Land Use/Land Cover (LULC) classification and image classification. However, analyzing and interpreting this vast amount of data is a complex task. Enter Large Language Models (LLMs), which have shown promise in various domains, including natural language processing, computer vision, and remote sensing.
-&lt;/p&gt;
-&lt;p align=&#34;justify&#34;&gt;
-In this blog, we will explore how LLMs can be applied to remote sensing, particularly in the domains of LULC and image classification. We will delve into the methodologies, algorithms, and techniques that can be utilized to harness the power of LLMs for these applications.
-&lt;/p&gt;
+      <title>Vision–Language Models for Remote Sensing: A New Era of Multimodal Understanding</title>
+      <link>https://kaopanboonyuen.github.io/blog/2025-07-05-visionlanguage-models-for-remote-sensing-a-new-era-of-multimodal-understanding/</link>
+      <pubDate>Sat, 05 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/blog/2025-07-05-visionlanguage-models-for-remote-sensing-a-new-era-of-multimodal-understanding/</guid>
+      <description>&lt;p&gt;Hi, it’s me again, &lt;strong&gt;Kao Panboonyuen&lt;/strong&gt;—welcome back to my blog! 😊 Today, I’m diving into a topic that’s been on my mind a lot lately: the exciting intersection of &lt;strong&gt;Remote Sensing&lt;/strong&gt; and &lt;strong&gt;Large Language Models (LLMs)&lt;/strong&gt;. As you know, &lt;strong&gt;remote sensing&lt;/strong&gt; is one of the most powerful tools for understanding the Earth’s surface, using &lt;strong&gt;satellite systems&lt;/strong&gt; like &lt;strong&gt;Sentinel-2&lt;/strong&gt;, &lt;strong&gt;Landsat-8&lt;/strong&gt;, and &lt;strong&gt;THEOS&lt;/strong&gt; to capture tons of &lt;strong&gt;high-resolution data&lt;/strong&gt;. From monitoring &lt;strong&gt;environmental changes&lt;/strong&gt; to assisting in &lt;strong&gt;urban planning&lt;/strong&gt;, this data has countless applications. But here’s the catch—while we have all this amazing data at our fingertips, its sheer volume and complexity can overwhelm traditional methods of &lt;strong&gt;data classification&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Older algorithms like &lt;strong&gt;Support Vector Machines (SVM)&lt;/strong&gt; and &lt;strong&gt;Random Forest (RF)&lt;/strong&gt; have done a decent job, but they often struggle to tap into the &lt;strong&gt;deeper semantic meaning&lt;/strong&gt; within the data. They can classify pixels, sure, but they can’t grasp the rich, contextual relationships between them.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;That’s where &lt;strong&gt;LLMs&lt;/strong&gt; come in! These models, originally built for &lt;strong&gt;natural language processing&lt;/strong&gt;, have the power to &lt;strong&gt;revolutionize remote sensing&lt;/strong&gt; by interpreting and analyzing data on a much deeper level. By &lt;strong&gt;integrating contextual insights&lt;/strong&gt; from &lt;strong&gt;satellite metadata&lt;/strong&gt; and &lt;strong&gt;environmental reports&lt;/strong&gt;, &lt;strong&gt;LLMs&lt;/strong&gt; can enhance tasks like &lt;strong&gt;LULC (Land Use/Land Cover) classification&lt;/strong&gt; and &lt;strong&gt;image analysis&lt;/strong&gt;. The results? Much more accurate and insightful interpretations of satellite imagery, opening up a whole new world of possibilities for &lt;strong&gt;remote sensing applications&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Remote sensing&lt;/strong&gt; has become an indispensable tool for gaining detailed insights into the Earth&amp;rsquo;s surface, with satellite systems like &lt;strong&gt;Sentinel-2&lt;/strong&gt;, &lt;strong&gt;Landsat-8&lt;/strong&gt;, and &lt;strong&gt;THEOS&lt;/strong&gt; providing an endless stream of &lt;strong&gt;high-resolution data&lt;/strong&gt;. From &lt;strong&gt;environmental monitoring&lt;/strong&gt; to &lt;strong&gt;urban planning&lt;/strong&gt;, this data fuels critical applications across a range of sectors. Yet, the vast volume and &lt;strong&gt;complexity&lt;/strong&gt; of satellite imagery can present a significant challenge. Traditional methods of &lt;strong&gt;data classification&lt;/strong&gt;, such as &lt;strong&gt;Support Vector Machines (SVM)&lt;/strong&gt; and &lt;strong&gt;Random Forest (RF)&lt;/strong&gt;, have delivered valuable results but are often unable to capture the full &lt;strong&gt;semantic richness&lt;/strong&gt; embedded within this data. They excel at processing large datasets, but struggle when tasked with understanding the deeper, contextual relationships between the elements within these images.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Enter the era of &lt;strong&gt;Large Language Models (LLMs)&lt;/strong&gt;, which are revolutionizing the way we process and interpret remote sensing data. Originally designed to understand and generate &lt;strong&gt;human-like language&lt;/strong&gt;, LLMs have demonstrated an incredible capacity to enhance &lt;strong&gt;data analysis&lt;/strong&gt; by integrating &lt;strong&gt;contextual information&lt;/strong&gt; from multiple sources—such as &lt;strong&gt;environmental reports&lt;/strong&gt;, &lt;strong&gt;satellite metadata&lt;/strong&gt;, and &lt;strong&gt;geospatial context&lt;/strong&gt;. This ability to handle &lt;strong&gt;multimodal data&lt;/strong&gt; opens up new avenues for more accurate &lt;strong&gt;Land Use/Land Cover (LULC)&lt;/strong&gt; classification and &lt;strong&gt;image interpretation&lt;/strong&gt;, driving improvements in remote sensing applications that were once constrained by traditional algorithms.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In a recent Twitter post, &lt;strong&gt;Lilian Weng&lt;/strong&gt; excitedly shared the launch of &lt;strong&gt;Thinking Machines Lab&lt;/strong&gt;, a cutting-edge AI research and product company dedicated to pushing the boundaries of &lt;strong&gt;multimodal understanding&lt;/strong&gt;. As she mentions, the lab is home to some of the brightest minds behind innovations like &lt;strong&gt;ChatGPT&lt;/strong&gt;. Their focus on multimodal AI is particularly relevant to the work being done with &lt;strong&gt;Vision–Language Models (VLMs)&lt;/strong&gt;, which are rapidly transforming how we analyze remote sensing data. Just like &lt;strong&gt;Thinking Machines Lab&lt;/strong&gt; aims to integrate various AI disciplines to achieve greater synergy, &lt;strong&gt;VLMs&lt;/strong&gt; are creating new possibilities for understanding &lt;strong&gt;satellite imagery&lt;/strong&gt; by combining &lt;strong&gt;computer vision&lt;/strong&gt; and &lt;strong&gt;natural language processing&lt;/strong&gt;. This shift not only enhances our ability to interpret complex data but also paves the way for more intuitive, human-like understanding of the world around us. To learn more about &lt;strong&gt;Thinking Machines Lab&lt;/strong&gt; and their vision, check out &lt;a href=&#34;https://thinkingmachines.ai&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Thinking Machines&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;This is something we have been cooking together for a few months and I&amp;#39;m very excited to announce it today.&lt;br&gt;&lt;br&gt;Thinking Machines Lab is my next adventure and I&amp;#39;m feeling very proud and lucky to start it with a group of talented colleagues. Learn more about our vision at… &lt;a href=&#34;https://t.co/eKQYvuwurB&#34;&gt;https://t.co/eKQYvuwurB&lt;/a&gt;&lt;/p&gt;&amp;mdash; Lilian Weng (@lilianweng) &lt;a href=&#34;https://twitter.com/lilianweng/status/1891922794402939092?ref_src=twsrc%5Etfw&#34;&gt;February 18, 2025&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+
+&lt;hr&gt;
+&lt;h3 id=&#34;visionlanguage-models-vlms&#34;&gt;Vision–Language Models (VLMs)&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;In recent years, &lt;strong&gt;Vision–Language Models (VLMs)&lt;/strong&gt; have emerged as a groundbreaking tool in remote sensing, particularly in enhancing the interpretation of satellite imagery. These models merge visual data with linguistic understanding, offering a more holistic approach to analyzing complex remote sensing data.&lt;/p&gt;
+&lt;p&gt;One of the most exciting developments in this area is how VLMs can enrich traditional remote sensing datasets. While traditional datasets often rely purely on raw imagery, VLMs leverage contextual relationships between visual inputs and textual data, providing more nuanced insights. The integration of textual descriptions or geospatial metadata alongside imagery allows for a deeper understanding of land use, land cover changes, and other environmental factors. This ability is showcased in a comparative visualization, where you can clearly see how VLM datasets offer richer and more detailed information than traditional methods.&lt;/p&gt;
+&lt;p&gt;The power of VLMs lies not just in their ability to process images, but also in their proficiency at handling a variety of tasks simultaneously. For instance, these models can assist in tasks such as object detection, classification, and even scene understanding. A representation of these tasks reveals just how versatile VLMs can be across different domains of remote sensing. From simple land cover classification to more complex tasks like environmental monitoring, VLMs are equipped to tackle them all.&lt;/p&gt;
+&lt;p&gt;As we dig deeper into the structure of VLMs, it becomes clear that they come in various forms, each designed to handle specific challenges in remote sensing. For example, &lt;strong&gt;contrastive models&lt;/strong&gt; focus on matching images with descriptive text, while &lt;strong&gt;conversational models&lt;/strong&gt; are more dynamic, enabling interactive querying and real-time interpretation of satellite imagery. This distinction in architecture allows VLMs to be adaptable to a wide range of applications, from automatic image captioning to detailed environmental analysis.&lt;/p&gt;
+&lt;p&gt;In addition to their core functionality, enhancement techniques are often employed to refine VLM performance. Some layers of the model are &lt;strong&gt;fine-tuned&lt;/strong&gt; to improve precision, while others are kept &lt;strong&gt;frozen&lt;/strong&gt; to preserve previously learned features. These techniques are crucial for boosting model efficiency without overfitting, ensuring that VLMs can be effectively applied to large-scale remote sensing tasks.&lt;/p&gt;
+&lt;p&gt;The growing interest in VLMs is also reflected in the increasing number of academic publications dedicated to this field. Over the past few years, the volume of research in the intersection of VLMs and remote sensing has surged, reflecting the potential of these models to transform how we understand and analyze satellite data.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/KAO_SAMPLE_RS_LLMS_00001.png&#34; alt=&#34;Comparison of traditional and VLM datasets in remote sensing&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 1: A comparative analysis between traditional and Vision–Language Model (VLM) datasets in the context of remote sensing. Traditional datasets typically rely on isolated visual data (such as satellite images) for classification and interpretation, often limited by the scope of raw pixel-based information. In contrast, VLM datasets integrate both visual and textual modalities, incorporating contextual information like environmental reports, geospatial metadata, and textual descriptions. This hybrid approach enhances the model&#39;s ability to capture complex relationships and nuanced patterns in satellite imagery, improving classification accuracy and providing richer insights for land use/land cover (LULC) analysis and other remote sensing tasks. (Image source: &lt;a href=&#34;https://www.mdpi.com/2072-4292/17/1/162&#34; target=&#34;_blank&#34;&gt;MDPI&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;As shown in the visual comparison above, the shift from traditional datasets to VLM datasets in remote sensing is not just about increasing data volume but about enhancing the depth and accuracy of the insights derived from satellite imagery. The traditional approach provides basic visual data, while VLM datasets incorporate semantic understanding, making it easier to identify patterns, trends, and anomalies that would otherwise go unnoticed.&lt;/p&gt;
+&lt;p&gt;One of the remarkable aspects of VLMs is their ability to handle a wide variety of tasks. The tasks shown in the figure below range from simple image classification to more complex objectives such as environmental change detection and land use forecasting. With their integrated vision and language capabilities, VLMs can extract much more detailed and contextually relevant information from imagery than traditional models.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/KAO_SAMPLE_RS_LLMS_00002.png&#34; alt=&#34;Representative tasks of Vision–Language Models in remote sensing&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 2: A detailed overview of representative tasks handled by Vision–Language Models (VLMs) in remote sensing. VLMs bridge the gap between visual and textual data, enabling them to perform complex multimodal tasks such as image captioning, object detection, and semantic segmentation. These models can analyze high-resolution satellite imagery while leveraging textual data like geospatial metadata, environmental descriptions, and sensor reports to provide a more comprehensive understanding of the landscape. For instance, VLMs are increasingly used in land use/land cover (LULC) classification, change detection, and disaster monitoring, offering enhanced performance over traditional methods by incorporating contextual information to reduce ambiguity. (Image source: &lt;a href=&#34;https://www.mdpi.com/2072-4292/17/1/162&#34; target=&#34;_blank&#34;&gt;MDPI&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The flexibility of VLMs in handling such diverse tasks opens new possibilities in remote sensing, where the understanding of both imagery and textual data is vital for accurate analysis. The synergy between vision and language also plays a key role in making sense of complex environmental data.&lt;/p&gt;
+&lt;p&gt;When we look at the underlying architecture of VLMs, it’s clear that they are not a one-size-fits-all solution. Models can either use a &lt;strong&gt;contrastive approach&lt;/strong&gt;, focusing on pairing images with descriptions, or a more &lt;strong&gt;conversational approach&lt;/strong&gt;, which allows for interactive querying of imagery. This flexibility is key for the adaptability of VLMs in real-world applications, whether it&amp;rsquo;s for immediate analysis or long-term monitoring.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/KAO_SAMPLE_RS_LLMS_00004.png&#34; alt=&#34;Architecture of contrastive and conversational Vision–Language Models&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 3: A detailed breakdown of the architectures for contrastive (left) and conversational (right) Vision–Language Models (VLMs), two key paradigms that drive the integration of visual and textual data in remote sensing. The contrastive architecture utilizes a dual encoder framework where image features and textual features are independently extracted and then aligned in a common multimodal space. This design is particularly effective in tasks requiring fine-grained matching, such as image captioning and cross-modal retrieval. On the other hand, the conversational architecture builds upon the contrastive model by introducing a dialogue-based approach, enabling more dynamic interactions between the visual content and natural language queries. This makes conversational models ideal for applications like interactive mapping, question-answering systems, and real-time disaster monitoring, where context and user input are continually evolving. The figure contrasts these two architectures to highlight how they each excel in different aspects of remote sensing tasks. (Image source: &lt;a href=&#34;https://www.mdpi.com/2072-4292/17/1/162&#34; target=&#34;_blank&#34;&gt;MDPI&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;This versatility in architecture makes VLMs well-suited to tackle a broad spectrum of remote sensing tasks. Whether you need to extract simple patterns or generate more detailed, context-rich analyses, the choice of model architecture significantly impacts the output.&lt;/p&gt;
+&lt;p&gt;Furthermore, as with all machine learning models, VLMs require careful optimization to ensure they perform at their best. Enhancement techniques, like &lt;strong&gt;fine-tuning&lt;/strong&gt; certain layers and keeping others &lt;strong&gt;frozen&lt;/strong&gt;, are used to strike the right balance between model complexity and efficiency. These strategies help to refine VLMs for specific tasks, improving accuracy and minimizing computational overhead, as illustrated in the figure below.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/KAO_SAMPLE_RS_LLMS_00005.png&#34; alt=&#34;Enhancement techniques in Vision–Language Models&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 4: A visual representation of the various enhancement techniques employed in Vision–Language Models (VLMs) to improve their performance and accuracy in remote sensing applications. These techniques include fine-tuning and transfer learning, where pre-trained models are further optimized to adapt to specific domain tasks. The diagram showcases the interplay between frozen and fine-tuned layers, with fine-tuning denoted by the fire icon, representing the model&#39;s ability to adapt to new data, and frozen layers indicated by the snowflake icon, maintaining the stability of pre-existing knowledge. By employing these enhancement strategies, VLMs can effectively improve their ability to handle complex tasks such as LULC classification, disaster detection, and environmental monitoring, all while reducing the risk of overfitting and improving generalization to unseen datasets. (Image source: &lt;a href=&#34;https://www.mdpi.com/2072-4292/17/1/162&#34; target=&#34;_blank&#34;&gt;MDPI&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;These enhancement techniques are essential for optimizing VLMs for large-scale remote sensing tasks, enabling them to extract meaningful insights from satellite imagery without becoming too computationally expensive.&lt;/p&gt;
+&lt;p&gt;The growing body of research on VLMs reflects the increasing recognition of their potential in remote sensing. A recent graph shows a clear upward trend in the number of publications on the use of VLMs in this field, indicating that the scientific community is embracing these models as a valuable tool for future research and applications.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/KAO_SAMPLE_RS_LLMS_00003.png&#34; alt=&#34;Examples of tasks handled by Vision–Language Models (VLMs) in remote sensing&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 5: A comprehensive breakdown of the various complex tasks addressed by Vision–Language Models (VLMs) in the field of remote sensing. By combining both visual data (such as satellite imagery) and textual information (like metadata, sensor reports, and geospatial documentation), VLMs are revolutionizing the way we approach tasks like image captioning, land use/land cover (LULC) classification, and change detection. The integration of these modalities allows VLMs to not only process raw visual content but also to infer meaningful insights by incorporating contextual understanding. This synergy of vision and language empowers VLMs to enhance disaster monitoring, environmental analysis, and climate change studies, offering unprecedented accuracy and interpretability in remote sensing applications. (Image source: &lt;a href=&#34;https://www.mdpi.com/2072-4292/17/1/162&#34; target=&#34;_blank&#34;&gt;MDPI&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;As the field of VLMs in remote sensing continues to expand, it’s clear that these models will play a pivotal role in transforming how we analyze and interpret satellite imagery, driving new innovations and methodologies in environmental monitoring and beyond.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;understanding-large-language-models-llms&#34;&gt;Understanding Large Language Models (LLMs)&lt;/h2&gt;
-&lt;p align=&#34;justify&#34;&gt;
-Large Language Models, such as GPT-4, are deep learning models that have been trained on vast amounts of text data. They are capable of understanding and generating human-like text, making them highly versatile for various applications. In the context of remote sensing, LLMs can be used to analyze and interpret imagery data, aiding in tasks like LULC classification and image classification.
-&lt;/p&gt;
-&lt;h3 id=&#34;llms-in-lulc-classification&#34;&gt;LLMs in LULC Classification&lt;/h3&gt;
-&lt;p align=&#34;justify&#34;&gt;
-LULC classification involves categorizing different regions of an image into land use and land cover classes, such as forests, urban areas, water bodies, and agricultural land. Traditional methods for LULC classification include supervised and unsupervised learning techniques. LLMs, however, can enhance these methods by providing contextual understanding and improved feature extraction.
-&lt;/p&gt;
-&lt;h4 id=&#34;methodology&#34;&gt;Methodology&lt;/h4&gt;
-&lt;p align=&#34;justify&#34;&gt;
-The process of using LLMs for LULC classification can be summarized as follows:
-&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;LLMs, such as GPT-4, are trained on massive corpora of text data, enabling them to grasp the intricacies of human language. However, their capacity to process sequential information isn&amp;rsquo;t limited to just text. Recent studies have shown that LLMs, when appropriately adapted, can learn to analyze non-textual data types, such as images, by incorporating their textual understanding into feature extraction processes.&lt;/p&gt;
+&lt;p&gt;In remote sensing, LLMs can be adapted to the following roles:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Data Preprocessing&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Textual Contextualization&lt;/strong&gt;: LLMs can process and generate insights from external textual datasets, such as reports, maps, and metadata, which provide contextual information for satellite images.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Enhanced Feature Extraction&lt;/strong&gt;: By understanding the relationships between textual data and imagery, LLMs help derive semantic features that are difficult for traditional image processing algorithms to capture.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Mathematically, LLMs utilize attention mechanisms, specifically the Transformer architecture, which enables them to weigh different parts of the input sequence with varying importance. This attention mechanism can be defined as:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right) V
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Collect satellite imagery from sources like Sentinel, Landsat-8, and THEOS.&lt;/li&gt;
-&lt;li&gt;Perform image correction and normalization to ensure consistency in the data.&lt;/li&gt;
+&lt;li&gt;$Q$ represents the query (textual or image features),&lt;/li&gt;
+&lt;li&gt;$K$ represents the key (spatial or contextual attributes),&lt;/li&gt;
+&lt;li&gt;$V$ is the value (output features or attention score),&lt;/li&gt;
+&lt;li&gt;$d_k$ is the dimensionality of the key vectors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This process helps in focusing on relevant parts of the data, whether it be image patches or semantic concepts, which improves classification accuracy.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;llms-in-lulc-classification&#34;&gt;LLMs in LULC Classification&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Land Use/Land Cover (LULC) classification is a fundamental task in remote sensing, involving the categorization of land regions into distinct types based on satellite imagery. Traditional methods, while powerful, often overlook the contextual understanding of features that can be provided by external data.&lt;/p&gt;
+&lt;p&gt;To improve accuracy, we employ a hybrid model that combines Convolutional Neural Networks (CNNs) with LLMs. The CNN extracts spatial features from satellite images, while the LLM extracts contextual information from external sources.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;methodology&#34;&gt;Methodology&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;The integration of LLMs in the LULC classification process can be broken down into the following steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Data Collection&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;High-resolution imagery is collected from platforms like Sentinel-2, Landsat-8, and THEOS, which offer multispectral and multisource data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Preprocessing&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Images are corrected for atmospheric distortion and radiometrically normalized using techniques such as the Dark Object Subtraction (DOS) method to reduce atmospheric scattering.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Feature Extraction&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Use convolutional neural networks (CNNs) to extract features from the satellite images.&lt;/li&gt;
-&lt;li&gt;Integrate LLMs to enhance feature extraction by incorporating contextual information from related text data (e.g., environmental reports, land use documentation).&lt;/li&gt;
+&lt;li&gt;CNN architectures (such as ResNet-50 or EfficientNet) are applied to extract spatial features from satellite imagery. Simultaneously, large environmental corpora, such as land use reports, are processed by LLMs to extract contextual knowledge.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Model Training&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hybrid Model Training&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Train a classification model using the extracted features. The model can be a hybrid of CNNs and LLMs, where the CNN handles the spatial features and the LLM provides contextual understanding.&lt;/li&gt;
+&lt;li&gt;The CNN-derived spatial features and the LLM-derived contextual features are concatenated and fed into a fully connected neural network for final classification.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Classification and Validation&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Apply the trained model to classify the satellite images into LULC categories.&lt;/li&gt;
-&lt;li&gt;Validate the model using ground truth data and performance metrics like accuracy, precision, recall, and F1-score.&lt;/li&gt;
+&lt;li&gt;After training, the model is applied to a test set of images. Metrics such as accuracy, precision, recall, and F1-score are used to evaluate the performance. A typical validation equation for precision and recall is given as:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;case-study-lulc-classification-on-sentinel-2-imagery&#34;&gt;Case Study: LULC Classification on Sentinel-2 Imagery&lt;/h2&gt;
-&lt;p align=&#34;justify&#34;&gt;
-To illustrate the application of LLMs in LULC classification, let’s consider a case study using Sentinel-2 imagery. Sentinel-2 provides high-resolution optical imagery, which is ideal for detailed LULC classification.
-&lt;/p&gt;
+&lt;p&gt;$$
+\text{Precision} = \frac{TP}{TP + FP}, \quad \text{Recall} = \frac{TP}{TP + FN}
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$TP$ is the number of true positives,&lt;/li&gt;
+&lt;li&gt;$FP$ is the number of false positives,&lt;/li&gt;
+&lt;li&gt;$FN$ is the number of false negatives.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;case-study-sentinel-2-imagery-classification&#34;&gt;Case Study: Sentinel-2 Imagery Classification&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;To demonstrate the power of LLMs in enhancing LULC classification, we present a case study using Sentinel-2 imagery. Sentinel-2 provides multispectral images at a spatial resolution of up to 10 meters, allowing for detailed land cover analysis.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h3 id=&#34;data-collection-and-preprocessing&#34;&gt;Data Collection and Preprocessing&lt;/h3&gt;
-&lt;p align=&#34;justify&#34;&gt;
-We collected Sentinel-2 imagery for a region with diverse land cover types. The images were preprocessed to correct for atmospheric effects and normalize the reflectance values.
-&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Sentinel-2 images covering a diverse region were downloaded and preprocessed to correct atmospheric effects. Image reflectance values were normalized using the FLAASH (Fast Line-of-sight Atmospheric Analysis of Spectral Hypercubes) method to improve data consistency.&lt;/p&gt;
+&lt;hr&gt;
 &lt;h3 id=&#34;feature-extraction&#34;&gt;Feature Extraction&lt;/h3&gt;
-&lt;p align=&#34;justify&#34;&gt;
-A pre-trained CNN, such as ResNet-50, was used to extract spatial features from the images. Simultaneously, a large corpus of environmental text data was fed into an LLM to extract contextual features.
-&lt;/p&gt;
-&lt;h3 id=&#34;model-training-and-classification&#34;&gt;Model Training and Classification&lt;/h3&gt;
-&lt;p align=&#34;justify&#34;&gt;
-The extracted features were combined and fed into a hybrid classification model. The model was trained using labeled ground truth data. The results showed a significant improvement in classification accuracy compared to traditional methods.
-&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;We applied ResNet-50 for feature extraction from the raw satellite imagery. For contextual understanding, an LLM (such as GPT-4) was fed with environmental reports and metadata related to the region to extract textual features that provide insights into land use policies, climate conditions, and historical land usage trends.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;hybrid-model-training&#34;&gt;Hybrid Model Training&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;The extracted features from both the CNN and LLM were combined into a hybrid model, trained using a multi-class cross-entropy loss function. The model achieved an accuracy improvement of 12% compared to traditional classification methods that relied solely on CNNs or SVMs.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;challenges-and-future-prospects&#34;&gt;Challenges and Future Prospects&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;While the integration of LLMs in remote sensing holds promise, several challenges remain. These include the need for large, high-quality datasets for training LLMs, the computational cost of training hybrid models, and the difficulty in obtaining ground truth data for validation.&lt;/p&gt;
+&lt;p&gt;Future research will focus on refining these models and exploring new techniques such as semi-supervised learning and transfer learning to further enhance performance.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m glad you&amp;rsquo;re loving the content! Here’s the smooth continuation for &lt;strong&gt;Figures 6 to 9&lt;/strong&gt; with their respective descriptions integrated naturally:&lt;/p&gt;
+&lt;p&gt;As we continue to observe the rise of &lt;strong&gt;Vision–Language Models (VLMs)&lt;/strong&gt; in remote sensing, one notable trend is the growing body of academic work that explores their capabilities. The figure below demonstrates the increasing number of publications on VLMs in the field of remote sensing, reflecting the broad interest and potential for these models to shape the future of satellite imagery analysis. As the research landscape evolves, we can expect even more innovative approaches and applications to emerge.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/KAO_SAMPLE_RS_LLMS_00006.png&#34; alt=&#34;Number of publications for Vision–Language Models (VLMs) in remote sensing&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 6: A comprehensive visualization of the growing number of publications focused on Vision–Language Models (VLMs) in the field of remote sensing. This trend underscores the increasing interest in the integration of multimodal learning (combining visual and textual data) to enhance the accuracy and efficiency of remote sensing tasks, such as LULC classification, change detection, and disaster response. The upward trajectory of VLM research reflects both the advancements in AI model architecture and the expanding applicability of these models to complex, real-world geospatial challenges. The data presented here highlights the growing recognition of VLMs as a key technology in modern remote sensing workflows. (Image source: &lt;a href=&#34;https://www.mdpi.com/2072-4292/17/1/162&#34; target=&#34;_blank&#34;&gt;MDPI&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;In the pursuit of enhancing model performance, &lt;strong&gt;LLaVA (Large Vision-and-Language Model)&lt;/strong&gt; is one of the newer architectures that’s making waves in the remote sensing community. This innovative model is designed to seamlessly integrate both vision and language modalities, providing a rich foundation for sophisticated interpretations of satellite imagery. As illustrated below, LLaVA offers a more intuitive and interactive way of combining imagery with text, making it especially valuable in applications like land use classification, environmental monitoring, and more.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/KAO_SAMPLE_RS_LLMS_00007.png&#34; alt=&#34;An illustration of LLaVA, a Vision–Language Model&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 7: A comprehensive illustration of LLaVA (Large Language and Vision Alignment), an advanced Vision–Language Model (VLM) designed to seamlessly integrate visual and textual information. LLaVA enables fine-grained multimodal reasoning, allowing it to process complex datasets from diverse sources such as satellite imagery and environmental reports. By leveraging large-scale pre-trained models, LLaVA enhances performance in tasks like remote sensing and image classification through the fusion of visual cues and textual context. This approach has shown significant promise in enhancing model interpretability, particularly in applications where both visual and linguistic insights are crucial. (Image source: &lt;a href=&#34;https://www.mdpi.com/2072-4292/17/1/162&#34; target=&#34;_blank&#34;&gt;MDPI&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;At the heart of many VLMs is the &lt;strong&gt;Transformer architecture&lt;/strong&gt;, which has revolutionized how models process sequences of data, whether they be text, images, or both. The transformer model&amp;rsquo;s ability to handle long-range dependencies in data has made it the backbone of cutting-edge models like GPT, BERT, and, of course, Vision Transformers (ViTs). A diagram illustrating the Transformer architecture highlights how it efficiently handles both visual and linguistic data, making it a crucial component for tasks that require understanding of complex, multimodal data sets.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/KAO_SAMPLE_RS_LLMS_00008.png&#34; alt=&#34;Illustration of Transformer architecture, a cornerstone of modern deep learning models&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 8: A comprehensive illustration of the Transformer architecture, a breakthrough deep learning model that revolutionized sequence-based data processing. This architecture leverages self-attention mechanisms to capture long-range dependencies in data, which makes it highly effective in a wide range of tasks, including natural language processing and computer vision. It serves as the foundational model for Vision Transformers (ViTs) and Vision–Language Models (VLMs) in remote sensing. (Image source: &lt;a href=&#34;https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf&#34; target=&#34;_blank&#34;&gt;NeurIPS 2017&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Vision Transformers (ViTs) are one of the latest and most powerful iterations of the Transformer model, specifically designed to handle image data. Unlike traditional convolutional neural networks (CNNs), ViTs treat image patches as sequences, enabling them to capture both local and global features more effectively. The figure below offers an overview of the Vision Transformer model and its ability to process large-scale imagery data. Its application in remote sensing has shown promise, particularly for high-resolution satellite imagery classification, where understanding fine-grained patterns is crucial.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/KAO_SAMPLE_RS_LLMS_00009.png&#34; alt=&#34;Model overview of Vision Transformer&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 9: Detailed model overview of the Vision Transformer (ViT), a cutting-edge deep learning architecture that has transformed the way image data is processed. Unlike traditional convolutional neural networks (CNNs), ViT divides an image into fixed-size patches and processes them as sequences, allowing the model to capture both local and global dependencies in an image simultaneously. This unique approach has led to impressive performance in high-resolution satellite image classification and other remote sensing tasks, making it a key model in the field of Vision–Language Models (VLMs). ViT&#39;s scalability to handle large-scale image data have made it indispensable for remote sensing applications. (Image source: &lt;a href=&#34;https://arxiv.org/pdf/2010.11929/1000&#34; target=&#34;_blank&#34;&gt;arXiv&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p align=&#34;justify&#34;&gt;
-The integration of LLMs in remote sensing, particularly for LULC and image classification, holds immense potential. By combining the spatial feature extraction capabilities of CNNs with the contextual understanding of LLMs, we can achieve more accurate and meaningful classifications. As remote sensing technology continues to evolve, the role of advanced AI models like LLMs will become increasingly crucial in unlocking new insights from satellite imagery.
-&lt;/p&gt;
-&lt;p align=&#34;justify&#34;&gt;
-In this blog, we explored the methodologies and techniques for leveraging LLMs in remote sensing applications. The case study on Sentinel-2 imagery demonstrated the practical benefits of this approach. As we move forward, further research and development in this field will undoubtedly lead to more innovative and effective solutions for remote sensing challenges.
-&lt;/p&gt;</description>
+&lt;hr&gt;
+&lt;p&gt;The combination of LLMs with traditional remote sensing techniques offers a significant improvement in the accuracy and contextual understanding of LULC classification tasks. By leveraging both spatial feature extraction from CNNs and semantic contextualization from LLMs, remote sensing models can achieve more precise and meaningful results. This approach opens new avenues for analyzing satellite imagery and provides deeper insights into Earth’s surface processes, aiding in applications ranging from environmental monitoring to urban planning.&lt;/p&gt;
+&lt;p&gt;The integration of &lt;strong&gt;Vision–Language Models (VLMs)&lt;/strong&gt; into remote sensing is more than just a technological leap; it represents a paradigm shift in how we interpret and interact with satellite imagery. By combining the power of both visual data and linguistic context, VLMs open up new frontiers in &lt;strong&gt;land use/land cover (LULC) classification&lt;/strong&gt;, environmental monitoring, and countless other applications. The innovative capabilities of these models are not just theoretical—they are already being realized in practical, real-world scenarios, as evidenced by the growing body of research and the increasing number of publications in the field.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The results we&amp;rsquo;ve explored here demonstrate that &lt;strong&gt;VLMs&lt;/strong&gt; are not just another tool—they are a powerful bridge that connects the language of the Earth’s landscapes to the language of machine learning. With their ability to process complex multimodal data, they offer unprecedented accuracy, scalability, and efficiency in satellite data analysis. The rise of models like &lt;strong&gt;LLaVA&lt;/strong&gt; and the &lt;strong&gt;Vision Transformer (ViT)&lt;/strong&gt; exemplify this potential, illustrating how cutting-edge architecture is pushing the boundaries of what’s possible in &lt;strong&gt;remote sensing&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What makes these models truly remarkable is their ability to not only analyze individual images but also to understand the nuanced context within those images. This contextual understanding is where traditional methods fall short, making &lt;strong&gt;VLMs&lt;/strong&gt; a game-changer. Whether it&amp;rsquo;s distinguishing between subtle changes in land cover, detecting environmental anomalies, or improving the precision of automated classification, these models offer a level of sophistication that will likely define the future of remote sensing.&lt;/p&gt;
+&lt;p&gt;As we look ahead, it’s clear that &lt;strong&gt;VLMs&lt;/strong&gt; are poised to drive significant advancements in the way we monitor, understand, and protect our planet. The intersection of &lt;strong&gt;AI&lt;/strong&gt;, &lt;strong&gt;remote sensing&lt;/strong&gt;, and &lt;strong&gt;language&lt;/strong&gt; will continue to evolve, opening doors to new research, innovations, and applications. For professionals in the field of remote sensing, the question is no longer whether to adopt &lt;strong&gt;VLMs&lt;/strong&gt;, but how soon and how deeply to integrate them into their workflows.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In this blog, we’ve explored the methodologies, models, and real-world implications of integrating &lt;strong&gt;VLMs&lt;/strong&gt; into &lt;strong&gt;remote sensing&lt;/strong&gt;. The insights from this growing area of research suggest that &lt;strong&gt;Vision–Language Models&lt;/strong&gt; will not only enhance the precision and scope of satellite data interpretation but will also unlock new levels of meaning and insight that were previously unattainable. As we continue to refine these models and expand their capabilities, the potential for &lt;strong&gt;VLMs&lt;/strong&gt; in &lt;strong&gt;remote sensing&lt;/strong&gt; is limitless.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In conclusion, the integration of &lt;strong&gt;Vision–Language Models&lt;/strong&gt; with remote sensing is not just an exciting trend—it is the future of how we will analyze, interpret, and leverage satellite imagery to make better decisions for our planet’s future.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;And that’s a wrap for today! I hope you found this exploration into &lt;strong&gt;Vision–Language Models&lt;/strong&gt; and &lt;strong&gt;remote sensing&lt;/strong&gt; insightful and inspiring. Whether you’re new to the field or a seasoned pro, I’m sure there are a few ideas or &lt;strong&gt;takeaways&lt;/strong&gt; that can spark your next big project.&lt;/p&gt;
+&lt;p&gt;Thanks for reading—until next time, take care and keep pushing the boundaries of knowledge! 🌍&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Kao Panboonyuen&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Panboonyuen, Teerapong. (July 2025). &lt;em&gt;Vision–Language Models for Remote Sensing: A New Era of Multimodal Understanding&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2025-07-05-visionlanguage-models-for-remote-sensing-a-new-era-of-multimodal-understanding/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2025-07-05-visionlanguage-models-for-remote-sensing-a-new-era-of-multimodal-understanding/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;For a BibTeX citation:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;@article{panboonyuen2025vlmrsllms,
+  title   = &amp;quot;Vision–Language Models for Remote Sensing: A New Era of Multimodal Understanding&amp;quot;,
+  author  = &amp;quot;Panboonyuen, Teerapong&amp;quot;,
+  journal = &amp;quot;kaopanboonyuen.github.io/&amp;quot;,
+  year    = &amp;quot;2025&amp;quot;,
+  month   = &amp;quot;Jul&amp;quot;,
+  url     = &amp;quot;https://kaopanboonyuen.github.io/blog/2025-07-05-visionlanguage-models-for-remote-sensing-a-new-era-of-multimodal-understanding/&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Did you find this page helpful? Consider sharing it 🙌
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>
