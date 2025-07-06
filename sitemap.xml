@@ -11,6 +11,12 @@
     <loc>https://kaopanboonyuen.github.io/courses/learn-data-science/stats/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://kaopanboonyuen.github.io/category/ai-enhanced-lulc/</loc>
+    <lastmod>2025-07-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/ai-for-earth/</loc>
+    <lastmod>2025-07-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://kaopanboonyuen.github.io/authors/</loc>
     <lastmod>2025-07-05T00:00:00+00:00</lastmod>
   </url><url>
@@ -20,31 +26,31 @@
     <loc>https://kaopanboonyuen.github.io/categories/</loc>
     <lastmod>2025-07-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/image-classification/</loc>
+    <loc>https://kaopanboonyuen.github.io/tag/deep-learning-for-remote-sensing/</loc>
     <lastmod>2025-07-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/landsat/</loc>
+    <loc>https://kaopanboonyuen.github.io/tag/environmental-monitoring/</loc>
     <lastmod>2025-07-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/llm/</loc>
+    <loc>https://kaopanboonyuen.github.io/category/geospatial-ai/</loc>
     <lastmod>2025-07-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/category/llm/</loc>
+    <loc>https://kaopanboonyuen.github.io/tag/geospatial-intelligence/</loc>
     <lastmod>2025-07-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/lulc/</loc>
+    <loc>https://kaopanboonyuen.github.io/tag/lulc-analysis/</loc>
     <lastmod>2025-07-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/category/lulc/</loc>
-    <lastmod>2025-07-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/remote-sensing/</loc>
+    <loc>https://kaopanboonyuen.github.io/tag/multimodal-data/</loc>
     <lastmod>2025-07-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/category/remote-sensing/</loc>
     <lastmod>2025-07-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/sentinel/</loc>
+    <loc>https://kaopanboonyuen.github.io/tag/remote-sensing-advancements/</loc>
+    <lastmod>2025-07-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/satellite-imaging/</loc>
     <lastmod>2025-07-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tags/</loc>
@@ -56,7 +62,7 @@
     <loc>https://kaopanboonyuen.github.io/author/teerapong-panboonyuen/</loc>
     <lastmod>2025-07-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/theos/</loc>
+    <loc>https://kaopanboonyuen.github.io/tag/vision-language-models/</loc>
     <lastmod>2025-07-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/blog/2025-07-05-visionlanguage-models-for-remote-sensing-a-new-era-of-multimodal-understanding/</loc>
@@ -323,6 +329,12 @@
     <loc>https://kaopanboonyuen.github.io/category/llms/</loc>
     <lastmod>2024-09-08T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/lulc/</loc>
+    <lastmod>2024-09-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/category/lulc/</loc>
+    <lastmod>2024-09-08T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/satellite-images/</loc>
     <lastmod>2024-09-08T00:00:00+00:00</lastmod>
   </url><url>
@@ -483,6 +495,9 @@
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/multi-branch-architectures/</loc>
+    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/remote-sensing/</loc>
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/transformer/</loc>
