@@ -38,11 +38,7 @@
         &lt;li&gt;&lt;a href=&#34;#how-does-the-student-learn-from-the-teacher&#34;&gt;How does the student learn from the teacher?&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&#34;#results-that-speak-volumes&#34;&gt;Results that speak volumes&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&#34;#final-layer-feature-summaries&#34;&gt;Final layer feature summaries&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#why-does-this-matter-for-car-insurance&#34;&gt;why does this matter for car insurance?&lt;/a&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&#34;#why-this-matters-for-car-insurance&#34;&gt;Why This Matters for Car Insurance&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#why-does-this-matter-for-car-insurance&#34;&gt;Why does this matter for car insurance?&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;
     &lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#mathematical-insight-simplified&#34;&gt;Mathematical Insight (Simplified)&lt;/a&gt;&lt;/li&gt;
@@ -209,7 +205,7 @@
   &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 8: Summary of final layer features in teacher and student models (Image source: &lt;a href=&#34;https://www.dailydoseofds.com/p/knowledge-distillation-with-teacher-assistant-for-model-compression/&#34; target=&#34;_blank&#34;&gt;Daily Dose of Data Science&lt;/a&gt;).&lt;/p&gt;
 &lt;/div&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;why-does-this-matter-for-car-insurance&#34;&gt;why does this matter for car insurance?&lt;/h2&gt;
+&lt;h3 id=&#34;why-does-this-matter-for-car-insurance&#34;&gt;Why does this matter for car insurance?&lt;/h3&gt;
 &lt;hr&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -221,11 +217,6 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Robust accuracy:&lt;/strong&gt; Guided by the teacher, the student avoids common pitfalls of lightweight models, maintaining high performance even in challenging real-world conditions.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;why-this-matters-for-car-insurance&#34;&gt;Why This Matters for Car Insurance&lt;/h3&gt;
-&lt;hr&gt;
-&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Accuracy vs. Speed:&lt;/strong&gt; ALBERT excels in detailed offline analysis, perfect for complex claim investigations. SLICK offers instant, reliable damage detection to accelerate frontline claim approvals and garage estimates.&lt;/p&gt;
 &lt;/li&gt;
@@ -263,7 +254,7 @@ $$&lt;/p&gt;
 &lt;p&gt;MARSAIL continues to innovate by balancing AI model accuracy and deployment efficiency. ALBERT and SLICK represent the cutting edge of automotive AI, ready to transform insurance claim processes in Thailand and beyond — enabling smarter, faster, and fairer car insurance.&lt;/p&gt;
 &lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Panboonyuen, Teerapong. (Jul 2025). &lt;em&gt;ALBERT vs SLICK: MARSAIL’s New AI Fashion for Car Insurance&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2025-07-02-albert-vs-slick-marsail-new-ai-fashion/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2025-07-02-albert-vs-slick-marsail-new-ai-fashion/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Panboonyuen, Teerapong. (Jul 2025). &lt;em&gt;ALBERT vs SLICK: MARSAIL’s New AI Fashion for Real-Time Car Insurance and Garages&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2025-07-02-albert-vs-slick-marsail-new-ai-fashion/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2025-07-02-albert-vs-slick-marsail-new-ai-fashion/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Or&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bibtex&#34;&gt;@article{panboonyuen2025albert_slick,
@@ -1410,11 +1401,11 @@ This publication introduces a feature fusion approach for semantic labeling task
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Panboonyuen, Teerapong. (Sep 2024). &lt;em&gt;Career Paths for AI Research Scientists: My Journey and Insights&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2024-09-01-career-paths-for-ai-research-scientist/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2024-09-01-career-paths-for-ai-research-scientist/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Panboonyuen, Teerapong. (Sep 2024). &lt;em&gt;Career Paths for Research Scientists: My Personal Journey, Lessons Learned, and Insider Insights&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2024-09-01-career-paths-for-ai-research-scientist/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2024-09-01-career-paths-for-ai-research-scientist/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Or&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;@article{panboonyuen2024careerpaths,
-  title   = &amp;quot;Career Paths for AI Research Scientists: My Journey and Insights.&amp;quot;,
+  title   = &amp;quot;Career Paths for Research Scientists: My Personal Journey, Lessons Learned, and Insider Insights&amp;quot;,
   author  = &amp;quot;Panboonyuen, Teerapong&amp;quot;,
   journal = &amp;quot;kaopanboonyuen.github.io/&amp;quot;,
   year    = &amp;quot;2024&amp;quot;,
@@ -1895,17 +1886,16 @@ Generative AI continues to advance rapidly, with ongoing developments in model a
 &lt;/ul&gt;
 &lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Panboonyuen, Teerapong. (Aug 2024). &lt;em&gt;Generative AI: Current Trends and Practical Applications&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2024-08-02-generative-ai-current-trends-and-practical-applications/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2024-08-02-generative-ai-current-trends-and-practical-applications/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Panboonyuen, Teerapong. (Aug 2024). &lt;em&gt;Generative AI Uncovered: Emerging Trends, Real-World Applications, and the Road Ahead&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2024-08-02-generative-ai-current-trends-and-practical-applications/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2024-08-02-generative-ai-current-trends-and-practical-applications/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Or&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;@article{panboonyuen2024generativeaitrends,
-  title   = &amp;quot;Generative AI: Current Trends and Practical Applications.&amp;quot;,
+  title   = &amp;quot;Generative AI Uncovered: Emerging Trends, Real-World Applications, and the Road Ahead.&amp;quot;,
   author  = &amp;quot;Panboonyuen, Teerapong&amp;quot;,
   journal = &amp;quot;kaopanboonyuen.github.io/&amp;quot;,
   year    = &amp;quot;2024&amp;quot;,
   month   = &amp;quot;Aug&amp;quot;,
-  url     = &amp;quot;https://kaopanboonyuen.github.io/blog/2024-08-02-generative-ai-current-trends-and-practical-applications/&amp;quot;
-}
+  url     = &amp;quot;https://kaopanboonyuen.github.io/blog/2024-08-02-generative-ai-current-trends-and-practical-applications/&amp;quot;}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;

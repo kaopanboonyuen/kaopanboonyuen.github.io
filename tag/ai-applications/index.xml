@@ -259,11 +259,11 @@ This publication introduces a feature fusion approach for semantic labeling task
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Panboonyuen, Teerapong. (Sep 2024). &lt;em&gt;Career Paths for AI Research Scientists: My Journey and Insights&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2024-09-01-career-paths-for-ai-research-scientist/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2024-09-01-career-paths-for-ai-research-scientist/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Panboonyuen, Teerapong. (Sep 2024). &lt;em&gt;Career Paths for Research Scientists: My Personal Journey, Lessons Learned, and Insider Insights&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2024-09-01-career-paths-for-ai-research-scientist/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2024-09-01-career-paths-for-ai-research-scientist/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Or&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;@article{panboonyuen2024careerpaths,
-  title   = &amp;quot;Career Paths for AI Research Scientists: My Journey and Insights.&amp;quot;,
+  title   = &amp;quot;Career Paths for Research Scientists: My Personal Journey, Lessons Learned, and Insider Insights&amp;quot;,
   author  = &amp;quot;Panboonyuen, Teerapong&amp;quot;,
   journal = &amp;quot;kaopanboonyuen.github.io/&amp;quot;,
   year    = &amp;quot;2024&amp;quot;,
@@ -744,17 +744,16 @@ Generative AI continues to advance rapidly, with ongoing developments in model a
 &lt;/ul&gt;
 &lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Panboonyuen, Teerapong. (Aug 2024). &lt;em&gt;Generative AI: Current Trends and Practical Applications&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2024-08-02-generative-ai-current-trends-and-practical-applications/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2024-08-02-generative-ai-current-trends-and-practical-applications/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Panboonyuen, Teerapong. (Aug 2024). &lt;em&gt;Generative AI Uncovered: Emerging Trends, Real-World Applications, and the Road Ahead&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2024-08-02-generative-ai-current-trends-and-practical-applications/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2024-08-02-generative-ai-current-trends-and-practical-applications/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Or&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;@article{panboonyuen2024generativeaitrends,
-  title   = &amp;quot;Generative AI: Current Trends and Practical Applications.&amp;quot;,
+  title   = &amp;quot;Generative AI Uncovered: Emerging Trends, Real-World Applications, and the Road Ahead.&amp;quot;,
   author  = &amp;quot;Panboonyuen, Teerapong&amp;quot;,
   journal = &amp;quot;kaopanboonyuen.github.io/&amp;quot;,
   year    = &amp;quot;2024&amp;quot;,
   month   = &amp;quot;Aug&amp;quot;,
-  url     = &amp;quot;https://kaopanboonyuen.github.io/blog/2024-08-02-generative-ai-current-trends-and-practical-applications/&amp;quot;
-}
+  url     = &amp;quot;https://kaopanboonyuen.github.io/blog/2024-08-02-generative-ai-current-trends-and-practical-applications/&amp;quot;}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
