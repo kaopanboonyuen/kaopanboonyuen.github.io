@@ -107,7 +107,7 @@
 &lt;p&gt;However, this precision comes with a computational cost. ALBERT requires powerful CUDA-enabled GPUs and is relatively slow, making it ideal for offline batch processing or scenarios where accuracy takes precedence over speed.&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
   &lt;img src=&#34;img/ALBERT_01.png&#34; alt=&#34;MARSAIL ALBERT Model Result&#34;&gt;
-  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 1: MARSAIL-ALBERT model showcasing detailed and precise damage segmentation results.&lt;/p&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 2: MARSAIL-ALBERT model showcasing detailed and precise damage segmentation results.&lt;/p&gt;
 &lt;/div&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;slick-the-student-model--lightning-speed-meets-smart-knowledge&#34;&gt;SLICK: The Student Model — Lightning Speed Meets Smart Knowledge&lt;/h3&gt;
@@ -116,7 +116,7 @@
 &lt;p&gt;SLICK boosts processing speed by over &lt;strong&gt;700%&lt;/strong&gt; compared to ALBERT, enabling instant damage assessments on edge devices or mobile apps without sacrificing much accuracy. Its adaptive attention mechanism dynamically calibrates segmentation proposals using contextual knowledge graphs, making it robust under varying light, weather, and occlusion conditions.&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
   &lt;img src=&#34;img/SLICK_01.png&#34; alt=&#34;MARSAIL SLICK Model Result&#34;&gt;
-  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 2: MARSAIL-SLICK model delivering rapid, knowledge-enhanced damage segmentation optimized for real-time insurance workflows.&lt;/p&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 3: MARSAIL-SLICK model delivering rapid, knowledge-enhanced damage segmentation optimized for real-time insurance workflows.&lt;/p&gt;
 &lt;/div&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;-teaching-machines-to-see-smarter-and-faster-the-marsail-teacher-student-model&#34;&gt;🚘 Teaching machines to see smarter and faster: the MARSAIL teacher-student model&lt;/h3&gt;
@@ -124,7 +124,7 @@
 &lt;p&gt;In the race to deliver the best car damage detection for insurance claims, MARSAIL takes a cutting-edge approach inspired by how humans learn: through mentorship. Our &lt;strong&gt;teacher-student model&lt;/strong&gt; architecture pairs a high-capacity “teacher” network with a lean, speedy “student” model, capturing the best of both worlds — precision and efficiency.&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
   &lt;img src=&#34;img/MARSAIL_TS_MODEL_01.png&#34; alt=&#34;Teacher-Student Model Concept Architecture&#34;&gt;
-  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 3: Conceptual architecture of the MARSAIL teacher-student model (Image source: &lt;a href=&#34;https://www.dailydoseofds.com/p/knowledge-distillation-with-teacher-assistant-for-model-compression/&#34; target=&#34;_blank&#34;&gt;Daily Dose of Data Science&lt;/a&gt;).&lt;/p&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 4: Conceptual architecture of the MARSAIL teacher-student model (Image source: &lt;a href=&#34;https://www.dailydoseofds.com/p/knowledge-distillation-with-teacher-assistant-for-model-compression/&#34; target=&#34;_blank&#34;&gt;Daily Dose of Data Science&lt;/a&gt;).&lt;/p&gt;
 &lt;/div&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;what-is-the-teacher-student-model&#34;&gt;What is the teacher-student model?&lt;/h3&gt;
@@ -133,7 +133,7 @@
 &lt;p&gt;The magic happens when the student &lt;strong&gt;learns to mimic&lt;/strong&gt; the teacher&amp;rsquo;s insights without needing to replicate its full complexity. This process is known as &lt;strong&gt;knowledge distillation&lt;/strong&gt; — where the teacher’s “soft” predictions guide the student’s training, helping it grasp subtle visual patterns that would be hard to learn from raw data alone.&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
   &lt;img src=&#34;img/MARSAIL_TS_MODEL_02.png&#34; alt=&#34;Simple Teacher-Student Model Concept&#34;&gt;
-  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 4: Simplified overview of the teacher-student learning framework (Image source: &lt;a href=&#34;https://www.dailydoseofds.com/p/knowledge-distillation-with-teacher-assistant-for-model-compression/&#34; target=&#34;_blank&#34;&gt;Daily Dose of Data Science&lt;/a&gt;).&lt;/p&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 5: Simplified overview of the teacher-student learning framework (Image source: &lt;a href=&#34;https://www.dailydoseofds.com/p/knowledge-distillation-with-teacher-assistant-for-model-compression/&#34; target=&#34;_blank&#34;&gt;Daily Dose of Data Science&lt;/a&gt;).&lt;/p&gt;
 &lt;/div&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;measuring-size-and-efficiency-teacher-vs-student&#34;&gt;Measuring size and efficiency: teacher vs. student&lt;/h3&gt;
@@ -141,7 +141,7 @@
 &lt;p&gt;To illustrate the trade-off, here’s a glimpse of the teacher and student model sizes trained on the CIFAR-10 dataset. The teacher is notably larger but more precise, while the student’s compact size enables rapid inference — crucial for insurance agents working on the go.&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
   &lt;img src=&#34;img/MARSAIL_TS_MODEL_03.png&#34; alt=&#34;Teacher Size (left) and Student Size (right) on CIFAR-10 dataset&#34;&gt;
-  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 5: Visual comparison of teacher (left) and student (right) model sizes (Image source: &lt;a href=&#34;https://www.dailydoseofds.com/p/knowledge-distillation-with-teacher-assistant-for-model-compression/&#34; target=&#34;_blank&#34;&gt;Daily Dose of Data Science&lt;/a&gt;).&lt;/p&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 6: Visual comparison of teacher (left) and student (right) model sizes (Image source: &lt;a href=&#34;https://www.dailydoseofds.com/p/knowledge-distillation-with-teacher-assistant-for-model-compression/&#34; target=&#34;_blank&#34;&gt;Daily Dose of Data Science&lt;/a&gt;).&lt;/p&gt;
 &lt;/div&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;how-does-the-student-learn-from-the-teacher&#34;&gt;How does the student learn from the teacher?&lt;/h3&gt;
@@ -149,7 +149,7 @@
 &lt;p&gt;The training process involves the student observing both the teacher’s output and the ground truth, gradually adjusting itself to replicate the teacher’s nuanced judgments. This dual supervision accelerates the student’s learning curve, enabling it to deliver near-teacher accuracy with significantly fewer parameters.&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
   &lt;img src=&#34;img/MARSAIL_TS_MODEL_04.png&#34; alt=&#34;How to Learn from Teacher-Student&#34;&gt;
-  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 6: Diagram showing how the student model learns from the teacher model (Image source: &lt;a href=&#34;https://www.dailydoseofds.com/p/knowledge-distillation-with-teacher-assistant-for-model-compression/&#34; target=&#34;_blank&#34;&gt;Daily Dose of Data Science&lt;/a&gt;).&lt;/p&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 7: Diagram showing how the student model learns from the teacher model (Image source: &lt;a href=&#34;https://www.dailydoseofds.com/p/knowledge-distillation-with-teacher-assistant-for-model-compression/&#34; target=&#34;_blank&#34;&gt;Daily Dose of Data Science&lt;/a&gt;).&lt;/p&gt;
 &lt;/div&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;results-that-speak-volumes&#34;&gt;Results that speak volumes&lt;/h3&gt;
@@ -205,7 +205,7 @@
 &lt;/table&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
   &lt;img src=&#34;img/MARSAIL_TS_MODEL_05.png&#34; alt=&#34;Result Comparison of Models on CIFAR datasets&#34;&gt;
-  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 7: Model accuracy comparison showing improvement using knowledge distillation techniques (Image source: &lt;a href=&#34;https://www.dailydoseofds.com/p/knowledge-distillation-with-teacher-assistant-for-model-compression/&#34; target=&#34;_blank&#34;&gt;Daily Dose of Data Science&lt;/a&gt;).&lt;/p&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 8: Model accuracy comparison showing improvement using knowledge distillation techniques (Image source: &lt;a href=&#34;https://www.dailydoseofds.com/p/knowledge-distillation-with-teacher-assistant-for-model-compression/&#34; target=&#34;_blank&#34;&gt;Daily Dose of Data Science&lt;/a&gt;).&lt;/p&gt;
 &lt;/div&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;final-layer-feature-summaries&#34;&gt;Final layer feature summaries&lt;/h3&gt;
@@ -213,7 +213,7 @@
 &lt;p&gt;This image visualizes how different layers in each model contribute to the final representation, highlighting the efficiency gains from knowledge distillation that help the student model stay compact yet powerful.&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
   &lt;img src=&#34;img/MARSAIL_TS_MODEL_06.png&#34; alt=&#34;Summary of Final Layers in Each Model&#34;&gt;
-  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 8: Summary of final layer features in teacher and student models (Image source: &lt;a href=&#34;https://www.dailydoseofds.com/p/knowledge-distillation-with-teacher-assistant-for-model-compression/&#34; target=&#34;_blank&#34;&gt;Daily Dose of Data Science&lt;/a&gt;).&lt;/p&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 9: Summary of final layer features in teacher and student models (Image source: &lt;a href=&#34;https://www.dailydoseofds.com/p/knowledge-distillation-with-teacher-assistant-for-model-compression/&#34; target=&#34;_blank&#34;&gt;Daily Dose of Data Science&lt;/a&gt;).&lt;/p&gt;
 &lt;/div&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;why-does-this-matter-for-car-insurance&#34;&gt;Why does this matter for car insurance?&lt;/h3&gt;
