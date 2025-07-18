@@ -5,7 +5,7 @@
     <link>https://kaopanboonyuen.github.io/event/</link>
       <atom:link href="https://kaopanboonyuen.github.io/event/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Thu, 27 Mar 2025 13:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Thu, 17 Jul 2025 13:30:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>Recent &amp; Upcoming Talks</title>
@@ -13,10 +13,25 @@
     </image>
     
     <item>
-      <title>UAMC2025 (Undergraduate in Applied Mathematics Conference 2025)</title>
-      <link>https://kaopanboonyuen.github.io/talk/uamc2025-undergraduate-in-applied-mathematics-conference-2025/</link>
+      <title>CUICU @ TSCCM2025 (The 14th Critical Care Conference)</title>
+      <link>https://kaopanboonyuen.github.io/talk/cuicu-@-tsccm2025-the-14th-critical-care-conference/</link>
+      <pubDate>Thu, 17 Jul 2025 13:30:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/talk/cuicu-@-tsccm2025-the-14th-critical-care-conference/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;🎤 You can download the full presentation slides from my CU-ICU oral talk at TSCCM 2025 &lt;a href=&#34;https://kaopanboonyuen.github.io/files/slides/Panboonyuen_CUICU_TSCCM2025_Slide.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;📄 Curious to dive deeper into the research? You can also read the full CU-ICU paper on arXiv &lt;a href=&#34;https://kaopanboonyuen.github.io/files/paper/Panboonyuen_CUICU_TSCCM2025_arXiv.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>UAMC2025 (Applied Mathematics Conference)</title>
+      <link>https://kaopanboonyuen.github.io/talk/uamc2025-applied-mathematics-conference/</link>
       <pubDate>Thu, 27 Mar 2025 13:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/talk/uamc2025-undergraduate-in-applied-mathematics-conference-2025/</guid>
+      <guid>https://kaopanboonyuen.github.io/talk/uamc2025-applied-mathematics-conference/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;🚗💡 This Sunday (March 30, 2025), if you&amp;rsquo;re around Ladkrabang, come join us for a math talk! 📚💬 We’ll dive deep into the fascinating world of Vision Transformers (ViTs) and their applications in car insurance AI. It&amp;rsquo;s an exciting opportunity to explore how advanced mathematical techniques are driving the future of AI in the insurance industry. Don’t miss out—join us for this insightful session!&lt;/p&gt;
 &lt;p&gt;Topic: Mathematical Foundations of Vision Transformers in Car Insurance AI&lt;br&gt;
