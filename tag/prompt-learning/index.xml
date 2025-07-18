@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>prompt-learning | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/prompt-learning/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/prompt-learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>prompt-learning</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Thu, 17 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>prompt-learning</title>
+      <link>https://kaopanboonyuen.github.io/tag/prompt-learning/</link>
+    </image>
+    
+    <item>
+      <title>CU-ICU: Customizing Instruction-Tuned Language Models for Critical Care</title>
+      <link>https://kaopanboonyuen.github.io/blog/2025-07-17-cuicu-customizing-unsupervised-instruction-finetuned-language-models/</link>
+      <pubDate>Thu, 17 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/blog/2025-07-17-cuicu-customizing-unsupervised-instruction-finetuned-language-models/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“My passion is dedicated to supporting ICU healthcare professionals in Thailand by building accessible AI tools—this is an independent project with no external funding.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-the-icu-challenge&#34;&gt;🚨 The ICU Challenge&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Large Language Models (LLMs) like ChatGPT and PaLM have taken the world by storm—but adapting them to &lt;strong&gt;real-world ICU settings&lt;/strong&gt; is another story.&lt;/p&gt;
+&lt;p&gt;In the ICU, time is critical. Clinical staff need:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fast predictions (like early &lt;strong&gt;sepsis detection&lt;/strong&gt;),&lt;/li&gt;
+&lt;li&gt;Accurate &lt;strong&gt;mortality risk estimation&lt;/strong&gt;, and&lt;/li&gt;
+&lt;li&gt;Understandable, &lt;strong&gt;clinically relevant explanations&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But here&amp;rsquo;s the catch: hospitals—especially in countries like Thailand—often lack large labeled datasets or GPU-rich infrastructure.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-introducing-cu-icu&#34;&gt;💡 Introducing CU-ICU&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;CU-ICU&lt;/strong&gt; is our proposed framework that adapts large instruction-finetuned LLMs like T5 for ICU tasks, using &lt;strong&gt;sparse parameter-efficient fine-tuning (PEFT)&lt;/strong&gt; techniques. It balances &lt;strong&gt;accuracy&lt;/strong&gt;, &lt;strong&gt;interpretability&lt;/strong&gt;, and &lt;strong&gt;efficiency&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;We evaluated it on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Sepsis Detection&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mortality Prediction&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Clinical Note Generation&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With three leading PEFT strategies:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🧩 &lt;strong&gt;LoRA&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;📉 &lt;strong&gt;AdaLoRA&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;🧠 &lt;strong&gt;(IA)$^3$&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/CUICU_TITLE.jpg&#34; alt=&#34;CU-ICU Oral Presentation Begins&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 1: The moment I stepped onto the stage at TSCCM 2025 to present my research on CU-ICU—my heart was racing, but my passion was louder. This was not just any room; it was Conference Room 1 on the 12th floor of Bhumisiri Mangkhalanusorn Building at King Chulalongkorn Memorial Hospital, filled with top clinicians and medical experts. It felt deeply meaningful to return to a place that shaped my academic path, this time to introduce an AI model designed not for global trends, but for Thai hospitals, Thai doctors, and Thai patients. CU-ICU was built from the heart—with no big budget, no flashy grants—just the desire to make something useful and real.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/CUICU_ORAL.png&#34; alt=&#34;Oral Presentation Schedule&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 2: Out of all the names listed for oral presentations, mine came first—talk about pressure! As I scanned the schedule, I realized something fascinating: I was the only one presenting on AI, LLMs, and NLP. The rest were brilliant case studies and clinical research from doctors around Thailand and Asia. It was humbling to stand out not because of prestige, but because I represented a new kind of voice—a bridge between AI and healthcare, speaking to an audience of physicians about how ML might ease their daily workload and complement their medical judgment.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/TSCCM2025_POSTER_LISTS.png&#34; alt=&#34;TSCCM 2025 Poster Presentation List&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 3: The poster session lineup at TSCCM 2025 read like a roadmap of cutting-edge clinical practice. Most submissions came from hospitals across Japan, rich in medical case studies, practical findings, and cross-hospital comparisons. While CU-ICU wasn’t in this section, it made me realize the breadth of collaboration and knowledge-sharing that exists across borders in the healthcare research community. The energy was global, but the mission was deeply human: to make care better.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/CUICU_WHY_I_CREATED.jpg&#34; alt=&#34;Why CU-ICU Was Created&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 4: Why build CU-ICU? The answer is simple: passion. It wasn’t born from a funded research project or a corporate mandate. It came from listening to doctors—hearing how repetitive and time-consuming many of their information-related tasks can be. CU-ICU is a Thai-built large language model (LLM) designed specifically to support our local medical professionals. Its goal is not to replace anyone, but to serve as an AI assistant that understands the rhythm of a Thai ICU. By answering common clinical questions, it gives doctors more time to focus on the patient—the human behind the data. This moment of sharing that ‘why’ with a room full of doctors was the most meaningful part of the talk for me.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/CUICU_WHAT_IS.jpg&#34; alt=&#34;What is CU-ICU?&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 5: CU-ICU is built on the FLAN-T5 architecture and fine-tuned using lightweight adaptation techniques like LoRA, AdaLoRA, and IA3. Coming from a computer vision background, diving into language models was a leap—but a thrilling one. The idea of building an AI model that could &#34;speak medicine&#34; in Thai was both technically challenging and emotionally rewarding. I even asked the audience—doctors from various hospitals—how many had used tools like ChatGPT, Gemini, or DeepSeek. Almost every hand went up. That moment confirmed: the future of medicine and LLMs are already intersecting. CU-ICU wants to be part of that conversation, in our own language.&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-results-snapshot&#34;&gt;🧪 Results Snapshot&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;We fine-tuned FLAN-T5 on ICU datasets using 16-shot prompts. Here’s what CU-ICU achieved:&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-prediction-tasks&#34;&gt;🔍 Prediction Tasks&lt;/h3&gt;
+&lt;hr&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Method&lt;/th&gt;
+&lt;th&gt;Config&lt;/th&gt;
+&lt;th&gt;Params (%)&lt;/th&gt;
+&lt;th&gt;Sepsis Acc.&lt;/th&gt;
+&lt;th&gt;Mortality Acc.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;(IA)$^3$ (All Layers)&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;0.9%&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;85.6%&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;80.2%&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AdaLoRA&lt;/td&gt;
+&lt;td&gt;1.0 Budget, Rank=8&lt;/td&gt;
+&lt;td&gt;2.9%&lt;/td&gt;
+&lt;td&gt;83.5%&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;80.9%&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LoRA&lt;/td&gt;
+&lt;td&gt;Rank=16&lt;/td&gt;
+&lt;td&gt;6.2%&lt;/td&gt;
+&lt;td&gt;83.1%&lt;/td&gt;
+&lt;td&gt;79.6%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;✅ CU-ICU achieves up to &lt;strong&gt;85.6% accuracy in sepsis detection&lt;/strong&gt;—with less than &lt;strong&gt;1%&lt;/strong&gt; of model weights updated!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-clinical-note-quality&#34;&gt;📝 Clinical Note Quality&lt;/h3&gt;
+&lt;hr&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Method&lt;/th&gt;
+&lt;th&gt;Config&lt;/th&gt;
+&lt;th&gt;nBERTScore&lt;/th&gt;
+&lt;th&gt;Avg Score&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;(IA)$^3$ (All Layers)&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;N/A&lt;/td&gt;
+&lt;td&gt;32.1&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;66.0&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AdaLoRA&lt;/td&gt;
+&lt;td&gt;Rank=16&lt;/td&gt;
+&lt;td&gt;30.6&lt;/td&gt;
+&lt;td&gt;65.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LoRA&lt;/td&gt;
+&lt;td&gt;Rank=16&lt;/td&gt;
+&lt;td&gt;28.3&lt;/td&gt;
+&lt;td&gt;63.7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🧠 CU-ICU’s best configuration &lt;strong&gt;generated the most clinically relevant explanations&lt;/strong&gt;, evaluated via nBERTScore.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/CUICU_CONCLUSION.jpg&#34; alt=&#34;CU-ICU Summary and Future Plans&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 6: CU-ICU currently achieves about 66% accuracy on our curated ICU question dataset. It&#39;s not perfect, but it&#39;s a beginning. With more collaboration—especially from Thai doctors who can contribute anonymized data or clinical QA patterns—we believe CU-ICU can evolve into something truly impactful. But we also emphasized that the model must remain ethical, inclusive, and safe. Biases must be addressed. Feedback must be welcomed. This is not just an AI system; it’s a co-created medical assistant, shaped by the people it aims to help.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/CU_ICU_Sample_01.png&#34; alt=&#34;CU-ICU response to critical care prompt&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 7: A powerful moment from CU-ICU in action. The model receives a real-world ICU prompt: &lt;em&gt;&#34;56M, temp 39.5°C, MAP 60, HR 132, 20, lactate 4.0, no urine in 6 hrs. Sepsis?&#34;&lt;/em&gt; Its response? Not just accurate—but clinically impressive: &lt;em&gt;&#34;Strong evidence of septic shock: persistent hypotension (MAP &amp;lt; 65), hyperlactatemia, and oliguria. Immediate antibiotics and fluid bolus recommended per Surviving Sepsis Campaign (2021).&#34;&lt;/em&gt; What makes this remarkable isn’t just the correctness, but the way CU-ICU integrates multi-symptom reasoning, adheres to formal clinical guidelines, and even offers actionable next steps. In this moment, it felt like CU-ICU wasn&#39;t just a research model—it was a prototype for the kind of AI assistant Thai doctors could one day rely on in the most critical of decisions.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-it-works&#34;&gt;🤖 Why It Works&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;CU-ICU leverages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Instruction tuning&lt;/strong&gt; (T5 + FLAN-like prompts)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Few-shot learning&lt;/strong&gt; (16-shot prompts)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sparse fine-tuning&lt;/strong&gt; using LoRA, AdaLoRA, and (IA)$^3$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This makes the model:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Lightweight&lt;/strong&gt; 🪶&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Accurate&lt;/strong&gt; 📈&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Interpretable&lt;/strong&gt; 🔍&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All without expensive GPU clusters.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-a-step-toward-thai-hospital-ai&#34;&gt;🌏 A Step Toward Thai Hospital AI&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Most Thai hospitals operate under &lt;strong&gt;resource constraints&lt;/strong&gt;. Our goal with CU-ICU is to show:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can still deploy &lt;strong&gt;LLM-based clinical AI&lt;/strong&gt;,&lt;/li&gt;
+&lt;li&gt;With just &lt;strong&gt;a few labels&lt;/strong&gt;, &lt;strong&gt;smart tuning&lt;/strong&gt;, and &lt;strong&gt;open-source models&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We’re excited about bringing this into Thai ICU workflows to help overworked clinicians with decision support tools that actually make sense in practice.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;img/CUICU_CERTIFICATE.jpg&#34; alt=&#34;Oral Presentation Certificate&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;Figure 8: My certificate for the oral session—a proud reminder that I was one of just eight selected presenters. The other seven? All medical doctors. That made it even more special. Being the only AI researcher talking about LLMs in a sea of clinicians reminded me that technology must meet people where they are. One of the most heartwarming moments came afterward, when a senior doctor complimented the work. And perhaps even more emotional—this was my return to Chulalongkorn University, my Ph.D. alma mater, after nearly five years. Walking the familiar halls again, this time as a speaker, I felt immense gratitude. Chula gave me the roots, and CU-ICU is one of the branches I’ve grown.&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-whats-next&#34;&gt;🔮 What’s Next?&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;We’re exploring:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Thai-language ICU data alignment.&lt;/li&gt;
+&lt;li&gt;Integration into &lt;strong&gt;real-time hospital decision systems&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Expanding to pediatric and emergency care predictions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you’re working on Thai healthcare + AI, &lt;a href=&#34;mailto:teerapong.panboonyuen@gmail.com&#34;&gt;let’s connect&lt;/a&gt;!&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;🎤 You can download the full presentation slides from my CU-ICU oral talk at TSCCM 2025 &lt;a href=&#34;https://kaopanboonyuen.github.io/files/slides/Panboonyuen_CUICU_TSCCM2025_Slide.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;📄 Curious to dive deeper into the research? You can also read the full CU-ICU paper on arXiv &lt;a href=&#34;https://kaopanboonyuen.github.io/files/paper/Panboonyuen_CUICU_TSCCM2025_arXiv.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-references-selected&#34;&gt;📚 References (selected)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2106.09685&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LoRA (Hu et al., 2021)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2210.11416&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FLAN-T5 (Chung et al., 2022)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2204.02311&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PaLM (Chowdhery et al., 2022)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2305.09617&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MedPaLM (Singhal et al., 2023)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://openai.com/research/gpt-4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ChatGPT (OpenAI, 2023)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://deepmind.google/discover/blog/google-gemini-ai/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gemini (Google DeepMind, 2024)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Panboonyuen, Teerapong. (July 2025). &lt;em&gt;CU-ICU: Customizing Instruction-Tuned Language Models for Critical Care&lt;/em&gt;. Blog post on Kao Panboonyuen. &lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2025-07-17-cuicu-customizing-unsupervised-instruction-finetuned-language-models/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2025-07-17-cuicu-customizing-unsupervised-instruction-finetuned-language-models/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;For a BibTeX citation:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bibtex&#34;&gt;@article{panboonyuen2025cuicu,
+  title   = &amp;quot;CU-ICU: Customizing Instruction-Tuned Language Models for Critical Care&amp;quot;,
+  author  = &amp;quot;Panboonyuen, Teerapong&amp;quot;,
+  journal = &amp;quot;kaopanboonyuen.github.io/&amp;quot;,
+  year    = &amp;quot;2025&amp;quot;,
+  month   = &amp;quot;Jul&amp;quot;,
+  url     = &amp;quot;https://kaopanboonyuen.github.io/blog/2025-07-17-cuicu-customizing-unsupervised-instruction-finetuned-language-models/&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Did you find this page helpful? Consider sharing it 🙌
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Raffel, Colin, et al. &amp;ldquo;Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer.&amp;rdquo; &lt;em&gt;Journal of Machine Learning Research&lt;/em&gt; 21.140 (2020): 1-67.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hu, Edward J., et al. &amp;ldquo;LoRA: Low-Rank Adaptation of Large Language Models.&amp;rdquo; &lt;em&gt;arXiv preprint&lt;/em&gt; arXiv:2106.09685 (2021).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Wang, Shao, et al. &amp;ldquo;AdaLoRA: Adaptive Low-Rank Adaptation for Efficient Fine-tuning.&amp;rdquo; &lt;em&gt;arXiv preprint&lt;/em&gt; arXiv:2208.07339 (2022).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Guo, Ruiyi, et al. &amp;ldquo;(IA)³: Trainable Multiplicative Masks for Parameter-Efficient Fine-Tuning.&amp;rdquo; &lt;em&gt;arXiv preprint&lt;/em&gt; arXiv:2206.10169 (2022).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lee, Jinhyuk, et al. &amp;ldquo;BioBERT: a pre-trained biomedical language representation model for biomedical text mining.&amp;rdquo; &lt;em&gt;Bioinformatics&lt;/em&gt; 36.4 (2020): 1234-1240.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Huang, Kexin, et al. &amp;ldquo;ClinicalBERT: Modeling Clinical Notes and Predicting Hospital Readmission.&amp;rdquo; &lt;em&gt;arXiv preprint&lt;/em&gt; arXiv:1904.05342 (2019).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Singhal, Karan, et al. &amp;ldquo;Large Language Models Encode Clinical Knowledge.&amp;rdquo; &lt;em&gt;arXiv preprint&lt;/em&gt; arXiv:2212.13138 (2022).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Jin, Dongmin, et al. &amp;ldquo;MedAlpaca: A Medical Instruction-Finetuned Large Language Model.&amp;rdquo; &lt;em&gt;arXiv preprint&lt;/em&gt; arXiv:2304.12140 (2023).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lester, Brian, et al. &amp;ldquo;Powerful few-shot learning with frozen language models and pattern-tuning.&amp;rdquo; &lt;em&gt;arXiv preprint&lt;/em&gt; arXiv:2107.13586 (2021).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Brown, Tom B., et al. &amp;ldquo;Language models are few-shot learners.&amp;rdquo; &lt;em&gt;Advances in Neural Information Processing Systems&lt;/em&gt; 33 (2020): 1877-1901.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CU-ICU: Customizing Unsupervised Instruction-Finetuned Language Models for ICU Datasets via Text-to-Text Transfer Transformer</title>
+      <link>https://kaopanboonyuen.github.io/publication/cu-icu-customizing-unsupervised-instruction-finetuned-language-models-for-icu-datasets/</link>
+      <pubDate>Thu, 17 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/cu-icu-customizing-unsupervised-instruction-finetuned-language-models-for-icu-datasets/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

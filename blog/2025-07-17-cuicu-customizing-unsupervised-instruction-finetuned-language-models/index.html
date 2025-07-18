@@ -1,0 +1,1546 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Teerapong Panboonyuen" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Fine-tuning FLAN-T5 with parameter-efficient methods to adapt LLMs for high-stakes ICU tasks like sepsis detection, mortality prediction, and clinical note generation." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/blog/2025-07-17-cuicu-customizing-unsupervised-instruction-finetuned-language-models/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08f2e04360a1c87f5ad39547c02bf219.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/blog/2025-07-17-cuicu-customizing-unsupervised-instruction-finetuned-language-models/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/blog/2025-07-17-cuicu-customizing-unsupervised-instruction-finetuned-language-models/" />
+  <meta property="og:title" content="CU-ICU: Customizing Instruction-Tuned Language Models for Critical Care | Teerapong Panboonyuen" />
+  <meta property="og:description" content="Fine-tuning FLAN-T5 with parameter-efficient methods to adapt LLMs for high-stakes ICU tasks like sepsis detection, mortality prediction, and clinical note generation." /><meta property="og:image" content="https://kaopanboonyuen.github.io/blog/2025-07-17-cuicu-customizing-unsupervised-instruction-finetuned-language-models/featured.png" />
+    <meta property="twitter:image" content="https://kaopanboonyuen.github.io/blog/2025-07-17-cuicu-customizing-unsupervised-instruction-finetuned-language-models/featured.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2025-07-17T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2025-07-17T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>CU-ICU: Customizing Instruction-Tuned Language Models for Critical Care | Teerapong Panboonyuen</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="396b9ce8621ef34595f97c6fe738f1b2" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.4be02a3b391999348b0c7478778a0e4b.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#awards"><span>Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#press"><span>Press</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Featured</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#tags"><span>Topics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#communities"><span>Communities</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://x.com/kaopanboonyuen" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>CU-ICU: Customizing Instruction-Tuned Language Models for Critical Care</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span class="author-highlighted">Teerapong Panboonyuen</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    2025
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/medical-language-models/">medical-language-models</a>, <a href="/category/peft-for-healthcare/">peft-for-healthcare</a>, <a href="/category/ai-in-critical-care/">ai-in-critical-care</a></span>
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 1200px; max-height: 653px;">
+  <div style="position: relative">
+    <img src="/blog/2025-07-17-cuicu-customizing-unsupervised-instruction-finetuned-language-models/featured_hu6f42fa8c9718a7fd7f73246663a7fc41_1806706_1200x0_resize_lanczos_3.png" alt="" class="featured-image">
+    <span class="article-header-caption">Scientist: Dr. Teerapong Panboonyuen (ดร.ธีรพงศ์ ปานบุญยืน) – presenting his latest work on CU-ICU, a customized instruction-finetuned language model for critical care.</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <blockquote>
+<p><em>“My passion is dedicated to supporting ICU healthcare professionals in Thailand by building accessible AI tools—this is an independent project with no external funding.”</em></p>
+</blockquote>
+<hr>
+<h2 id="-the-icu-challenge">🚨 The ICU Challenge</h2>
+<hr>
+<p>Large Language Models (LLMs) like ChatGPT and PaLM have taken the world by storm—but adapting them to <strong>real-world ICU settings</strong> is another story.</p>
+<p>In the ICU, time is critical. Clinical staff need:</p>
+<ul>
+<li>Fast predictions (like early <strong>sepsis detection</strong>),</li>
+<li>Accurate <strong>mortality risk estimation</strong>, and</li>
+<li>Understandable, <strong>clinically relevant explanations</strong>.</li>
+</ul>
+<p>But here&rsquo;s the catch: hospitals—especially in countries like Thailand—often lack large labeled datasets or GPU-rich infrastructure.</p>
+<hr>
+<h2 id="-introducing-cu-icu">💡 Introducing CU-ICU</h2>
+<hr>
+<p><strong>CU-ICU</strong> is our proposed framework that adapts large instruction-finetuned LLMs like T5 for ICU tasks, using <strong>sparse parameter-efficient fine-tuning (PEFT)</strong> techniques. It balances <strong>accuracy</strong>, <strong>interpretability</strong>, and <strong>efficiency</strong>.</p>
+<p>We evaluated it on:</p>
+<ul>
+<li><strong>Sepsis Detection</strong></li>
+<li><strong>Mortality Prediction</strong></li>
+<li><strong>Clinical Note Generation</strong></li>
+</ul>
+<p>With three leading PEFT strategies:</p>
+<ul>
+<li>🧩 <strong>LoRA</strong></li>
+<li>📉 <strong>AdaLoRA</strong></li>
+<li>🧠 <strong>(IA)$^3$</strong></li>
+</ul>
+<div style="text-align: center;">
+  <img src="img/CUICU_TITLE.jpg" alt="CU-ICU Oral Presentation Begins">
+  <p style="font-style: italic; margin-top: 0px;">Figure 1: The moment I stepped onto the stage at TSCCM 2025 to present my research on CU-ICU—my heart was racing, but my passion was louder. This was not just any room; it was Conference Room 1 on the 12th floor of Bhumisiri Mangkhalanusorn Building at King Chulalongkorn Memorial Hospital, filled with top clinicians and medical experts. It felt deeply meaningful to return to a place that shaped my academic path, this time to introduce an AI model designed not for global trends, but for Thai hospitals, Thai doctors, and Thai patients. CU-ICU was built from the heart—with no big budget, no flashy grants—just the desire to make something useful and real.</p>
+</div>
+<div style="text-align: center;">
+  <img src="img/CUICU_ORAL.png" alt="Oral Presentation Schedule">
+  <p style="font-style: italic; margin-top: 0px;">Figure 2: Out of all the names listed for oral presentations, mine came first—talk about pressure! As I scanned the schedule, I realized something fascinating: I was the only one presenting on AI, LLMs, and NLP. The rest were brilliant case studies and clinical research from doctors around Thailand and Asia. It was humbling to stand out not because of prestige, but because I represented a new kind of voice—a bridge between AI and healthcare, speaking to an audience of physicians about how ML might ease their daily workload and complement their medical judgment.</p>
+</div>
+<div style="text-align: center;">
+  <img src="img/TSCCM2025_POSTER_LISTS.png" alt="TSCCM 2025 Poster Presentation List">
+  <p style="font-style: italic; margin-top: 0px;">Figure 3: The poster session lineup at TSCCM 2025 read like a roadmap of cutting-edge clinical practice. Most submissions came from hospitals across Japan, rich in medical case studies, practical findings, and cross-hospital comparisons. While CU-ICU wasn’t in this section, it made me realize the breadth of collaboration and knowledge-sharing that exists across borders in the healthcare research community. The energy was global, but the mission was deeply human: to make care better.</p>
+</div>
+<div style="text-align: center;">
+  <img src="img/CUICU_WHY_I_CREATED.jpg" alt="Why CU-ICU Was Created">
+  <p style="font-style: italic; margin-top: 0px;">Figure 4: Why build CU-ICU? The answer is simple: passion. It wasn’t born from a funded research project or a corporate mandate. It came from listening to doctors—hearing how repetitive and time-consuming many of their information-related tasks can be. CU-ICU is a Thai-built large language model (LLM) designed specifically to support our local medical professionals. Its goal is not to replace anyone, but to serve as an AI assistant that understands the rhythm of a Thai ICU. By answering common clinical questions, it gives doctors more time to focus on the patient—the human behind the data. This moment of sharing that ‘why’ with a room full of doctors was the most meaningful part of the talk for me.</p>
+</div>
+<div style="text-align: center;">
+  <img src="img/CUICU_WHAT_IS.jpg" alt="What is CU-ICU?">
+  <p style="font-style: italic; margin-top: 0px;">Figure 5: CU-ICU is built on the FLAN-T5 architecture and fine-tuned using lightweight adaptation techniques like LoRA, AdaLoRA, and IA3. Coming from a computer vision background, diving into language models was a leap—but a thrilling one. The idea of building an AI model that could "speak medicine" in Thai was both technically challenging and emotionally rewarding. I even asked the audience—doctors from various hospitals—how many had used tools like ChatGPT, Gemini, or DeepSeek. Almost every hand went up. That moment confirmed: the future of medicine and LLMs are already intersecting. CU-ICU wants to be part of that conversation, in our own language.</p>
+</div>
+<hr>
+<h2 id="-results-snapshot">🧪 Results Snapshot</h2>
+<hr>
+<p>We fine-tuned FLAN-T5 on ICU datasets using 16-shot prompts. Here’s what CU-ICU achieved:</p>
+<hr>
+<h3 id="-prediction-tasks">🔍 Prediction Tasks</h3>
+<hr>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Config</th>
+<th>Params (%)</th>
+<th>Sepsis Acc.</th>
+<th>Mortality Acc.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>(IA)$^3$ (All Layers)</strong></td>
+<td>0.9%</td>
+<td><strong>85.6%</strong></td>
+<td>80.2%</td>
+<td></td>
+</tr>
+<tr>
+<td>AdaLoRA</td>
+<td>1.0 Budget, Rank=8</td>
+<td>2.9%</td>
+<td>83.5%</td>
+<td><strong>80.9%</strong></td>
+</tr>
+<tr>
+<td>LoRA</td>
+<td>Rank=16</td>
+<td>6.2%</td>
+<td>83.1%</td>
+<td>79.6%</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>✅ CU-ICU achieves up to <strong>85.6% accuracy in sepsis detection</strong>—with less than <strong>1%</strong> of model weights updated!</p>
+</blockquote>
+<hr>
+<h3 id="-clinical-note-quality">📝 Clinical Note Quality</h3>
+<hr>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Config</th>
+<th>nBERTScore</th>
+<th>Avg Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>(IA)$^3$ (All Layers)</strong></td>
+<td>N/A</td>
+<td>32.1</td>
+<td><strong>66.0</strong></td>
+</tr>
+<tr>
+<td>AdaLoRA</td>
+<td>Rank=16</td>
+<td>30.6</td>
+<td>65.0</td>
+</tr>
+<tr>
+<td>LoRA</td>
+<td>Rank=16</td>
+<td>28.3</td>
+<td>63.7</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🧠 CU-ICU’s best configuration <strong>generated the most clinically relevant explanations</strong>, evaluated via nBERTScore.</p>
+</blockquote>
+<div style="text-align: center;">
+  <img src="img/CUICU_CONCLUSION.jpg" alt="CU-ICU Summary and Future Plans">
+  <p style="font-style: italic; margin-top: 0px;">Figure 6: CU-ICU currently achieves about 66% accuracy on our curated ICU question dataset. It's not perfect, but it's a beginning. With more collaboration—especially from Thai doctors who can contribute anonymized data or clinical QA patterns—we believe CU-ICU can evolve into something truly impactful. But we also emphasized that the model must remain ethical, inclusive, and safe. Biases must be addressed. Feedback must be welcomed. This is not just an AI system; it’s a co-created medical assistant, shaped by the people it aims to help.</p>
+</div>
+<div style="text-align: center;">
+  <img src="img/CU_ICU_Sample_01.png" alt="CU-ICU response to critical care prompt">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 7: A powerful moment from CU-ICU in action. The model receives a real-world ICU prompt: <em>"56M, temp 39.5°C, MAP 60, HR 132, 20, lactate 4.0, no urine in 6 hrs. Sepsis?"</em> Its response? Not just accurate—but clinically impressive: <em>"Strong evidence of septic shock: persistent hypotension (MAP &lt; 65), hyperlactatemia, and oliguria. Immediate antibiotics and fluid bolus recommended per Surviving Sepsis Campaign (2021)."</em> What makes this remarkable isn’t just the correctness, but the way CU-ICU integrates multi-symptom reasoning, adheres to formal clinical guidelines, and even offers actionable next steps. In this moment, it felt like CU-ICU wasn't just a research model—it was a prototype for the kind of AI assistant Thai doctors could one day rely on in the most critical of decisions.
+  </p>
+</div>
+<hr>
+<h2 id="-why-it-works">🤖 Why It Works</h2>
+<hr>
+<p>CU-ICU leverages:</p>
+<ul>
+<li><strong>Instruction tuning</strong> (T5 + FLAN-like prompts)</li>
+<li><strong>Few-shot learning</strong> (16-shot prompts)</li>
+<li><strong>Sparse fine-tuning</strong> using LoRA, AdaLoRA, and (IA)$^3$</li>
+</ul>
+<p>This makes the model:</p>
+<ul>
+<li><strong>Lightweight</strong> 🪶</li>
+<li><strong>Accurate</strong> 📈</li>
+<li><strong>Interpretable</strong> 🔍</li>
+</ul>
+<p>All without expensive GPU clusters.</p>
+<hr>
+<h2 id="-a-step-toward-thai-hospital-ai">🌏 A Step Toward Thai Hospital AI</h2>
+<hr>
+<p>Most Thai hospitals operate under <strong>resource constraints</strong>. Our goal with CU-ICU is to show:</p>
+<ul>
+<li>You can still deploy <strong>LLM-based clinical AI</strong>,</li>
+<li>With just <strong>a few labels</strong>, <strong>smart tuning</strong>, and <strong>open-source models</strong>.</li>
+</ul>
+<p>We’re excited about bringing this into Thai ICU workflows to help overworked clinicians with decision support tools that actually make sense in practice.</p>
+<div style="text-align: center;">
+  <img src="img/CUICU_CERTIFICATE.jpg" alt="Oral Presentation Certificate">
+  <p style="font-style: italic; margin-top: 0px;">Figure 8: My certificate for the oral session—a proud reminder that I was one of just eight selected presenters. The other seven? All medical doctors. That made it even more special. Being the only AI researcher talking about LLMs in a sea of clinicians reminded me that technology must meet people where they are. One of the most heartwarming moments came afterward, when a senior doctor complimented the work. And perhaps even more emotional—this was my return to Chulalongkorn University, my Ph.D. alma mater, after nearly five years. Walking the familiar halls again, this time as a speaker, I felt immense gratitude. Chula gave me the roots, and CU-ICU is one of the branches I’ve grown.</p>
+</div>
+<hr>
+<h2 id="-whats-next">🔮 What’s Next?</h2>
+<hr>
+<p>We’re exploring:</p>
+<ul>
+<li>Thai-language ICU data alignment.</li>
+<li>Integration into <strong>real-time hospital decision systems</strong>.</li>
+<li>Expanding to pediatric and emergency care predictions.</li>
+</ul>
+<p>If you’re working on Thai healthcare + AI, <a href="mailto:teerapong.panboonyuen@gmail.com">let’s connect</a>!</p>
+<hr>
+<div class="alert alert-note">
+  <div>
+    <p>🎤 You can download the full presentation slides from my CU-ICU oral talk at TSCCM 2025 <a href="https://kaopanboonyuen.github.io/files/slides/Panboonyuen_CUICU_TSCCM2025_Slide.pdf" target="_blank" rel="noopener">here</a>.</p>
+<p>📄 Curious to dive deeper into the research? You can also read the full CU-ICU paper on arXiv <a href="https://kaopanboonyuen.github.io/files/paper/Panboonyuen_CUICU_TSCCM2025_arXiv.pdf" target="_blank" rel="noopener">here</a>.</p>
+  </div>
+</div>
+<hr>
+<h2 id="-references-selected">📚 References (selected)</h2>
+<hr>
+<ul>
+<li><a href="https://arxiv.org/abs/2106.09685" target="_blank" rel="noopener">LoRA (Hu et al., 2021)</a></li>
+<li><a href="https://arxiv.org/abs/2210.11416" target="_blank" rel="noopener">FLAN-T5 (Chung et al., 2022)</a></li>
+<li><a href="https://arxiv.org/abs/2204.02311" target="_blank" rel="noopener">PaLM (Chowdhery et al., 2022)</a></li>
+<li><a href="https://arxiv.org/abs/2305.09617" target="_blank" rel="noopener">MedPaLM (Singhal et al., 2023)</a></li>
+<li><a href="https://openai.com/research/gpt-4" target="_blank" rel="noopener">ChatGPT (OpenAI, 2023)</a></li>
+<li><a href="https://deepmind.google/discover/blog/google-gemini-ai/" target="_blank" rel="noopener">Gemini (Google DeepMind, 2024)</a></li>
+</ul>
+<hr>
+<h2 id="citation">Citation</h2>
+<blockquote>
+<p>Panboonyuen, Teerapong. (July 2025). <em>CU-ICU: Customizing Instruction-Tuned Language Models for Critical Care</em>. Blog post on Kao Panboonyuen. <a href="https://kaopanboonyuen.github.io/blog/2025-07-17-cuicu-customizing-unsupervised-instruction-finetuned-language-models/" target="_blank" rel="noopener">https://kaopanboonyuen.github.io/blog/2025-07-17-cuicu-customizing-unsupervised-instruction-finetuned-language-models/</a></p>
+</blockquote>
+<p><strong>For a BibTeX citation:</strong></p>
+<pre><code class="language-bibtex">@article{panboonyuen2025cuicu,
+  title   = &quot;CU-ICU: Customizing Instruction-Tuned Language Models for Critical Care&quot;,
+  author  = &quot;Panboonyuen, Teerapong&quot;,
+  journal = &quot;kaopanboonyuen.github.io/&quot;,
+  year    = &quot;2025&quot;,
+  month   = &quot;Jul&quot;,
+  url     = &quot;https://kaopanboonyuen.github.io/blog/2025-07-17-cuicu-customizing-unsupervised-instruction-finetuned-language-models/&quot;
+}
+</code></pre>
+<div class="alert alert-note">
+  <div>
+    Did you find this page helpful? Consider sharing it 🙌
+  </div>
+</div>
+<h1 id="references">References</h1>
+<ol>
+<li>
+<p>Raffel, Colin, et al. &ldquo;Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer.&rdquo; <em>Journal of Machine Learning Research</em> 21.140 (2020): 1-67.</p>
+</li>
+<li>
+<p>Hu, Edward J., et al. &ldquo;LoRA: Low-Rank Adaptation of Large Language Models.&rdquo; <em>arXiv preprint</em> arXiv:2106.09685 (2021).</p>
+</li>
+<li>
+<p>Wang, Shao, et al. &ldquo;AdaLoRA: Adaptive Low-Rank Adaptation for Efficient Fine-tuning.&rdquo; <em>arXiv preprint</em> arXiv:2208.07339 (2022).</p>
+</li>
+<li>
+<p>Guo, Ruiyi, et al. &ldquo;(IA)³: Trainable Multiplicative Masks for Parameter-Efficient Fine-Tuning.&rdquo; <em>arXiv preprint</em> arXiv:2206.10169 (2022).</p>
+</li>
+<li>
+<p>Lee, Jinhyuk, et al. &ldquo;BioBERT: a pre-trained biomedical language representation model for biomedical text mining.&rdquo; <em>Bioinformatics</em> 36.4 (2020): 1234-1240.</p>
+</li>
+<li>
+<p>Huang, Kexin, et al. &ldquo;ClinicalBERT: Modeling Clinical Notes and Predicting Hospital Readmission.&rdquo; <em>arXiv preprint</em> arXiv:1904.05342 (2019).</p>
+</li>
+<li>
+<p>Singhal, Karan, et al. &ldquo;Large Language Models Encode Clinical Knowledge.&rdquo; <em>arXiv preprint</em> arXiv:2212.13138 (2022).</p>
+</li>
+<li>
+<p>Jin, Dongmin, et al. &ldquo;MedAlpaca: A Medical Instruction-Finetuned Large Language Model.&rdquo; <em>arXiv preprint</em> arXiv:2304.12140 (2023).</p>
+</li>
+<li>
+<p>Lester, Brian, et al. &ldquo;Powerful few-shot learning with frozen language models and pattern-tuning.&rdquo; <em>arXiv preprint</em> arXiv:2107.13586 (2021).</p>
+</li>
+<li>
+<p>Brown, Tom B., et al. &ldquo;Language models are few-shot learners.&rdquo; <em>Advances in Neural Information Processing Systems</em> 33 (2020): 1877-1901.</p>
+</li>
+</ol>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/clinical-llms/">clinical-llms</a>
+  
+  <a class="badge badge-light" href="/tag/parameter-efficient-finetuning/">parameter-efficient-finetuning</a>
+  
+  <a class="badge badge-light" href="/tag/peft/">peft</a>
+  
+  <a class="badge badge-light" href="/tag/medical-ai/">medical-ai</a>
+  
+  <a class="badge badge-light" href="/tag/prompt-learning/">prompt-learning</a>
+  
+  <a class="badge badge-light" href="/tag/flan-t5/">flan-t5</a>
+  
+  <a class="badge badge-light" href="/tag/healthcare-innovation/">healthcare-innovation</a>
+  
+  <a class="badge badge-light" href="/tag/sepsis-detection/">sepsis-detection</a>
+  
+  <a class="badge badge-light" href="/tag/icu-mortality-prediction/">icu-mortality-prediction</a>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://kaopanboonyuen.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/teerapong-panboonyuen/avatar_hu3c429e132ccde7f98e52ca20c1f589ef_2676345_270x270_fill_q75_lanczos_center.jpg" alt="Teerapong Panboonyuen"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://kaopanboonyuen.github.io/">Teerapong Panboonyuen</a></h5>
+      
+      <p class="card-text">My research focuses on leveraging advanced machine intelligence techniques, specifically computer vision, to enhance semantic understanding, learning representations, visual recognition, and geospatial data interpretation.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:teerapong.panboonyuen@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://x.com/kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.youtube.com/@kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/teerapong-panboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://kaopanboonyuen.github.io/files/panboonyuen_cv.pdf" target="_blank" rel="noopener">
+        <i class="fas fa-download"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    ©2025 Kao Panboonyuen
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Built using <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> and the <a href="https://github.com/wowchemy/starter-hugo-academic" target="_blank" rel="noopener">Wowchemy academic template</a>. View <a href="https://github.com/kaopanboonyuen/kaopanboonyuen.github.io" target="_blank" rel="noopener">source</a>.
+        
+  </p>
+</footer>
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/golang.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.b36873e4e886c7b03b21e4eb97d9b6d7.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>
