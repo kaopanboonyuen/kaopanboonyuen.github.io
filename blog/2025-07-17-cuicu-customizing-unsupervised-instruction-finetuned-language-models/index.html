@@ -918,7 +918,7 @@
 <hr>
 <h2 id="-the-icu-challenge">🚨 The ICU Challenge</h2>
 <hr>
-<p>Large Language Models (LLMs) like ChatGPT and PaLM have taken the world by storm—but adapting them to <strong>real-world ICU settings</strong> is another story.</p>
+<p>Large Language Models (LLMs) like ChatGPT and Google Gemini have taken the world by storm—but adapting them to <strong>real-world ICU settings</strong> is another story.</p>
 <p>In the ICU, time is critical. Clinical staff need:</p>
 <ul>
 <li>Fast predictions (like early <strong>sepsis detection</strong>),</li>
@@ -926,11 +926,15 @@
 <li>Understandable, <strong>clinically relevant explanations</strong>.</li>
 </ul>
 <p>But here&rsquo;s the catch: hospitals—especially in countries like Thailand—often lack large labeled datasets or GPU-rich infrastructure.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Proud to finally share CU-ICU — my latest work on customizing instruction-finetuned language models for Thai ICU doctors. 🧑‍⚕️💡<br><br>Based on T5 + LoRA/AdaLoRA/IA3 — optimized for clinical reasoning &amp; real-world care.<br><br>📖 Full blog:<a href="https://t.co/hMrwI0gN5l">https://t.co/hMrwI0gN5l</a></p>&mdash; Kao Panboonyuen (@kaopanboonyuen) <a href="https://twitter.com/kaopanboonyuen/status/1946147237937197550?ref_src=twsrc%5Etfw">July 18, 2025</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
 <hr>
 <h2 id="-introducing-cu-icu">💡 Introducing CU-ICU</h2>
 <hr>
 <p><strong>CU-ICU</strong> is our proposed framework that adapts large instruction-finetuned LLMs like T5 for ICU tasks, using <strong>sparse parameter-efficient fine-tuning (PEFT)</strong> techniques. It balances <strong>accuracy</strong>, <strong>interpretability</strong>, and <strong>efficiency</strong>.</p>
-<p>We evaluated it on:</p>
+<p>I evaluated it on:</p>
 <ul>
 <li><strong>Sepsis Detection</strong></li>
 <li><strong>Mortality Prediction</strong></li>
@@ -965,7 +969,7 @@
 <hr>
 <h2 id="-results-snapshot">🧪 Results Snapshot</h2>
 <hr>
-<p>We fine-tuned FLAN-T5 on ICU datasets using 16-shot prompts. Here’s what CU-ICU achieved:</p>
+<p>I fine-tuned FLAN-T5 on ICU datasets using 16-shot prompts. Here’s what CU-ICU achieved:</p>
 <hr>
 <h3 id="-prediction-tasks">🔍 Prediction Tasks</h3>
 <hr>
@@ -1044,7 +1048,7 @@
 </blockquote>
 <div style="text-align: center;">
   <img src="img/CUICU_CONCLUSION.jpg" alt="CU-ICU Summary and Future Plans">
-  <p style="font-style: italic; margin-top: 0px;">Figure 6: CU-ICU currently achieves about 66% accuracy on our curated ICU question dataset. It's not perfect, but it's a beginning. With more collaboration—especially from Thai doctors who can contribute anonymized data or clinical QA patterns—we believe CU-ICU can evolve into something truly impactful. But we also emphasized that the model must remain ethical, inclusive, and safe. Biases must be addressed. Feedback must be welcomed. This is not just an AI system; it’s a co-created medical assistant, shaped by the people it aims to help.</p>
+  <p style="font-style: italic; margin-top: 0px;">Figure 6: CU-ICU currently achieves about 66% accuracy on our curated ICU question dataset. It's not perfect, but it's a beginning. With more collaboration—especially from Thai doctors who can contribute anonymized data or clinical QA patterns—I believe CU-ICU can evolve into something truly impactful. But I also emphasized that the model must remain ethical, inclusive, and safe. Biases must be addressed. Feedback must be welcomed. This is not just an AI system; it’s a co-created medical assistant, shaped by the people it aims to help.</p>
 </div>
 <div style="text-align: center;">
   <img src="img/CU_ICU_Sample_01.png" alt="CU-ICU response to critical care prompt">
@@ -1076,21 +1080,11 @@
 <li>You can still deploy <strong>LLM-based clinical AI</strong>,</li>
 <li>With just <strong>a few labels</strong>, <strong>smart tuning</strong>, and <strong>open-source models</strong>.</li>
 </ul>
-<p>We’re excited about bringing this into Thai ICU workflows to help overworked clinicians with decision support tools that actually make sense in practice.</p>
+<p>I&rsquo;m excited about bringing this into Thai ICU workflows to help overworked clinicians with decision support tools that actually make sense in practice.</p>
 <div style="text-align: center;">
   <img src="img/CUICU_CERTIFICATE.jpg" alt="Oral Presentation Certificate">
   <p style="font-style: italic; margin-top: 0px;">Figure 8: My certificate for the oral session—a proud reminder that I was one of just eight selected presenters. The other seven? All medical doctors. That made it even more special. Being the only AI researcher talking about LLMs in a sea of clinicians reminded me that technology must meet people where they are. One of the most heartwarming moments came afterward, when a senior doctor complimented the work. And perhaps even more emotional—this was my return to Chulalongkorn University, my Ph.D. alma mater, after nearly five years. Walking the familiar halls again, this time as a speaker, I felt immense gratitude. Chula gave me the roots, and CU-ICU is one of the branches I’ve grown.</p>
 </div>
-<hr>
-<h2 id="-whats-next">🔮 What’s Next?</h2>
-<hr>
-<p>We’re exploring:</p>
-<ul>
-<li>Thai-language ICU data alignment.</li>
-<li>Integration into <strong>real-time hospital decision systems</strong>.</li>
-<li>Expanding to pediatric and emergency care predictions.</li>
-</ul>
-<p>If you’re working on Thai healthcare + AI, <a href="mailto:teerapong.panboonyuen@gmail.com">let’s connect</a>!</p>
 <hr>
 <div class="alert alert-note">
   <div>
