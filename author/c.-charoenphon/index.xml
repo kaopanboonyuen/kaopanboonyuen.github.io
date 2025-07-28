@@ -5,12 +5,21 @@
     <link>https://kaopanboonyuen.github.io/author/c.-charoenphon/</link>
       <atom:link href="https://kaopanboonyuen.github.io/author/c.-charoenphon/index.xml" rel="self" type="application/rss+xml" />
     <description>C. Charoenphon</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Thu, 13 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Mon, 28 Jul 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>C. Charoenphon</title>
       <link>https://kaopanboonyuen.github.io/author/c.-charoenphon/</link>
     </image>
+    
+    <item>
+      <title>GuidedBox: A segmentation-guided box teacher-student approach for weakly supervised road segmentation</title>
+      <link>https://kaopanboonyuen.github.io/publication/guidedbox-a-segmentation-guided-box-teacher-student-approach-for-weakly-supervised-road-segmentation/</link>
+      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/guidedbox-a-segmentation-guided-box-teacher-student-approach-for-weakly-supervised-road-segmentation/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>SatDiff: A Stable Diffusion Framework for Inpainting Very High-Resolution Satellite Imagery</title>
