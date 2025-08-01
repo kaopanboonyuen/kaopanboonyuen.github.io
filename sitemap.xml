@@ -11,7 +11,7 @@
     <loc>https://kaopanboonyuen.github.io/courses/learn-data-science/stats/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/publication-type/3/</loc>
+    <loc>https://kaopanboonyuen.github.io/publication-type/2/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/authors/</loc>
@@ -23,31 +23,25 @@
     <loc>https://kaopanboonyuen.github.io/author/c.-satirapod/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/clinical-llms/</loc>
+    <loc>https://kaopanboonyuen.github.io/tag/computer-vision/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/flan-t5/</loc>
+    <loc>https://kaopanboonyuen.github.io/tag/geospatial-ai/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/publication/guidedbox-a-segmentation-guided-box-teacher-student-approach-for-weakly-supervised-road-segmentation/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/healthcare-innovation/</loc>
+    <loc>https://kaopanboonyuen.github.io/tag/instance-segmentation/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/icu-mortality-prediction/</loc>
+    <loc>https://kaopanboonyuen.github.io/tag/mask-generation/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/medical-ai/</loc>
+    <loc>https://kaopanboonyuen.github.io/tag/noise-aware-learning/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/parameter-efficient-finetuning/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/peft/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/prompt-learning/</loc>
+    <loc>https://kaopanboonyuen.github.io/tag/pseudo-labeling/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/publication_types/</loc>
@@ -56,10 +50,16 @@
     <loc>https://kaopanboonyuen.github.io/publication/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/sepsis-detection/</loc>
+    <loc>https://kaopanboonyuen.github.io/tag/remote-sensing/</loc>
+    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/road-segmentation/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tags/</loc>
+    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/teacher-student-framework/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/</loc>
@@ -68,11 +68,17 @@
     <loc>https://kaopanboonyuen.github.io/author/teerapong-panboonyuen/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/weakly-supervised-learning/</loc>
+    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://kaopanboonyuen.github.io/event/</loc>
     <lastmod>2025-07-17T13:30:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/talk/tsccm2025-the-14th-critical-care-conference/</loc>
     <lastmod>2025-07-17T13:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/publication-type/3/</loc>
+    <lastmod>2025-07-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/category/ai-in-critical-care/</loc>
     <lastmod>2025-07-17T00:00:00+00:00</lastmod>
@@ -83,16 +89,43 @@
     <loc>https://kaopanboonyuen.github.io/categories/</loc>
     <lastmod>2025-07-17T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/clinical-llms/</loc>
+    <lastmod>2025-07-17T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://kaopanboonyuen.github.io/blog/2025-07-17-cuicu-customizing-unsupervised-instruction-finetuned-language-models/</loc>
     <lastmod>2025-07-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/publication/cu-icu-customizing-unsupervised-instruction-finetuned-language-models-for-icu-datasets/</loc>
     <lastmod>2025-07-17T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/flan-t5/</loc>
+    <lastmod>2025-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/healthcare-innovation/</loc>
+    <lastmod>2025-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/icu-mortality-prediction/</loc>
+    <lastmod>2025-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/medical-ai/</loc>
+    <lastmod>2025-07-17T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://kaopanboonyuen.github.io/category/medical-language-models/</loc>
     <lastmod>2025-07-17T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/parameter-efficient-finetuning/</loc>
+    <lastmod>2025-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/peft/</loc>
+    <lastmod>2025-07-17T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://kaopanboonyuen.github.io/category/peft-for-healthcare/</loc>
+    <lastmod>2025-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/prompt-learning/</loc>
+    <lastmod>2025-07-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/sepsis-detection/</loc>
     <lastmod>2025-07-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/category/ai-enhanced-lulc/</loc>
@@ -143,9 +176,6 @@
     <loc>https://kaopanboonyuen.github.io/category/automotive-ai/</loc>
     <lastmod>2025-07-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/computer-vision/</loc>
-    <lastmod>2025-07-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://kaopanboonyuen.github.io/category/computer-vision/</loc>
     <lastmod>2025-07-02T00:00:00+00:00</lastmod>
   </url><url>
@@ -191,11 +221,38 @@
     <loc>https://kaopanboonyuen.github.io/tag/vhr-satellite-datasets/</loc>
     <lastmod>2025-03-13T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/atmospheric-science/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/attention-mechanism/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/author/b.-zhang/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/gnss/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/gru/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/publication/investigating-the-use-of-deep-learning-derived-weighted-mean-temperature-for-gps-pwvs-estimation/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/precipitable-water-vapor/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/pwv-estimation/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/tropical-climate/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/weighted-mean-temperature/</loc>
+    <lastmod>2025-03-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://kaopanboonyuen.github.io/talk/nac2025-nstda-annual-conference-2025/</loc>
     <lastmod>2025-02-26T09:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/publication-type/2/</loc>
-    <lastmod>2025-02-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/conditional-random-fields/</loc>
     <lastmod>2025-02-25T00:00:00+00:00</lastmod>
@@ -356,9 +413,6 @@
     <loc>https://kaopanboonyuen.github.io/publication-type/1/</loc>
     <lastmod>2024-09-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/gru/</loc>
-    <lastmod>2024-09-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/sea-surface-currents-forecasting/</loc>
     <lastmod>2024-09-09T00:00:00+00:00</lastmod>
   </url><url>
@@ -388,9 +442,6 @@
   </url><url>
     <loc>https://kaopanboonyuen.github.io/category/satellite-images/</loc>
     <lastmod>2024-09-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/instance-segmentation/</loc>
-    <lastmod>2024-09-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/category/instance-segmentation/</loc>
     <lastmod>2024-09-06T00:00:00+00:00</lastmod>
@@ -543,9 +594,6 @@
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/multi-branch-architectures/</loc>
-    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/remote-sensing/</loc>
     <lastmod>2023-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/transformer/</loc>
@@ -819,9 +867,6 @@
     <lastmod>2017-09-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/landscape-metrics/</loc>
-    <lastmod>2017-09-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/road-segmentation/</loc>
     <lastmod>2017-09-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/publication/road-segmentation-on-remote-sensing/</loc>

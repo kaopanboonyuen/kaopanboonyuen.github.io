@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>attention-mechanism | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/attention-mechanism/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/attention-mechanism/index.xml" rel="self" type="application/rss+xml" />
+    <description>attention-mechanism</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>attention-mechanism</title>
+      <link>https://kaopanboonyuen.github.io/tag/attention-mechanism/</link>
+    </image>
+    
+    <item>
+      <title>Investigating the use of deep learning-derived weighted mean temperature for GPS-PWVs estimation</title>
+      <link>https://kaopanboonyuen.github.io/publication/investigating-the-use-of-deep-learning-derived-weighted-mean-temperature-for-gps-pwvs-estimation/</link>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/investigating-the-use-of-deep-learning-derived-weighted-mean-temperature-for-gps-pwvs-estimation/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,12 +5,30 @@
     <link>https://kaopanboonyuen.github.io/tag/remote-sensing/</link>
       <atom:link href="https://kaopanboonyuen.github.io/tag/remote-sensing/index.xml" rel="self" type="application/rss+xml" />
     <description>Remote Sensing</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Mon, 01 May 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Mon, 28 Jul 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>Remote Sensing</title>
       <link>https://kaopanboonyuen.github.io/tag/remote-sensing/</link>
     </image>
+    
+    <item>
+      <title>GuidedBox: A segmentation-guided box teacher-student approach for weakly supervised road segmentation</title>
+      <link>https://kaopanboonyuen.github.io/publication/guidedbox-a-segmentation-guided-box-teacher-student-approach-for-weakly-supervised-road-segmentation/</link>
+      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/guidedbox-a-segmentation-guided-box-teacher-student-approach-for-weakly-supervised-road-segmentation/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Investigating the use of deep learning-derived weighted mean temperature for GPS-PWVs estimation</title>
+      <link>https://kaopanboonyuen.github.io/publication/investigating-the-use-of-deep-learning-derived-weighted-mean-temperature-for-gps-pwvs-estimation/</link>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/investigating-the-use-of-deep-learning-derived-weighted-mean-temperature-for-gps-pwvs-estimation/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>MeViT: A Medium-Resolution Vision Transformer for Semantic Segmentation on Landsat Satellite Imagery for Agriculture in Thailand</title>
