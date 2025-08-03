@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Auto Insurance Automation | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/auto-insurance-automation/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/auto-insurance-automation/index.xml" rel="self" type="application/rss+xml" />
+    <description>Auto Insurance Automation</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Fri, 07 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>Auto Insurance Automation</title>
+      <link>https://kaopanboonyuen.github.io/tag/auto-insurance-automation/</link>
+    </image>
+    
+    <item>
+      <title>SLICK: Selective Localization and Instance Calibration for Knowledge-Enhanced Car Damage Segmentation in Automotive Insurance</title>
+      <link>https://kaopanboonyuen.github.io/publication/slick-selective-localization-and-instance-calibration-for-knowledge-enhanced-car-damage-segmentation-in-automotive-insurance/</link>
+      <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/slick-selective-localization-and-instance-calibration-for-knowledge-enhanced-car-damage-segmentation-in-automotive-insurance/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

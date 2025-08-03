@@ -1142,7 +1142,7 @@ $$&lt;/p&gt;
     <item>
       <title>SatDiff: A Stable Diffusion Framework for Inpainting Very High-Resolution Satellite Imagery</title>
       <link>https://kaopanboonyuen.github.io/publication/satdiff-a-stable-diffusion-framework-for-inpainting/</link>
-      <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 13 May 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/publication/satdiff-a-stable-diffusion-framework-for-inpainting/</guid>
       <description>&lt;h2 id=&#34;keywords&#34;&gt;Keywords&lt;/h2&gt;
 &lt;ul&gt;
@@ -1179,8 +1179,26 @@ $$&lt;/p&gt;
     <item>
       <title>Investigating the use of deep learning-derived weighted mean temperature for GPS-PWVs estimation</title>
       <link>https://kaopanboonyuen.github.io/publication/investigating-the-use-of-deep-learning-derived-weighted-mean-temperature-for-gps-pwvs-estimation/</link>
-      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/publication/investigating-the-use-of-deep-learning-derived-weighted-mean-temperature-for-gps-pwvs-estimation/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ALBERT: Advanced Localization and Bidirectional Encoder Representations from Transformers for Automotive Damage Evaluation</title>
+      <link>https://kaopanboonyuen.github.io/publication/albert-advanced-localization-and-bidirectional-encoder-representations-from-transformers-for-automotive-damage-evaluation/</link>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/albert-advanced-localization-and-bidirectional-encoder-representations-from-transformers-for-automotive-damage-evaluation/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SLICK: Selective Localization and Instance Calibration for Knowledge-Enhanced Car Damage Segmentation in Automotive Insurance</title>
+      <link>https://kaopanboonyuen.github.io/publication/slick-selective-localization-and-instance-calibration-for-knowledge-enhanced-car-damage-segmentation-in-automotive-insurance/</link>
+      <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/slick-selective-localization-and-instance-calibration-for-knowledge-enhanced-car-damage-segmentation-in-automotive-insurance/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>

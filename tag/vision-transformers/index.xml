@@ -5,12 +5,21 @@
     <link>https://kaopanboonyuen.github.io/tag/vision-transformers/</link>
       <atom:link href="https://kaopanboonyuen.github.io/tag/vision-transformers/index.xml" rel="self" type="application/rss+xml" />
     <description>Vision Transformers</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Mon, 01 May 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>Vision Transformers</title>
       <link>https://kaopanboonyuen.github.io/tag/vision-transformers/</link>
     </image>
+    
+    <item>
+      <title>ALBERT: Advanced Localization and Bidirectional Encoder Representations from Transformers for Automotive Damage Evaluation</title>
+      <link>https://kaopanboonyuen.github.io/publication/albert-advanced-localization-and-bidirectional-encoder-representations-from-transformers-for-automotive-damage-evaluation/</link>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/albert-advanced-localization-and-bidirectional-encoder-representations-from-transformers-for-automotive-damage-evaluation/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>MeViT: A Medium-Resolution Vision Transformer for Semantic Segmentation on Landsat Satellite Imagery for Agriculture in Thailand</title>
