@@ -1,6 +1,6 @@
 @article{panboonyuen2021object,
   title={Object detection of road assets using transformer-based YOLOX with feature pyramid decoder on thai highway panorama},
-  author={Panboonyuen, Teerapong and Thongbai, Sittinun and Wongweeranimit, Weerachai and Santitamnont, Phisan and Suphan, Kittiwan and Charoenphon, Chaiyut},
+  author={Panboonyuen, Teerapong and Charoenphon, C.},
   journal={Information},
   volume={13},
   number={1},

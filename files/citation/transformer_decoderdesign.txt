@@ -1,6 +1,6 @@
 @article{panboonyuen2021transformer,
   title={Transformer-based decoder designs for semantic segmentation on remotely sensed images},
-  author={Panboonyuen, Teerapong and Jitkajornwanich, Kulsawasd and Lawawirojwong, Siam and Srestasathiern, Panu and Vateekul, Peerapon},
+  author={Panboonyuen, Teerapong and Lawawirojwong, S. and Vateekul, P.},
   journal={Remote Sensing},
   volume={13},
   number={24},

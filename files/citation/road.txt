@@ -1,6 +1,6 @@
 @article{panboonyuen2017road,
   title={Road segmentation of remotely-sensed images using deep convolutional neural networks with landscape metrics and conditional random fields},
-  author={Panboonyuen, Teerapong and Jitkajornwanich, Kulsawasd and Lawawirojwong, Siam and Srestasathiern, Panu and Vateekul, Peerapon},
+  author={Panboonyuen, Teerapong and Lawawirojwong, S. and Vateekul, P.},
   journal={Remote Sensing},
   volume={9},
   number={7},
