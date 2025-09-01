@@ -5821,16 +5821,170 @@ Generative AI continues to advance rapidly, with ongoing developments in model a
  --&gt;
 &lt;p&gt;Completing a PhD is more than just an academic achievement; it&amp;rsquo;s a journey of personal growth. It demands perseverance, resilience, and the ability to navigate and overcome numerous challenges. My passion for machine learning and my commitment to research were the driving forces that kept me moving forward, enabling me to make meaningful contributions to the field.&lt;/p&gt;
 &lt;h3 id=&#34;phd-thesis-highlights&#34;&gt;PhD Thesis Highlights&lt;/h3&gt;
-&lt;p&gt;One of the core challenges in remote sensing is the semantic segmentation of aerial and satellite images, which is crucial for agriculture planning, map updates, route optimization, and navigation. The prevailing model at the time was the Deep Convolutional Encoder-Decoder (DCED), which faced limitations in accuracy due to its inability to recover low-level features, such as rivers and low vegetation, and the scarcity of training data.&lt;/p&gt;
-&lt;p&gt;My thesis tackled these issues by introducing a novel semantic segmentation architecture tailored for remote sensing. Key innovations included:&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Semantic segmentation in remote sensing images plays a crucial role in applications such as land use classification, urban planning, and environmental monitoring. Remote sensing images often come from diverse sources, ranging from medium-resolution satellite imagery (such as Landsat-8) to high-resolution aerial images (such as those from the ISPRS Vaihingen Challenge). However, the task of semantic segmentation remains challenging due to the variety of image scales, the scarcity of labeled data, and the need for models capable of extracting both high-level and low-level features effectively.&lt;/p&gt;
+&lt;p&gt;In my PhD research, I propose a series of advancements in convolutional neural network (CNN)-based approaches to enhance the accuracy of semantic segmentation on remotely sensed data. Building upon the state-of-the-art methods, I introduce several innovations, including an enhanced &lt;strong&gt;Global Convolutional Network (GCN)&lt;/strong&gt; with channel attention, &lt;strong&gt;domain-specific transfer learning&lt;/strong&gt;, and the integration of &lt;strong&gt;feature fusion&lt;/strong&gt; and &lt;strong&gt;depthwise atrous convolutions&lt;/strong&gt;. These innovations aim to address the unique challenges of remote sensing datasets and push the boundaries of semantic segmentation performance.&lt;/p&gt;
+&lt;h2 id=&#34;the-challenge-limitations-of-traditional-approaches&#34;&gt;The Challenge: Limitations of Traditional Approaches&lt;/h2&gt;
+&lt;p&gt;Semantic segmentation models, particularly Deep Convolutional Encoder-Decoder (DCED) networks, have shown promise in image segmentation tasks. However, when applied to remote sensing imagery, these models face key limitations:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Resolution Differences&lt;/strong&gt;: Remote sensing images span a wide range of resolutions, from very high-resolution (VHR) aerial images to medium-resolution satellite images. Traditional models, designed for single-resolution tasks, struggle to generalize across these diverse scales.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Data Scarcity&lt;/strong&gt;: Annotated datasets for training deep models are scarce, particularly for high-resolution satellite or aerial imagery. This leads to overfitting and poor generalization.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Inability to Capture Global Context&lt;/strong&gt;: Traditional CNN models focus on local features, which are insufficient for understanding global context in satellite images, such as large rivers, forests, or urban areas.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;methodology&#34;&gt;Methodology&lt;/h2&gt;
+&lt;h3 id=&#34;global-convolutional-network-gcn-with-enhanced-backbone&#34;&gt;Global Convolutional Network (GCN) with Enhanced Backbone&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;Global Convolutional Network (GCN)&lt;/strong&gt; is a modern CNN architecture that addresses the limitations of traditional models. GCN overcomes the challenge of capturing both local and global features by using a multi-level architecture. Each level in the GCN extracts features at different resolutions, ensuring that both fine-grained and broad contextual information are captured.&lt;/p&gt;
+&lt;p&gt;This can be written as:&lt;/p&gt;
+&lt;p&gt;$$
+\mathbf{F}_{\text{GCN}} = \sum \mathbf{W}_l \cdot \mathbf{X}_l
+$$&lt;/p&gt;
+&lt;p&gt;Building on this architecture, I proposed an enhancement to the GCN backbone by modifying its structure and increasing the number of layers, making it more suitable for medium-resolution remote sensing imagery. Specifically, I employed the &lt;strong&gt;ResNet&lt;/strong&gt; architecture with varying depths—ResNet50, ResNet101, and ResNet152—to adapt the model to different datasets and resolutions.&lt;/p&gt;
+&lt;h4 id=&#34;key-contributions&#34;&gt;Key Contributions:&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Global Convolutional Network (GCN)&lt;/strong&gt;: A modern CNN architecture designed to enhance feature extraction.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Channel Attention&lt;/strong&gt;: An approach to select the most discriminative filters for improved feature representation.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Domain-Specific Transfer Learning&lt;/strong&gt;: A technique to address the issue of limited training data.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Feature Fusion (FF)&lt;/strong&gt;: An addition to capture and integrate low-level features effectively.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Depthwise Atrous Convolution (DA)&lt;/strong&gt;: A method to refine extracted features for greater accuracy.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-resolution Feature Extraction&lt;/strong&gt;: By stacking multiple convolutional layers at different stages, the GCN captures features across multiple resolutions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Boundary Refinement&lt;/strong&gt;: A boundary refinement module is introduced to improve the precision of segmentation boundaries, crucial for tasks like building or road detection.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;These advancements were validated through experiments on three datasets: two private corpora from Landsat-8 satellite and one public benchmark from the ISPRS Vaihingen challenge. The results demonstrated that our proposed architecture significantly outperformed the baseline model across all remote sensing imagery.&lt;/p&gt;
+&lt;h3 id=&#34;channel-attention-mechanism&#34;&gt;Channel Attention Mechanism&lt;/h3&gt;
+&lt;p&gt;One of the most significant advancements in my work is the introduction of the &lt;strong&gt;Channel Attention Block&lt;/strong&gt;. Attention mechanisms, inspired by the human visual system, allow the model to focus on the most important features in the image. In the case of remote sensing images, this means highlighting key features such as roads, rivers, or vegetation, while suppressing irrelevant background information.&lt;/p&gt;
+&lt;p&gt;The attention mechanism is mathematically modeled as:&lt;/p&gt;
+&lt;p&gt;$$
+\mathbf{z}_c = \sigma\left( W_c \cdot \text{AvgPool}(\mathbf{x}_c) + b_c \right)
+$$&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;channel attention block&lt;/strong&gt; modifies the network&amp;rsquo;s weights to prioritize the most discriminative channels during feature extraction, improving the network’s ability to differentiate between different land cover types. This is crucial in remote sensing, where the subtle difference between similar features (e.g., different vegetation types) can significantly impact segmentation accuracy.&lt;/p&gt;
+&lt;h4 id=&#34;key-contributions-1&#34;&gt;Key Contributions:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Adaptive Feature Selection&lt;/strong&gt;: The network dynamically adjusts the importance of features, focusing on those most relevant to the task at hand.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Improved Discriminative Power&lt;/strong&gt;: By emphasizing discriminative features, the model is able to achieve higher classification accuracy, particularly for challenging classes in remote sensing datasets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;domain-specific-transfer-learning&#34;&gt;Domain-Specific Transfer Learning&lt;/h3&gt;
+&lt;p&gt;One of the challenges in training deep learning models for remote sensing is the scarcity of annotated data, particularly for high-resolution images. To address this, I introduced &lt;strong&gt;Domain-Specific Transfer Learning&lt;/strong&gt;. This technique involves leveraging pre-trained models from different but related datasets to transfer knowledge across domains.&lt;/p&gt;
+&lt;p&gt;By utilizing pre-trained models from one dataset (e.g., ISPRS Vaihingen) and applying them to another (e.g., Landsat-8), I was able to mitigate the data scarcity issue and improve the performance of my models. This approach ensures that knowledge gained from one domain can benefit another, allowing the model to generalize better with limited annotated data.&lt;/p&gt;
+&lt;h4 id=&#34;key-contributions-2&#34;&gt;Key Contributions:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cross-Domain Knowledge Transfer&lt;/strong&gt;: Knowledge learned from high-resolution datasets is transferred to medium-resolution tasks, significantly improving segmentation accuracy with minimal labeled data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pre-Trained Weights Utilization&lt;/strong&gt;: The use of pre-trained weights from different datasets enables the model to learn features that are generalizable across various remote sensing tasks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;feature-fusion-and-depthwise-atrous-convolution&#34;&gt;Feature Fusion and Depthwise Atrous Convolution&lt;/h3&gt;
+&lt;p&gt;To further refine feature extraction and improve segmentation performance, I introduced &lt;strong&gt;Feature Fusion&lt;/strong&gt; and &lt;strong&gt;Depthwise Atrous Convolution (DA)&lt;/strong&gt;. These techniques work synergistically to enhance the model&amp;rsquo;s ability to capture multi-scale information while maintaining high resolution.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Feature Fusion&lt;/strong&gt;: This technique fuses low-level features, such as edges and textures, from the backbone network with high-level features from the segmentation model. This fusion ensures that fine-grained details are preserved while providing the model with a richer set of features for segmentation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+\mathbf{F}_{\text{fused}} = \mathbf{F}_L + \alpha \cdot \mathbf{F}_H
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Depthwise Atrous Convolution&lt;/strong&gt;: The DA module applies dilated convolutions at multiple scales, enabling the network to capture contextual information over larger areas without losing spatial resolution. This is particularly important for remote sensing tasks where object boundaries (e.g., between forest and water) need to be sharply delineated.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Depthwise Atrous Convolution is mathematically expressed as:&lt;/p&gt;
+&lt;p&gt;$$
+y_d = \sum_{k} w_k \cdot x_{i + r \cdot k}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;key-contributions-3&#34;&gt;Key Contributions:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Improved Feature Representation&lt;/strong&gt;: By integrating low-level features with deep model representations, the model gains a more comprehensive understanding of the image.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Enhanced Contextual Understanding&lt;/strong&gt;: The DA module allows the network to consider broader context in each layer, improving segmentation accuracy, especially for large objects and distant features.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;experiments-and-results&#34;&gt;Experiments and Results&lt;/h2&gt;
+&lt;h3 id=&#34;datasets&#34;&gt;Datasets&lt;/h3&gt;
+&lt;p&gt;I conducted experiments on three benchmark datasets:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;ISPRS Vaihingen Challenge Dataset&lt;/strong&gt; (Very High Resolution)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Landsat-8 Satellite Imagery&lt;/strong&gt; (Medium Resolution)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Private Datasets&lt;/strong&gt; from GISTDA (Geo-Informatics and Space Technology Development Agency)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These datasets represent a mix of very high-resolution and medium-resolution imagery, which provided a comprehensive testbed for evaluating the effectiveness of my proposed methods.&lt;/p&gt;
+&lt;h3 id=&#34;performance-metrics&#34;&gt;Performance Metrics&lt;/h3&gt;
+&lt;p&gt;The model was evaluated using standard segmentation metrics:&lt;/p&gt;
+&lt;h4 id=&#34;1-f1-score&#34;&gt;1. &lt;strong&gt;F1 Score&lt;/strong&gt;:&lt;/h4&gt;
+&lt;p&gt;The F1 Score measures the balance between &lt;strong&gt;Precision&lt;/strong&gt; and &lt;strong&gt;Recall&lt;/strong&gt;, and is calculated as:&lt;/p&gt;
+&lt;p&gt;$$
+F1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Precision&lt;/strong&gt; is the fraction of relevant instances among the retrieved instances:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+\text{Precision} = \frac{TP}{TP + FP}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Recall&lt;/strong&gt; is the fraction of relevant instances that have been retrieved over the total amount of relevant instances:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+\text{Recall} = \frac{TP}{TP + FN}
+$$&lt;/p&gt;
+&lt;h5 id=&#34;example-pineapple-class&#34;&gt;Example: &lt;strong&gt;Pineapple Class&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;For the &lt;strong&gt;pineapple&lt;/strong&gt; class:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;( TP = 50 )&lt;/li&gt;
+&lt;li&gt;( FP = 10 )&lt;/li&gt;
+&lt;li&gt;( FN = 15 )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We calculate &lt;strong&gt;Precision&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Precision} = \frac{50}{50 + 10} = 0.8333
+$$&lt;/p&gt;
+&lt;p&gt;And &lt;strong&gt;Recall&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Recall} = \frac{50}{50 + 15} = 0.7692
+$$&lt;/p&gt;
+&lt;p&gt;Now calculate the &lt;strong&gt;F1 Score&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;$$
+F1 = 2 \cdot \frac{0.8333 \cdot 0.7692}{0.8333 + 0.7692} = 0.799
+$$&lt;/p&gt;
+&lt;p&gt;Thus, the &lt;strong&gt;F1 Score&lt;/strong&gt; for the pineapple class is &lt;strong&gt;0.799&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;2-mean-iou-intersection-over-union&#34;&gt;2. &lt;strong&gt;Mean IoU (Intersection over Union)&lt;/strong&gt;:&lt;/h4&gt;
+&lt;p&gt;The &lt;strong&gt;IoU&lt;/strong&gt; quantifies the overlap between the predicted and true segmentation maps:&lt;/p&gt;
+&lt;p&gt;$$
+IoU = \frac{TP}{TP + FP + FN}
+$$&lt;/p&gt;
+&lt;h5 id=&#34;example-corn-class&#34;&gt;Example: &lt;strong&gt;Corn Class&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;For the &lt;strong&gt;corn&lt;/strong&gt; class:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;( TP = 80 )&lt;/li&gt;
+&lt;li&gt;( FP = 5 )&lt;/li&gt;
+&lt;li&gt;( FN = 20 )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We calculate the &lt;strong&gt;IoU&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;$$
+IoU = \frac{80}{80 + 5 + 20} = 0.7619
+$$&lt;/p&gt;
+&lt;p&gt;Thus, the &lt;strong&gt;IoU&lt;/strong&gt; for the corn class is &lt;strong&gt;0.7619&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;3-mean-iou-for-multiple-classes&#34;&gt;3. &lt;strong&gt;Mean IoU for Multiple Classes&lt;/strong&gt;:&lt;/h4&gt;
+&lt;p&gt;For evaluating the &lt;strong&gt;Mean IoU&lt;/strong&gt; over multiple classes (e.g., pineapple, corn, pararubber), we compute the average IoU:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Mean IoU} = \frac{IoU_{\text{pineapple}} + IoU_{\text{corn}} + IoU_{\text{pararubber}}}{3}
+$$&lt;/p&gt;
+&lt;p&gt;Using the IoUs for each class:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IoU for pineapple = 0.799&lt;/li&gt;
+&lt;li&gt;IoU for corn = 0.7619&lt;/li&gt;
+&lt;li&gt;IoU for pararubber = 0.85&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We get the &lt;strong&gt;Mean IoU&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Mean IoU} = \frac{0.799 + 0.7619 + 0.85}{3} = 0.8036
+$$&lt;/p&gt;
+&lt;p&gt;Thus, the &lt;strong&gt;Mean IoU&lt;/strong&gt; across all classes is &lt;strong&gt;0.8036&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
+&lt;p&gt;The proposed model significantly outperformed baseline models, including traditional Deep Convolutional Encoder-Decoder (DCED) networks, across all datasets:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ISPRS Vaihingen Dataset&lt;/strong&gt;: F1 Score of &lt;strong&gt;0.9362&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Landsat-8 Dataset&lt;/strong&gt;: F1 Score of &lt;strong&gt;0.9114&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The proposed model consistently exceeded the &lt;strong&gt;90% F1 score&lt;/strong&gt; threshold across all classes, demonstrating its robustness and adaptability to different image resolutions and domains.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This research introduces several key advancements in deep learning for remote sensing semantic segmentation. By incorporating multi-resolution feature extraction, channel attention, domain-specific transfer learning, feature fusion, and depthwise atrous convolutions, my approach addresses the unique challenges posed by remote sensing data. The experimental results validate the effectiveness of these techniques, providing a solid foundation for further improvements in remote sensing applications.&lt;/p&gt;
+&lt;p&gt;With the successful application of these methods, I am confident that these innovations will contribute significantly to the field of remote sensing and provide new avenues for improving the accuracy and generalization of deep learning models in this domain.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Explore more about my PhD story &lt;a href=&#34;https://kaopanboonyuen.wordpress.com/2022/05/23/the-phd-journey/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
