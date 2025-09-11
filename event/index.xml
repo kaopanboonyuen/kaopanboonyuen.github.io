@@ -514,6 +514,27 @@ This publication introduces a feature fusion approach for semantic labeling task
     </item>
     
     <item>
+      <title>AI Research Featured in Techsauce News</title>
+      <link>https://kaopanboonyuen.github.io/talk/ai-research-featured-in-techsauce-news/</link>
+      <pubDate>Tue, 15 Aug 2023 10:30:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/talk/ai-research-featured-in-techsauce-news/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ai-research-featured-in-techsauce-news&#34;&gt;AI Research Featured in Techsauce News&lt;/h2&gt;
+&lt;p&gt;Honored to have my AI research featured in &lt;a href=&#34;https://techsauce.co/news/mars-deep-tech-startup-thaivivat-ai&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Techsauce&lt;/a&gt;, Thailand’s leading tech media platform. The article showcases my work in advancing AI technologies, emphasizing innovation and impact in the field.&lt;/p&gt;
+&lt;p&gt;This recognition underscores the significance of AI research in driving technological progress and its application in real-world scenarios. I&amp;rsquo;m grateful for the opportunity to contribute to the evolving landscape of AI and look forward to future endeavors in this exciting field.&lt;/p&gt;
+&lt;h2 id=&#34;-mars-revolutionizing-car-damage-segmentation&#34;&gt;🚗 MARS: Revolutionizing Car Damage Segmentation&lt;/h2&gt;
+&lt;p&gt;Proud to have our flagship model, MARS (Mask Attention Refinement with Sequential Quadtree Nodes), featured in &lt;a href=&#34;https://techsauce.co/news/mars-deep-tech-startup-thaivivat-ai&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Techsauce News&lt;/a&gt;. This recognition underscores our commitment to advancing AI in the automotive insurance sector.&lt;/p&gt;
+&lt;h3 id=&#34;-what-is-mars&#34;&gt;🔍 What is MARS?&lt;/h3&gt;
+&lt;p&gt;MARS is a state-of-the-art deep learning model designed for precise car damage instance segmentation. By leveraging sequential quadtree attention, it surpasses existing methods like Mask R-CNN and PointRend, achieving notable improvements in segmentation accuracy.&lt;/p&gt;
+&lt;h3 id=&#34;-marsail-driving-innovation&#34;&gt;🧠 MARSAIL: Driving Innovation&lt;/h3&gt;
+&lt;p&gt;MARSAIL (Motor AI Recognition Solution Artificial Intelligence Laboratory) is dedicated to pioneering research at the intersection of computer vision, transformers, and automotive AI. Our mission is to revolutionize the automotive insurance and repair industries through AI-driven automation, delivering breakthroughs in segmentation, localization, and decision intelligence.&lt;/p&gt;
+&lt;h3 id=&#34;-impact-and-recognition&#34;&gt;📈 Impact and Recognition&lt;/h3&gt;
+&lt;p&gt;The feature in Techsauce News highlights the significance of our work in transforming the automotive insurance landscape. By integrating advanced AI models like MARS, we aim to enhance the accuracy and efficiency of car damage evaluation, paving the way for smarter, more automated insurance processes.&lt;/p&gt;
+&lt;p&gt;Explore more about MARS and MARSAIL&amp;rsquo;s innovative solutions at &lt;a href=&#34;https://kaopanboonyuen.github.io/MARS/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;kaopanboonyuen.github.io/MARS/&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Invited to Italy for ICIAP2023</title>
       <link>https://kaopanboonyuen.github.io/talk/invited-to-italy-for-iciap2023/</link>
       <pubDate>Fri, 11 Aug 2023 10:30:00 +0000</pubDate>
@@ -541,10 +562,10 @@ This publication introduces a feature fusion approach for semantic labeling task
     </item>
     
     <item>
-      <title>Distributed ML for Geospatial Data</title>
-      <link>https://kaopanboonyuen.github.io/talk/distributed-ml-for-geospatial-data/</link>
-      <pubDate>Thu, 01 Dec 2022 08:45:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/talk/distributed-ml-for-geospatial-data/</guid>
+      <title>Achieve Data Science First Meet</title>
+      <link>https://kaopanboonyuen.github.io/talk/achieve-data-science-first-meet/</link>
+      <pubDate>Mon, 05 Dec 2022 09:30:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/talk/achieve-data-science-first-meet/</guid>
       <description>&lt;!-- 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/traKBhJm4lQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
@@ -554,10 +575,10 @@ This publication introduces a feature fusion approach for semantic labeling task
     </item>
     
     <item>
-      <title>Achieve Data Science First Meet</title>
-      <link>https://kaopanboonyuen.github.io/talk/achieve-data-science-first-meet/</link>
-      <pubDate>Tue, 01 Dec 2020 09:30:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/talk/achieve-data-science-first-meet/</guid>
+      <title>Distributed ML for Geospatial Data</title>
+      <link>https://kaopanboonyuen.github.io/talk/distributed-ml-for-geospatial-data/</link>
+      <pubDate>Thu, 01 Dec 2022 08:45:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/talk/distributed-ml-for-geospatial-data/</guid>
       <description>&lt;!-- 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/traKBhJm4lQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
