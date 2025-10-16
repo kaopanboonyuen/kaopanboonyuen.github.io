@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>explicit-propagation | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/explicit-propagation/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/explicit-propagation/index.xml" rel="self" type="application/rss+xml" />
+    <description>explicit-propagation</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Wed, 15 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>explicit-propagation</title>
+      <link>https://kaopanboonyuen.github.io/tag/explicit-propagation/</link>
+    </image>
+    
+    <item>
+      <title>KAO: Kernel-Adaptive Optimization in Diffusion for Satellite Image</title>
+      <link>https://kaopanboonyuen.github.io/publication/kao-kernel-adaptive-optimization-in-diffusion-for-satellite-image/</link>
+      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/kao-kernel-adaptive-optimization-in-diffusion-for-satellite-image/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://kaopanboonyuen.github.io/KAO/results/re_show_01.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://kaopanboonyuen.github.io/KAO/results/re_show_01.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://kaopanboonyuen.github.io/KAO/results/re_all_02.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://kaopanboonyuen.github.io/KAO/results/re_all_05.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

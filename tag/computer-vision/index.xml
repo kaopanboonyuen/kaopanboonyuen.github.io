@@ -5,12 +5,26 @@
     <link>https://kaopanboonyuen.github.io/tag/computer-vision/</link>
       <atom:link href="https://kaopanboonyuen.github.io/tag/computer-vision/index.xml" rel="self" type="application/rss+xml" />
     <description>computer-vision</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Mon, 28 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2025 Kao Panboonyuen</copyright><lastBuildDate>Wed, 15 Oct 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>computer-vision</title>
       <link>https://kaopanboonyuen.github.io/tag/computer-vision/</link>
     </image>
+    
+    <item>
+      <title>KAO: Kernel-Adaptive Optimization in Diffusion for Satellite Image</title>
+      <link>https://kaopanboonyuen.github.io/publication/kao-kernel-adaptive-optimization-in-diffusion-for-satellite-image/</link>
+      <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/kao-kernel-adaptive-optimization-in-diffusion-for-satellite-image/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://kaopanboonyuen.github.io/KAO/results/re_show_01.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://kaopanboonyuen.github.io/KAO/results/re_show_01.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://kaopanboonyuen.github.io/KAO/results/re_all_02.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://kaopanboonyuen.github.io/KAO/results/re_all_05.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>GuidedBox: A segmentation-guided box teacher-student approach for weakly supervised road segmentation</title>
