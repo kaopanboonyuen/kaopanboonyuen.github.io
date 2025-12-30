@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pandas for Data Engineering &amp; Data Science | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/index.xml" rel="self" type="application/rss+xml" />
+    <description>Pandas for Data Engineering &amp; Data Science</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Tue, 30 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>Pandas for Data Engineering &amp; Data Science</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/</link>
+    </image>
+    
+    <item>
+      <title>DE101-PD01 — Pandas &amp; the Data Engineering Mindset</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd01-intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd01-intro/</guid>
+      <description>&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~45–60 minutes&lt;/p&gt;
+&lt;h2 id=&#34;-why-this-chapter-matters&#34;&gt;🎯 Why This Chapter Matters&lt;/h2&gt;
+&lt;p&gt;Before learning Pandas syntax, you must learn &lt;strong&gt;how engineers think about data&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Pandas is not just:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A tool for Jupyter notebooks&lt;/li&gt;
+&lt;li&gt;A library for homework&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pandas is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A bridge between raw data and real systems.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-pandas-actually-is&#34;&gt;🧠 What Pandas Actually Is&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Pandas&lt;/strong&gt; is the core Python library for working with &lt;strong&gt;structured data&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;It sits between:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Raw files (CSV, JSON, Excel, Parquet)&lt;/li&gt;
+&lt;li&gt;Databases (PostgreSQL, MySQL, BigQuery)&lt;/li&gt;
+&lt;li&gt;Data warehouses &amp;amp; lakes&lt;/li&gt;
+&lt;li&gt;Machine learning pipelines&lt;/li&gt;
+&lt;li&gt;Analytics dashboards&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If data has rows and columns, Pandas is usually involved.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-the-data-engineering-pipeline-high-level&#34;&gt;🏗️ The Data Engineering Pipeline (High Level)&lt;/h2&gt;
+&lt;p&gt;Every real data system follows this flow:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ingest data (files, APIs, logs)&lt;/li&gt;
+&lt;li&gt;Clean and validate&lt;/li&gt;
+&lt;li&gt;Transform and enrich&lt;/li&gt;
+&lt;li&gt;Aggregate and summarize&lt;/li&gt;
+&lt;li&gt;Store or feed to ML models&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Pandas lives mostly in &lt;strong&gt;steps 2–4&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-pandas-is-not-just-for-notebooks&#34;&gt;🧠 Pandas Is NOT Just for Notebooks&lt;/h2&gt;
+&lt;p&gt;Beginner mistake:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Pandas is only for exploration.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Professional reality:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Production ETL jobs use Pandas&lt;/li&gt;
+&lt;li&gt;Feature engineering uses Pandas&lt;/li&gt;
+&lt;li&gt;Data validation uses Pandas&lt;/li&gt;
+&lt;li&gt;Research pipelines start in Pandas&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-example-real-world-use-cases&#34;&gt;🧪 Example: Real-World Use Cases&lt;/h2&gt;
+&lt;h3 id=&#34;google&#34;&gt;Google&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Experiment analysis&lt;/li&gt;
+&lt;li&gt;Metric validation&lt;/li&gt;
+&lt;li&gt;Feature debugging&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;meta&#34;&gt;Meta&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A/B testing&lt;/li&gt;
+&lt;li&gt;User behavior analysis&lt;/li&gt;
+&lt;li&gt;Dataset sanity checks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;openai&#34;&gt;OpenAI&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Dataset preprocessing&lt;/li&gt;
+&lt;li&gt;Filtering &amp;amp; labeling&lt;/li&gt;
+&lt;li&gt;Feature extraction&lt;/li&gt;
+&lt;li&gt;Evaluation pipelines&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All start with Pandas.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-good-pandas-code-has-these-properties&#34;&gt;🧠 Good Pandas Code Has These Properties&lt;/h2&gt;
+&lt;h3 id=&#34;1-readable&#34;&gt;1️⃣ Readable&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[df[&amp;quot;country&amp;quot;] == &amp;quot;US&amp;quot;][&amp;quot;revenue&amp;quot;].mean()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Anyone should understand it.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-testable&#34;&gt;2️⃣ Testable&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;assert df[&amp;quot;age&amp;quot;].min() &amp;gt;= 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Bad data is worse than no data.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-deterministic&#34;&gt;3️⃣ Deterministic&lt;/h3&gt;
+&lt;p&gt;Same input → same output
+No hidden randomness.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-scalable-within-reason&#34;&gt;4️⃣ Scalable (Within Reason)&lt;/h3&gt;
+&lt;p&gt;Good Pandas code:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Works for 1k rows&lt;/li&gt;
+&lt;li&gt;Still works for 10M rows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-pandas-vs-sql-vs-spark&#34;&gt;🧠 Pandas vs SQL vs Spark&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tool&lt;/th&gt;
+&lt;th&gt;Best For&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Pandas&lt;/td&gt;
+&lt;td&gt;Prototyping, analysis, ML&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SQL&lt;/td&gt;
+&lt;td&gt;Large-scale aggregation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spark&lt;/td&gt;
+&lt;td&gt;Distributed big data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Engineers &lt;strong&gt;combine&lt;/strong&gt; tools, not worship one.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-pandas-as-a-thinking-tool&#34;&gt;🧩 Pandas as a Thinking Tool&lt;/h2&gt;
+&lt;p&gt;Pandas teaches you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data modeling&lt;/li&gt;
+&lt;li&gt;Schema awareness&lt;/li&gt;
+&lt;li&gt;Edge cases&lt;/li&gt;
+&lt;li&gt;Performance thinking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These skills transfer to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SQL&lt;/li&gt;
+&lt;li&gt;Spark&lt;/li&gt;
+&lt;li&gt;Flink&lt;/li&gt;
+&lt;li&gt;DuckDB&lt;/li&gt;
+&lt;li&gt;Polars&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-common-beginner-mistakes&#34;&gt;🧠 Common Beginner Mistakes&lt;/h2&gt;
+&lt;p&gt;❌ Writing everything in one line
+❌ Ignoring dtypes
+❌ Silent NaNs
+❌ Copy-paste pipelines
+❌ No validation&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-minimal-example-end-to-end-thinking&#34;&gt;🧪 Minimal Example (End-to-End Thinking)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+
+df = pd.read_csv(&amp;quot;users.csv&amp;quot;)
+
+df = (
+    df
+    .dropna(subset=[&amp;quot;age&amp;quot;])
+    .assign(age=lambda x: x[&amp;quot;age&amp;quot;].astype(int))
+)
+
+assert df[&amp;quot;age&amp;quot;].min() &amp;gt;= 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is production thinking.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-pandas--testing&#34;&gt;🧠 Pandas + Testing&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def test_no_negative_age(df):
+    assert (df[&amp;quot;age&amp;quot;] &amp;gt;= 0).all()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Engineers test data, not just code.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-when-pandas-is-enough&#34;&gt;🧠 When Pandas Is Enough&lt;/h2&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
+  &lt;summary&gt;Is Pandas enough for big data?&lt;/summary&gt;
+  &lt;p&gt;&lt;p&gt;Pandas is perfect for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Prototyping&lt;/li&gt;
+&lt;li&gt;Medium-scale data (up to tens of millions of rows)&lt;/li&gt;
+&lt;li&gt;ML feature engineering&lt;/li&gt;
+&lt;li&gt;Research workflows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It often pairs with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SQL&lt;/li&gt;
+&lt;li&gt;Spark&lt;/li&gt;
+&lt;li&gt;Arrow&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-when-pandas-is-not-enough&#34;&gt;🚧 When Pandas Is NOT Enough&lt;/h2&gt;
+&lt;p&gt;Signs you should scale:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Memory errors&lt;/li&gt;
+&lt;li&gt;Very slow joins&lt;/li&gt;
+&lt;li&gt;Daily batch jobs taking hours&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;At that point:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Keep logic&lt;/li&gt;
+&lt;li&gt;Change engine&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-engineers-rule-of-thumb&#34;&gt;🧠 Engineer’s Rule of Thumb&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Prototype in Pandas
+Validate logic
+Scale only when needed&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is how real teams work.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-takeaway&#34;&gt;🏁 Final Takeaway&lt;/h2&gt;
+&lt;p&gt;Pandas is not a toy.
+It is a &lt;strong&gt;thinking framework&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If you master Pandas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You understand data&lt;/li&gt;
+&lt;li&gt;You avoid silent bugs&lt;/li&gt;
+&lt;li&gt;You build reliable systems&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>DE101-PD02 — Pandas Series, DataFrame, and Indexing (Real-World Mindset)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd02-core-structures/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd02-core-structures/</guid>
+      <description>&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~45–60 minutes&lt;/p&gt;
+&lt;h2 id=&#34;-why-pandas-matters-in-the-real-world&#34;&gt;🎯 Why Pandas Matters in the Real World&lt;/h2&gt;
+&lt;p&gt;At companies like &lt;strong&gt;Google, Meta, OpenAI&lt;/strong&gt;, Pandas is often used for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data exploration (EDA)&lt;/li&gt;
+&lt;li&gt;Debugging datasets before training models&lt;/li&gt;
+&lt;li&gt;Analyzing experiments / A-B tests&lt;/li&gt;
+&lt;li&gt;Cleaning logs and user behavior data&lt;/li&gt;
+&lt;li&gt;Prototyping ideas before moving to Spark / BigQuery&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pandas is not about speed.&lt;br&gt;
+It is about &lt;strong&gt;thinking clearly with data&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-core-pandas-data-structures&#34;&gt;🧱 Core Pandas Data Structures&lt;/h2&gt;
+&lt;p&gt;Pandas has &lt;strong&gt;two fundamental objects&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Series&lt;/strong&gt; → 1D labeled array&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DataFrame&lt;/strong&gt; → 2D table (rows + columns)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-pandas-series&#34;&gt;📌 Pandas Series&lt;/h2&gt;
+&lt;p&gt;Think of a &lt;strong&gt;Series&lt;/strong&gt; as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A column in a table&lt;/li&gt;
+&lt;li&gt;A vector with labels&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+
+goals = pd.Series([91, 85, 70], index=[&amp;quot;Messi&amp;quot;, &amp;quot;Ronaldo&amp;quot;, &amp;quot;Mbappe&amp;quot;])
+print(goals)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;output&#34;&gt;Output&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Messi      91
+Ronaldo   85
+Mbappe    70
+dtype: int64
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;key-ideas&#34;&gt;Key Ideas&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Series = &lt;strong&gt;data + index&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Index gives meaning, not just position&lt;/li&gt;
+&lt;li&gt;Used heavily in statistics and ML features&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-pandas-dataframe&#34;&gt;📊 Pandas DataFrame&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;DataFrame&lt;/strong&gt; is like an Excel table or SQL table.&lt;/p&gt;
+&lt;p&gt;Let’s simulate a &lt;strong&gt;FIFA World Cup dataset&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;data = {
+    &amp;quot;player&amp;quot;: [&amp;quot;Messi&amp;quot;, &amp;quot;Mbappe&amp;quot;, &amp;quot;Neymar&amp;quot;, &amp;quot;Ronaldo&amp;quot;],
+    &amp;quot;country&amp;quot;: [&amp;quot;Argentina&amp;quot;, &amp;quot;France&amp;quot;, &amp;quot;Brazil&amp;quot;, &amp;quot;Portugal&amp;quot;],
+    &amp;quot;goals&amp;quot;: [7, 8, 6, 1],
+    &amp;quot;age&amp;quot;: [35, 23, 30, 37]
+}
+
+df = pd.DataFrame(data)
+print(df)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;output-1&#34;&gt;Output&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;     player     country  goals  age
+0     Messi   Argentina      7   35
+1    Mbappe      France      8   23
+2    Neymar      Brazil      6   30
+3   Ronaldo    Portugal      1   37
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-how-engineers-think-about-dataframes&#34;&gt;🧠 How Engineers Think About DataFrames&lt;/h2&gt;
+&lt;p&gt;At big tech companies, engineers think:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Rows → observations (players, users, events)&lt;/li&gt;
+&lt;li&gt;Columns → features (age, goals, clicks)&lt;/li&gt;
+&lt;li&gt;Index → identity or order&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bad indexing = confusing analysis.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-column-selection-most-common-operation&#34;&gt;🔍 Column Selection (Most Common Operation)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;player&amp;quot;]
+df[&amp;quot;goals&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This returns a &lt;strong&gt;Series&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-loc--label-based-indexing-human-thinking&#34;&gt;📍 &lt;code&gt;.loc&lt;/code&gt; — Label-Based Indexing (Human Thinking)&lt;/h2&gt;
+&lt;p&gt;Use &lt;code&gt;.loc&lt;/code&gt; when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You care about &lt;strong&gt;meaning&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You think in terms of labels&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# All rows, specific columns
+df.loc[:, [&amp;quot;player&amp;quot;, &amp;quot;goals&amp;quot;]]
+
+# Filter rows by condition
+df.loc[df[&amp;quot;country&amp;quot;] == &amp;quot;Argentina&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;example-find-messis-record&#34;&gt;Example: Find Messi’s record&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.loc[df[&amp;quot;player&amp;quot;] == &amp;quot;Messi&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-iloc--position-based-indexing-machine-thinking&#34;&gt;📐 &lt;code&gt;.iloc&lt;/code&gt; — Position-Based Indexing (Machine Thinking)&lt;/h2&gt;
+&lt;p&gt;Use &lt;code&gt;.iloc&lt;/code&gt; when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You care about &lt;strong&gt;position&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You don’t trust index labels&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# First row
+df.iloc[0]
+
+# First two rows, first two columns
+df.iloc[0:2, 0:2]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Think of &lt;code&gt;.iloc&lt;/code&gt; like Python slicing.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-loc-vs-iloc-interview-favorite&#34;&gt;⚠️ &lt;code&gt;.loc&lt;/code&gt; vs &lt;code&gt;.iloc&lt;/code&gt; (Interview Favorite)&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Method&lt;/th&gt;
+&lt;th&gt;Based on&lt;/th&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;.loc&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;labels&lt;/td&gt;
+&lt;td&gt;df.loc[0] ❌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;.iloc&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;positions&lt;/td&gt;
+&lt;td&gt;df.iloc[0] ✅&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Interviewers love asking this.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-boolean-filtering-sql-where-equivalent&#34;&gt;🔎 Boolean Filtering (SQL WHERE Equivalent)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Players older than 30
+df[df[&amp;quot;age&amp;quot;] &amp;gt; 30]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Real-world usage:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Filter active users&lt;/li&gt;
+&lt;li&gt;Find failed experiments&lt;/li&gt;
+&lt;li&gt;Analyze edge cases&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-query--clean--readable-filtering&#34;&gt;🧮 &lt;code&gt;.query()&lt;/code&gt; — Clean &amp;amp; Readable Filtering&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.query(&amp;quot;goals &amp;gt;= 7 and age &amp;lt; 30&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Why engineers love &lt;code&gt;.query()&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Looks like SQL&lt;/li&gt;
+&lt;li&gt;Cleaner than long boolean chains&lt;/li&gt;
+&lt;li&gt;Easier to debug&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-combining-conditions&#34;&gt;🧩 Combining Conditions&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[(df[&amp;quot;goals&amp;quot;] &amp;gt; 5) &amp;amp; (df[&amp;quot;country&amp;quot;] != &amp;quot;Brazil&amp;quot;)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;⚠️ Must use &lt;code&gt;&amp;amp;&lt;/code&gt; instead of &lt;code&gt;and&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-index-design-very-important&#34;&gt;🧠 Index Design (Very Important)&lt;/h2&gt;
+&lt;p&gt;You can set a meaningful index:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df = df.set_index(&amp;quot;player&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.loc[&amp;quot;Messi&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cleaner&lt;/li&gt;
+&lt;li&gt;Faster lookup&lt;/li&gt;
+&lt;li&gt;Less error-prone&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
+  &lt;summary&gt;Why index design matters in production?&lt;/summary&gt;
+  &lt;p&gt;Good index = clear logic + faster access + fewer bugs&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-real-world-use-case-meta--openai-style&#34;&gt;🧪 Real-World Use Case (Meta / OpenAI Style)&lt;/h2&gt;
+&lt;p&gt;Imagine this DataFrame:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Rows = model experiments&lt;/li&gt;
+&lt;li&gt;Columns = loss, accuracy, timestamp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Engineers use Pandas to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Filter failed runs&lt;/li&gt;
+&lt;li&gt;Compare metrics&lt;/li&gt;
+&lt;li&gt;Debug data leakage&lt;/li&gt;
+&lt;li&gt;Sanity-check training data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Before scaling → Pandas first.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-common-pandas-patterns-you-must-know&#34;&gt;📦 Common Pandas Patterns You MUST Know&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.head()
+df.tail()
+df.shape
+df.columns
+df.info()
+df.describe()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;These are used &lt;strong&gt;daily&lt;/strong&gt; by professionals.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interview-insight&#34;&gt;🧠 Interview Insight&lt;/h2&gt;
+&lt;p&gt;Interviewers expect you to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Know &lt;code&gt;.loc&lt;/code&gt; vs &lt;code&gt;.iloc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Filter rows correctly&lt;/li&gt;
+&lt;li&gt;Avoid chained indexing&lt;/li&gt;
+&lt;li&gt;Write readable Pandas code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Clean Pandas code = clean thinking.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-summary&#34;&gt;🏁 Summary&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Series = labeled vector&lt;/li&gt;
+&lt;li&gt;DataFrame = table&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.loc&lt;/code&gt; = label-based&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.iloc&lt;/code&gt; = position-based&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.query()&lt;/code&gt; = readable filtering&lt;/li&gt;
+&lt;li&gt;Indexing = design decision&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Master these, and you already think like a data engineer.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-next-chapter&#34;&gt;🚀 Next Chapter&lt;/h2&gt;
+&lt;p&gt;👉 &lt;strong&gt;DE101-PD03 — GroupBy, Aggregation, and Analytics Thinking&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is where Pandas becomes powerful.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DE101-PD03 — Data Cleaning &amp; Transformation (Production Mindset)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd03-data-cleaning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd03-data-cleaning/</guid>
+      <description>&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~60 minutes&lt;/p&gt;
+&lt;h2 id=&#34;-why-data-cleaning-is-the-real-job&#34;&gt;🎯 Why Data Cleaning Is the Real Job&lt;/h2&gt;
+&lt;p&gt;In the real world:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;70–80% of data work = cleaning &amp;amp; transformation&lt;/li&gt;
+&lt;li&gt;Models fail more often due to &lt;strong&gt;bad data&lt;/strong&gt;, not bad algorithms&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;At companies like &lt;strong&gt;Google, Meta, OpenAI&lt;/strong&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;If your data is wrong, your model is wrong.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-is-data-cleaning&#34;&gt;🧠 What Is Data Cleaning?&lt;/h2&gt;
+&lt;p&gt;Data cleaning means:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Making data &lt;strong&gt;usable&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Making assumptions &lt;strong&gt;explicit&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Removing ambiguity&lt;/li&gt;
+&lt;li&gt;Preventing silent bugs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-common-real-world-data-problems&#34;&gt;🧹 Common Real-World Data Problems&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Problem&lt;/th&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Missing values&lt;/td&gt;
+&lt;td&gt;NaN age, null clicks&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Wrong data type&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;30&amp;rdquo; instead of 30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Inconsistent labels&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;USA&amp;rdquo;, &amp;ldquo;U.S.&amp;rdquo;, &amp;ldquo;United States&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Duplicate rows&lt;/td&gt;
+&lt;td&gt;Same user logged twice&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Outliers&lt;/td&gt;
+&lt;td&gt;Age = 999&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-example-dataset-user-analytics&#34;&gt;📊 Example Dataset (User Analytics)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+import numpy as np
+
+data = {
+    &amp;quot;user_id&amp;quot;: [1, 2, 3, 3],
+    &amp;quot;age&amp;quot;: [25, None, &amp;quot;30&amp;quot;, 30],
+    &amp;quot;country&amp;quot;: [&amp;quot;US&amp;quot;, &amp;quot;USA&amp;quot;, &amp;quot;us&amp;quot;, &amp;quot;USA&amp;quot;],
+    &amp;quot;clicks&amp;quot;: [10, np.nan, 5, 5]
+}
+
+df = pd.DataFrame(data)
+df
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-step-1-inspect-before-cleaning-critical&#34;&gt;🔍 Step 1: Inspect Before Cleaning (Critical)&lt;/h2&gt;
+&lt;p&gt;Never clean blindly.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.info()
+df.describe(include=&amp;quot;all&amp;quot;)
+df.isna().sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This answers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Which columns are broken?&lt;/li&gt;
+&lt;li&gt;How many missing values?&lt;/li&gt;
+&lt;li&gt;Are types correct?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-removing-missing-data-dropna&#34;&gt;🗑️ Removing Missing Data (&lt;code&gt;dropna&lt;/code&gt;)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.dropna()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;⚠️ Dangerous in production:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You may delete important users&lt;/li&gt;
+&lt;li&gt;Always know &lt;strong&gt;why&lt;/strong&gt; you drop&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Better:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.dropna(subset=[&amp;quot;age&amp;quot;])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-filling-missing-data-fillna&#34;&gt;🩹 Filling Missing Data (&lt;code&gt;fillna&lt;/code&gt;)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;clicks&amp;quot;] = df[&amp;quot;clicks&amp;quot;].fillna(0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Common strategies:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mean / median (numeric)&lt;/li&gt;
+&lt;li&gt;Mode (categorical)&lt;/li&gt;
+&lt;li&gt;Zero (counts)&lt;/li&gt;
+&lt;li&gt;Forward fill (time series)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-fixing-data-types-astype&#34;&gt;🔢 Fixing Data Types (&lt;code&gt;astype&lt;/code&gt;)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;age&amp;quot;] = df[&amp;quot;age&amp;quot;].astype(int)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This often fails → must clean first:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;age&amp;quot;] = pd.to_numeric(df[&amp;quot;age&amp;quot;], errors=&amp;quot;coerce&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Engineers always expect type issues.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-renaming-for-clarity&#34;&gt;🏷️ Renaming for Clarity&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.rename(columns={&amp;quot;clicks&amp;quot;: &amp;quot;num_clicks&amp;quot;})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Why this matters:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Self-documenting code&lt;/li&gt;
+&lt;li&gt;Fewer misunderstandings&lt;/li&gt;
+&lt;li&gt;Cleaner downstream pipelines&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-deduplication-very-common&#34;&gt;🧠 Deduplication (Very Common)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.drop_duplicates(subset=[&amp;quot;user_id&amp;quot;])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Used for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;User logs&lt;/li&gt;
+&lt;li&gt;Event streams&lt;/li&gt;
+&lt;li&gt;Experiment tracking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-normalizing-categorical-data&#34;&gt;🌍 Normalizing Categorical Data&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;country&amp;quot;] = (
+    df[&amp;quot;country&amp;quot;]
+    .str.lower()
+    .replace({&amp;quot;us&amp;quot;: &amp;quot;usa&amp;quot;})
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Small inconsistency → huge analytics bug.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-feature-transformation&#34;&gt;🔄 Feature Transformation&lt;/h2&gt;
+&lt;p&gt;Create new features from old ones:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;is_active&amp;quot;] = df[&amp;quot;num_clicks&amp;quot;] &amp;gt; 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is &lt;strong&gt;feature engineering&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-outlier-handling&#34;&gt;🧪 Outlier Handling&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df = df[df[&amp;quot;age&amp;quot;] &amp;lt; 100]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Outliers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Break averages&lt;/li&gt;
+&lt;li&gt;Break models&lt;/li&gt;
+&lt;li&gt;Must be justified, not guessed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-assign--functional-style&#34;&gt;🧩 &lt;code&gt;.assign()&lt;/code&gt; — Functional Style&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df = df.assign(
+    age_next_year=lambda x: x[&amp;quot;age&amp;quot;] + 1,
+    clicks_per_age=lambda x: x[&amp;quot;num_clicks&amp;quot;] / x[&amp;quot;age&amp;quot;]
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;No mutation. Clear logic.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-method-chaining-professional-style&#34;&gt;🔗 Method Chaining (Professional Style)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df = (
+    df
+    .drop_duplicates(&amp;quot;user_id&amp;quot;)
+    .assign(
+        age=lambda x: pd.to_numeric(x[&amp;quot;age&amp;quot;], errors=&amp;quot;coerce&amp;quot;),
+        country=lambda x: x[&amp;quot;country&amp;quot;].str.lower()
+    )
+    .dropna(subset=[&amp;quot;age&amp;quot;])
+    .query(&amp;quot;age &amp;lt; 100&amp;quot;)
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is how &lt;strong&gt;production Pandas code looks&lt;/strong&gt;.&lt;/p&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
+  &lt;summary&gt;Why method chaining is preferred in real projects?&lt;/summary&gt;
+  &lt;p&gt;Readable, debuggable, testable, reproducible&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-pipeline-thinking-interview-gold&#34;&gt;🧠 Pipeline Thinking (Interview Gold)&lt;/h2&gt;
+&lt;p&gt;Engineers think in pipelines:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Load data&lt;/li&gt;
+&lt;li&gt;Inspect&lt;/li&gt;
+&lt;li&gt;Clean&lt;/li&gt;
+&lt;li&gt;Transform&lt;/li&gt;
+&lt;li&gt;Validate&lt;/li&gt;
+&lt;li&gt;Export&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Each step should be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Explicit&lt;/li&gt;
+&lt;li&gt;Reproducible&lt;/li&gt;
+&lt;li&gt;Testable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-validation-checks-often-missed&#34;&gt;🧪 Validation Checks (Often Missed)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;assert df[&amp;quot;age&amp;quot;].min() &amp;gt; 0
+assert df[&amp;quot;user_id&amp;quot;].is_unique
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;These prevent silent failures.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-real-world-case-meta--openai&#34;&gt;🏢 Real-World Case (Meta / OpenAI)&lt;/h2&gt;
+&lt;p&gt;Before training models:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pandas pipeline cleans data&lt;/li&gt;
+&lt;li&gt;Validates assumptions&lt;/li&gt;
+&lt;li&gt;Logs anomalies&lt;/li&gt;
+&lt;li&gt;Produces clean tables&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Only then → Spark / TensorFlow / PyTorch.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-common-beginner-mistakes&#34;&gt;⚠️ Common Beginner Mistakes&lt;/h2&gt;
+&lt;p&gt;❌ Overusing &lt;code&gt;dropna()&lt;/code&gt;
+❌ Ignoring data types
+❌ Modifying DataFrame in-place blindly
+❌ No validation checks&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-summary&#34;&gt;🏁 Summary&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Cleaning is the real job&lt;/li&gt;
+&lt;li&gt;Inspect before modifying&lt;/li&gt;
+&lt;li&gt;Be explicit, not clever&lt;/li&gt;
+&lt;li&gt;Method chaining = professional style&lt;/li&gt;
+&lt;li&gt;Pipelines prevent bugs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Good data → good decisions → good models.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-next-chapter&#34;&gt;🚀 Next Chapter&lt;/h2&gt;
+&lt;p&gt;👉 &lt;strong&gt;DE101-PD04 — GroupBy, Aggregation, and Business Analytics&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is where insights are born.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DE101-PD04 — GroupBy, Aggregation &amp; Joins (Analytics &amp; Interview Mastery)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd04-groupby-joins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd04-groupby-joins/</guid>
+      <description>&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~75–90 minutes&lt;/p&gt;
+&lt;h2 id=&#34;-why-this-chapter-is-critical&#34;&gt;🎯 Why This Chapter Is Critical&lt;/h2&gt;
+&lt;p&gt;If Pandas were a weapon:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cleaning = sharpening&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GroupBy &amp;amp; Join = actual power&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Most real-world questions are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Which group performs best?”&lt;/li&gt;
+&lt;li&gt;“How do metrics change by segment?”&lt;/li&gt;
+&lt;li&gt;“How do we combine datasets correctly?”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-groupby-mental-model-most-important-idea&#34;&gt;🧠 GroupBy Mental Model (Most Important Idea)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;GroupBy = Split → Apply → Combine&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Split data into groups&lt;/li&gt;
+&lt;li&gt;Apply aggregation or transformation&lt;/li&gt;
+&lt;li&gt;Combine results into a new table&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This mindset works in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pandas&lt;/li&gt;
+&lt;li&gt;SQL&lt;/li&gt;
+&lt;li&gt;Spark&lt;/li&gt;
+&lt;li&gt;BigQuery&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-example-dataset-e-commerce-analytics&#34;&gt;📊 Example Dataset (E-Commerce Analytics)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+
+data = {
+    &amp;quot;user_id&amp;quot;: [1, 2, 1, 3, 2, 3, 1],
+    &amp;quot;country&amp;quot;: [&amp;quot;US&amp;quot;, &amp;quot;US&amp;quot;, &amp;quot;US&amp;quot;, &amp;quot;FR&amp;quot;, &amp;quot;US&amp;quot;, &amp;quot;FR&amp;quot;, &amp;quot;US&amp;quot;],
+    &amp;quot;revenue&amp;quot;: [100, 200, 150, 80, 120, 60, 90],
+    &amp;quot;device&amp;quot;: [&amp;quot;mobile&amp;quot;, &amp;quot;desktop&amp;quot;, &amp;quot;mobile&amp;quot;, &amp;quot;mobile&amp;quot;, &amp;quot;mobile&amp;quot;, &amp;quot;desktop&amp;quot;, &amp;quot;desktop&amp;quot;]
+}
+
+df = pd.DataFrame(data)
+df
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-basic-groupby&#34;&gt;📦 Basic GroupBy&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;country&amp;quot;)[&amp;quot;revenue&amp;quot;].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;output&#34;&gt;Output&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;country
+FR    140
+US    660
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This answers:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“How much revenue comes from each country?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-multiple-aggregations&#34;&gt;🔢 Multiple Aggregations&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;country&amp;quot;)[&amp;quot;revenue&amp;quot;].agg([&amp;quot;sum&amp;quot;, &amp;quot;mean&amp;quot;, &amp;quot;count&amp;quot;])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Used daily in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;KPI dashboards&lt;/li&gt;
+&lt;li&gt;Business reports&lt;/li&gt;
+&lt;li&gt;Model evaluation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-groupby-multiple-columns&#34;&gt;🧠 GroupBy Multiple Columns&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby([&amp;quot;country&amp;quot;, &amp;quot;device&amp;quot;])[&amp;quot;revenue&amp;quot;].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now you are thinking like an analyst.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-resetting-index-very-common&#34;&gt;🧮 Resetting Index (Very Common)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;country&amp;quot;, as_index=False)[&amp;quot;revenue&amp;quot;].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Or:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;country&amp;quot;)[&amp;quot;revenue&amp;quot;].sum().reset_index()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This makes output usable for joins.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-transform--keep-original-shape&#34;&gt;🧩 &lt;code&gt;.transform()&lt;/code&gt; — Keep Original Shape&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;country_avg_revenue&amp;quot;] = (
+    df.groupby(&amp;quot;country&amp;quot;)[&amp;quot;revenue&amp;quot;].transform(&amp;quot;mean&amp;quot;)
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You need group stats per row&lt;/li&gt;
+&lt;li&gt;Feature engineering for ML&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-apply--flexible-but-dangerous&#34;&gt;🔁 &lt;code&gt;.apply()&lt;/code&gt; — Flexible but Dangerous&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;country&amp;quot;).apply(lambda x: x[&amp;quot;revenue&amp;quot;].max() - x[&amp;quot;revenue&amp;quot;].min())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;⚠️ Powerful but slower.
+Use only when aggregation cannot express logic.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sql-vs-pandas-groupby&#34;&gt;🧠 SQL vs Pandas GroupBy&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;SQL&lt;/th&gt;
+&lt;th&gt;Pandas&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;GROUP BY&lt;/td&gt;
+&lt;td&gt;groupby()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SUM&lt;/td&gt;
+&lt;td&gt;sum()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AVG&lt;/td&gt;
+&lt;td&gt;mean()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;COUNT&lt;/td&gt;
+&lt;td&gt;count()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
+  &lt;summary&gt;SQL vs Pandas GroupBy?&lt;/summary&gt;
+  &lt;p&gt;Conceptually identical — only syntax differs&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-joins-matter&#34;&gt;🔗 Why Joins Matter&lt;/h2&gt;
+&lt;p&gt;Real-world data is &lt;strong&gt;never in one table&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You often have:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;users table&lt;/li&gt;
+&lt;li&gt;orders table&lt;/li&gt;
+&lt;li&gt;events table&lt;/li&gt;
+&lt;li&gt;experiments table&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Joins connect the story.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-example-tables&#34;&gt;📊 Example Tables&lt;/h2&gt;
+&lt;h3 id=&#34;users&#34;&gt;Users&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;users = pd.DataFrame({
+    &amp;quot;user_id&amp;quot;: [1, 2, 3],
+    &amp;quot;country&amp;quot;: [&amp;quot;US&amp;quot;, &amp;quot;US&amp;quot;, &amp;quot;FR&amp;quot;]
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;orders&#34;&gt;Orders&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;orders = pd.DataFrame({
+    &amp;quot;order_id&amp;quot;: [101, 102, 103, 104],
+    &amp;quot;user_id&amp;quot;: [1, 2, 1, 4],
+    &amp;quot;amount&amp;quot;: [250, 300, 150, 500]
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-inner-join&#34;&gt;🔗 Inner Join&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pd.merge(users, orders, on=&amp;quot;user_id&amp;quot;, how=&amp;quot;inner&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Keeps only matching rows.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-left-join-most-common&#34;&gt;🔗 Left Join (Most Common)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pd.merge(users, orders, on=&amp;quot;user_id&amp;quot;, how=&amp;quot;left&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Used when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Users are primary&lt;/li&gt;
+&lt;li&gt;Orders may be missing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-right-join&#34;&gt;🔗 Right Join&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pd.merge(users, orders, on=&amp;quot;user_id&amp;quot;, how=&amp;quot;right&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Less common but useful for audits.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-outer-join&#34;&gt;🔗 Outer Join&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pd.merge(users, orders, on=&amp;quot;user_id&amp;quot;, how=&amp;quot;outer&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Used for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data reconciliation&lt;/li&gt;
+&lt;li&gt;Finding missing relationships&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-join-on-different-column-names&#34;&gt;🧠 Join on Different Column Names&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pd.merge(
+    users,
+    orders,
+    left_on=&amp;quot;user_id&amp;quot;,
+    right_on=&amp;quot;user_id&amp;quot;
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In real data, column names rarely match.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-join-explosion-critical-warning&#34;&gt;⚠️ Join Explosion (Critical Warning)&lt;/h2&gt;
+&lt;p&gt;Many-to-many joins can &lt;strong&gt;multiply rows&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;users.merge(orders, on=&amp;quot;user_id&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Always ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“What is the cardinality?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-validation-after-join&#34;&gt;🧪 Validation After Join&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;assert merged[&amp;quot;user_id&amp;quot;].notna().all()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Production engineers always validate joins.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-real-world-case-google--meta--openai&#34;&gt;🧠 Real-World Case (Google / Meta / OpenAI)&lt;/h2&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Join user metadata&lt;/li&gt;
+&lt;li&gt;Join experiment assignment&lt;/li&gt;
+&lt;li&gt;Aggregate metrics per variant&lt;/li&gt;
+&lt;li&gt;Decide product direction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bad join → wrong decision → $$$ lost&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interview-patterns&#34;&gt;🧠 Interview Patterns&lt;/h2&gt;
+&lt;p&gt;Interviewers test:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GroupBy logic&lt;/li&gt;
+&lt;li&gt;Correct join type&lt;/li&gt;
+&lt;li&gt;Index reset&lt;/li&gt;
+&lt;li&gt;Avoiding row explosion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-summary&#34;&gt;🏁 Summary&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;GroupBy = Split → Apply → Combine&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.agg()&lt;/code&gt; for metrics&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.transform()&lt;/code&gt; for ML features&lt;/li&gt;
+&lt;li&gt;Joins connect reality&lt;/li&gt;
+&lt;li&gt;Validate after join&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you master this chapter,
+you can survive &lt;strong&gt;most analytics interviews&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-next-chapter&#34;&gt;🚀 Next Chapter&lt;/h2&gt;
+&lt;p&gt;👉 &lt;strong&gt;DE101-PD05 — Time Series &amp;amp; Window Operations&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is where senior-level thinking begins.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DE101-PD05 — Performance &amp; Production Patterns (From Pandas to Scale)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd05-performance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd05-performance/</guid>
+      <description>&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~90–120 minutes&lt;/p&gt;
+&lt;h2 id=&#34;-why-this-chapter-matters&#34;&gt;🎯 Why This Chapter Matters&lt;/h2&gt;
+&lt;p&gt;Most Pandas tutorials stop at:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Here is how it works”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Real engineers must ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Will this survive production?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Performance mistakes silently:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Waste memory&lt;/li&gt;
+&lt;li&gt;Slow pipelines&lt;/li&gt;
+&lt;li&gt;Break models&lt;/li&gt;
+&lt;li&gt;Crash jobs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This chapter teaches you how professionals think.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-mental-model-pandas-is-vectorized-python&#34;&gt;🧠 Mental Model: Pandas Is Vectorized Python&lt;/h2&gt;
+&lt;p&gt;Pandas is fast &lt;strong&gt;only when&lt;/strong&gt; you let it operate on whole columns.&lt;/p&gt;
+&lt;p&gt;❌ Bad:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i in range(len(df)):
+    df.loc[i, &amp;quot;x&amp;quot;] += 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;✅ Good:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;x&amp;quot;] += 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Vectorization = speed + clarity.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-avoid-python-loops-unless-necessary&#34;&gt;🚫 Avoid Python Loops (Unless Necessary)&lt;/h2&gt;
+&lt;p&gt;Loops move work from C → Python.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Approach&lt;/th&gt;
+&lt;th&gt;Speed&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Python loop&lt;/td&gt;
+&lt;td&gt;❌ slow&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;.apply()&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;⚠️ medium&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Vectorized ops&lt;/td&gt;
+&lt;td&gt;✅ fastest&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-example-conditional-logic&#34;&gt;🧪 Example: Conditional Logic&lt;/h2&gt;
+&lt;p&gt;❌ Slow:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;flag&amp;quot;] = df[&amp;quot;value&amp;quot;].apply(lambda x: 1 if x &amp;gt; 0 else 0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;✅ Fast:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;flag&amp;quot;] = (df[&amp;quot;value&amp;quot;] &amp;gt; 0).astype(int)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-use-the-right-data-types&#34;&gt;🧠 Use the Right Data Types&lt;/h2&gt;
+&lt;p&gt;Wrong dtypes waste memory.&lt;/p&gt;
+&lt;h3 id=&#34;before&#34;&gt;Before&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.info()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;convert-strings-to-categories&#34;&gt;Convert strings to categories&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;country&amp;quot;] = df[&amp;quot;country&amp;quot;].astype(&amp;quot;category&amp;quot;)
+df[&amp;quot;device&amp;quot;] = df[&amp;quot;device&amp;quot;].astype(&amp;quot;category&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This can reduce memory &lt;strong&gt;10×–100×&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-numeric-downcasting&#34;&gt;🧠 Numeric Downcasting&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;age&amp;quot;] = pd.to_numeric(df[&amp;quot;age&amp;quot;], downcast=&amp;quot;integer&amp;quot;)
+df[&amp;quot;revenue&amp;quot;] = pd.to_numeric(df[&amp;quot;revenue&amp;quot;], downcast=&amp;quot;float&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Used in large ETL pipelines.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-memory-profiling&#34;&gt;📦 Memory Profiling&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.memory_usage(deep=True).sum() / 1024**2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Always measure before optimizing.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-copy-vs-view-danger-zone&#34;&gt;🧠 Copy vs View (Danger Zone)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df2 = df[df[&amp;quot;age&amp;quot;] &amp;gt; 18]
+df2[&amp;quot;flag&amp;quot;] = 1  # ⚠️ SettingWithCopyWarning
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Safer:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df2 = df.loc[df[&amp;quot;age&amp;quot;] &amp;gt; 18].copy()
+df2[&amp;quot;flag&amp;quot;] = 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Silent bugs happen here.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-chunk-processing-large-files&#34;&gt;⚙️ Chunk Processing (Large Files)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;chunks = pd.read_csv(&amp;quot;large.csv&amp;quot;, chunksize=100_000)
+
+for chunk in chunks:
+    process(chunk)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Used when data barely fits in memory.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-efficient-joins&#34;&gt;🧠 Efficient Joins&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Join on indexed columns&lt;/li&gt;
+&lt;li&gt;Avoid object dtype keys&lt;/li&gt;
+&lt;li&gt;Filter before join&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;users = users.set_index(&amp;quot;user_id&amp;quot;)
+orders = orders.set_index(&amp;quot;user_id&amp;quot;)
+
+users.join(orders, how=&amp;quot;left&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sorting-is-expensive&#34;&gt;🧠 Sorting Is Expensive&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.sort_values(&amp;quot;timestamp&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sorting is &lt;strong&gt;O(n log n)&lt;/strong&gt;
+Avoid repeated sorts.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-use-query-for-readability&#34;&gt;🧠 Use &lt;code&gt;query()&lt;/code&gt; for Readability&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.query(&amp;quot;country == &#39;US&#39; and revenue &amp;gt; 100&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Often faster and clearer than chained indexing.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-profiling-runtime&#34;&gt;🧪 Profiling Runtime&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;%timeit df[&amp;quot;revenue&amp;quot;].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In production:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Measure&lt;/li&gt;
+&lt;li&gt;Compare&lt;/li&gt;
+&lt;li&gt;Decide&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-parallelism-pandas-is-mostly-single-threaded&#34;&gt;🧠 Parallelism: Pandas Is Mostly Single-Threaded&lt;/h2&gt;
+&lt;p&gt;Workarounds:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Split data&lt;/li&gt;
+&lt;li&gt;Use multiprocessing&lt;/li&gt;
+&lt;li&gt;Or switch tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-when-pandas-is-not-enough&#34;&gt;🚀 When Pandas Is Not Enough&lt;/h2&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
+  &lt;summary&gt;When does Pandas become slow?&lt;/summary&gt;
+  &lt;p&gt;When data no longer fits in memory.&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;At this point, professionals move to:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tool&lt;/th&gt;
+&lt;th&gt;When&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Dask&lt;/td&gt;
+&lt;td&gt;Larger-than-memory Pandas&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spark&lt;/td&gt;
+&lt;td&gt;Distributed clusters&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DuckDB&lt;/td&gt;
+&lt;td&gt;Fast SQL analytics&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Polars&lt;/td&gt;
+&lt;td&gt;Modern fast DataFrame&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-google--meta--openai-pattern&#34;&gt;🧠 Google / Meta / OpenAI Pattern&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Prototype in Pandas&lt;/li&gt;
+&lt;li&gt;Validate logic&lt;/li&gt;
+&lt;li&gt;Optimize&lt;/li&gt;
+&lt;li&gt;Scale to Spark / SQL&lt;/li&gt;
+&lt;li&gt;Monitor in production&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Same logic, different engine.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-real-interview-question&#34;&gt;🧪 Real Interview Question&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Your Pandas pipeline is slow. What do you do?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Expected answer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Measure memory&lt;/li&gt;
+&lt;li&gt;Check dtypes&lt;/li&gt;
+&lt;li&gt;Remove loops&lt;/li&gt;
+&lt;li&gt;Vectorize&lt;/li&gt;
+&lt;li&gt;Reduce joins&lt;/li&gt;
+&lt;li&gt;Scale tool if needed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-golden-rules&#34;&gt;🏁 Golden Rules&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Measure before optimizing&lt;/li&gt;
+&lt;li&gt;Avoid Python loops&lt;/li&gt;
+&lt;li&gt;Control memory&lt;/li&gt;
+&lt;li&gt;Validate joins&lt;/li&gt;
+&lt;li&gt;Think about scale early&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-thought&#34;&gt;🚀 Final Thought&lt;/h2&gt;
+&lt;p&gt;Pandas is not slow.
+&lt;strong&gt;Bad usage is slow.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Engineers who understand performance
+write code that survives real systems.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-next-chapter&#34;&gt;🔜 Next Chapter&lt;/h2&gt;
+&lt;p&gt;👉 &lt;strong&gt;DE101-PD06 — Time Series, Rolling Windows &amp;amp; Feature Engineering&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is where ML &amp;amp; analytics meet.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DE101-PD06 — Finding Insights with Pandas (From Data to Decisions)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd06/</guid>
+      <description>&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~120 minutes&lt;/p&gt;
+&lt;h2 id=&#34;-goal-of-this-chapter&#34;&gt;🎯 Goal of This Chapter&lt;/h2&gt;
+&lt;p&gt;This chapter teaches &lt;strong&gt;how to think&lt;/strong&gt;, not just how to code.&lt;/p&gt;
+&lt;p&gt;You will learn:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How to ask good questions&lt;/li&gt;
+&lt;li&gt;How to extract insights from data&lt;/li&gt;
+&lt;li&gt;How real companies analyze performance&lt;/li&gt;
+&lt;li&gt;How to communicate findings clearly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-mock-dataset--fifa-world-cup-player-stats&#34;&gt;⚽ Mock Dataset — FIFA World Cup Player Stats&lt;/h2&gt;
+&lt;p&gt;We will use a simplified dataset inspired by &lt;strong&gt;FIFA World Cup matches&lt;/strong&gt;,&lt;br&gt;
+with focus on &lt;strong&gt;Lionel Messi&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+
+data = {
+    &amp;quot;player&amp;quot;: [&amp;quot;Messi&amp;quot;, &amp;quot;Messi&amp;quot;, &amp;quot;Messi&amp;quot;, &amp;quot;Mbappe&amp;quot;, &amp;quot;Mbappe&amp;quot;, &amp;quot;Neymar&amp;quot;, &amp;quot;Modric&amp;quot;, &amp;quot;Messi&amp;quot;],
+    &amp;quot;team&amp;quot;: [&amp;quot;Argentina&amp;quot;, &amp;quot;Argentina&amp;quot;, &amp;quot;Argentina&amp;quot;, &amp;quot;France&amp;quot;, &amp;quot;France&amp;quot;, &amp;quot;Brazil&amp;quot;, &amp;quot;Croatia&amp;quot;, &amp;quot;Argentina&amp;quot;],
+    &amp;quot;match&amp;quot;: [1, 2, 3, 1, 2, 1, 1, 4],
+    &amp;quot;goals&amp;quot;: [1, 2, 1, 2, 1, 1, 0, 1],
+    &amp;quot;assists&amp;quot;: [0, 1, 0, 0, 1, 0, 1, 0],
+    &amp;quot;shots&amp;quot;: [4, 6, 5, 7, 5, 4, 2, 3],
+    &amp;quot;minutes&amp;quot;: [90, 90, 90, 90, 90, 90, 90, 90],
+    &amp;quot;position&amp;quot;: [&amp;quot;FW&amp;quot;, &amp;quot;FW&amp;quot;, &amp;quot;FW&amp;quot;, &amp;quot;FW&amp;quot;, &amp;quot;FW&amp;quot;, &amp;quot;FW&amp;quot;, &amp;quot;MF&amp;quot;, &amp;quot;FW&amp;quot;]
+}
+
+df = pd.DataFrame(data)
+df
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-20-insight-questions-with-answers&#34;&gt;🧠 20 Insight Questions (with Answers)&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q1-how-many-matches-did-each-player-play&#34;&gt;Q1️⃣ How many matches did each player play?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;player&amp;quot;)[&amp;quot;match&amp;quot;].count()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Player usage &amp;amp; reliability.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q2-total-goals-per-player&#34;&gt;Q2️⃣ Total goals per player?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;player&amp;quot;)[&amp;quot;goals&amp;quot;].sum().sort_values(ascending=False)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Who is the main scorer?&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q3-average-goals-per-match&#34;&gt;Q3️⃣ Average goals per match?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;player&amp;quot;)[&amp;quot;goals&amp;quot;].mean()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Consistency vs volume.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q4-who-contributed-most-goals--assists&#34;&gt;Q4️⃣ Who contributed most (goals + assists)?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.assign(contribution=df[&amp;quot;goals&amp;quot;] + df[&amp;quot;assists&amp;quot;]) \
+  .groupby(&amp;quot;player&amp;quot;)[&amp;quot;contribution&amp;quot;].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: True attacking impact.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q5-messis-total-world-cup-impact&#34;&gt;Q5️⃣ Messi’s total World Cup impact?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[df[&amp;quot;player&amp;quot;] == &amp;quot;Messi&amp;quot;][[&amp;quot;goals&amp;quot;, &amp;quot;assists&amp;quot;]].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Player-specific deep dive.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q6-shots-to-goals-efficiency&#34;&gt;Q6️⃣ Shots-to-goals efficiency?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.assign(efficiency=df[&amp;quot;goals&amp;quot;] / df[&amp;quot;shots&amp;quot;]) \
+  .groupby(&amp;quot;player&amp;quot;)[&amp;quot;efficiency&amp;quot;].mean()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Finishing quality.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q7-which-team-scored-the-most-goals&#34;&gt;Q7️⃣ Which team scored the most goals?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;team&amp;quot;)[&amp;quot;goals&amp;quot;].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Team dominance.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q8-messis-share-of-argentina-goals&#34;&gt;Q8️⃣ Messi’s share of Argentina goals?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;total_arg_goals = df[df[&amp;quot;team&amp;quot;] == &amp;quot;Argentina&amp;quot;][&amp;quot;goals&amp;quot;].sum()
+messi_goals = df[df[&amp;quot;player&amp;quot;] == &amp;quot;Messi&amp;quot;][&amp;quot;goals&amp;quot;].sum()
+
+messi_goals / total_arg_goals
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Team dependency on star player.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q9-goals-by-position&#34;&gt;Q9️⃣ Goals by position?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;position&amp;quot;)[&amp;quot;goals&amp;quot;].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Tactical contribution.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q10-average-shots-per-match-per-player&#34;&gt;Q1️⃣0️⃣ Average shots per match per player?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;player&amp;quot;)[&amp;quot;shots&amp;quot;].mean()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Offensive involvement.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q11-which-match-had-the-most-goals&#34;&gt;Q1️⃣1️⃣ Which match had the most goals?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;match&amp;quot;)[&amp;quot;goals&amp;quot;].sum().sort_values(ascending=False)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: High-impact games.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q12-messi-trend-over-matches&#34;&gt;Q1️⃣2️⃣ Messi trend over matches?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[df[&amp;quot;player&amp;quot;] == &amp;quot;Messi&amp;quot;].sort_values(&amp;quot;match&amp;quot;)[[&amp;quot;match&amp;quot;, &amp;quot;goals&amp;quot;]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Performance trajectory.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q13-player-with-best-goals-per-90-minutes&#34;&gt;Q1️⃣3️⃣ Player with best goals per 90 minutes?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.assign(goals_per_90=df[&amp;quot;goals&amp;quot;] / df[&amp;quot;minutes&amp;quot;] * 90) \
+  .groupby(&amp;quot;player&amp;quot;)[&amp;quot;goals_per_90&amp;quot;].mean()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Fair comparison.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q14-assist-leaders&#34;&gt;Q1️⃣4️⃣ Assist leaders?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;player&amp;quot;)[&amp;quot;assists&amp;quot;].sum().sort_values(ascending=False)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Playmaking ability.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q15-messi-vs-mbappe-comparison&#34;&gt;Q1️⃣5️⃣ Messi vs Mbappe comparison?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[df[&amp;quot;player&amp;quot;].isin([&amp;quot;Messi&amp;quot;, &amp;quot;Mbappe&amp;quot;])] \
+  .groupby(&amp;quot;player&amp;quot;)[[&amp;quot;goals&amp;quot;, &amp;quot;assists&amp;quot;, &amp;quot;shots&amp;quot;]].mean()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Superstar comparison.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q16-which-team-relies-most-on-one-player&#34;&gt;Q1️⃣6️⃣ Which team relies most on one player?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;team_totals = df.groupby(&amp;quot;team&amp;quot;)[&amp;quot;goals&amp;quot;].sum()
+player_totals = df.groupby([&amp;quot;team&amp;quot;, &amp;quot;player&amp;quot;])[&amp;quot;goals&amp;quot;].sum()
+
+(player_totals / team_totals).sort_values(ascending=False)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Risk concentration.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q17-match-by-match-contribution-table&#34;&gt;Q1️⃣7️⃣ Match-by-match contribution table?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.assign(contribution=df[&amp;quot;goals&amp;quot;] + df[&amp;quot;assists&amp;quot;]) \
+  .pivot_table(
+      index=&amp;quot;match&amp;quot;,
+      columns=&amp;quot;player&amp;quot;,
+      values=&amp;quot;contribution&amp;quot;,
+      aggfunc=&amp;quot;sum&amp;quot;
+  )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Game-level impact.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q18-who-is-most-consistent-scorer&#34;&gt;Q1️⃣8️⃣ Who is most consistent scorer?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;player&amp;quot;)[&amp;quot;goals&amp;quot;].std()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Low variance = consistency.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q19-identify-underperformers-high-shots-low-goals&#34;&gt;Q1️⃣9️⃣ Identify underperformers (high shots, low goals)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.assign(conversion=df[&amp;quot;goals&amp;quot;] / df[&amp;quot;shots&amp;quot;]) \
+  .sort_values(&amp;quot;conversion&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Optimization opportunity.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q20-executive-summary-table&#34;&gt;Q2️⃣0️⃣ Executive Summary Table&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;player&amp;quot;).agg(
+    matches=(&amp;quot;match&amp;quot;, &amp;quot;count&amp;quot;),
+    goals=(&amp;quot;goals&amp;quot;, &amp;quot;sum&amp;quot;),
+    assists=(&amp;quot;assists&amp;quot;, &amp;quot;sum&amp;quot;),
+    shots=(&amp;quot;shots&amp;quot;, &amp;quot;sum&amp;quot;)
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: One-table decision view.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-how-companies-use-this&#34;&gt;🧠 How Companies Use This&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Google&lt;/strong&gt; → Experiment impact&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Meta&lt;/strong&gt; → Creator performance&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenAI&lt;/strong&gt; → Model evaluation metrics&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sports Analytics&lt;/strong&gt; → Strategy decisions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Same logic, different domain.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-lesson&#34;&gt;🏁 Final Lesson&lt;/h2&gt;
+&lt;p&gt;Insight is not about charts.
+Insight is about &lt;strong&gt;asking the right questions&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Pandas is your microscope.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-next-steps&#34;&gt;🚀 Next Steps&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Add visualization&lt;/li&gt;
+&lt;li&gt;Turn insights into dashboards&lt;/li&gt;
+&lt;li&gt;Feed features into ML models&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You now think like a &lt;strong&gt;Data Engineer + Analyst + AI Researcher&lt;/strong&gt; 🧠🔥&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

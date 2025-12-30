@@ -336,6 +336,400 @@ Power without wisdom → danger&lt;/p&gt;
     </item>
     
     <item>
+      <title>CS101-LC01 — What is LeetCode? (Why Everyone Uses It)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc01-intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc01-intro/</guid>
+      <description>&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~30 minutes&lt;/p&gt;
+&lt;h2 id=&#34;-why-this-chapter-matters&#34;&gt;🎯 Why This Chapter Matters&lt;/h2&gt;
+&lt;p&gt;Before solving problems, you must understand &lt;strong&gt;why&lt;/strong&gt; you are solving them.&lt;/p&gt;
+&lt;p&gt;LeetCode is not just a website.&lt;br&gt;
+It is a &lt;strong&gt;thinking framework&lt;/strong&gt; used worldwide to evaluate engineers.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-is-leetcode&#34;&gt;🤔 What is LeetCode?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;LeetCode&lt;/strong&gt; is an online platform for practicing:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Algorithms&lt;/li&gt;
+&lt;li&gt;Data Structures&lt;/li&gt;
+&lt;li&gt;Logical problem solving&lt;/li&gt;
+&lt;li&gt;Interview-style coding questions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Problems range from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Beginner (arrays, loops)&lt;/li&gt;
+&lt;li&gt;Intermediate (hash maps, trees)&lt;/li&gt;
+&lt;li&gt;Advanced (DP, graphs, system thinking)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-who-uses-leetcode&#34;&gt;🌍 Who Uses LeetCode?&lt;/h2&gt;
+&lt;p&gt;LeetCode-style questions are used by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Google&lt;/li&gt;
+&lt;li&gt;Meta (Facebook)&lt;/li&gt;
+&lt;li&gt;Amazon&lt;/li&gt;
+&lt;li&gt;Microsoft&lt;/li&gt;
+&lt;li&gt;Apple&lt;/li&gt;
+&lt;li&gt;Netflix&lt;/li&gt;
+&lt;li&gt;Startups &amp;amp; research labs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Even if the interview is &lt;strong&gt;not on LeetCode&lt;/strong&gt;,&lt;br&gt;
+the &lt;strong&gt;problem patterns are the same&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-leetcode-is-really-training&#34;&gt;🧠 What LeetCode Is REALLY Training&lt;/h2&gt;
+&lt;p&gt;LeetCode is NOT about memorizing code.&lt;/p&gt;
+&lt;p&gt;It trains you to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Break big problems into smaller ones&lt;/li&gt;
+&lt;li&gt;Recognize patterns&lt;/li&gt;
+&lt;li&gt;Choose the right data structure&lt;/li&gt;
+&lt;li&gt;Optimize time &amp;amp; memory&lt;/li&gt;
+&lt;li&gt;Explain your reasoning clearly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-interviewers-look-for&#34;&gt;🔍 What Interviewers Look For&lt;/h2&gt;
+&lt;p&gt;Interviewers are evaluating &lt;strong&gt;how you think&lt;/strong&gt;, not just the final answer.&lt;/p&gt;
+&lt;p&gt;They care about:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clear understanding of the problem&lt;/li&gt;
+&lt;li&gt;Logical step-by-step reasoning&lt;/li&gt;
+&lt;li&gt;Clean, readable code&lt;/li&gt;
+&lt;li&gt;Correct time complexity (Big-O)&lt;/li&gt;
+&lt;li&gt;Ability to improve a slow solution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interview-reality-check&#34;&gt;🧪 Interview Reality Check&lt;/h2&gt;
+&lt;p&gt;You are usually expected to:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Explain the problem in your own words&lt;/li&gt;
+&lt;li&gt;Start with a simple (even slow) solution&lt;/li&gt;
+&lt;li&gt;Analyze time complexity&lt;/li&gt;
+&lt;li&gt;Improve it&lt;/li&gt;
+&lt;li&gt;Communicate clearly&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Perfect code ≠ Perfect interview&lt;br&gt;
+Clear thinking = Pass&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-common-beginner-misunderstanding&#34;&gt;🧠 Common Beginner Misunderstanding&lt;/h2&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
+  &lt;summary&gt;Does LeetCode measure intelligence?&lt;/summary&gt;
+  &lt;p&gt;❌ No&lt;br&gt;
+✅ It measures &lt;strong&gt;problem-solving patterns&lt;/strong&gt;&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;Someone who practiced patterns will outperform&lt;br&gt;
+someone who is “smart but untrained”.&lt;/p&gt;
+&lt;p&gt;This is &lt;strong&gt;learnable&lt;/strong&gt;, not talent-based.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-examples-of-patterns-you-will-learn&#34;&gt;🧩 Examples of Patterns You Will Learn&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Pattern&lt;/th&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Two pointers&lt;/td&gt;
+&lt;td&gt;Palindrome check&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Hash map&lt;/td&gt;
+&lt;td&gt;Two Sum&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Sliding window&lt;/td&gt;
+&lt;td&gt;Subarray problems&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Prefix sum&lt;/td&gt;
+&lt;td&gt;Range queries&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Stack&lt;/td&gt;
+&lt;td&gt;Valid parentheses&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;BFS / DFS&lt;/td&gt;
+&lt;td&gt;Tree &amp;amp; graph traversal&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Once you see the pattern,&lt;br&gt;
+many problems feel &lt;strong&gt;similar&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-leetcode-is-used-in-exams&#34;&gt;🏫 Why LeetCode is Used in Exams&lt;/h2&gt;
+&lt;p&gt;LeetCode-style questions test:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Logic&lt;/li&gt;
+&lt;li&gt;Edge cases&lt;/li&gt;
+&lt;li&gt;Complexity awareness&lt;/li&gt;
+&lt;li&gt;Coding discipline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These skills apply to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Midterm / final exams&lt;/li&gt;
+&lt;li&gt;Programming contests&lt;/li&gt;
+&lt;li&gt;Research code&lt;/li&gt;
+&lt;li&gt;Real-world software&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-how-to-use-leetcode-correctly&#34;&gt;🏁 How to Use LeetCode Correctly&lt;/h2&gt;
+&lt;p&gt;❌ Wrong way:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Copy solution&lt;/li&gt;
+&lt;li&gt;Memorize code&lt;/li&gt;
+&lt;li&gt;Skip explanation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;✅ Right way:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Understand the idea&lt;/li&gt;
+&lt;li&gt;Rewrite in your own style&lt;/li&gt;
+&lt;li&gt;Analyze complexity&lt;/li&gt;
+&lt;li&gt;Explain out loud&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you can &lt;strong&gt;teach it&lt;/strong&gt;, you truly understand it.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-goal-of-this-course&#34;&gt;🎯 Goal of This Course&lt;/h2&gt;
+&lt;p&gt;By the end of this course, you should be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Look at a problem&lt;/li&gt;
+&lt;li&gt;Identify its pattern&lt;/li&gt;
+&lt;li&gt;Choose the right approach&lt;/li&gt;
+&lt;li&gt;Write clean, efficient code&lt;/li&gt;
+&lt;li&gt;Explain your solution confidently&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That is exactly what interviewers want.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-message&#34;&gt;🚀 Final Message&lt;/h2&gt;
+&lt;p&gt;LeetCode is not a test of intelligence.&lt;br&gt;
+It is training for &lt;strong&gt;structured thinking&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If you practice correctly,&lt;br&gt;
+you will think like a software engineer.&lt;/p&gt;
+&lt;p&gt;And that skill lasts a lifetime 💡&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DE101-PD01 — Pandas &amp; the Data Engineering Mindset</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd01-intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd01-intro/</guid>
+      <description>&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~45–60 minutes&lt;/p&gt;
+&lt;h2 id=&#34;-why-this-chapter-matters&#34;&gt;🎯 Why This Chapter Matters&lt;/h2&gt;
+&lt;p&gt;Before learning Pandas syntax, you must learn &lt;strong&gt;how engineers think about data&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Pandas is not just:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A tool for Jupyter notebooks&lt;/li&gt;
+&lt;li&gt;A library for homework&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pandas is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A bridge between raw data and real systems.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-pandas-actually-is&#34;&gt;🧠 What Pandas Actually Is&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Pandas&lt;/strong&gt; is the core Python library for working with &lt;strong&gt;structured data&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;It sits between:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Raw files (CSV, JSON, Excel, Parquet)&lt;/li&gt;
+&lt;li&gt;Databases (PostgreSQL, MySQL, BigQuery)&lt;/li&gt;
+&lt;li&gt;Data warehouses &amp;amp; lakes&lt;/li&gt;
+&lt;li&gt;Machine learning pipelines&lt;/li&gt;
+&lt;li&gt;Analytics dashboards&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If data has rows and columns, Pandas is usually involved.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-the-data-engineering-pipeline-high-level&#34;&gt;🏗️ The Data Engineering Pipeline (High Level)&lt;/h2&gt;
+&lt;p&gt;Every real data system follows this flow:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ingest data (files, APIs, logs)&lt;/li&gt;
+&lt;li&gt;Clean and validate&lt;/li&gt;
+&lt;li&gt;Transform and enrich&lt;/li&gt;
+&lt;li&gt;Aggregate and summarize&lt;/li&gt;
+&lt;li&gt;Store or feed to ML models&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Pandas lives mostly in &lt;strong&gt;steps 2–4&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-pandas-is-not-just-for-notebooks&#34;&gt;🧠 Pandas Is NOT Just for Notebooks&lt;/h2&gt;
+&lt;p&gt;Beginner mistake:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Pandas is only for exploration.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Professional reality:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Production ETL jobs use Pandas&lt;/li&gt;
+&lt;li&gt;Feature engineering uses Pandas&lt;/li&gt;
+&lt;li&gt;Data validation uses Pandas&lt;/li&gt;
+&lt;li&gt;Research pipelines start in Pandas&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-example-real-world-use-cases&#34;&gt;🧪 Example: Real-World Use Cases&lt;/h2&gt;
+&lt;h3 id=&#34;google&#34;&gt;Google&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Experiment analysis&lt;/li&gt;
+&lt;li&gt;Metric validation&lt;/li&gt;
+&lt;li&gt;Feature debugging&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;meta&#34;&gt;Meta&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A/B testing&lt;/li&gt;
+&lt;li&gt;User behavior analysis&lt;/li&gt;
+&lt;li&gt;Dataset sanity checks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;openai&#34;&gt;OpenAI&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Dataset preprocessing&lt;/li&gt;
+&lt;li&gt;Filtering &amp;amp; labeling&lt;/li&gt;
+&lt;li&gt;Feature extraction&lt;/li&gt;
+&lt;li&gt;Evaluation pipelines&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All start with Pandas.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-good-pandas-code-has-these-properties&#34;&gt;🧠 Good Pandas Code Has These Properties&lt;/h2&gt;
+&lt;h3 id=&#34;1-readable&#34;&gt;1️⃣ Readable&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[df[&amp;quot;country&amp;quot;] == &amp;quot;US&amp;quot;][&amp;quot;revenue&amp;quot;].mean()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Anyone should understand it.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-testable&#34;&gt;2️⃣ Testable&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;assert df[&amp;quot;age&amp;quot;].min() &amp;gt;= 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Bad data is worse than no data.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-deterministic&#34;&gt;3️⃣ Deterministic&lt;/h3&gt;
+&lt;p&gt;Same input → same output
+No hidden randomness.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-scalable-within-reason&#34;&gt;4️⃣ Scalable (Within Reason)&lt;/h3&gt;
+&lt;p&gt;Good Pandas code:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Works for 1k rows&lt;/li&gt;
+&lt;li&gt;Still works for 10M rows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-pandas-vs-sql-vs-spark&#34;&gt;🧠 Pandas vs SQL vs Spark&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tool&lt;/th&gt;
+&lt;th&gt;Best For&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Pandas&lt;/td&gt;
+&lt;td&gt;Prototyping, analysis, ML&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SQL&lt;/td&gt;
+&lt;td&gt;Large-scale aggregation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spark&lt;/td&gt;
+&lt;td&gt;Distributed big data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Engineers &lt;strong&gt;combine&lt;/strong&gt; tools, not worship one.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-pandas-as-a-thinking-tool&#34;&gt;🧩 Pandas as a Thinking Tool&lt;/h2&gt;
+&lt;p&gt;Pandas teaches you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data modeling&lt;/li&gt;
+&lt;li&gt;Schema awareness&lt;/li&gt;
+&lt;li&gt;Edge cases&lt;/li&gt;
+&lt;li&gt;Performance thinking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These skills transfer to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SQL&lt;/li&gt;
+&lt;li&gt;Spark&lt;/li&gt;
+&lt;li&gt;Flink&lt;/li&gt;
+&lt;li&gt;DuckDB&lt;/li&gt;
+&lt;li&gt;Polars&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-common-beginner-mistakes&#34;&gt;🧠 Common Beginner Mistakes&lt;/h2&gt;
+&lt;p&gt;❌ Writing everything in one line
+❌ Ignoring dtypes
+❌ Silent NaNs
+❌ Copy-paste pipelines
+❌ No validation&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-minimal-example-end-to-end-thinking&#34;&gt;🧪 Minimal Example (End-to-End Thinking)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+
+df = pd.read_csv(&amp;quot;users.csv&amp;quot;)
+
+df = (
+    df
+    .dropna(subset=[&amp;quot;age&amp;quot;])
+    .assign(age=lambda x: x[&amp;quot;age&amp;quot;].astype(int))
+)
+
+assert df[&amp;quot;age&amp;quot;].min() &amp;gt;= 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is production thinking.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-pandas--testing&#34;&gt;🧠 Pandas + Testing&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def test_no_negative_age(df):
+    assert (df[&amp;quot;age&amp;quot;] &amp;gt;= 0).all()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Engineers test data, not just code.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-when-pandas-is-enough&#34;&gt;🧠 When Pandas Is Enough&lt;/h2&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
+  &lt;summary&gt;Is Pandas enough for big data?&lt;/summary&gt;
+  &lt;p&gt;&lt;p&gt;Pandas is perfect for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Prototyping&lt;/li&gt;
+&lt;li&gt;Medium-scale data (up to tens of millions of rows)&lt;/li&gt;
+&lt;li&gt;ML feature engineering&lt;/li&gt;
+&lt;li&gt;Research workflows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It often pairs with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SQL&lt;/li&gt;
+&lt;li&gt;Spark&lt;/li&gt;
+&lt;li&gt;Arrow&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-when-pandas-is-not-enough&#34;&gt;🚧 When Pandas Is NOT Enough&lt;/h2&gt;
+&lt;p&gt;Signs you should scale:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Memory errors&lt;/li&gt;
+&lt;li&gt;Very slow joins&lt;/li&gt;
+&lt;li&gt;Daily batch jobs taking hours&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;At that point:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Keep logic&lt;/li&gt;
+&lt;li&gt;Change engine&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-engineers-rule-of-thumb&#34;&gt;🧠 Engineer’s Rule of Thumb&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Prototype in Pandas
+Validate logic
+Scale only when needed&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is how real teams work.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-takeaway&#34;&gt;🏁 Final Takeaway&lt;/h2&gt;
+&lt;p&gt;Pandas is not a toy.
+It is a &lt;strong&gt;thinking framework&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If you master Pandas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You understand data&lt;/li&gt;
+&lt;li&gt;You avoid silent bugs&lt;/li&gt;
+&lt;li&gt;You build reliable systems&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
       <title>Lecture 02 — Python: The Language of AI</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-02-python/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
@@ -603,6 +997,518 @@ sorted(nums)
 &lt;p&gt;Clean Python = Clear Thinking&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>CS101-LC02 — Big-O Intuition</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc02-big-o/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc02-big-o/</guid>
+      <description>&lt;h2 id=&#34;-why-big-o-matters&#34;&gt;🎯 Why Big-O Matters&lt;/h2&gt;
+&lt;p&gt;Big-O is &lt;strong&gt;NOT&lt;/strong&gt; about:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Exact seconds&lt;/li&gt;
+&lt;li&gt;CPU speed&lt;/li&gt;
+&lt;li&gt;Programming language&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Big-O is about &lt;strong&gt;scaling&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;❓ If input becomes 10× bigger, how much slower will your program be?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That’s what interviewers, professors, and engineers care about.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-simple-definition&#34;&gt;🧠 Simple Definition&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Big-O describes how an algorithm’s runtime or memory grows as input size increases.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We focus on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Worst-case behavior&lt;/li&gt;
+&lt;li&gt;Growth trend&lt;/li&gt;
+&lt;li&gt;Ignoring constants&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-real-world-analogy&#34;&gt;🍕 Real-World Analogy&lt;/h2&gt;
+&lt;p&gt;Imagine finding your name in a list of students.&lt;/p&gt;
+&lt;h3 id=&#34;case-1-you-know-your-seat-number&#34;&gt;Case 1: You know your seat number&lt;/h3&gt;
+&lt;p&gt;→ You check once&lt;br&gt;
+✅ Constant time → &lt;strong&gt;O(1)&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;case-2-names-listed-randomly&#34;&gt;Case 2: Names listed randomly&lt;/h3&gt;
+&lt;p&gt;→ You scan one by one&lt;br&gt;
+📈 Linear → &lt;strong&gt;O(n)&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;case-3-names-sorted-alphabetically&#34;&gt;Case 3: Names sorted alphabetically&lt;/h3&gt;
+&lt;p&gt;→ You keep halving the list&lt;br&gt;
+⚡ Fast → &lt;strong&gt;O(log n)&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-common-big-o-classes-must-memorize&#34;&gt;📊 Common Big-O Classes (Must Memorize)&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Big-O&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Real Meaning&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;O(1)&lt;/td&gt;
+&lt;td&gt;Constant&lt;/td&gt;
+&lt;td&gt;Always same time&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;O(log n)&lt;/td&gt;
+&lt;td&gt;Logarithmic&lt;/td&gt;
+&lt;td&gt;Divide &amp;amp; conquer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;O(n)&lt;/td&gt;
+&lt;td&gt;Linear&lt;/td&gt;
+&lt;td&gt;Scan once&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;O(n log n)&lt;/td&gt;
+&lt;td&gt;Log-linear&lt;/td&gt;
+&lt;td&gt;Efficient sorting&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;O(n²)&lt;/td&gt;
+&lt;td&gt;Quadratic&lt;/td&gt;
+&lt;td&gt;Nested loops&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;O(2ⁿ)&lt;/td&gt;
+&lt;td&gt;Exponential&lt;/td&gt;
+&lt;td&gt;Very slow&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-o1--constant-time&#34;&gt;⚙️ O(1) — Constant Time&lt;/h2&gt;
+&lt;p&gt;Time does &lt;strong&gt;not&lt;/strong&gt; depend on input size.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def get_first(arr):
+    return arr[0]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;No matter how big &lt;code&gt;arr&lt;/code&gt; is → still 1 step.&lt;/p&gt;
+&lt;p&gt;📌 Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Array index access&lt;/li&gt;
+&lt;li&gt;Hash map lookup&lt;/li&gt;
+&lt;li&gt;Stack push/pop&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-on--linear-time&#34;&gt;📈 O(n) — Linear Time&lt;/h2&gt;
+&lt;p&gt;Runtime grows &lt;strong&gt;directly&lt;/strong&gt; with input size.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def linear_search(arr, x):
+    for v in arr:
+        if v == x:
+            return True
+    return False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If input doubles → time doubles.&lt;/p&gt;
+&lt;p&gt;📌 Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Counting frequency&lt;/li&gt;
+&lt;li&gt;Finding max/min&lt;/li&gt;
+&lt;li&gt;Scanning data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-olog-n--logarithmic-time&#34;&gt;⚡ O(log n) — Logarithmic Time&lt;/h2&gt;
+&lt;p&gt;Each step cuts the problem in half.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def binary_search(arr, x):
+    l, r = 0, len(arr) - 1
+    while l &amp;lt;= r:
+        mid = (l + r) // 2
+        if arr[mid] == x:
+            return True
+        elif arr[mid] &amp;lt; x:
+            l = mid + 1
+        else:
+            r = mid - 1
+    return False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Even for &lt;strong&gt;1 million elements&lt;/strong&gt;, only ~20 steps!&lt;/p&gt;
+&lt;p&gt;📌 Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Binary search&lt;/li&gt;
+&lt;li&gt;Tree traversal (balanced)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-on-log-n--efficient-algorithms&#34;&gt;🧠 O(n log n) — Efficient Algorithms&lt;/h2&gt;
+&lt;p&gt;Often comes from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Divide problem&lt;/li&gt;
+&lt;li&gt;Solve subproblems&lt;/li&gt;
+&lt;li&gt;Combine results&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sorted(nums)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Python uses &lt;strong&gt;Timsort&lt;/strong&gt; → &lt;code&gt;O(n log n)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;📌 Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Merge sort&lt;/li&gt;
+&lt;li&gt;Quick sort (average case)&lt;/li&gt;
+&lt;li&gt;Heap sort&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-on--quadratic-time&#34;&gt;🚨 O(n²) — Quadratic Time&lt;/h2&gt;
+&lt;p&gt;Usually caused by &lt;strong&gt;nested loops&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i in range(n):
+    for j in range(n):
+        do_something()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If &lt;code&gt;n = 10,000&lt;/code&gt;
+→ &lt;strong&gt;100 million operations&lt;/strong&gt; 😱&lt;/p&gt;
+&lt;p&gt;📌 Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pair comparisons&lt;/li&gt;
+&lt;li&gt;Brute-force two sum&lt;/li&gt;
+&lt;li&gt;Duplicate detection (naive)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
+  &lt;summary&gt;Nested loops usually mean?&lt;/summary&gt;
+  &lt;p&gt;O(n²)&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-on-is-dangerous&#34;&gt;🔥 Why O(n²) Is Dangerous&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;n&lt;/th&gt;
+&lt;th&gt;Operations&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;td&gt;10,000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1,000&lt;/td&gt;
+&lt;td&gt;1,000,000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10,000&lt;/td&gt;
+&lt;td&gt;100,000,000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;This is why LeetCode &lt;strong&gt;TLE (Time Limit Exceeded)&lt;/strong&gt; happens.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-exam-style-questions&#34;&gt;🧪 Exam-Style Questions&lt;/h2&gt;
+&lt;h3 id=&#34;q1&#34;&gt;Q1&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for x in arr:
+    print(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;✅ &lt;strong&gt;O(n)&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;q2&#34;&gt;Q2&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i in range(n):
+    for j in range(i):
+        print(i, j)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;✅ &lt;strong&gt;O(n²)&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;q3&#34;&gt;Q3&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;i = 1
+while i &amp;lt; n:
+    i *= 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;✅ &lt;strong&gt;O(log n)&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-space-complexity-also-important&#34;&gt;🧠 Space Complexity (Also Important)&lt;/h2&gt;
+&lt;p&gt;Big-O also applies to &lt;strong&gt;memory usage&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seen = set()
+for x in arr:
+    seen.add(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Time: O(n)&lt;/li&gt;
+&lt;li&gt;Space: O(n)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Interviewers love this question:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Can you trade space for time?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-real-world-engineering-insight&#34;&gt;🎯 Real-World Engineering Insight&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Situation&lt;/th&gt;
+&lt;th&gt;Preferred&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Small data&lt;/td&gt;
+&lt;td&gt;Simple code&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Large data&lt;/td&gt;
+&lt;td&gt;Better Big-O&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Real-time system&lt;/td&gt;
+&lt;td&gt;Predictable complexity&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AI pipelines&lt;/td&gt;
+&lt;td&gt;Vectorized / O(n)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-golden-interview-rule&#34;&gt;🏁 Golden Interview Rule&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;First make it work.
+Then make it fast.
+Then explain why.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you can &lt;strong&gt;explain Big-O clearly&lt;/strong&gt;, you already sound like a professional.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-takeaway&#34;&gt;🎉 Final Takeaway&lt;/h2&gt;
+&lt;p&gt;Big-O is not math.
+Big-O is &lt;strong&gt;thinking about scale&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Once you see it everywhere:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LeetCode becomes easier&lt;/li&gt;
+&lt;li&gt;Code becomes cleaner&lt;/li&gt;
+&lt;li&gt;Interviews become calmer 😄&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You’re officially past beginner level 🚀&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DE101-PD02 — Pandas Series, DataFrame, and Indexing (Real-World Mindset)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd02-core-structures/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd02-core-structures/</guid>
+      <description>&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~45–60 minutes&lt;/p&gt;
+&lt;h2 id=&#34;-why-pandas-matters-in-the-real-world&#34;&gt;🎯 Why Pandas Matters in the Real World&lt;/h2&gt;
+&lt;p&gt;At companies like &lt;strong&gt;Google, Meta, OpenAI&lt;/strong&gt;, Pandas is often used for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data exploration (EDA)&lt;/li&gt;
+&lt;li&gt;Debugging datasets before training models&lt;/li&gt;
+&lt;li&gt;Analyzing experiments / A-B tests&lt;/li&gt;
+&lt;li&gt;Cleaning logs and user behavior data&lt;/li&gt;
+&lt;li&gt;Prototyping ideas before moving to Spark / BigQuery&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pandas is not about speed.&lt;br&gt;
+It is about &lt;strong&gt;thinking clearly with data&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-core-pandas-data-structures&#34;&gt;🧱 Core Pandas Data Structures&lt;/h2&gt;
+&lt;p&gt;Pandas has &lt;strong&gt;two fundamental objects&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Series&lt;/strong&gt; → 1D labeled array&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DataFrame&lt;/strong&gt; → 2D table (rows + columns)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-pandas-series&#34;&gt;📌 Pandas Series&lt;/h2&gt;
+&lt;p&gt;Think of a &lt;strong&gt;Series&lt;/strong&gt; as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A column in a table&lt;/li&gt;
+&lt;li&gt;A vector with labels&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+
+goals = pd.Series([91, 85, 70], index=[&amp;quot;Messi&amp;quot;, &amp;quot;Ronaldo&amp;quot;, &amp;quot;Mbappe&amp;quot;])
+print(goals)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;output&#34;&gt;Output&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Messi      91
+Ronaldo   85
+Mbappe    70
+dtype: int64
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;key-ideas&#34;&gt;Key Ideas&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Series = &lt;strong&gt;data + index&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Index gives meaning, not just position&lt;/li&gt;
+&lt;li&gt;Used heavily in statistics and ML features&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-pandas-dataframe&#34;&gt;📊 Pandas DataFrame&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;DataFrame&lt;/strong&gt; is like an Excel table or SQL table.&lt;/p&gt;
+&lt;p&gt;Let’s simulate a &lt;strong&gt;FIFA World Cup dataset&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;data = {
+    &amp;quot;player&amp;quot;: [&amp;quot;Messi&amp;quot;, &amp;quot;Mbappe&amp;quot;, &amp;quot;Neymar&amp;quot;, &amp;quot;Ronaldo&amp;quot;],
+    &amp;quot;country&amp;quot;: [&amp;quot;Argentina&amp;quot;, &amp;quot;France&amp;quot;, &amp;quot;Brazil&amp;quot;, &amp;quot;Portugal&amp;quot;],
+    &amp;quot;goals&amp;quot;: [7, 8, 6, 1],
+    &amp;quot;age&amp;quot;: [35, 23, 30, 37]
+}
+
+df = pd.DataFrame(data)
+print(df)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;output-1&#34;&gt;Output&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;     player     country  goals  age
+0     Messi   Argentina      7   35
+1    Mbappe      France      8   23
+2    Neymar      Brazil      6   30
+3   Ronaldo    Portugal      1   37
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-how-engineers-think-about-dataframes&#34;&gt;🧠 How Engineers Think About DataFrames&lt;/h2&gt;
+&lt;p&gt;At big tech companies, engineers think:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Rows → observations (players, users, events)&lt;/li&gt;
+&lt;li&gt;Columns → features (age, goals, clicks)&lt;/li&gt;
+&lt;li&gt;Index → identity or order&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bad indexing = confusing analysis.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-column-selection-most-common-operation&#34;&gt;🔍 Column Selection (Most Common Operation)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;player&amp;quot;]
+df[&amp;quot;goals&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This returns a &lt;strong&gt;Series&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-loc--label-based-indexing-human-thinking&#34;&gt;📍 &lt;code&gt;.loc&lt;/code&gt; — Label-Based Indexing (Human Thinking)&lt;/h2&gt;
+&lt;p&gt;Use &lt;code&gt;.loc&lt;/code&gt; when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You care about &lt;strong&gt;meaning&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You think in terms of labels&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# All rows, specific columns
+df.loc[:, [&amp;quot;player&amp;quot;, &amp;quot;goals&amp;quot;]]
+
+# Filter rows by condition
+df.loc[df[&amp;quot;country&amp;quot;] == &amp;quot;Argentina&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;example-find-messis-record&#34;&gt;Example: Find Messi’s record&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.loc[df[&amp;quot;player&amp;quot;] == &amp;quot;Messi&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-iloc--position-based-indexing-machine-thinking&#34;&gt;📐 &lt;code&gt;.iloc&lt;/code&gt; — Position-Based Indexing (Machine Thinking)&lt;/h2&gt;
+&lt;p&gt;Use &lt;code&gt;.iloc&lt;/code&gt; when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You care about &lt;strong&gt;position&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You don’t trust index labels&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# First row
+df.iloc[0]
+
+# First two rows, first two columns
+df.iloc[0:2, 0:2]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Think of &lt;code&gt;.iloc&lt;/code&gt; like Python slicing.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-loc-vs-iloc-interview-favorite&#34;&gt;⚠️ &lt;code&gt;.loc&lt;/code&gt; vs &lt;code&gt;.iloc&lt;/code&gt; (Interview Favorite)&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Method&lt;/th&gt;
+&lt;th&gt;Based on&lt;/th&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;.loc&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;labels&lt;/td&gt;
+&lt;td&gt;df.loc[0] ❌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;.iloc&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;positions&lt;/td&gt;
+&lt;td&gt;df.iloc[0] ✅&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Interviewers love asking this.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-boolean-filtering-sql-where-equivalent&#34;&gt;🔎 Boolean Filtering (SQL WHERE Equivalent)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Players older than 30
+df[df[&amp;quot;age&amp;quot;] &amp;gt; 30]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Real-world usage:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Filter active users&lt;/li&gt;
+&lt;li&gt;Find failed experiments&lt;/li&gt;
+&lt;li&gt;Analyze edge cases&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-query--clean--readable-filtering&#34;&gt;🧮 &lt;code&gt;.query()&lt;/code&gt; — Clean &amp;amp; Readable Filtering&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.query(&amp;quot;goals &amp;gt;= 7 and age &amp;lt; 30&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Why engineers love &lt;code&gt;.query()&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Looks like SQL&lt;/li&gt;
+&lt;li&gt;Cleaner than long boolean chains&lt;/li&gt;
+&lt;li&gt;Easier to debug&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-combining-conditions&#34;&gt;🧩 Combining Conditions&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[(df[&amp;quot;goals&amp;quot;] &amp;gt; 5) &amp;amp; (df[&amp;quot;country&amp;quot;] != &amp;quot;Brazil&amp;quot;)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;⚠️ Must use &lt;code&gt;&amp;amp;&lt;/code&gt; instead of &lt;code&gt;and&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-index-design-very-important&#34;&gt;🧠 Index Design (Very Important)&lt;/h2&gt;
+&lt;p&gt;You can set a meaningful index:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df = df.set_index(&amp;quot;player&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.loc[&amp;quot;Messi&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cleaner&lt;/li&gt;
+&lt;li&gt;Faster lookup&lt;/li&gt;
+&lt;li&gt;Less error-prone&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
+  &lt;summary&gt;Why index design matters in production?&lt;/summary&gt;
+  &lt;p&gt;Good index = clear logic + faster access + fewer bugs&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-real-world-use-case-meta--openai-style&#34;&gt;🧪 Real-World Use Case (Meta / OpenAI Style)&lt;/h2&gt;
+&lt;p&gt;Imagine this DataFrame:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Rows = model experiments&lt;/li&gt;
+&lt;li&gt;Columns = loss, accuracy, timestamp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Engineers use Pandas to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Filter failed runs&lt;/li&gt;
+&lt;li&gt;Compare metrics&lt;/li&gt;
+&lt;li&gt;Debug data leakage&lt;/li&gt;
+&lt;li&gt;Sanity-check training data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Before scaling → Pandas first.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-common-pandas-patterns-you-must-know&#34;&gt;📦 Common Pandas Patterns You MUST Know&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.head()
+df.tail()
+df.shape
+df.columns
+df.info()
+df.describe()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;These are used &lt;strong&gt;daily&lt;/strong&gt; by professionals.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interview-insight&#34;&gt;🧠 Interview Insight&lt;/h2&gt;
+&lt;p&gt;Interviewers expect you to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Know &lt;code&gt;.loc&lt;/code&gt; vs &lt;code&gt;.iloc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Filter rows correctly&lt;/li&gt;
+&lt;li&gt;Avoid chained indexing&lt;/li&gt;
+&lt;li&gt;Write readable Pandas code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Clean Pandas code = clean thinking.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-summary&#34;&gt;🏁 Summary&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Series = labeled vector&lt;/li&gt;
+&lt;li&gt;DataFrame = table&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.loc&lt;/code&gt; = label-based&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.iloc&lt;/code&gt; = position-based&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.query()&lt;/code&gt; = readable filtering&lt;/li&gt;
+&lt;li&gt;Indexing = design decision&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Master these, and you already think like a data engineer.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-next-chapter&#34;&gt;🚀 Next Chapter&lt;/h2&gt;
+&lt;p&gt;👉 &lt;strong&gt;DE101-PD03 — GroupBy, Aggregation, and Analytics Thinking&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is where Pandas becomes powerful.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -912,6 +1818,487 @@ It minimizes loss.&lt;/strong&gt;&lt;/p&gt;
     </item>
     
     <item>
+      <title>CS101-LC03 — Python for Interviews</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc03-python-recap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc03-python-recap/</guid>
+      <description>&lt;h2 id=&#34;-why-python-matters-in-interviews&#34;&gt;🎯 Why Python Matters in Interviews&lt;/h2&gt;
+&lt;p&gt;Python is not just a language.&lt;br&gt;
+It is a &lt;strong&gt;thinking tool&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Interviewers use Python to test:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clarity of thought&lt;/li&gt;
+&lt;li&gt;Data structure mastery&lt;/li&gt;
+&lt;li&gt;Algorithmic intuition&lt;/li&gt;
+&lt;li&gt;Code readability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-core-python-philosophy&#34;&gt;🧠 Core Python Philosophy&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Simple is better than complex.&lt;br&gt;
+Readability counts.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If your code is easy to read, it is easy to debug and scale.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-iteration-patterns-fundamental&#34;&gt;🔁 Iteration Patterns (Fundamental)&lt;/h2&gt;
+&lt;h3 id=&#34;looping-over-values&#34;&gt;Looping Over Values&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for x in arr:
+    print(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;looping-with-index&#34;&gt;Looping With Index&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i, x in enumerate(arr):
+    print(i, x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;looping-in-reverse&#34;&gt;Looping in Reverse&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for x in reversed(arr):
+    print(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-containers-in-python&#34;&gt;🧺 Containers in Python&lt;/h2&gt;
+&lt;h3 id=&#34;list-ordered-mutable&#34;&gt;List (Ordered, Mutable)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;nums = [1, 2, 3]
+nums.append(4)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Order matters&lt;/li&gt;
+&lt;li&gt;Frequent appends&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;tuple-ordered-immutable&#34;&gt;Tuple (Ordered, Immutable)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;point = (3, 4)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data should not change&lt;/li&gt;
+&lt;li&gt;Hashable keys&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;set-unique-elements&#34;&gt;Set (Unique Elements)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seen = set()
+seen.add(1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Deduplication&lt;/li&gt;
+&lt;li&gt;Fast membership test&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;⏱️ Average lookup: &lt;strong&gt;O(1)&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;dictionary-key--value&#34;&gt;Dictionary (Key → Value)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;freq = {}
+for x in arr:
+    freq[x] = freq.get(x, 0) + 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Counting&lt;/li&gt;
+&lt;li&gt;Mapping&lt;/li&gt;
+&lt;li&gt;Fast lookup&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
+  &lt;summary&gt;Why dictionaries are powerful?&lt;/summary&gt;
+  &lt;p&gt;They use hash tables, giving &lt;strong&gt;O(1)&lt;/strong&gt; average access time.&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-searching-patterns&#34;&gt;🔍 Searching Patterns&lt;/h2&gt;
+&lt;h3 id=&#34;linear-search&#34;&gt;Linear Search&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def linear_search(arr, target):
+    for x in arr:
+        if x == target:
+            return True
+    return False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;⏱️ O(n)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;binary-search-sorted-array&#34;&gt;Binary Search (Sorted Array)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def binary_search(arr, target):
+    l, r = 0, len(arr) - 1
+
+    while l &amp;lt;= r:
+        mid = (l + r) // 2
+        if arr[mid] == target:
+            return True
+        elif arr[mid] &amp;lt; target:
+            l = mid + 1
+        else:
+            r = mid - 1
+
+    return False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;⏱️ O(log n)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-vector-operations-ai-foundation&#34;&gt;🧮 Vector Operations (AI Foundation)&lt;/h2&gt;
+&lt;h3 id=&#34;vector-addition&#34;&gt;Vector Addition&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def add_vectors(a, b):
+    return [a[i] + b[i] for i in range(len(a))]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;dot-product&#34;&gt;Dot Product&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def dot(a, b):
+    return sum(a[i] * b[i] for i in range(len(a)))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Used in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Neural networks&lt;/li&gt;
+&lt;li&gt;Similarity&lt;/li&gt;
+&lt;li&gt;Attention&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-matrix-basics-2d-lists&#34;&gt;🧱 Matrix Basics (2D Lists)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;matrix-traversal&#34;&gt;Matrix Traversal&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for row in matrix:
+    for val in row:
+        print(val)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;matrix-multiplication-interview-classic&#34;&gt;Matrix Multiplication (Interview Classic)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def matmul(A, B):
+    result = [[0]*len(B[0]) for _ in range(len(A))]
+
+    for i in range(len(A)):
+        for j in range(len(B[0])):
+            for k in range(len(B)):
+                result[i][j] += A[i][k] * B[k][j]
+
+    return result
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;⏱️ O(n³)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-functions--clean-design&#34;&gt;🧠 Functions &amp;amp; Clean Design&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def square(x: int) -&amp;gt; int:
+    return x * x
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Why types help:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clarity&lt;/li&gt;
+&lt;li&gt;Debugging&lt;/li&gt;
+&lt;li&gt;Documentation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-classes--objects-very-important&#34;&gt;🧱 Classes &amp;amp; Objects (VERY IMPORTANT)&lt;/h2&gt;
+&lt;h3 id=&#34;defining-a-class&#34;&gt;Defining a Class&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class Vector:
+    def __init__(self, values):
+        self.values = values
+
+    def dot(self, other):
+        return sum(a*b for a, b in zip(self.values, other.values))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;using-the-class&#34;&gt;Using the Class&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;v1 = Vector([1, 2, 3])
+v2 = Vector([4, 5, 6])
+print(v1.dot(v2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-inheritance-interview-favorite&#34;&gt;🧬 Inheritance (Interview Favorite)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class Matrix(Vector):
+    def shape(self):
+        return (len(self.values), len(self.values[0]))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Why inheritance matters:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Code reuse&lt;/li&gt;
+&lt;li&gt;Abstraction&lt;/li&gt;
+&lt;li&gt;Design thinking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-pythonic-tricks-interviewers-love&#34;&gt;🧠 Pythonic Tricks Interviewers Love&lt;/h2&gt;
+&lt;h3 id=&#34;list-comprehension&#34;&gt;List Comprehension&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;squares = [x*x for x in range(10)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;dictionary-comprehension&#34;&gt;Dictionary Comprehension&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;freq = {x: arr.count(x) for x in arr}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;any--all&#34;&gt;Any / All&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;any(x &amp;gt; 0 for x in arr)
+all(x &amp;gt; 0 for x in arr)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-common-interview-mistakes&#34;&gt;🚨 Common Interview Mistakes&lt;/h2&gt;
+&lt;p&gt;❌ Overcomplicating
+❌ Ignoring edge cases
+❌ Forgetting time complexity
+❌ Writing unreadable code&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-interview-advice&#34;&gt;🏁 Final Interview Advice&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Python interviews are not about syntax.
+They are about &lt;strong&gt;how you think&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you master:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Containers&lt;/li&gt;
+&lt;li&gt;Loops&lt;/li&gt;
+&lt;li&gt;Functions&lt;/li&gt;
+&lt;li&gt;Classes&lt;/li&gt;
+&lt;li&gt;Vectors &amp;amp; matrices&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You are &lt;strong&gt;interview-ready&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-congratulations&#34;&gt;🎉 Congratulations&lt;/h2&gt;
+&lt;p&gt;This chapter alone covers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CS fundamentals&lt;/li&gt;
+&lt;li&gt;LeetCode readiness&lt;/li&gt;
+&lt;li&gt;AI mathematical intuition&lt;/li&gt;
+&lt;li&gt;Clean software design&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You’re officially dangerous now 😄🔥&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DE101-PD03 — Data Cleaning &amp; Transformation (Production Mindset)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd03-data-cleaning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd03-data-cleaning/</guid>
+      <description>&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~60 minutes&lt;/p&gt;
+&lt;h2 id=&#34;-why-data-cleaning-is-the-real-job&#34;&gt;🎯 Why Data Cleaning Is the Real Job&lt;/h2&gt;
+&lt;p&gt;In the real world:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;70–80% of data work = cleaning &amp;amp; transformation&lt;/li&gt;
+&lt;li&gt;Models fail more often due to &lt;strong&gt;bad data&lt;/strong&gt;, not bad algorithms&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;At companies like &lt;strong&gt;Google, Meta, OpenAI&lt;/strong&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;If your data is wrong, your model is wrong.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-is-data-cleaning&#34;&gt;🧠 What Is Data Cleaning?&lt;/h2&gt;
+&lt;p&gt;Data cleaning means:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Making data &lt;strong&gt;usable&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Making assumptions &lt;strong&gt;explicit&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Removing ambiguity&lt;/li&gt;
+&lt;li&gt;Preventing silent bugs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-common-real-world-data-problems&#34;&gt;🧹 Common Real-World Data Problems&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Problem&lt;/th&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Missing values&lt;/td&gt;
+&lt;td&gt;NaN age, null clicks&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Wrong data type&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;30&amp;rdquo; instead of 30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Inconsistent labels&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;USA&amp;rdquo;, &amp;ldquo;U.S.&amp;rdquo;, &amp;ldquo;United States&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Duplicate rows&lt;/td&gt;
+&lt;td&gt;Same user logged twice&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Outliers&lt;/td&gt;
+&lt;td&gt;Age = 999&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-example-dataset-user-analytics&#34;&gt;📊 Example Dataset (User Analytics)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+import numpy as np
+
+data = {
+    &amp;quot;user_id&amp;quot;: [1, 2, 3, 3],
+    &amp;quot;age&amp;quot;: [25, None, &amp;quot;30&amp;quot;, 30],
+    &amp;quot;country&amp;quot;: [&amp;quot;US&amp;quot;, &amp;quot;USA&amp;quot;, &amp;quot;us&amp;quot;, &amp;quot;USA&amp;quot;],
+    &amp;quot;clicks&amp;quot;: [10, np.nan, 5, 5]
+}
+
+df = pd.DataFrame(data)
+df
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-step-1-inspect-before-cleaning-critical&#34;&gt;🔍 Step 1: Inspect Before Cleaning (Critical)&lt;/h2&gt;
+&lt;p&gt;Never clean blindly.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.info()
+df.describe(include=&amp;quot;all&amp;quot;)
+df.isna().sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This answers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Which columns are broken?&lt;/li&gt;
+&lt;li&gt;How many missing values?&lt;/li&gt;
+&lt;li&gt;Are types correct?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-removing-missing-data-dropna&#34;&gt;🗑️ Removing Missing Data (&lt;code&gt;dropna&lt;/code&gt;)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.dropna()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;⚠️ Dangerous in production:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You may delete important users&lt;/li&gt;
+&lt;li&gt;Always know &lt;strong&gt;why&lt;/strong&gt; you drop&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Better:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.dropna(subset=[&amp;quot;age&amp;quot;])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-filling-missing-data-fillna&#34;&gt;🩹 Filling Missing Data (&lt;code&gt;fillna&lt;/code&gt;)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;clicks&amp;quot;] = df[&amp;quot;clicks&amp;quot;].fillna(0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Common strategies:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mean / median (numeric)&lt;/li&gt;
+&lt;li&gt;Mode (categorical)&lt;/li&gt;
+&lt;li&gt;Zero (counts)&lt;/li&gt;
+&lt;li&gt;Forward fill (time series)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-fixing-data-types-astype&#34;&gt;🔢 Fixing Data Types (&lt;code&gt;astype&lt;/code&gt;)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;age&amp;quot;] = df[&amp;quot;age&amp;quot;].astype(int)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This often fails → must clean first:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;age&amp;quot;] = pd.to_numeric(df[&amp;quot;age&amp;quot;], errors=&amp;quot;coerce&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Engineers always expect type issues.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-renaming-for-clarity&#34;&gt;🏷️ Renaming for Clarity&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.rename(columns={&amp;quot;clicks&amp;quot;: &amp;quot;num_clicks&amp;quot;})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Why this matters:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Self-documenting code&lt;/li&gt;
+&lt;li&gt;Fewer misunderstandings&lt;/li&gt;
+&lt;li&gt;Cleaner downstream pipelines&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-deduplication-very-common&#34;&gt;🧠 Deduplication (Very Common)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.drop_duplicates(subset=[&amp;quot;user_id&amp;quot;])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Used for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;User logs&lt;/li&gt;
+&lt;li&gt;Event streams&lt;/li&gt;
+&lt;li&gt;Experiment tracking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-normalizing-categorical-data&#34;&gt;🌍 Normalizing Categorical Data&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;country&amp;quot;] = (
+    df[&amp;quot;country&amp;quot;]
+    .str.lower()
+    .replace({&amp;quot;us&amp;quot;: &amp;quot;usa&amp;quot;})
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Small inconsistency → huge analytics bug.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-feature-transformation&#34;&gt;🔄 Feature Transformation&lt;/h2&gt;
+&lt;p&gt;Create new features from old ones:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;is_active&amp;quot;] = df[&amp;quot;num_clicks&amp;quot;] &amp;gt; 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is &lt;strong&gt;feature engineering&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-outlier-handling&#34;&gt;🧪 Outlier Handling&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df = df[df[&amp;quot;age&amp;quot;] &amp;lt; 100]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Outliers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Break averages&lt;/li&gt;
+&lt;li&gt;Break models&lt;/li&gt;
+&lt;li&gt;Must be justified, not guessed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-assign--functional-style&#34;&gt;🧩 &lt;code&gt;.assign()&lt;/code&gt; — Functional Style&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df = df.assign(
+    age_next_year=lambda x: x[&amp;quot;age&amp;quot;] + 1,
+    clicks_per_age=lambda x: x[&amp;quot;num_clicks&amp;quot;] / x[&amp;quot;age&amp;quot;]
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;No mutation. Clear logic.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-method-chaining-professional-style&#34;&gt;🔗 Method Chaining (Professional Style)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df = (
+    df
+    .drop_duplicates(&amp;quot;user_id&amp;quot;)
+    .assign(
+        age=lambda x: pd.to_numeric(x[&amp;quot;age&amp;quot;], errors=&amp;quot;coerce&amp;quot;),
+        country=lambda x: x[&amp;quot;country&amp;quot;].str.lower()
+    )
+    .dropna(subset=[&amp;quot;age&amp;quot;])
+    .query(&amp;quot;age &amp;lt; 100&amp;quot;)
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is how &lt;strong&gt;production Pandas code looks&lt;/strong&gt;.&lt;/p&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
+  &lt;summary&gt;Why method chaining is preferred in real projects?&lt;/summary&gt;
+  &lt;p&gt;Readable, debuggable, testable, reproducible&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-pipeline-thinking-interview-gold&#34;&gt;🧠 Pipeline Thinking (Interview Gold)&lt;/h2&gt;
+&lt;p&gt;Engineers think in pipelines:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Load data&lt;/li&gt;
+&lt;li&gt;Inspect&lt;/li&gt;
+&lt;li&gt;Clean&lt;/li&gt;
+&lt;li&gt;Transform&lt;/li&gt;
+&lt;li&gt;Validate&lt;/li&gt;
+&lt;li&gt;Export&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Each step should be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Explicit&lt;/li&gt;
+&lt;li&gt;Reproducible&lt;/li&gt;
+&lt;li&gt;Testable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-validation-checks-often-missed&#34;&gt;🧪 Validation Checks (Often Missed)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;assert df[&amp;quot;age&amp;quot;].min() &amp;gt; 0
+assert df[&amp;quot;user_id&amp;quot;].is_unique
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;These prevent silent failures.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-real-world-case-meta--openai&#34;&gt;🏢 Real-World Case (Meta / OpenAI)&lt;/h2&gt;
+&lt;p&gt;Before training models:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pandas pipeline cleans data&lt;/li&gt;
+&lt;li&gt;Validates assumptions&lt;/li&gt;
+&lt;li&gt;Logs anomalies&lt;/li&gt;
+&lt;li&gt;Produces clean tables&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Only then → Spark / TensorFlow / PyTorch.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-common-beginner-mistakes&#34;&gt;⚠️ Common Beginner Mistakes&lt;/h2&gt;
+&lt;p&gt;❌ Overusing &lt;code&gt;dropna()&lt;/code&gt;
+❌ Ignoring data types
+❌ Modifying DataFrame in-place blindly
+❌ No validation checks&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-summary&#34;&gt;🏁 Summary&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Cleaning is the real job&lt;/li&gt;
+&lt;li&gt;Inspect before modifying&lt;/li&gt;
+&lt;li&gt;Be explicit, not clever&lt;/li&gt;
+&lt;li&gt;Method chaining = professional style&lt;/li&gt;
+&lt;li&gt;Pipelines prevent bugs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Good data → good decisions → good models.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-next-chapter&#34;&gt;🚀 Next Chapter&lt;/h2&gt;
+&lt;p&gt;👉 &lt;strong&gt;DE101-PD04 — GroupBy, Aggregation, and Business Analytics&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is where insights are born.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Lecture 04 — Data: The Fuel of AI</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-04-data/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
@@ -1217,6 +2604,556 @@ No experience.&lt;/p&gt;
   &lt;summary&gt;If AI reflects society, what responsibility do we have as data creators?&lt;/summary&gt;
   &lt;p&gt;To be careful, inclusive, and wise.&lt;/p&gt;
 &lt;/details&gt;</description>
+    </item>
+    
+    <item>
+      <title>CS101-LC04 — LeetCode Practice 🧪</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-leetcode-tests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-leetcode-tests/</guid>
+      <description>&lt;h2 id=&#34;-lc-test-01-sorting&#34;&gt;🧩 LC-TEST-01 Sorting&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question&lt;/strong&gt;: Sort an integer array.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[3,1,2]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[1,2,3]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
+  &lt;summary&gt;Solution (Python)&lt;/summary&gt;
+  &lt;p&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def sort_array(nums):
+    return sorted(nums)  # Timsort: O(n log n)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-lc-test-02-prime-number&#34;&gt;🧮 LC-TEST-02 Prime Number&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question&lt;/strong&gt;: Check if n is prime.&lt;/p&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
+  &lt;summary&gt;Solution&lt;/summary&gt;
+  &lt;p&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def is_prime(n):
+    if n &amp;lt;= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-lc-test-03-candy-greedy&#34;&gt;🍬 LC-TEST-03 Candy (Greedy)&lt;/h2&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
+  &lt;summary&gt;Idea&lt;/summary&gt;
+  &lt;p&gt;Use two passes (left → right, right → left)&lt;/p&gt;
+&lt;/details&gt;</description>
+    </item>
+    
+    <item>
+      <title>DE101-PD04 — GroupBy, Aggregation &amp; Joins (Analytics &amp; Interview Mastery)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd04-groupby-joins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd04-groupby-joins/</guid>
+      <description>&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~75–90 minutes&lt;/p&gt;
+&lt;h2 id=&#34;-why-this-chapter-is-critical&#34;&gt;🎯 Why This Chapter Is Critical&lt;/h2&gt;
+&lt;p&gt;If Pandas were a weapon:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cleaning = sharpening&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GroupBy &amp;amp; Join = actual power&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Most real-world questions are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“Which group performs best?”&lt;/li&gt;
+&lt;li&gt;“How do metrics change by segment?”&lt;/li&gt;
+&lt;li&gt;“How do we combine datasets correctly?”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-groupby-mental-model-most-important-idea&#34;&gt;🧠 GroupBy Mental Model (Most Important Idea)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;GroupBy = Split → Apply → Combine&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Split data into groups&lt;/li&gt;
+&lt;li&gt;Apply aggregation or transformation&lt;/li&gt;
+&lt;li&gt;Combine results into a new table&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This mindset works in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pandas&lt;/li&gt;
+&lt;li&gt;SQL&lt;/li&gt;
+&lt;li&gt;Spark&lt;/li&gt;
+&lt;li&gt;BigQuery&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-example-dataset-e-commerce-analytics&#34;&gt;📊 Example Dataset (E-Commerce Analytics)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+
+data = {
+    &amp;quot;user_id&amp;quot;: [1, 2, 1, 3, 2, 3, 1],
+    &amp;quot;country&amp;quot;: [&amp;quot;US&amp;quot;, &amp;quot;US&amp;quot;, &amp;quot;US&amp;quot;, &amp;quot;FR&amp;quot;, &amp;quot;US&amp;quot;, &amp;quot;FR&amp;quot;, &amp;quot;US&amp;quot;],
+    &amp;quot;revenue&amp;quot;: [100, 200, 150, 80, 120, 60, 90],
+    &amp;quot;device&amp;quot;: [&amp;quot;mobile&amp;quot;, &amp;quot;desktop&amp;quot;, &amp;quot;mobile&amp;quot;, &amp;quot;mobile&amp;quot;, &amp;quot;mobile&amp;quot;, &amp;quot;desktop&amp;quot;, &amp;quot;desktop&amp;quot;]
+}
+
+df = pd.DataFrame(data)
+df
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-basic-groupby&#34;&gt;📦 Basic GroupBy&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;country&amp;quot;)[&amp;quot;revenue&amp;quot;].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;output&#34;&gt;Output&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;country
+FR    140
+US    660
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This answers:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“How much revenue comes from each country?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-multiple-aggregations&#34;&gt;🔢 Multiple Aggregations&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;country&amp;quot;)[&amp;quot;revenue&amp;quot;].agg([&amp;quot;sum&amp;quot;, &amp;quot;mean&amp;quot;, &amp;quot;count&amp;quot;])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Used daily in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;KPI dashboards&lt;/li&gt;
+&lt;li&gt;Business reports&lt;/li&gt;
+&lt;li&gt;Model evaluation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-groupby-multiple-columns&#34;&gt;🧠 GroupBy Multiple Columns&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby([&amp;quot;country&amp;quot;, &amp;quot;device&amp;quot;])[&amp;quot;revenue&amp;quot;].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now you are thinking like an analyst.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-resetting-index-very-common&#34;&gt;🧮 Resetting Index (Very Common)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;country&amp;quot;, as_index=False)[&amp;quot;revenue&amp;quot;].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Or:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;country&amp;quot;)[&amp;quot;revenue&amp;quot;].sum().reset_index()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This makes output usable for joins.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-transform--keep-original-shape&#34;&gt;🧩 &lt;code&gt;.transform()&lt;/code&gt; — Keep Original Shape&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;country_avg_revenue&amp;quot;] = (
+    df.groupby(&amp;quot;country&amp;quot;)[&amp;quot;revenue&amp;quot;].transform(&amp;quot;mean&amp;quot;)
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You need group stats per row&lt;/li&gt;
+&lt;li&gt;Feature engineering for ML&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-apply--flexible-but-dangerous&#34;&gt;🔁 &lt;code&gt;.apply()&lt;/code&gt; — Flexible but Dangerous&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;country&amp;quot;).apply(lambda x: x[&amp;quot;revenue&amp;quot;].max() - x[&amp;quot;revenue&amp;quot;].min())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;⚠️ Powerful but slower.
+Use only when aggregation cannot express logic.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sql-vs-pandas-groupby&#34;&gt;🧠 SQL vs Pandas GroupBy&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;SQL&lt;/th&gt;
+&lt;th&gt;Pandas&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;GROUP BY&lt;/td&gt;
+&lt;td&gt;groupby()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SUM&lt;/td&gt;
+&lt;td&gt;sum()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AVG&lt;/td&gt;
+&lt;td&gt;mean()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;COUNT&lt;/td&gt;
+&lt;td&gt;count()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
+  &lt;summary&gt;SQL vs Pandas GroupBy?&lt;/summary&gt;
+  &lt;p&gt;Conceptually identical — only syntax differs&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-joins-matter&#34;&gt;🔗 Why Joins Matter&lt;/h2&gt;
+&lt;p&gt;Real-world data is &lt;strong&gt;never in one table&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You often have:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;users table&lt;/li&gt;
+&lt;li&gt;orders table&lt;/li&gt;
+&lt;li&gt;events table&lt;/li&gt;
+&lt;li&gt;experiments table&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Joins connect the story.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-example-tables&#34;&gt;📊 Example Tables&lt;/h2&gt;
+&lt;h3 id=&#34;users&#34;&gt;Users&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;users = pd.DataFrame({
+    &amp;quot;user_id&amp;quot;: [1, 2, 3],
+    &amp;quot;country&amp;quot;: [&amp;quot;US&amp;quot;, &amp;quot;US&amp;quot;, &amp;quot;FR&amp;quot;]
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;orders&#34;&gt;Orders&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;orders = pd.DataFrame({
+    &amp;quot;order_id&amp;quot;: [101, 102, 103, 104],
+    &amp;quot;user_id&amp;quot;: [1, 2, 1, 4],
+    &amp;quot;amount&amp;quot;: [250, 300, 150, 500]
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-inner-join&#34;&gt;🔗 Inner Join&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pd.merge(users, orders, on=&amp;quot;user_id&amp;quot;, how=&amp;quot;inner&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Keeps only matching rows.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-left-join-most-common&#34;&gt;🔗 Left Join (Most Common)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pd.merge(users, orders, on=&amp;quot;user_id&amp;quot;, how=&amp;quot;left&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Used when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Users are primary&lt;/li&gt;
+&lt;li&gt;Orders may be missing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-right-join&#34;&gt;🔗 Right Join&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pd.merge(users, orders, on=&amp;quot;user_id&amp;quot;, how=&amp;quot;right&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Less common but useful for audits.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-outer-join&#34;&gt;🔗 Outer Join&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pd.merge(users, orders, on=&amp;quot;user_id&amp;quot;, how=&amp;quot;outer&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Used for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data reconciliation&lt;/li&gt;
+&lt;li&gt;Finding missing relationships&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-join-on-different-column-names&#34;&gt;🧠 Join on Different Column Names&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pd.merge(
+    users,
+    orders,
+    left_on=&amp;quot;user_id&amp;quot;,
+    right_on=&amp;quot;user_id&amp;quot;
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In real data, column names rarely match.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-join-explosion-critical-warning&#34;&gt;⚠️ Join Explosion (Critical Warning)&lt;/h2&gt;
+&lt;p&gt;Many-to-many joins can &lt;strong&gt;multiply rows&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;users.merge(orders, on=&amp;quot;user_id&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Always ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“What is the cardinality?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-validation-after-join&#34;&gt;🧪 Validation After Join&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;assert merged[&amp;quot;user_id&amp;quot;].notna().all()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Production engineers always validate joins.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-real-world-case-google--meta--openai&#34;&gt;🧠 Real-World Case (Google / Meta / OpenAI)&lt;/h2&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Join user metadata&lt;/li&gt;
+&lt;li&gt;Join experiment assignment&lt;/li&gt;
+&lt;li&gt;Aggregate metrics per variant&lt;/li&gt;
+&lt;li&gt;Decide product direction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bad join → wrong decision → $$$ lost&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interview-patterns&#34;&gt;🧠 Interview Patterns&lt;/h2&gt;
+&lt;p&gt;Interviewers test:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GroupBy logic&lt;/li&gt;
+&lt;li&gt;Correct join type&lt;/li&gt;
+&lt;li&gt;Index reset&lt;/li&gt;
+&lt;li&gt;Avoiding row explosion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-summary&#34;&gt;🏁 Summary&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;GroupBy = Split → Apply → Combine&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.agg()&lt;/code&gt; for metrics&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.transform()&lt;/code&gt; for ML features&lt;/li&gt;
+&lt;li&gt;Joins connect reality&lt;/li&gt;
+&lt;li&gt;Validate after join&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you master this chapter,
+you can survive &lt;strong&gt;most analytics interviews&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-next-chapter&#34;&gt;🚀 Next Chapter&lt;/h2&gt;
+&lt;p&gt;👉 &lt;strong&gt;DE101-PD05 — Time Series &amp;amp; Window Operations&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is where senior-level thinking begins.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-01 — Sorting an Array</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/</guid>
+      <description>&lt;h2 id=&#34;-problem-statement&#34;&gt;🧩 Problem Statement&lt;/h2&gt;
+&lt;p&gt;Given an integer array &lt;code&gt;nums&lt;/code&gt;, return the array sorted in &lt;strong&gt;ascending order&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This problem looks simple, but interviewers often use it to evaluate:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Your understanding of &lt;strong&gt;algorithmic trade-offs&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Your knowledge of &lt;strong&gt;time vs space complexity&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Whether you know &lt;strong&gt;when NOT to use built-in functions&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sample-input---output&#34;&gt;📥 Sample Input / 📤 Output&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Input&lt;/th&gt;
+&lt;th&gt;Output&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[3, 1, 2]&lt;/td&gt;
+&lt;td&gt;[1, 2, 3]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[5, 4, 3, 2, 1]&lt;/td&gt;
+&lt;td&gt;[1, 2, 3, 4, 5]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[1]&lt;/td&gt;
+&lt;td&gt;[1]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[]&lt;/td&gt;
+&lt;td&gt;[]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[2, 2, 1]&lt;/td&gt;
+&lt;td&gt;[1, 2, 2]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interviewer-insight-read-this-first&#34;&gt;🧠 Interviewer Insight (Read This First)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;❗ &lt;strong&gt;Important:&lt;/strong&gt;&lt;br&gt;
+In real interviews, the question is &lt;strong&gt;not&lt;/strong&gt; “Can you sort an array?”&lt;br&gt;
+It is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Which sorting algorithm do you choose?&lt;/li&gt;
+&lt;li&gt;Why is it optimal &lt;strong&gt;for this scenario&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;What are the time &amp;amp; space trade-offs?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Below we show &lt;strong&gt;all major sorting algorithms&lt;/strong&gt; with &lt;strong&gt;clear intuition&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-1--python-built-in-sort-recommended-in-practice&#34;&gt;✅ Approach 1 — Python Built-in Sort (Recommended in Practice)&lt;/h2&gt;
+&lt;h3 id=&#34;-idea&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;p&gt;Python uses &lt;strong&gt;Timsort&lt;/strong&gt;, a hybrid of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Merge Sort&lt;/li&gt;
+&lt;li&gt;Insertion Sort&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Stable&lt;/li&gt;
+&lt;li&gt;Extremely fast in real-world data&lt;/li&gt;
+&lt;li&gt;Optimized for partially sorted arrays&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-code&#34;&gt;🧑‍💻 Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def sort_array(nums):
+    # Python&#39;s built-in sort uses Timsort
+    return sorted(nums)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n log n)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(n)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟢 &lt;strong&gt;Use this in interviews unless explicitly forbidden.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-2--bubble-sort-educational-only&#34;&gt;🧩 Approach 2 — Bubble Sort (Educational Only)&lt;/h2&gt;
+&lt;h3 id=&#34;-idea-1&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;p&gt;Repeatedly swap adjacent elements if they are in the wrong order.&lt;/p&gt;
+&lt;p&gt;Think of large numbers &lt;strong&gt;“bubbling up”&lt;/strong&gt; to the end.&lt;/p&gt;
+&lt;h3 id=&#34;-code-1&#34;&gt;🧑‍💻 Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def bubble_sort(nums):
+    n = len(nums)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if nums[j] &amp;gt; nums[j + 1]:
+                nums[j], nums[j + 1] = nums[j + 1], nums[j]
+    return nums
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity-1&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n²)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🔴 Rarely used in practice, but good for teaching basics.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-3--selection-sort&#34;&gt;🧩 Approach 3 — Selection Sort&lt;/h2&gt;
+&lt;h3 id=&#34;-idea-2&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;p&gt;Repeatedly find the &lt;strong&gt;minimum element&lt;/strong&gt; and move it to the front.&lt;/p&gt;
+&lt;h3 id=&#34;-code-2&#34;&gt;🧑‍💻 Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def selection_sort(nums):
+    n = len(nums)
+    for i in range(n):
+        min_idx = i
+        for j in range(i + 1, n):
+            if nums[j] &amp;lt; nums[min_idx]:
+                min_idx = j
+        nums[i], nums[min_idx] = nums[min_idx], nums[i]
+    return nums
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity-2&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n²)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟡 Simple but inefficient for large data.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-4--insertion-sort&#34;&gt;🧩 Approach 4 — Insertion Sort&lt;/h2&gt;
+&lt;h3 id=&#34;-idea-3&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;p&gt;Build the sorted array &lt;strong&gt;one element at a time&lt;/strong&gt;, similar to sorting playing cards.&lt;/p&gt;
+&lt;p&gt;Very efficient for &lt;strong&gt;nearly sorted arrays&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;-code-3&#34;&gt;🧑‍💻 Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def insertion_sort(nums):
+    for i in range(1, len(nums)):
+        key = nums[i]
+        j = i - 1
+        while j &amp;gt;= 0 and nums[j] &amp;gt; key:
+            nums[j + 1] = nums[j]
+            j -= 1
+        nums[j + 1] = key
+    return nums
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity-3&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n²) worst case, &lt;strong&gt;O(n)&lt;/strong&gt; best case&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟢 Excellent when data is almost sorted.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-5--merge-sort-divide--conquer&#34;&gt;🧩 Approach 5 — Merge Sort (Divide &amp;amp; Conquer)&lt;/h2&gt;
+&lt;h3 id=&#34;-idea-4&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Divide the array into halves&lt;/li&gt;
+&lt;li&gt;Sort each half&lt;/li&gt;
+&lt;li&gt;Merge them back together&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-code-4&#34;&gt;🧑‍💻 Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def merge_sort(nums):
+    if len(nums) &amp;lt;= 1:
+        return nums
+
+    mid = len(nums) // 2
+    left = merge_sort(nums[:mid])
+    right = merge_sort(nums[mid:])
+
+    return merge(left, right)
+
+def merge(left, right):
+    result = []
+    i = j = 0
+
+    while i &amp;lt; len(left) and j &amp;lt; len(right):
+        if left[i] &amp;lt; right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity-4&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n log n)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(n)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟢 Very popular in interviews.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-6--quick-sort-average-fastest&#34;&gt;🧩 Approach 6 — Quick Sort (Average Fastest)&lt;/h2&gt;
+&lt;h3 id=&#34;-idea-5&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Pick a pivot&lt;/li&gt;
+&lt;li&gt;Partition elements into smaller &amp;amp; larger&lt;/li&gt;
+&lt;li&gt;Recursively sort&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-code-5&#34;&gt;🧑‍💻 Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def quick_sort(nums):
+    if len(nums) &amp;lt;= 1:
+        return nums
+
+    pivot = nums[len(nums) // 2]
+    left = [x for x in nums if x &amp;lt; pivot]
+    middle = [x for x in nums if x == pivot]
+    right = [x for x in nums if x &amp;gt; pivot]
+
+    return quick_sort(left) + middle + quick_sort(right)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity-5&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n log n) average, O(n²) worst&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(n)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟢 Very fast in practice, but discuss worst case.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-interview-advice&#34;&gt;🎯 Final Interview Advice&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Situation&lt;/th&gt;
+&lt;th&gt;Best Choice&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Real-world code&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;sorted()&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Teaching / basics&lt;/td&gt;
+&lt;td&gt;Bubble / Selection&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nearly sorted data&lt;/td&gt;
+&lt;td&gt;Insertion Sort&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Guaranteed performance&lt;/td&gt;
+&lt;td&gt;Merge Sort&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Average fastest&lt;/td&gt;
+&lt;td&gt;Quick Sort&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💬 &lt;strong&gt;Interview Tip:&lt;/strong&gt;
+Always say &lt;em&gt;why&lt;/em&gt; you choose an algorithm, not just &lt;em&gt;how&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-takeaway&#34;&gt;🧠 Takeaway&lt;/h2&gt;
+&lt;p&gt;Sorting is not about memorizing code.
+It’s about &lt;strong&gt;choosing the right tool for the problem&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This single question can separate:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Junior developers&lt;/li&gt;
+&lt;li&gt;From &lt;strong&gt;strong algorithmic thinkers&lt;/strong&gt; 🚀&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -1573,6 +3510,291 @@ There is only &lt;strong&gt;the right tool for the problem&lt;/strong&gt;.&lt;/p
     </item>
     
     <item>
+      <title>DE101-PD05 — Performance &amp; Production Patterns (From Pandas to Scale)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd05-performance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd05-performance/</guid>
+      <description>&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~90–120 minutes&lt;/p&gt;
+&lt;h2 id=&#34;-why-this-chapter-matters&#34;&gt;🎯 Why This Chapter Matters&lt;/h2&gt;
+&lt;p&gt;Most Pandas tutorials stop at:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Here is how it works”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Real engineers must ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Will this survive production?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Performance mistakes silently:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Waste memory&lt;/li&gt;
+&lt;li&gt;Slow pipelines&lt;/li&gt;
+&lt;li&gt;Break models&lt;/li&gt;
+&lt;li&gt;Crash jobs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This chapter teaches you how professionals think.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-mental-model-pandas-is-vectorized-python&#34;&gt;🧠 Mental Model: Pandas Is Vectorized Python&lt;/h2&gt;
+&lt;p&gt;Pandas is fast &lt;strong&gt;only when&lt;/strong&gt; you let it operate on whole columns.&lt;/p&gt;
+&lt;p&gt;❌ Bad:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i in range(len(df)):
+    df.loc[i, &amp;quot;x&amp;quot;] += 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;✅ Good:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;x&amp;quot;] += 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Vectorization = speed + clarity.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-avoid-python-loops-unless-necessary&#34;&gt;🚫 Avoid Python Loops (Unless Necessary)&lt;/h2&gt;
+&lt;p&gt;Loops move work from C → Python.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Approach&lt;/th&gt;
+&lt;th&gt;Speed&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Python loop&lt;/td&gt;
+&lt;td&gt;❌ slow&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;.apply()&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;⚠️ medium&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Vectorized ops&lt;/td&gt;
+&lt;td&gt;✅ fastest&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-example-conditional-logic&#34;&gt;🧪 Example: Conditional Logic&lt;/h2&gt;
+&lt;p&gt;❌ Slow:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;flag&amp;quot;] = df[&amp;quot;value&amp;quot;].apply(lambda x: 1 if x &amp;gt; 0 else 0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;✅ Fast:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;flag&amp;quot;] = (df[&amp;quot;value&amp;quot;] &amp;gt; 0).astype(int)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-use-the-right-data-types&#34;&gt;🧠 Use the Right Data Types&lt;/h2&gt;
+&lt;p&gt;Wrong dtypes waste memory.&lt;/p&gt;
+&lt;h3 id=&#34;before&#34;&gt;Before&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.info()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;convert-strings-to-categories&#34;&gt;Convert strings to categories&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;country&amp;quot;] = df[&amp;quot;country&amp;quot;].astype(&amp;quot;category&amp;quot;)
+df[&amp;quot;device&amp;quot;] = df[&amp;quot;device&amp;quot;].astype(&amp;quot;category&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This can reduce memory &lt;strong&gt;10×–100×&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-numeric-downcasting&#34;&gt;🧠 Numeric Downcasting&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;age&amp;quot;] = pd.to_numeric(df[&amp;quot;age&amp;quot;], downcast=&amp;quot;integer&amp;quot;)
+df[&amp;quot;revenue&amp;quot;] = pd.to_numeric(df[&amp;quot;revenue&amp;quot;], downcast=&amp;quot;float&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Used in large ETL pipelines.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-memory-profiling&#34;&gt;📦 Memory Profiling&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.memory_usage(deep=True).sum() / 1024**2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Always measure before optimizing.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-copy-vs-view-danger-zone&#34;&gt;🧠 Copy vs View (Danger Zone)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df2 = df[df[&amp;quot;age&amp;quot;] &amp;gt; 18]
+df2[&amp;quot;flag&amp;quot;] = 1  # ⚠️ SettingWithCopyWarning
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Safer:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df2 = df.loc[df[&amp;quot;age&amp;quot;] &amp;gt; 18].copy()
+df2[&amp;quot;flag&amp;quot;] = 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Silent bugs happen here.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-chunk-processing-large-files&#34;&gt;⚙️ Chunk Processing (Large Files)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;chunks = pd.read_csv(&amp;quot;large.csv&amp;quot;, chunksize=100_000)
+
+for chunk in chunks:
+    process(chunk)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Used when data barely fits in memory.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-efficient-joins&#34;&gt;🧠 Efficient Joins&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Join on indexed columns&lt;/li&gt;
+&lt;li&gt;Avoid object dtype keys&lt;/li&gt;
+&lt;li&gt;Filter before join&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;users = users.set_index(&amp;quot;user_id&amp;quot;)
+orders = orders.set_index(&amp;quot;user_id&amp;quot;)
+
+users.join(orders, how=&amp;quot;left&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sorting-is-expensive&#34;&gt;🧠 Sorting Is Expensive&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.sort_values(&amp;quot;timestamp&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sorting is &lt;strong&gt;O(n log n)&lt;/strong&gt;
+Avoid repeated sorts.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-use-query-for-readability&#34;&gt;🧠 Use &lt;code&gt;query()&lt;/code&gt; for Readability&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.query(&amp;quot;country == &#39;US&#39; and revenue &amp;gt; 100&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Often faster and clearer than chained indexing.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-profiling-runtime&#34;&gt;🧪 Profiling Runtime&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;%timeit df[&amp;quot;revenue&amp;quot;].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In production:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Measure&lt;/li&gt;
+&lt;li&gt;Compare&lt;/li&gt;
+&lt;li&gt;Decide&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-parallelism-pandas-is-mostly-single-threaded&#34;&gt;🧠 Parallelism: Pandas Is Mostly Single-Threaded&lt;/h2&gt;
+&lt;p&gt;Workarounds:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Split data&lt;/li&gt;
+&lt;li&gt;Use multiprocessing&lt;/li&gt;
+&lt;li&gt;Or switch tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-when-pandas-is-not-enough&#34;&gt;🚀 When Pandas Is Not Enough&lt;/h2&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
+  &lt;summary&gt;When does Pandas become slow?&lt;/summary&gt;
+  &lt;p&gt;When data no longer fits in memory.&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;At this point, professionals move to:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tool&lt;/th&gt;
+&lt;th&gt;When&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Dask&lt;/td&gt;
+&lt;td&gt;Larger-than-memory Pandas&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spark&lt;/td&gt;
+&lt;td&gt;Distributed clusters&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DuckDB&lt;/td&gt;
+&lt;td&gt;Fast SQL analytics&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Polars&lt;/td&gt;
+&lt;td&gt;Modern fast DataFrame&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-google--meta--openai-pattern&#34;&gt;🧠 Google / Meta / OpenAI Pattern&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Prototype in Pandas&lt;/li&gt;
+&lt;li&gt;Validate logic&lt;/li&gt;
+&lt;li&gt;Optimize&lt;/li&gt;
+&lt;li&gt;Scale to Spark / SQL&lt;/li&gt;
+&lt;li&gt;Monitor in production&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Same logic, different engine.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-real-interview-question&#34;&gt;🧪 Real Interview Question&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Your Pandas pipeline is slow. What do you do?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Expected answer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Measure memory&lt;/li&gt;
+&lt;li&gt;Check dtypes&lt;/li&gt;
+&lt;li&gt;Remove loops&lt;/li&gt;
+&lt;li&gt;Vectorize&lt;/li&gt;
+&lt;li&gt;Reduce joins&lt;/li&gt;
+&lt;li&gt;Scale tool if needed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-golden-rules&#34;&gt;🏁 Golden Rules&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Measure before optimizing&lt;/li&gt;
+&lt;li&gt;Avoid Python loops&lt;/li&gt;
+&lt;li&gt;Control memory&lt;/li&gt;
+&lt;li&gt;Validate joins&lt;/li&gt;
+&lt;li&gt;Think about scale early&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-thought&#34;&gt;🚀 Final Thought&lt;/h2&gt;
+&lt;p&gt;Pandas is not slow.
+&lt;strong&gt;Bad usage is slow.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Engineers who understand performance
+write code that survives real systems.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-next-chapter&#34;&gt;🔜 Next Chapter&lt;/h2&gt;
+&lt;p&gt;👉 &lt;strong&gt;DE101-PD06 — Time Series, Rolling Windows &amp;amp; Feature Engineering&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is where ML &amp;amp; analytics meet.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-02 — Prime Number Check</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/</guid>
+      <description>&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;
+&lt;p&gt;Given an integer &lt;code&gt;n&lt;/code&gt;, determine whether it is a prime number.&lt;/p&gt;
+&lt;h2 id=&#34;sample-input--output&#34;&gt;Sample Input / Output&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Input&lt;/th&gt;
+&lt;th&gt;Output&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;python-solution&#34;&gt;Python Solution&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def is_prime(n):
+    &amp;quot;&amp;quot;&amp;quot;
+    Check whether n is a prime number.
+    &amp;quot;&amp;quot;&amp;quot;
+    if n &amp;lt;= 1:
+        return False
+
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;complexity-analysis&#34;&gt;Complexity Analysis&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Time Complexity: &lt;strong&gt;O(√n)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Space Complexity: &lt;strong&gt;O(1)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
       <title>Lecture 06 — Data Types &amp; Modalities</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-06-data-modalities/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
@@ -1869,6 +4091,447 @@ Data is a simplified shadow of it.&lt;/strong&gt;&lt;/p&gt;
     </item>
     
     <item>
+      <title>DE101-PD06 — Finding Insights with Pandas (From Data to Decisions)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd06/</guid>
+      <description>&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~120 minutes&lt;/p&gt;
+&lt;h2 id=&#34;-goal-of-this-chapter&#34;&gt;🎯 Goal of This Chapter&lt;/h2&gt;
+&lt;p&gt;This chapter teaches &lt;strong&gt;how to think&lt;/strong&gt;, not just how to code.&lt;/p&gt;
+&lt;p&gt;You will learn:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How to ask good questions&lt;/li&gt;
+&lt;li&gt;How to extract insights from data&lt;/li&gt;
+&lt;li&gt;How real companies analyze performance&lt;/li&gt;
+&lt;li&gt;How to communicate findings clearly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-mock-dataset--fifa-world-cup-player-stats&#34;&gt;⚽ Mock Dataset — FIFA World Cup Player Stats&lt;/h2&gt;
+&lt;p&gt;We will use a simplified dataset inspired by &lt;strong&gt;FIFA World Cup matches&lt;/strong&gt;,&lt;br&gt;
+with focus on &lt;strong&gt;Lionel Messi&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+
+data = {
+    &amp;quot;player&amp;quot;: [&amp;quot;Messi&amp;quot;, &amp;quot;Messi&amp;quot;, &amp;quot;Messi&amp;quot;, &amp;quot;Mbappe&amp;quot;, &amp;quot;Mbappe&amp;quot;, &amp;quot;Neymar&amp;quot;, &amp;quot;Modric&amp;quot;, &amp;quot;Messi&amp;quot;],
+    &amp;quot;team&amp;quot;: [&amp;quot;Argentina&amp;quot;, &amp;quot;Argentina&amp;quot;, &amp;quot;Argentina&amp;quot;, &amp;quot;France&amp;quot;, &amp;quot;France&amp;quot;, &amp;quot;Brazil&amp;quot;, &amp;quot;Croatia&amp;quot;, &amp;quot;Argentina&amp;quot;],
+    &amp;quot;match&amp;quot;: [1, 2, 3, 1, 2, 1, 1, 4],
+    &amp;quot;goals&amp;quot;: [1, 2, 1, 2, 1, 1, 0, 1],
+    &amp;quot;assists&amp;quot;: [0, 1, 0, 0, 1, 0, 1, 0],
+    &amp;quot;shots&amp;quot;: [4, 6, 5, 7, 5, 4, 2, 3],
+    &amp;quot;minutes&amp;quot;: [90, 90, 90, 90, 90, 90, 90, 90],
+    &amp;quot;position&amp;quot;: [&amp;quot;FW&amp;quot;, &amp;quot;FW&amp;quot;, &amp;quot;FW&amp;quot;, &amp;quot;FW&amp;quot;, &amp;quot;FW&amp;quot;, &amp;quot;FW&amp;quot;, &amp;quot;MF&amp;quot;, &amp;quot;FW&amp;quot;]
+}
+
+df = pd.DataFrame(data)
+df
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-20-insight-questions-with-answers&#34;&gt;🧠 20 Insight Questions (with Answers)&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q1-how-many-matches-did-each-player-play&#34;&gt;Q1️⃣ How many matches did each player play?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;player&amp;quot;)[&amp;quot;match&amp;quot;].count()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Player usage &amp;amp; reliability.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q2-total-goals-per-player&#34;&gt;Q2️⃣ Total goals per player?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;player&amp;quot;)[&amp;quot;goals&amp;quot;].sum().sort_values(ascending=False)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Who is the main scorer?&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q3-average-goals-per-match&#34;&gt;Q3️⃣ Average goals per match?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;player&amp;quot;)[&amp;quot;goals&amp;quot;].mean()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Consistency vs volume.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q4-who-contributed-most-goals--assists&#34;&gt;Q4️⃣ Who contributed most (goals + assists)?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.assign(contribution=df[&amp;quot;goals&amp;quot;] + df[&amp;quot;assists&amp;quot;]) \
+  .groupby(&amp;quot;player&amp;quot;)[&amp;quot;contribution&amp;quot;].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: True attacking impact.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q5-messis-total-world-cup-impact&#34;&gt;Q5️⃣ Messi’s total World Cup impact?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[df[&amp;quot;player&amp;quot;] == &amp;quot;Messi&amp;quot;][[&amp;quot;goals&amp;quot;, &amp;quot;assists&amp;quot;]].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Player-specific deep dive.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q6-shots-to-goals-efficiency&#34;&gt;Q6️⃣ Shots-to-goals efficiency?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.assign(efficiency=df[&amp;quot;goals&amp;quot;] / df[&amp;quot;shots&amp;quot;]) \
+  .groupby(&amp;quot;player&amp;quot;)[&amp;quot;efficiency&amp;quot;].mean()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Finishing quality.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q7-which-team-scored-the-most-goals&#34;&gt;Q7️⃣ Which team scored the most goals?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;team&amp;quot;)[&amp;quot;goals&amp;quot;].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Team dominance.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q8-messis-share-of-argentina-goals&#34;&gt;Q8️⃣ Messi’s share of Argentina goals?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;total_arg_goals = df[df[&amp;quot;team&amp;quot;] == &amp;quot;Argentina&amp;quot;][&amp;quot;goals&amp;quot;].sum()
+messi_goals = df[df[&amp;quot;player&amp;quot;] == &amp;quot;Messi&amp;quot;][&amp;quot;goals&amp;quot;].sum()
+
+messi_goals / total_arg_goals
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Team dependency on star player.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q9-goals-by-position&#34;&gt;Q9️⃣ Goals by position?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;position&amp;quot;)[&amp;quot;goals&amp;quot;].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Tactical contribution.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q10-average-shots-per-match-per-player&#34;&gt;Q1️⃣0️⃣ Average shots per match per player?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;player&amp;quot;)[&amp;quot;shots&amp;quot;].mean()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Offensive involvement.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q11-which-match-had-the-most-goals&#34;&gt;Q1️⃣1️⃣ Which match had the most goals?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;match&amp;quot;)[&amp;quot;goals&amp;quot;].sum().sort_values(ascending=False)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: High-impact games.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q12-messi-trend-over-matches&#34;&gt;Q1️⃣2️⃣ Messi trend over matches?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[df[&amp;quot;player&amp;quot;] == &amp;quot;Messi&amp;quot;].sort_values(&amp;quot;match&amp;quot;)[[&amp;quot;match&amp;quot;, &amp;quot;goals&amp;quot;]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Performance trajectory.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q13-player-with-best-goals-per-90-minutes&#34;&gt;Q1️⃣3️⃣ Player with best goals per 90 minutes?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.assign(goals_per_90=df[&amp;quot;goals&amp;quot;] / df[&amp;quot;minutes&amp;quot;] * 90) \
+  .groupby(&amp;quot;player&amp;quot;)[&amp;quot;goals_per_90&amp;quot;].mean()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Fair comparison.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q14-assist-leaders&#34;&gt;Q1️⃣4️⃣ Assist leaders?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;player&amp;quot;)[&amp;quot;assists&amp;quot;].sum().sort_values(ascending=False)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Playmaking ability.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q15-messi-vs-mbappe-comparison&#34;&gt;Q1️⃣5️⃣ Messi vs Mbappe comparison?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[df[&amp;quot;player&amp;quot;].isin([&amp;quot;Messi&amp;quot;, &amp;quot;Mbappe&amp;quot;])] \
+  .groupby(&amp;quot;player&amp;quot;)[[&amp;quot;goals&amp;quot;, &amp;quot;assists&amp;quot;, &amp;quot;shots&amp;quot;]].mean()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Superstar comparison.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q16-which-team-relies-most-on-one-player&#34;&gt;Q1️⃣6️⃣ Which team relies most on one player?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;team_totals = df.groupby(&amp;quot;team&amp;quot;)[&amp;quot;goals&amp;quot;].sum()
+player_totals = df.groupby([&amp;quot;team&amp;quot;, &amp;quot;player&amp;quot;])[&amp;quot;goals&amp;quot;].sum()
+
+(player_totals / team_totals).sort_values(ascending=False)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Risk concentration.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q17-match-by-match-contribution-table&#34;&gt;Q1️⃣7️⃣ Match-by-match contribution table?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.assign(contribution=df[&amp;quot;goals&amp;quot;] + df[&amp;quot;assists&amp;quot;]) \
+  .pivot_table(
+      index=&amp;quot;match&amp;quot;,
+      columns=&amp;quot;player&amp;quot;,
+      values=&amp;quot;contribution&amp;quot;,
+      aggfunc=&amp;quot;sum&amp;quot;
+  )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Game-level impact.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q18-who-is-most-consistent-scorer&#34;&gt;Q1️⃣8️⃣ Who is most consistent scorer?&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;player&amp;quot;)[&amp;quot;goals&amp;quot;].std()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Low variance = consistency.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q19-identify-underperformers-high-shots-low-goals&#34;&gt;Q1️⃣9️⃣ Identify underperformers (high shots, low goals)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.assign(conversion=df[&amp;quot;goals&amp;quot;] / df[&amp;quot;shots&amp;quot;]) \
+  .sort_values(&amp;quot;conversion&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: Optimization opportunity.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;q20-executive-summary-table&#34;&gt;Q2️⃣0️⃣ Executive Summary Table&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;player&amp;quot;).agg(
+    matches=(&amp;quot;match&amp;quot;, &amp;quot;count&amp;quot;),
+    goals=(&amp;quot;goals&amp;quot;, &amp;quot;sum&amp;quot;),
+    assists=(&amp;quot;assists&amp;quot;, &amp;quot;sum&amp;quot;),
+    shots=(&amp;quot;shots&amp;quot;, &amp;quot;sum&amp;quot;)
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📌 Insight: One-table decision view.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-how-companies-use-this&#34;&gt;🧠 How Companies Use This&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Google&lt;/strong&gt; → Experiment impact&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Meta&lt;/strong&gt; → Creator performance&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OpenAI&lt;/strong&gt; → Model evaluation metrics&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sports Analytics&lt;/strong&gt; → Strategy decisions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Same logic, different domain.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-lesson&#34;&gt;🏁 Final Lesson&lt;/h2&gt;
+&lt;p&gt;Insight is not about charts.
+Insight is about &lt;strong&gt;asking the right questions&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Pandas is your microscope.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-next-steps&#34;&gt;🚀 Next Steps&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Add visualization&lt;/li&gt;
+&lt;li&gt;Turn insights into dashboards&lt;/li&gt;
+&lt;li&gt;Feed features into ML models&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You now think like a &lt;strong&gt;Data Engineer + Analyst + AI Researcher&lt;/strong&gt; 🧠🔥&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-03 — Linear Search</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-03-linear-search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-03-linear-search/</guid>
+      <description>&lt;h2 id=&#34;-problem-statement&#34;&gt;🧩 Problem Statement&lt;/h2&gt;
+&lt;p&gt;Given an array &lt;code&gt;nums&lt;/code&gt; and a target value &lt;code&gt;x&lt;/code&gt;, return &lt;code&gt;True&lt;/code&gt; if &lt;code&gt;x&lt;/code&gt; exists in the array, otherwise return &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This problem evaluates:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Your understanding of &lt;strong&gt;search strategies&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Whether you know &lt;strong&gt;when sorted data matters&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Your ability to trade &lt;strong&gt;speed vs constraints&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sample-input---output&#34;&gt;📥 Sample Input / 📤 Output&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;nums&lt;/th&gt;
+&lt;th&gt;x&lt;/th&gt;
+&lt;th&gt;Output&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[1, 2, 3]&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[1, 2, 3]&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[]&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[5]&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[2, 4, 6]&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interviewer-insight&#34;&gt;🧠 Interviewer Insight&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;❗ Interviewers are not checking if you can scan an array.&lt;br&gt;
+They want to know:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Is the array &lt;strong&gt;sorted&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;Is random access allowed?&lt;/li&gt;
+&lt;li&gt;How large is the data?&lt;/li&gt;
+&lt;li&gt;Can preprocessing help?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Below are &lt;strong&gt;all major searching techniques&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-1--linear-search-baseline&#34;&gt;✅ Approach 1 — Linear Search (Baseline)&lt;/h2&gt;
+&lt;h3 id=&#34;-idea&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;p&gt;Check every element &lt;strong&gt;one by one&lt;/strong&gt; until the target is found.&lt;/p&gt;
+&lt;p&gt;Works on &lt;strong&gt;any array&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;-code&#34;&gt;🧑‍💻 Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def linear_search(nums, x):
+    for v in nums:
+        if v == x:
+            return True
+    return False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟢 Use when the array is &lt;strong&gt;unsorted or very small&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-2--binary-search-sorted-array-required&#34;&gt;🧩 Approach 2 — Binary Search (Sorted Array Required)&lt;/h2&gt;
+&lt;h3 id=&#34;-idea-1&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;p&gt;Repeatedly divide the search space in half.&lt;/p&gt;
+&lt;p&gt;Requires &lt;strong&gt;sorted input&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;-code-1&#34;&gt;🧑‍💻 Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def binary_search(nums, x):
+    left, right = 0, len(nums) - 1
+
+    while left &amp;lt;= right:
+        mid = (left + right) // 2
+
+        if nums[mid] == x:
+            return True
+        elif nums[mid] &amp;lt; x:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    return False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity-1&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(log n)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟢 One of the &lt;strong&gt;most important interview algorithms&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-3--binary-search-recursive&#34;&gt;🧩 Approach 3 — Binary Search (Recursive)&lt;/h2&gt;
+&lt;h3 id=&#34;-idea-2&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;p&gt;Same logic as iterative binary search, implemented recursively.&lt;/p&gt;
+&lt;h3 id=&#34;-code-2&#34;&gt;🧑‍💻 Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def binary_search_recursive(nums, x, left, right):
+    if left &amp;gt; right:
+        return False
+
+    mid = (left + right) // 2
+
+    if nums[mid] == x:
+        return True
+    elif nums[mid] &amp;lt; x:
+        return binary_search_recursive(nums, x, mid + 1, right)
+    else:
+        return binary_search_recursive(nums, x, left, mid - 1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity-2&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(log n)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(log n) (recursion stack)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟡 Use only if recursion is preferred.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-4--jump-search-sorted-array&#34;&gt;🧩 Approach 4 — Jump Search (Sorted Array)&lt;/h2&gt;
+&lt;h3 id=&#34;-idea-3&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;p&gt;Jump ahead by fixed steps (√n) instead of checking every element.&lt;/p&gt;
+&lt;p&gt;Useful when &lt;strong&gt;random access is costly&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;-code-3&#34;&gt;🧑‍💻 Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import math
+
+def jump_search(nums, x):
+    n = len(nums)
+    step = int(math.sqrt(n))
+    prev = 0
+
+    while prev &amp;lt; n and nums[min(step, n) - 1] &amp;lt; x:
+        prev = step
+        step += int(math.sqrt(n))
+        if prev &amp;gt;= n:
+            return False
+
+    for i in range(prev, min(step, n)):
+        if nums[i] == x:
+            return True
+
+    return False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity-3&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(√n)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟡 Rare, but good for algorithm discussions.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-5--exponential-search&#34;&gt;🧩 Approach 5 — Exponential Search&lt;/h2&gt;
+&lt;h3 id=&#34;-idea-4&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Find range where target may exist&lt;/li&gt;
+&lt;li&gt;Apply binary search inside that range&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Efficient for &lt;strong&gt;unbounded or infinite arrays&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;-code-4&#34;&gt;🧑‍💻 Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def exponential_search(nums, x):
+    if not nums:
+        return False
+
+    if nums[0] == x:
+        return True
+
+    i = 1
+    while i &amp;lt; len(nums) and nums[i] &amp;lt;= x:
+        i *= 2
+
+    return binary_search(nums[:i], x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity-4&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(log n)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟢 Common in system-level interviews.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-6--hash-set-search-fast-lookup&#34;&gt;🧩 Approach 6 — Hash Set Search (Fast Lookup)&lt;/h2&gt;
+&lt;h3 id=&#34;-idea-5&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;p&gt;Convert the array into a set for &lt;strong&gt;O(1) average lookup&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;-code-5&#34;&gt;🧑‍💻 Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def hash_search(nums, x):
+    lookup = set(nums)
+    return x in lookup
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity-5&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n) preprocessing, O(1) lookup&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(n)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟢 Excellent when &lt;strong&gt;many searches&lt;/strong&gt; are needed.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-choosing-the-right-search-algorithm&#34;&gt;🎯 Choosing the Right Search Algorithm&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Scenario&lt;/th&gt;
+&lt;th&gt;Best Choice&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Unsorted array&lt;/td&gt;
+&lt;td&gt;Linear Search&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Sorted array&lt;/td&gt;
+&lt;td&gt;Binary Search&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Many queries&lt;/td&gt;
+&lt;td&gt;Hash Set&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Very large data&lt;/td&gt;
+&lt;td&gt;Binary / Exponential&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Teaching fundamentals&lt;/td&gt;
+&lt;td&gt;Linear / Binary&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-interview-tip&#34;&gt;🧠 Final Interview Tip&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Always ask:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Is the data sorted?&lt;/li&gt;
+&lt;li&gt;How many queries?&lt;/li&gt;
+&lt;li&gt;Is extra memory allowed?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Answering these &lt;strong&gt;before coding&lt;/strong&gt; is what impresses interviewers.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-takeaway&#34;&gt;🏁 Takeaway&lt;/h2&gt;
+&lt;p&gt;Searching is not about speed alone.
+It’s about &lt;strong&gt;choosing the right strategy under constraints&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If you master these, &lt;strong&gt;binary search variations will feel easy&lt;/strong&gt; 🚀&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Lecture 07 — AI Fields &amp; Specializations</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-07-ai-fields/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
@@ -2108,6 +4771,229 @@ tokens = text.split()
   &lt;summary&gt;Can one model belong to multiple fields?&lt;/summary&gt;
   &lt;p&gt;Yes — modern AI systems are deeply interdisciplinary.&lt;/p&gt;
 &lt;/details&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-04 — Nested Loops (Thinking Beyond O(n²))</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-04-nested-loop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-04-nested-loop/</guid>
+      <description>&lt;h2 id=&#34;-problem-statement&#34;&gt;🧩 Problem Statement&lt;/h2&gt;
+&lt;p&gt;Given an integer array &lt;code&gt;nums&lt;/code&gt;, determine whether the array contains &lt;strong&gt;any duplicate elements&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Return &lt;code&gt;True&lt;/code&gt; if &lt;strong&gt;any value appears at least twice&lt;/strong&gt;, otherwise return &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This problem intentionally encourages a &lt;strong&gt;nested-loop solution first&lt;/strong&gt;, and then tests whether you understand:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How nested loops scale&lt;/li&gt;
+&lt;li&gt;When they become inefficient&lt;/li&gt;
+&lt;li&gt;How to optimize them&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sample-input---output&#34;&gt;📥 Sample Input / 📤 Output&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;nums&lt;/th&gt;
+&lt;th&gt;Output&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[1, 2, 3, 1]&lt;/td&gt;
+&lt;td&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[1, 2, 3, 4]&lt;/td&gt;
+&lt;td&gt;False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[]&lt;/td&gt;
+&lt;td&gt;False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[5]&lt;/td&gt;
+&lt;td&gt;False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[2, 2, 2]&lt;/td&gt;
+&lt;td&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interviewer-insight&#34;&gt;🧠 Interviewer Insight&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;❗ Interviewers &lt;strong&gt;expect&lt;/strong&gt; you to start with a nested loop.&lt;br&gt;
+What they really care about is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Can you analyze the complexity?&lt;/li&gt;
+&lt;li&gt;Do you recognize inefficiency?&lt;/li&gt;
+&lt;li&gt;Can you improve it?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Let’s start from the &lt;strong&gt;baseline&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-1--brute-force-nested-loop&#34;&gt;🧩 Approach 1 — Brute Force Nested Loop&lt;/h2&gt;
+&lt;h3 id=&#34;-idea&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;p&gt;Compare &lt;strong&gt;every pair of elements&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If any two elements are equal → duplicate found.&lt;/p&gt;
+&lt;h3 id=&#34;-code&#34;&gt;🧑‍💻 Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def contains_duplicate(nums):
+    n = len(nums)
+
+    # Compare every pair (i, j)
+    for i in range(n):
+        for j in range(i + 1, n):
+            if nums[i] == nums[j]:
+                return True
+
+    return False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n²)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟡 Correct but &lt;strong&gt;does not scale&lt;/strong&gt; for large input.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-nested-loops-are-expensive&#34;&gt;🔍 Why Nested Loops Are Expensive&lt;/h2&gt;
+&lt;p&gt;If:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;n = 1,000 → 1,000,000 comparisons&lt;/li&gt;
+&lt;li&gt;n = 10,000 → 100,000,000 comparisons&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🚨 This is why interviewers worry about nested loops.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-2--early-exit-optimization&#34;&gt;🧩 Approach 2 — Early Exit Optimization&lt;/h2&gt;
+&lt;h3 id=&#34;-idea-1&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;p&gt;Still use nested loops, but &lt;strong&gt;short-circuit early&lt;/strong&gt; when a duplicate is found.&lt;/p&gt;
+&lt;h3 id=&#34;-code-1&#34;&gt;🧑‍💻 Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def contains_duplicate_early_exit(nums):
+    n = len(nums)
+
+    for i in range(n):
+        for j in range(i + 1, n):
+            if nums[i] == nums[j]:
+                # Exit immediately once duplicate is found
+                return True
+
+    return False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity-1&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n²) worst case&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟡 Slight improvement, but still quadratic.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-3--nested-loop-with-sorting&#34;&gt;🧩 Approach 3 — Nested Loop with Sorting&lt;/h2&gt;
+&lt;h3 id=&#34;-idea-2&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;p&gt;If we &lt;strong&gt;sort first&lt;/strong&gt;, duplicates become adjacent.&lt;/p&gt;
+&lt;p&gt;Then we only need &lt;strong&gt;one loop&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;-code-2&#34;&gt;🧑‍💻 Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def contains_duplicate_sort(nums):
+    nums.sort()
+
+    for i in range(1, len(nums)):
+        if nums[i] == nums[i - 1]:
+            return True
+
+    return False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity-2&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n log n)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(1) (ignoring sort internals)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟢 Great improvement — shows algorithmic thinking.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-4--hash-set-optimal&#34;&gt;🧩 Approach 4 — Hash Set (Optimal)&lt;/h2&gt;
+&lt;h3 id=&#34;-idea-3&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;p&gt;Use a set to &lt;strong&gt;remember what we&amp;rsquo;ve seen&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Avoid nested loops entirely.&lt;/p&gt;
+&lt;h3 id=&#34;-code-3&#34;&gt;🧑‍💻 Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def contains_duplicate_hash(nums):
+    seen = set()
+
+    for v in nums:
+        if v in seen:
+            return True
+        seen.add(v)
+
+    return False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity-3&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(n)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟢 This is the &lt;strong&gt;best practical solution&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nested-loop-pattern-general-form&#34;&gt;🧠 Nested Loop Pattern (General Form)&lt;/h2&gt;
+&lt;p&gt;Most nested-loop problems follow this shape:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i in range(n):
+    for j in range(i + 1, n):
+        # Compare or combine nums[i] and nums[j]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Typical problems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pair comparison&lt;/li&gt;
+&lt;li&gt;Duplicate detection&lt;/li&gt;
+&lt;li&gt;Brute-force two-sum&lt;/li&gt;
+&lt;li&gt;Matrix traversal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-when-nested-loops-are-acceptable&#34;&gt;🎯 When Nested Loops Are ACCEPTABLE&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Scenario&lt;/th&gt;
+&lt;th&gt;Acceptable?&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;n ≤ 1,000&lt;/td&gt;
+&lt;td&gt;✅ Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;One-time computation&lt;/td&gt;
+&lt;td&gt;✅ Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Teaching logic&lt;/td&gt;
+&lt;td&gt;✅ Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Large datasets&lt;/td&gt;
+&lt;td&gt;❌ No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Performance-critical&lt;/td&gt;
+&lt;td&gt;❌ No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interview-level-takeaway&#34;&gt;🧠 Interview-Level Takeaway&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;❗ Nested loops are not “bad”.
+They are &lt;strong&gt;a starting point&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What impresses interviewers is when you say:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“This works, but it’s O(n²). We can do better.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-advice&#34;&gt;🏁 Final Advice&lt;/h2&gt;
+&lt;p&gt;If you master nested loops:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You understand &lt;strong&gt;brute force&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You understand &lt;strong&gt;optimization paths&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You understand &lt;strong&gt;why better algorithms exist&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That’s the mindset of a &lt;strong&gt;strong programmer&lt;/strong&gt;, not just a coder 🚀&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -2434,6 +5320,540 @@ Metrics tell it what to care about.&lt;/strong&gt;&lt;/p&gt;
   &lt;summary&gt;If you optimize the wrong metric, can AI become dangerous?&lt;/summary&gt;
   &lt;p&gt;Yes — optimization without wisdom is risk.&lt;/p&gt;
 &lt;/details&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-05 — Two Sum (Brute Force → Hash Map)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-05-two-sum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-05-two-sum/</guid>
+      <description>&lt;h2 id=&#34;-problem-statement&#34;&gt;🧩 Problem Statement&lt;/h2&gt;
+&lt;p&gt;Given an integer array &lt;code&gt;nums&lt;/code&gt; and an integer &lt;code&gt;target&lt;/code&gt;, return the &lt;strong&gt;indices of two numbers&lt;/strong&gt; such that they add up to &lt;code&gt;target&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You may assume that &lt;strong&gt;exactly one solution exists&lt;/strong&gt;, and you may not use the same element twice.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sample-input---output&#34;&gt;📥 Sample Input / 📤 Output&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;nums&lt;/th&gt;
+&lt;th&gt;target&lt;/th&gt;
+&lt;th&gt;Output&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[2,7,11,15]&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;[0,1]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[3,2,4]&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[1,2]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[3,3]&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[0,1]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[1,5,1,5]&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;[1,3]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[-1,-2,-3,-4]&lt;/td&gt;
+&lt;td&gt;-6&lt;/td&gt;
+&lt;td&gt;[1,3]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interviewer-expectation&#34;&gt;🧠 Interviewer Expectation&lt;/h2&gt;
+&lt;p&gt;This problem tests:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nested loop thinking&lt;/li&gt;
+&lt;li&gt;Optimization awareness&lt;/li&gt;
+&lt;li&gt;Hash map mastery&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-1--brute-force-nested-loop&#34;&gt;🧩 Approach 1 — Brute Force (Nested Loop)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def two_sum_bruteforce(nums, target):
+    n = len(nums)
+
+    for i in range(n):
+        for j in range(i + 1, n):
+            if nums[i] + nums[j] == target:
+                return [i, j]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Time: &lt;strong&gt;O(n²)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Space: &lt;strong&gt;O(1)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟡 Correct but inefficient.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-approach-2--hash-map-optimal&#34;&gt;🧩 Approach 2 — Hash Map (Optimal)&lt;/h2&gt;
+&lt;h3 id=&#34;-idea&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;p&gt;Store numbers we have seen and check if &lt;code&gt;target - current&lt;/code&gt; exists.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def two_sum(nums, target):
+    seen = {}
+
+    for i, v in enumerate(nums):
+        complement = target - v
+
+        if complement in seen:
+            return [seen[complement], i]
+
+        seen[v] = i
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;-complexity-1&#34;&gt;⏱️ Complexity&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Time: &lt;strong&gt;O(n)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Space: &lt;strong&gt;O(n)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟢 Interview-ready solution.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-takeaway&#34;&gt;🏁 Takeaway&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Use brute force to understand the problem.
+Use hash maps to solve it like a professional.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-matrix-traversal-patterns&#34;&gt;📘 Matrix Traversal Patterns&lt;/h1&gt;
+&lt;h2 id=&#34;-problem-statement-1&#34;&gt;🧩 Problem Statement&lt;/h2&gt;
+&lt;p&gt;Given a 2D matrix, traverse it in different patterns:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Row-wise&lt;/li&gt;
+&lt;li&gt;Column-wise&lt;/li&gt;
+&lt;li&gt;Diagonal&lt;/li&gt;
+&lt;li&gt;Spiral&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sample-matrix&#34;&gt;📥 Sample Matrix&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;1  2  3
+4  5  6
+7  8  9
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-row-wise-traversal&#34;&gt;🧩 Row-wise Traversal&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for row in matrix:
+    for value in row:
+        print(value)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-column-wise-traversal&#34;&gt;🧩 Column-wise Traversal&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;rows, cols = len(matrix), len(matrix[0])
+
+for c in range(cols):
+    for r in range(rows):
+        print(matrix[r][c])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-diagonal-traversal&#34;&gt;🧩 Diagonal Traversal&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n = len(matrix)
+
+for i in range(n):
+    print(matrix[i][i])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-spiral-traversal-interview-favorite&#34;&gt;🧩 Spiral Traversal (Interview Favorite)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def spiral(matrix):
+    res = []
+    top, bottom = 0, len(matrix)-1
+    left, right = 0, len(matrix[0])-1
+
+    while top &amp;lt;= bottom and left &amp;lt;= right:
+        for c in range(left, right+1):
+            res.append(matrix[top][c])
+        top += 1
+
+        for r in range(top, bottom+1):
+            res.append(matrix[r][right])
+        right -= 1
+
+        if top &amp;lt;= bottom:
+            for c in range(right, left-1, -1):
+                res.append(matrix[bottom][c])
+            bottom -= 1
+
+        if left &amp;lt;= right:
+            for r in range(bottom, top-1, -1):
+                res.append(matrix[r][left])
+            left += 1
+
+    return res
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-complexity-2&#34;&gt;⏱️ Complexity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Time: &lt;strong&gt;O(m × n)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Space: &lt;strong&gt;O(1)&lt;/strong&gt; (excluding output)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-takeaway-1&#34;&gt;🏁 Takeaway&lt;/h2&gt;
+&lt;p&gt;Matrix traversal shows &lt;strong&gt;index control mastery&lt;/strong&gt;, critical for vision and AI tasks.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-prefix-sum-killing-nested-loops&#34;&gt;📘 Prefix Sum (Killing Nested Loops)&lt;/h1&gt;
+&lt;h2 id=&#34;-problem-statement-2&#34;&gt;🧩 Problem Statement&lt;/h2&gt;
+&lt;p&gt;Given an array &lt;code&gt;nums&lt;/code&gt;, answer multiple range sum queries efficiently.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-example&#34;&gt;📥 Example&lt;/h2&gt;
+&lt;p&gt;nums = &lt;code&gt;[1, 2, 3, 4, 5]&lt;/code&gt;&lt;br&gt;
+Query sum of range &lt;code&gt;[1,3]&lt;/code&gt; → &lt;code&gt;2 + 3 + 4 = 9&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-brute-force&#34;&gt;🧩 Brute Force&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def range_sum(nums, l, r):
+    total = 0
+    for i in range(l, r+1):
+        total += nums[i]
+    return total
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;⏱️ &lt;strong&gt;O(n)&lt;/strong&gt; per query ❌&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-prefix-sum-optimization&#34;&gt;🧩 Prefix Sum Optimization&lt;/h2&gt;
+&lt;h3 id=&#34;-idea-1&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;p&gt;Precompute cumulative sums once.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def build_prefix(nums):
+    prefix = [0]
+    for v in nums:
+        prefix.append(prefix[-1] + v)
+    return prefix
+
+def range_sum(prefix, l, r):
+    return prefix[r+1] - prefix[l]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-complexity-3&#34;&gt;⏱️ Complexity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Preprocessing: &lt;strong&gt;O(n)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Query: &lt;strong&gt;O(1)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🟢 Essential for AI data pipelines.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-takeaway-2&#34;&gt;🏁 Takeaway&lt;/h2&gt;
+&lt;p&gt;Prefix sums turn &lt;strong&gt;nested loops into math&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-sliding-window&#34;&gt;📘 Sliding Window&lt;/h1&gt;
+&lt;h2 id=&#34;-problem-statement-3&#34;&gt;🧩 Problem Statement&lt;/h2&gt;
+&lt;p&gt;Given an array &lt;code&gt;nums&lt;/code&gt; and integer &lt;code&gt;k&lt;/code&gt;, find the &lt;strong&gt;maximum sum of any subarray of size k&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-example-1&#34;&gt;📥 Example&lt;/h2&gt;
+&lt;p&gt;nums = &lt;code&gt;[2,1,5,1,3,2]&lt;/code&gt;, k = 3&lt;br&gt;
+Output → &lt;code&gt;9&lt;/code&gt; (&lt;code&gt;[5,1,3]&lt;/code&gt;)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-brute-force-1&#34;&gt;🧩 Brute Force&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def max_sum(nums, k):
+    max_sum = 0
+    for i in range(len(nums) - k + 1):
+        max_sum = max(max_sum, sum(nums[i:i+k]))
+    return max_sum
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;⏱️ &lt;strong&gt;O(nk)&lt;/strong&gt; ❌&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sliding-window-optimization&#34;&gt;🧩 Sliding Window Optimization&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def max_sum(nums, k):
+    window_sum = sum(nums[:k])
+    max_sum = window_sum
+
+    for i in range(k, len(nums)):
+        window_sum += nums[i]
+        window_sum -= nums[i-k]
+        max_sum = max(max_sum, window_sum)
+
+    return max_sum
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-complexity-4&#34;&gt;⏱️ Complexity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Time: &lt;strong&gt;O(n)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Space: &lt;strong&gt;O(1)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-takeaway-3&#34;&gt;🏁 Takeaway&lt;/h2&gt;
+&lt;p&gt;Sliding window is &lt;strong&gt;mandatory knowledge&lt;/strong&gt; for interviews.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-linear-algebra-for-ai-vectors--matrices&#34;&gt;📘 Linear Algebra for AI (Vectors &amp;amp; Matrices)&lt;/h1&gt;
+&lt;h2 id=&#34;-why-linear-algebra-matters&#34;&gt;🎯 Why Linear Algebra Matters&lt;/h2&gt;
+&lt;p&gt;Linear algebra is the &lt;strong&gt;language of AI&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Neural networks&lt;/li&gt;
+&lt;li&gt;Embeddings&lt;/li&gt;
+&lt;li&gt;Transformers&lt;/li&gt;
+&lt;li&gt;Computer vision&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-vectors&#34;&gt;🧮 Vectors&lt;/h2&gt;
+&lt;p&gt;A vector represents &lt;strong&gt;features&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = [1, 2, 3]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-vector-addition&#34;&gt;➕ Vector Addition&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def add(a, b):
+    return [a[i] + b[i] for i in range(len(a))]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;⏱️ O(n)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-dot-product-core-of-neural-networks&#34;&gt;✖️ Dot Product (Core of Neural Networks)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def dot(a, b):
+    return sum(a[i] * b[i] for i in range(len(a)))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-matrices&#34;&gt;🧱 Matrices&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;A = [
+    [1, 2],
+    [3, 4]
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-matrix-multiplication&#34;&gt;✖️ Matrix Multiplication&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def matmul(A, B):
+    res = [[0]*len(B[0]) for _ in range(len(A))]
+
+    for i in range(len(A)):
+        for j in range(len(B[0])):
+            for k in range(len(B)):
+                res[i][j] += A[i][k] * B[k][j]
+
+    return res
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;⏱️ &lt;strong&gt;O(n³)&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-ai-interpretation&#34;&gt;🧠 AI Interpretation&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Math&lt;/th&gt;
+&lt;th&gt;AI Meaning&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Vector&lt;/td&gt;
+&lt;td&gt;Feature embedding&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dot product&lt;/td&gt;
+&lt;td&gt;Similarity&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Matrix&lt;/td&gt;
+&lt;td&gt;Layer weights&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MatMul&lt;/td&gt;
+&lt;td&gt;Forward pass&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-thought&#34;&gt;🏁 Final Thought&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If algorithms are &lt;strong&gt;logic&lt;/strong&gt;,
+linear algebra is &lt;strong&gt;meaning&lt;/strong&gt; in AI.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-06 — Probability for Machine Learning</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-06-probability-ai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-06-probability-ai/</guid>
+      <description>&lt;h2 id=&#34;-why-probability-matters&#34;&gt;🎯 Why Probability Matters&lt;/h2&gt;
+&lt;p&gt;Probability is everywhere in AI:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Model uncertainty&lt;/li&gt;
+&lt;li&gt;Classification confidence&lt;/li&gt;
+&lt;li&gt;Loss functions&lt;/li&gt;
+&lt;li&gt;Bayesian thinking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Interviewers want &lt;strong&gt;intuition&lt;/strong&gt;, not formulas only.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-basic-definitions&#34;&gt;🧮 Basic Definitions&lt;/h2&gt;
+&lt;h3 id=&#34;probability&#34;&gt;Probability&lt;/h3&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;P(head) = 1 / 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-conditional-probability&#34;&gt;🎲 Conditional Probability&lt;/h2&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Given it rains, what’s the chance traffic is heavy?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-independence&#34;&gt;🔁 Independence&lt;/h2&gt;
+&lt;p&gt;Two events are independent if:
+[
+P(A \cap B) = P(A)P(B)
+]&lt;/p&gt;
+&lt;p&gt;Interview trick question ⚠️
+👉 Independence ≠ no correlation always&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-bayes-theorem-very-important&#34;&gt;🧠 Bayes’ Theorem (VERY IMPORTANT)&lt;/h2&gt;
+&lt;p&gt;Used in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Spam detection&lt;/li&gt;
+&lt;li&gt;Medical diagnosis&lt;/li&gt;
+&lt;li&gt;Bayesian ML&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interview-question&#34;&gt;🧪 Interview Question&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Why Naive Bayes works despite false independence assumptions?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;✅ Because it reduces variance and scales well.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-takeaway&#34;&gt;🏁 Takeaway&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Probability gives AI &lt;strong&gt;confidence&lt;/strong&gt;, not just predictions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-gradient-descent-interview-intuition&#34;&gt;📘 Gradient Descent (Interview Intuition)&lt;/h1&gt;
+&lt;h2 id=&#34;-problem&#34;&gt;🎯 Problem&lt;/h2&gt;
+&lt;p&gt;How do machines &lt;strong&gt;learn&lt;/strong&gt;?&lt;/p&gt;
+&lt;p&gt;By minimizing a loss function.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-loss-function&#34;&gt;📉 Loss Function&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-gradient-descent-idea&#34;&gt;🧠 Gradient Descent Idea&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Walk downhill in the direction of &lt;strong&gt;steepest descent&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-python-example&#34;&gt;🧑‍💻 Python Example&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def gradient_descent(w, x, y, lr=0.01):
+    grad = -2 * x * (y - w * x)
+    return w - lr * grad
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-variants-interviewers-love&#34;&gt;⏱️ Variants Interviewers Love&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Idea&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Batch GD&lt;/td&gt;
+&lt;td&gt;Use all data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SGD&lt;/td&gt;
+&lt;td&gt;One sample&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Mini-batch&lt;/td&gt;
+&lt;td&gt;Best of both&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interview-trap&#34;&gt;🚨 Interview Trap&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Why not use a large learning rate?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;❌ Overshooting
+❌ Divergence&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-takeaway-1&#34;&gt;🏁 Takeaway&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Optimization is the &lt;strong&gt;engine&lt;/strong&gt; of AI.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-numpy-for-coding-interviews&#34;&gt;📘 NumPy for Coding Interviews&lt;/h1&gt;
+&lt;h2 id=&#34;-why-numpy&#34;&gt;🎯 Why NumPy?&lt;/h2&gt;
+&lt;p&gt;Interviewers expect:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vectorized thinking&lt;/li&gt;
+&lt;li&gt;Clean math code&lt;/li&gt;
+&lt;li&gt;Speed awareness&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-arrays-vs-lists&#34;&gt;🧮 Arrays vs Lists&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
+
+a = np.array([1, 2, 3])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Why better?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Faster&lt;/li&gt;
+&lt;li&gt;Cleaner&lt;/li&gt;
+&lt;li&gt;Mathematical&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-vector-operations&#34;&gt;➕ Vector Operations&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a + b        # element-wise
+a * b
+np.dot(a,b) # dot product
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-matrix-multiplication&#34;&gt;🧱 Matrix Multiplication&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;A @ B
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Equivalent to:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;np.matmul(A, B)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-broadcasting-interview-favorite&#34;&gt;📏 Broadcasting (Interview Favorite)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;A + 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Adds 1 to every element.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-takeaway-2&#34;&gt;🏁 Takeaway&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NumPy replaces &lt;strong&gt;loops with math&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;
+---
+
+# Time vs Space Trade-offs
+
+## 🎯 Interview Core Concept
+
+You can optimize:
+- Time
+- Space
+
+Rarely both.
+
+---
+
+## 🧩 Example: Duplicate Detection
+
+### Less Space, More Time
+
+```python
+for i in range(n):
+    for j in range(i+1, n):
+        if nums[i] == nums[j]:
+            return True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;⏱️ O(n²), 💾 O(1)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;more-space-less-time&#34;&gt;More Space, Less Time&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seen = set()
+for v in nums:
+    if v in seen:
+        return True
+    seen.add(v)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;⏱️ O(n), 💾 O(n)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interview-question-1&#34;&gt;🧠 Interview Question&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Which would you choose?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Correct answer:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Depends on constraints.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-takeaway-3&#34;&gt;🏁 Takeaway&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Strong engineers trade &lt;strong&gt;resources intentionally&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
