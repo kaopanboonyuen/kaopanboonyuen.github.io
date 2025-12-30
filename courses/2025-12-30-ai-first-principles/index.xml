@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>🧠 BASIC AI — Rebuilding Intelligence from First Principles | Teerapong Panboonyuen</title>
-    <link>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/</link>
-      <atom:link href="https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/index.xml" rel="self" type="application/rss+xml" />
-    <description>🧠 BASIC AI — Rebuilding Intelligence from First Principles</description>
+    <title>BASIC AI — Rebuilding Intelligence from First Principles | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/index.xml" rel="self" type="application/rss+xml" />
+    <description>BASIC AI — Rebuilding Intelligence from First Principles</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Tue, 30 Dec 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
-      <title>🧠 BASIC AI — Rebuilding Intelligence from First Principles</title>
-      <link>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/</link>
+      <title>BASIC AI — Rebuilding Intelligence from First Principles</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/</link>
     </image>
     
     <item>
       <title>Lecture 01 — What Is AI, Really?</title>
-      <link>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-01-intro/</link>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-01-intro/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-01-intro/</guid>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-01-intro/</guid>
       <description>&lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~2 hours (foundational lecture)&lt;/p&gt;
 &lt;hr&gt;
@@ -337,9 +337,9 @@ Power without wisdom → danger&lt;/p&gt;
     
     <item>
       <title>Lecture 02 — Python: The Language of AI</title>
-      <link>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-02-python/</link>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-02-python/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-02-python/</guid>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-02-python/</guid>
       <description>&lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~2–3 hours (core recap lecture)&lt;/p&gt;
 &lt;hr&gt;
@@ -607,9 +607,9 @@ sorted(nums)
     
     <item>
       <title>Lecture 03 — Math Behind Intelligence</title>
-      <link>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-03-math/</link>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-03-math/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-03-math/</guid>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-03-math/</guid>
       <description>&lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~2–3 hours (core AI math intuition)&lt;/p&gt;
 &lt;hr&gt;
@@ -913,9 +913,9 @@ It minimizes loss.&lt;/strong&gt;&lt;/p&gt;
     
     <item>
       <title>Lecture 04 — Data: The Fuel of AI</title>
-      <link>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-04-data/</link>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-04-data/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-04-data/</guid>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-04-data/</guid>
       <description>&lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~1.5–2 hours (core understanding lecture)&lt;/p&gt;
 &lt;hr&gt;
@@ -1221,9 +1221,9 @@ No experience.&lt;/p&gt;
     
     <item>
       <title>Lecture 05 — Types of Machine Learning</title>
-      <link>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-05-ml-types/</link>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-05-ml-types/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-05-ml-types/</guid>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-05-ml-types/</guid>
       <description>&lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~3 hours (core AI taxonomy lecture)&lt;/p&gt;
 &lt;hr&gt;
@@ -1574,9 +1574,9 @@ There is only &lt;strong&gt;the right tool for the problem&lt;/strong&gt;.&lt;/p
     
     <item>
       <title>Lecture 06 — Data Types &amp; Modalities</title>
-      <link>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-06-data-modalities/</link>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-06-data-modalities/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-06-data-modalities/</guid>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-06-data-modalities/</guid>
       <description>&lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~2–2.5 hours (core data understanding lecture)&lt;/p&gt;
 &lt;hr&gt;
@@ -1870,9 +1870,9 @@ Data is a simplified shadow of it.&lt;/strong&gt;&lt;/p&gt;
     
     <item>
       <title>Lecture 07 — AI Fields &amp; Specializations</title>
-      <link>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-07-ai-fields/</link>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-07-ai-fields/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-07-ai-fields/</guid>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-07-ai-fields/</guid>
       <description>&lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~2–2.5 hours (AI landscape lecture)&lt;/p&gt;
 &lt;hr&gt;
@@ -2112,9 +2112,9 @@ tokens = text.split()
     
     <item>
       <title>Lecture 08 — Evaluation Metrics</title>
-      <link>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-08-evaluation/</link>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-08-evaluation/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-08-evaluation/</guid>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-08-evaluation/</guid>
       <description>&lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~3 hours (core evaluation &amp;amp; reasoning lecture)&lt;/p&gt;
 &lt;hr&gt;
@@ -2438,9 +2438,9 @@ Metrics tell it what to care about.&lt;/strong&gt;&lt;/p&gt;
     
     <item>
       <title>Lecture 09 — Deep Learning Foundations</title>
-      <link>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-09-deep-learning/</link>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-09-deep-learning/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-09-deep-learning/</guid>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-09-deep-learning/</guid>
       <description>&lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~3 hours (history + concepts + intuition)&lt;/p&gt;
 &lt;hr&gt;
@@ -2773,9 +2773,9 @@ It is layered math + data + optimization.&lt;/strong&gt;&lt;/p&gt;
     
     <item>
       <title>Lecture 10 — Modern AI &amp; 2026 Trends</title>
-      <link>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-10-trends/</link>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-10-trends/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-10-trends/</guid>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-ai-first-principles/lecture-10-trends/</guid>
       <description>&lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~2 hours (vision, systems, responsibility)&lt;/p&gt;
 &lt;hr&gt;
