@@ -1,0 +1,1648 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Teerapong Panboonyuen" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-08-evaluation/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08f2e04360a1c87f5ad39547c02bf219.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-08-evaluation/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-08-evaluation/" />
+  <meta property="og:title" content="Lecture 08 — Evaluation Metrics | Teerapong Panboonyuen" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2025-12-30T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2025-12-30T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Lecture 08 — Evaluation Metrics | Teerapong Panboonyuen</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="459243246790a848ce62be14b6427ae1" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.4be02a3b391999348b0c7478778a0e4b.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#awards"><span>Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#press"><span>Press</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Featured</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#tags"><span>Topics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#communities"><span>Communities</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://x.com/kaopanboonyuen" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          BASIC AI
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/courses/"><i class="fas fa-arrow-left pr-1"></i>Courses</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/courses/kao-pby-20251230-00001-basic-ai/">BASIC AI</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-01-intro/">Lecture 01 — What Is AI, Really?</a></li>
+
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-02-python/">Lecture 02 — Python: The Language of AI</a></li>
+
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-03-math/">Lecture 03 — Math Behind Intelligence</a></li>
+
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-04-data/">Lecture 04 — Data: The Fuel of AI</a></li>
+
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-05-ml-types/">Lecture 05 — Types of Machine Learning</a></li>
+
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-06-data-modalities/">Lecture 06 — Data Types &amp; Modalities</a></li>
+
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-07-ai-fields/">Lecture 07 — AI Fields &amp; Specializations</a></li>
+
+
+
+  <li class="active"><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-08-evaluation/">Lecture 08 — Evaluation Metrics</a></li>
+
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-09-deep-learning/">Lecture 09 — Deep Learning Foundations</a></li>
+
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-10-trends/">Lecture 10 — Modern AI &amp; 2026 Trends</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-why-evaluation-metrics-matter-truth-first">📏 Why Evaluation Metrics Matter (Truth First)</a></li>
+    <li><a href="#-one-sentence-that-explains-metrics">🧠 One Sentence That Explains Metrics</a></li>
+    <li><a href="#-a-running-example-very-important">🧪 A Running Example (Very Important)</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-confusion-matrix-the-foundation">🧩 Confusion Matrix (The Foundation)</a></li>
+    <li><a href="#-accuracy-the-most-misused-metric">🎯 Accuracy (The Most Misused Metric)</a>
+      <ul>
+        <li><a href="#-formula">📐 Formula</a></li>
+        <li><a href="#-example">😄 Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#-why-accuracy-fails">❌ Why Accuracy Fails</a></li>
+    <li><a href="#-precision-how-careful-are-you">🎯 Precision (How Careful Are You?)</a>
+      <ul>
+        <li><a href="#-formula-1">📐 Formula</a></li>
+        <li><a href="#-meaning">🧠 Meaning</a></li>
+        <li><a href="#-example-spam-filter">😄 Example (Spam Filter)</a></li>
+      </ul>
+    </li>
+    <li><a href="#-recall-how-much-did-you-catch">🎯 Recall (How Much Did You Catch?)</a>
+      <ul>
+        <li><a href="#-formula-2">📐 Formula</a></li>
+        <li><a href="#-meaning-1">🧠 Meaning</a></li>
+        <li><a href="#-example-medical-test">😄 Example (Medical Test)</a></li>
+      </ul>
+    </li>
+    <li><a href="#-precision-vs-recall-classic-tradeoff">⚖️ Precision vs Recall (Classic Tradeoff)</a></li>
+    <li><a href="#-f1-score-the-balance">🎯 F1 Score (The Balance)</a>
+      <ul>
+        <li><a href="#-formula-3">📐 Formula</a></li>
+        <li><a href="#-meaning-2">🧠 Meaning</a></li>
+        <li><a href="#-example-1">😄 Example</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#-mean-absolute-error-mae">🎯 Mean Absolute Error (MAE)</a>
+      <ul>
+        <li><a href="#-formula-4">📐 Formula</a></li>
+        <li><a href="#-meaning-3">🧠 Meaning</a></li>
+        <li><a href="#-example-2">😄 Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mean-squared-error-mse">🎯 Mean Squared Error (MSE)</a>
+      <ul>
+        <li><a href="#-formula-5">📐 Formula</a></li>
+        <li><a href="#-meaning-4">🧠 Meaning</a></li>
+        <li><a href="#-example-3">😄 Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#-root-mean-squared-error-rmse">🎯 Root Mean Squared Error (RMSE)</a>
+      <ul>
+        <li><a href="#-formula-6">📐 Formula</a></li>
+        <li><a href="#-meaning-5">🧠 Meaning</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#-why-nlp-metrics-are-tricky">🧠 Why NLP Metrics Are Tricky</a></li>
+    <li><a href="#-bleu-score-translation">✍️ BLEU Score (Translation)</a>
+      <ul>
+        <li><a href="#-simplified-idea">📐 Simplified Idea</a></li>
+        <li><a href="#-example-4">😄 Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#-rouge-summarization">📄 ROUGE (Summarization)</a></li>
+    <li><a href="#-important-truth-about-nlp-metrics">⚠️ Important Truth About NLP Metrics</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-medical-ai">🏥 Medical AI</a></li>
+    <li><a href="#-spam-detection">📩 Spam Detection</a></li>
+    <li><a href="#-self-driving">🚗 Self-Driving</a></li>
+    <li><a href="#-chatgpt">🤖 ChatGPT</a></li>
+    <li><a href="#-choosing-the-right-metric-golden-rule">🧠 Choosing the Right Metric (Golden Rule)</a></li>
+    <li><a href="#-final-big-insight">🌍 Final Big Insight</a></li>
+    <li><a href="#-final-reflection">❓ Final Reflection</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+  
+  
+
+  <li class="breadcrumb-item">
+    <a href="/">
+      
+        Home
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/">
+      
+        Courses
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/kao-pby-20251230-00001-basic-ai/">
+      
+        BASIC AI
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Lecture 08 — Evaluation Metrics
+      </li>
+    </ol>
+  </nav>
+
+
+          
+
+          <h1>Lecture 08 — Evaluation Metrics</h1>
+
+          <div class="article-style">
+            <p>
+  <i class="fas fa-clock  pr-1 fa-fw"></i> ~3 hours (core evaluation &amp; reasoning lecture)</p>
+<hr>
+<h2 id="-why-evaluation-metrics-matter-truth-first">📏 Why Evaluation Metrics Matter (Truth First)</h2>
+<p>A dangerous myth:</p>
+<blockquote>
+<p>“If accuracy is high, the model is good.”</p>
+</blockquote>
+<p>Reality:</p>
+<blockquote>
+<p><strong>Wrong metric = wrong conclusion = real-world harm</strong></p>
+</blockquote>
+<p>Evaluation metrics define:</p>
+<ul>
+<li>what “success” means</li>
+<li>what the model optimizes for</li>
+<li>how humans trust AI</li>
+</ul>
+<hr>
+<h2 id="-one-sentence-that-explains-metrics">🧠 One Sentence That Explains Metrics</h2>
+<blockquote>
+<p><strong>Metrics are how humans translate values into numbers.</strong></p>
+</blockquote>
+<p>Different problems → different values → different metrics.</p>
+<hr>
+<h2 id="-a-running-example-very-important">🧪 A Running Example (Very Important)</h2>
+<p>Imagine a <strong>disease detection system</strong> 🏥</p>
+<ul>
+<li>Disease rate: 1%</li>
+<li>Healthy people: 99%</li>
+</ul>
+<p>This will destroy naive accuracy.</p>
+<hr>
+<h1 id="-part-i--classification-metrics">🔹 PART I — Classification Metrics</h1>
+<hr>
+<h2 id="-confusion-matrix-the-foundation">🧩 Confusion Matrix (The Foundation)</h2>
+<p>Everything starts here.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Predicted Positive</th>
+<th>Predicted Negative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Actual Positive</strong></td>
+<td>TP (True Positive)</td>
+<td>FN (False Negative)</td>
+</tr>
+<tr>
+<td><strong>Actual Negative</strong></td>
+<td>FP (False Positive)</td>
+<td>TN (True Negative)</td>
+</tr>
+</tbody>
+</table>
+<p>👉 Every metric is built from these four numbers.</p>
+<hr>
+<h2 id="-accuracy-the-most-misused-metric">🎯 Accuracy (The Most Misused Metric)</h2>
+<h3 id="-formula">📐 Formula</h3>
+<p>$$
+Accuracy = \frac{TP + TN}{TP + TN + FP + FN}
+$$</p>
+<h3 id="-example">😄 Example</h3>
+<p>Out of 1000 people:</p>
+<ul>
+<li>990 healthy</li>
+<li>10 sick</li>
+</ul>
+<p>Model predicts <strong>everyone healthy</strong>.</p>
+<p>Accuracy:
+$$
+= \frac{990}{1000} = 99%
+$$</p>
+<p>🎉 Looks amazing<br>
+💀 Completely useless</p>
+<hr>
+<h2 id="-why-accuracy-fails">❌ Why Accuracy Fails</h2>
+<ul>
+<li>ignores class imbalance</li>
+<li>ignores cost of mistakes</li>
+<li>rewards lazy models</li>
+</ul>
+<hr>
+<h2 id="-precision-how-careful-are-you">🎯 Precision (How Careful Are You?)</h2>
+<h3 id="-formula-1">📐 Formula</h3>
+<p>$$
+Precision = \frac{TP}{TP + FP}
+$$</p>
+<h3 id="-meaning">🧠 Meaning</h3>
+<blockquote>
+<p>When the model says “positive”, how often is it correct?</p>
+</blockquote>
+<hr>
+<h3 id="-example-spam-filter">😄 Example (Spam Filter)</h3>
+<ul>
+<li>Marked 10 emails as spam</li>
+<li>8 were actually spam</li>
+</ul>
+<p>$$
+Precision = \frac{8}{10} = 0.8
+$$</p>
+<p>High precision = few false alarms 📩🚫</p>
+<hr>
+<h2 id="-recall-how-much-did-you-catch">🎯 Recall (How Much Did You Catch?)</h2>
+<h3 id="-formula-2">📐 Formula</h3>
+<p>$$
+Recall = \frac{TP}{TP + FN}
+$$</p>
+<h3 id="-meaning-1">🧠 Meaning</h3>
+<blockquote>
+<p>Of all real positives, how many did we find?</p>
+</blockquote>
+<hr>
+<h3 id="-example-medical-test">😄 Example (Medical Test)</h3>
+<ul>
+<li>10 sick patients</li>
+<li>Found 7</li>
+</ul>
+<p>$$
+Recall = \frac{7}{10} = 0.7
+$$</p>
+<p>Low recall = missed patients 😬</p>
+<hr>
+<h2 id="-precision-vs-recall-classic-tradeoff">⚖️ Precision vs Recall (Classic Tradeoff)</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Precision</td>
+<td>Avoid false positives</td>
+</tr>
+<tr>
+<td>Recall</td>
+<td>Avoid false negatives</td>
+</tr>
+</tbody>
+</table>
+<p>Medical diagnosis → high recall<br>
+Spam filter → high precision</p>
+<hr>
+<h2 id="-f1-score-the-balance">🎯 F1 Score (The Balance)</h2>
+<h3 id="-formula-3">📐 Formula</h3>
+<p>$$
+F1 = 2 \cdot \frac{Precision \cdot Recall}{Precision + Recall}
+$$</p>
+<h3 id="-meaning-2">🧠 Meaning</h3>
+<blockquote>
+<p>One number that balances both.</p>
+</blockquote>
+<hr>
+<h3 id="-example-1">😄 Example</h3>
+<p>Precision = 0.8<br>
+Recall = 0.6</p>
+<p>$$
+F1 = 2 \cdot \frac{0.8 \cdot 0.6}{1.4} \approx 0.69
+$$</p>
+<p>Used when:</p>
+<ul>
+<li>classes are imbalanced</li>
+<li>both errors matter</li>
+</ul>
+<hr>
+<h1 id="-part-ii--regression-metrics">🔹 PART II — Regression Metrics</h1>
+<hr>
+<h2 id="-mean-absolute-error-mae">🎯 Mean Absolute Error (MAE)</h2>
+<h3 id="-formula-4">📐 Formula</h3>
+<p>$$
+MAE = \frac{1}{n} \sum |y - \hat{y}|
+$$</p>
+<h3 id="-meaning-3">🧠 Meaning</h3>
+<blockquote>
+<p>Average absolute mistake.</p>
+</blockquote>
+<hr>
+<h3 id="-example-2">😄 Example</h3>
+<p>True prices: <code>[100, 200]</code><br>
+Predicted: <code>[90, 210]</code></p>
+<p>Errors:</p>
+<ul>
+<li>|100−90| = 10</li>
+<li>|200−210| = 10</li>
+</ul>
+<p>$$
+MAE = \frac{20}{2} = 10
+$$</p>
+<p>Easy to understand 👍</p>
+<hr>
+<h2 id="-mean-squared-error-mse">🎯 Mean Squared Error (MSE)</h2>
+<h3 id="-formula-5">📐 Formula</h3>
+<p>$$
+MSE = \frac{1}{n} \sum (y - \hat{y})^2
+$$</p>
+<h3 id="-meaning-4">🧠 Meaning</h3>
+<blockquote>
+<p>Punishes large mistakes more.</p>
+</blockquote>
+<hr>
+<h3 id="-example-3">😄 Example</h3>
+<p>Errors: <code>[10, 10]</code><br>
+Squares: <code>[100, 100]</code></p>
+<p>$$
+MSE = 100
+$$</p>
+<p>Used when big errors are very bad.</p>
+<hr>
+<h2 id="-root-mean-squared-error-rmse">🎯 Root Mean Squared Error (RMSE)</h2>
+<h3 id="-formula-6">📐 Formula</h3>
+<p>$$
+RMSE = \sqrt{MSE}
+$$</p>
+<h3 id="-meaning-5">🧠 Meaning</h3>
+<p>Same unit as target variable.</p>
+<p>If RMSE = 10 → “average error ≈ 10 units”</p>
+<hr>
+<h1 id="-part-iii--nlp-metrics-language-is-hard">🔹 PART III — NLP Metrics (Language Is Hard)</h1>
+<hr>
+<h2 id="-why-nlp-metrics-are-tricky">🧠 Why NLP Metrics Are Tricky</h2>
+<p>Language has:</p>
+<ul>
+<li>multiple correct answers</li>
+<li>style differences</li>
+<li>synonyms</li>
+</ul>
+<p>Exact matching fails.</p>
+<hr>
+<h2 id="-bleu-score-translation">✍️ BLEU Score (Translation)</h2>
+<p>Measures:</p>
+<blockquote>
+<p>Overlap of n-grams between prediction and reference.</p>
+</blockquote>
+<h3 id="-simplified-idea">📐 Simplified Idea</h3>
+<p>More shared phrases → higher BLEU.</p>
+<hr>
+<h3 id="-example-4">😄 Example</h3>
+<p>Reference:</p>
+<blockquote>
+<p>“AI changes the world”</p>
+</blockquote>
+<p>Prediction:</p>
+<blockquote>
+<p>“AI transforms the world”</p>
+</blockquote>
+<p>High BLEU (similar meaning).</p>
+<hr>
+<h2 id="-rouge-summarization">📄 ROUGE (Summarization)</h2>
+<p>Measures:</p>
+<ul>
+<li>overlap of words</li>
+<li>overlap of phrases</li>
+</ul>
+<p>Used in:</p>
+<ul>
+<li>summarization</li>
+<li>report generation</li>
+</ul>
+<hr>
+<h2 id="-important-truth-about-nlp-metrics">⚠️ Important Truth About NLP Metrics</h2>
+<p>High BLEU/ROUGE ≠ good answer.</p>
+<p>Human evaluation still matters.</p>
+<p>ChatGPT is trained with:</p>
+<ul>
+<li>cross-entropy (math)</li>
+<li>human feedback (values)</li>
+</ul>
+<hr>
+<h1 id="-part-iv--metrics-in-the-real-world">🔹 PART IV — Metrics in the Real World</h1>
+<hr>
+<h2 id="-medical-ai">🏥 Medical AI</h2>
+<ul>
+<li>prioritize recall</li>
+<li>false negatives are dangerous</li>
+</ul>
+<h2 id="-spam-detection">📩 Spam Detection</h2>
+<ul>
+<li>prioritize precision</li>
+<li>false positives annoy users</li>
+</ul>
+<h2 id="-self-driving">🚗 Self-Driving</h2>
+<ul>
+<li>safety-critical metrics</li>
+<li>worst-case analysis</li>
+</ul>
+<h2 id="-chatgpt">🤖 ChatGPT</h2>
+<ul>
+<li>fluency</li>
+<li>helpfulness</li>
+<li>harmlessness</li>
+<li>alignment (human judgment)</li>
+</ul>
+<hr>
+<h2 id="-choosing-the-right-metric-golden-rule">🧠 Choosing the Right Metric (Golden Rule)</h2>
+<p>Ask:</p>
+<ol>
+<li>What mistake hurts more?</li>
+<li>Who pays the cost?</li>
+<li>Is data balanced?</li>
+</ol>
+<p>Metrics encode <strong>ethics</strong>.</p>
+<hr>
+<h2 id="-final-big-insight">🌍 Final Big Insight</h2>
+<blockquote>
+<p><strong>AI does not know what is “good.”<br>
+Metrics tell it what to care about.</strong></p>
+</blockquote>
+<p>Choose wisely.</p>
+<hr>
+<h2 id="-final-reflection">❓ Final Reflection</h2>
+<details class="spoiler "  id="spoiler-1">
+  <summary>If you optimize the wrong metric, can AI become dangerous?</summary>
+  <p>Yes — optimization without wisdom is risk.</p>
+</details>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-07-ai-fields/" rel="next">Lecture 07 — AI Fields &amp; Specializations</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-09-deep-learning/" rel="prev">Lecture 09 — Deep Learning Foundations</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on 2025</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    ©2026 Kao Panboonyuen
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Built using <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> and the <a href="https://github.com/wowchemy/starter-hugo-academic" target="_blank" rel="noopener">Wowchemy academic template</a>. View <a href="https://github.com/kaopanboonyuen/kaopanboonyuen.github.io" target="_blank" rel="noopener">source</a>.
+        
+  </p>
+</footer>
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/golang.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.b36873e4e886c7b03b21e4eb97d9b6d7.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

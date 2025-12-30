@@ -1,0 +1,1657 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Teerapong Panboonyuen" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-05-ml-types/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08f2e04360a1c87f5ad39547c02bf219.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-05-ml-types/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/kao-pby-20251230-00001-basic-ai/lecture-05-ml-types/" />
+  <meta property="og:title" content="Lecture 05 — Types of Machine Learning | Teerapong Panboonyuen" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2025-12-30T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2025-12-30T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Lecture 05 — Types of Machine Learning | Teerapong Panboonyuen</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="0282b0c5b01b51dee4b237501d47303a" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.4be02a3b391999348b0c7478778a0e4b.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#awards"><span>Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#press"><span>Press</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Featured</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#tags"><span>Topics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#communities"><span>Communities</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://x.com/kaopanboonyuen" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          BASIC AI
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/courses/"><i class="fas fa-arrow-left pr-1"></i>Courses</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/courses/kao-pby-20251230-00001-basic-ai/">BASIC AI</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-01-intro/">Lecture 01 — What Is AI, Really?</a></li>
+
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-02-python/">Lecture 02 — Python: The Language of AI</a></li>
+
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-03-math/">Lecture 03 — Math Behind Intelligence</a></li>
+
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-04-data/">Lecture 04 — Data: The Fuel of AI</a></li>
+
+
+
+  <li class="active"><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-05-ml-types/">Lecture 05 — Types of Machine Learning</a></li>
+
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-06-data-modalities/">Lecture 06 — Data Types &amp; Modalities</a></li>
+
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-07-ai-fields/">Lecture 07 — AI Fields &amp; Specializations</a></li>
+
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-08-evaluation/">Lecture 08 — Evaluation Metrics</a></li>
+
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-09-deep-learning/">Lecture 09 — Deep Learning Foundations</a></li>
+
+
+
+  <li class=""><a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-10-trends/">Lecture 10 — Modern AI &amp; 2026 Trends</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-big-picture-read-this-first">🧠 Big Picture (Read This First)</a></li>
+    <li><a href="#-a-simple-mental-map">🧭 A Simple Mental Map</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-definition">📘 Definition</a></li>
+    <li><a href="#-intuition-human-version">🧠 Intuition (Human Version)</a></li>
+    <li><a href="#-classic-problems">🧪 Classic Problems</a>
+      <ul>
+        <li><a href="#-classification">🔹 Classification</a></li>
+        <li><a href="#-regression">🔹 Regression</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mini-project-beginner-friendly">💻 Mini Project (Beginner-Friendly)</a>
+      <ul>
+        <li><a href="#-project-email-spam-classifier">🎯 Project: Email Spam Classifier</a></li>
+      </ul>
+    </li>
+    <li><a href="#-quiz">❓ Quiz</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-definition-1">📘 Definition</a></li>
+    <li><a href="#-funny-example">😄 Funny Example</a></li>
+    <li><a href="#-common-techniques">🧪 Common Techniques</a></li>
+    <li><a href="#-mini-project">💻 Mini Project</a>
+      <ul>
+        <li><a href="#-project-customer-segmentation">🎯 Project: Customer Segmentation</a></li>
+      </ul>
+    </li>
+    <li><a href="#-quiz-1">❓ Quiz</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-definition-2">📘 Definition</a></li>
+    <li><a href="#-why-this-exists">🧠 Why This Exists</a></li>
+    <li><a href="#-real-world-uses">🧪 Real-World Uses</a></li>
+    <li><a href="#-mini-project-idea">💻 Mini Project Idea</a></li>
+    <li><a href="#-quiz-2">❓ Quiz</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-definition-3">📘 Definition</a></li>
+    <li><a href="#-why-this-changed-ai-forever">🤯 Why This Changed AI Forever</a></li>
+    <li><a href="#-famous-examples">🧪 Famous Examples</a>
+      <ul>
+        <li><a href="#-nlp">🔹 NLP</a></li>
+        <li><a href="#-vision">🔹 Vision</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mini-project-conceptual">💻 Mini Project (Conceptual)</a></li>
+    <li><a href="#-quiz-3">❓ Quiz</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-definition-4">📘 Definition</a></li>
+    <li><a href="#-intuition">🕹️ Intuition</a></li>
+    <li><a href="#-key-components">🧪 Key Components</a></li>
+    <li><a href="#-tiny-rl-example-concept">💻 Tiny RL Example (Concept)</a></li>
+    <li><a href="#-quiz-4">❓ Quiz</a></li>
+    <li><a href="#-how-these-power-modern-ai">🧠 How These Power Modern AI</a></li>
+    <li><a href="#-final-big-insight">🎓 Final Big Insight</a></li>
+    <li><a href="#-final-reflection">🌱 Final Reflection</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+  
+  
+
+  <li class="breadcrumb-item">
+    <a href="/">
+      
+        Home
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/">
+      
+        Courses
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/kao-pby-20251230-00001-basic-ai/">
+      
+        BASIC AI
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Lecture 05 — Types of Machine Learning
+      </li>
+    </ol>
+  </nav>
+
+
+          
+
+          <h1>Lecture 05 — Types of Machine Learning</h1>
+
+          <div class="article-style">
+            <p>
+  <i class="fas fa-clock  pr-1 fa-fw"></i> ~3 hours (core AI taxonomy lecture)</p>
+<hr>
+<h2 id="-big-picture-read-this-first">🧠 Big Picture (Read This First)</h2>
+<blockquote>
+<p><strong>Machine Learning = systems that improve performance by learning from experience.</strong></p>
+</blockquote>
+<p>But here is the secret:</p>
+<blockquote>
+<p>Not all experience teaches the same way.</p>
+</blockquote>
+<p>Different problems → different learning paradigms.</p>
+<p>If you choose the <em>wrong type</em>, even the best model will fail.</p>
+<hr>
+<h2 id="-a-simple-mental-map">🧭 A Simple Mental Map</h2>
+<p>Think of learning like school:</p>
+<table>
+<thead>
+<tr>
+<th>Learning Type</th>
+<th>Analogy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Supervised</td>
+<td>Teacher gives answers</td>
+</tr>
+<tr>
+<td>Unsupervised</td>
+<td>Student explores alone</td>
+</tr>
+<tr>
+<td>Semi-supervised</td>
+<td>Few answers, many questions</td>
+</tr>
+<tr>
+<td>Self-supervised</td>
+<td>Student creates own homework</td>
+</tr>
+<tr>
+<td>Reinforcement</td>
+<td>Learning by reward &amp; punishment</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="1-supervised-learning">1️⃣ Supervised Learning</h1>
+<p><strong>“Learning with a teacher”</strong></p>
+<hr>
+<h2 id="-definition">📘 Definition</h2>
+<p>Learning from <strong>labeled data</strong>:</p>
+<pre><code>
+(input → correct output)
+
+</code></pre>
+<p>Examples:</p>
+<ul>
+<li>image → label (cat / dog)</li>
+<li>email → spam / not spam</li>
+<li>house features → price</li>
+</ul>
+<hr>
+<h2 id="-intuition-human-version">🧠 Intuition (Human Version)</h2>
+<p>A teacher says:</p>
+<blockquote>
+<p>“This is a cat.”<br>
+“This is NOT a cat.”</p>
+</blockquote>
+<p>The student adjusts until mistakes are small.</p>
+<hr>
+<h2 id="-classic-problems">🧪 Classic Problems</h2>
+<h3 id="-classification">🔹 Classification</h3>
+<ul>
+<li>spam detection</li>
+<li>medical diagnosis</li>
+<li>fraud detection</li>
+</ul>
+<h3 id="-regression">🔹 Regression</h3>
+<ul>
+<li>house price prediction</li>
+<li>temperature forecasting</li>
+</ul>
+<hr>
+<h2 id="-mini-project-beginner-friendly">💻 Mini Project (Beginner-Friendly)</h2>
+<h3 id="-project-email-spam-classifier">🎯 Project: Email Spam Classifier</h3>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Collect labeled emails</li>
+<li>Convert text → numbers</li>
+<li>Train a classifier</li>
+<li>Evaluate accuracy</li>
+</ol>
+<pre><code class="language-python">from sklearn.linear_model import LogisticRegression
+from sklearn.feature_extraction.text import CountVectorizer
+
+texts = [&quot;free money&quot;, &quot;meeting tomorrow&quot;]
+labels = [1, 0]  # 1=spam, 0=not spam
+
+vec = CountVectorizer()
+X = vec.fit_transform(texts)
+
+model = LogisticRegression()
+model.fit(X, labels)
+</code></pre>
+<p>👉 This is <strong>real AI</strong>, not magic.</p>
+<hr>
+<h2 id="-quiz">❓ Quiz</h2>
+<details class="spoiler "  id="spoiler-1">
+  <summary>Why does supervised learning need labels?</summary>
+  <p>Because the loss function compares predictions with ground truth.</p>
+</details>
+<hr>
+<h1 id="2-unsupervised-learning">2️⃣ Unsupervised Learning</h1>
+<p><strong>“Learning without answers”</strong></p>
+<hr>
+<h2 id="-definition-1">📘 Definition</h2>
+<p>Learning <strong>patterns without labels</strong>.</p>
+<p>The system asks:</p>
+<blockquote>
+<p>“What structure exists here?”</p>
+</blockquote>
+<hr>
+<h2 id="-funny-example">😄 Funny Example</h2>
+<p>You walk into a party with strangers.</p>
+<p>No name tags.</p>
+<p>Your brain automatically groups people:</p>
+<ul>
+<li>similar clothes</li>
+<li>similar behavior</li>
+<li>similar interests</li>
+</ul>
+<p>That’s <strong>clustering</strong>.</p>
+<hr>
+<h2 id="-common-techniques">🧪 Common Techniques</h2>
+<ul>
+<li>K-means clustering</li>
+<li>PCA (dimensionality reduction)</li>
+<li>Topic modeling</li>
+</ul>
+<hr>
+<h2 id="-mini-project">💻 Mini Project</h2>
+<h3 id="-project-customer-segmentation">🎯 Project: Customer Segmentation</h3>
+<pre><code class="language-python">from sklearn.cluster import KMeans
+
+X = [[20, 500], [25, 700], [45, 2000]]  # age, spending
+kmeans = KMeans(n_clusters=2)
+kmeans.fit(X)
+
+print(kmeans.labels_)
+</code></pre>
+<p>Used in:</p>
+<ul>
+<li>marketing</li>
+<li>recommendation systems</li>
+<li>anomaly detection</li>
+</ul>
+<hr>
+<h2 id="-quiz-1">❓ Quiz</h2>
+<details class="spoiler "  id="spoiler-2">
+  <summary>Is unsupervised learning useful without labels?</summary>
+  <p>Yes — it discovers structure and representations.</p>
+</details>
+<hr>
+<h1 id="3-semi-supervised-learning">3️⃣ Semi-Supervised Learning</h1>
+<p><strong>“A few answers, many questions”</strong></p>
+<hr>
+<h2 id="-definition-2">📘 Definition</h2>
+<p>Small labeled dataset
++
+Large unlabeled dataset</p>
+<hr>
+<h2 id="-why-this-exists">🧠 Why This Exists</h2>
+<p>Labeling costs:</p>
+<ul>
+<li>money 💰</li>
+<li>time ⏳</li>
+<li>experts 🧠</li>
+</ul>
+<p>But raw data is everywhere.</p>
+<hr>
+<h2 id="-real-world-uses">🧪 Real-World Uses</h2>
+<ul>
+<li>medical images</li>
+<li>legal documents</li>
+<li>speech recognition</li>
+</ul>
+<hr>
+<h2 id="-mini-project-idea">💻 Mini Project Idea</h2>
+<p>Label:</p>
+<ul>
+<li>100 images by hand</li>
+</ul>
+<p>Let the model:</p>
+<ul>
+<li>infer the rest</li>
+</ul>
+<p>This is how <strong>real-world AI systems survive</strong>.</p>
+<hr>
+<h2 id="-quiz-2">❓ Quiz</h2>
+<details class="spoiler "  id="spoiler-3">
+  <summary>Why is semi-supervised learning practical?</summary>
+  <p>Labels are expensive; data is cheap.</p>
+</details>
+<hr>
+<h1 id="4-self-supervised-learning">4️⃣ Self-Supervised Learning</h1>
+<p><strong>“The AI creates its own teacher”</strong></p>
+<hr>
+<h2 id="-definition-3">📘 Definition</h2>
+<p>Labels are <strong>automatically generated from data itself</strong>.</p>
+<hr>
+<h2 id="-why-this-changed-ai-forever">🤯 Why This Changed AI Forever</h2>
+<p>Instead of humans saying:</p>
+<blockquote>
+<p>“This is the answer”</p>
+</blockquote>
+<p>The system asks:</p>
+<blockquote>
+<p>“What part of the data is missing?”</p>
+</blockquote>
+<hr>
+<h2 id="-famous-examples">🧪 Famous Examples</h2>
+<h3 id="-nlp">🔹 NLP</h3>
+<ul>
+<li>Masked word prediction (BERT)</li>
+</ul>
+<h3 id="-vision">🔹 Vision</h3>
+<ul>
+<li>Predict image rotation</li>
+<li>Contrastive learning (CLIP)</li>
+</ul>
+<hr>
+<h2 id="-mini-project-conceptual">💻 Mini Project (Conceptual)</h2>
+<pre><code class="language-text">Input: &quot;AI is ____&quot;
+Target: &quot;powerful&quot;
+</code></pre>
+<p>This simple idea trained <strong>LLMs</strong>.</p>
+<hr>
+<h2 id="-quiz-3">❓ Quiz</h2>
+<details class="spoiler "  id="spoiler-4">
+  <summary>Why is self-supervised learning powerful?</summary>
+  <p>It scales with data, not human labeling.</p>
+</details>
+<hr>
+<h1 id="5-reinforcement-learning-rl">5️⃣ Reinforcement Learning (RL)</h1>
+<p><strong>“Learning by doing”</strong></p>
+<hr>
+<h2 id="-definition-4">📘 Definition</h2>
+<p>Learning from <strong>reward signals</strong>, not correct answers.</p>
+<hr>
+<h2 id="-intuition">🕹️ Intuition</h2>
+<p>You train a dog 🐕:</p>
+<ul>
+<li>Good behavior → treat</li>
+<li>Bad behavior → no treat</li>
+</ul>
+<p>No explicit instructions.</p>
+<hr>
+<h2 id="-key-components">🧪 Key Components</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent</td>
+<td>Learner</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>World</td>
+</tr>
+<tr>
+<td>Action</td>
+<td>Choice</td>
+</tr>
+<tr>
+<td>Reward</td>
+<td>Feedback</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="-tiny-rl-example-concept">💻 Tiny RL Example (Concept)</h2>
+<pre><code class="language-python">if reward &gt; 0:
+    increase_probability(action)
+else:
+    decrease_probability(action)
+</code></pre>
+<p>Used in:</p>
+<ul>
+<li>AlphaGo</li>
+<li>robotics</li>
+<li>recommendation systems</li>
+<li>game AI</li>
+</ul>
+<hr>
+<h2 id="-quiz-4">❓ Quiz</h2>
+<details class="spoiler "  id="spoiler-5">
+  <summary>What is the exploration–exploitation tradeoff?</summary>
+  <p>Balancing trying new actions vs using known good ones.</p>
+</details>
+<hr>
+<h2 id="-how-these-power-modern-ai">🧠 How These Power Modern AI</h2>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Learning Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td>Self-supervised + RLHF</td>
+</tr>
+<tr>
+<td>Image AI</td>
+<td>Self-supervised + supervised</td>
+</tr>
+<tr>
+<td>Robots</td>
+<td>Reinforcement learning</td>
+</tr>
+<tr>
+<td>Recommenders</td>
+<td>Supervised + RL</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="-final-big-insight">🎓 Final Big Insight</h2>
+<blockquote>
+<p>There is no “best” learning type.
+There is only <strong>the right tool for the problem</strong>.</p>
+</blockquote>
+<p>Great AI engineers choose wisely.</p>
+<hr>
+<h2 id="-final-reflection">🌱 Final Reflection</h2>
+<details class="spoiler "  id="spoiler-6">
+  <summary>If you had unlimited data but no labels, which learning paradigm would you choose?</summary>
+  <p>Self-supervised learning.</p>
+</details>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-04-data/" rel="next">Lecture 04 — Data: The Fuel of AI</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/kao-pby-20251230-00001-basic-ai/lecture-06-data-modalities/" rel="prev">Lecture 06 — Data Types &amp; Modalities</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on 2025</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    ©2026 Kao Panboonyuen
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Built using <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> and the <a href="https://github.com/wowchemy/starter-hugo-academic" target="_blank" rel="noopener">Wowchemy academic template</a>. View <a href="https://github.com/kaopanboonyuen/kaopanboonyuen.github.io" target="_blank" rel="noopener">source</a>.
+        
+  </p>
+</footer>
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/golang.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.b36873e4e886c7b03b21e4eb97d9b6d7.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>
