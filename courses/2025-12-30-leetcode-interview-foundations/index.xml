@@ -15,7 +15,7 @@
     <item>
       <title>CS101-LC01 — What is LeetCode? (Why Everyone Uses It)</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc01-intro/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc01-intro/</guid>
       <description>&lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~30 minutes&lt;/p&gt;
@@ -189,7 +189,7 @@ you will think like a software engineer.&lt;/p&gt;
     <item>
       <title>CS101-LC02 — Big-O Intuition</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc02-big-o/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc02-big-o/</guid>
       <description>&lt;h2 id=&#34;-why-big-o-matters&#34;&gt;🎯 Why Big-O Matters&lt;/h2&gt;
 &lt;p&gt;Big-O is &lt;strong&gt;NOT&lt;/strong&gt; about:&lt;/p&gt;
@@ -466,7 +466,7 @@ Big-O is &lt;strong&gt;thinking about scale&lt;/strong&gt;.&lt;/p&gt;
     <item>
       <title>CS101-LC03 — Python for Interviews</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc03-python-recap/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc03-python-recap/</guid>
       <description>&lt;h2 id=&#34;-why-python-matters-in-interviews&#34;&gt;🎯 Why Python Matters in Interviews&lt;/h2&gt;
 &lt;p&gt;Python is not just a language.&lt;br&gt;
@@ -704,7 +704,7 @@ They are about &lt;strong&gt;how you think&lt;/strong&gt;.&lt;/p&gt;
     <item>
       <title>CS101-LC04 — LeetCode Practice 🧪</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-leetcode-tests/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-leetcode-tests/</guid>
       <description>&lt;h2 id=&#34;-lc-test-01-sorting&#34;&gt;🧩 LC-TEST-01 Sorting&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Question&lt;/strong&gt;: Sort an integer array.&lt;/p&gt;
@@ -747,7 +747,7 @@ They are about &lt;strong&gt;how you think&lt;/strong&gt;.&lt;/p&gt;
     <item>
       <title>LC-TEST-01 — Sorting an Array</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/</guid>
       <description>&lt;h2 id=&#34;-problem-statement&#34;&gt;🧩 Problem Statement&lt;/h2&gt;
 &lt;p&gt;Given an integer array &lt;code&gt;nums&lt;/code&gt;, return the array sorted in &lt;strong&gt;ascending order&lt;/strong&gt;.&lt;/p&gt;
@@ -1007,7 +1007,7 @@ It’s about &lt;strong&gt;choosing the right tool for the problem&lt;/strong&gt
     <item>
       <title>LC-TEST-02 — Prime Number Check</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/</guid>
       <description>&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;
 &lt;p&gt;Given an integer &lt;code&gt;n&lt;/code&gt;, determine whether it is a prime number.&lt;/p&gt;
@@ -1065,7 +1065,7 @@ It’s about &lt;strong&gt;choosing the right tool for the problem&lt;/strong&gt
     <item>
       <title>LC-TEST-03 — Linear Search</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-03-linear-search/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-03-linear-search/</guid>
       <description>&lt;h2 id=&#34;-problem-statement&#34;&gt;🧩 Problem Statement&lt;/h2&gt;
 &lt;p&gt;Given an array &lt;code&gt;nums&lt;/code&gt; and a target value &lt;code&gt;x&lt;/code&gt;, return &lt;code&gt;True&lt;/code&gt; if &lt;code&gt;x&lt;/code&gt; exists in the array, otherwise return &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
@@ -1322,7 +1322,7 @@ It’s about &lt;strong&gt;choosing the right strategy under constraints&lt;/str
     <item>
       <title>LC-TEST-04 — Nested Loops (Thinking Beyond O(n²))</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-04-nested-loop/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-04-nested-loop/</guid>
       <description>&lt;h2 id=&#34;-problem-statement&#34;&gt;🧩 Problem Statement&lt;/h2&gt;
 &lt;p&gt;Given an integer array &lt;code&gt;nums&lt;/code&gt;, determine whether the array contains &lt;strong&gt;any duplicate elements&lt;/strong&gt;.&lt;/p&gt;
@@ -1545,7 +1545,7 @@ They are &lt;strong&gt;a starting point&lt;/strong&gt;.&lt;/p&gt;
     <item>
       <title>LC-TEST-05 — Two Sum (Brute Force → Hash Map)</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-05-two-sum/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-05-two-sum/</guid>
       <description>&lt;h2 id=&#34;-problem-statement&#34;&gt;🧩 Problem Statement&lt;/h2&gt;
 &lt;p&gt;Given an integer array &lt;code&gt;nums&lt;/code&gt; and an integer &lt;code&gt;target&lt;/code&gt;, return the &lt;strong&gt;indices of two numbers&lt;/strong&gt; such that they add up to &lt;code&gt;target&lt;/code&gt;.&lt;/p&gt;
@@ -1877,7 +1877,7 @@ linear algebra is &lt;strong&gt;meaning&lt;/strong&gt; in AI.&lt;/p&gt;
     <item>
       <title>LC-TEST-06 — Probability for Machine Learning</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-06-probability-ai/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-06-probability-ai/</guid>
       <description>&lt;h2 id=&#34;-why-probability-matters&#34;&gt;🎯 Why Probability Matters&lt;/h2&gt;
 &lt;p&gt;Probability is everywhere in AI:&lt;/p&gt;
@@ -2074,6 +2074,551 @@ for v in nums:
 &lt;blockquote&gt;
 &lt;p&gt;Strong engineers trade &lt;strong&gt;resources intentionally&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-07 — Indexing &amp; Containers Mastery</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-07-indexing-and-containers/</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-07-indexing-and-containers/</guid>
+      <description>&lt;h2 id=&#34;-why-this-lesson-exists&#34;&gt;🎯 Why This Lesson Exists&lt;/h2&gt;
+&lt;p&gt;When you watch strong developers solve LeetCode or interview problems, you’ll notice something:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;They don’t write long code.&lt;br&gt;
+They don’t explain much.&lt;br&gt;
+But their solution is &lt;strong&gt;short, fast, and confident&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The secret is &lt;strong&gt;indexing&lt;/strong&gt; and &lt;strong&gt;containers&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;They know:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When to use &lt;strong&gt;arrays vs lists&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;How to move pointers instead of copying data&lt;/li&gt;
+&lt;li&gt;How to let &lt;strong&gt;data structures do the hard work&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This lesson is about &lt;strong&gt;thinking like them&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-you-will-train-here&#34;&gt;🧠 What You Will Train Here&lt;/h2&gt;
+&lt;p&gt;In this session, you will repeatedly practice:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Index-based traversal (two pointers, ranges, windows)&lt;/li&gt;
+&lt;li&gt;Containers: &lt;code&gt;list&lt;/code&gt;, &lt;code&gt;dict&lt;/code&gt;, &lt;code&gt;set&lt;/code&gt;, &lt;code&gt;deque&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Avoiding unnecessary loops&lt;/li&gt;
+&lt;li&gt;Writing &lt;strong&gt;contest-level, interview-ready code&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All problems here are &lt;strong&gt;real LeetCode-style battlefield problems&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-core-example--text-justification&#34;&gt;🧩 Core Example — Text Justification&lt;/h2&gt;
+&lt;p&gt;This problem looks long.
+Many beginners panic.&lt;/p&gt;
+&lt;p&gt;Experienced devs see:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“This is just indexing + container control.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-statement--text-justification&#34;&gt;📘 Problem Statement — Text Justification&lt;/h2&gt;
+&lt;p&gt;Given an array of strings &lt;code&gt;words&lt;/code&gt; and an integer &lt;code&gt;maxWidth&lt;/code&gt;, format the text so that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each line has &lt;strong&gt;exactly &lt;code&gt;maxWidth&lt;/code&gt; characters&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Text is &lt;strong&gt;fully justified&lt;/strong&gt; (left and right)&lt;/li&gt;
+&lt;li&gt;Extra spaces are distributed &lt;strong&gt;as evenly as possible&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;If spaces do not divide evenly, &lt;strong&gt;left gaps get more&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;last line&lt;/strong&gt; is left-justified&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sample-input---output&#34;&gt;📥 Sample Input / 📤 Output&lt;/h2&gt;
+&lt;h3 id=&#34;example&#34;&gt;Example&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Input&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;words = [&amp;quot;This&amp;quot;, &amp;quot;is&amp;quot;, &amp;quot;an&amp;quot;, &amp;quot;example&amp;quot;, &amp;quot;of&amp;quot;, &amp;quot;text&amp;quot;, &amp;quot;justification.&amp;quot;]
+maxWidth = 16
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[
+  &amp;quot;This    is    an&amp;quot;,
+  &amp;quot;example  of text&amp;quot;,
+  &amp;quot;justification.  &amp;quot;
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interviewer-insight&#34;&gt;🧠 Interviewer Insight&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;❗ Interviewers are NOT testing formatting.&lt;/p&gt;
+&lt;p&gt;They are testing:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Can you &lt;strong&gt;group data using indices&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;Can you manage &lt;strong&gt;ranges without slicing copies&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;Do you understand &lt;strong&gt;greedy packing&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;Can you control spaces mathematically?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you pass this problem cleanly,
+they already trust your &lt;strong&gt;data-structure instincts&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-step-1--greedy-line-packing-indexing&#34;&gt;🧩 Step 1 — Greedy Line Packing (Indexing)&lt;/h2&gt;
+&lt;h3 id=&#34;-idea&#34;&gt;💡 Idea&lt;/h3&gt;
+&lt;p&gt;Use indexing to pack as many words as possible into one line.&lt;/p&gt;
+&lt;p&gt;We move a pointer &lt;code&gt;i&lt;/code&gt; forward.
+No recursion.
+No backtracking.
+No copying.&lt;/p&gt;
+&lt;p&gt;This is &lt;strong&gt;pure index control&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-core-packing-logic&#34;&gt;🧑‍💻 Core Packing Logic&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;i = 0
+n = len(words)
+
+while i &amp;lt; n:
+    line_len = len(words[i])
+    j = i + 1
+
+    while j &amp;lt; n and line_len + 1 + len(words[j]) &amp;lt;= maxWidth:
+        line_len += 1 + len(words[j])
+        j += 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🟢 Notice:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;i&lt;/code&gt; and &lt;code&gt;j&lt;/code&gt; define a &lt;strong&gt;range&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;No new arrays are created&lt;/li&gt;
+&lt;li&gt;This is how contest code stays fast&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-step-2--space-distribution-using-containers&#34;&gt;🧩 Step 2 — Space Distribution Using Containers&lt;/h2&gt;
+&lt;p&gt;Once words &lt;code&gt;[i : j]&lt;/code&gt; are fixed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Count total spaces needed&lt;/li&gt;
+&lt;li&gt;Count gaps between words&lt;/li&gt;
+&lt;li&gt;Distribute spaces using arithmetic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This avoids messy string operations.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-space-math-the-key-insight&#34;&gt;🧑‍💻 Space Math (The Key Insight)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;num_words = j - i
+total_spaces = maxWidth - sum(len(w) for w in words[i:j])
+gaps = num_words - 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we branch:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Last line OR single word&lt;/strong&gt; → left-justify&lt;/li&gt;
+&lt;li&gt;Otherwise → fully justify&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-full-justification-logic&#34;&gt;🧑‍💻 Full Justification Logic&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if j == n or gaps == 0:
+    line = &amp;quot; &amp;quot;.join(words[i:j])
+    line += &amp;quot; &amp;quot; * (maxWidth - len(line))
+else:
+    space, extra = divmod(total_spaces, gaps)
+    line = &amp;quot;&amp;quot;
+
+    for k in range(i, j - 1):
+        line += words[k]
+        line += &amp;quot; &amp;quot; * (space + (1 if extra &amp;gt; 0 else 0))
+        extra -= 1
+
+    line += words[j - 1]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🟢 This is where &lt;strong&gt;containers + indexing shine&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-complexity-analysis&#34;&gt;⏱️ Complexity Analysis&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(1) extra (output excluded)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is &lt;strong&gt;optimal&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-this-problem-is-gold-for-interviews&#34;&gt;🧠 Why This Problem Is Gold for Interviews&lt;/h2&gt;
+&lt;p&gt;This single problem tests:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Skill&lt;/th&gt;
+&lt;th&gt;Tested&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Index traversal&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Greedy strategy&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Container usage&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Edge cases&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Clean code&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;If you solve this smoothly,
+interviewers assume you can handle:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Two pointers&lt;/li&gt;
+&lt;li&gt;Sliding windows&lt;/li&gt;
+&lt;li&gt;String manipulation&lt;/li&gt;
+&lt;li&gt;Array partitioning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-more-problems-you-should-practice-in-this-style&#34;&gt;🔁 More Problems You Should Practice in This Style&lt;/h2&gt;
+&lt;p&gt;To fully absorb indexing + containers, repeat this mindset on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Trapping Rain Water&lt;/li&gt;
+&lt;li&gt;Container With Most Water&lt;/li&gt;
+&lt;li&gt;Group Anagrams&lt;/li&gt;
+&lt;li&gt;Minimum Window Substring&lt;/li&gt;
+&lt;li&gt;Merge Intervals&lt;/li&gt;
+&lt;li&gt;Rotate Image&lt;/li&gt;
+&lt;li&gt;Spiral Matrix&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Same idea.
+Different skin.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-takeaway&#34;&gt;🎯 Final Takeaway&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Strong developers don’t write clever code.&lt;/p&gt;
+&lt;p&gt;They &lt;strong&gt;let indices and containers think for them&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you master this lesson,
+your LeetCode solutions will:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Shrink in size&lt;/li&gt;
+&lt;li&gt;Increase in clarity&lt;/li&gt;
+&lt;li&gt;Feel &lt;em&gt;calm&lt;/em&gt; under interview pressure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is the level interviewers quietly hope for 🚀&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-08 — Two Pointers in the Wild</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/</guid>
+      <description>&lt;h2 id=&#34;-why-two-pointers-matter&#34;&gt;🎯 Why Two Pointers Matter&lt;/h2&gt;
+&lt;p&gt;Two pointers is not a trick.&lt;br&gt;
+It is a &lt;strong&gt;way of thinking&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Strong developers see:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“I don’t need extra memory.&lt;br&gt;
+I can let indices move and converge.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This technique appears everywhere:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Arrays&lt;/li&gt;
+&lt;li&gt;Strings&lt;/li&gt;
+&lt;li&gt;Sorted data&lt;/li&gt;
+&lt;li&gt;Geometry problems&lt;/li&gt;
+&lt;li&gt;Optimization tasks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you master this, &lt;strong&gt;your code gets shorter immediately&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-you-will-learn&#34;&gt;🧠 What You Will Learn&lt;/h2&gt;
+&lt;p&gt;In this lesson, you will train to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;left / right pointers confidently&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Decide &lt;strong&gt;who moves and why&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Avoid nested loops&lt;/li&gt;
+&lt;li&gt;Reduce O(n²) → O(n)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is &lt;strong&gt;interview-critical muscle memory&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-core-example--container-with-most-water&#34;&gt;🧩 Core Example — Container With Most Water&lt;/h2&gt;
+&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;
+&lt;p&gt;Given &lt;code&gt;n&lt;/code&gt; non-negative integers representing vertical lines,
+find two lines that together with the x-axis form a container
+that holds the &lt;strong&gt;most water&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sample-input---output&#34;&gt;📥 Sample Input / 📤 Output&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;height&lt;/th&gt;
+&lt;th&gt;Output&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;[1,8,6,2,5,4,8,3,7]&lt;/td&gt;
+&lt;td&gt;49&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interviewer-insight&#34;&gt;🧠 Interviewer Insight&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;❗ Interviewers want to see:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Do you understand &lt;strong&gt;why one pointer moves&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Can you explain &lt;strong&gt;why brute force is wasteful&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Do you trust a greedy decision?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you randomly move pointers, you fail.
+If you &lt;strong&gt;justify movement&lt;/strong&gt;, you pass.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-brute-force-what-not-to-do&#34;&gt;🧩 Brute Force (What NOT To Do)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;max_area = 0
+for i in range(len(height)):
+    for j in range(i + 1, len(height)):
+        max_area = max(
+            max_area,
+            min(height[i], height[j]) * (j - i)
+        )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;⛔ O(n²)
+⛔ Interview red flag&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-two-pointer-strategy-correct&#34;&gt;🧩 Two Pointer Strategy (Correct)&lt;/h2&gt;
+&lt;h3 id=&#34;-core-insight&#34;&gt;💡 Core Insight&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;shorter line&lt;/strong&gt; limits the area.&lt;/p&gt;
+&lt;p&gt;So:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Move the pointer pointing to the &lt;strong&gt;shorter height&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Because moving the taller one &lt;strong&gt;cannot increase area&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is the entire trick.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-two-pointer-solution&#34;&gt;🧑‍💻 Two Pointer Solution&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def maxArea(height):
+    left, right = 0, len(height) - 1
+    best = 0
+
+    while left &amp;lt; right:
+        width = right - left
+        area = min(height[left], height[right]) * width
+        best = max(best, area)
+
+        if height[left] &amp;lt; height[right]:
+            left += 1
+        else:
+            right -= 1
+
+    return best
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-complexity&#34;&gt;⏱️ Complexity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Optimal.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-two-pointer-patterns-you-must-recognize&#34;&gt;🧠 Two Pointer Patterns You Must Recognize&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Pattern&lt;/th&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Opposite ends&lt;/td&gt;
+&lt;td&gt;Container, Palindrome&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Same direction&lt;/td&gt;
+&lt;td&gt;Remove duplicates&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Meet in middle&lt;/td&gt;
+&lt;td&gt;Pair sum&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Shrinking window&lt;/td&gt;
+&lt;td&gt;Valid palindrome&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-takeaway&#34;&gt;🎯 Final Takeaway&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Two pointers is about &lt;strong&gt;controlled movement&lt;/strong&gt;, not guessing.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you can explain &lt;strong&gt;why&lt;/strong&gt; a pointer moves,
+interviewers assume you understand &lt;strong&gt;algorithmic reasoning&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-practice-targets&#34;&gt;🏁 Practice Targets&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Valid Palindrome&lt;/li&gt;
+&lt;li&gt;Two Sum II (sorted)&lt;/li&gt;
+&lt;li&gt;Remove Duplicates&lt;/li&gt;
+&lt;li&gt;3Sum&lt;/li&gt;
+&lt;li&gt;Squares of a Sorted Array&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Master these → you look &lt;em&gt;dangerous&lt;/em&gt; in interviews 😈&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-09 — Sliding Window Like a Pro</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-09-sliding-windows/</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-09-sliding-windows/</guid>
+      <description>&lt;h2 id=&#34;-why-sliding-window-is-a-game-changer&#34;&gt;🎯 Why Sliding Window Is a Game Changer&lt;/h2&gt;
+&lt;p&gt;Sliding Window is what happens when:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Two pointers learn to &lt;strong&gt;cooperate&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This technique is everywhere:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Subarrays&lt;/li&gt;
+&lt;li&gt;Substrings&lt;/li&gt;
+&lt;li&gt;Streaming data&lt;/li&gt;
+&lt;li&gt;Real-time analytics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Interviewers &lt;strong&gt;love&lt;/strong&gt; this topic.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-you-will-learn&#34;&gt;🧠 What You Will Learn&lt;/h2&gt;
+&lt;p&gt;This lesson trains you to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Expand and shrink windows deliberately&lt;/li&gt;
+&lt;li&gt;Track state using containers (&lt;code&gt;dict&lt;/code&gt;, &lt;code&gt;set&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Replace nested loops with &lt;strong&gt;one clean pass&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Write code that looks &lt;strong&gt;effortlessly smart&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-core-example--minimum-window-substring&#34;&gt;🧩 Core Example — Minimum Window Substring&lt;/h2&gt;
+&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;
+&lt;p&gt;Given strings &lt;code&gt;s&lt;/code&gt; and &lt;code&gt;t&lt;/code&gt;, return the &lt;strong&gt;minimum window in &lt;code&gt;s&lt;/code&gt;&lt;/strong&gt;
+that contains all characters of &lt;code&gt;t&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If no such window exists, return &lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sample-input---output&#34;&gt;📥 Sample Input / 📤 Output&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;s&lt;/th&gt;
+&lt;th&gt;t&lt;/th&gt;
+&lt;th&gt;Output&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;ldquo;ADOBECODEBANC&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;ABC&amp;rdquo;&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;BANC&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interviewer-insight&#34;&gt;🧠 Interviewer Insight&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;❗ This problem tests:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Can you &lt;strong&gt;track frequencies&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Do you know when a window becomes valid&lt;/li&gt;
+&lt;li&gt;Can you shrink without breaking correctness&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you brute force substrings → instant fail.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sliding-window-strategy&#34;&gt;🧩 Sliding Window Strategy&lt;/h2&gt;
+&lt;h3 id=&#34;-mental-model&#34;&gt;💡 Mental Model&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Right pointer &lt;strong&gt;expands&lt;/strong&gt; the window&lt;/li&gt;
+&lt;li&gt;Left pointer &lt;strong&gt;shrinks&lt;/strong&gt; it&lt;/li&gt;
+&lt;li&gt;A container tracks validity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Never reset.
+Never restart loops.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sliding-window-solution&#34;&gt;🧑‍💻 Sliding Window Solution&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from collections import Counter
+
+def minWindow(s, t):
+    need = Counter(t)
+    missing = len(t)
+    left = start = end = 0
+
+    for right, ch in enumerate(s, 1):
+        if need[ch] &amp;gt; 0:
+            missing -= 1
+        need[ch] -= 1
+
+        if missing == 0:
+            while left &amp;lt; right and need[s[left]] &amp;lt; 0:
+                need[s[left]] += 1
+                left += 1
+
+            if end == 0 or right - left &amp;lt; end - start:
+                start, end = left, right
+
+            need[s[left]] += 1
+            missing += 1
+            left += 1
+
+    return s[start:end]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-complexity&#34;&gt;⏱️ Complexity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(k) (character set)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is &lt;strong&gt;optimal and interview-approved&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sliding-window-patterns&#34;&gt;🧠 Sliding Window Patterns&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Pattern&lt;/th&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Fixed window&lt;/td&gt;
+&lt;td&gt;Max sum subarray&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Variable window&lt;/td&gt;
+&lt;td&gt;Min window substring&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Frequency window&lt;/td&gt;
+&lt;td&gt;Anagrams&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Set-based window&lt;/td&gt;
+&lt;td&gt;Longest unique substring&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-beginner-vs-pro-thinking&#34;&gt;🧩 Beginner vs Pro Thinking&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Beginner:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Let me try all substrings.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Pro:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“I expand until valid, then shrink carefully.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That mindset shift is what interviews test.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-takeaway&#34;&gt;🎯 Final Takeaway&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sliding Window is not hard.&lt;/p&gt;
+&lt;p&gt;Restarting loops is.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If your window &lt;strong&gt;never resets&lt;/strong&gt;,
+your solution is probably correct.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-practice-targets&#34;&gt;🏁 Practice Targets&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Longest Substring Without Repeating Characters&lt;/li&gt;
+&lt;li&gt;Permutation in String&lt;/li&gt;
+&lt;li&gt;Max Consecutive Ones III&lt;/li&gt;
+&lt;li&gt;Subarray Sum Equals K&lt;/li&gt;
+&lt;li&gt;Find All Anagrams in a String&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Master these → you officially &lt;strong&gt;think like a LeetCode veteran&lt;/strong&gt; 🚀&lt;/p&gt;</description>
     </item>
     
   </channel>

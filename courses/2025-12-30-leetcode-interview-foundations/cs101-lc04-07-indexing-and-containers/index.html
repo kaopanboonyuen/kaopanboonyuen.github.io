@@ -33,7 +33,7 @@
   <meta name="description" content="" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/" />
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-07-indexing-and-containers/" />
 
   
 
@@ -285,7 +285,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/" />
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-07-indexing-and-containers/" />
 
   
   
@@ -302,8 +302,8 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Teerapong Panboonyuen" />
-  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/" />
-  <meta property="og:title" content="LC-TEST-01 — Sorting an Array | Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-07-indexing-and-containers/" />
+  <meta property="og:title" content="LC-TEST-07 — Indexing &amp; Containers Mastery | Teerapong Panboonyuen" />
   <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
@@ -330,11 +330,11 @@
 
 
 
-  <title>LC-TEST-01 — Sorting an Array | Teerapong Panboonyuen</title>
+  <title>LC-TEST-07 — Indexing &amp; Containers Mastery | Teerapong Panboonyuen</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="16692b06b0d7a7e160438fd824ccb1c3" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="7d3d8530cb8f2b976983f1f6aa10f4b4" >
 
   
   
@@ -902,7 +902,7 @@
 
 
 
-  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/">LC-TEST-01 — Sorting an Array</a></li>
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/">LC-TEST-01 — Sorting an Array</a></li>
 
 
 
@@ -926,7 +926,7 @@
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-07-indexing-and-containers/">LC-TEST-07 — Indexing &amp; Containers Mastery</a></li>
+  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-07-indexing-and-containers/">LC-TEST-07 — Indexing &amp; Containers Mastery</a></li>
 
 
 
@@ -962,53 +962,29 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#-problem-statement">🧩 Problem Statement</a></li>
-    <li><a href="#-sample-input---output">📥 Sample Input / 📤 Output</a></li>
-    <li><a href="#-interviewer-insight-read-this-first">🧠 Interviewer Insight (Read This First)</a></li>
-    <li><a href="#-approach-1--python-built-in-sort-recommended-in-practice">✅ Approach 1 — Python Built-in Sort (Recommended in Practice)</a>
+    <li><a href="#-why-this-lesson-exists">🎯 Why This Lesson Exists</a></li>
+    <li><a href="#-what-you-will-train-here">🧠 What You Will Train Here</a></li>
+    <li><a href="#-core-example--text-justification">🧩 Core Example — Text Justification</a></li>
+    <li><a href="#-problem-statement--text-justification">📘 Problem Statement — Text Justification</a></li>
+    <li><a href="#-sample-input---output">📥 Sample Input / 📤 Output</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#-interviewer-insight">🧠 Interviewer Insight</a></li>
+    <li><a href="#-step-1--greedy-line-packing-indexing">🧩 Step 1 — Greedy Line Packing (Indexing)</a>
       <ul>
         <li><a href="#-idea">💡 Idea</a></li>
-        <li><a href="#-code">🧑‍💻 Code</a></li>
-        <li><a href="#-complexity">⏱️ Complexity</a></li>
       </ul>
     </li>
-    <li><a href="#-approach-2--bubble-sort-educational-only">🧩 Approach 2 — Bubble Sort (Educational Only)</a>
-      <ul>
-        <li><a href="#-idea-1">💡 Idea</a></li>
-        <li><a href="#-code-1">🧑‍💻 Code</a></li>
-        <li><a href="#-complexity-1">⏱️ Complexity</a></li>
-      </ul>
-    </li>
-    <li><a href="#-approach-3--selection-sort">🧩 Approach 3 — Selection Sort</a>
-      <ul>
-        <li><a href="#-idea-2">💡 Idea</a></li>
-        <li><a href="#-code-2">🧑‍💻 Code</a></li>
-        <li><a href="#-complexity-2">⏱️ Complexity</a></li>
-      </ul>
-    </li>
-    <li><a href="#-approach-4--insertion-sort">🧩 Approach 4 — Insertion Sort</a>
-      <ul>
-        <li><a href="#-idea-3">💡 Idea</a></li>
-        <li><a href="#-code-3">🧑‍💻 Code</a></li>
-        <li><a href="#-complexity-3">⏱️ Complexity</a></li>
-      </ul>
-    </li>
-    <li><a href="#-approach-5--merge-sort-divide--conquer">🧩 Approach 5 — Merge Sort (Divide &amp; Conquer)</a>
-      <ul>
-        <li><a href="#-idea-4">💡 Idea</a></li>
-        <li><a href="#-code-4">🧑‍💻 Code</a></li>
-        <li><a href="#-complexity-4">⏱️ Complexity</a></li>
-      </ul>
-    </li>
-    <li><a href="#-approach-6--quick-sort-average-fastest">🧩 Approach 6 — Quick Sort (Average Fastest)</a>
-      <ul>
-        <li><a href="#-idea-5">💡 Idea</a></li>
-        <li><a href="#-code-5">🧑‍💻 Code</a></li>
-        <li><a href="#-complexity-5">⏱️ Complexity</a></li>
-      </ul>
-    </li>
-    <li><a href="#-final-interview-advice">🎯 Final Interview Advice</a></li>
-    <li><a href="#-takeaway">🧠 Takeaway</a></li>
+    <li><a href="#-core-packing-logic">🧑‍💻 Core Packing Logic</a></li>
+    <li><a href="#-step-2--space-distribution-using-containers">🧩 Step 2 — Space Distribution Using Containers</a></li>
+    <li><a href="#-space-math-the-key-insight">🧑‍💻 Space Math (The Key Insight)</a></li>
+    <li><a href="#-full-justification-logic">🧑‍💻 Full Justification Logic</a></li>
+    <li><a href="#-complexity-analysis">⏱️ Complexity Analysis</a></li>
+    <li><a href="#-why-this-problem-is-gold-for-interviews">🧠 Why This Problem Is Gold for Interviews</a></li>
+    <li><a href="#-more-problems-you-should-practice-in-this-style">🔁 More Problems You Should Practice in This Style</a></li>
+    <li><a href="#-final-takeaway">🎯 Final Takeaway</a></li>
   </ul>
 </nav>
 
@@ -1058,7 +1034,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        LC-TEST-01 — Sorting an Array
+        LC-TEST-07 — Indexing & Containers Mastery
       </li>
     </ol>
   </nav>
@@ -1066,262 +1042,221 @@
 
           
 
-          <h1>LC-TEST-01 — Sorting an Array</h1>
+          <h1>LC-TEST-07 — Indexing &amp; Containers Mastery</h1>
 
           <div class="article-style">
-            <h2 id="-problem-statement">🧩 Problem Statement</h2>
-<p>Given an integer array <code>nums</code>, return the array sorted in <strong>ascending order</strong>.</p>
-<p>This problem looks simple, but interviewers often use it to evaluate:</p>
+            <h2 id="-why-this-lesson-exists">🎯 Why This Lesson Exists</h2>
+<p>When you watch strong developers solve LeetCode or interview problems, you’ll notice something:</p>
+<blockquote>
+<p>They don’t write long code.<br>
+They don’t explain much.<br>
+But their solution is <strong>short, fast, and confident</strong>.</p>
+</blockquote>
+<p>The secret is <strong>indexing</strong> and <strong>containers</strong>.</p>
+<p>They know:</p>
 <ul>
-<li>Your understanding of <strong>algorithmic trade-offs</strong></li>
-<li>Your knowledge of <strong>time vs space complexity</strong></li>
-<li>Whether you know <strong>when NOT to use built-in functions</strong></li>
+<li>When to use <strong>arrays vs lists</strong></li>
+<li>How to move pointers instead of copying data</li>
+<li>How to let <strong>data structures do the hard work</strong></li>
+</ul>
+<p>This lesson is about <strong>thinking like them</strong>.</p>
+<hr>
+<h2 id="-what-you-will-train-here">🧠 What You Will Train Here</h2>
+<p>In this session, you will repeatedly practice:</p>
+<ul>
+<li>Index-based traversal (two pointers, ranges, windows)</li>
+<li>Containers: <code>list</code>, <code>dict</code>, <code>set</code>, <code>deque</code></li>
+<li>Avoiding unnecessary loops</li>
+<li>Writing <strong>contest-level, interview-ready code</strong></li>
+</ul>
+<p>All problems here are <strong>real LeetCode-style battlefield problems</strong>.</p>
+<hr>
+<h2 id="-core-example--text-justification">🧩 Core Example — Text Justification</h2>
+<p>This problem looks long.
+Many beginners panic.</p>
+<p>Experienced devs see:</p>
+<blockquote>
+<p>“This is just indexing + container control.”</p>
+</blockquote>
+<hr>
+<h2 id="-problem-statement--text-justification">📘 Problem Statement — Text Justification</h2>
+<p>Given an array of strings <code>words</code> and an integer <code>maxWidth</code>, format the text so that:</p>
+<ul>
+<li>Each line has <strong>exactly <code>maxWidth</code> characters</strong></li>
+<li>Text is <strong>fully justified</strong> (left and right)</li>
+<li>Extra spaces are distributed <strong>as evenly as possible</strong></li>
+<li>If spaces do not divide evenly, <strong>left gaps get more</strong></li>
+<li>The <strong>last line</strong> is left-justified</li>
 </ul>
 <hr>
 <h2 id="-sample-input---output">📥 Sample Input / 📤 Output</h2>
-<table>
-<thead>
-<tr>
-<th>Input</th>
-<th>Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>[3, 1, 2]</td>
-<td>[1, 2, 3]</td>
-</tr>
-<tr>
-<td>[5, 4, 3, 2, 1]</td>
-<td>[1, 2, 3, 4, 5]</td>
-</tr>
-<tr>
-<td>[1]</td>
-<td>[1]</td>
-</tr>
-<tr>
-<td>[]</td>
-<td>[]</td>
-</tr>
-<tr>
-<td>[2, 2, 1]</td>
-<td>[1, 2, 2]</td>
-</tr>
-</tbody>
-</table>
+<h3 id="example">Example</h3>
+<p><strong>Input</strong></p>
+<pre><code class="language-python">words = [&quot;This&quot;, &quot;is&quot;, &quot;an&quot;, &quot;example&quot;, &quot;of&quot;, &quot;text&quot;, &quot;justification.&quot;]
+maxWidth = 16
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>[
+  &quot;This    is    an&quot;,
+  &quot;example  of text&quot;,
+  &quot;justification.  &quot;
+]
+</code></pre>
 <hr>
-<h2 id="-interviewer-insight-read-this-first">🧠 Interviewer Insight (Read This First)</h2>
+<h2 id="-interviewer-insight">🧠 Interviewer Insight</h2>
 <blockquote>
-<p>❗ <strong>Important:</strong><br>
-In real interviews, the question is <strong>not</strong> “Can you sort an array?”<br>
-It is:</p>
+<p>❗ Interviewers are NOT testing formatting.</p>
+<p>They are testing:</p>
 <ul>
-<li>Which sorting algorithm do you choose?</li>
-<li>Why is it optimal <strong>for this scenario</strong>?</li>
-<li>What are the time &amp; space trade-offs?</li>
+<li>Can you <strong>group data using indices</strong>?</li>
+<li>Can you manage <strong>ranges without slicing copies</strong>?</li>
+<li>Do you understand <strong>greedy packing</strong>?</li>
+<li>Can you control spaces mathematically?</li>
 </ul>
 </blockquote>
-<p>Below we show <strong>all major sorting algorithms</strong> with <strong>clear intuition</strong>.</p>
+<p>If you pass this problem cleanly,
+they already trust your <strong>data-structure instincts</strong>.</p>
 <hr>
-<h2 id="-approach-1--python-built-in-sort-recommended-in-practice">✅ Approach 1 — Python Built-in Sort (Recommended in Practice)</h2>
+<h2 id="-step-1--greedy-line-packing-indexing">🧩 Step 1 — Greedy Line Packing (Indexing)</h2>
 <h3 id="-idea">💡 Idea</h3>
-<p>Python uses <strong>Timsort</strong>, a hybrid of:</p>
-<ul>
-<li>Merge Sort</li>
-<li>Insertion Sort</li>
-</ul>
-<p>It is:</p>
-<ul>
-<li>Stable</li>
-<li>Extremely fast in real-world data</li>
-<li>Optimized for partially sorted arrays</li>
-</ul>
-<h3 id="-code">🧑‍💻 Code</h3>
-<pre><code class="language-python">def sort_array(nums):
-    # Python's built-in sort uses Timsort
-    return sorted(nums)
-</code></pre>
-<h3 id="-complexity">⏱️ Complexity</h3>
-<ul>
-<li><strong>Time:</strong> O(n log n)</li>
-<li><strong>Space:</strong> O(n)</li>
-</ul>
-<p>🟢 <strong>Use this in interviews unless explicitly forbidden.</strong></p>
+<p>Use indexing to pack as many words as possible into one line.</p>
+<p>We move a pointer <code>i</code> forward.
+No recursion.
+No backtracking.
+No copying.</p>
+<p>This is <strong>pure index control</strong>.</p>
 <hr>
-<h2 id="-approach-2--bubble-sort-educational-only">🧩 Approach 2 — Bubble Sort (Educational Only)</h2>
-<h3 id="-idea-1">💡 Idea</h3>
-<p>Repeatedly swap adjacent elements if they are in the wrong order.</p>
-<p>Think of large numbers <strong>“bubbling up”</strong> to the end.</p>
-<h3 id="-code-1">🧑‍💻 Code</h3>
-<pre><code class="language-python">def bubble_sort(nums):
-    n = len(nums)
-    for i in range(n):
-        for j in range(0, n - i - 1):
-            if nums[j] &gt; nums[j + 1]:
-                nums[j], nums[j + 1] = nums[j + 1], nums[j]
-    return nums
+<h2 id="-core-packing-logic">🧑‍💻 Core Packing Logic</h2>
+<pre><code class="language-python">i = 0
+n = len(words)
+
+while i &lt; n:
+    line_len = len(words[i])
+    j = i + 1
+
+    while j &lt; n and line_len + 1 + len(words[j]) &lt;= maxWidth:
+        line_len += 1 + len(words[j])
+        j += 1
 </code></pre>
-<h3 id="-complexity-1">⏱️ Complexity</h3>
+<p>🟢 Notice:</p>
 <ul>
-<li><strong>Time:</strong> O(n²)</li>
-<li><strong>Space:</strong> O(1)</li>
+<li><code>i</code> and <code>j</code> define a <strong>range</strong></li>
+<li>No new arrays are created</li>
+<li>This is how contest code stays fast</li>
 </ul>
-<p>🔴 Rarely used in practice, but good for teaching basics.</p>
 <hr>
-<h2 id="-approach-3--selection-sort">🧩 Approach 3 — Selection Sort</h2>
-<h3 id="-idea-2">💡 Idea</h3>
-<p>Repeatedly find the <strong>minimum element</strong> and move it to the front.</p>
-<h3 id="-code-2">🧑‍💻 Code</h3>
-<pre><code class="language-python">def selection_sort(nums):
-    n = len(nums)
-    for i in range(n):
-        min_idx = i
-        for j in range(i + 1, n):
-            if nums[j] &lt; nums[min_idx]:
-                min_idx = j
-        nums[i], nums[min_idx] = nums[min_idx], nums[i]
-    return nums
+<h2 id="-step-2--space-distribution-using-containers">🧩 Step 2 — Space Distribution Using Containers</h2>
+<p>Once words <code>[i : j]</code> are fixed:</p>
+<ul>
+<li>Count total spaces needed</li>
+<li>Count gaps between words</li>
+<li>Distribute spaces using arithmetic</li>
+</ul>
+<p>This avoids messy string operations.</p>
+<hr>
+<h2 id="-space-math-the-key-insight">🧑‍💻 Space Math (The Key Insight)</h2>
+<pre><code class="language-python">num_words = j - i
+total_spaces = maxWidth - sum(len(w) for w in words[i:j])
+gaps = num_words - 1
 </code></pre>
-<h3 id="-complexity-2">⏱️ Complexity</h3>
+<p>Now we branch:</p>
 <ul>
-<li><strong>Time:</strong> O(n²)</li>
-<li><strong>Space:</strong> O(1)</li>
+<li><strong>Last line OR single word</strong> → left-justify</li>
+<li>Otherwise → fully justify</li>
 </ul>
-<p>🟡 Simple but inefficient for large data.</p>
 <hr>
-<h2 id="-approach-4--insertion-sort">🧩 Approach 4 — Insertion Sort</h2>
-<h3 id="-idea-3">💡 Idea</h3>
-<p>Build the sorted array <strong>one element at a time</strong>, similar to sorting playing cards.</p>
-<p>Very efficient for <strong>nearly sorted arrays</strong>.</p>
-<h3 id="-code-3">🧑‍💻 Code</h3>
-<pre><code class="language-python">def insertion_sort(nums):
-    for i in range(1, len(nums)):
-        key = nums[i]
-        j = i - 1
-        while j &gt;= 0 and nums[j] &gt; key:
-            nums[j + 1] = nums[j]
-            j -= 1
-        nums[j + 1] = key
-    return nums
+<h2 id="-full-justification-logic">🧑‍💻 Full Justification Logic</h2>
+<pre><code class="language-python">if j == n or gaps == 0:
+    line = &quot; &quot;.join(words[i:j])
+    line += &quot; &quot; * (maxWidth - len(line))
+else:
+    space, extra = divmod(total_spaces, gaps)
+    line = &quot;&quot;
+
+    for k in range(i, j - 1):
+        line += words[k]
+        line += &quot; &quot; * (space + (1 if extra &gt; 0 else 0))
+        extra -= 1
+
+    line += words[j - 1]
 </code></pre>
-<h3 id="-complexity-3">⏱️ Complexity</h3>
-<ul>
-<li><strong>Time:</strong> O(n²) worst case, <strong>O(n)</strong> best case</li>
-<li><strong>Space:</strong> O(1)</li>
-</ul>
-<p>🟢 Excellent when data is almost sorted.</p>
+<p>🟢 This is where <strong>containers + indexing shine</strong>.</p>
 <hr>
-<h2 id="-approach-5--merge-sort-divide--conquer">🧩 Approach 5 — Merge Sort (Divide &amp; Conquer)</h2>
-<h3 id="-idea-4">💡 Idea</h3>
+<h2 id="-complexity-analysis">⏱️ Complexity Analysis</h2>
 <ul>
-<li>Divide the array into halves</li>
-<li>Sort each half</li>
-<li>Merge them back together</li>
+<li><strong>Time:</strong> O(n)</li>
+<li><strong>Space:</strong> O(1) extra (output excluded)</li>
 </ul>
-<h3 id="-code-4">🧑‍💻 Code</h3>
-<pre><code class="language-python">def merge_sort(nums):
-    if len(nums) &lt;= 1:
-        return nums
-
-    mid = len(nums) // 2
-    left = merge_sort(nums[:mid])
-    right = merge_sort(nums[mid:])
-
-    return merge(left, right)
-
-def merge(left, right):
-    result = []
-    i = j = 0
-
-    while i &lt; len(left) and j &lt; len(right):
-        if left[i] &lt; right[j]:
-            result.append(left[i])
-            i += 1
-        else:
-            result.append(right[j])
-            j += 1
-
-    result.extend(left[i:])
-    result.extend(right[j:])
-    return result
-</code></pre>
-<h3 id="-complexity-4">⏱️ Complexity</h3>
-<ul>
-<li><strong>Time:</strong> O(n log n)</li>
-<li><strong>Space:</strong> O(n)</li>
-</ul>
-<p>🟢 Very popular in interviews.</p>
+<p>This is <strong>optimal</strong>.</p>
 <hr>
-<h2 id="-approach-6--quick-sort-average-fastest">🧩 Approach 6 — Quick Sort (Average Fastest)</h2>
-<h3 id="-idea-5">💡 Idea</h3>
-<ul>
-<li>Pick a pivot</li>
-<li>Partition elements into smaller &amp; larger</li>
-<li>Recursively sort</li>
-</ul>
-<h3 id="-code-5">🧑‍💻 Code</h3>
-<pre><code class="language-python">def quick_sort(nums):
-    if len(nums) &lt;= 1:
-        return nums
-
-    pivot = nums[len(nums) // 2]
-    left = [x for x in nums if x &lt; pivot]
-    middle = [x for x in nums if x == pivot]
-    right = [x for x in nums if x &gt; pivot]
-
-    return quick_sort(left) + middle + quick_sort(right)
-</code></pre>
-<h3 id="-complexity-5">⏱️ Complexity</h3>
-<ul>
-<li><strong>Time:</strong> O(n log n) average, O(n²) worst</li>
-<li><strong>Space:</strong> O(n)</li>
-</ul>
-<p>🟢 Very fast in practice, but discuss worst case.</p>
-<hr>
-<h2 id="-final-interview-advice">🎯 Final Interview Advice</h2>
+<h2 id="-why-this-problem-is-gold-for-interviews">🧠 Why This Problem Is Gold for Interviews</h2>
+<p>This single problem tests:</p>
 <table>
 <thead>
 <tr>
-<th>Situation</th>
-<th>Best Choice</th>
+<th>Skill</th>
+<th>Tested</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Real-world code</td>
-<td><code>sorted()</code></td>
+<td>Index traversal</td>
+<td>✅</td>
 </tr>
 <tr>
-<td>Teaching / basics</td>
-<td>Bubble / Selection</td>
+<td>Greedy strategy</td>
+<td>✅</td>
 </tr>
 <tr>
-<td>Nearly sorted data</td>
-<td>Insertion Sort</td>
+<td>Container usage</td>
+<td>✅</td>
 </tr>
 <tr>
-<td>Guaranteed performance</td>
-<td>Merge Sort</td>
+<td>Edge cases</td>
+<td>✅</td>
 </tr>
 <tr>
-<td>Average fastest</td>
-<td>Quick Sort</td>
+<td>Clean code</td>
+<td>✅</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>💬 <strong>Interview Tip:</strong>
-Always say <em>why</em> you choose an algorithm, not just <em>how</em>.</p>
-</blockquote>
-<hr>
-<h2 id="-takeaway">🧠 Takeaway</h2>
-<p>Sorting is not about memorizing code.
-It’s about <strong>choosing the right tool for the problem</strong>.</p>
-<p>This single question can separate:</p>
+<p>If you solve this smoothly,
+interviewers assume you can handle:</p>
 <ul>
-<li>Junior developers</li>
-<li>From <strong>strong algorithmic thinkers</strong> 🚀</li>
+<li>Two pointers</li>
+<li>Sliding windows</li>
+<li>String manipulation</li>
+<li>Array partitioning</li>
 </ul>
+<hr>
+<h2 id="-more-problems-you-should-practice-in-this-style">🔁 More Problems You Should Practice in This Style</h2>
+<p>To fully absorb indexing + containers, repeat this mindset on:</p>
+<ul>
+<li>Trapping Rain Water</li>
+<li>Container With Most Water</li>
+<li>Group Anagrams</li>
+<li>Minimum Window Substring</li>
+<li>Merge Intervals</li>
+<li>Rotate Image</li>
+<li>Spiral Matrix</li>
+</ul>
+<p>Same idea.
+Different skin.</p>
+<hr>
+<h2 id="-final-takeaway">🎯 Final Takeaway</h2>
+<blockquote>
+<p>Strong developers don’t write clever code.</p>
+<p>They <strong>let indices and containers think for them</strong>.</p>
+</blockquote>
+<p>If you master this lesson,
+your LeetCode solutions will:</p>
+<ul>
+<li>Shrink in size</li>
+<li>Increase in clarity</li>
+<li>Feel <em>calm</em> under interview pressure</li>
+</ul>
+<p>This is the level interviewers quietly hope for 🚀</p>
           </div>
 
           
@@ -1338,14 +1273,14 @@ It’s about <strong>choosing the right tool for the problem</strong>.</p>
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-leetcode-tests/" rel="next">CS101-LC04 — LeetCode Practice 🧪</a>
+    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-06-probability-ai/" rel="next">LC-TEST-06 — Probability for Machine Learning</a>
   </div>
   
   
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/" rel="prev">LC-TEST-02 — Prime Number Check</a>
+    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/" rel="prev">LC-TEST-08 — Two Pointers in the Wild</a>
   </div>
   
 </div>

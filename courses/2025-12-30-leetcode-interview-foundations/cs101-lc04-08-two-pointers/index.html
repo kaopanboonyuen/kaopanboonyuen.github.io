@@ -33,7 +33,7 @@
   <meta name="description" content="" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/" />
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/" />
 
   
 
@@ -285,7 +285,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/" />
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/" />
 
   
   
@@ -302,8 +302,8 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Teerapong Panboonyuen" />
-  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/" />
-  <meta property="og:title" content="LC-TEST-01 — Sorting an Array | Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/" />
+  <meta property="og:title" content="LC-TEST-08 — Two Pointers in the Wild | Teerapong Panboonyuen" />
   <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
@@ -330,11 +330,11 @@
 
 
 
-  <title>LC-TEST-01 — Sorting an Array | Teerapong Panboonyuen</title>
+  <title>LC-TEST-08 — Two Pointers in the Wild | Teerapong Panboonyuen</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="16692b06b0d7a7e160438fd824ccb1c3" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="fbdff39847da2ba85341adfde602c820" >
 
   
   
@@ -902,7 +902,7 @@
 
 
 
-  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/">LC-TEST-01 — Sorting an Array</a></li>
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/">LC-TEST-01 — Sorting an Array</a></li>
 
 
 
@@ -930,7 +930,7 @@
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/">LC-TEST-08 — Two Pointers in the Wild</a></li>
+  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/">LC-TEST-08 — Two Pointers in the Wild</a></li>
 
 
 
@@ -962,53 +962,26 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#-problem-statement">🧩 Problem Statement</a></li>
+    <li><a href="#-why-two-pointers-matter">🎯 Why Two Pointers Matter</a></li>
+    <li><a href="#-what-you-will-learn">🧠 What You Will Learn</a></li>
+    <li><a href="#-core-example--container-with-most-water">🧩 Core Example — Container With Most Water</a>
+      <ul>
+        <li><a href="#problem-statement">Problem Statement</a></li>
+      </ul>
+    </li>
     <li><a href="#-sample-input---output">📥 Sample Input / 📤 Output</a></li>
-    <li><a href="#-interviewer-insight-read-this-first">🧠 Interviewer Insight (Read This First)</a></li>
-    <li><a href="#-approach-1--python-built-in-sort-recommended-in-practice">✅ Approach 1 — Python Built-in Sort (Recommended in Practice)</a>
+    <li><a href="#-interviewer-insight">🧠 Interviewer Insight</a></li>
+    <li><a href="#-brute-force-what-not-to-do">🧩 Brute Force (What NOT To Do)</a></li>
+    <li><a href="#-two-pointer-strategy-correct">🧩 Two Pointer Strategy (Correct)</a>
       <ul>
-        <li><a href="#-idea">💡 Idea</a></li>
-        <li><a href="#-code">🧑‍💻 Code</a></li>
-        <li><a href="#-complexity">⏱️ Complexity</a></li>
+        <li><a href="#-core-insight">💡 Core Insight</a></li>
       </ul>
     </li>
-    <li><a href="#-approach-2--bubble-sort-educational-only">🧩 Approach 2 — Bubble Sort (Educational Only)</a>
-      <ul>
-        <li><a href="#-idea-1">💡 Idea</a></li>
-        <li><a href="#-code-1">🧑‍💻 Code</a></li>
-        <li><a href="#-complexity-1">⏱️ Complexity</a></li>
-      </ul>
-    </li>
-    <li><a href="#-approach-3--selection-sort">🧩 Approach 3 — Selection Sort</a>
-      <ul>
-        <li><a href="#-idea-2">💡 Idea</a></li>
-        <li><a href="#-code-2">🧑‍💻 Code</a></li>
-        <li><a href="#-complexity-2">⏱️ Complexity</a></li>
-      </ul>
-    </li>
-    <li><a href="#-approach-4--insertion-sort">🧩 Approach 4 — Insertion Sort</a>
-      <ul>
-        <li><a href="#-idea-3">💡 Idea</a></li>
-        <li><a href="#-code-3">🧑‍💻 Code</a></li>
-        <li><a href="#-complexity-3">⏱️ Complexity</a></li>
-      </ul>
-    </li>
-    <li><a href="#-approach-5--merge-sort-divide--conquer">🧩 Approach 5 — Merge Sort (Divide &amp; Conquer)</a>
-      <ul>
-        <li><a href="#-idea-4">💡 Idea</a></li>
-        <li><a href="#-code-4">🧑‍💻 Code</a></li>
-        <li><a href="#-complexity-4">⏱️ Complexity</a></li>
-      </ul>
-    </li>
-    <li><a href="#-approach-6--quick-sort-average-fastest">🧩 Approach 6 — Quick Sort (Average Fastest)</a>
-      <ul>
-        <li><a href="#-idea-5">💡 Idea</a></li>
-        <li><a href="#-code-5">🧑‍💻 Code</a></li>
-        <li><a href="#-complexity-5">⏱️ Complexity</a></li>
-      </ul>
-    </li>
-    <li><a href="#-final-interview-advice">🎯 Final Interview Advice</a></li>
-    <li><a href="#-takeaway">🧠 Takeaway</a></li>
+    <li><a href="#-two-pointer-solution">🧑‍💻 Two Pointer Solution</a></li>
+    <li><a href="#-complexity">⏱️ Complexity</a></li>
+    <li><a href="#-two-pointer-patterns-you-must-recognize">🧠 Two Pointer Patterns You Must Recognize</a></li>
+    <li><a href="#-final-takeaway">🎯 Final Takeaway</a></li>
+    <li><a href="#-practice-targets">🏁 Practice Targets</a></li>
   </ul>
 </nav>
 
@@ -1058,7 +1031,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        LC-TEST-01 — Sorting an Array
+        LC-TEST-08 — Two Pointers in the Wild
       </li>
     </ol>
   </nav>
@@ -1066,262 +1039,162 @@
 
           
 
-          <h1>LC-TEST-01 — Sorting an Array</h1>
+          <h1>LC-TEST-08 — Two Pointers in the Wild</h1>
 
           <div class="article-style">
-            <h2 id="-problem-statement">🧩 Problem Statement</h2>
-<p>Given an integer array <code>nums</code>, return the array sorted in <strong>ascending order</strong>.</p>
-<p>This problem looks simple, but interviewers often use it to evaluate:</p>
+            <h2 id="-why-two-pointers-matter">🎯 Why Two Pointers Matter</h2>
+<p>Two pointers is not a trick.<br>
+It is a <strong>way of thinking</strong>.</p>
+<p>Strong developers see:</p>
+<blockquote>
+<p>“I don’t need extra memory.<br>
+I can let indices move and converge.”</p>
+</blockquote>
+<p>This technique appears everywhere:</p>
 <ul>
-<li>Your understanding of <strong>algorithmic trade-offs</strong></li>
-<li>Your knowledge of <strong>time vs space complexity</strong></li>
-<li>Whether you know <strong>when NOT to use built-in functions</strong></li>
+<li>Arrays</li>
+<li>Strings</li>
+<li>Sorted data</li>
+<li>Geometry problems</li>
+<li>Optimization tasks</li>
 </ul>
+<p>If you master this, <strong>your code gets shorter immediately</strong>.</p>
+<hr>
+<h2 id="-what-you-will-learn">🧠 What You Will Learn</h2>
+<p>In this lesson, you will train to:</p>
+<ul>
+<li>Use <strong>left / right pointers confidently</strong></li>
+<li>Decide <strong>who moves and why</strong></li>
+<li>Avoid nested loops</li>
+<li>Reduce O(n²) → O(n)</li>
+</ul>
+<p>This is <strong>interview-critical muscle memory</strong>.</p>
+<hr>
+<h2 id="-core-example--container-with-most-water">🧩 Core Example — Container With Most Water</h2>
+<h3 id="problem-statement">Problem Statement</h3>
+<p>Given <code>n</code> non-negative integers representing vertical lines,
+find two lines that together with the x-axis form a container
+that holds the <strong>most water</strong>.</p>
 <hr>
 <h2 id="-sample-input---output">📥 Sample Input / 📤 Output</h2>
 <table>
 <thead>
 <tr>
-<th>Input</th>
+<th>height</th>
 <th>Output</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>[3, 1, 2]</td>
-<td>[1, 2, 3]</td>
-</tr>
-<tr>
-<td>[5, 4, 3, 2, 1]</td>
-<td>[1, 2, 3, 4, 5]</td>
-</tr>
-<tr>
-<td>[1]</td>
-<td>[1]</td>
-</tr>
-<tr>
-<td>[]</td>
-<td>[]</td>
-</tr>
-<tr>
-<td>[2, 2, 1]</td>
-<td>[1, 2, 2]</td>
+<td>[1,8,6,2,5,4,8,3,7]</td>
+<td>49</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="-interviewer-insight-read-this-first">🧠 Interviewer Insight (Read This First)</h2>
+<h2 id="-interviewer-insight">🧠 Interviewer Insight</h2>
 <blockquote>
-<p>❗ <strong>Important:</strong><br>
-In real interviews, the question is <strong>not</strong> “Can you sort an array?”<br>
-It is:</p>
+<p>❗ Interviewers want to see:</p>
 <ul>
-<li>Which sorting algorithm do you choose?</li>
-<li>Why is it optimal <strong>for this scenario</strong>?</li>
-<li>What are the time &amp; space trade-offs?</li>
+<li>Do you understand <strong>why one pointer moves</strong></li>
+<li>Can you explain <strong>why brute force is wasteful</strong></li>
+<li>Do you trust a greedy decision?</li>
 </ul>
 </blockquote>
-<p>Below we show <strong>all major sorting algorithms</strong> with <strong>clear intuition</strong>.</p>
+<p>If you randomly move pointers, you fail.
+If you <strong>justify movement</strong>, you pass.</p>
 <hr>
-<h2 id="-approach-1--python-built-in-sort-recommended-in-practice">✅ Approach 1 — Python Built-in Sort (Recommended in Practice)</h2>
-<h3 id="-idea">💡 Idea</h3>
-<p>Python uses <strong>Timsort</strong>, a hybrid of:</p>
-<ul>
-<li>Merge Sort</li>
-<li>Insertion Sort</li>
-</ul>
-<p>It is:</p>
-<ul>
-<li>Stable</li>
-<li>Extremely fast in real-world data</li>
-<li>Optimized for partially sorted arrays</li>
-</ul>
-<h3 id="-code">🧑‍💻 Code</h3>
-<pre><code class="language-python">def sort_array(nums):
-    # Python's built-in sort uses Timsort
-    return sorted(nums)
+<h2 id="-brute-force-what-not-to-do">🧩 Brute Force (What NOT To Do)</h2>
+<pre><code class="language-python">max_area = 0
+for i in range(len(height)):
+    for j in range(i + 1, len(height)):
+        max_area = max(
+            max_area,
+            min(height[i], height[j]) * (j - i)
+        )
 </code></pre>
-<h3 id="-complexity">⏱️ Complexity</h3>
-<ul>
-<li><strong>Time:</strong> O(n log n)</li>
-<li><strong>Space:</strong> O(n)</li>
-</ul>
-<p>🟢 <strong>Use this in interviews unless explicitly forbidden.</strong></p>
+<p>⛔ O(n²)
+⛔ Interview red flag</p>
 <hr>
-<h2 id="-approach-2--bubble-sort-educational-only">🧩 Approach 2 — Bubble Sort (Educational Only)</h2>
-<h3 id="-idea-1">💡 Idea</h3>
-<p>Repeatedly swap adjacent elements if they are in the wrong order.</p>
-<p>Think of large numbers <strong>“bubbling up”</strong> to the end.</p>
-<h3 id="-code-1">🧑‍💻 Code</h3>
-<pre><code class="language-python">def bubble_sort(nums):
-    n = len(nums)
-    for i in range(n):
-        for j in range(0, n - i - 1):
-            if nums[j] &gt; nums[j + 1]:
-                nums[j], nums[j + 1] = nums[j + 1], nums[j]
-    return nums
-</code></pre>
-<h3 id="-complexity-1">⏱️ Complexity</h3>
+<h2 id="-two-pointer-strategy-correct">🧩 Two Pointer Strategy (Correct)</h2>
+<h3 id="-core-insight">💡 Core Insight</h3>
+<p>The <strong>shorter line</strong> limits the area.</p>
+<p>So:</p>
 <ul>
-<li><strong>Time:</strong> O(n²)</li>
-<li><strong>Space:</strong> O(1)</li>
+<li>Move the pointer pointing to the <strong>shorter height</strong></li>
+<li>Because moving the taller one <strong>cannot increase area</strong></li>
 </ul>
-<p>🔴 Rarely used in practice, but good for teaching basics.</p>
+<p>This is the entire trick.</p>
 <hr>
-<h2 id="-approach-3--selection-sort">🧩 Approach 3 — Selection Sort</h2>
-<h3 id="-idea-2">💡 Idea</h3>
-<p>Repeatedly find the <strong>minimum element</strong> and move it to the front.</p>
-<h3 id="-code-2">🧑‍💻 Code</h3>
-<pre><code class="language-python">def selection_sort(nums):
-    n = len(nums)
-    for i in range(n):
-        min_idx = i
-        for j in range(i + 1, n):
-            if nums[j] &lt; nums[min_idx]:
-                min_idx = j
-        nums[i], nums[min_idx] = nums[min_idx], nums[i]
-    return nums
-</code></pre>
-<h3 id="-complexity-2">⏱️ Complexity</h3>
-<ul>
-<li><strong>Time:</strong> O(n²)</li>
-<li><strong>Space:</strong> O(1)</li>
-</ul>
-<p>🟡 Simple but inefficient for large data.</p>
-<hr>
-<h2 id="-approach-4--insertion-sort">🧩 Approach 4 — Insertion Sort</h2>
-<h3 id="-idea-3">💡 Idea</h3>
-<p>Build the sorted array <strong>one element at a time</strong>, similar to sorting playing cards.</p>
-<p>Very efficient for <strong>nearly sorted arrays</strong>.</p>
-<h3 id="-code-3">🧑‍💻 Code</h3>
-<pre><code class="language-python">def insertion_sort(nums):
-    for i in range(1, len(nums)):
-        key = nums[i]
-        j = i - 1
-        while j &gt;= 0 and nums[j] &gt; key:
-            nums[j + 1] = nums[j]
-            j -= 1
-        nums[j + 1] = key
-    return nums
-</code></pre>
-<h3 id="-complexity-3">⏱️ Complexity</h3>
-<ul>
-<li><strong>Time:</strong> O(n²) worst case, <strong>O(n)</strong> best case</li>
-<li><strong>Space:</strong> O(1)</li>
-</ul>
-<p>🟢 Excellent when data is almost sorted.</p>
-<hr>
-<h2 id="-approach-5--merge-sort-divide--conquer">🧩 Approach 5 — Merge Sort (Divide &amp; Conquer)</h2>
-<h3 id="-idea-4">💡 Idea</h3>
-<ul>
-<li>Divide the array into halves</li>
-<li>Sort each half</li>
-<li>Merge them back together</li>
-</ul>
-<h3 id="-code-4">🧑‍💻 Code</h3>
-<pre><code class="language-python">def merge_sort(nums):
-    if len(nums) &lt;= 1:
-        return nums
+<h2 id="-two-pointer-solution">🧑‍💻 Two Pointer Solution</h2>
+<pre><code class="language-python">def maxArea(height):
+    left, right = 0, len(height) - 1
+    best = 0
 
-    mid = len(nums) // 2
-    left = merge_sort(nums[:mid])
-    right = merge_sort(nums[mid:])
+    while left &lt; right:
+        width = right - left
+        area = min(height[left], height[right]) * width
+        best = max(best, area)
 
-    return merge(left, right)
-
-def merge(left, right):
-    result = []
-    i = j = 0
-
-    while i &lt; len(left) and j &lt; len(right):
-        if left[i] &lt; right[j]:
-            result.append(left[i])
-            i += 1
+        if height[left] &lt; height[right]:
+            left += 1
         else:
-            result.append(right[j])
-            j += 1
+            right -= 1
 
-    result.extend(left[i:])
-    result.extend(right[j:])
-    return result
+    return best
 </code></pre>
-<h3 id="-complexity-4">⏱️ Complexity</h3>
-<ul>
-<li><strong>Time:</strong> O(n log n)</li>
-<li><strong>Space:</strong> O(n)</li>
-</ul>
-<p>🟢 Very popular in interviews.</p>
 <hr>
-<h2 id="-approach-6--quick-sort-average-fastest">🧩 Approach 6 — Quick Sort (Average Fastest)</h2>
-<h3 id="-idea-5">💡 Idea</h3>
+<h2 id="-complexity">⏱️ Complexity</h2>
 <ul>
-<li>Pick a pivot</li>
-<li>Partition elements into smaller &amp; larger</li>
-<li>Recursively sort</li>
+<li><strong>Time:</strong> O(n)</li>
+<li><strong>Space:</strong> O(1)</li>
 </ul>
-<h3 id="-code-5">🧑‍💻 Code</h3>
-<pre><code class="language-python">def quick_sort(nums):
-    if len(nums) &lt;= 1:
-        return nums
-
-    pivot = nums[len(nums) // 2]
-    left = [x for x in nums if x &lt; pivot]
-    middle = [x for x in nums if x == pivot]
-    right = [x for x in nums if x &gt; pivot]
-
-    return quick_sort(left) + middle + quick_sort(right)
-</code></pre>
-<h3 id="-complexity-5">⏱️ Complexity</h3>
-<ul>
-<li><strong>Time:</strong> O(n log n) average, O(n²) worst</li>
-<li><strong>Space:</strong> O(n)</li>
-</ul>
-<p>🟢 Very fast in practice, but discuss worst case.</p>
+<p>Optimal.</p>
 <hr>
-<h2 id="-final-interview-advice">🎯 Final Interview Advice</h2>
+<h2 id="-two-pointer-patterns-you-must-recognize">🧠 Two Pointer Patterns You Must Recognize</h2>
 <table>
 <thead>
 <tr>
-<th>Situation</th>
-<th>Best Choice</th>
+<th>Pattern</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Real-world code</td>
-<td><code>sorted()</code></td>
+<td>Opposite ends</td>
+<td>Container, Palindrome</td>
 </tr>
 <tr>
-<td>Teaching / basics</td>
-<td>Bubble / Selection</td>
+<td>Same direction</td>
+<td>Remove duplicates</td>
 </tr>
 <tr>
-<td>Nearly sorted data</td>
-<td>Insertion Sort</td>
+<td>Meet in middle</td>
+<td>Pair sum</td>
 </tr>
 <tr>
-<td>Guaranteed performance</td>
-<td>Merge Sort</td>
-</tr>
-<tr>
-<td>Average fastest</td>
-<td>Quick Sort</td>
+<td>Shrinking window</td>
+<td>Valid palindrome</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>💬 <strong>Interview Tip:</strong>
-Always say <em>why</em> you choose an algorithm, not just <em>how</em>.</p>
-</blockquote>
 <hr>
-<h2 id="-takeaway">🧠 Takeaway</h2>
-<p>Sorting is not about memorizing code.
-It’s about <strong>choosing the right tool for the problem</strong>.</p>
-<p>This single question can separate:</p>
+<h2 id="-final-takeaway">🎯 Final Takeaway</h2>
+<blockquote>
+<p>Two pointers is about <strong>controlled movement</strong>, not guessing.</p>
+</blockquote>
+<p>If you can explain <strong>why</strong> a pointer moves,
+interviewers assume you understand <strong>algorithmic reasoning</strong>.</p>
+<hr>
+<h2 id="-practice-targets">🏁 Practice Targets</h2>
 <ul>
-<li>Junior developers</li>
-<li>From <strong>strong algorithmic thinkers</strong> 🚀</li>
+<li>Valid Palindrome</li>
+<li>Two Sum II (sorted)</li>
+<li>Remove Duplicates</li>
+<li>3Sum</li>
+<li>Squares of a Sorted Array</li>
 </ul>
+<p>Master these → you look <em>dangerous</em> in interviews 😈</p>
           </div>
 
           
@@ -1338,14 +1211,14 @@ It’s about <strong>choosing the right tool for the problem</strong>.</p>
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-leetcode-tests/" rel="next">CS101-LC04 — LeetCode Practice 🧪</a>
+    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-07-indexing-and-containers/" rel="next">LC-TEST-07 — Indexing &amp; Containers Mastery</a>
   </div>
   
   
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/" rel="prev">LC-TEST-02 — Prime Number Check</a>
+    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-09-sliding-windows/" rel="prev">LC-TEST-09 — Sliding Window Like a Pro</a>
   </div>
   
 </div>

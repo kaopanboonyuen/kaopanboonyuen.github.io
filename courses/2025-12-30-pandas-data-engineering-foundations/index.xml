@@ -15,7 +15,7 @@
     <item>
       <title>DE101-PD01 — Pandas &amp; the Data Engineering Mindset</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd01-intro/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd01-intro/</guid>
       <description>&lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~45–60 minutes&lt;/p&gt;
@@ -235,7 +235,7 @@ It is a &lt;strong&gt;thinking framework&lt;/strong&gt;.&lt;/p&gt;
     <item>
       <title>DE101-PD02 — Pandas Series, DataFrame, and Indexing (Real-World Mindset)</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd02-core-structures/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd02-core-structures/</guid>
       <description>&lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~45–60 minutes&lt;/p&gt;
@@ -470,7 +470,7 @@ df.describe()
     <item>
       <title>DE101-PD03 — Data Cleaning &amp; Transformation (Production Mindset)</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd03-data-cleaning/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd03-data-cleaning/</guid>
       <description>&lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~60 minutes&lt;/p&gt;
@@ -713,7 +713,7 @@ assert df[&amp;quot;user_id&amp;quot;].is_unique
     <item>
       <title>DE101-PD04 — GroupBy, Aggregation &amp; Joins (Analytics &amp; Interview Mastery)</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd04-groupby-joins/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd04-groupby-joins/</guid>
       <description>&lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~75–90 minutes&lt;/p&gt;
@@ -960,7 +960,7 @@ you can survive &lt;strong&gt;most analytics interviews&lt;/strong&gt;.&lt;/p&gt
     <item>
       <title>DE101-PD05 — Performance &amp; Production Patterns (From Pandas to Scale)</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd05-performance/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd05-performance/</guid>
       <description>&lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~90–120 minutes&lt;/p&gt;
@@ -1186,9 +1186,9 @@ write code that survives real systems.&lt;/p&gt;
     
     <item>
       <title>DE101-PD06 — Finding Insights with Pandas (From Data to Decisions)</title>
-      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd06/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd06/</guid>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd06-finging-insights/</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd06-finging-insights/</guid>
       <description>&lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; ~120 minutes&lt;/p&gt;
 &lt;h2 id=&#34;-goal-of-this-chapter&#34;&gt;🎯 Goal of This Chapter&lt;/h2&gt;
