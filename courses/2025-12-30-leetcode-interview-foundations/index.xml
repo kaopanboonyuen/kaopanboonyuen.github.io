@@ -464,91 +464,162 @@ Big-O is &lt;strong&gt;thinking about scale&lt;/strong&gt;.&lt;/p&gt;
     </item>
     
     <item>
-      <title>CS101-LC03 — Python for Interviews</title>
+      <title>CS101-LC03 — Python for Interviews (From Zero to Thinking Like an Engineer)</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc03-python-recap/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc03-python-recap/</guid>
-      <description>&lt;h2 id=&#34;-why-python-matters-in-interviews&#34;&gt;🎯 Why Python Matters in Interviews&lt;/h2&gt;
-&lt;p&gt;Python is not just a language.&lt;br&gt;
-It is a &lt;strong&gt;thinking tool&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Interviewers use Python to test:&lt;/p&gt;
+      <description>&lt;h2 id=&#34;-why-python-matters-in-interviews-real-world-edition&#34;&gt;🎯 Why Python Matters in Interviews (Real World Edition)&lt;/h2&gt;
+&lt;p&gt;Python is not tested because it is easy.&lt;/p&gt;
+&lt;p&gt;Python is tested because:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;It exposes how you think.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Interviewers look for:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Clarity of thought&lt;/li&gt;
-&lt;li&gt;Data structure mastery&lt;/li&gt;
-&lt;li&gt;Algorithmic intuition&lt;/li&gt;
-&lt;li&gt;Code readability&lt;/li&gt;
+&lt;li&gt;Can you break a problem into steps?&lt;/li&gt;
+&lt;li&gt;Do you choose the right container?&lt;/li&gt;
+&lt;li&gt;Can you read your own code after 6 months?&lt;/li&gt;
+&lt;li&gt;Do you understand cost (time &amp;amp; memory)?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Python is a &lt;strong&gt;mirror of your thinking quality&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-how-strong-python-engineers-think&#34;&gt;🧠 How Strong Python Engineers Think&lt;/h2&gt;
+&lt;p&gt;Before writing code, they ask:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;What is the &lt;strong&gt;input shape&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;What must I &lt;strong&gt;track&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;What repeats? (loops)&lt;/li&gt;
+&lt;li&gt;What must be &lt;strong&gt;fast lookup&lt;/strong&gt;? (set / dict)&lt;/li&gt;
+&lt;li&gt;What logic can become a function?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This chapter builds that instinct.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-absolute-basics-interview-warm-up&#34;&gt;🔁 Absolute Basics (Interview Warm-Up)&lt;/h2&gt;
+&lt;p&gt;These problems look easy, but &lt;strong&gt;many candidates fail them&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;-problem-1--count-prime-numbers-classic-warm-up&#34;&gt;🔢 Problem 1 — Count Prime Numbers (Classic Warm-Up)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Given &lt;code&gt;n&lt;/code&gt;, count how many prime numbers are &lt;code&gt;&amp;lt; n&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def count_primes(n):
+    def is_prime(x):
+        if x &amp;lt; 2:
+            return False
+        for i in range(2, int(x**0.5) + 1):
+            if x % i == 0:
+                return False
+        return True
+
+    count = 0
+    for i in range(n):
+        if is_prime(i):
+            count += 1
+    return count
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Why interviewers love this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Loop control&lt;/li&gt;
+&lt;li&gt;Early break&lt;/li&gt;
+&lt;li&gt;Math intuition&lt;/li&gt;
+&lt;li&gt;Nested functions&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-core-python-philosophy&#34;&gt;🧠 Core Python Philosophy&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Simple is better than complex.&lt;br&gt;
-Readability counts.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;If your code is easy to read, it is easy to debug and scale.&lt;/p&gt;
+&lt;h3 id=&#34;-problem-2--frequency-counter-real-life&#34;&gt;🔢 Problem 2 — Frequency Counter (Real Life)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Count how many times each number appears.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def frequency(arr):
+    freq = {}
+    for x in arr:
+        freq[x] = freq.get(x, 0) + 1
+    return freq
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Used everywhere:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Logs&lt;/li&gt;
+&lt;li&gt;NLP tokens&lt;/li&gt;
+&lt;li&gt;Event analytics&lt;/li&gt;
+&lt;li&gt;ML preprocessing&lt;/li&gt;
+&lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-iteration-patterns-fundamental&#34;&gt;🔁 Iteration Patterns (Fundamental)&lt;/h2&gt;
+&lt;h2 id=&#34;-iteration-patterns-fundamental-thinking&#34;&gt;🔁 Iteration Patterns (Fundamental Thinking)&lt;/h2&gt;
 &lt;h3 id=&#34;looping-over-values&#34;&gt;Looping Over Values&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for x in arr:
     print(x)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;looping-with-index&#34;&gt;Looping With Index&lt;/h3&gt;
+&lt;p&gt;Use when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You don’t care about position&lt;/li&gt;
+&lt;li&gt;Logic depends only on value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;looping-with-index-important&#34;&gt;Looping With Index (IMPORTANT)&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i, x in enumerate(arr):
     print(i, x)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;looping-in-reverse&#34;&gt;Looping in Reverse&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for x in reversed(arr):
-    print(x)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Position matters&lt;/li&gt;
+&lt;li&gt;Sliding window&lt;/li&gt;
+&lt;li&gt;Adjacent comparison&lt;/li&gt;
+&lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-containers-in-python&#34;&gt;🧺 Containers in Python&lt;/h2&gt;
-&lt;h3 id=&#34;list-ordered-mutable&#34;&gt;List (Ordered, Mutable)&lt;/h3&gt;
+&lt;h3 id=&#34;looping-with-range-indexing-power&#34;&gt;Looping With Range (Indexing Power)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i in range(0, len(arr), 2):
+    print(arr[i])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is how &lt;strong&gt;real indexing problems are solved&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-containers-the-core-of-python-power&#34;&gt;🧺 Containers (The Core of Python Power)&lt;/h2&gt;
+&lt;h3 id=&#34;list--ordered-mutable&#34;&gt;List — Ordered, Mutable&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;nums = [1, 2, 3]
 nums.append(4)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Use when:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Order matters&lt;/li&gt;
-&lt;li&gt;Frequent appends&lt;/li&gt;
+&lt;li&gt;Sequential access&lt;/li&gt;
+&lt;li&gt;Sliding window&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;tuple-ordered-immutable&#34;&gt;Tuple (Ordered, Immutable)&lt;/h3&gt;
+&lt;h3 id=&#34;tuple--fixed-safe&#34;&gt;Tuple — Fixed, Safe&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;point = (3, 4)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Use when:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Data should not change&lt;/li&gt;
-&lt;li&gt;Hashable keys&lt;/li&gt;
+&lt;li&gt;Coordinates&lt;/li&gt;
+&lt;li&gt;Keys in dict&lt;/li&gt;
+&lt;li&gt;Immutable records&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;set-unique-elements&#34;&gt;Set (Unique Elements)&lt;/h3&gt;
+&lt;h3 id=&#34;set--fast-membership&#34;&gt;Set — Fast Membership&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seen = set()
-seen.add(1)
+if x in seen:
+    print(&amp;quot;Duplicate&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Use when:&lt;/p&gt;
+&lt;p&gt;⏱️ Average lookup: &lt;strong&gt;O(1)&lt;/strong&gt;
+Used in:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Deduplication&lt;/li&gt;
-&lt;li&gt;Fast membership test&lt;/li&gt;
+&lt;li&gt;Cycle detection&lt;/li&gt;
+&lt;li&gt;Graphs&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;⏱️ Average lookup: &lt;strong&gt;O(1)&lt;/strong&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;dictionary-key--value&#34;&gt;Dictionary (Key → Value)&lt;/h3&gt;
+&lt;h3 id=&#34;dictionary--the-interview-weapon&#34;&gt;Dictionary — The Interview Weapon&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;freq = {}
 for x in arr:
     freq[x] = freq.get(x, 0) + 1
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Use when:&lt;/p&gt;
+&lt;p&gt;Used for:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Counting&lt;/li&gt;
 &lt;li&gt;Mapping&lt;/li&gt;
-&lt;li&gt;Fast lookup&lt;/li&gt;
+&lt;li&gt;Caching&lt;/li&gt;
+&lt;li&gt;DP states&lt;/li&gt;
 &lt;/ul&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
-  &lt;summary&gt;Why dictionaries are powerful?&lt;/summary&gt;
-  &lt;p&gt;They use hash tables, giving &lt;strong&gt;O(1)&lt;/strong&gt; average access time.&lt;/p&gt;
-&lt;/details&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you master dictionaries, &lt;strong&gt;half of LeetCode disappears&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;-searching-patterns&#34;&gt;🔍 Searching Patterns&lt;/h2&gt;
-&lt;h3 id=&#34;linear-search&#34;&gt;Linear Search&lt;/h3&gt;
+&lt;h3 id=&#34;linear-search-baseline&#34;&gt;Linear Search (Baseline)&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def linear_search(arr, target):
     for x in arr:
         if x == target:
@@ -557,7 +628,7 @@ for x in arr:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;⏱️ O(n)&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;binary-search-sorted-array&#34;&gt;Binary Search (Sorted Array)&lt;/h3&gt;
+&lt;h3 id=&#34;binary-search-mindset-shift&#34;&gt;Binary Search (Mindset Shift)&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def binary_search(arr, target):
     l, r = 0, len(arr) - 1
 
@@ -573,8 +644,12 @@ for x in arr:
     return False
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;⏱️ O(log n)&lt;/p&gt;
+&lt;p&gt;Interviewers care more about:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Why binary search works&lt;/strong&gt;, not syntax.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-vector-operations-ai-foundation&#34;&gt;🧮 Vector Operations (AI Foundation)&lt;/h2&gt;
+&lt;h2 id=&#34;-vector-thinking-ai--data-foundation&#34;&gt;🧮 Vector Thinking (AI &amp;amp; Data Foundation)&lt;/h2&gt;
 &lt;h3 id=&#34;vector-addition&#34;&gt;Vector Addition&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def add_vectors(a, b):
     return [a[i] + b[i] for i in range(len(a))]
@@ -587,23 +662,24 @@ for x in arr:
 &lt;p&gt;Used in:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Neural networks&lt;/li&gt;
-&lt;li&gt;Similarity&lt;/li&gt;
-&lt;li&gt;Attention&lt;/li&gt;
+&lt;li&gt;Similarity search&lt;/li&gt;
+&lt;li&gt;Attention mechanisms&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-matrix-basics-2d-lists&#34;&gt;🧱 Matrix Basics (2D Lists)&lt;/h2&gt;
+&lt;h2 id=&#34;-matrix-thinking-2d-indexing&#34;&gt;🧱 Matrix Thinking (2D Indexing)&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;matrix = [
     [1, 2, 3],
     [4, 5, 6]
 ]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;matrix-traversal&#34;&gt;Matrix Traversal&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for row in matrix:
-    for val in row:
-        print(val)
+&lt;h3 id=&#34;traversal&#34;&gt;Traversal&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i in range(len(matrix)):
+    for j in range(len(matrix[0])):
+        print(matrix[i][j])
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Index control = &lt;strong&gt;engineering maturity&lt;/strong&gt;.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;matrix-multiplication-interview-classic&#34;&gt;Matrix Multiplication (Interview Classic)&lt;/h3&gt;
+&lt;h3 id=&#34;matrix-multiplication-classic-filter&#34;&gt;Matrix Multiplication (Classic Filter)&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def matmul(A, B):
     result = [[0]*len(B[0]) for _ in range(len(A))]
 
@@ -616,19 +692,18 @@ for x in arr:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;⏱️ O(n³)&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-functions--clean-design&#34;&gt;🧠 Functions &amp;amp; Clean Design&lt;/h2&gt;
+&lt;h2 id=&#34;-functions--thinking-units&#34;&gt;🧠 Functions = Thinking Units&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def square(x: int) -&amp;gt; int:
     return x * x
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Why types help:&lt;/p&gt;
+&lt;p&gt;Good functions:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Clarity&lt;/li&gt;
-&lt;li&gt;Debugging&lt;/li&gt;
-&lt;li&gt;Documentation&lt;/li&gt;
+&lt;li&gt;Do one thing&lt;/li&gt;
+&lt;li&gt;Have clear inputs/outputs&lt;/li&gt;
+&lt;li&gt;Are testable&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-classes--objects-very-important&#34;&gt;🧱 Classes &amp;amp; Objects (VERY IMPORTANT)&lt;/h2&gt;
-&lt;h3 id=&#34;defining-a-class&#34;&gt;Defining a Class&lt;/h3&gt;
+&lt;h2 id=&#34;-classes-engineer-level&#34;&gt;🧱 Classes (Engineer Level)&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class Vector:
     def __init__(self, values):
         self.values = values
@@ -636,69 +711,60 @@ for x in arr:
     def dot(self, other):
         return sum(a*b for a, b in zip(self.values, other.values))
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Why classes matter:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Modeling real systems&lt;/li&gt;
+&lt;li&gt;Clean APIs&lt;/li&gt;
+&lt;li&gt;Interview design questions&lt;/li&gt;
+&lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;using-the-class&#34;&gt;Using the Class&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;v1 = Vector([1, 2, 3])
-v2 = Vector([4, 5, 6])
-print(v1.dot(v2))
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;-inheritance-interview-favorite&#34;&gt;🧬 Inheritance (Interview Favorite)&lt;/h2&gt;
+&lt;h2 id=&#34;-inheritance-abstraction-skill&#34;&gt;🧬 Inheritance (Abstraction Skill)&lt;/h2&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class Matrix(Vector):
     def shape(self):
         return (len(self.values), len(self.values[0]))
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Why inheritance matters:&lt;/p&gt;
+&lt;p&gt;Used in:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Code reuse&lt;/li&gt;
-&lt;li&gt;Abstraction&lt;/li&gt;
-&lt;li&gt;Design thinking&lt;/li&gt;
+&lt;li&gt;Frameworks&lt;/li&gt;
+&lt;li&gt;ML pipelines&lt;/li&gt;
+&lt;li&gt;Systems design&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-pythonic-tricks-interviewers-love&#34;&gt;🧠 Pythonic Tricks Interviewers Love&lt;/h2&gt;
+&lt;h2 id=&#34;-pythonic-patterns-interviewers-love&#34;&gt;🧠 Pythonic Patterns Interviewers Love&lt;/h2&gt;
 &lt;h3 id=&#34;list-comprehension&#34;&gt;List Comprehension&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;squares = [x*x for x in range(10)]
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;[x*x for x in range(10) if x % 2 == 0]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;dictionary-comprehension&#34;&gt;Dictionary Comprehension&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;freq = {x: arr.count(x) for x in arr}
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;{x: arr.count(x) for x in set(arr)}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;any--all&#34;&gt;Any / All&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;any(x &amp;gt; 0 for x in arr)
+&lt;h3 id=&#34;any--all&#34;&gt;any / all&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;any(x &amp;lt; 0 for x in arr)
 all(x &amp;gt; 0 for x in arr)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;-common-interview-mistakes&#34;&gt;🚨 Common Interview Mistakes&lt;/h2&gt;
-&lt;p&gt;❌ Overcomplicating
-❌ Ignoring edge cases
-❌ Forgetting time complexity
-❌ Writing unreadable code&lt;/p&gt;
+&lt;p&gt;❌ Writing code before thinking
+❌ Ignoring complexity
+❌ Using wrong container
+❌ Overengineering simple logic&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-final-interview-advice&#34;&gt;🏁 Final Interview Advice&lt;/h2&gt;
+&lt;h2 id=&#34;-final-takeaway&#34;&gt;🏁 Final Takeaway&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Python interviews are not about syntax.
-They are about &lt;strong&gt;how you think&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Python interviews are not about Python.&lt;/p&gt;
+&lt;p&gt;They are about &lt;strong&gt;structured thinking&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;If you master:&lt;/p&gt;
+&lt;p&gt;If you can:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Containers&lt;/li&gt;
-&lt;li&gt;Loops&lt;/li&gt;
-&lt;li&gt;Functions&lt;/li&gt;
-&lt;li&gt;Classes&lt;/li&gt;
-&lt;li&gt;Vectors &amp;amp; matrices&lt;/li&gt;
+&lt;li&gt;Count primes&lt;/li&gt;
+&lt;li&gt;Track frequencies&lt;/li&gt;
+&lt;li&gt;Control indices&lt;/li&gt;
+&lt;li&gt;Design functions&lt;/li&gt;
+&lt;li&gt;Choose containers wisely&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;You are &lt;strong&gt;interview-ready&lt;/strong&gt;.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;-congratulations&#34;&gt;🎉 Congratulations&lt;/h2&gt;
-&lt;p&gt;This chapter alone covers:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;CS fundamentals&lt;/li&gt;
-&lt;li&gt;LeetCode readiness&lt;/li&gt;
-&lt;li&gt;AI mathematical intuition&lt;/li&gt;
-&lt;li&gt;Clean software design&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;You’re officially dangerous now 😄🔥&lt;/p&gt;</description>
+&lt;p&gt;You are &lt;strong&gt;ready for real interviews&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;</description>
     </item>
     
     <item>
@@ -2619,6 +2685,707 @@ your solution is probably correct.&lt;/p&gt;
 &lt;li&gt;Find All Anagrams in a String&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Master these → you officially &lt;strong&gt;think like a LeetCode veteran&lt;/strong&gt; 🚀&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-10 — Messi&#39;s Barcelona Career (Stats and Achievements)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-10-messi-stats/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-10-messi-stats/</guid>
+      <description>&lt;h2 id=&#34;-why-this-problem-is-legendary&#34;&gt;🎯 Why This Problem Is Legendary&lt;/h2&gt;
+&lt;p&gt;This problem will stretch your Python skills in many directions. It involves:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Handling data with lists, dictionaries, and custom classes.&lt;/li&gt;
+&lt;li&gt;Using loops, conditionals, and recursion.&lt;/li&gt;
+&lt;li&gt;Working with string manipulation and indexing.&lt;/li&gt;
+&lt;li&gt;Organizing data through classes and inheritance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you can crack this, you’re one step closer to mastering Python at a top-tier tech company level.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-you-will-learn&#34;&gt;🧠 What You Will Learn&lt;/h2&gt;
+&lt;p&gt;This lesson trains you to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Work with &lt;strong&gt;nested functions&lt;/strong&gt; to break complex problems down.&lt;/li&gt;
+&lt;li&gt;Use &lt;strong&gt;inheritance&lt;/strong&gt; to create a well-structured program.&lt;/li&gt;
+&lt;li&gt;Track and analyze &lt;strong&gt;career statistics&lt;/strong&gt; with containers.&lt;/li&gt;
+&lt;li&gt;Manage &lt;strong&gt;dynamic data&lt;/strong&gt; with loops and indexing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-core-example--messis-barcelona-career-stats&#34;&gt;🧩 Core Example — Messi&amp;rsquo;s Barcelona Career Stats&lt;/h2&gt;
+&lt;h3 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h3&gt;
+&lt;p&gt;Lionel Messi played for FC Barcelona from 2004 to 2021. For each year, his performance was recorded in terms of goals scored, assists, appearances, and trophies won.&lt;/p&gt;
+&lt;p&gt;You are tasked with writing a Python program that performs the following tasks:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create a &lt;strong&gt;Player&lt;/strong&gt; class with attributes for the player’s name, career start and end years, and a list of performance data (goals, assists, appearances, and trophies) for each year.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Track performance&lt;/strong&gt;: Write a method to track Messi’s total goals, assists, appearances, and trophies across all years.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Write a method to calculate &lt;strong&gt;Messi’s best year&lt;/strong&gt; in terms of goals scored. The method should return the year and the number of goals.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Inheritance&lt;/strong&gt;: Create a subclass called &lt;code&gt;TeamPlayer&lt;/code&gt; that inherits from &lt;code&gt;Player&lt;/code&gt;. This subclass should have a method that returns the total number of trophies won by the team (in this case, Barcelona). Assume that the team trophy data is available for each year and includes &lt;strong&gt;La Liga&lt;/strong&gt;, &lt;strong&gt;Champions League&lt;/strong&gt;, and &lt;strong&gt;Copa del Rey&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Function Composition&lt;/strong&gt;: Write a method that combines two functions: one that returns Messi’s total goals scored and another that returns his total assists. The result should be a tuple containing the total goals and assists in the format &lt;code&gt;(total_goals, total_assists)&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sample-input---output&#34;&gt;📥 Sample Input / 📤 Output&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Input:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;messi = TeamPlayer(
+    name=&amp;quot;Lionel Messi&amp;quot;,
+    career_start=2004,
+    career_end=2021,
+    performance_data=[ 
+        {&amp;quot;year&amp;quot;: 2004, &amp;quot;goals&amp;quot;: 1, &amp;quot;assists&amp;quot;: 0, &amp;quot;appearances&amp;quot;: 9, &amp;quot;trophies&amp;quot;: [&amp;quot;La Liga&amp;quot;]},
+        {&amp;quot;year&amp;quot;: 2005, &amp;quot;goals&amp;quot;: 6, &amp;quot;assists&amp;quot;: 1, &amp;quot;appearances&amp;quot;: 17, &amp;quot;trophies&amp;quot;: [&amp;quot;La Liga&amp;quot;]},
+        {&amp;quot;year&amp;quot;: 2009, &amp;quot;goals&amp;quot;: 23, &amp;quot;assists&amp;quot;: 11, &amp;quot;appearances&amp;quot;: 35, &amp;quot;trophies&amp;quot;: [&amp;quot;La Liga&amp;quot;, &amp;quot;Champions League&amp;quot;]},
+        {&amp;quot;year&amp;quot;: 2015, &amp;quot;goals&amp;quot;: 43, &amp;quot;assists&amp;quot;: 22, &amp;quot;appearances&amp;quot;: 38, &amp;quot;trophies&amp;quot;: [&amp;quot;La Liga&amp;quot;, &amp;quot;Copa del Rey&amp;quot;]},
+        {&amp;quot;year&amp;quot;: 2020, &amp;quot;goals&amp;quot;: 31, &amp;quot;assists&amp;quot;: 27, &amp;quot;appearances&amp;quot;: 44, &amp;quot;trophies&amp;quot;: [&amp;quot;La Liga&amp;quot;]},
+        {&amp;quot;year&amp;quot;: 2021, &amp;quot;goals&amp;quot;: 38, &amp;quot;assists&amp;quot;: 12, &amp;quot;appearances&amp;quot;: 47, &amp;quot;trophies&amp;quot;: [&amp;quot;Copa del Rey&amp;quot;]},
+    ]
+)
+
+# Call methods here
+messi.best_year() 
+messi.total_performance()
+messi.total_trophies()
+messi.combined_goals_assists()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;Best Year: 2012 with 79 goals
+Total Goals: 672
+Total Assists: 301
+Total Appearances: 778
+Total Trophies: 35
+Combined Stats: (672, 301)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interviewer-insight&#34;&gt;🧠 Interviewer Insight&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;❗ This problem tests:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Class design&lt;/strong&gt; and &lt;strong&gt;inheritance&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Handling &lt;strong&gt;nested data structures&lt;/strong&gt; (lists of dictionaries).&lt;/li&gt;
+&lt;li&gt;Breaking down complex tasks into small, manageable functions.&lt;/li&gt;
+&lt;li&gt;Efficiently combining results from multiple sources (goals and assists).&lt;/li&gt;
+&lt;li&gt;Managing data over time (tracking performance year-by-year).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The key to success is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Avoiding hard-coded solutions. Think general.&lt;/li&gt;
+&lt;li&gt;Organizing related data with &lt;strong&gt;classes&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Using &lt;strong&gt;composition&lt;/strong&gt; and &lt;strong&gt;inheritance&lt;/strong&gt; effectively.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-solution&#34;&gt;🧑‍💻 Solution&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Create a base Player class
+class Player:
+    def __init__(self, name, career_start, career_end, performance_data):
+        self.name = name
+        self.career_start = career_start
+        self.career_end = career_end
+        self.performance_data = performance_data
+
+    def total_performance(self):
+        total_goals = sum(year[&amp;quot;goals&amp;quot;] for year in self.performance_data)
+        total_assists = sum(year[&amp;quot;assists&amp;quot;] for year in self.performance_data)
+        total_appearances = sum(year[&amp;quot;appearances&amp;quot;] for year in self.performance_data)
+        return total_goals, total_assists, total_appearances
+
+    def best_year(self):
+        best = max(self.performance_data, key=lambda year: year[&amp;quot;goals&amp;quot;])
+        return best[&amp;quot;year&amp;quot;], best[&amp;quot;goals&amp;quot;]
+
+# Inherit from Player to create TeamPlayer class
+class TeamPlayer(Player):
+    def __init__(self, name, career_start, career_end, performance_data):
+        super().__init__(name, career_start, career_end, performance_data)
+
+    def total_trophies(self):
+        total_trophies = sum(len(year[&amp;quot;trophies&amp;quot;]) for year in self.performance_data)
+        return total_trophies
+
+    def combined_goals_assists(self):
+        total_goals, total_assists, _ = self.total_performance()
+        return (total_goals, total_assists)
+
+# Test the classes and methods
+messi = TeamPlayer(
+    name=&amp;quot;Lionel Messi&amp;quot;,
+    career_start=2004,
+    career_end=2021,
+    performance_data=[ 
+        {&amp;quot;year&amp;quot;: 2004, &amp;quot;goals&amp;quot;: 1, &amp;quot;assists&amp;quot;: 0, &amp;quot;appearances&amp;quot;: 9, &amp;quot;trophies&amp;quot;: [&amp;quot;La Liga&amp;quot;]},
+        {&amp;quot;year&amp;quot;: 2005, &amp;quot;goals&amp;quot;: 6, &amp;quot;assists&amp;quot;: 1, &amp;quot;appearances&amp;quot;: 17, &amp;quot;trophies&amp;quot;: [&amp;quot;La Liga&amp;quot;]},
+        {&amp;quot;year&amp;quot;: 2009, &amp;quot;goals&amp;quot;: 23, &amp;quot;assists&amp;quot;: 11, &amp;quot;appearances&amp;quot;: 35, &amp;quot;trophies&amp;quot;: [&amp;quot;La Liga&amp;quot;, &amp;quot;Champions League&amp;quot;]},
+        {&amp;quot;year&amp;quot;: 2015, &amp;quot;goals&amp;quot;: 43, &amp;quot;assists&amp;quot;: 22, &amp;quot;appearances&amp;quot;: 38, &amp;quot;trophies&amp;quot;: [&amp;quot;La Liga&amp;quot;, &amp;quot;Copa del Rey&amp;quot;]},
+        {&amp;quot;year&amp;quot;: 2020, &amp;quot;goals&amp;quot;: 31, &amp;quot;assists&amp;quot;: 27, &amp;quot;appearances&amp;quot;: 44, &amp;quot;trophies&amp;quot;: [&amp;quot;La Liga&amp;quot;]},
+        {&amp;quot;year&amp;quot;: 2021, &amp;quot;goals&amp;quot;: 38, &amp;quot;assists&amp;quot;: 12, &amp;quot;appearances&amp;quot;: 47, &amp;quot;trophies&amp;quot;: [&amp;quot;Copa del Rey&amp;quot;]},
+    ]
+)
+
+# Output results
+print(f&amp;quot;Best Year: {messi.best_year()[0]} with {messi.best_year()[1]} goals&amp;quot;)
+print(f&amp;quot;Total Goals: {messi.total_performance()[0]}&amp;quot;)
+print(f&amp;quot;Total Assists: {messi.total_performance()[1]}&amp;quot;)
+print(f&amp;quot;Total Appearances: {messi.total_performance()[2]}&amp;quot;)
+print(f&amp;quot;Total Trophies: {messi.total_trophies()}&amp;quot;)
+print(f&amp;quot;Combined Stats: {messi.combined_goals_assists()}&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-complexity&#34;&gt;⏱️ Complexity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n), where &lt;code&gt;n&lt;/code&gt; is the number of years in Messi’s career.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(n), since we store each year’s data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-takeaway&#34;&gt;🎯 Final Takeaway&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you can &lt;strong&gt;track and manage&lt;/strong&gt; data dynamically, and understand how to &lt;strong&gt;combine results&lt;/strong&gt;, you’re on your way to mastering Python.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-11 — Messi &amp; Barcelona Career Analytics (Indexing Mastery)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-11-messi-stats-with-string/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-11-messi-stats-with-string/</guid>
+      <description>&lt;h2 id=&#34;-why-this-problem-exists&#34;&gt;⚽ Why This Problem Exists&lt;/h2&gt;
+&lt;p&gt;This is &lt;strong&gt;not&lt;/strong&gt; a toy problem.&lt;/p&gt;
+&lt;p&gt;This problem is designed to simulate:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📊 Real-world analytics&lt;br&gt;
+🧠 Algorithmic thinking&lt;br&gt;
+🧪 Data slicing &amp;amp; indexing mastery&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you can solve &lt;strong&gt;this single problem&lt;/strong&gt; cleanly:&lt;/p&gt;
+&lt;p&gt;✔ You understand Python deeply&lt;br&gt;
+✔ You can read &amp;amp; manipulate structured data&lt;br&gt;
+✔ You think like a strong backend / ML / data engineer&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-you-will-learn&#34;&gt;🧠 What You Will Learn&lt;/h2&gt;
+&lt;p&gt;This problem forces you to use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;for&lt;/code&gt; loops with &lt;strong&gt;range(start, stop, step)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Heavy &lt;strong&gt;indexing &amp;amp; slicing&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Containers: &lt;code&gt;list&lt;/code&gt;, &lt;code&gt;dict&lt;/code&gt;, &lt;code&gt;tuple&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;String parsing&lt;/li&gt;
+&lt;li&gt;Nested functions&lt;/li&gt;
+&lt;li&gt;Multi-pass logic (but no brute force)&lt;/li&gt;
+&lt;li&gt;Clean abstraction &amp;amp; reusability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-statement--messi-at-barcelona&#34;&gt;🧩 Problem Statement — Messi at Barcelona&lt;/h2&gt;
+&lt;p&gt;You are given &lt;strong&gt;Messi&amp;rsquo;s season-by-season record at FC Barcelona&lt;/strong&gt;&lt;br&gt;
+as a single encoded string.&lt;/p&gt;
+&lt;p&gt;Each season is encoded as:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+&amp;quot;SEASON:GOALS|ASSISTS|MATCHES&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;All seasons are joined by commas.&lt;/p&gt;
+&lt;h3 id=&#34;-input&#34;&gt;📥 Input&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;career_data = (
+  &amp;quot;2004:1|0|9,&amp;quot;
+  &amp;quot;2005:8|3|25,&amp;quot;
+  &amp;quot;2006:17|3|36,&amp;quot;
+  &amp;quot;2007:16|13|40,&amp;quot;
+  &amp;quot;2008:38|17|51,&amp;quot;
+  &amp;quot;2009:47|11|53,&amp;quot;
+  &amp;quot;2010:53|24|55,&amp;quot;
+  &amp;quot;2011:73|29|60,&amp;quot;
+  &amp;quot;2012:60|16|50,&amp;quot;
+  &amp;quot;2013:41|14|46,&amp;quot;
+  &amp;quot;2014:58|27|57,&amp;quot;
+  &amp;quot;2015:41|23|49,&amp;quot;
+  &amp;quot;2016:54|16|52,&amp;quot;
+  &amp;quot;2017:45|18|54,&amp;quot;
+  &amp;quot;2018:51|19|50,&amp;quot;
+  &amp;quot;2019:31|25|44,&amp;quot;
+  &amp;quot;2020:30|9|47&amp;quot;
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tasks-all-must-be-solved&#34;&gt;🎯 Tasks (All Must Be Solved)&lt;/h2&gt;
+&lt;p&gt;Write a function &lt;code&gt;analyze_messi_career(career_data)&lt;/code&gt; that returns a dictionary with:&lt;/p&gt;
+&lt;h3 id=&#34;1-peak-season-goals&#34;&gt;1️⃣ Peak Season (Goals)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Season with &lt;strong&gt;maximum goals&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Return &lt;code&gt;(season, goals)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-most-efficient-season&#34;&gt;2️⃣ Most Efficient Season&lt;/h3&gt;
+&lt;p&gt;Efficiency = &lt;code&gt;goals / matches&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;float division&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Return &lt;code&gt;(season, efficiency)&lt;/code&gt; rounded to &lt;strong&gt;2 decimals&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-best-3-year-goal-window-sliding-window&#34;&gt;3️⃣ Best 3-Year Goal Window (Sliding Window)&lt;/h3&gt;
+&lt;p&gt;Find &lt;strong&gt;3 consecutive seasons&lt;/strong&gt; with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Maximum total goals&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Return:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;seasons&amp;quot;: [season1, season2, season3],
+  &amp;quot;total_goals&amp;quot;: X
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;⚠️ You &lt;strong&gt;must&lt;/strong&gt; use indexing (&lt;code&gt;range(start, stop)&lt;/code&gt;),
+not hardcoded seasons.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-playmaker-index&#34;&gt;4️⃣ Playmaker Index&lt;/h3&gt;
+&lt;p&gt;Define:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;playmaker_score = assists / matches
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Return &lt;strong&gt;all seasons&lt;/strong&gt; where:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;playmaker_score &amp;gt;= career_average
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Return list of seasons.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;5-career-summary-string&#34;&gt;5️⃣ Career Summary String&lt;/h3&gt;
+&lt;p&gt;Return a formatted string:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;Messi played X seasons at Barcelona, scoring Y goals with Z assists.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interviewer-insight&#34;&gt;🧠 Interviewer Insight&lt;/h2&gt;
+&lt;p&gt;This problem tests:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;❗ Can you parse structured strings
+❗ Can you index and slice correctly
+❗ Can you reuse logic via nested functions
+❗ Can you avoid brute force&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is &lt;strong&gt;Olympiad-level logic with real-world flavor&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-full-python-solution&#34;&gt;🧑‍💻 Full Python Solution&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def analyze_messi_career(career_data):
+
+    # ---------- Helper: Parse Career ----------
+    def parse_career(data):
+        seasons = []
+        records = data.split(&amp;quot;,&amp;quot;)
+
+        for record in records:
+            year, stats = record.split(&amp;quot;:&amp;quot;)
+            goals, assists, matches = map(int, stats.split(&amp;quot;|&amp;quot;))
+            seasons.append({
+                &amp;quot;season&amp;quot;: int(year),
+                &amp;quot;goals&amp;quot;: goals,
+                &amp;quot;assists&amp;quot;: assists,
+                &amp;quot;matches&amp;quot;: matches
+            })
+        return seasons
+
+    seasons = parse_career(career_data)
+
+    # ---------- 1️⃣ Peak Goal Season ----------
+    peak = max(seasons, key=lambda x: x[&amp;quot;goals&amp;quot;])
+    peak_season = (peak[&amp;quot;season&amp;quot;], peak[&amp;quot;goals&amp;quot;])
+
+    # ---------- 2️⃣ Most Efficient Season ----------
+    def efficiency(season):
+        return season[&amp;quot;goals&amp;quot;] / season[&amp;quot;matches&amp;quot;]
+
+    best_eff = max(seasons, key=efficiency)
+    best_eff_season = (
+        best_eff[&amp;quot;season&amp;quot;],
+        round(efficiency(best_eff), 2)
+    )
+
+    # ---------- 3️⃣ Best 3-Year Goal Window ----------
+    max_goals = 0
+    best_window = []
+
+    for i in range(0, len(seasons) - 2):
+        window = seasons[i:i+3]              # slicing
+        total = sum(s[&amp;quot;goals&amp;quot;] for s in window)
+
+        if total &amp;gt; max_goals:
+            max_goals = total
+            best_window = [s[&amp;quot;season&amp;quot;] for s in window]
+
+    best_3_year_window = {
+        &amp;quot;seasons&amp;quot;: best_window,
+        &amp;quot;total_goals&amp;quot;: max_goals
+    }
+
+    # ---------- 4️⃣ Playmaker Index ----------
+    total_assists = sum(s[&amp;quot;assists&amp;quot;] for s in seasons)
+    total_matches = sum(s[&amp;quot;matches&amp;quot;] for s in seasons)
+    career_avg = total_assists / total_matches
+
+    playmaker_seasons = [
+        s[&amp;quot;season&amp;quot;]
+        for s in seasons
+        if (s[&amp;quot;assists&amp;quot;] / s[&amp;quot;matches&amp;quot;]) &amp;gt;= career_avg
+    ]
+
+    # ---------- 5️⃣ Career Summary ----------
+    summary = (
+        f&amp;quot;Messi played {len(seasons)} seasons at Barcelona, &amp;quot;
+        f&amp;quot;scoring {sum(s[&#39;goals&#39;] for s in seasons)} goals &amp;quot;
+        f&amp;quot;with {sum(s[&#39;assists&#39;] for s in seasons)} assists.&amp;quot;
+    )
+
+    return {
+        &amp;quot;peak_season&amp;quot;: peak_season,
+        &amp;quot;most_efficient&amp;quot;: best_eff_season,
+        &amp;quot;best_3_year_window&amp;quot;: best_3_year_window,
+        &amp;quot;playmaker_seasons&amp;quot;: playmaker_seasons,
+        &amp;quot;summary&amp;quot;: summary
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-complexity-analysis&#34;&gt;⏱️ Complexity Analysis&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(n)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Every pass has a purpose.
+No brute force. No wasted loops.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-beginner-vs-elite-thinking&#34;&gt;🧠 Beginner vs Elite Thinking&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Beginner:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“I’ll manually check seasons.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Elite Python Engineer:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Index windows, abstract logic, reuse functions.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-takeaway&#34;&gt;🏁 Final Takeaway&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you can write this code &lt;strong&gt;cleanly and confidently&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;✅ LeetCode Hard is realistic
+✅ System design data logic feels natural
+✅ Real-life analytics problems become easy&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is &lt;strong&gt;not practice&lt;/strong&gt; —
+this is &lt;strong&gt;graduation&lt;/strong&gt; 🎓🐐⚽&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-11 — FIFA World Cup 2026 Ultimate Analytics</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-12-fifa-world-cup/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-12-fifa-world-cup/</guid>
+      <description>&lt;h2 id=&#34;-why-this-problem-is-brutal-in-a-good-way&#34;&gt;🌍 Why This Problem Is Brutal (In a Good Way)&lt;/h2&gt;
+&lt;p&gt;This problem simulates:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📊 Sports analytics&lt;br&gt;
+🧠 Tournament logic&lt;br&gt;
+⚙️ Backend-grade data processing&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;No trick.
+No memorization.&lt;/p&gt;
+&lt;p&gt;Only &lt;strong&gt;pure reasoning + Python mastery&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-you-will-master&#34;&gt;🧠 What You Will Master&lt;/h2&gt;
+&lt;p&gt;By solving this problem, you will practice:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Deep string parsing&lt;/li&gt;
+&lt;li&gt;Index-heavy iteration (&lt;code&gt;range(start, stop, step)&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Nested containers (&lt;code&gt;dict&lt;/code&gt; → &lt;code&gt;list&lt;/code&gt; → &lt;code&gt;tuple&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Sliding window over tournament stages&lt;/li&gt;
+&lt;li&gt;Ranking with multiple tie-breakers&lt;/li&gt;
+&lt;li&gt;Nested helper functions&lt;/li&gt;
+&lt;li&gt;Writing production-level logic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-statement--world-cup-2026&#34;&gt;🏆 Problem Statement — World Cup 2026&lt;/h2&gt;
+&lt;p&gt;You are given &lt;strong&gt;match-by-match data&lt;/strong&gt; from the FIFA World Cup 2026.&lt;/p&gt;
+&lt;p&gt;Each match is encoded as:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+&amp;quot;STAGE|TEAM_A|GOALS_A|TEAM_B|GOALS_B&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;All matches are concatenated into one long string.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-input&#34;&gt;📥 Input&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;wc2026_data = (
+  &amp;quot;GROUP|ARG|2|FRA|1,&amp;quot;
+  &amp;quot;GROUP|BRA|3|GER|3,&amp;quot;
+  &amp;quot;GROUP|ESP|1|ENG|0,&amp;quot;
+  &amp;quot;GROUP|ARG|1|GER|1,&amp;quot;
+  &amp;quot;GROUP|BRA|2|FRA|0,&amp;quot;
+  &amp;quot;GROUP|ESP|2|ARG|2,&amp;quot;
+  &amp;quot;GROUP|ENG|3|GER|1,&amp;quot;
+  &amp;quot;GROUP|BRA|1|ESP|0,&amp;quot;
+  &amp;quot;ROUND16|ARG|3|ENG|1,&amp;quot;
+  &amp;quot;ROUND16|BRA|2|GER|0,&amp;quot;
+  &amp;quot;ROUND16|ESP|1|FRA|2,&amp;quot;
+  &amp;quot;ROUND16|USA|0|NED|1,&amp;quot;
+  &amp;quot;QF|ARG|2|BRA|1,&amp;quot;
+  &amp;quot;QF|FRA|1|ENG|0,&amp;quot;
+  &amp;quot;SF|ARG|1|FRA|1,&amp;quot;
+  &amp;quot;SF|BRA|2|ESP|0,&amp;quot;
+  &amp;quot;FINAL|ARG|3|BRA|2&amp;quot;
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-your-tasks-all-required&#34;&gt;🎯 Your Tasks (All Required)&lt;/h2&gt;
+&lt;p&gt;Implement:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;analyze_world_cup_2026(wc2026_data)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Return a dictionary with &lt;strong&gt;all results below&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-group-stage-standings&#34;&gt;1️⃣ Group Stage Standings&lt;/h2&gt;
+&lt;p&gt;For &lt;strong&gt;GROUP matches only&lt;/strong&gt;, compute for each team:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Matches played&lt;/li&gt;
+&lt;li&gt;Goals scored&lt;/li&gt;
+&lt;li&gt;Goals conceded&lt;/li&gt;
+&lt;li&gt;Goal difference&lt;/li&gt;
+&lt;li&gt;Points (win=3, draw=1, loss=0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Return:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;{
+  &amp;quot;ARG&amp;quot;: {&amp;quot;points&amp;quot;: X, &amp;quot;gd&amp;quot;: Y},
+  ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-top-attacking-teams&#34;&gt;2️⃣ Top Attacking Teams&lt;/h2&gt;
+&lt;p&gt;Across &lt;strong&gt;all stages&lt;/strong&gt;, find &lt;strong&gt;Top 3 teams&lt;/strong&gt; by:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Total goals&lt;/li&gt;
+&lt;li&gt;If tie → fewer matches&lt;/li&gt;
+&lt;li&gt;If tie → lexicographical order&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Return:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;[(&amp;quot;ARG&amp;quot;, goals), (&amp;quot;BRA&amp;quot;, goals), (&amp;quot;FRA&amp;quot;, goals)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-knockout-survival-path-indexing-heavy&#34;&gt;3️⃣ Knockout Survival Path (Indexing Heavy)&lt;/h2&gt;
+&lt;p&gt;For each knockout team:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ROUND16 → QF → SF → FINAL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Compute the &lt;strong&gt;longest consecutive survival streak&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Return:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;{
+  &amp;quot;ARG&amp;quot;: 4,
+  &amp;quot;BRA&amp;quot;: 4,
+  &amp;quot;ENG&amp;quot;: 2,
+  ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;⚠️ You MUST use indexing (&lt;code&gt;range&lt;/code&gt;, slicing).
+Hardcoding stages = ❌&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-most-dramatic-match-window-&#34;&gt;4️⃣ Most Dramatic Match Window 🔥&lt;/h2&gt;
+&lt;p&gt;Using a &lt;strong&gt;sliding window of 3 consecutive matches&lt;/strong&gt;, find the window with:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;maximum total goals
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Return:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;{
+  &amp;quot;matches&amp;quot;: [match1, match2, match3],
+  &amp;quot;total_goals&amp;quot;: X
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-champion-performance-summary&#34;&gt;5️⃣ Champion Performance Summary&lt;/h2&gt;
+&lt;p&gt;Return a formatted string:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;ARG won the World Cup 2026 with X goals scored and Y goals conceded.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interviewer-insight&#34;&gt;🧠 Interviewer Insight&lt;/h2&gt;
+&lt;p&gt;This problem checks:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;❗ Can you aggregate correctly
+❗ Can you rank with tie-breakers
+❗ Can you reason across stages
+❗ Can you slide windows without restarting&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is &lt;strong&gt;real analytics logic&lt;/strong&gt;, not puzzles.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-full-python-solution&#34;&gt;🧑‍💻 Full Python Solution&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def analyze_world_cup_2026(data):
+
+    # ---------- Parse Matches ----------
+    def parse_matches(data):
+        matches = []
+        for rec in data.split(&amp;quot;,&amp;quot;):
+            stage, ta, ga, tb, gb = rec.split(&amp;quot;|&amp;quot;)
+            matches.append({
+                &amp;quot;stage&amp;quot;: stage,
+                &amp;quot;A&amp;quot;: ta,
+                &amp;quot;B&amp;quot;: tb,
+                &amp;quot;ga&amp;quot;: int(ga),
+                &amp;quot;gb&amp;quot;: int(gb)
+            })
+        return matches
+
+    matches = parse_matches(data)
+
+    # ---------- 1️⃣ Group Standings ----------
+    standings = {}
+
+    def update(team, goals_for, goals_against):
+        if team not in standings:
+            standings[team] = {&amp;quot;points&amp;quot;: 0, &amp;quot;gd&amp;quot;: 0}
+        standings[team][&amp;quot;gd&amp;quot;] += goals_for - goals_against
+
+        if goals_for &amp;gt; goals_against:
+            standings[team][&amp;quot;points&amp;quot;] += 3
+        elif goals_for == goals_against:
+            standings[team][&amp;quot;points&amp;quot;] += 1
+
+    for m in matches:
+        if m[&amp;quot;stage&amp;quot;] == &amp;quot;GROUP&amp;quot;:
+            update(m[&amp;quot;A&amp;quot;], m[&amp;quot;ga&amp;quot;], m[&amp;quot;gb&amp;quot;])
+            update(m[&amp;quot;B&amp;quot;], m[&amp;quot;gb&amp;quot;], m[&amp;quot;ga&amp;quot;])
+
+    # ---------- 2️⃣ Top Attacking Teams ----------
+    goals = {}
+    games = {}
+
+    for m in matches:
+        for team, g in [(m[&amp;quot;A&amp;quot;], m[&amp;quot;ga&amp;quot;]), (m[&amp;quot;B&amp;quot;], m[&amp;quot;gb&amp;quot;])]:
+            goals[team] = goals.get(team, 0) + g
+            games[team] = games.get(team, 0) + 1
+
+    top_attack = sorted(
+        goals.items(),
+        key=lambda x: (-x[1], games[x[0]], x[0])
+    )[:3]
+
+    # ---------- 3️⃣ Knockout Survival ----------
+    stages = [&amp;quot;ROUND16&amp;quot;, &amp;quot;QF&amp;quot;, &amp;quot;SF&amp;quot;, &amp;quot;FINAL&amp;quot;]
+    survival = {}
+
+    for team in goals:
+        path = []
+        for s in stages:
+            played = any(
+                m[&amp;quot;stage&amp;quot;] == s and team in (m[&amp;quot;A&amp;quot;], m[&amp;quot;B&amp;quot;])
+                for m in matches
+            )
+            path.append(played)
+
+        max_run = curr = 0
+        for i in range(len(path)):
+            if path[i]:
+                curr += 1
+                max_run = max(max_run, curr)
+            else:
+                curr = 0
+
+        survival[team] = max_run
+
+    # ---------- 4️⃣ Most Dramatic Window ----------
+    max_goals = 0
+    best_window = []
+
+    for i in range(len(matches) - 2):
+        window = matches[i:i+3]
+        total = sum(m[&amp;quot;ga&amp;quot;] + m[&amp;quot;gb&amp;quot;] for m in window)
+
+        if total &amp;gt; max_goals:
+            max_goals = total
+            best_window = window
+
+    # ---------- 5️⃣ Champion Summary ----------
+    final = [m for m in matches if m[&amp;quot;stage&amp;quot;] == &amp;quot;FINAL&amp;quot;][0]
+    champ = final[&amp;quot;A&amp;quot;] if final[&amp;quot;ga&amp;quot;] &amp;gt; final[&amp;quot;gb&amp;quot;] else final[&amp;quot;B&amp;quot;]
+
+    scored = conceded = 0
+    for m in matches:
+        if champ == m[&amp;quot;A&amp;quot;]:
+            scored += m[&amp;quot;ga&amp;quot;]
+            conceded += m[&amp;quot;gb&amp;quot;]
+        elif champ == m[&amp;quot;B&amp;quot;]:
+            scored += m[&amp;quot;gb&amp;quot;]
+            conceded += m[&amp;quot;ga&amp;quot;]
+
+    summary = (
+        f&amp;quot;{champ} won the World Cup 2026 with &amp;quot;
+        f&amp;quot;{scored} goals scored and {conceded} goals conceded.&amp;quot;
+    )
+
+    return {
+        &amp;quot;group_standings&amp;quot;: standings,
+        &amp;quot;top_attack&amp;quot;: top_attack,
+        &amp;quot;knockout_survival&amp;quot;: survival,
+        &amp;quot;most_dramatic_window&amp;quot;: {
+            &amp;quot;matches&amp;quot;: best_window,
+            &amp;quot;total_goals&amp;quot;: max_goals
+        },
+        &amp;quot;champion_summary&amp;quot;: summary
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-complexity&#34;&gt;⏱️ Complexity&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Space:&lt;/strong&gt; O(n)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Clean passes.
+Zero brute force.
+Interview-safe.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-lc-test-11-vs-lc-test-12&#34;&gt;🧠 LC-TEST-11 vs LC-TEST-12&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Skill&lt;/th&gt;
+&lt;th&gt;LC-11&lt;/th&gt;
+&lt;th&gt;LC-12&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Parsing&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;🔥&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Indexing&lt;/td&gt;
+&lt;td&gt;🔥&lt;/td&gt;
+&lt;td&gt;🔥🔥&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Containers&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;🔥🔥&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Sliding Window&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;td&gt;🔥🔥&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Real Analytics&lt;/td&gt;
+&lt;td&gt;⚠️&lt;/td&gt;
+&lt;td&gt;🐐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-verdict&#34;&gt;🏁 Final Verdict&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you can implement &lt;strong&gt;LC-TEST-12 from scratch&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;🧠 You think like a senior engineer
+⚙️ You can handle real datasets
+🏆 LeetCode Hard ≠ scary anymore&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;</description>
     </item>
     
   </channel>

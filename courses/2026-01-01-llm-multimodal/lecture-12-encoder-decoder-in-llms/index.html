@@ -33,7 +33,7 @@
   <meta name="description" content="" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-06-probability-ai/" />
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2026-01-01-llm-multimodal/lecture-12-encoder-decoder-in-llms/" />
 
   
 
@@ -285,7 +285,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-06-probability-ai/" />
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2026-01-01-llm-multimodal/lecture-12-encoder-decoder-in-llms/" />
 
   
   
@@ -302,18 +302,18 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Teerapong Panboonyuen" />
-  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-06-probability-ai/" />
-  <meta property="og:title" content="LC-TEST-06 — Probability for Machine Learning | Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2026-01-01-llm-multimodal/lecture-12-encoder-decoder-in-llms/" />
+  <meta property="og:title" content="Lecture 12 — Encoder, Decoder, and the Truth About How LLMs Are Trained | Teerapong Panboonyuen" />
   <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
         property="article:published_time"
-        content="2025-12-30T00:00:00&#43;00:00"
+        content="2026-01-01T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2025-12-30T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2026-01-01T00:00:00&#43;00:00">
   
 
   
@@ -330,11 +330,11 @@
 
 
 
-  <title>LC-TEST-06 — Probability for Machine Learning | Teerapong Panboonyuen</title>
+  <title>Lecture 12 — Encoder, Decoder, and the Truth About How LLMs Are Trained | Teerapong Panboonyuen</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="cbc0858a1a6df9d0f475c56349a16d06" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="256f7dfddf2aff0d98a03e9793d8dca7" >
 
   
   
@@ -825,7 +825,7 @@
     <div class="d-flex">
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
-          LeetCode Foundations
+          Multimodal LLM
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -879,74 +879,66 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/2025-12-30-leetcode-interview-foundations/">LeetCode Foundations</a>
+        <a class="docs-toc-link " href="/courses/2026-01-01-llm-multimodal/">Multimodal LLM</a>
     
       
         <ul class="nav docs-sidenav">
       
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc01-intro/">CS101-LC01 — What is LeetCode? (Why Everyone Uses It)</a></li>
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-01-what-is-multimodal-llm/">Lecture 01 — What Is a Multimodal LLM, Really?</a></li>
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc02-big-o/">CS101-LC02 — Big-O Intuition</a></li>
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-02-thinking-like-multimodal-architect/">Lecture 02 — How to Think Like a Multimodal System Designer</a></li>
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc03-python-recap/">CS101-LC03 — Python for Interviews (From Zero to Thinking Like an Engineer)</a></li>
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-03-training-paradigms/">Lecture 03 — Training Paradigms: Pretraining, Fine-tuning, and Training from Scratch</a></li>
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-leetcode-tests/">CS101-LC04 — LeetCode Practice 🧪</a></li>
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-04-audio-text/">Lecture 04 — Audio ↔ Text ↔ Reasoning: Teaching Machines to Listen</a></li>
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/">LC-TEST-01 — Sorting an Array</a></li>
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-05-image-text/">Lecture 05 — Image ↔ Text: Teaching Machines to See and Reason</a></li>
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/">LC-TEST-02 — Prime Number Check</a></li>
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-06-video-text/">Lecture 06 — Video–Text Multimodal Intelligence</a></li>
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-03-linear-search/">LC-TEST-03 — Linear Search</a></li>
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-07-vqa-docqa/">Lecture 07 — Visual Question Answering (VQA) &amp; Document Question Answering (DocQA)</a></li>
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-04-nested-loop/">LC-TEST-04 — Nested Loops (Thinking Beyond O(n²))</a></li>
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-08-rag-agents/">Lecture 08 — RAG, AI Agents &amp; Agentic Multimodal Systems</a></li>
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-05-two-sum/">LC-TEST-05 — Two Sum (Brute Force → Hash Map)</a></li>
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-09-evaluation/">Lecture 09 — Evaluation of Multimodal &amp; Agentic AI Systems</a></li>
 
 
 
-  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-06-probability-ai/">LC-TEST-06 — Probability for Machine Learning</a></li>
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-10-bias-ethics-hitl/">Lecture 10 — Bias, Ethics &amp; Human-in-the-Loop (HITL) in Multimodal AI</a></li>
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-07-indexing-and-containers/">LC-TEST-07 — Indexing &amp; Containers Mastery</a></li>
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-11-share-on-huggingface/">Lecture 11 — Sharing Your Multimodal Model with the World (Hugging Face)</a></li>
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/">LC-TEST-08 — Two Pointers in the Wild</a></li>
+  <li class="active"><a href="/courses/2026-01-01-llm-multimodal/lecture-12-encoder-decoder-in-llms/">Lecture 12 — Encoder, Decoder, and the Truth About How LLMs Are Trained</a></li>
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-09-sliding-windows/">LC-TEST-09 — Sliding Window Like a Pro</a></li>
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-13-llm-interview/">Lecture 13 — Real-World LLM Engineer &amp; Research Scientist Interview (Top Tech Level)</a></li>
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-10-messi-stats/">LC-TEST-10 — Messi&#39;s Barcelona Career (Stats and Achievements)</a></li>
-
-
-
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-11-messi-stats-with-string/">LC-TEST-11 — Messi &amp; Barcelona Career Analytics (Indexing Mastery)</a></li>
-
-
-
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-12-fifa-world-cup/">LC-TEST-11 — FIFA World Cup 2026 Ultimate Analytics</a></li>
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-14-deep-learning-modern-ai-final/">Lecture 14 — Deep Learning Foundations &amp; Modern AI (Final Mastery)</a></li>
 
       
         </ul>
@@ -974,42 +966,43 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#-why-probability-matters">🎯 Why Probability Matters</a></li>
-    <li><a href="#-basic-definitions">🧮 Basic Definitions</a>
+    <li><a href="#-why-this-lecture-exists">🧠 Why This Lecture Exists</a></li>
+    <li><a href="#-the-original-transformer-2017">🧩 The Original Transformer (2017)</a>
       <ul>
-        <li><a href="#probability">Probability</a></li>
+        <li><a href="#encoder">Encoder</a></li>
+        <li><a href="#decoder">Decoder</a></li>
       </ul>
     </li>
-    <li><a href="#-conditional-probability">🎲 Conditional Probability</a></li>
-    <li><a href="#-independence">🔁 Independence</a></li>
-    <li><a href="#-bayes-theorem-very-important">🧠 Bayes’ Theorem (VERY IMPORTANT)</a></li>
-    <li><a href="#-interview-question">🧪 Interview Question</a></li>
-    <li><a href="#-takeaway">🏁 Takeaway</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#-problem">🎯 Problem</a></li>
-    <li><a href="#-loss-function">📉 Loss Function</a></li>
-    <li><a href="#-gradient-descent-idea">🧠 Gradient Descent Idea</a></li>
-    <li><a href="#-python-example">🧑‍💻 Python Example</a></li>
-    <li><a href="#-variants-interviewers-love">⏱️ Variants Interviewers Love</a></li>
-    <li><a href="#-interview-trap">🚨 Interview Trap</a></li>
-    <li><a href="#-takeaway-1">🏁 Takeaway</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#-why-numpy">🎯 Why NumPy?</a></li>
-    <li><a href="#-arrays-vs-lists">🧮 Arrays vs Lists</a></li>
-    <li><a href="#-vector-operations">➕ Vector Operations</a></li>
-    <li><a href="#-matrix-multiplication">🧱 Matrix Multiplication</a></li>
-    <li><a href="#-broadcasting-interview-favorite">📏 Broadcasting (Interview Favorite)</a></li>
-    <li><a href="#-takeaway-2">🏁 Takeaway</a>
+    <li><a href="#-encoder-what-is-it-really-doing">🧠 Encoder: What Is It Really Doing?</a></li>
+    <li><a href="#-decoder-what-is-it-really-doing">🧠 Decoder: What Is It Really Doing?</a></li>
+    <li><a href="#-why-chatgpt-is-decoder-only">❓ Why ChatGPT Is Decoder-Only</a></li>
+    <li><a href="#-decoder-only-training-gpt-style">🧠 Decoder-Only Training (GPT Style)</a></li>
+    <li><a href="#-encoderdecoder-models-still-important">🧩 Encoder–Decoder Models (Still Important!)</a></li>
+    <li><a href="#-multimodal-llms-the-hybrid-truth">🧠 Multimodal LLMs: The Hybrid Truth</a></li>
+    <li><a href="#-why-encoders-are-usually-frozen">🔗 Why Encoders Are Usually Frozen</a></li>
+    <li><a href="#-what-is-actually-trained-very-important">🧠 What Is Actually Trained? (Very Important)</a>
       <ul>
-        <li><a href="#more-space-less-time">More Space, Less Time</a></li>
+        <li><a href="#pretraining">Pretraining</a></li>
+        <li><a href="#fine-tuning">Fine-tuning</a></li>
+        <li><a href="#instruction-tuning">Instruction tuning</a></li>
       </ul>
     </li>
-    <li><a href="#-interview-question-1">🧠 Interview Question</a></li>
-    <li><a href="#-takeaway-3">🏁 Takeaway</a></li>
+    <li><a href="#-freezing-strategies">🧩 Freezing Strategies</a></li>
+    <li><a href="#-example-freezing-encoder">🐍 Example: Freezing Encoder</a></li>
+    <li><a href="#-lora-explained-simply">🧠 LoRA Explained Simply</a></li>
+    <li><a href="#-why-not-encoder-only-llms">❓ Why Not Encoder-Only LLMs?</a></li>
+    <li><a href="#-mental-model-remember-this-forever">🧠 Mental Model (Remember This Forever)</a></li>
+    <li><a href="#-student-knowledge-check-hidden">🧪 Student Knowledge Check (Hidden)</a>
+      <ul>
+        <li><a href="#q1--objective">Q1 — Objective</a></li>
+        <li><a href="#q2--mcq">Q2 — MCQ</a></li>
+        <li><a href="#q3--mcq">Q3 — MCQ</a></li>
+        <li><a href="#q4--objective">Q4 — Objective</a></li>
+        <li><a href="#q5--objective">Q5 — Objective</a></li>
+      </ul>
+    </li>
+    <li><a href="#-final-reflection">🌱 Final Reflection</a></li>
+    <li><a href="#-final-takeaways-burn-this-in">✅ Final Takeaways (Burn This In)</a></li>
   </ul>
 </nav>
 
@@ -1050,16 +1043,16 @@
 
 
   <li class="breadcrumb-item">
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/">
+    <a href="/courses/2026-01-01-llm-multimodal/">
       
-        LeetCode Foundations
+        Multimodal LLM
       
     </a>
   </li>
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        LC-TEST-06 — Probability for Machine Learning
+        Lecture 12 — Encoder, Decoder, and the Truth About How LLMs Are Trained
       </li>
     </ol>
   </nav>
@@ -1067,204 +1060,369 @@
 
           
 
-          <h1>LC-TEST-06 — Probability for Machine Learning</h1>
+          <h1>Lecture 12 — Encoder, Decoder, and the Truth About How LLMs Are Trained</h1>
 
           <div class="article-style">
-            <h2 id="-why-probability-matters">🎯 Why Probability Matters</h2>
-<p>Probability is everywhere in AI:</p>
-<ul>
-<li>Model uncertainty</li>
-<li>Classification confidence</li>
-<li>Loss functions</li>
-<li>Bayesian thinking</li>
-</ul>
-<p>Interviewers want <strong>intuition</strong>, not formulas only.</p>
+            <p>
+  <i class="fas fa-clock  pr-1 fa-fw"></i> ~4–5 hours (core understanding lecture)</p>
 <hr>
-<h2 id="-basic-definitions">🧮 Basic Definitions</h2>
-<h3 id="probability">Probability</h3>
-<p>Example:</p>
-<pre><code class="language-python">P(head) = 1 / 2
+<h2 id="-why-this-lecture-exists">🧠 Why This Lecture Exists</h2>
+<blockquote>
+<p><strong>Almost everyone uses LLMs.<br>
+Very few understand how they are actually built.</strong></p>
+</blockquote>
+<p>Common confusion:</p>
+<ul>
+<li>“Is ChatGPT encoder–decoder?”</li>
+<li>“Why only decoder?”</li>
+<li>“What does freezing weights really mean?”</li>
+<li>“How does multimodal fit into this?”</li>
+<li>“What exactly am I training when I fine-tune?”</li>
+</ul>
+<p>This lecture answers <strong>all of that — clearly, from first principles</strong>.</p>
+<hr>
+<h2 id="-the-original-transformer-2017">🧩 The Original Transformer (2017)</h2>
+<p>The original Transformer had <strong>two parts</strong>:</p>
+<pre><code>
+Encoder  →  Decoder
+
+</code></pre>
+<h3 id="encoder">Encoder</h3>
+<ul>
+<li>Reads the input</li>
+<li>Understands meaning</li>
+<li>Produces representations</li>
+</ul>
+<h3 id="decoder">Decoder</h3>
+<ul>
+<li>Generates output tokens</li>
+<li>Uses attention + autoregression</li>
+</ul>
+<p>This was designed for:</p>
+<ul>
+<li>Machine Translation</li>
+<li>Summarization</li>
+<li>Seq2Seq tasks</li>
+</ul>
+<hr>
+<h2 id="-encoder-what-is-it-really-doing">🧠 Encoder: What Is It Really Doing?</h2>
+<p>Encoder properties:</p>
+<ul>
+<li>Sees the <strong>entire input at once</strong></li>
+<li>Bidirectional attention</li>
+<li>Builds rich representations</li>
+<li>Does <strong>not generate text</strong></li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>BERT</li>
+<li>RoBERTa</li>
+<li>ViT (vision encoder)</li>
+<li>Audio encoders</li>
+</ul>
+<blockquote>
+<p><strong>Encoders understand. They don’t speak.</strong></p>
+</blockquote>
+<hr>
+<h2 id="-decoder-what-is-it-really-doing">🧠 Decoder: What Is It Really Doing?</h2>
+<p>Decoder properties:</p>
+<ul>
+<li>Generates tokens <strong>one by one</strong></li>
+<li>Causal (masked) attention</li>
+<li>Autoregressive</li>
+<li>Can reason, plan, and explain</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>GPT</li>
+<li>LLaMA</li>
+<li>Mistral</li>
+<li>Qwen</li>
+</ul>
+<blockquote>
+<p><strong>Decoders speak, reason, and act.</strong></p>
+</blockquote>
+<hr>
+<h2 id="-why-chatgpt-is-decoder-only">❓ Why ChatGPT Is Decoder-Only</h2>
+<p>Key insight:</p>
+<blockquote>
+<p><strong>If you want open-ended generation, you only need a decoder.</strong></p>
+</blockquote>
+<p>Reasons:</p>
+<ul>
+<li>Decoder can read context (prompt)</li>
+<li>Decoder can generate indefinitely</li>
+<li>Encoder is not required for generation</li>
+<li>Simpler architecture</li>
+<li>Scales better</li>
+</ul>
+<p>So ChatGPT is:</p>
+<pre><code>
+Text → Decoder → Next Token → Next Token → ...
+
 </code></pre>
 <hr>
-<h2 id="-conditional-probability">🎲 Conditional Probability</h2>
-<p>Example:</p>
+<h2 id="-decoder-only-training-gpt-style">🧠 Decoder-Only Training (GPT Style)</h2>
+<p>Training objective:</p>
 <blockquote>
-<p>Given it rains, what’s the chance traffic is heavy?</p>
+<p><strong>Predict the next token</strong></p>
+</blockquote>
+<pre><code class="language-text">&quot;I love deep&quot; → predict &quot;learning&quot;
+</code></pre>
+<p>This single objective leads to:</p>
+<ul>
+<li>Language understanding</li>
+<li>Reasoning</li>
+<li>Code generation</li>
+<li>Planning</li>
+</ul>
+<blockquote>
+<p><strong>Understanding emerges from generation.</strong></p>
 </blockquote>
 <hr>
-<h2 id="-independence">🔁 Independence</h2>
-<p>Two events are independent if:
-[
-P(A \cap B) = P(A)P(B)
-]</p>
-<p>Interview trick question ⚠️
-👉 Independence ≠ no correlation always</p>
-<hr>
-<h2 id="-bayes-theorem-very-important">🧠 Bayes’ Theorem (VERY IMPORTANT)</h2>
-<p>Used in:</p>
+<h2 id="-encoderdecoder-models-still-important">🧩 Encoder–Decoder Models (Still Important!)</h2>
+<p>Encoder–decoder models are still used when:</p>
 <ul>
-<li>Spam detection</li>
-<li>Medical diagnosis</li>
-<li>Bayesian ML</li>
+<li>Input ≠ output</li>
+<li>Strong alignment is required</li>
+<li>Input is very long or structured</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>T5</li>
+<li>FLAN-T5</li>
+<li>Whisper (audio → text)</li>
+<li>Translation systems</li>
 </ul>
 <hr>
-<h2 id="-interview-question">🧪 Interview Question</h2>
-<blockquote>
-<p>Why Naive Bayes works despite false independence assumptions?</p>
-</blockquote>
-<p>✅ Because it reduces variance and scales well.</p>
-<hr>
-<h2 id="-takeaway">🏁 Takeaway</h2>
-<blockquote>
-<p>Probability gives AI <strong>confidence</strong>, not just predictions.</p>
-</blockquote>
-<hr>
-<h1 id="-gradient-descent-interview-intuition">📘 Gradient Descent (Interview Intuition)</h1>
-<h2 id="-problem">🎯 Problem</h2>
-<p>How do machines <strong>learn</strong>?</p>
-<p>By minimizing a loss function.</p>
-<hr>
-<h2 id="-loss-function">📉 Loss Function</h2>
-<hr>
-<h2 id="-gradient-descent-idea">🧠 Gradient Descent Idea</h2>
-<blockquote>
-<p>Walk downhill in the direction of <strong>steepest descent</strong></p>
-</blockquote>
-<hr>
-<h2 id="-python-example">🧑‍💻 Python Example</h2>
-<pre><code class="language-python">def gradient_descent(w, x, y, lr=0.01):
-    grad = -2 * x * (y - w * x)
-    return w - lr * grad
+<h2 id="-multimodal-llms-the-hybrid-truth">🧠 Multimodal LLMs: The Hybrid Truth</h2>
+<p>Most multimodal LLMs are:</p>
+<pre><code>Encoder (image/audio/video)
+        ↓
+Projection / Adapter
+        ↓
+Decoder-only LLM
 </code></pre>
+<p>Examples:</p>
+<ul>
+<li>CLIP → LLaMA</li>
+<li>ViT → GPT</li>
+<li>Audio encoder → LLM</li>
+</ul>
+<blockquote>
+<p><strong>Multimodal models are encoder–decoder systems,
+but the decoder is still the brain.</strong></p>
+</blockquote>
 <hr>
-<h2 id="-variants-interviewers-love">⏱️ Variants Interviewers Love</h2>
+<h2 id="-why-encoders-are-usually-frozen">🔗 Why Encoders Are Usually Frozen</h2>
+<p>Encoders:</p>
+<ul>
+<li>Pretrained on massive data</li>
+<li>Expensive to retrain</li>
+<li>General-purpose</li>
+</ul>
+<p>So we often:</p>
+<ul>
+<li>❄️ Freeze encoder</li>
+<li>🔧 Train adapter / projector</li>
+<li>🧠 Fine-tune decoder lightly</li>
+</ul>
+<p>This saves:</p>
+<ul>
+<li>Compute</li>
+<li>Data</li>
+<li>Stability</li>
+</ul>
+<hr>
+<h2 id="-what-is-actually-trained-very-important">🧠 What Is Actually Trained? (Very Important)</h2>
+<h3 id="pretraining">Pretraining</h3>
+<ul>
+<li>Train <strong>all weights</strong></li>
+<li>Massive data</li>
+<li>Extremely expensive</li>
+</ul>
+<h3 id="fine-tuning">Fine-tuning</h3>
+<ul>
+<li>Train <strong>some weights</strong></li>
+<li>Task-specific data</li>
+</ul>
+<h3 id="instruction-tuning">Instruction tuning</h3>
+<ul>
+<li>Train decoder to follow instructions</li>
+<li>Often freezes most layers</li>
+</ul>
+<hr>
+<h2 id="-freezing-strategies">🧩 Freezing Strategies</h2>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Idea</th>
+<th>Strategy</th>
+<th>What Moves</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Batch GD</td>
-<td>Use all data</td>
+<td>Full fine-tune</td>
+<td>Everything</td>
 </tr>
 <tr>
-<td>SGD</td>
-<td>One sample</td>
+<td>Freeze encoder</td>
+<td>Decoder only</td>
 </tr>
 <tr>
-<td>Mini-batch</td>
-<td>Best of both</td>
+<td>LoRA</td>
+<td>Small rank matrices</td>
+</tr>
+<tr>
+<td>Adapters</td>
+<td>Tiny modules</td>
+</tr>
+<tr>
+<td>Prompt tuning</td>
+<td>No weights</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Most real-world systems do NOT full fine-tune.</strong></p>
+</blockquote>
+<hr>
+<h2 id="-example-freezing-encoder">🐍 Example: Freezing Encoder</h2>
+<pre><code class="language-python">for param in vision_encoder.parameters():
+    param.requires_grad = False
+</code></pre>
+<p>Then train:</p>
+<ul>
+<li>Projection layer</li>
+<li>LLM LoRA weights</li>
+</ul>
+<hr>
+<h2 id="-lora-explained-simply">🧠 LoRA Explained Simply</h2>
+<p>LoRA:</p>
+<ul>
+<li>Injects low-rank matrices</li>
+<li>Keeps original weights frozen</li>
+<li>Learns task-specific behavior</li>
+</ul>
+<p>Benefits:</p>
+<ul>
+<li>Cheap</li>
+<li>Stable</li>
+<li>Shareable</li>
+<li>Reversible</li>
+</ul>
+<blockquote>
+<p><strong>LoRA is how the world fine-tunes LLMs today.</strong></p>
+</blockquote>
+<hr>
+<h2 id="-why-not-encoder-only-llms">❓ Why Not Encoder-Only LLMs?</h2>
+<p>Encoder-only models:</p>
+<ul>
+<li>Cannot generate freely</li>
+<li>Need a decoder for output</li>
+<li>Not conversational</li>
+</ul>
+<p>That’s why:</p>
+<ul>
+<li>BERT ≠ ChatGPT</li>
+<li>ViT ≠ multimodal assistant</li>
+</ul>
+<hr>
+<h2 id="-mental-model-remember-this-forever">🧠 Mental Model (Remember This Forever)</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Model Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Understand</td>
+<td>Encoder</td>
+</tr>
+<tr>
+<td>Reason</td>
+<td>Decoder</td>
+</tr>
+<tr>
+<td>Speak</td>
+<td>Decoder</td>
+</tr>
+<tr>
+<td>Act</td>
+<td>Decoder + Tools</td>
+</tr>
+<tr>
+<td>See</td>
+<td>Vision Encoder</td>
+</tr>
+<tr>
+<td>Hear</td>
+<td>Audio Encoder</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="-interview-trap">🚨 Interview Trap</h2>
-<blockquote>
-<p>Why not use a large learning rate?</p>
-</blockquote>
-<p>❌ Overshooting
-❌ Divergence</p>
+<h2 id="-student-knowledge-check-hidden">🧪 Student Knowledge Check (Hidden)</h2>
+<h3 id="q1--objective">Q1 — Objective</h3>
+<p>Why can ChatGPT work without an encoder?</p>
+<details class="spoiler "  id="spoiler-1">
+  <summary>Answer</summary>
+  <p>Because a decoder can read context and generate text autoregressively.</p>
+</details>
 <hr>
-<h2 id="-takeaway-1">🏁 Takeaway</h2>
-<blockquote>
-<p>Optimization is the <strong>engine</strong> of AI.</p>
-</blockquote>
+<h3 id="q2--mcq">Q2 — MCQ</h3>
+<p>Which model is encoder-only?</p>
+<p>A. GPT
+B. LLaMA
+C. BERT
+D. ChatGPT</p>
+<details class="spoiler "  id="spoiler-2">
+  <summary>Answer</summary>
+  <p>C. BERT</p>
+</details>
 <hr>
-<h1 id="-numpy-for-coding-interviews">📘 NumPy for Coding Interviews</h1>
-<h2 id="-why-numpy">🎯 Why NumPy?</h2>
-<p>Interviewers expect:</p>
+<h3 id="q3--mcq">Q3 — MCQ</h3>
+<p>What is usually frozen in multimodal LLMs?</p>
+<p>A. Decoder
+B. Encoder
+C. Tokenizer
+D. Loss function</p>
+<details class="spoiler "  id="spoiler-3">
+  <summary>Answer</summary>
+  <p>B. Encoder</p>
+</details>
+<hr>
+<h3 id="q4--objective">Q4 — Objective</h3>
+<p>Why use LoRA instead of full fine-tuning?</p>
+<details class="spoiler "  id="spoiler-4">
+  <summary>Answer</summary>
+  <p>To reduce cost, preserve knowledge, and improve stability.</p>
+</details>
+<hr>
+<h3 id="q5--objective">Q5 — Objective</h3>
+<p>Who is the “brain” of a multimodal LLM?</p>
+<details class="spoiler "  id="spoiler-5">
+  <summary>Answer</summary>
+  <p>The decoder-only LLM.</p>
+</details>
+<hr>
+<h2 id="-final-reflection">🌱 Final Reflection</h2>
+<details class="spoiler "  id="spoiler-6">
+  <summary>If intelligence emerges from predicting the next token, what does that say about human thinking?</summary>
+  <p>That reasoning may emerge from sequence prediction guided by experience.</p>
+</details>
+<hr>
+<h2 id="-final-takeaways-burn-this-in">✅ Final Takeaways (Burn This In)</h2>
 <ul>
-<li>Vectorized thinking</li>
-<li>Clean math code</li>
-<li>Speed awareness</li>
+<li>ChatGPT is <strong>decoder-only</strong></li>
+<li>Encoders understand, decoders generate</li>
+<li>Multimodal = encoders + decoder brain</li>
+<li>Freezing is strategy, not weakness</li>
+<li>Fine-tuning is about <em>what to move</em></li>
 </ul>
 <hr>
-<h2 id="-arrays-vs-lists">🧮 Arrays vs Lists</h2>
-<pre><code class="language-python">import numpy as np
-
-a = np.array([1, 2, 3])
-</code></pre>
-<p>Why better?</p>
-<ul>
-<li>Faster</li>
-<li>Cleaner</li>
-<li>Mathematical</li>
-</ul>
-<hr>
-<h2 id="-vector-operations">➕ Vector Operations</h2>
-<pre><code class="language-python">a + b        # element-wise
-a * b
-np.dot(a,b) # dot product
-</code></pre>
-<hr>
-<h2 id="-matrix-multiplication">🧱 Matrix Multiplication</h2>
-<pre><code class="language-python">A @ B
-</code></pre>
-<p>Equivalent to:</p>
-<pre><code class="language-python">np.matmul(A, B)
-</code></pre>
-<hr>
-<h2 id="-broadcasting-interview-favorite">📏 Broadcasting (Interview Favorite)</h2>
-<pre><code class="language-python">A + 1
-</code></pre>
-<p>Adds 1 to every element.</p>
-<hr>
-<h2 id="-takeaway-2">🏁 Takeaway</h2>
-<blockquote>
-<p>NumPy replaces <strong>loops with math</strong>.</p>
-</blockquote>
-<pre><code>
----
-
-# Time vs Space Trade-offs
-
-## 🎯 Interview Core Concept
-
-You can optimize:
-- Time
-- Space
-
-Rarely both.
-
----
-
-## 🧩 Example: Duplicate Detection
-
-### Less Space, More Time
-
-```python
-for i in range(n):
-    for j in range(i+1, n):
-        if nums[i] == nums[j]:
-            return True
-</code></pre>
-<p>⏱️ O(n²), 💾 O(1)</p>
-<hr>
-<h3 id="more-space-less-time">More Space, Less Time</h3>
-<pre><code class="language-python">seen = set()
-for v in nums:
-    if v in seen:
-        return True
-    seen.add(v)
-</code></pre>
-<p>⏱️ O(n), 💾 O(n)</p>
-<hr>
-<h2 id="-interview-question-1">🧠 Interview Question</h2>
-<blockquote>
-<p>Which would you choose?</p>
-</blockquote>
-<p>Correct answer:</p>
-<blockquote>
-<p>Depends on constraints.</p>
-</blockquote>
-<hr>
-<h2 id="-takeaway-3">🏁 Takeaway</h2>
-<blockquote>
-<p>Strong engineers trade <strong>resources intentionally</strong>.</p>
-</blockquote>
           </div>
 
           
@@ -1281,14 +1439,14 @@ for v in nums:
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-05-two-sum/" rel="next">LC-TEST-05 — Two Sum (Brute Force → Hash Map)</a>
+    <a href="/courses/2026-01-01-llm-multimodal/lecture-11-share-on-huggingface/" rel="next">Lecture 11 — Sharing Your Multimodal Model with the World (Hugging Face)</a>
   </div>
   
   
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-07-indexing-and-containers/" rel="prev">LC-TEST-07 — Indexing &amp; Containers Mastery</a>
+    <a href="/courses/2026-01-01-llm-multimodal/lecture-13-llm-interview/" rel="prev">Lecture 13 — Real-World LLM Engineer &amp; Research Scientist Interview (Top Tech Level)</a>
   </div>
   
 </div>
@@ -1298,7 +1456,7 @@ for v in nums:
         </div>
 
         <div class="body-footer">
-          <p>Last updated on 2025</p>
+          <p>Last updated on 2026</p>
 
           
 

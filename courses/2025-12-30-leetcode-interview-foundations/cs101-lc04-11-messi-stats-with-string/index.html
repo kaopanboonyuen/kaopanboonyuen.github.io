@@ -33,7 +33,7 @@
   <meta name="description" content="" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-06-probability-ai/" />
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-11-messi-stats-with-string/" />
 
   
 
@@ -285,7 +285,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-06-probability-ai/" />
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-11-messi-stats-with-string/" />
 
   
   
@@ -302,18 +302,18 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Teerapong Panboonyuen" />
-  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-06-probability-ai/" />
-  <meta property="og:title" content="LC-TEST-06 — Probability for Machine Learning | Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-11-messi-stats-with-string/" />
+  <meta property="og:title" content="LC-TEST-11 — Messi &amp; Barcelona Career Analytics (Indexing Mastery) | Teerapong Panboonyuen" />
   <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
         property="article:published_time"
-        content="2025-12-30T00:00:00&#43;00:00"
+        content="2026-01-01T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2025-12-30T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2026-01-01T00:00:00&#43;00:00">
   
 
   
@@ -330,11 +330,11 @@
 
 
 
-  <title>LC-TEST-06 — Probability for Machine Learning | Teerapong Panboonyuen</title>
+  <title>LC-TEST-11 — Messi &amp; Barcelona Career Analytics (Indexing Mastery) | Teerapong Panboonyuen</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="cbc0858a1a6df9d0f475c56349a16d06" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="b53977bdc1cf01e880410cc559ea0d5d" >
 
   
   
@@ -922,7 +922,7 @@
 
 
 
-  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-06-probability-ai/">LC-TEST-06 — Probability for Machine Learning</a></li>
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-06-probability-ai/">LC-TEST-06 — Probability for Machine Learning</a></li>
 
 
 
@@ -942,7 +942,7 @@
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-11-messi-stats-with-string/">LC-TEST-11 — Messi &amp; Barcelona Career Analytics (Indexing Mastery)</a></li>
+  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-11-messi-stats-with-string/">LC-TEST-11 — Messi &amp; Barcelona Career Analytics (Indexing Mastery)</a></li>
 
 
 
@@ -974,42 +974,27 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#-why-probability-matters">🎯 Why Probability Matters</a></li>
-    <li><a href="#-basic-definitions">🧮 Basic Definitions</a>
+    <li><a href="#-why-this-problem-exists">⚽ Why This Problem Exists</a></li>
+    <li><a href="#-what-you-will-learn">🧠 What You Will Learn</a></li>
+    <li><a href="#-problem-statement--messi-at-barcelona">🧩 Problem Statement — Messi at Barcelona</a>
       <ul>
-        <li><a href="#probability">Probability</a></li>
+        <li><a href="#-input">📥 Input</a></li>
       </ul>
     </li>
-    <li><a href="#-conditional-probability">🎲 Conditional Probability</a></li>
-    <li><a href="#-independence">🔁 Independence</a></li>
-    <li><a href="#-bayes-theorem-very-important">🧠 Bayes’ Theorem (VERY IMPORTANT)</a></li>
-    <li><a href="#-interview-question">🧪 Interview Question</a></li>
-    <li><a href="#-takeaway">🏁 Takeaway</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#-problem">🎯 Problem</a></li>
-    <li><a href="#-loss-function">📉 Loss Function</a></li>
-    <li><a href="#-gradient-descent-idea">🧠 Gradient Descent Idea</a></li>
-    <li><a href="#-python-example">🧑‍💻 Python Example</a></li>
-    <li><a href="#-variants-interviewers-love">⏱️ Variants Interviewers Love</a></li>
-    <li><a href="#-interview-trap">🚨 Interview Trap</a></li>
-    <li><a href="#-takeaway-1">🏁 Takeaway</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#-why-numpy">🎯 Why NumPy?</a></li>
-    <li><a href="#-arrays-vs-lists">🧮 Arrays vs Lists</a></li>
-    <li><a href="#-vector-operations">➕ Vector Operations</a></li>
-    <li><a href="#-matrix-multiplication">🧱 Matrix Multiplication</a></li>
-    <li><a href="#-broadcasting-interview-favorite">📏 Broadcasting (Interview Favorite)</a></li>
-    <li><a href="#-takeaway-2">🏁 Takeaway</a>
+    <li><a href="#-tasks-all-must-be-solved">🎯 Tasks (All Must Be Solved)</a>
       <ul>
-        <li><a href="#more-space-less-time">More Space, Less Time</a></li>
+        <li><a href="#1-peak-season-goals">1️⃣ Peak Season (Goals)</a></li>
+        <li><a href="#2-most-efficient-season">2️⃣ Most Efficient Season</a></li>
+        <li><a href="#3-best-3-year-goal-window-sliding-window">3️⃣ Best 3-Year Goal Window (Sliding Window)</a></li>
+        <li><a href="#4-playmaker-index">4️⃣ Playmaker Index</a></li>
+        <li><a href="#5-career-summary-string">5️⃣ Career Summary String</a></li>
       </ul>
     </li>
-    <li><a href="#-interview-question-1">🧠 Interview Question</a></li>
-    <li><a href="#-takeaway-3">🏁 Takeaway</a></li>
+    <li><a href="#-interviewer-insight">🧠 Interviewer Insight</a></li>
+    <li><a href="#-full-python-solution">🧑‍💻 Full Python Solution</a></li>
+    <li><a href="#-complexity-analysis">⏱️ Complexity Analysis</a></li>
+    <li><a href="#-beginner-vs-elite-thinking">🧠 Beginner vs Elite Thinking</a></li>
+    <li><a href="#-final-takeaway">🏁 Final Takeaway</a></li>
   </ul>
 </nav>
 
@@ -1059,7 +1044,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        LC-TEST-06 — Probability for Machine Learning
+        LC-TEST-11 — Messi & Barcelona Career Analytics (Indexing Mastery)
       </li>
     </ol>
   </nav>
@@ -1067,204 +1052,229 @@
 
           
 
-          <h1>LC-TEST-06 — Probability for Machine Learning</h1>
+          <h1>LC-TEST-11 — Messi &amp; Barcelona Career Analytics (Indexing Mastery)</h1>
 
           <div class="article-style">
-            <h2 id="-why-probability-matters">🎯 Why Probability Matters</h2>
-<p>Probability is everywhere in AI:</p>
-<ul>
-<li>Model uncertainty</li>
-<li>Classification confidence</li>
-<li>Loss functions</li>
-<li>Bayesian thinking</li>
-</ul>
-<p>Interviewers want <strong>intuition</strong>, not formulas only.</p>
-<hr>
-<h2 id="-basic-definitions">🧮 Basic Definitions</h2>
-<h3 id="probability">Probability</h3>
-<p>Example:</p>
-<pre><code class="language-python">P(head) = 1 / 2
-</code></pre>
-<hr>
-<h2 id="-conditional-probability">🎲 Conditional Probability</h2>
-<p>Example:</p>
+            <h2 id="-why-this-problem-exists">⚽ Why This Problem Exists</h2>
+<p>This is <strong>not</strong> a toy problem.</p>
+<p>This problem is designed to simulate:</p>
 <blockquote>
-<p>Given it rains, what’s the chance traffic is heavy?</p>
+<p>📊 Real-world analytics<br>
+🧠 Algorithmic thinking<br>
+🧪 Data slicing &amp; indexing mastery</p>
 </blockquote>
+<p>If you can solve <strong>this single problem</strong> cleanly:</p>
+<p>✔ You understand Python deeply<br>
+✔ You can read &amp; manipulate structured data<br>
+✔ You think like a strong backend / ML / data engineer</p>
 <hr>
-<h2 id="-independence">🔁 Independence</h2>
-<p>Two events are independent if:
-[
-P(A \cap B) = P(A)P(B)
-]</p>
-<p>Interview trick question ⚠️
-👉 Independence ≠ no correlation always</p>
-<hr>
-<h2 id="-bayes-theorem-very-important">🧠 Bayes’ Theorem (VERY IMPORTANT)</h2>
-<p>Used in:</p>
+<h2 id="-what-you-will-learn">🧠 What You Will Learn</h2>
+<p>This problem forces you to use:</p>
 <ul>
-<li>Spam detection</li>
-<li>Medical diagnosis</li>
-<li>Bayesian ML</li>
+<li><code>for</code> loops with <strong>range(start, stop, step)</strong></li>
+<li>Heavy <strong>indexing &amp; slicing</strong></li>
+<li>Containers: <code>list</code>, <code>dict</code>, <code>tuple</code></li>
+<li>String parsing</li>
+<li>Nested functions</li>
+<li>Multi-pass logic (but no brute force)</li>
+<li>Clean abstraction &amp; reusability</li>
 </ul>
 <hr>
-<h2 id="-interview-question">🧪 Interview Question</h2>
-<blockquote>
-<p>Why Naive Bayes works despite false independence assumptions?</p>
-</blockquote>
-<p>✅ Because it reduces variance and scales well.</p>
-<hr>
-<h2 id="-takeaway">🏁 Takeaway</h2>
-<blockquote>
-<p>Probability gives AI <strong>confidence</strong>, not just predictions.</p>
-</blockquote>
-<hr>
-<h1 id="-gradient-descent-interview-intuition">📘 Gradient Descent (Interview Intuition)</h1>
-<h2 id="-problem">🎯 Problem</h2>
-<p>How do machines <strong>learn</strong>?</p>
-<p>By minimizing a loss function.</p>
-<hr>
-<h2 id="-loss-function">📉 Loss Function</h2>
-<hr>
-<h2 id="-gradient-descent-idea">🧠 Gradient Descent Idea</h2>
-<blockquote>
-<p>Walk downhill in the direction of <strong>steepest descent</strong></p>
-</blockquote>
-<hr>
-<h2 id="-python-example">🧑‍💻 Python Example</h2>
-<pre><code class="language-python">def gradient_descent(w, x, y, lr=0.01):
-    grad = -2 * x * (y - w * x)
-    return w - lr * grad
-</code></pre>
-<hr>
-<h2 id="-variants-interviewers-love">⏱️ Variants Interviewers Love</h2>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Idea</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Batch GD</td>
-<td>Use all data</td>
-</tr>
-<tr>
-<td>SGD</td>
-<td>One sample</td>
-</tr>
-<tr>
-<td>Mini-batch</td>
-<td>Best of both</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="-interview-trap">🚨 Interview Trap</h2>
-<blockquote>
-<p>Why not use a large learning rate?</p>
-</blockquote>
-<p>❌ Overshooting
-❌ Divergence</p>
-<hr>
-<h2 id="-takeaway-1">🏁 Takeaway</h2>
-<blockquote>
-<p>Optimization is the <strong>engine</strong> of AI.</p>
-</blockquote>
-<hr>
-<h1 id="-numpy-for-coding-interviews">📘 NumPy for Coding Interviews</h1>
-<h2 id="-why-numpy">🎯 Why NumPy?</h2>
-<p>Interviewers expect:</p>
-<ul>
-<li>Vectorized thinking</li>
-<li>Clean math code</li>
-<li>Speed awareness</li>
-</ul>
-<hr>
-<h2 id="-arrays-vs-lists">🧮 Arrays vs Lists</h2>
-<pre><code class="language-python">import numpy as np
-
-a = np.array([1, 2, 3])
-</code></pre>
-<p>Why better?</p>
-<ul>
-<li>Faster</li>
-<li>Cleaner</li>
-<li>Mathematical</li>
-</ul>
-<hr>
-<h2 id="-vector-operations">➕ Vector Operations</h2>
-<pre><code class="language-python">a + b        # element-wise
-a * b
-np.dot(a,b) # dot product
-</code></pre>
-<hr>
-<h2 id="-matrix-multiplication">🧱 Matrix Multiplication</h2>
-<pre><code class="language-python">A @ B
-</code></pre>
-<p>Equivalent to:</p>
-<pre><code class="language-python">np.matmul(A, B)
-</code></pre>
-<hr>
-<h2 id="-broadcasting-interview-favorite">📏 Broadcasting (Interview Favorite)</h2>
-<pre><code class="language-python">A + 1
-</code></pre>
-<p>Adds 1 to every element.</p>
-<hr>
-<h2 id="-takeaway-2">🏁 Takeaway</h2>
-<blockquote>
-<p>NumPy replaces <strong>loops with math</strong>.</p>
-</blockquote>
+<h2 id="-problem-statement--messi-at-barcelona">🧩 Problem Statement — Messi at Barcelona</h2>
+<p>You are given <strong>Messi&rsquo;s season-by-season record at FC Barcelona</strong><br>
+as a single encoded string.</p>
+<p>Each season is encoded as:</p>
 <pre><code>
----
+&quot;SEASON:GOALS|ASSISTS|MATCHES&quot;
 
-# Time vs Space Trade-offs
-
-## 🎯 Interview Core Concept
-
-You can optimize:
-- Time
-- Space
-
-Rarely both.
-
----
-
-## 🧩 Example: Duplicate Detection
-
-### Less Space, More Time
-
-```python
-for i in range(n):
-    for j in range(i+1, n):
-        if nums[i] == nums[j]:
-            return True
 </code></pre>
-<p>⏱️ O(n²), 💾 O(1)</p>
-<hr>
-<h3 id="more-space-less-time">More Space, Less Time</h3>
-<pre><code class="language-python">seen = set()
-for v in nums:
-    if v in seen:
-        return True
-    seen.add(v)
+<p>All seasons are joined by commas.</p>
+<h3 id="-input">📥 Input</h3>
+<pre><code class="language-text">career_data = (
+  &quot;2004:1|0|9,&quot;
+  &quot;2005:8|3|25,&quot;
+  &quot;2006:17|3|36,&quot;
+  &quot;2007:16|13|40,&quot;
+  &quot;2008:38|17|51,&quot;
+  &quot;2009:47|11|53,&quot;
+  &quot;2010:53|24|55,&quot;
+  &quot;2011:73|29|60,&quot;
+  &quot;2012:60|16|50,&quot;
+  &quot;2013:41|14|46,&quot;
+  &quot;2014:58|27|57,&quot;
+  &quot;2015:41|23|49,&quot;
+  &quot;2016:54|16|52,&quot;
+  &quot;2017:45|18|54,&quot;
+  &quot;2018:51|19|50,&quot;
+  &quot;2019:31|25|44,&quot;
+  &quot;2020:30|9|47&quot;
+)
 </code></pre>
-<p>⏱️ O(n), 💾 O(n)</p>
 <hr>
-<h2 id="-interview-question-1">🧠 Interview Question</h2>
+<h2 id="-tasks-all-must-be-solved">🎯 Tasks (All Must Be Solved)</h2>
+<p>Write a function <code>analyze_messi_career(career_data)</code> that returns a dictionary with:</p>
+<h3 id="1-peak-season-goals">1️⃣ Peak Season (Goals)</h3>
+<ul>
+<li>Season with <strong>maximum goals</strong></li>
+<li>Return <code>(season, goals)</code></li>
+</ul>
+<hr>
+<h3 id="2-most-efficient-season">2️⃣ Most Efficient Season</h3>
+<p>Efficiency = <code>goals / matches</code></p>
+<ul>
+<li>Use <strong>float division</strong></li>
+<li>Return <code>(season, efficiency)</code> rounded to <strong>2 decimals</strong></li>
+</ul>
+<hr>
+<h3 id="3-best-3-year-goal-window-sliding-window">3️⃣ Best 3-Year Goal Window (Sliding Window)</h3>
+<p>Find <strong>3 consecutive seasons</strong> with:</p>
+<ul>
+<li>
+<p>Maximum total goals</p>
+</li>
+<li>
+<p>Return:</p>
+<pre><code>{
+  &quot;seasons&quot;: [season1, season2, season3],
+  &quot;total_goals&quot;: X
+}
+</code></pre>
+</li>
+</ul>
+<p>⚠️ You <strong>must</strong> use indexing (<code>range(start, stop)</code>),
+not hardcoded seasons.</p>
+<hr>
+<h3 id="4-playmaker-index">4️⃣ Playmaker Index</h3>
+<p>Define:</p>
+<pre><code>playmaker_score = assists / matches
+</code></pre>
+<p>Return <strong>all seasons</strong> where:</p>
+<pre><code>playmaker_score &gt;= career_average
+</code></pre>
+<p>Return list of seasons.</p>
+<hr>
+<h3 id="5-career-summary-string">5️⃣ Career Summary String</h3>
+<p>Return a formatted string:</p>
+<pre><code>&quot;Messi played X seasons at Barcelona, scoring Y goals with Z assists.&quot;
+</code></pre>
+<hr>
+<h2 id="-interviewer-insight">🧠 Interviewer Insight</h2>
+<p>This problem tests:</p>
 <blockquote>
-<p>Which would you choose?</p>
+<p>❗ Can you parse structured strings
+❗ Can you index and slice correctly
+❗ Can you reuse logic via nested functions
+❗ Can you avoid brute force</p>
 </blockquote>
-<p>Correct answer:</p>
+<p>This is <strong>Olympiad-level logic with real-world flavor</strong>.</p>
+<hr>
+<h2 id="-full-python-solution">🧑‍💻 Full Python Solution</h2>
+<pre><code class="language-python">def analyze_messi_career(career_data):
+
+    # ---------- Helper: Parse Career ----------
+    def parse_career(data):
+        seasons = []
+        records = data.split(&quot;,&quot;)
+
+        for record in records:
+            year, stats = record.split(&quot;:&quot;)
+            goals, assists, matches = map(int, stats.split(&quot;|&quot;))
+            seasons.append({
+                &quot;season&quot;: int(year),
+                &quot;goals&quot;: goals,
+                &quot;assists&quot;: assists,
+                &quot;matches&quot;: matches
+            })
+        return seasons
+
+    seasons = parse_career(career_data)
+
+    # ---------- 1️⃣ Peak Goal Season ----------
+    peak = max(seasons, key=lambda x: x[&quot;goals&quot;])
+    peak_season = (peak[&quot;season&quot;], peak[&quot;goals&quot;])
+
+    # ---------- 2️⃣ Most Efficient Season ----------
+    def efficiency(season):
+        return season[&quot;goals&quot;] / season[&quot;matches&quot;]
+
+    best_eff = max(seasons, key=efficiency)
+    best_eff_season = (
+        best_eff[&quot;season&quot;],
+        round(efficiency(best_eff), 2)
+    )
+
+    # ---------- 3️⃣ Best 3-Year Goal Window ----------
+    max_goals = 0
+    best_window = []
+
+    for i in range(0, len(seasons) - 2):
+        window = seasons[i:i+3]              # slicing
+        total = sum(s[&quot;goals&quot;] for s in window)
+
+        if total &gt; max_goals:
+            max_goals = total
+            best_window = [s[&quot;season&quot;] for s in window]
+
+    best_3_year_window = {
+        &quot;seasons&quot;: best_window,
+        &quot;total_goals&quot;: max_goals
+    }
+
+    # ---------- 4️⃣ Playmaker Index ----------
+    total_assists = sum(s[&quot;assists&quot;] for s in seasons)
+    total_matches = sum(s[&quot;matches&quot;] for s in seasons)
+    career_avg = total_assists / total_matches
+
+    playmaker_seasons = [
+        s[&quot;season&quot;]
+        for s in seasons
+        if (s[&quot;assists&quot;] / s[&quot;matches&quot;]) &gt;= career_avg
+    ]
+
+    # ---------- 5️⃣ Career Summary ----------
+    summary = (
+        f&quot;Messi played {len(seasons)} seasons at Barcelona, &quot;
+        f&quot;scoring {sum(s['goals'] for s in seasons)} goals &quot;
+        f&quot;with {sum(s['assists'] for s in seasons)} assists.&quot;
+    )
+
+    return {
+        &quot;peak_season&quot;: peak_season,
+        &quot;most_efficient&quot;: best_eff_season,
+        &quot;best_3_year_window&quot;: best_3_year_window,
+        &quot;playmaker_seasons&quot;: playmaker_seasons,
+        &quot;summary&quot;: summary
+    }
+</code></pre>
+<hr>
+<h2 id="-complexity-analysis">⏱️ Complexity Analysis</h2>
+<ul>
+<li><strong>Time:</strong> O(n)</li>
+<li><strong>Space:</strong> O(n)</li>
+</ul>
+<p>Every pass has a purpose.
+No brute force. No wasted loops.</p>
+<hr>
+<h2 id="-beginner-vs-elite-thinking">🧠 Beginner vs Elite Thinking</h2>
+<p><strong>Beginner:</strong></p>
 <blockquote>
-<p>Depends on constraints.</p>
+<p>“I’ll manually check seasons.”</p>
+</blockquote>
+<p><strong>Elite Python Engineer:</strong></p>
+<blockquote>
+<p>“Index windows, abstract logic, reuse functions.”</p>
 </blockquote>
 <hr>
-<h2 id="-takeaway-3">🏁 Takeaway</h2>
+<h2 id="-final-takeaway">🏁 Final Takeaway</h2>
 <blockquote>
-<p>Strong engineers trade <strong>resources intentionally</strong>.</p>
+<p>If you can write this code <strong>cleanly and confidently</strong>:</p>
+<p>✅ LeetCode Hard is realistic
+✅ System design data logic feels natural
+✅ Real-life analytics problems become easy</p>
 </blockquote>
+<p>This is <strong>not practice</strong> —
+this is <strong>graduation</strong> 🎓🐐⚽</p>
+<hr>
           </div>
 
           
@@ -1281,14 +1291,14 @@ for v in nums:
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-05-two-sum/" rel="next">LC-TEST-05 — Two Sum (Brute Force → Hash Map)</a>
+    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-10-messi-stats/" rel="next">LC-TEST-10 — Messi&#39;s Barcelona Career (Stats and Achievements)</a>
   </div>
   
   
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-07-indexing-and-containers/" rel="prev">LC-TEST-07 — Indexing &amp; Containers Mastery</a>
+    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-12-fifa-world-cup/" rel="prev">LC-TEST-11 — FIFA World Cup 2026 Ultimate Analytics</a>
   </div>
   
 </div>
@@ -1298,7 +1308,7 @@ for v in nums:
         </div>
 
         <div class="body-footer">
-          <p>Last updated on 2025</p>
+          <p>Last updated on 2026</p>
 
           
 

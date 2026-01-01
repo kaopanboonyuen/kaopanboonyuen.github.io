@@ -1,0 +1,1823 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Teerapong Panboonyuen" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2026-01-01-llm-multimodal/lecture-14-deep-learning-modern-ai-final/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08f2e04360a1c87f5ad39547c02bf219.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2026-01-01-llm-multimodal/lecture-14-deep-learning-modern-ai-final/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2026-01-01-llm-multimodal/lecture-14-deep-learning-modern-ai-final/" />
+  <meta property="og:title" content="Lecture 14 — Deep Learning Foundations &amp; Modern AI (Final Mastery) | Teerapong Panboonyuen" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2026-01-01T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2026-01-01T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Lecture 14 — Deep Learning Foundations &amp; Modern AI (Final Mastery) | Teerapong Panboonyuen</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="4dffc70bf24adcefb7bf9c7d3da6fffd" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.4be02a3b391999348b0c7478778a0e4b.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#awards"><span>Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#press"><span>Press</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Featured</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#tags"><span>Topics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#communities"><span>Communities</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://x.com/kaopanboonyuen" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          Multimodal LLM
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/courses/"><i class="fas fa-arrow-left pr-1"></i>Courses</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/courses/2026-01-01-llm-multimodal/">Multimodal LLM</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-01-what-is-multimodal-llm/">Lecture 01 — What Is a Multimodal LLM, Really?</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-02-thinking-like-multimodal-architect/">Lecture 02 — How to Think Like a Multimodal System Designer</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-03-training-paradigms/">Lecture 03 — Training Paradigms: Pretraining, Fine-tuning, and Training from Scratch</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-04-audio-text/">Lecture 04 — Audio ↔ Text ↔ Reasoning: Teaching Machines to Listen</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-05-image-text/">Lecture 05 — Image ↔ Text: Teaching Machines to See and Reason</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-06-video-text/">Lecture 06 — Video–Text Multimodal Intelligence</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-07-vqa-docqa/">Lecture 07 — Visual Question Answering (VQA) &amp; Document Question Answering (DocQA)</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-08-rag-agents/">Lecture 08 — RAG, AI Agents &amp; Agentic Multimodal Systems</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-09-evaluation/">Lecture 09 — Evaluation of Multimodal &amp; Agentic AI Systems</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-10-bias-ethics-hitl/">Lecture 10 — Bias, Ethics &amp; Human-in-the-Loop (HITL) in Multimodal AI</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-11-share-on-huggingface/">Lecture 11 — Sharing Your Multimodal Model with the World (Hugging Face)</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-12-encoder-decoder-in-llms/">Lecture 12 — Encoder, Decoder, and the Truth About How LLMs Are Trained</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-01-llm-multimodal/lecture-13-llm-interview/">Lecture 13 — Real-World LLM Engineer &amp; Research Scientist Interview (Top Tech Level)</a></li>
+
+
+
+  <li class="active"><a href="/courses/2026-01-01-llm-multimodal/lecture-14-deep-learning-modern-ai-final/">Lecture 14 — Deep Learning Foundations &amp; Modern AI (Final Mastery)</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-why-this-final-lecture-exists">🌍 Why This Final Lecture Exists</a></li>
+    <li><a href="#-part-i--deep-learning-foundations-q1q25">🧠 PART I — Deep Learning Foundations (Q1–Q25)</a>
+      <ul>
+        <li><a href="#q1--objective">Q1 — Objective</a></li>
+        <li><a href="#q2--mcq">Q2 — MCQ</a></li>
+        <li><a href="#q3--objective">Q3 — Objective</a></li>
+        <li><a href="#q4--mcq">Q4 — MCQ</a></li>
+        <li><a href="#q5--objective">Q5 — Objective</a></li>
+        <li><a href="#q6--mcq">Q6 — MCQ</a></li>
+        <li><a href="#q7--objective">Q7 — Objective</a></li>
+        <li><a href="#q8--mcq">Q8 — MCQ</a></li>
+        <li><a href="#q9--objective">Q9 — Objective</a></li>
+        <li><a href="#q10--mcq">Q10 — MCQ</a></li>
+        <li><a href="#q11--objective">Q11 — Objective</a></li>
+        <li><a href="#q12--mcq">Q12 — MCQ</a></li>
+        <li><a href="#q13--objective">Q13 — Objective</a></li>
+        <li><a href="#q14--mcq">Q14 — MCQ</a></li>
+        <li><a href="#q15--objective">Q15 — Objective</a></li>
+        <li><a href="#q16--mcq">Q16 — MCQ</a></li>
+        <li><a href="#q17--objective">Q17 — Objective</a></li>
+        <li><a href="#q18--mcq">Q18 — MCQ</a></li>
+        <li><a href="#q19--objective">Q19 — Objective</a></li>
+        <li><a href="#q20--mcq">Q20 — MCQ</a></li>
+        <li><a href="#q21--objective">Q21 — Objective</a></li>
+        <li><a href="#q22--mcq">Q22 — MCQ</a></li>
+        <li><a href="#q23--objective">Q23 — Objective</a></li>
+        <li><a href="#q24--mcq">Q24 — MCQ</a></li>
+        <li><a href="#q25--objective">Q25 — Objective</a></li>
+      </ul>
+    </li>
+    <li><a href="#-part-ii--modern-ai--llm-era-q26q50">🚀 PART II — Modern AI &amp; LLM Era (Q26–Q50)</a>
+      <ul>
+        <li><a href="#q26--mcq">Q26 — MCQ</a></li>
+        <li><a href="#q27--objective">Q27 — Objective</a></li>
+        <li><a href="#q28--mcq">Q28 — MCQ</a></li>
+        <li><a href="#q29--objective">Q29 — Objective</a></li>
+        <li><a href="#q30--mcq">Q30 — MCQ</a></li>
+        <li><a href="#q31--objective">Q31 — Objective</a></li>
+        <li><a href="#q32--mcq">Q32 — MCQ</a></li>
+        <li><a href="#q33--objective">Q33 — Objective</a></li>
+        <li><a href="#q34--mcq">Q34 — MCQ</a></li>
+        <li><a href="#q35--objective">Q35 — Objective</a></li>
+        <li><a href="#q36--mcq">Q36 — MCQ</a></li>
+        <li><a href="#q37--objective">Q37 — Objective</a></li>
+        <li><a href="#q38--mcq">Q38 — MCQ</a></li>
+        <li><a href="#q39--objective">Q39 — Objective</a></li>
+        <li><a href="#q40--mcq">Q40 — MCQ</a></li>
+        <li><a href="#q41--objective">Q41 — Objective</a></li>
+        <li><a href="#q42--mcq">Q42 — MCQ</a></li>
+        <li><a href="#q43--objective">Q43 — Objective</a></li>
+        <li><a href="#q44--mcq">Q44 — MCQ</a></li>
+        <li><a href="#q45--objective">Q45 — Objective</a></li>
+        <li><a href="#q46--mcq">Q46 — MCQ</a></li>
+        <li><a href="#q47--objective">Q47 — Objective</a></li>
+        <li><a href="#q48--mcq">Q48 — MCQ</a></li>
+        <li><a href="#q49--objective">Q49 — Objective</a></li>
+        <li><a href="#q50--final-reflection">Q50 — Final Reflection</a></li>
+      </ul>
+    </li>
+    <li><a href="#-final-words">🌱 Final Words</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+  
+  
+
+  <li class="breadcrumb-item">
+    <a href="/">
+      
+        Home
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/">
+      
+        Courses
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/2026-01-01-llm-multimodal/">
+      
+        Multimodal LLM
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Lecture 14 — Deep Learning Foundations & Modern AI (Final Mastery)
+      </li>
+    </ol>
+  </nav>
+
+
+          
+
+          <h1>Lecture 14 — Deep Learning Foundations &amp; Modern AI (Final Mastery)</h1>
+
+          <div class="article-style">
+            <p>
+  <i class="fas fa-clock  pr-1 fa-fw"></i> ~5–6 hours (final synthesis lecture)</p>
+<hr>
+<h2 id="-why-this-final-lecture-exists">🌍 Why This Final Lecture Exists</h2>
+<blockquote>
+<p><strong>Strong AI engineers are built on fundamentals.<br>
+Great AI leaders are built on understanding + responsibility.</strong></p>
+</blockquote>
+<p>This lecture revisits:</p>
+<ul>
+<li>Core deep learning</li>
+<li>Modern LLM-era AI</li>
+<li>Common misconceptions</li>
+<li>Interview-level clarity</li>
+<li>First-principles thinking</li>
+</ul>
+<p>If you master this lecture, you are no longer <em>confused by trends</em> —<br>
+you <strong>understand the machine</strong>.</p>
+<hr>
+<h2 id="-part-i--deep-learning-foundations-q1q25">🧠 PART I — Deep Learning Foundations (Q1–Q25)</h2>
+<hr>
+<h3 id="q1--objective">Q1 — Objective</h3>
+<p>What problem does gradient descent solve?</p>
+<details class="spoiler "  id="spoiler-1">
+  <summary>Answer</summary>
+  <p>It minimizes a loss function by iteratively updating model parameters.</p>
+</details>
+<hr>
+<h3 id="q2--mcq">Q2 — MCQ</h3>
+<p>What is backpropagation?</p>
+<p>A. Data normalization<br>
+B. Gradient computation via chain rule<br>
+C. Weight initialization<br>
+D. Loss regularization</p>
+<details class="spoiler "  id="spoiler-2">
+  <summary>Answer</summary>
+  <p>B. Gradient computation via chain rule<br>
+Backprop efficiently computes gradients for all parameters.</p>
+</details>
+<hr>
+<h3 id="q3--objective">Q3 — Objective</h3>
+<p>Why do we need activation functions?</p>
+<details class="spoiler "  id="spoiler-3">
+  <summary>Answer</summary>
+  <p>To introduce non-linearity so neural networks can model complex functions.</p>
+</details>
+<hr>
+<h3 id="q4--mcq">Q4 — MCQ</h3>
+<p>Which activation helps mitigate vanishing gradients?</p>
+<p>A. Sigmoid<br>
+B. Tanh<br>
+C. ReLU<br>
+D. Softmax</p>
+<details class="spoiler "  id="spoiler-4">
+  <summary>Answer</summary>
+  <p>C. ReLU<br>
+It preserves gradients for positive inputs.</p>
+</details>
+<hr>
+<h3 id="q5--objective">Q5 — Objective</h3>
+<p>What is overfitting?</p>
+<details class="spoiler "  id="spoiler-5">
+  <summary>Answer</summary>
+  <p>When a model performs well on training data but poorly on unseen data.</p>
+</details>
+<hr>
+<h3 id="q6--mcq">Q6 — MCQ</h3>
+<p>Which technique reduces overfitting?</p>
+<p>A. Increasing epochs<br>
+B. Dropout<br>
+C. Larger batch size<br>
+D. Removing regularization</p>
+<details class="spoiler "  id="spoiler-6">
+  <summary>Answer</summary>
+  <p>B. Dropout<br>
+It prevents co-adaptation of neurons.</p>
+</details>
+<hr>
+<h3 id="q7--objective">Q7 — Objective</h3>
+<p>Why is batch normalization useful?</p>
+<details class="spoiler "  id="spoiler-7">
+  <summary>Answer</summary>
+  <p>It stabilizes training by normalizing intermediate activations.</p>
+</details>
+<hr>
+<h3 id="q8--mcq">Q8 — MCQ</h3>
+<p>Which optimizer adapts learning rates per parameter?</p>
+<p>A. SGD<br>
+B. Momentum<br>
+C. Adam<br>
+D. Newton</p>
+<details class="spoiler "  id="spoiler-8">
+  <summary>Answer</summary>
+  <p>C. Adam<br>
+Adam combines momentum and adaptive scaling.</p>
+</details>
+<hr>
+<h3 id="q9--objective">Q9 — Objective</h3>
+<p>What is the bias–variance tradeoff?</p>
+<details class="spoiler "  id="spoiler-9">
+  <summary>Answer</summary>
+  <p>The balance between underfitting (high bias) and overfitting (high variance).</p>
+</details>
+<hr>
+<h3 id="q10--mcq">Q10 — MCQ</h3>
+<p>Which loss is best for classification?</p>
+<p>A. MSE<br>
+B. Cross-entropy<br>
+C. Hinge (always)<br>
+D. L1</p>
+<details class="spoiler "  id="spoiler-10">
+  <summary>Answer</summary>
+  <p>B. Cross-entropy<br>
+It aligns with probabilistic outputs.</p>
+</details>
+<hr>
+<h3 id="q11--objective">Q11 — Objective</h3>
+<p>Why is data scaling important?</p>
+<details class="spoiler "  id="spoiler-11">
+  <summary>Answer</summary>
+  <p>It improves convergence speed and numerical stability.</p>
+</details>
+<hr>
+<h3 id="q12--mcq">Q12 — MCQ</h3>
+<p>Which network handles sequences best (classically)?</p>
+<p>A. CNN<br>
+B. MLP<br>
+C. RNN<br>
+D. Autoencoder</p>
+<details class="spoiler "  id="spoiler-12">
+  <summary>Answer</summary>
+  <p>C. RNN<br>
+Designed to process sequential data.</p>
+</details>
+<hr>
+<h3 id="q13--objective">Q13 — Objective</h3>
+<p>What is vanishing gradient?</p>
+<details class="spoiler "  id="spoiler-13">
+  <summary>Answer</summary>
+  <p>When gradients become too small to update earlier layers effectively.</p>
+</details>
+<hr>
+<h3 id="q14--mcq">Q14 — MCQ</h3>
+<p>Which architecture solved long-term dependency issues?</p>
+<p>A. Vanilla RNN<br>
+B. CNN<br>
+C. LSTM<br>
+D. Perceptron</p>
+<details class="spoiler "  id="spoiler-14">
+  <summary>Answer</summary>
+  <p>C. LSTM<br>
+It uses gating mechanisms to preserve information.</p>
+</details>
+<hr>
+<h3 id="q15--objective">Q15 — Objective</h3>
+<p>What is representation learning?</p>
+<details class="spoiler "  id="spoiler-15">
+  <summary>Answer</summary>
+  <p>Learning useful features automatically from data.</p>
+</details>
+<hr>
+<h3 id="q16--mcq">Q16 — MCQ</h3>
+<p>Which layer reduces spatial resolution?</p>
+<p>A. Convolution<br>
+B. Pooling<br>
+C. Attention<br>
+D. Normalization</p>
+<details class="spoiler "  id="spoiler-16">
+  <summary>Answer</summary>
+  <p>B. Pooling<br>
+It aggregates spatial information.</p>
+</details>
+<hr>
+<h3 id="q17--objective">Q17 — Objective</h3>
+<p>Why are deeper networks harder to train?</p>
+<details class="spoiler "  id="spoiler-17">
+  <summary>Answer</summary>
+  <p>Due to gradient instability and optimization difficulty.</p>
+</details>
+<hr>
+<h3 id="q18--mcq">Q18 — MCQ</h3>
+<p>Which innovation enabled very deep networks?</p>
+<p>A. Sigmoid<br>
+B. Residual connections<br>
+C. Larger datasets<br>
+D. Dropout</p>
+<details class="spoiler "  id="spoiler-18">
+  <summary>Answer</summary>
+  <p>B. Residual connections<br>
+They allow gradients to flow directly.</p>
+</details>
+<hr>
+<h3 id="q19--objective">Q19 — Objective</h3>
+<p>What does regularization encourage?</p>
+<details class="spoiler "  id="spoiler-19">
+  <summary>Answer</summary>
+  <p>Simpler models that generalize better.</p>
+</details>
+<hr>
+<h3 id="q20--mcq">Q20 — MCQ</h3>
+<p>Which is NOT a regularization method?</p>
+<p>A. L2 penalty<br>
+B. Dropout<br>
+C. Data augmentation<br>
+D. Increasing learning rate</p>
+<details class="spoiler "  id="spoiler-20">
+  <summary>Answer</summary>
+  <p>D. Increasing learning rate<br>
+It affects optimization, not regularization.</p>
+</details>
+<hr>
+<h3 id="q21--objective">Q21 — Objective</h3>
+<p>What is transfer learning?</p>
+<details class="spoiler "  id="spoiler-21">
+  <summary>Answer</summary>
+  <p>Reusing knowledge from a pretrained model for a new task.</p>
+</details>
+<hr>
+<h3 id="q22--mcq">Q22 — MCQ</h3>
+<p>Why freeze layers during fine-tuning?</p>
+<p>A. Reduce memory<br>
+B. Prevent catastrophic forgetting<br>
+C. Increase randomness<br>
+D. Speed inference</p>
+<details class="spoiler "  id="spoiler-22">
+  <summary>Answer</summary>
+  <p>B. Prevent catastrophic forgetting<br>
+Frozen layers preserve learned representations.</p>
+</details>
+<hr>
+<h3 id="q23--objective">Q23 — Objective</h3>
+<p>What is catastrophic forgetting?</p>
+<details class="spoiler "  id="spoiler-23">
+  <summary>Answer</summary>
+  <p>When a model forgets old knowledge while learning new tasks.</p>
+</details>
+<hr>
+<h3 id="q24--mcq">Q24 — MCQ</h3>
+<p>Which setting usually needs the least data?</p>
+<p>A. Training from scratch<br>
+B. Pretraining<br>
+C. Fine-tuning<br>
+D. Random initialization</p>
+<details class="spoiler "  id="spoiler-24">
+  <summary>Answer</summary>
+  <p>C. Fine-tuning<br>
+It leverages pretrained knowledge.</p>
+</details>
+<hr>
+<h3 id="q25--objective">Q25 — Objective</h3>
+<p>What defines a good loss function?</p>
+<details class="spoiler "  id="spoiler-25">
+  <summary>Answer</summary>
+  <p>It aligns optimization with the true task objective.</p>
+</details>
+<hr>
+<h2 id="-part-ii--modern-ai--llm-era-q26q50">🚀 PART II — Modern AI &amp; LLM Era (Q26–Q50)</h2>
+<hr>
+<h3 id="q26--mcq">Q26 — MCQ</h3>
+<p>Which architecture dominates modern LLMs?</p>
+<p>A. CNN<br>
+B. RNN<br>
+C. Transformer<br>
+D. Autoencoder</p>
+<details class="spoiler "  id="spoiler-26">
+  <summary>Answer</summary>
+  <p>C. Transformer<br>
+It enables parallelism and long-range dependency modeling.</p>
+</details>
+<hr>
+<h3 id="q27--objective">Q27 — Objective</h3>
+<p>Why is self-attention powerful?</p>
+<details class="spoiler "  id="spoiler-27">
+  <summary>Answer</summary>
+  <p>It allows tokens to dynamically attend to relevant context.</p>
+</details>
+<hr>
+<h3 id="q28--mcq">Q28 — MCQ</h3>
+<p>Decoder-only models are trained to:</p>
+<p>A. Encode inputs only<br>
+B. Predict masked tokens<br>
+C. Predict next token autoregressively<br>
+D. Align image-text</p>
+<details class="spoiler "  id="spoiler-28">
+  <summary>Answer</summary>
+  <p>C. Predict next token autoregressively<br>
+This is how GPT-style models are trained.</p>
+</details>
+<hr>
+<h3 id="q29--objective">Q29 — Objective</h3>
+<p>What is pretraining in LLMs?</p>
+<details class="spoiler "  id="spoiler-29">
+  <summary>Answer</summary>
+  <p>Training on massive unlabeled data to learn general language patterns.</p>
+</details>
+<hr>
+<h3 id="q30--mcq">Q30 — MCQ</h3>
+<p>Which dataset type is most common for LLM pretraining?</p>
+<p>A. Labeled QA<br>
+B. Reinforcement signals<br>
+C. Unlabeled text<br>
+D. Synthetic only</p>
+<details class="spoiler "  id="spoiler-30">
+  <summary>Answer</summary>
+  <p>C. Unlabeled text<br>
+Self-supervised learning scales best.</p>
+</details>
+<hr>
+<h3 id="q31--objective">Q31 — Objective</h3>
+<p>Why does scale matter in LLMs?</p>
+<details class="spoiler "  id="spoiler-31">
+  <summary>Answer</summary>
+  <p>Larger models show emergent abilities and better generalization.</p>
+</details>
+<hr>
+<h3 id="q32--mcq">Q32 — MCQ</h3>
+<p>What is fine-tuning?</p>
+<p>A. Changing architecture<br>
+B. Training from scratch<br>
+C. Adapting pretrained weights<br>
+D. Prompt engineering</p>
+<details class="spoiler "  id="spoiler-32">
+  <summary>Answer</summary>
+  <p>C. Adapting pretrained weights<br>
+Fine-tuning adjusts behavior for specific tasks.</p>
+</details>
+<hr>
+<h3 id="q33--objective">Q33 — Objective</h3>
+<p>What is instruction tuning?</p>
+<details class="spoiler "  id="spoiler-33">
+  <summary>Answer</summary>
+  <p>Fine-tuning models to follow human instructions.</p>
+</details>
+<hr>
+<h3 id="q34--mcq">Q34 — MCQ</h3>
+<p>RLHF stands for:</p>
+<p>A. Reinforced Learning with Human Feedback<br>
+B. Reinforcement Learning from Human Feedback<br>
+C. Recurrent Learning from Human Feedback<br>
+D. Regularized Learning from Human Feedback</p>
+<details class="spoiler "  id="spoiler-34">
+  <summary>Answer</summary>
+  <p>B. Reinforcement Learning from Human Feedback<br>
+Used to align models with human preferences.</p>
+</details>
+<hr>
+<h3 id="q35--objective">Q35 — Objective</h3>
+<p>Why is alignment important?</p>
+<details class="spoiler "  id="spoiler-35">
+  <summary>Answer</summary>
+  <p>To ensure AI behavior matches human values and intentions.</p>
+</details>
+<hr>
+<h3 id="q36--mcq">Q36 — MCQ</h3>
+<p>Which technique reduces hallucination?</p>
+<p>A. Bigger models<br>
+B. RAG<br>
+C. Longer prompts<br>
+D. Temperature increase</p>
+<details class="spoiler "  id="spoiler-36">
+  <summary>Answer</summary>
+  <p>B. RAG<br>
+It grounds answers in retrieved evidence.</p>
+</details>
+<hr>
+<h3 id="q37--objective">Q37 — Objective</h3>
+<p>What is an embedding?</p>
+<details class="spoiler "  id="spoiler-37">
+  <summary>Answer</summary>
+  <p>A vector representation capturing semantic meaning.</p>
+</details>
+<hr>
+<h3 id="q38--mcq">Q38 — MCQ</h3>
+<p>Which enables multimodal understanding?</p>
+<p>A. Tokenization only<br>
+B. Cross-attention<br>
+C. SGD<br>
+D. Dropout</p>
+<details class="spoiler "  id="spoiler-38">
+  <summary>Answer</summary>
+  <p>B. Cross-attention<br>
+It aligns different modalities.</p>
+</details>
+<hr>
+<h3 id="q39--objective">Q39 — Objective</h3>
+<p>What is an AI agent?</p>
+<details class="spoiler "  id="spoiler-39">
+  <summary>Answer</summary>
+  <p>A system that reasons, acts, uses tools, and iterates toward goals.</p>
+</details>
+<hr>
+<h3 id="q40--mcq">Q40 — MCQ</h3>
+<p>Which is NOT a risk of agentic AI?</p>
+<p>A. Infinite loops<br>
+B. Tool misuse<br>
+C. Alignment drift<br>
+D. Faster convergence</p>
+<details class="spoiler "  id="spoiler-40">
+  <summary>Answer</summary>
+  <p>D. Faster convergence<br>
+The others are real risks.</p>
+</details>
+<hr>
+<h3 id="q41--objective">Q41 — Objective</h3>
+<p>Why is evaluation difficult for LLMs?</p>
+<details class="spoiler "  id="spoiler-41">
+  <summary>Answer</summary>
+  <p>Outputs are open-ended and context-dependent.</p>
+</details>
+<hr>
+<h3 id="q42--mcq">Q42 — MCQ</h3>
+<p>Which is the gold standard of evaluation?</p>
+<p>A. BLEU<br>
+B. ROUGE<br>
+C. Human judgment<br>
+D. Perplexity</p>
+<details class="spoiler "  id="spoiler-42">
+  <summary>Answer</summary>
+  <p>C. Human judgment<br>
+Humans assess meaning and usefulness.</p>
+</details>
+<hr>
+<h3 id="q43--objective">Q43 — Objective</h3>
+<p>What is hallucination?</p>
+<details class="spoiler "  id="spoiler-43">
+  <summary>Answer</summary>
+  <p>Confidently generating incorrect or unsupported information.</p>
+</details>
+<hr>
+<h3 id="q44--mcq">Q44 — MCQ</h3>
+<p>Which helps reduce hallucination most?</p>
+<p>A. Temperature tuning<br>
+B. Larger vocabulary<br>
+C. Grounded retrieval<br>
+D. More layers</p>
+<details class="spoiler "  id="spoiler-44">
+  <summary>Answer</summary>
+  <p>C. Grounded retrieval<br>
+Evidence constrains generation.</p>
+</details>
+<hr>
+<h3 id="q45--objective">Q45 — Objective</h3>
+<p>Why keep humans in the loop?</p>
+<details class="spoiler "  id="spoiler-45">
+  <summary>Answer</summary>
+  <p>To ensure safety, correctness, and ethical oversight.</p>
+</details>
+<hr>
+<h3 id="q46--mcq">Q46 — MCQ</h3>
+<p>Which best describes modern AI engineering?</p>
+<p>A. Model-centric<br>
+B. Data-centric<br>
+C. System-centric<br>
+D. Prompt-only</p>
+<details class="spoiler "  id="spoiler-46">
+  <summary>Answer</summary>
+  <p>C. System-centric<br>
+Modern AI combines models, tools, data, and humans.</p>
+</details>
+<hr>
+<h3 id="q47--objective">Q47 — Objective</h3>
+<p>What is the biggest misconception about LLMs?</p>
+<details class="spoiler "  id="spoiler-47">
+  <summary>Answer</summary>
+  <p>That they “understand” like humans.</p>
+</details>
+<hr>
+<h3 id="q48--mcq">Q48 — MCQ</h3>
+<p>Which skill matters most long-term?</p>
+<p>A. Framework mastery<br>
+B. Prompt tricks<br>
+C. First-principles understanding<br>
+D. Leaderboard scores</p>
+<details class="spoiler "  id="spoiler-48">
+  <summary>Answer</summary>
+  <p>C. First-principles understanding<br>
+Tools change, principles remain.</p>
+</details>
+<hr>
+<h3 id="q49--objective">Q49 — Objective</h3>
+<p>What should AI ultimately optimize for?</p>
+<details class="spoiler "  id="spoiler-49">
+  <summary>Answer</summary>
+  <p>Human well-being and societal benefit.</p>
+</details>
+<hr>
+<h3 id="q50--final-reflection">Q50 — Final Reflection</h3>
+<p>What makes a <em>great</em> AI engineer?</p>
+<details class="spoiler "  id="spoiler-50">
+  <summary>Answer</summary>
+  <p>Technical excellence, humility, ethics, and responsibility to humanity.</p>
+</details>
+<hr>
+<h2 id="-final-words">🌱 Final Words</h2>
+<blockquote>
+<p><strong>AI is not about replacing humans.<br>
+It is about helping humans become better.</strong></p>
+</blockquote>
+<p>If this course helped you:</p>
+<ul>
+<li>Think deeper</li>
+<li>Act responsibly</li>
+<li>Teach others kindly</li>
+</ul>
+<hr>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/2026-01-01-llm-multimodal/lecture-13-llm-interview/" rel="next">Lecture 13 — Real-World LLM Engineer &amp; Research Scientist Interview (Top Tech Level)</a>
+  </div>
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on 2026</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    ©2026 Kao Panboonyuen
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Built using <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> and the <a href="https://github.com/wowchemy/starter-hugo-academic" target="_blank" rel="noopener">Wowchemy academic template</a>. View <a href="https://github.com/kaopanboonyuen/kaopanboonyuen.github.io" target="_blank" rel="noopener">source</a>.
+        
+  </p>
+</footer>
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/golang.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.b36873e4e886c7b03b21e4eb97d9b6d7.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>
