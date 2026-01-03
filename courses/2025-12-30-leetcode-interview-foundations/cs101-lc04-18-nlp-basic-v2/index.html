@@ -30,10 +30,13 @@
   
     
   
-  <meta name="description" content="" />
+  <meta name="description" content="📘 What Is TF-IDF? (Intuition &#43; Math) TF-IDF stands for:
+Term Frequency – Inverse Document Frequency
+It answers one fundamental NLP question:
+❝ Which words are important in this document," />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/" />
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-18-nlp-basic-v2/" />
 
   
 
@@ -285,7 +288,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/" />
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-18-nlp-basic-v2/" />
 
   
   
@@ -302,18 +305,21 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Teerapong Panboonyuen" />
-  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/" />
-  <meta property="og:title" content="LC-TEST-02 — Prime Number Check | Teerapong Panboonyuen" />
-  <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-18-nlp-basic-v2/" />
+  <meta property="og:title" content="LC-TEST-18 — Basic NLP (V2) | Teerapong Panboonyuen" />
+  <meta property="og:description" content="📘 What Is TF-IDF? (Intuition &#43; Math) TF-IDF stands for:
+Term Frequency – Inverse Document Frequency
+It answers one fundamental NLP question:
+❝ Which words are important in this document," /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
         property="article:published_time"
-        content="2025-12-30T00:00:00&#43;00:00"
+        content="2026-01-01T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2025-12-30T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2026-01-01T00:00:00&#43;00:00">
   
 
   
@@ -330,11 +336,11 @@
 
 
 
-  <title>LC-TEST-02 — Prime Number Check | Teerapong Panboonyuen</title>
+  <title>LC-TEST-18 — Basic NLP (V2) | Teerapong Panboonyuen</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="094d2d93ab577b4f21b43a2d8401f422" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="848a4376fc92513c65b481e6d7c82b0e" >
 
   
   
@@ -902,7 +908,7 @@
 
 
 
-  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/">LC-TEST-02 — Prime Number Check</a></li>
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/">LC-TEST-02 — Prime Number Check</a></li>
 
 
 
@@ -966,7 +972,7 @@
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-18-nlp-basic-v2/">LC-TEST-18 — Basic NLP (V2)</a></li>
+  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-18-nlp-basic-v2/">LC-TEST-18 — Basic NLP (V2)</a></li>
 
 
 
@@ -998,10 +1004,51 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#problem-statement">Problem Statement</a></li>
-    <li><a href="#sample-input--output">Sample Input / Output</a></li>
-    <li><a href="#python-solution">Python Solution</a></li>
-    <li><a href="#complexity-analysis">Complexity Analysis</a></li>
+    <li><a href="#-what-is-tf-idf-intuition--math">📘 What Is TF-IDF? (Intuition + Math)</a></li>
+    <li><a href="#-the-math-step-by-step">🧮 The Math (Step by Step)</a>
+      <ul>
+        <li><a href="#1-term-frequency-tf">1️⃣ Term Frequency (TF)</a></li>
+        <li><a href="#2-document-frequency-df">2️⃣ Document Frequency (DF)</a></li>
+        <li><a href="#3-inverse-document-frequency-idf">3️⃣ Inverse Document Frequency (IDF)</a></li>
+        <li><a href="#4-tf-idf-final-score">4️⃣ TF-IDF (Final Score)</a></li>
+      </ul>
+    </li>
+    <li><a href="#-worked-example-very-important">🧪 Worked Example (Very Important)</a>
+      <ul>
+        <li><a href="#corpus-3-documents">Corpus (3 documents)</a></li>
+        <li><a href="#step-1-vocabulary">Step 1: Vocabulary</a></li>
+        <li><a href="#step-2-document-frequency-df">Step 2: Document Frequency (DF)</a></li>
+        <li><a href="#step-3-idf-assume-natural-log">Step 3: IDF (Assume natural log)</a></li>
+        <li><a href="#step-4-tf-idf-in-document-1">Step 4: TF-IDF in Document 1</a></li>
+      </ul>
+    </li>
+    <li><a href="#-what-interviewers-want-you-to-say">🎯 What Interviewers Want You To Say</a></li>
+    <li><a href="#-why-tf-idf-still-matters-today">🔗 Why TF-IDF Still Matters Today</a></li>
+    <li><a href="#-why-this-document-exists">🌍 Why This Document Exists</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-tf-idf-1--tokenization">🟢 TF-IDF 1 — Tokenization</a></li>
+    <li><a href="#-tf-idf-2--term-frequency-tf">🟢 TF-IDF 2 — Term Frequency (TF)</a></li>
+    <li><a href="#-tf-idf-3--vocabulary-from-corpus">🟢 TF-IDF 3 — Vocabulary from Corpus</a></li>
+    <li><a href="#-tf-idf-4--document-frequency-df">🟡 TF-IDF 4 — Document Frequency (DF)</a></li>
+    <li><a href="#-tf-idf-5--inverse-document-frequency-idf">🟡 TF-IDF 5 — Inverse Document Frequency (IDF)</a></li>
+    <li><a href="#-tf-idf-6--tf-idf-for-one-document">🟡 TF-IDF 6 — TF-IDF for One Document</a></li>
+    <li><a href="#-tf-idf-7--full-tf-idf-matrix">🔵 TF-IDF 7 — Full TF-IDF Matrix</a></li>
+    <li><a href="#-tf-idf-8--important-words-in-document">🔵 TF-IDF 8 — Important Words in Document</a></li>
+    <li><a href="#-tf-idf-9--remove-stopwords">🔵 TF-IDF 9 — Remove Stopwords</a></li>
+    <li><a href="#-tf-idf-10--normalize-vectors-cosine-prep">🔵 TF-IDF 10 — Normalize Vectors (Cosine Prep)</a></li>
+    <li><a href="#-tf-idf-11--cosine-similarity">🔴 TF-IDF 11 — Cosine Similarity</a></li>
+    <li><a href="#-tf-idf-12--find-most-similar-document">🔴 TF-IDF 12 — Find Most Similar Document</a></li>
+    <li><a href="#-tf-idf-13--keyword-extraction">🔴 TF-IDF 13 — Keyword Extraction</a></li>
+    <li><a href="#-tf-idf-14--streaming-tf-update">🔴 TF-IDF 14 — Streaming TF Update</a></li>
+    <li><a href="#-tf-idf-15--big-data-mapreduce-tf">🔴 TF-IDF 15 — Big Data MapReduce TF</a></li>
+    <li><a href="#-tf-idf-16--rare-word-detection">🔴 TF-IDF 16 — Rare Word Detection</a></li>
+    <li><a href="#-tf-idf-17--explainability-test">🔴 TF-IDF 17 — Explainability Test</a></li>
+    <li><a href="#-tf-idf-18--sklearn-comparison-industry-standard">🔴 TF-IDF 18 — sklearn Comparison (Industry Standard)</a></li>
+    <li><a href="#-tf-idf-19--interview-question">🔴 TF-IDF 19 — Interview Question</a></li>
+    <li><a href="#-tf-idf-20--bridge-to-transformers">🔴 TF-IDF 20 — Bridge to Transformers</a></li>
+    <li><a href="#-final-message">🎯 Final Message</a></li>
   </ul>
 </nav>
 
@@ -1051,7 +1098,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        LC-TEST-02 — Prime Number Check
+        LC-TEST-18 — Basic NLP (V2)
       </li>
     </ol>
   </nav>
@@ -1059,60 +1106,493 @@
 
           
 
-          <h1>LC-TEST-02 — Prime Number Check</h1>
+          <h1>LC-TEST-18 — Basic NLP (V2)</h1>
 
           <div class="article-style">
-            <h2 id="problem-statement">Problem Statement</h2>
-<p>Given an integer <code>n</code>, determine whether it is a prime number.</p>
-<h2 id="sample-input--output">Sample Input / Output</h2>
+            <h2 id="-what-is-tf-idf-intuition--math">📘 What Is TF-IDF? (Intuition + Math)</h2>
+<p>TF-IDF stands for:</p>
+<blockquote>
+<p><strong>Term Frequency – Inverse Document Frequency</strong></p>
+</blockquote>
+<p>It answers <strong>one fundamental NLP question</strong>:</p>
+<blockquote>
+<p>❝ Which words are important in this document,<br>
+compared to the entire collection? ❞</p>
+</blockquote>
+<hr>
+<h2 id="-the-math-step-by-step">🧮 The Math (Step by Step)</h2>
+<h3 id="1-term-frequency-tf">1️⃣ Term Frequency (TF)</h3>
+<p>How often a word appears <strong>inside one document</strong>.</p>
+<p>$$
+\text{TF}(w, d) =
+\frac{\text{count of } w \text{ in document } d}
+{\text{total words in document } d}
+$$</p>
+<p>👉 Measures <strong>local importance</strong></p>
+<hr>
+<h3 id="2-document-frequency-df">2️⃣ Document Frequency (DF)</h3>
+<p>How many documents contain the word.</p>
+<p>$$
+\text{DF}(w) = \text{number of documents containing } w
+$$</p>
+<p>👉 Measures <strong>how common a word is across documents</strong></p>
+<hr>
+<h3 id="3-inverse-document-frequency-idf">3️⃣ Inverse Document Frequency (IDF)</h3>
+<p>Penalizes words appearing in many documents.</p>
+<p>$$
+\text{IDF}(w) = \log\left(\frac{N}{\text{DF}(w)}\right)
+$$</p>
+<p>Where:</p>
+<ul>
+<li>$N$ = total number of documents</li>
+</ul>
+<p>👉 Measures <strong>global rarity</strong></p>
+<hr>
+<h3 id="4-tf-idf-final-score">4️⃣ TF-IDF (Final Score)</h3>
+<p>$$
+\text{TF-IDF}(w, d) =
+\text{TF}(w, d) \times \text{IDF}(w)
+$$</p>
+<p>This is the <strong>importance score</strong> used in:</p>
+<ul>
+<li>search engines</li>
+<li>document ranking</li>
+<li>classical NLP systems</li>
+</ul>
+<hr>
+<h2 id="-worked-example-very-important">🧪 Worked Example (Very Important)</h2>
+<h3 id="corpus-3-documents">Corpus (3 documents)</h3>
+<pre><code class="language-text">D1: &quot;messi scores goals&quot;
+D2: &quot;goals win matches&quot;
+D3: &quot;messi inspires fans&quot;
+</code></pre>
+<hr>
+<h3 id="step-1-vocabulary">Step 1: Vocabulary</h3>
+<pre><code class="language-text">{messi, scores, goals, win, matches, inspires, fans}
+</code></pre>
+<hr>
+<h3 id="step-2-document-frequency-df">Step 2: Document Frequency (DF)</h3>
 <table>
 <thead>
 <tr>
-<th>Input</th>
-<th>Output</th>
+<th>Word</th>
+<th>DF</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>messi</td>
 <td>2</td>
-<td>True</td>
 </tr>
 <tr>
-<td>3</td>
-<td>True</td>
+<td>goals</td>
+<td>2</td>
 </tr>
 <tr>
-<td>4</td>
-<td>False</td>
-</tr>
-<tr>
-<td>17</td>
-<td>True</td>
-</tr>
-<tr>
+<td>scores</td>
 <td>1</td>
-<td>False</td>
+</tr>
+<tr>
+<td>win</td>
+<td>1</td>
+</tr>
+<tr>
+<td>matches</td>
+<td>1</td>
+</tr>
+<tr>
+<td>inspires</td>
+<td>1</td>
+</tr>
+<tr>
+<td>fans</td>
+<td>1</td>
 </tr>
 </tbody>
 </table>
-<h2 id="python-solution">Python Solution</h2>
-<pre><code class="language-python">def is_prime(n):
-    &quot;&quot;&quot;
-    Check whether n is a prime number.
-    &quot;&quot;&quot;
-    if n &lt;= 1:
-        return False
-
-    for i in range(2, int(n ** 0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
+<hr>
+<h3 id="step-3-idf-assume-natural-log">Step 3: IDF (Assume natural log)</h3>
+<p>$$
+\text{IDF}(\text{messi}) = \log\left(\frac{3}{2}\right)
+$$</p>
+<p>$$
+\text{IDF}(\text{scores}) = \log\left(\frac{3}{1}\right)
+$$</p>
+<p>👉 <code>&quot;scores&quot;</code> appears in fewer documents
+👉 therefore it has <strong>higher IDF</strong></p>
+<hr>
+<h3 id="step-4-tf-idf-in-document-1">Step 4: TF-IDF in Document 1</h3>
+<p>Document 1 contains <strong>3 words</strong>:</p>
+<pre><code class="language-text">messi scores goals
 </code></pre>
-<h2 id="complexity-analysis">Complexity Analysis</h2>
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>TF</th>
+<th>IDF</th>
+<th>TF-IDF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>messi</td>
+<td>1/3</td>
+<td>log(3/2)</td>
+<td>low</td>
+</tr>
+<tr>
+<td>scores</td>
+<td>1/3</td>
+<td>log(3/1)</td>
+<td>HIGH</td>
+</tr>
+<tr>
+<td>goals</td>
+<td>1/3</td>
+<td>log(3/2)</td>
+<td>low</td>
+</tr>
+</tbody>
+</table>
+<p>✅ <strong>&ldquo;scores&rdquo; becomes the most important word</strong></p>
+<hr>
+<h2 id="-what-interviewers-want-you-to-say">🎯 What Interviewers Want You To Say</h2>
+<p>If asked:</p>
+<blockquote>
+<p>“Explain TF-IDF”</p>
+</blockquote>
+<p>A <strong>perfect answer</strong> is:</p>
+<blockquote>
+<p>“TF-IDF measures how important a word is to a document
+relative to the whole corpus.</p>
+<p>It boosts words that are frequent in one document
+but rare across documents.”</p>
+</blockquote>
+<hr>
+<h2 id="-why-tf-idf-still-matters-today">🔗 Why TF-IDF Still Matters Today</h2>
+<p>Even in the age of GPT:</p>
 <ul>
-<li>Time Complexity: <strong>O(√n)</strong></li>
-<li>Space Complexity: <strong>O(1)</strong></li>
+<li>Search engines still use it</li>
+<li>Keyword extraction uses it</li>
+<li>It explains <strong>why attention exists</strong></li>
+<li>It is the <strong>conceptual ancestor of embeddings</strong></li>
 </ul>
+<p>If you understand TF-IDF deeply,
+<strong>transformers feel natural — not magical</strong>.</p>
+<hr>
+<h2 id="-why-this-document-exists">🌍 Why This Document Exists</h2>
+<p>Large Language Models do <strong>not begin with transformers</strong>.</p>
+<p>They begin with a simple question:</p>
+<blockquote>
+<p>“Which words matter?”</p>
+</blockquote>
+<p>TF-IDF is the <strong>bridge</strong> between:</p>
+<ul>
+<li>raw text</li>
+<li>statistics</li>
+<li>semantic meaning</li>
+</ul>
+<p>Every NLP engineer <strong>must master this</strong>.</p>
+<hr>
+<h1 id="-messi--meaning--a-short-story">⚽ Messi &amp; Meaning — A Short Story</h1>
+<p>Messi touches the ball <strong>less than others</strong>.</p>
+<p>Yet every touch <strong>matters more</strong>.</p>
+<p>Common words are like defenders:</p>
+<ul>
+<li>they are everywhere</li>
+<li>they mean little</li>
+</ul>
+<p>Rare words are like Messi:</p>
+<ul>
+<li>fewer appearances</li>
+<li>massive impact</li>
+</ul>
+<p>That is <strong>TF-IDF</strong>.</p>
+<hr>
+<h1 id="-python-nlp--tf-idf-edition-20-problems">🏆 Python NLP — TF-IDF Edition (20 Problems)</h1>
+<p>Difficulty increases gradually.<br>
+<strong>Do not skip intuition.</strong></p>
+<hr>
+<h2 id="-tf-idf-1--tokenization">🟢 TF-IDF 1 — Tokenization</h2>
+<pre><code class="language-python">doc = &quot;messi scores beautiful goals&quot;
+</code></pre>
+<p><strong>Task:</strong>
+Convert sentence into tokens.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">tokens = doc.split()
+print(tokens)
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-2--term-frequency-tf">🟢 TF-IDF 2 — Term Frequency (TF)</h2>
+<p><strong>TF(word) = count(word) / total words</strong></p>
+<pre><code class="language-python">doc = &quot;messi scores goals goals&quot;
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">words = doc.split()
+tf = {}
+
+for w in words:
+    tf[w] = tf.get(w, 0) + 1
+
+for w in tf:
+    tf[w] /= len(words)
+
+print(tf)
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-3--vocabulary-from-corpus">🟢 TF-IDF 3 — Vocabulary from Corpus</h2>
+<pre><code class="language-python">docs = [
+  &quot;messi scores goals&quot;,
+  &quot;goals win matches&quot;,
+  &quot;messi inspires fans&quot;
+]
+</code></pre>
+<p><strong>Task:</strong>
+Extract unique vocabulary.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">vocab = set()
+for d in docs:
+    vocab |= set(d.split())
+print(vocab)
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-4--document-frequency-df">🟡 TF-IDF 4 — Document Frequency (DF)</h2>
+<p><strong>DF(word) = number of documents containing word</strong></p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">df = {}
+for word in vocab:
+    df[word] = sum(word in d.split() for d in docs)
+print(df)
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-5--inverse-document-frequency-idf">🟡 TF-IDF 5 — Inverse Document Frequency (IDF)</h2>
+<p><strong>IDF(word) = log(N / DF)</strong></p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">import math
+
+N = len(docs)
+idf = {w: math.log(N / df[w]) for w in df}
+print(idf)
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-6--tf-idf-for-one-document">🟡 TF-IDF 6 — TF-IDF for One Document</h2>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">doc = docs[0]
+words = doc.split()
+
+tf = {}
+for w in words:
+    tf[w] = tf.get(w, 0) + 1
+for w in tf:
+    tf[w] /= len(words)
+
+tfidf = {w: tf[w] * idf[w] for w in tf}
+print(tfidf)
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-7--full-tf-idf-matrix">🔵 TF-IDF 7 — Full TF-IDF Matrix</h2>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">matrix = []
+
+for d in docs:
+    words = d.split()
+    tf = {}
+    for w in words:
+        tf[w] = tf.get(w, 0) + 1
+    for w in tf:
+        tf[w] /= len(words)
+
+    vec = {w: tf.get(w, 0) * idf[w] for w in vocab}
+    matrix.append(vec)
+
+print(matrix)
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-8--important-words-in-document">🔵 TF-IDF 8 — Important Words in Document</h2>
+<p><strong>Task:</strong>
+Find top-1 TF-IDF word.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">top = max(tfidf, key=tfidf.get)
+print(top)
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-9--remove-stopwords">🔵 TF-IDF 9 — Remove Stopwords</h2>
+<pre><code class="language-python">stopwords = {&quot;the&quot;,&quot;and&quot;,&quot;is&quot;,&quot;of&quot;}
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">filtered_docs = []
+for d in docs:
+    filtered_docs.append(
+        &quot; &quot;.join(w for w in d.split() if w not in stopwords)
+    )
+print(filtered_docs)
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-10--normalize-vectors-cosine-prep">🔵 TF-IDF 10 — Normalize Vectors (Cosine Prep)</h2>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">import math
+
+def norm(vec):
+    return math.sqrt(sum(v*v for v in vec.values()))
+
+print(norm(tfidf))
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-11--cosine-similarity">🔴 TF-IDF 11 — Cosine Similarity</h2>
+<pre><code class="language-python">a = &quot;messi scores goals&quot;
+b = &quot;messi inspires fans&quot;
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">def cosine(v1, v2):
+    common = set(v1) &amp; set(v2)
+    num = sum(v1[w] * v2[w] for w in common)
+    den = norm(v1) * norm(v2)
+    return num / den if den else 0
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-12--find-most-similar-document">🔴 TF-IDF 12 — Find Most Similar Document</h2>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">query = matrix[0]
+sims = [cosine(query, m) for m in matrix]
+print(sims)
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-13--keyword-extraction">🔴 TF-IDF 13 — Keyword Extraction</h2>
+<p><strong>Task:</strong>
+Return words with TF-IDF &gt; threshold.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">keywords = [w for w,v in tfidf.items() if v &gt; 0.2]
+print(keywords)
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-14--streaming-tf-update">🔴 TF-IDF 14 — Streaming TF Update</h2>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">stream = [&quot;messi scores&quot;, &quot;scores again&quot;]
+
+tf = {}
+total = 0
+
+for s in stream:
+    for w in s.split():
+        tf[w] = tf.get(w, 0) + 1
+        total += 1
+
+for w in tf:
+    tf[w] /= total
+
+print(tf)
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-15--big-data-mapreduce-tf">🔴 TF-IDF 15 — Big Data MapReduce TF</h2>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">mapped = []
+for d in docs:
+    for w in d.split():
+        mapped.append((w,1))
+
+reduced = {}
+for w,v in mapped:
+    reduced[w] = reduced.get(w,0) + v
+
+print(reduced)
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-16--rare-word-detection">🔴 TF-IDF 16 — Rare Word Detection</h2>
+<p><strong>Task:</strong>
+Words with highest IDF.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">print(sorted(idf, key=idf.get, reverse=True))
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-17--explainability-test">🔴 TF-IDF 17 — Explainability Test</h2>
+<p><strong>Question:</strong>
+Why does <code>&quot;messi&quot;</code> sometimes get low TF-IDF?</p>
+<details>
+<summary>✅ Answer</summary>
+<pre><code class="language-text">Because it appears in many documents,
+its IDF is low, reducing its importance.
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-18--sklearn-comparison-industry-standard">🔴 TF-IDF 18 — sklearn Comparison (Industry Standard)</h2>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">from sklearn.feature_extraction.text import TfidfVectorizer
+
+vec = TfidfVectorizer()
+X = vec.fit_transform(docs)
+
+print(vec.get_feature_names_out())
+print(X.toarray())
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-19--interview-question">🔴 TF-IDF 19 — Interview Question</h2>
+<p><strong>Why TF-IDF fails for semantics?</strong></p>
+<details>
+<summary>✅ Answer</summary>
+<pre><code class="language-text">It ignores word order, context, and meaning.
+Synonyms are treated as unrelated.
+</code></pre>
+</details>
+<hr>
+<h2 id="-tf-idf-20--bridge-to-transformers">🔴 TF-IDF 20 — Bridge to Transformers</h2>
+<p><strong>Question:</strong>
+What replaced TF-IDF?</p>
+<details>
+<summary>✅ Answer</summary>
+<pre><code class="language-text">Word embeddings → contextual embeddings → transformers
+</code></pre>
+</details>
+<hr>
+<h2 id="-final-message">🎯 Final Message</h2>
+<p>TF-IDF teaches:</p>
+<ul>
+<li>importance</li>
+<li>rarity</li>
+<li>signal vs noise</li>
+</ul>
+<p>If you understand this page:</p>
+<ul>
+<li>you understand <strong>why attention exists</strong></li>
+<li>you understand <strong>why embeddings work</strong></li>
+</ul>
+<p>You are <strong>ready for real NLP</strong>.</p>
+<hr>
+
           </div>
 
           
@@ -1129,14 +1609,14 @@
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/" rel="next">LC-TEST-01 — Sorting an Array</a>
+    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-17-nlp-basic-v1/" rel="next">LC-TEST-17 — Basic NLP (V1)</a>
   </div>
   
   
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-03-linear-search/" rel="prev">LC-TEST-03 — Linear Search</a>
+    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-19-nlp-basic-v3/" rel="prev">LC-TEST-19 — Basic NLP (V3)</a>
   </div>
   
 </div>
@@ -1146,7 +1626,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on 2025</p>
+          <p>Last updated on 2026</p>
 
           
 

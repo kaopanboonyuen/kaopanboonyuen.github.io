@@ -33,7 +33,7 @@
   <meta name="description" content="" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/" />
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-17-nlp-basic-v1/" />
 
   
 
@@ -285,7 +285,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/" />
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-17-nlp-basic-v1/" />
 
   
   
@@ -302,18 +302,18 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Teerapong Panboonyuen" />
-  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/" />
-  <meta property="og:title" content="LC-TEST-02 — Prime Number Check | Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-17-nlp-basic-v1/" />
+  <meta property="og:title" content="LC-TEST-17 — Basic NLP (V1) | Teerapong Panboonyuen" />
   <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
         property="article:published_time"
-        content="2025-12-30T00:00:00&#43;00:00"
+        content="2026-01-01T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2025-12-30T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2026-01-01T00:00:00&#43;00:00">
   
 
   
@@ -330,11 +330,11 @@
 
 
 
-  <title>LC-TEST-02 — Prime Number Check | Teerapong Panboonyuen</title>
+  <title>LC-TEST-17 — Basic NLP (V1) | Teerapong Panboonyuen</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="094d2d93ab577b4f21b43a2d8401f422" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="0efdf264512d89b0c057b8767aca647e" >
 
   
   
@@ -902,7 +902,7 @@
 
 
 
-  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/">LC-TEST-02 — Prime Number Check</a></li>
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/">LC-TEST-02 — Prime Number Check</a></li>
 
 
 
@@ -962,7 +962,7 @@
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-17-nlp-basic-v1/">LC-TEST-17 — Basic NLP (V1)</a></li>
+  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-17-nlp-basic-v1/">LC-TEST-17 — Basic NLP (V1)</a></li>
 
 
 
@@ -998,10 +998,31 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#problem-statement">Problem Statement</a></li>
-    <li><a href="#sample-input--output">Sample Input / Output</a></li>
-    <li><a href="#python-solution">Python Solution</a></li>
-    <li><a href="#complexity-analysis">Complexity Analysis</a></li>
+    <li><a href="#-why-this-document-exists">🌍 Why This Document Exists</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-nlp-1--word-count-warm-up">🟢 NLP 1 — Word Count (Warm-Up)</a></li>
+    <li><a href="#-nlp-2--unique-vocabulary-size">🟢 NLP 2 — Unique Vocabulary Size</a></li>
+    <li><a href="#-nlp-3--capitalization-detection">🟢 NLP 3 — Capitalization Detection</a></li>
+    <li><a href="#-nlp-4--lowercase-normalization">🟢 NLP 4 — Lowercase Normalization</a></li>
+    <li><a href="#-nlp-5--character-frequency">🟡 NLP 5 — Character Frequency</a></li>
+    <li><a href="#-nlp-6--find-keywords-in-text">🟡 NLP 6 — Find Keywords in Text</a></li>
+    <li><a href="#-nlp-7--sentence-length-analyzer">🟡 NLP 7 — Sentence Length Analyzer</a></li>
+    <li><a href="#-nlp-8--stopword-removal">🟡 NLP 8 — Stopword Removal</a></li>
+    <li><a href="#-nlp-9--bigram-generation">🔵 NLP 9 — Bigram Generation</a></li>
+    <li><a href="#-nlp-10--most-frequent-word">🔵 NLP 10 — Most Frequent Word</a></li>
+    <li><a href="#-nlp-11--prefix-matching-search-autocomplete">🔵 NLP 11 — Prefix Matching (Search Autocomplete)</a></li>
+    <li><a href="#-nlp-12--suffix-detection">🔵 NLP 12 — Suffix Detection</a></li>
+    <li><a href="#-nlp-13--streaming-word-count-big-data-mindset">🔴 NLP 13 — Streaming Word Count (Big Data Mindset)</a></li>
+    <li><a href="#-nlp-14--mapreduce-word-count">🔴 NLP 14 — MapReduce (Word Count)</a></li>
+    <li><a href="#-nlp-15--longest-word-in-corpus">🔴 NLP 15 — Longest Word in Corpus</a></li>
+    <li><a href="#-nlp-16--named-entity-heuristic">🔴 NLP 16 — Named Entity Heuristic</a></li>
+    <li><a href="#-nlp-17--sentence-tokenization">🔴 NLP 17 — Sentence Tokenization</a></li>
+    <li><a href="#-nlp-18--text-similarity-bag-of-words">🔴 NLP 18 — Text Similarity (Bag of Words)</a></li>
+    <li><a href="#-nlp-19--detect-shouting-uppercase-ratio">🔴 NLP 19 — Detect Shouting (Uppercase Ratio)</a></li>
+    <li><a href="#-nlp-20--real-nlp-interview-question">🔴 NLP 20 — Real NLP Interview Question</a></li>
+    <li><a href="#-final-message">🎯 Final Message</a></li>
   </ul>
 </nav>
 
@@ -1051,7 +1072,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        LC-TEST-02 — Prime Number Check
+        LC-TEST-17 — Basic NLP (V1)
       </li>
     </ol>
   </nav>
@@ -1059,60 +1080,322 @@
 
           
 
-          <h1>LC-TEST-02 — Prime Number Check</h1>
+          <h1>LC-TEST-17 — Basic NLP (V1)</h1>
 
           <div class="article-style">
-            <h2 id="problem-statement">Problem Statement</h2>
-<p>Given an integer <code>n</code>, determine whether it is a prime number.</p>
-<h2 id="sample-input--output">Sample Input / Output</h2>
-<table>
-<thead>
-<tr>
-<th>Input</th>
-<th>Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2</td>
-<td>True</td>
-</tr>
-<tr>
-<td>3</td>
-<td>True</td>
-</tr>
-<tr>
-<td>4</td>
-<td>False</td>
-</tr>
-<tr>
-<td>17</td>
-<td>True</td>
-</tr>
-<tr>
-<td>1</td>
-<td>False</td>
-</tr>
-</tbody>
-</table>
-<h2 id="python-solution">Python Solution</h2>
-<pre><code class="language-python">def is_prime(n):
-    &quot;&quot;&quot;
-    Check whether n is a prime number.
-    &quot;&quot;&quot;
-    if n &lt;= 1:
-        return False
-
-    for i in range(2, int(n ** 0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
-</code></pre>
-<h2 id="complexity-analysis">Complexity Analysis</h2>
+            <h2 id="-why-this-document-exists">🌍 Why This Document Exists</h2>
+<p>This is <strong>not</strong> a pure NLP library tutorial.</p>
+<p>This is <strong>algorithmic thinking for NLP engineers</strong>.</p>
+<p>If you want to work at:</p>
 <ul>
-<li>Time Complexity: <strong>O(√n)</strong></li>
-<li>Space Complexity: <strong>O(1)</strong></li>
+<li>Google (Search, Gemini)</li>
+<li>OpenAI (ChatGPT, alignment)</li>
+<li>AWS (Comprehend, Bedrock)</li>
+<li>Microsoft (Copilot, Bing)</li>
 </ul>
+<p>You must <strong>master strings, text, and scale</strong>.</p>
+<hr>
+<h1 id="-a-short-story--messi--language">⚽ A Short Story — Messi &amp; Language</h1>
+<p>Messi does not speak with words on the field.</p>
+<p>He speaks with:</p>
+<ul>
+<li>movement</li>
+<li>timing</li>
+<li>patterns</li>
+</ul>
+<p>Language is the same.</p>
+<p>Before transformers…
+Before LLMs…</p>
+<p>There were:</p>
+<ul>
+<li>characters</li>
+<li>tokens</li>
+<li>frequencies</li>
+<li>distributions</li>
+</ul>
+<p>This book trains your <strong>text intuition</strong> — not just syntax.</p>
+<hr>
+<h1 id="-python-nlp--20-string-problems">🏆 Python NLP — 20 String Problems</h1>
+<p>Difficulty increases <strong>gradually</strong>.<br>
+Try before opening solutions.</p>
+<hr>
+<h2 id="-nlp-1--word-count-warm-up">🟢 NLP 1 — Word Count (Warm-Up)</h2>
+<p>Messi speaks:</p>
+<pre><code class="language-python">text = &quot;messi plays football and messi inspires the world&quot;
+</code></pre>
+<p><strong>Task:</strong>
+Count how many times each word appears.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">counts = {}
+for w in text.split():
+    counts[w] = counts.get(w, 0) + 1
+print(counts)
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-2--unique-vocabulary-size">🟢 NLP 2 — Unique Vocabulary Size</h2>
+<p><strong>Task:</strong>
+Count how many <strong>unique words</strong> are in the text.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">vocab = set(text.split())
+print(len(vocab))
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-3--capitalization-detection">🟢 NLP 3 — Capitalization Detection</h2>
+<pre><code class="language-python">sentence = &quot;Messi Is The Greatest&quot;
+</code></pre>
+<p><strong>Task:</strong>
+Return all words that start with a capital letter.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">caps = [w for w in sentence.split() if w[0].isupper()]
+print(caps)
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-4--lowercase-normalization">🟢 NLP 4 — Lowercase Normalization</h2>
+<p><strong>Task:</strong>
+Convert text to lowercase and remove extra spaces.</p>
+<pre><code class="language-python">text = &quot;  Messi   Plays   Football &quot;
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">clean = &quot; &quot;.join(text.lower().split())
+print(clean)
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-5--character-frequency">🟡 NLP 5 — Character Frequency</h2>
+<p><strong>Task:</strong>
+Count how often each character appears (ignore spaces).</p>
+<pre><code class="language-python">text = &quot;messi&quot;
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">freq = {}
+for c in text:
+    if c != &quot; &quot;:
+        freq[c] = freq.get(c, 0) + 1
+print(freq)
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-6--find-keywords-in-text">🟡 NLP 6 — Find Keywords in Text</h2>
+<pre><code class="language-python">keywords = [&quot;goal&quot;, &quot;win&quot;, &quot;champion&quot;]
+text = &quot;messi scores a goal to win the match&quot;
+</code></pre>
+<p><strong>Task:</strong>
+Return keywords that appear in text.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">found = []
+for k in keywords:
+    if k in text:
+        found.append(k)
+print(found)
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-7--sentence-length-analyzer">🟡 NLP 7 — Sentence Length Analyzer</h2>
+<pre><code class="language-python">sentences = [
+  &quot;Messi plays football&quot;,
+  &quot;Messi inspires millions of people around the world&quot;
+]
+</code></pre>
+<p><strong>Task:</strong>
+Return sentence lengths (in words).</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">lengths = [len(s.split()) for s in sentences]
+print(lengths)
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-8--stopword-removal">🟡 NLP 8 — Stopword Removal</h2>
+<pre><code class="language-python">stopwords = {&quot;the&quot;,&quot;and&quot;,&quot;is&quot;}
+text = &quot;messi is the best and the greatest&quot;
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">filtered = [w for w in text.split() if w not in stopwords]
+print(&quot; &quot;.join(filtered))
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-9--bigram-generation">🔵 NLP 9 — Bigram Generation</h2>
+<pre><code class="language-python">text = &quot;messi wins world cup&quot;
+</code></pre>
+<p><strong>Task:</strong>
+Generate word bigrams.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">words = text.split()
+bigrams = [(words[i], words[i+1]) for i in range(len(words)-1)]
+print(bigrams)
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-10--most-frequent-word">🔵 NLP 10 — Most Frequent Word</h2>
+<pre><code class="language-python">text = &quot;messi messi goal goal goal win&quot;
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">freq = {}
+for w in text.split():
+    freq[w] = freq.get(w, 0) + 1
+print(max(freq, key=freq.get))
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-11--prefix-matching-search-autocomplete">🔵 NLP 11 — Prefix Matching (Search Autocomplete)</h2>
+<pre><code class="language-python">words = [&quot;messi&quot;,&quot;message&quot;,&quot;meta&quot;,&quot;goal&quot;]
+prefix = &quot;me&quot;
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">print([w for w in words if w.startswith(prefix)])
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-12--suffix-detection">🔵 NLP 12 — Suffix Detection</h2>
+<p><strong>Task:</strong>
+Find words ending with <code>&quot;ing&quot;</code>.</p>
+<pre><code class="language-python">words = [&quot;playing&quot;,&quot;played&quot;,&quot;scoring&quot;,&quot;score&quot;]
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">print([w for w in words if w.endswith(&quot;ing&quot;)])
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-13--streaming-word-count-big-data-mindset">🔴 NLP 13 — Streaming Word Count (Big Data Mindset)</h2>
+<p>Messages arrive one by one.</p>
+<pre><code class="language-python">stream = [&quot;messi scores&quot;, &quot;messi wins&quot;, &quot;scores again&quot;]
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">counts = {}
+for msg in stream:
+    for w in msg.split():
+        counts[w] = counts.get(w, 0) + 1
+print(counts)
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-14--mapreduce-word-count">🔴 NLP 14 — MapReduce (Word Count)</h2>
+<p><strong>Map:</strong> emit <code>(word, 1)</code>
+<strong>Reduce:</strong> sum values</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">mapped = []
+for s in stream:
+    for w in s.split():
+        mapped.append((w,1))
+
+reduced = {}
+for w,v in mapped:
+    reduced[w] = reduced.get(w,0) + v
+
+print(reduced)
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-15--longest-word-in-corpus">🔴 NLP 15 — Longest Word in Corpus</h2>
+<pre><code class="language-python">text = &quot;messi demonstrates extraordinary football intelligence&quot;
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">words = text.split()
+print(max(words, key=len))
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-16--named-entity-heuristic">🔴 NLP 16 — Named Entity Heuristic</h2>
+<p><strong>Rule:</strong>
+Words starting with capital = entity.</p>
+<pre><code class="language-python">text = &quot;Messi plays for Argentina&quot;
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">entities = [w for w in text.split() if w[0].isupper()]
+print(entities)
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-17--sentence-tokenization">🔴 NLP 17 — Sentence Tokenization</h2>
+<pre><code class="language-python">text = &quot;Messi scored. Fans celebrated. History written.&quot;
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">sentences = [s.strip() for s in text.split(&quot;.&quot;) if s]
+print(sentences)
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-18--text-similarity-bag-of-words">🔴 NLP 18 — Text Similarity (Bag of Words)</h2>
+<pre><code class="language-python">a = &quot;messi scores goals&quot;
+b = &quot;messi scores&quot;
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">sa, sb = set(a.split()), set(b.split())
+print(len(sa &amp; sb) / len(sa | sb))
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-19--detect-shouting-uppercase-ratio">🔴 NLP 19 — Detect Shouting (Uppercase Ratio)</h2>
+<pre><code class="language-python">text = &quot;GOAL GOAL Messi&quot;
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">caps = sum(1 for c in text if c.isupper())
+print(caps / len(text) &gt; 0.5)
+</code></pre>
+</details>
+<hr>
+<h2 id="-nlp-20--real-nlp-interview-question">🔴 NLP 20 — Real NLP Interview Question</h2>
+<p><strong>Task:</strong>
+Detect duplicate sentences.</p>
+<pre><code class="language-python">sentences = [
+  &quot;messi scores&quot;,
+  &quot;messi wins&quot;,
+  &quot;messi scores&quot;
+]
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">seen = set()
+dups = []
+
+for s in sentences:
+    if s in seen:
+        dups.append(s)
+    seen.add(s)
+
+print(dups)
+</code></pre>
+</details>
+<hr>
+<h2 id="-final-message">🎯 Final Message</h2>
+<p>Before:</p>
+<ul>
+<li>BERT</li>
+<li>GPT</li>
+<li>Transformers</li>
+</ul>
+<p>There were:</p>
+<ul>
+<li>strings</li>
+<li>loops</li>
+<li>counters</li>
+<li>patterns</li>
+</ul>
+<p>If you <strong>master this page</strong>,
+you understand <strong>NLP from the ground up</strong>.</p>
+<hr>
           </div>
 
           
@@ -1129,14 +1412,14 @@
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/" rel="next">LC-TEST-01 — Sorting an Array</a>
+    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-16-algorithm-test-v3/" rel="next">LC-TEST-16 — Algorithm Test (V3)</a>
   </div>
   
   
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-03-linear-search/" rel="prev">LC-TEST-03 — Linear Search</a>
+    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-18-nlp-basic-v2/" rel="prev">LC-TEST-18 — Basic NLP (V2)</a>
   </div>
   
 </div>
@@ -1146,7 +1429,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on 2025</p>
+          <p>Last updated on 2026</p>
 
           
 

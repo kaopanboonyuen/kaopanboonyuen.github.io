@@ -6275,5 +6275,1083 @@ Make engineers better.&lt;/p&gt;
 &lt;hr&gt;</description>
     </item>
     
+    <item>
+      <title>LC-TEST-17 — Basic NLP (V1)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-17-nlp-basic-v1/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-17-nlp-basic-v1/</guid>
+      <description>&lt;h2 id=&#34;-why-this-document-exists&#34;&gt;🌍 Why This Document Exists&lt;/h2&gt;
+&lt;p&gt;This is &lt;strong&gt;not&lt;/strong&gt; a pure NLP library tutorial.&lt;/p&gt;
+&lt;p&gt;This is &lt;strong&gt;algorithmic thinking for NLP engineers&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If you want to work at:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Google (Search, Gemini)&lt;/li&gt;
+&lt;li&gt;OpenAI (ChatGPT, alignment)&lt;/li&gt;
+&lt;li&gt;AWS (Comprehend, Bedrock)&lt;/li&gt;
+&lt;li&gt;Microsoft (Copilot, Bing)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You must &lt;strong&gt;master strings, text, and scale&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-a-short-story--messi--language&#34;&gt;⚽ A Short Story — Messi &amp;amp; Language&lt;/h1&gt;
+&lt;p&gt;Messi does not speak with words on the field.&lt;/p&gt;
+&lt;p&gt;He speaks with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;movement&lt;/li&gt;
+&lt;li&gt;timing&lt;/li&gt;
+&lt;li&gt;patterns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Language is the same.&lt;/p&gt;
+&lt;p&gt;Before transformers…
+Before LLMs…&lt;/p&gt;
+&lt;p&gt;There were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;characters&lt;/li&gt;
+&lt;li&gt;tokens&lt;/li&gt;
+&lt;li&gt;frequencies&lt;/li&gt;
+&lt;li&gt;distributions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This book trains your &lt;strong&gt;text intuition&lt;/strong&gt; — not just syntax.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-python-nlp--20-string-problems&#34;&gt;🏆 Python NLP — 20 String Problems&lt;/h1&gt;
+&lt;p&gt;Difficulty increases &lt;strong&gt;gradually&lt;/strong&gt;.&lt;br&gt;
+Try before opening solutions.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-1--word-count-warm-up&#34;&gt;🟢 NLP 1 — Word Count (Warm-Up)&lt;/h2&gt;
+&lt;p&gt;Messi speaks:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;text = &amp;quot;messi plays football and messi inspires the world&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Count how many times each word appears.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;counts = {}
+for w in text.split():
+    counts[w] = counts.get(w, 0) + 1
+print(counts)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-2--unique-vocabulary-size&#34;&gt;🟢 NLP 2 — Unique Vocabulary Size&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Count how many &lt;strong&gt;unique words&lt;/strong&gt; are in the text.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;vocab = set(text.split())
+print(len(vocab))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-3--capitalization-detection&#34;&gt;🟢 NLP 3 — Capitalization Detection&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sentence = &amp;quot;Messi Is The Greatest&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Return all words that start with a capital letter.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;caps = [w for w in sentence.split() if w[0].isupper()]
+print(caps)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-4--lowercase-normalization&#34;&gt;🟢 NLP 4 — Lowercase Normalization&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Convert text to lowercase and remove extra spaces.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;text = &amp;quot;  Messi   Plays   Football &amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;clean = &amp;quot; &amp;quot;.join(text.lower().split())
+print(clean)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-5--character-frequency&#34;&gt;🟡 NLP 5 — Character Frequency&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Count how often each character appears (ignore spaces).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;text = &amp;quot;messi&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;freq = {}
+for c in text:
+    if c != &amp;quot; &amp;quot;:
+        freq[c] = freq.get(c, 0) + 1
+print(freq)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-6--find-keywords-in-text&#34;&gt;🟡 NLP 6 — Find Keywords in Text&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;keywords = [&amp;quot;goal&amp;quot;, &amp;quot;win&amp;quot;, &amp;quot;champion&amp;quot;]
+text = &amp;quot;messi scores a goal to win the match&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Return keywords that appear in text.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;found = []
+for k in keywords:
+    if k in text:
+        found.append(k)
+print(found)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-7--sentence-length-analyzer&#34;&gt;🟡 NLP 7 — Sentence Length Analyzer&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sentences = [
+  &amp;quot;Messi plays football&amp;quot;,
+  &amp;quot;Messi inspires millions of people around the world&amp;quot;
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Return sentence lengths (in words).&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;lengths = [len(s.split()) for s in sentences]
+print(lengths)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-8--stopword-removal&#34;&gt;🟡 NLP 8 — Stopword Removal&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;stopwords = {&amp;quot;the&amp;quot;,&amp;quot;and&amp;quot;,&amp;quot;is&amp;quot;}
+text = &amp;quot;messi is the best and the greatest&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;filtered = [w for w in text.split() if w not in stopwords]
+print(&amp;quot; &amp;quot;.join(filtered))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-9--bigram-generation&#34;&gt;🔵 NLP 9 — Bigram Generation&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;text = &amp;quot;messi wins world cup&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Generate word bigrams.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;words = text.split()
+bigrams = [(words[i], words[i+1]) for i in range(len(words)-1)]
+print(bigrams)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-10--most-frequent-word&#34;&gt;🔵 NLP 10 — Most Frequent Word&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;text = &amp;quot;messi messi goal goal goal win&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;freq = {}
+for w in text.split():
+    freq[w] = freq.get(w, 0) + 1
+print(max(freq, key=freq.get))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-11--prefix-matching-search-autocomplete&#34;&gt;🔵 NLP 11 — Prefix Matching (Search Autocomplete)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;words = [&amp;quot;messi&amp;quot;,&amp;quot;message&amp;quot;,&amp;quot;meta&amp;quot;,&amp;quot;goal&amp;quot;]
+prefix = &amp;quot;me&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print([w for w in words if w.startswith(prefix)])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-12--suffix-detection&#34;&gt;🔵 NLP 12 — Suffix Detection&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Find words ending with &lt;code&gt;&amp;quot;ing&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;words = [&amp;quot;playing&amp;quot;,&amp;quot;played&amp;quot;,&amp;quot;scoring&amp;quot;,&amp;quot;score&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print([w for w in words if w.endswith(&amp;quot;ing&amp;quot;)])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-13--streaming-word-count-big-data-mindset&#34;&gt;🔴 NLP 13 — Streaming Word Count (Big Data Mindset)&lt;/h2&gt;
+&lt;p&gt;Messages arrive one by one.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;stream = [&amp;quot;messi scores&amp;quot;, &amp;quot;messi wins&amp;quot;, &amp;quot;scores again&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;counts = {}
+for msg in stream:
+    for w in msg.split():
+        counts[w] = counts.get(w, 0) + 1
+print(counts)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-14--mapreduce-word-count&#34;&gt;🔴 NLP 14 — MapReduce (Word Count)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Map:&lt;/strong&gt; emit &lt;code&gt;(word, 1)&lt;/code&gt;
+&lt;strong&gt;Reduce:&lt;/strong&gt; sum values&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;mapped = []
+for s in stream:
+    for w in s.split():
+        mapped.append((w,1))
+
+reduced = {}
+for w,v in mapped:
+    reduced[w] = reduced.get(w,0) + v
+
+print(reduced)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-15--longest-word-in-corpus&#34;&gt;🔴 NLP 15 — Longest Word in Corpus&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;text = &amp;quot;messi demonstrates extraordinary football intelligence&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;words = text.split()
+print(max(words, key=len))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-16--named-entity-heuristic&#34;&gt;🔴 NLP 16 — Named Entity Heuristic&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Rule:&lt;/strong&gt;
+Words starting with capital = entity.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;text = &amp;quot;Messi plays for Argentina&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;entities = [w for w in text.split() if w[0].isupper()]
+print(entities)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-17--sentence-tokenization&#34;&gt;🔴 NLP 17 — Sentence Tokenization&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;text = &amp;quot;Messi scored. Fans celebrated. History written.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sentences = [s.strip() for s in text.split(&amp;quot;.&amp;quot;) if s]
+print(sentences)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-18--text-similarity-bag-of-words&#34;&gt;🔴 NLP 18 — Text Similarity (Bag of Words)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a = &amp;quot;messi scores goals&amp;quot;
+b = &amp;quot;messi scores&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sa, sb = set(a.split()), set(b.split())
+print(len(sa &amp;amp; sb) / len(sa | sb))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-19--detect-shouting-uppercase-ratio&#34;&gt;🔴 NLP 19 — Detect Shouting (Uppercase Ratio)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;text = &amp;quot;GOAL GOAL Messi&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;caps = sum(1 for c in text if c.isupper())
+print(caps / len(text) &amp;gt; 0.5)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-20--real-nlp-interview-question&#34;&gt;🔴 NLP 20 — Real NLP Interview Question&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Detect duplicate sentences.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sentences = [
+  &amp;quot;messi scores&amp;quot;,
+  &amp;quot;messi wins&amp;quot;,
+  &amp;quot;messi scores&amp;quot;
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seen = set()
+dups = []
+
+for s in sentences:
+    if s in seen:
+        dups.append(s)
+    seen.add(s)
+
+print(dups)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-message&#34;&gt;🎯 Final Message&lt;/h2&gt;
+&lt;p&gt;Before:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BERT&lt;/li&gt;
+&lt;li&gt;GPT&lt;/li&gt;
+&lt;li&gt;Transformers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;strings&lt;/li&gt;
+&lt;li&gt;loops&lt;/li&gt;
+&lt;li&gt;counters&lt;/li&gt;
+&lt;li&gt;patterns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you &lt;strong&gt;master this page&lt;/strong&gt;,
+you understand &lt;strong&gt;NLP from the ground up&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-18 — Basic NLP (V2)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-18-nlp-basic-v2/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-18-nlp-basic-v2/</guid>
+      <description>&lt;h2 id=&#34;-what-is-tf-idf-intuition--math&#34;&gt;📘 What Is TF-IDF? (Intuition + Math)&lt;/h2&gt;
+&lt;p&gt;TF-IDF stands for:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Term Frequency – Inverse Document Frequency&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It answers &lt;strong&gt;one fundamental NLP question&lt;/strong&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;❝ Which words are important in this document,&lt;br&gt;
+compared to the entire collection? ❞&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-the-math-step-by-step&#34;&gt;🧮 The Math (Step by Step)&lt;/h2&gt;
+&lt;h3 id=&#34;1-term-frequency-tf&#34;&gt;1️⃣ Term Frequency (TF)&lt;/h3&gt;
+&lt;p&gt;How often a word appears &lt;strong&gt;inside one document&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;$$
+\text{TF}(w, d) =
+\frac{\text{count of } w \text{ in document } d}
+{\text{total words in document } d}
+$$&lt;/p&gt;
+&lt;p&gt;👉 Measures &lt;strong&gt;local importance&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-document-frequency-df&#34;&gt;2️⃣ Document Frequency (DF)&lt;/h3&gt;
+&lt;p&gt;How many documents contain the word.&lt;/p&gt;
+&lt;p&gt;$$
+\text{DF}(w) = \text{number of documents containing } w
+$$&lt;/p&gt;
+&lt;p&gt;👉 Measures &lt;strong&gt;how common a word is across documents&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-inverse-document-frequency-idf&#34;&gt;3️⃣ Inverse Document Frequency (IDF)&lt;/h3&gt;
+&lt;p&gt;Penalizes words appearing in many documents.&lt;/p&gt;
+&lt;p&gt;$$
+\text{IDF}(w) = \log\left(\frac{N}{\text{DF}(w)}\right)
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$N$ = total number of documents&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;👉 Measures &lt;strong&gt;global rarity&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-tf-idf-final-score&#34;&gt;4️⃣ TF-IDF (Final Score)&lt;/h3&gt;
+&lt;p&gt;$$
+\text{TF-IDF}(w, d) =
+\text{TF}(w, d) \times \text{IDF}(w)
+$$&lt;/p&gt;
+&lt;p&gt;This is the &lt;strong&gt;importance score&lt;/strong&gt; used in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;search engines&lt;/li&gt;
+&lt;li&gt;document ranking&lt;/li&gt;
+&lt;li&gt;classical NLP systems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-worked-example-very-important&#34;&gt;🧪 Worked Example (Very Important)&lt;/h2&gt;
+&lt;h3 id=&#34;corpus-3-documents&#34;&gt;Corpus (3 documents)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;D1: &amp;quot;messi scores goals&amp;quot;
+D2: &amp;quot;goals win matches&amp;quot;
+D3: &amp;quot;messi inspires fans&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-1-vocabulary&#34;&gt;Step 1: Vocabulary&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;{messi, scores, goals, win, matches, inspires, fans}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-2-document-frequency-df&#34;&gt;Step 2: Document Frequency (DF)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Word&lt;/th&gt;
+&lt;th&gt;DF&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;messi&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;goals&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;scores&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;win&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;matches&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;inspires&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;fans&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-3-idf-assume-natural-log&#34;&gt;Step 3: IDF (Assume natural log)&lt;/h3&gt;
+&lt;p&gt;$$
+\text{IDF}(\text{messi}) = \log\left(\frac{3}{2}\right)
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\text{IDF}(\text{scores}) = \log\left(\frac{3}{1}\right)
+$$&lt;/p&gt;
+&lt;p&gt;👉 &lt;code&gt;&amp;quot;scores&amp;quot;&lt;/code&gt; appears in fewer documents
+👉 therefore it has &lt;strong&gt;higher IDF&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-4-tf-idf-in-document-1&#34;&gt;Step 4: TF-IDF in Document 1&lt;/h3&gt;
+&lt;p&gt;Document 1 contains &lt;strong&gt;3 words&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;messi scores goals
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Word&lt;/th&gt;
+&lt;th&gt;TF&lt;/th&gt;
+&lt;th&gt;IDF&lt;/th&gt;
+&lt;th&gt;TF-IDF&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;messi&lt;/td&gt;
+&lt;td&gt;1/3&lt;/td&gt;
+&lt;td&gt;log(3/2)&lt;/td&gt;
+&lt;td&gt;low&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;scores&lt;/td&gt;
+&lt;td&gt;1/3&lt;/td&gt;
+&lt;td&gt;log(3/1)&lt;/td&gt;
+&lt;td&gt;HIGH&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;goals&lt;/td&gt;
+&lt;td&gt;1/3&lt;/td&gt;
+&lt;td&gt;log(3/2)&lt;/td&gt;
+&lt;td&gt;low&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;✅ &lt;strong&gt;&amp;ldquo;scores&amp;rdquo; becomes the most important word&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-interviewers-want-you-to-say&#34;&gt;🎯 What Interviewers Want You To Say&lt;/h2&gt;
+&lt;p&gt;If asked:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Explain TF-IDF”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A &lt;strong&gt;perfect answer&lt;/strong&gt; is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“TF-IDF measures how important a word is to a document
+relative to the whole corpus.&lt;/p&gt;
+&lt;p&gt;It boosts words that are frequent in one document
+but rare across documents.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-tf-idf-still-matters-today&#34;&gt;🔗 Why TF-IDF Still Matters Today&lt;/h2&gt;
+&lt;p&gt;Even in the age of GPT:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Search engines still use it&lt;/li&gt;
+&lt;li&gt;Keyword extraction uses it&lt;/li&gt;
+&lt;li&gt;It explains &lt;strong&gt;why attention exists&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;It is the &lt;strong&gt;conceptual ancestor of embeddings&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you understand TF-IDF deeply,
+&lt;strong&gt;transformers feel natural — not magical&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-this-document-exists&#34;&gt;🌍 Why This Document Exists&lt;/h2&gt;
+&lt;p&gt;Large Language Models do &lt;strong&gt;not begin with transformers&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;They begin with a simple question:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Which words matter?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;TF-IDF is the &lt;strong&gt;bridge&lt;/strong&gt; between:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;raw text&lt;/li&gt;
+&lt;li&gt;statistics&lt;/li&gt;
+&lt;li&gt;semantic meaning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Every NLP engineer &lt;strong&gt;must master this&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-messi--meaning--a-short-story&#34;&gt;⚽ Messi &amp;amp; Meaning — A Short Story&lt;/h1&gt;
+&lt;p&gt;Messi touches the ball &lt;strong&gt;less than others&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Yet every touch &lt;strong&gt;matters more&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Common words are like defenders:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;they are everywhere&lt;/li&gt;
+&lt;li&gt;they mean little&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Rare words are like Messi:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;fewer appearances&lt;/li&gt;
+&lt;li&gt;massive impact&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That is &lt;strong&gt;TF-IDF&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-python-nlp--tf-idf-edition-20-problems&#34;&gt;🏆 Python NLP — TF-IDF Edition (20 Problems)&lt;/h1&gt;
+&lt;p&gt;Difficulty increases gradually.&lt;br&gt;
+&lt;strong&gt;Do not skip intuition.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-1--tokenization&#34;&gt;🟢 TF-IDF 1 — Tokenization&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;doc = &amp;quot;messi scores beautiful goals&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Convert sentence into tokens.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;tokens = doc.split()
+print(tokens)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-2--term-frequency-tf&#34;&gt;🟢 TF-IDF 2 — Term Frequency (TF)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;TF(word) = count(word) / total words&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;doc = &amp;quot;messi scores goals goals&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;words = doc.split()
+tf = {}
+
+for w in words:
+    tf[w] = tf.get(w, 0) + 1
+
+for w in tf:
+    tf[w] /= len(words)
+
+print(tf)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-3--vocabulary-from-corpus&#34;&gt;🟢 TF-IDF 3 — Vocabulary from Corpus&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;docs = [
+  &amp;quot;messi scores goals&amp;quot;,
+  &amp;quot;goals win matches&amp;quot;,
+  &amp;quot;messi inspires fans&amp;quot;
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Extract unique vocabulary.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;vocab = set()
+for d in docs:
+    vocab |= set(d.split())
+print(vocab)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-4--document-frequency-df&#34;&gt;🟡 TF-IDF 4 — Document Frequency (DF)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;DF(word) = number of documents containing word&lt;/strong&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df = {}
+for word in vocab:
+    df[word] = sum(word in d.split() for d in docs)
+print(df)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-5--inverse-document-frequency-idf&#34;&gt;🟡 TF-IDF 5 — Inverse Document Frequency (IDF)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;IDF(word) = log(N / DF)&lt;/strong&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import math
+
+N = len(docs)
+idf = {w: math.log(N / df[w]) for w in df}
+print(idf)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-6--tf-idf-for-one-document&#34;&gt;🟡 TF-IDF 6 — TF-IDF for One Document&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;doc = docs[0]
+words = doc.split()
+
+tf = {}
+for w in words:
+    tf[w] = tf.get(w, 0) + 1
+for w in tf:
+    tf[w] /= len(words)
+
+tfidf = {w: tf[w] * idf[w] for w in tf}
+print(tfidf)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-7--full-tf-idf-matrix&#34;&gt;🔵 TF-IDF 7 — Full TF-IDF Matrix&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;matrix = []
+
+for d in docs:
+    words = d.split()
+    tf = {}
+    for w in words:
+        tf[w] = tf.get(w, 0) + 1
+    for w in tf:
+        tf[w] /= len(words)
+
+    vec = {w: tf.get(w, 0) * idf[w] for w in vocab}
+    matrix.append(vec)
+
+print(matrix)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-8--important-words-in-document&#34;&gt;🔵 TF-IDF 8 — Important Words in Document&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Find top-1 TF-IDF word.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;top = max(tfidf, key=tfidf.get)
+print(top)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-9--remove-stopwords&#34;&gt;🔵 TF-IDF 9 — Remove Stopwords&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;stopwords = {&amp;quot;the&amp;quot;,&amp;quot;and&amp;quot;,&amp;quot;is&amp;quot;,&amp;quot;of&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;filtered_docs = []
+for d in docs:
+    filtered_docs.append(
+        &amp;quot; &amp;quot;.join(w for w in d.split() if w not in stopwords)
+    )
+print(filtered_docs)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-10--normalize-vectors-cosine-prep&#34;&gt;🔵 TF-IDF 10 — Normalize Vectors (Cosine Prep)&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import math
+
+def norm(vec):
+    return math.sqrt(sum(v*v for v in vec.values()))
+
+print(norm(tfidf))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-11--cosine-similarity&#34;&gt;🔴 TF-IDF 11 — Cosine Similarity&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a = &amp;quot;messi scores goals&amp;quot;
+b = &amp;quot;messi inspires fans&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def cosine(v1, v2):
+    common = set(v1) &amp;amp; set(v2)
+    num = sum(v1[w] * v2[w] for w in common)
+    den = norm(v1) * norm(v2)
+    return num / den if den else 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-12--find-most-similar-document&#34;&gt;🔴 TF-IDF 12 — Find Most Similar Document&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;query = matrix[0]
+sims = [cosine(query, m) for m in matrix]
+print(sims)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-13--keyword-extraction&#34;&gt;🔴 TF-IDF 13 — Keyword Extraction&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Return words with TF-IDF &amp;gt; threshold.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;keywords = [w for w,v in tfidf.items() if v &amp;gt; 0.2]
+print(keywords)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-14--streaming-tf-update&#34;&gt;🔴 TF-IDF 14 — Streaming TF Update&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;stream = [&amp;quot;messi scores&amp;quot;, &amp;quot;scores again&amp;quot;]
+
+tf = {}
+total = 0
+
+for s in stream:
+    for w in s.split():
+        tf[w] = tf.get(w, 0) + 1
+        total += 1
+
+for w in tf:
+    tf[w] /= total
+
+print(tf)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-15--big-data-mapreduce-tf&#34;&gt;🔴 TF-IDF 15 — Big Data MapReduce TF&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;mapped = []
+for d in docs:
+    for w in d.split():
+        mapped.append((w,1))
+
+reduced = {}
+for w,v in mapped:
+    reduced[w] = reduced.get(w,0) + v
+
+print(reduced)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-16--rare-word-detection&#34;&gt;🔴 TF-IDF 16 — Rare Word Detection&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Words with highest IDF.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(sorted(idf, key=idf.get, reverse=True))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-17--explainability-test&#34;&gt;🔴 TF-IDF 17 — Explainability Test&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;
+Why does &lt;code&gt;&amp;quot;messi&amp;quot;&lt;/code&gt; sometimes get low TF-IDF?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Answer&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;Because it appears in many documents,
+its IDF is low, reducing its importance.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-18--sklearn-comparison-industry-standard&#34;&gt;🔴 TF-IDF 18 — sklearn Comparison (Industry Standard)&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from sklearn.feature_extraction.text import TfidfVectorizer
+
+vec = TfidfVectorizer()
+X = vec.fit_transform(docs)
+
+print(vec.get_feature_names_out())
+print(X.toarray())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-19--interview-question&#34;&gt;🔴 TF-IDF 19 — Interview Question&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Why TF-IDF fails for semantics?&lt;/strong&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Answer&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;It ignores word order, context, and meaning.
+Synonyms are treated as unrelated.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tf-idf-20--bridge-to-transformers&#34;&gt;🔴 TF-IDF 20 — Bridge to Transformers&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;
+What replaced TF-IDF?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Answer&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;Word embeddings → contextual embeddings → transformers
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-message&#34;&gt;🎯 Final Message&lt;/h2&gt;
+&lt;p&gt;TF-IDF teaches:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;importance&lt;/li&gt;
+&lt;li&gt;rarity&lt;/li&gt;
+&lt;li&gt;signal vs noise&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you understand this page:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;you understand &lt;strong&gt;why attention exists&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;you understand &lt;strong&gt;why embeddings work&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You are &lt;strong&gt;ready for real NLP&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-19 — Basic NLP (V3)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-19-nlp-basic-v3/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-19-nlp-basic-v3/</guid>
+      <description>&lt;h2 id=&#34;-why-this-document-exists&#34;&gt;🌍 Why This Document Exists&lt;/h2&gt;
+&lt;p&gt;This is &lt;strong&gt;not&lt;/strong&gt; a memorization guide.&lt;/p&gt;
+&lt;p&gt;This is how &lt;strong&gt;real NLP engineers think&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;before transformers&lt;/li&gt;
+&lt;li&gt;before embeddings&lt;/li&gt;
+&lt;li&gt;before GPUs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Every great NLP system starts with:
+&lt;strong&gt;text, counts, structure, and meaning&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-a-real-world-nlp-story--messi-beyond-football&#34;&gt;⚽ A Real-World NLP Story — Messi Beyond Football&lt;/h1&gt;
+&lt;p&gt;Lionel Messi is often described as a footballer,&lt;br&gt;
+but to millions of people, he represents &lt;strong&gt;discipline, creativity, and persistence&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;From Rosario to Barcelona, from criticism to championships,&lt;br&gt;
+Messi’s story is not just about goals.&lt;/p&gt;
+&lt;p&gt;It is about &lt;strong&gt;patterns&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;repeated effort&lt;/li&gt;
+&lt;li&gt;rare moments of brilliance&lt;/li&gt;
+&lt;li&gt;quiet consistency&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In language, meaning works the same way.&lt;/p&gt;
+&lt;p&gt;Common words appear everywhere.&lt;br&gt;
+Rare words define intent.&lt;/p&gt;
+&lt;p&gt;This document treats Messi’s story as &lt;strong&gt;data&lt;/strong&gt; —&lt;br&gt;
+and trains you to &lt;strong&gt;extract meaning like an NLP engineer&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-the-corpus-input-text&#34;&gt;📄 The Corpus (Input Text)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;Lionel Messi is one of the greatest football players in history.
+Messi began his career in Argentina before joining Barcelona.
+At Barcelona, Messi scored goals, created chances, and inspired fans.
+Many people believe Messi changed the way football is played.
+Despite fame, Messi remained disciplined and focused on the game.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-nlp-interview--20-problems&#34;&gt;🏆 NLP Interview — 20 Problems&lt;/h1&gt;
+&lt;p&gt;Difficulty increases gradually.
+Try to &lt;strong&gt;think before coding&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-1--sentence-count&#34;&gt;🟢 NLP 1 — Sentence Count&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+How many sentences are in the corpus?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sentences = [s for s in text.split(&amp;quot;.&amp;quot;) if s.strip()]
+print(len(sentences))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-2--word-tokenization&#34;&gt;🟢 NLP 2 — Word Tokenization&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Convert the corpus into a list of words (lowercased).&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;words = text.lower().replace(&amp;quot;.&amp;quot;, &amp;quot;&amp;quot;).split()
+print(words)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-3--vocabulary-size&#34;&gt;🟢 NLP 3 — Vocabulary Size&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+How many unique words exist?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(len(set(words)))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-4--word-frequency-count&#34;&gt;🟡 NLP 4 — Word Frequency Count&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Count how many times each word appears.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;freq = {}
+for w in words:
+    freq[w] = freq.get(w, 0) + 1
+print(freq)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-5--most-frequent-word&#34;&gt;🟡 NLP 5 — Most Frequent Word&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Find the most common word.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(max(freq, key=freq.get))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-6--stopword-removal&#34;&gt;🟡 NLP 6 — Stopword Removal&lt;/h2&gt;
+&lt;p&gt;Remove: &lt;code&gt;{&amp;quot;the&amp;quot;, &amp;quot;is&amp;quot;, &amp;quot;and&amp;quot;, &amp;quot;of&amp;quot;, &amp;quot;to&amp;quot;, &amp;quot;in&amp;quot;}&lt;/code&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;stop = {&amp;quot;the&amp;quot;,&amp;quot;is&amp;quot;,&amp;quot;and&amp;quot;,&amp;quot;of&amp;quot;,&amp;quot;to&amp;quot;,&amp;quot;in&amp;quot;}
+filtered = [w for w in words if w not in stop]
+print(filtered)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-7--capitalized-word-detection&#34;&gt;🟡 NLP 7 — Capitalized Word Detection&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Detect words that originally started with capital letters.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;caps = [w for w in text.split() if w[0].isupper()]
+print(caps)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-8--average-sentence-length&#34;&gt;🔵 NLP 8 — Average Sentence Length&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Compute average words per sentence.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;lengths = [len(s.split()) for s in sentences]
+print(sum(lengths) / len(lengths))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-9--bigram-extraction&#34;&gt;🔵 NLP 9 — Bigram Extraction&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Extract all word bigrams.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;bigrams = [(words[i], words[i+1]) for i in range(len(words)-1)]
+print(bigrams)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-10--keyword-search&#34;&gt;🔵 NLP 10 — Keyword Search&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Check if the word &lt;code&gt;&amp;quot;discipline&amp;quot;&lt;/code&gt; exists.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(&amp;quot;discipline&amp;quot; in words)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-11--named-entity-heuristic&#34;&gt;🔵 NLP 11 — Named Entity Heuristic&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Rule:&lt;/strong&gt;
+Words starting with capital letters = entities.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;entities = list(set(caps))
+print(entities)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-12--document-frequency-df&#34;&gt;🔴 NLP 12 — Document Frequency (DF)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+How many sentences contain the word &lt;code&gt;&amp;quot;messi&amp;quot;&lt;/code&gt;?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(sum(&amp;quot;messi&amp;quot; in s.lower() for s in sentences))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-13--tf-calculation&#34;&gt;🔴 NLP 13 — TF Calculation&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Compute TF for &lt;code&gt;&amp;quot;messi&amp;quot;&lt;/code&gt; in the whole corpus.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;tf_messi = freq[&amp;quot;messi&amp;quot;] / len(words)
+print(tf_messi)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-14--rare-word-detection&#34;&gt;🔴 NLP 14 — Rare Word Detection&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Find words appearing only once.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;rare = [w for w,c in freq.items() if c == 1]
+print(rare)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-15--sentence-similarity-jaccard&#34;&gt;🔴 NLP 15 — Sentence Similarity (Jaccard)&lt;/h2&gt;
+&lt;p&gt;Compare sentence 1 and 3.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a = set(sentences[0].lower().split())
+b = set(sentences[2].lower().split())
+print(len(a &amp;amp; b) / len(a | b))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-16--duplicate-sentence-detection&#34;&gt;🔴 NLP 16 — Duplicate Sentence Detection&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Check if any sentence is duplicated.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seen = set()
+dup = False
+for s in sentences:
+    if s in seen:
+        dup = True
+    seen.add(s)
+print(dup)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-17--streaming-word-count-big-data&#34;&gt;🔴 NLP 17 — Streaming Word Count (Big Data)&lt;/h2&gt;
+&lt;p&gt;Messages arrive line by line.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;counts = {}
+for s in sentences:
+    for w in s.lower().split():
+        counts[w] = counts.get(w, 0) + 1
+print(counts)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-18--mapreduce-mindset&#34;&gt;🔴 NLP 18 — MapReduce Mindset&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Map:&lt;/strong&gt; &lt;code&gt;(word, 1)&lt;/code&gt;
+&lt;strong&gt;Reduce:&lt;/strong&gt; sum&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;mapped = [(w,1) for w in words]
+reduced = {}
+for w,v in mapped:
+    reduced[w] = reduced.get(w,0) + v
+print(reduced)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-19--explainability-question&#34;&gt;🔴 NLP 19 — Explainability Question&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;
+Why is &lt;code&gt;&amp;quot;messi&amp;quot;&lt;/code&gt; less informative than &lt;code&gt;&amp;quot;disciplined&amp;quot;&lt;/code&gt;?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Answer&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;Because &amp;quot;messi&amp;quot; appears many times,
+while &amp;quot;disciplined&amp;quot; is rare and carries more information.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-nlp-20--bridge-to-modern-nlp&#34;&gt;🔴 NLP 20 — Bridge to Modern NLP&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;
+Why does TF-IDF fail for deep semantics?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Answer&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;It ignores word order, context, and meaning.
+Synonyms are unrelated, and semantics are not captured.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-message&#34;&gt;🎯 Final Message&lt;/h2&gt;
+&lt;p&gt;If you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;explain these problems&lt;/li&gt;
+&lt;li&gt;code them calmly&lt;/li&gt;
+&lt;li&gt;justify your choices&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You are &lt;strong&gt;interview-ready&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Before LLMs, there was understanding.
+Before transformers, there was thinking.&lt;/p&gt;
+&lt;p&gt;This is how &lt;strong&gt;real NLP engineers are made&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
   </channel>
 </rss>
