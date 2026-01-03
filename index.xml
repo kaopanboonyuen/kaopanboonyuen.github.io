@@ -5371,49 +5371,6 @@ D) Typed text&lt;/p&gt;
     </item>
     
     <item>
-      <title>CS101-LC04 — LeetCode Practice 🧪</title>
-      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-leetcode-tests/</link>
-      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-leetcode-tests/</guid>
-      <description>&lt;h2 id=&#34;-lc-test-01-sorting&#34;&gt;🧩 LC-TEST-01 Sorting&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Question&lt;/strong&gt;: Sort an integer array.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Input&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[3,1,2]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[1,2,3]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
-  &lt;summary&gt;Solution (Python)&lt;/summary&gt;
-  &lt;p&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def sort_array(nums):
-    return sorted(nums)  # Timsort: O(n log n)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/p&gt;
-&lt;/details&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;-lc-test-02-prime-number&#34;&gt;🧮 LC-TEST-02 Prime Number&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Question&lt;/strong&gt;: Check if n is prime.&lt;/p&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
-  &lt;summary&gt;Solution&lt;/summary&gt;
-  &lt;p&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def is_prime(n):
-    if n &amp;lt;= 1:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/p&gt;
-&lt;/details&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;-lc-test-03-candy-greedy&#34;&gt;🍬 LC-TEST-03 Candy (Greedy)&lt;/h2&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
-  &lt;summary&gt;Idea&lt;/summary&gt;
-  &lt;p&gt;Use two passes (left → right, right → left)&lt;/p&gt;
-&lt;/details&gt;</description>
-    </item>
-    
-    <item>
       <title>DE101-PD04 — GroupBy, Aggregation &amp; Joins (Analytics &amp; Interview Mastery)</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd04-groupby-joins/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
