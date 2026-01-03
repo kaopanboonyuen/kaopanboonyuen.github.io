@@ -33,7 +33,7 @@
   <meta name="description" content="" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/" />
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-13-messi-puzzle/" />
 
   
 
@@ -285,7 +285,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/" />
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-13-messi-puzzle/" />
 
   
   
@@ -302,18 +302,18 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Teerapong Panboonyuen" />
-  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/" />
-  <meta property="og:title" content="LC-TEST-08 — Two Pointers in the Wild | Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-13-messi-puzzle/" />
+  <meta property="og:title" content="LC-TEST-13 — Messi Puzzle | Teerapong Panboonyuen" />
   <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
         property="article:published_time"
-        content="2025-12-30T00:00:00&#43;00:00"
+        content="2026-01-01T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2025-12-30T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2026-01-01T00:00:00&#43;00:00">
   
 
   
@@ -330,11 +330,11 @@
 
 
 
-  <title>LC-TEST-08 — Two Pointers in the Wild | Teerapong Panboonyuen</title>
+  <title>LC-TEST-13 — Messi Puzzle | Teerapong Panboonyuen</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="fbdff39847da2ba85341adfde602c820" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="3705b9b071f947ba64c8a1ee90436afe" >
 
   
   
@@ -930,7 +930,7 @@
 
 
 
-  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/">LC-TEST-08 — Two Pointers in the Wild</a></li>
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/">LC-TEST-08 — Two Pointers in the Wild</a></li>
 
 
 
@@ -950,7 +950,7 @@
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-13-messi-puzzle/">LC-TEST-13 — Messi Puzzle</a></li>
+  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-13-messi-puzzle/">LC-TEST-13 — Messi Puzzle</a></li>
 
 
 
@@ -990,26 +990,31 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#-why-two-pointers-matter">🎯 Why Two Pointers Matter</a></li>
-    <li><a href="#-what-you-will-learn">🧠 What You Will Learn</a></li>
-    <li><a href="#-core-example--container-with-most-water">🧩 Core Example — Container With Most Water</a>
-      <ul>
-        <li><a href="#problem-statement">Problem Statement</a></li>
-      </ul>
-    </li>
-    <li><a href="#-sample-input---output">📥 Sample Input / 📤 Output</a></li>
-    <li><a href="#-interviewer-insight">🧠 Interviewer Insight</a></li>
-    <li><a href="#-brute-force-what-not-to-do">🧩 Brute Force (What NOT To Do)</a></li>
-    <li><a href="#-two-pointer-strategy-correct">🧩 Two Pointer Strategy (Correct)</a>
-      <ul>
-        <li><a href="#-core-insight">💡 Core Insight</a></li>
-      </ul>
-    </li>
-    <li><a href="#-two-pointer-solution">🧑‍💻 Two Pointer Solution</a></li>
-    <li><a href="#-complexity">⏱️ Complexity</a></li>
-    <li><a href="#-two-pointer-patterns-you-must-recognize">🧠 Two Pointer Patterns You Must Recognize</a></li>
-    <li><a href="#-final-takeaway">🎯 Final Takeaway</a></li>
-    <li><a href="#-practice-targets">🏁 Practice Targets</a></li>
+    <li><a href="#-why-this-document-exists">🌍 Why This Document Exists</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-puzzle-1--messis-goal-counter-warm-up">🟢 Puzzle 1 — Messi’s Goal Counter (Warm-Up)</a></li>
+    <li><a href="#-puzzle-2--prime-jersey-numbers">🟢 Puzzle 2 — Prime Jersey Numbers</a></li>
+    <li><a href="#-puzzle-3--skipping-injured-matches-continue">🟢 Puzzle 3 — Skipping Injured Matches (continue)</a></li>
+    <li><a href="#-puzzle-4--stop-at-red-card-break">🟡 Puzzle 4 — Stop at Red Card (break)</a></li>
+    <li><a href="#-puzzle-5--indexing-like-a-pro">🟡 Puzzle 5 — Indexing Like a Pro</a></li>
+    <li><a href="#-puzzle-6--goals-in-first-half-only">🟡 Puzzle 6 — Goals in First Half Only</a></li>
+    <li><a href="#-puzzle-7--yellow--red-logic-and--or">🟡 Puzzle 7 — Yellow + Red Logic (AND / OR)</a></li>
+    <li><a href="#-puzzle-8--recursive-goal-sum">🟠 Puzzle 8 — Recursive Goal Sum</a></li>
+    <li><a href="#-puzzle-9--assist--goal-filter">🟠 Puzzle 9 — Assist + Goal Filter</a></li>
+    <li><a href="#-puzzle-10--dictionary-aggregation">🟠 Puzzle 10 — Dictionary Aggregation</a></li>
+    <li><a href="#-puzzle-11--decorator-match-logger">🔵 Puzzle 11 — Decorator: Match Logger</a></li>
+    <li><a href="#-puzzle-12--class-player-card-system">🔵 Puzzle 12 — Class: Player Card System</a></li>
+    <li><a href="#-puzzle-13--while-loop-simulator">🔵 Puzzle 13 — While Loop Simulator</a></li>
+    <li><a href="#-puzzle-14--nested-containers">🔴 Puzzle 14 — Nested Containers</a></li>
+    <li><a href="#-puzzle-15--sliding-window-advanced-indexing">🔴 Puzzle 15 — Sliding Window (Advanced Indexing)</a></li>
+    <li><a href="#-puzzle-16--complex-conditions">🔴 Puzzle 16 — Complex Conditions</a></li>
+    <li><a href="#-puzzle-17--recursive-match-tree">🔴 Puzzle 17 — Recursive Match Tree</a></li>
+    <li><a href="#-puzzle-18--state-machine-logic">🟣 Puzzle 18 — State Machine Logic</a></li>
+    <li><a href="#-puzzle-19--full-match-engine">🟣 Puzzle 19 — Full Match Engine</a></li>
+    <li><a href="#-puzzle-20--final-boss-everything">🏆 Puzzle 20 — FINAL BOSS (Everything)</a></li>
+    <li><a href="#-final-message">🧠 Final Message</a></li>
   </ul>
 </nav>
 
@@ -1059,7 +1064,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        LC-TEST-08 — Two Pointers in the Wild
+        LC-TEST-13 — Messi Puzzle
       </li>
     </ol>
   </nav>
@@ -1067,162 +1072,306 @@
 
           
 
-          <h1>LC-TEST-08 — Two Pointers in the Wild</h1>
+          <h1>LC-TEST-13 — Messi Puzzle</h1>
 
           <div class="article-style">
-            <h2 id="-why-two-pointers-matter">🎯 Why Two Pointers Matter</h2>
-<p>Two pointers is not a trick.<br>
-It is a <strong>way of thinking</strong>.</p>
-<p>Strong developers see:</p>
-<blockquote>
-<p>“I don’t need extra memory.<br>
-I can let indices move and converge.”</p>
-</blockquote>
-<p>This technique appears everywhere:</p>
+            <h2 id="-why-this-document-exists">🌍 Why This Document Exists</h2>
+<p>This is <strong>not</strong> a LeetCode cheat list.</p>
+<p>This is a <strong>thinking gym</strong>.</p>
+<p>You will train:</p>
 <ul>
-<li>Arrays</li>
-<li>Strings</li>
-<li>Sorted data</li>
-<li>Geometry problems</li>
-<li>Optimization tasks</li>
+<li>🧠 Logic</li>
+<li>🔁 Loop mastery</li>
+<li>📦 Containers</li>
+<li>🔢 Indexing (start / stop / step)</li>
+<li>⚙️ Functions, recursion, decorators, classes</li>
+<li>🚦 Complex conditions (and / or / nested)</li>
 </ul>
-<p>If you master this, <strong>your code gets shorter immediately</strong>.</p>
+<p>All wrapped in <strong>fun football stories</strong> — because learning should feel alive.</p>
 <hr>
-<h2 id="-what-you-will-learn">🧠 What You Will Learn</h2>
-<p>In this lesson, you will train to:</p>
-<ul>
-<li>Use <strong>left / right pointers confidently</strong></li>
-<li>Decide <strong>who moves and why</strong></li>
-<li>Avoid nested loops</li>
-<li>Reduce O(n²) → O(n)</li>
-</ul>
-<p>This is <strong>interview-critical muscle memory</strong>.</p>
+<h1 id="-python-logic-olympics-20-puzzles">🥇 Python Logic Olympics (20 Puzzles)</h1>
+<p>Difficulty increases <strong>gradually</strong>.
+Try each puzzle <strong>before opening the solution</strong>.</p>
 <hr>
-<h2 id="-core-example--container-with-most-water">🧩 Core Example — Container With Most Water</h2>
-<h3 id="problem-statement">Problem Statement</h3>
-<p>Given <code>n</code> non-negative integers representing vertical lines,
-find two lines that together with the x-axis form a container
-that holds the <strong>most water</strong>.</p>
-<hr>
-<h2 id="-sample-input---output">📥 Sample Input / 📤 Output</h2>
-<table>
-<thead>
-<tr>
-<th>height</th>
-<th>Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>[1,8,6,2,5,4,8,3,7]</td>
-<td>49</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="-interviewer-insight">🧠 Interviewer Insight</h2>
-<blockquote>
-<p>❗ Interviewers want to see:</p>
-<ul>
-<li>Do you understand <strong>why one pointer moves</strong></li>
-<li>Can you explain <strong>why brute force is wasteful</strong></li>
-<li>Do you trust a greedy decision?</li>
-</ul>
-</blockquote>
-<p>If you randomly move pointers, you fail.
-If you <strong>justify movement</strong>, you pass.</p>
-<hr>
-<h2 id="-brute-force-what-not-to-do">🧩 Brute Force (What NOT To Do)</h2>
-<pre><code class="language-python">max_area = 0
-for i in range(len(height)):
-    for j in range(i + 1, len(height)):
-        max_area = max(
-            max_area,
-            min(height[i], height[j]) * (j - i)
-        )
+<h2 id="-puzzle-1--messis-goal-counter-warm-up">🟢 Puzzle 1 — Messi’s Goal Counter (Warm-Up)</h2>
+<p>Messi scored goals in matches:</p>
+<pre><code class="language-python">goals = [1, 0, 2, 1, 3, 0]
 </code></pre>
-<p>⛔ O(n²)
-⛔ Interview red flag</p>
-<hr>
-<h2 id="-two-pointer-strategy-correct">🧩 Two Pointer Strategy (Correct)</h2>
-<h3 id="-core-insight">💡 Core Insight</h3>
-<p>The <strong>shorter line</strong> limits the area.</p>
-<p>So:</p>
-<ul>
-<li>Move the pointer pointing to the <strong>shorter height</strong></li>
-<li>Because moving the taller one <strong>cannot increase area</strong></li>
-</ul>
-<p>This is the entire trick.</p>
-<hr>
-<h2 id="-two-pointer-solution">🧑‍💻 Two Pointer Solution</h2>
-<pre><code class="language-python">def maxArea(height):
-    left, right = 0, len(height) - 1
-    best = 0
-
-    while left &lt; right:
-        width = right - left
-        area = min(height[left], height[right]) * width
-        best = max(best, area)
-
-        if height[left] &lt; height[right]:
-            left += 1
-        else:
-            right -= 1
-
-    return best
+<p><strong>Task:</strong> Count total goals using a loop (no <code>sum()</code>).</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">total = 0
+for g in goals:
+    total += g
+print(total)
 </code></pre>
+</details>
 <hr>
-<h2 id="-complexity">⏱️ Complexity</h2>
+<h2 id="-puzzle-2--prime-jersey-numbers">🟢 Puzzle 2 — Prime Jersey Numbers</h2>
+<p>Messi wore jerseys from <code>1</code> to <code>n</code>.</p>
+<p><strong>Task:</strong> Return <strong>all prime numbers &lt; n</strong>.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">def is_prime(x):
+    if x &lt; 2:
+        return False
+    i = 2
+    while i * i &lt;= x:
+        if x % i == 0:
+            return False
+        i += 1
+    return True
+
+def primes_less_than(n):
+    return [i for i in range(n) if is_prime(i)]
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-3--skipping-injured-matches-continue">🟢 Puzzle 3 — Skipping Injured Matches (continue)</h2>
+<p>Messi missed matches marked as <code>&quot;injured&quot;</code>.</p>
+<pre><code class="language-python">matches = [&quot;goal&quot;, &quot;goal&quot;, &quot;injured&quot;, &quot;goal&quot;]
+</code></pre>
+<p><strong>Task:</strong> Count goals, skip injured matches.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">count = 0
+for m in matches:
+    if m == &quot;injured&quot;:
+        continue
+    count += 1
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-4--stop-at-red-card-break">🟡 Puzzle 4 — Stop at Red Card (break)</h2>
+<p>Stop counting goals once Messi gets a <code>&quot;red&quot;</code> card.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">events = [&quot;goal&quot;, &quot;goal&quot;, &quot;red&quot;, &quot;goal&quot;]
+count = 0
+for e in events:
+    if e == &quot;red&quot;:
+        break
+    if e == &quot;goal&quot;:
+        count += 1
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-5--indexing-like-a-pro">🟡 Puzzle 5 — Indexing Like a Pro</h2>
+<p>Get <strong>every second match</strong> Messi played.</p>
+<pre><code class="language-python">matches = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;]
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">print(matches[::2])
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-6--goals-in-first-half-only">🟡 Puzzle 6 — Goals in First Half Only</h2>
+<p>First half = first <code>len(matches)//2</code>.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">half = len(matches) // 2
+print(matches[:half])
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-7--yellow--red-logic-and--or">🟡 Puzzle 7 — Yellow + Red Logic (AND / OR)</h2>
+<p>Messi is suspended if:</p>
 <ul>
-<li><strong>Time:</strong> O(n)</li>
-<li><strong>Space:</strong> O(1)</li>
+<li>red card</li>
+<li>OR 2+ yellow cards</li>
 </ul>
-<p>Optimal.</p>
+<pre><code class="language-python">yellow = 2
+red = False
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">suspended = red or yellow &gt;= 2
+</code></pre>
+</details>
 <hr>
-<h2 id="-two-pointer-patterns-you-must-recognize">🧠 Two Pointer Patterns You Must Recognize</h2>
-<table>
-<thead>
-<tr>
-<th>Pattern</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Opposite ends</td>
-<td>Container, Palindrome</td>
-</tr>
-<tr>
-<td>Same direction</td>
-<td>Remove duplicates</td>
-</tr>
-<tr>
-<td>Meet in middle</td>
-<td>Pair sum</td>
-</tr>
-<tr>
-<td>Shrinking window</td>
-<td>Valid palindrome</td>
-</tr>
-</tbody>
-</table>
+<h2 id="-puzzle-8--recursive-goal-sum">🟠 Puzzle 8 — Recursive Goal Sum</h2>
+<p>Sum goals using <strong>recursion only</strong>.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">def recursive_sum(arr):
+    if not arr:
+        return 0
+    return arr[0] + recursive_sum(arr[1:])
+</code></pre>
+</details>
 <hr>
-<h2 id="-final-takeaway">🎯 Final Takeaway</h2>
-<blockquote>
-<p>Two pointers is about <strong>controlled movement</strong>, not guessing.</p>
-</blockquote>
-<p>If you can explain <strong>why</strong> a pointer moves,
-interviewers assume you understand <strong>algorithmic reasoning</strong>.</p>
+<h2 id="-puzzle-9--assist--goal-filter">🟠 Puzzle 9 — Assist + Goal Filter</h2>
+<p>Count matches where Messi had <strong>goal AND assist</strong>.</p>
+<pre><code class="language-python">stats = [(1,1), (1,0), (0,1), (1,1)]
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">count = 0
+for g, a in stats:
+    if g == 1 and a == 1:
+        count += 1
+</code></pre>
+</details>
 <hr>
-<h2 id="-practice-targets">🏁 Practice Targets</h2>
+<h2 id="-puzzle-10--dictionary-aggregation">🟠 Puzzle 10 — Dictionary Aggregation</h2>
+<p>Track total goals per season.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">seasons = {&quot;2019&quot;: 30, &quot;2020&quot;: 25}
+total = sum(seasons.values())
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-11--decorator-match-logger">🔵 Puzzle 11 — Decorator: Match Logger</h2>
+<p>Log before and after Messi plays.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">def logger(fn):
+    def wrapper():
+        print(&quot;Match start&quot;)
+        fn()
+        print(&quot;Match end&quot;)
+    return wrapper
+
+@logger
+def play():
+    print(&quot;Messi scores!&quot;)
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-12--class-player-card-system">🔵 Puzzle 12 — Class: Player Card System</h2>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">class Player:
+    def __init__(self):
+        self.yellow = 0
+        self.red = False
+
+    def foul(self):
+        self.yellow += 1
+        if self.yellow &gt;= 2:
+            self.red = True
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-13--while-loop-simulator">🔵 Puzzle 13 — While Loop Simulator</h2>
+<p>Simulate Messi scoring until stamina hits zero.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">stamina = 5
+goals = 0
+while stamina &gt; 0:
+    goals += 1
+    stamina -= 1
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-14--nested-containers">🔴 Puzzle 14 — Nested Containers</h2>
+<p>Count goals from nested tournament data.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">tournament = [[1,2],[0,1],[3]]
+total = sum(sum(match) for match in tournament)
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-15--sliding-window-advanced-indexing">🔴 Puzzle 15 — Sliding Window (Advanced Indexing)</h2>
+<p>Max goals in <strong>2 consecutive matches</strong>.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">goals = [1,2,0,3]
+max_sum = 0
+for i in range(len(goals)-1):
+    max_sum = max(max_sum, goals[i] + goals[i+1])
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-16--complex-conditions">🔴 Puzzle 16 — Complex Conditions</h2>
+<p>Valid match if:</p>
 <ul>
-<li>Valid Palindrome</li>
-<li>Two Sum II (sorted)</li>
-<li>Remove Duplicates</li>
-<li>3Sum</li>
-<li>Squares of a Sorted Array</li>
+<li>goals ≥ 1</li>
+<li>assists ≥ 1</li>
+<li>no red card</li>
 </ul>
-<p>Master these → you look <em>dangerous</em> in interviews 😈</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">valid = goals &gt;= 1 and assists &gt;= 1 and not red
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-17--recursive-match-tree">🔴 Puzzle 17 — Recursive Match Tree</h2>
+<p>Traverse knockout tree recursively.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">def traverse(node):
+    if not node:
+        return 0
+    return node[&quot;goals&quot;] + traverse(node.get(&quot;next&quot;))
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-18--state-machine-logic">🟣 Puzzle 18 — State Machine Logic</h2>
+<p>Messi state: <code>&quot;play&quot; → &quot;yellow&quot; → &quot;red&quot;</code></p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">state = &quot;play&quot;
+if foul:
+    state = &quot;yellow&quot; if state == &quot;play&quot; else &quot;red&quot;
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-19--full-match-engine">🟣 Puzzle 19 — Full Match Engine</h2>
+<p>Combine:</p>
+<ul>
+<li>loops</li>
+<li>conditions</li>
+<li>classes</li>
+<li>break/continue</li>
+</ul>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">for minute in range(90):
+    if red:
+        break
+    if injured:
+        continue
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-20--final-boss-everything">🏆 Puzzle 20 — FINAL BOSS (Everything)</h2>
+<p>Simulate Messi’s season:</p>
+<ul>
+<li>goals</li>
+<li>assists</li>
+<li>yellow/red cards</li>
+<li>suspension logic</li>
+<li>class + function + loop + recursion</li>
+</ul>
+<details>
+<summary>✅ Solution (Condensed)</summary>
+<pre><code class="language-python">class Messi:
+    def __init__(self):
+        self.goals = 0
+        self.yellow = 0
+        self.red = False
+
+    def play_match(self, g, a, y):
+        if self.red:
+            return
+        self.goals += g
+        self.yellow += y
+        if self.yellow &gt;= 2:
+            self.red = True
+</code></pre>
+</details>
+<hr>
+<h2 id="-final-message">🧠 Final Message</h2>
+<p>If you understand <strong>this entire document</strong>:</p>
+<p>You don’t just “know Python”.</p>
+<p>You <strong>think like a software engineer</strong>.</p>
+<p>⚽🐐 Messi would approve.</p>
+<hr>
           </div>
 
           
@@ -1239,14 +1388,14 @@ interviewers assume you understand <strong>algorithmic reasoning</strong>.</p>
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-07-indexing-and-containers/" rel="next">LC-TEST-07 — Indexing &amp; Containers Mastery</a>
+    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-12-fifa-world-cup-copy/" rel="next">LC-TEST-12 — FIFA World Cup 2026 Ultimate Analytics</a>
   </div>
   
   
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-09-sliding-windows/" rel="prev">LC-TEST-09 — Sliding Window Like a Pro</a>
+    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-14-algorithm-test-v1/" rel="prev">LC-TEST-14 — Algorithm Test (V1)</a>
   </div>
   
 </div>
@@ -1256,7 +1405,7 @@ interviewers assume you understand <strong>algorithmic reasoning</strong>.</p>
         </div>
 
         <div class="body-footer">
-          <p>Last updated on 2025</p>
+          <p>Last updated on 2026</p>
 
           
 

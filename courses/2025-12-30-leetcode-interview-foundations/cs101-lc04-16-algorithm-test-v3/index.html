@@ -33,7 +33,7 @@
   <meta name="description" content="" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/" />
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-16-algorithm-test-v3/" />
 
   
 
@@ -285,7 +285,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/" />
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-16-algorithm-test-v3/" />
 
   
   
@@ -302,18 +302,18 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Teerapong Panboonyuen" />
-  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/" />
-  <meta property="og:title" content="LC-TEST-08 — Two Pointers in the Wild | Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-16-algorithm-test-v3/" />
+  <meta property="og:title" content="LC-TEST-16 — Algorithm Test (V3) | Teerapong Panboonyuen" />
   <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
         property="article:published_time"
-        content="2025-12-30T00:00:00&#43;00:00"
+        content="2026-01-01T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2025-12-30T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2026-01-01T00:00:00&#43;00:00">
   
 
   
@@ -330,11 +330,11 @@
 
 
 
-  <title>LC-TEST-08 — Two Pointers in the Wild | Teerapong Panboonyuen</title>
+  <title>LC-TEST-16 — Algorithm Test (V3) | Teerapong Panboonyuen</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="fbdff39847da2ba85341adfde602c820" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="f4a141c25f0fb223905a9d372cc35f03" >
 
   
   
@@ -930,7 +930,7 @@
 
 
 
-  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/">LC-TEST-08 — Two Pointers in the Wild</a></li>
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/">LC-TEST-08 — Two Pointers in the Wild</a></li>
 
 
 
@@ -962,7 +962,7 @@
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-16-algorithm-test-v3/">LC-TEST-16 — Algorithm Test (V3)</a></li>
+  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-16-algorithm-test-v3/">LC-TEST-16 — Algorithm Test (V3)</a></li>
 
       
         </ul>
@@ -990,26 +990,31 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#-why-two-pointers-matter">🎯 Why Two Pointers Matter</a></li>
-    <li><a href="#-what-you-will-learn">🧠 What You Will Learn</a></li>
-    <li><a href="#-core-example--container-with-most-water">🧩 Core Example — Container With Most Water</a>
-      <ul>
-        <li><a href="#problem-statement">Problem Statement</a></li>
-      </ul>
-    </li>
-    <li><a href="#-sample-input---output">📥 Sample Input / 📤 Output</a></li>
-    <li><a href="#-interviewer-insight">🧠 Interviewer Insight</a></li>
-    <li><a href="#-brute-force-what-not-to-do">🧩 Brute Force (What NOT To Do)</a></li>
-    <li><a href="#-two-pointer-strategy-correct">🧩 Two Pointer Strategy (Correct)</a>
-      <ul>
-        <li><a href="#-core-insight">💡 Core Insight</a></li>
-      </ul>
-    </li>
-    <li><a href="#-two-pointer-solution">🧑‍💻 Two Pointer Solution</a></li>
-    <li><a href="#-complexity">⏱️ Complexity</a></li>
-    <li><a href="#-two-pointer-patterns-you-must-recognize">🧠 Two Pointer Patterns You Must Recognize</a></li>
-    <li><a href="#-final-takeaway">🎯 Final Takeaway</a></li>
-    <li><a href="#-practice-targets">🏁 Practice Targets</a></li>
+    <li><a href="#-why-this-document-exists">🌍 Why This Document Exists</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-puzzle-1--smart-api-throttling">🟢 Puzzle 1 — Smart API Throttling</a></li>
+    <li><a href="#-puzzle-2--secure-login-validator">🟢 Puzzle 2 — Secure Login Validator</a></li>
+    <li><a href="#-puzzle-3--production-error-escalation">🟢 Puzzle 3 — Production Error Escalation</a></li>
+    <li><a href="#-puzzle-4--smart-cache-usage">🟡 Puzzle 4 — Smart Cache Usage</a></li>
+    <li><a href="#-puzzle-5--fraud-detection-rule">🟡 Puzzle 5 — Fraud Detection Rule</a></li>
+    <li><a href="#-puzzle-6--multi-level-access-control">🟡 Puzzle 6 — Multi-Level Access Control</a></li>
+    <li><a href="#-puzzle-7--intelligent-retry-logic">🟡 Puzzle 7 — Intelligent Retry Logic</a></li>
+    <li><a href="#-puzzle-8--data-pipeline-drop-rule">🔵 Puzzle 8 — Data Pipeline Drop Rule</a></li>
+    <li><a href="#-puzzle-9--alert-noise-reduction">🔵 Puzzle 9 — Alert Noise Reduction</a></li>
+    <li><a href="#-puzzle-10--smart-autoscaling-decision">🔵 Puzzle 10 — Smart Autoscaling Decision</a></li>
+    <li><a href="#-puzzle-11--complex-log-filtering">🔴 Puzzle 11 — Complex Log Filtering</a></li>
+    <li><a href="#-puzzle-12--deployment-gate">🔴 Puzzle 12 — Deployment Gate</a></li>
+    <li><a href="#-puzzle-13--feature-flag-evaluation">🔴 Puzzle 13 — Feature Flag Evaluation</a></li>
+    <li><a href="#-puzzle-14--dead-letter-queue-rule">🔴 Puzzle 14 — Dead Letter Queue Rule</a></li>
+    <li><a href="#-puzzle-15--ai-model-safety-gate">🔴 Puzzle 15 — AI Model Safety Gate</a></li>
+    <li><a href="#-puzzle-16--distributed-lock-acquisition">🟣 Puzzle 16 — Distributed Lock Acquisition</a></li>
+    <li><a href="#-puzzle-17--multi-region-failover">🟣 Puzzle 17 — Multi-Region Failover</a></li>
+    <li><a href="#-puzzle-18--abuse-detection">🟣 Puzzle 18 — Abuse Detection</a></li>
+    <li><a href="#-puzzle-19--financial-transaction-approval">🟣 Puzzle 19 — Financial Transaction Approval</a></li>
+    <li><a href="#-puzzle-20--senior-level-thinking">🟣 Puzzle 20 — Senior-Level Thinking</a></li>
+    <li><a href="#-final-truth">🏁 Final Truth</a></li>
   </ul>
 </nav>
 
@@ -1059,7 +1064,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        LC-TEST-08 — Two Pointers in the Wild
+        LC-TEST-16 — Algorithm Test (V3)
       </li>
     </ol>
   </nav>
@@ -1067,162 +1072,407 @@
 
           
 
-          <h1>LC-TEST-08 — Two Pointers in the Wild</h1>
+          <h1>LC-TEST-16 — Algorithm Test (V3)</h1>
 
           <div class="article-style">
-            <h2 id="-why-two-pointers-matter">🎯 Why Two Pointers Matter</h2>
-<p>Two pointers is not a trick.<br>
-It is a <strong>way of thinking</strong>.</p>
-<p>Strong developers see:</p>
-<blockquote>
-<p>“I don’t need extra memory.<br>
-I can let indices move and converge.”</p>
-</blockquote>
-<p>This technique appears everywhere:</p>
+            <h2 id="-why-this-document-exists">🌍 Why This Document Exists</h2>
+<p>This document trains <strong>engineering judgment</strong>, not syntax.</p>
+<p>Real interviews test:</p>
 <ul>
-<li>Arrays</li>
-<li>Strings</li>
-<li>Sorted data</li>
-<li>Geometry problems</li>
-<li>Optimization tasks</li>
+<li>how you <strong>combine conditions</strong></li>
+<li>how you <strong>eliminate wrong paths</strong></li>
+<li>how you <strong>protect systems with logic</strong></li>
 </ul>
-<p>If you master this, <strong>your code gets shorter immediately</strong>.</p>
+<p>If you master this → you think like a <strong>senior Python engineer</strong>.</p>
 <hr>
-<h2 id="-what-you-will-learn">🧠 What You Will Learn</h2>
-<p>In this lesson, you will train to:</p>
+<h1 id="-python-algorithm-thinking--20-advanced-logic-puzzles">🧠 Python Algorithm Thinking — 20 Advanced Logic Puzzles</h1>
+<p>Rules:</p>
 <ul>
-<li>Use <strong>left / right pointers confidently</strong></li>
-<li>Decide <strong>who moves and why</strong></li>
-<li>Avoid nested loops</li>
-<li>Reduce O(n²) → O(n)</li>
+<li>No shortcuts</li>
+<li>Read carefully</li>
+<li>Think in <strong>conditions</strong></li>
 </ul>
-<p>This is <strong>interview-critical muscle memory</strong>.</p>
 <hr>
-<h2 id="-core-example--container-with-most-water">🧩 Core Example — Container With Most Water</h2>
-<h3 id="problem-statement">Problem Statement</h3>
-<p>Given <code>n</code> non-negative integers representing vertical lines,
-find two lines that together with the x-axis form a container
-that holds the <strong>most water</strong>.</p>
-<hr>
-<h2 id="-sample-input---output">📥 Sample Input / 📤 Output</h2>
-<table>
-<thead>
-<tr>
-<th>height</th>
-<th>Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>[1,8,6,2,5,4,8,3,7]</td>
-<td>49</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="-interviewer-insight">🧠 Interviewer Insight</h2>
-<blockquote>
-<p>❗ Interviewers want to see:</p>
-<ul>
-<li>Do you understand <strong>why one pointer moves</strong></li>
-<li>Can you explain <strong>why brute force is wasteful</strong></li>
-<li>Do you trust a greedy decision?</li>
-</ul>
-</blockquote>
-<p>If you randomly move pointers, you fail.
-If you <strong>justify movement</strong>, you pass.</p>
-<hr>
-<h2 id="-brute-force-what-not-to-do">🧩 Brute Force (What NOT To Do)</h2>
-<pre><code class="language-python">max_area = 0
-for i in range(len(height)):
-    for j in range(i + 1, len(height)):
-        max_area = max(
-            max_area,
-            min(height[i], height[j]) * (j - i)
-        )
+<h2 id="-puzzle-1--smart-api-throttling">🟢 Puzzle 1 — Smart API Throttling</h2>
+<p>API request has:</p>
+<pre><code class="language-python">requests = [
+    {&quot;user&quot;:&quot;A&quot;,&quot;count&quot;:90,&quot;premium&quot;:False},
+    {&quot;user&quot;:&quot;B&quot;,&quot;count&quot;:120,&quot;premium&quot;:True},
+    {&quot;user&quot;:&quot;C&quot;,&quot;count&quot;:120,&quot;premium&quot;:False},
+]
 </code></pre>
-<p>⛔ O(n²)
-⛔ Interview red flag</p>
-<hr>
-<h2 id="-two-pointer-strategy-correct">🧩 Two Pointer Strategy (Correct)</h2>
-<h3 id="-core-insight">💡 Core Insight</h3>
-<p>The <strong>shorter line</strong> limits the area.</p>
-<p>So:</p>
+<p><strong>Rules:</strong></p>
 <ul>
-<li>Move the pointer pointing to the <strong>shorter height</strong></li>
-<li>Because moving the taller one <strong>cannot increase area</strong></li>
+<li>Block if <code>count &gt; 100</code></li>
+<li>BUT allow if <code>premium == True</code></li>
 </ul>
-<p>This is the entire trick.</p>
-<hr>
-<h2 id="-two-pointer-solution">🧑‍💻 Two Pointer Solution</h2>
-<pre><code class="language-python">def maxArea(height):
-    left, right = 0, len(height) - 1
-    best = 0
+<p><strong>Task:</strong><br>
+Return users that are <strong>blocked</strong>.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">blocked = []
 
-    while left &lt; right:
-        width = right - left
-        area = min(height[left], height[right]) * width
-        best = max(best, area)
+for r in requests:
+    if r[&quot;count&quot;] &gt; 100 and not r[&quot;premium&quot;]:
+        blocked.append(r[&quot;user&quot;])
 
-        if height[left] &lt; height[right]:
-            left += 1
-        else:
-            right -= 1
-
-    return best
+print(blocked)
 </code></pre>
+</details>
 <hr>
-<h2 id="-complexity">⏱️ Complexity</h2>
+<h2 id="-puzzle-2--secure-login-validator">🟢 Puzzle 2 — Secure Login Validator</h2>
+<p>A login attempt is valid if:</p>
 <ul>
-<li><strong>Time:</strong> O(n)</li>
-<li><strong>Space:</strong> O(1)</li>
+<li>username exists</li>
+<li>password matches</li>
+<li>account is active <strong>OR</strong> admin override is true</li>
 </ul>
-<p>Optimal.</p>
+<pre><code class="language-python">user = {
+  &quot;exists&quot;: True,
+  &quot;password_ok&quot;: True,
+  &quot;active&quot;: False,
+  &quot;admin_override&quot;: True
+}
+</code></pre>
+<p><strong>Task:</strong><br>
+Return <code>True / False</code>.</p>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">valid = (
+    user[&quot;exists&quot;]
+    and user[&quot;password_ok&quot;]
+    and (user[&quot;active&quot;] or user[&quot;admin_override&quot;])
+)
+
+print(valid)
+</code></pre>
+</details>
 <hr>
-<h2 id="-two-pointer-patterns-you-must-recognize">🧠 Two Pointer Patterns You Must Recognize</h2>
-<table>
-<thead>
-<tr>
-<th>Pattern</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Opposite ends</td>
-<td>Container, Palindrome</td>
-</tr>
-<tr>
-<td>Same direction</td>
-<td>Remove duplicates</td>
-</tr>
-<tr>
-<td>Meet in middle</td>
-<td>Pair sum</td>
-</tr>
-<tr>
-<td>Shrinking window</td>
-<td>Valid palindrome</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="-final-takeaway">🎯 Final Takeaway</h2>
-<blockquote>
-<p>Two pointers is about <strong>controlled movement</strong>, not guessing.</p>
-</blockquote>
-<p>If you can explain <strong>why</strong> a pointer moves,
-interviewers assume you understand <strong>algorithmic reasoning</strong>.</p>
-<hr>
-<h2 id="-practice-targets">🏁 Practice Targets</h2>
+<h2 id="-puzzle-3--production-error-escalation">🟢 Puzzle 3 — Production Error Escalation</h2>
+<p>Error should be escalated if:</p>
 <ul>
-<li>Valid Palindrome</li>
-<li>Two Sum II (sorted)</li>
-<li>Remove Duplicates</li>
-<li>3Sum</li>
-<li>Squares of a Sorted Array</li>
+<li>severity ≥ 8</li>
+<li>AND (service is <code>&quot;payment&quot;</code> OR <code>&quot;auth&quot;</code>)</li>
+<li>AND NOT during maintenance</li>
 </ul>
-<p>Master these → you look <em>dangerous</em> in interviews 😈</p>
+<pre><code class="language-python">error = {&quot;sev&quot;:9,&quot;service&quot;:&quot;payment&quot;,&quot;maintenance&quot;:False}
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">if (
+    error[&quot;sev&quot;] &gt;= 8
+    and error[&quot;service&quot;] in (&quot;payment&quot;,&quot;auth&quot;)
+    and not error[&quot;maintenance&quot;]
+):
+    print(&quot;Escalate&quot;)
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-4--smart-cache-usage">🟡 Puzzle 4 — Smart Cache Usage</h2>
+<p>Use cache if:</p>
+<ul>
+<li>cache exists</li>
+<li>AND (data fresh OR forced_cache=True)</li>
+</ul>
+<pre><code class="language-python">cache = {&quot;exists&quot;:True,&quot;fresh&quot;:False}
+forced_cache = True
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">use_cache = (
+    cache[&quot;exists&quot;]
+    and (cache[&quot;fresh&quot;] or forced_cache)
+)
+
+print(use_cache)
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-5--fraud-detection-rule">🟡 Puzzle 5 — Fraud Detection Rule</h2>
+<p>Transaction is suspicious if:</p>
+<ul>
+<li>amount &gt; 10_000</li>
+<li>OR (amount &gt; 3_000 AND country not trusted)</li>
+<li>AND NOT internal_transfer</li>
+</ul>
+<pre><code class="language-python">tx = {&quot;amount&quot;:5000,&quot;trusted&quot;:False,&quot;internal&quot;:False}
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">if (
+    (tx[&quot;amount&quot;] &gt; 10000
+    or (tx[&quot;amount&quot;] &gt; 3000 and not tx[&quot;trusted&quot;]))
+    and not tx[&quot;internal&quot;]
+):
+    print(&quot;Suspicious&quot;)
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-6--multi-level-access-control">🟡 Puzzle 6 — Multi-Level Access Control</h2>
+<p>Access granted if:</p>
+<ul>
+<li>role is <code>&quot;admin&quot;</code></li>
+<li>OR (role <code>&quot;dev&quot;</code> AND env <code>&quot;staging&quot;</code>)</li>
+<li>OR (role <code>&quot;viewer&quot;</code> AND read_only=True)</li>
+</ul>
+<pre><code class="language-python">user = {&quot;role&quot;:&quot;dev&quot;,&quot;env&quot;:&quot;staging&quot;,&quot;read_only&quot;:False}
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">if (
+    user[&quot;role&quot;] == &quot;admin&quot;
+    or (user[&quot;role&quot;] == &quot;dev&quot; and user[&quot;env&quot;] == &quot;staging&quot;)
+    or (user[&quot;role&quot;] == &quot;viewer&quot; and user[&quot;read_only&quot;])
+):
+    print(&quot;Access granted&quot;)
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-7--intelligent-retry-logic">🟡 Puzzle 7 — Intelligent Retry Logic</h2>
+<p>Retry request if:</p>
+<ul>
+<li>status &gt;= 500</li>
+<li>AND retries &lt; 3</li>
+<li>AND NOT timeout</li>
+</ul>
+<pre><code class="language-python">req = {&quot;status&quot;:502,&quot;retries&quot;:2,&quot;timeout&quot;:False}
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">if (
+    req[&quot;status&quot;] &gt;= 500
+    and req[&quot;retries&quot;] &lt; 3
+    and not req[&quot;timeout&quot;]
+):
+    print(&quot;Retry&quot;)
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-8--data-pipeline-drop-rule">🔵 Puzzle 8 — Data Pipeline Drop Rule</h2>
+<p>Drop record if:</p>
+<ul>
+<li>missing required field</li>
+<li>OR invalid format</li>
+<li>OR (late arrival AND not backfill)</li>
+</ul>
+<pre><code class="language-python">rec = {&quot;missing&quot;:False,&quot;invalid&quot;:False,&quot;late&quot;:True,&quot;backfill&quot;:False}
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">if (
+    rec[&quot;missing&quot;]
+    or rec[&quot;invalid&quot;]
+    or (rec[&quot;late&quot;] and not rec[&quot;backfill&quot;])
+):
+    print(&quot;Drop&quot;)
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-9--alert-noise-reduction">🔵 Puzzle 9 — Alert Noise Reduction</h2>
+<p>Send alert if:</p>
+<ul>
+<li>severity ≥ 7</li>
+<li>AND (new_error OR error_rate &gt; threshold)</li>
+<li>AND NOT already_alerted</li>
+</ul>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">if (
+    sev &gt;= 7
+    and (new_error or rate &gt; threshold)
+    and not alerted
+):
+    print(&quot;Alert&quot;)
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-10--smart-autoscaling-decision">🔵 Puzzle 10 — Smart Autoscaling Decision</h2>
+<p>Scale up if:</p>
+<ul>
+<li>cpu &gt; 70 AND mem &gt; 70</li>
+<li>OR queue &gt; 1000</li>
+<li>AND NOT maintenance</li>
+</ul>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">if (
+    ((cpu &gt; 70 and mem &gt; 70) or queue &gt; 1000)
+    and not maintenance
+):
+    print(&quot;Scale up&quot;)
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-11--complex-log-filtering">🔴 Puzzle 11 — Complex Log Filtering</h2>
+<p>Keep log if:</p>
+<ul>
+<li>level is ERROR or WARN</li>
+<li>AND service not deprecated</li>
+<li>AND (env is prod OR flagged)</li>
+</ul>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">if (
+    log[&quot;level&quot;] in (&quot;ERROR&quot;,&quot;WARN&quot;)
+    and not log[&quot;deprecated&quot;]
+    and (log[&quot;env&quot;] == &quot;prod&quot; or log[&quot;flagged&quot;])
+):
+    kept.append(log)
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-12--deployment-gate">🔴 Puzzle 12 — Deployment Gate</h2>
+<p>Allow deploy if:</p>
+<ul>
+<li>tests passed</li>
+<li>AND security approved</li>
+<li>AND (low_risk OR manager_approved)</li>
+</ul>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">if (
+    tests_ok
+    and security_ok
+    and (low_risk or manager_ok)
+):
+    print(&quot;Deploy&quot;)
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-13--feature-flag-evaluation">🔴 Puzzle 13 — Feature Flag Evaluation</h2>
+<p>Enable feature if:</p>
+<ul>
+<li>flag_on</li>
+<li>AND user_beta</li>
+<li>AND NOT region_blocked</li>
+</ul>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">if flag and beta and not blocked:
+    enable()
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-14--dead-letter-queue-rule">🔴 Puzzle 14 — Dead Letter Queue Rule</h2>
+<p>Send to DLQ if:</p>
+<ul>
+<li>retries exhausted</li>
+<li>OR malformed payload</li>
+<li>AND NOT manual_override</li>
+</ul>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">if (
+    (retries == 0 or malformed)
+    and not manual_override
+):
+    send_dlq()
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-15--ai-model-safety-gate">🔴 Puzzle 15 — AI Model Safety Gate</h2>
+<p>Allow response if:</p>
+<ul>
+<li>confidence &gt; 0.9</li>
+<li>AND NOT hallucinated</li>
+<li>AND (verified_source OR human_reviewed)</li>
+</ul>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">if (
+    conf &gt; 0.9
+    and not hallucinated
+    and (verified or reviewed)
+):
+    respond()
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-16--distributed-lock-acquisition">🟣 Puzzle 16 — Distributed Lock Acquisition</h2>
+<p>Acquire lock if:</p>
+<ul>
+<li>lock free</li>
+<li>OR expired</li>
+<li>AND requester authorized</li>
+</ul>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">if (
+    (free or expired)
+    and authorized
+):
+    acquire()
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-17--multi-region-failover">🟣 Puzzle 17 — Multi-Region Failover</h2>
+<p>Failover if:</p>
+<ul>
+<li>primary down</li>
+<li>AND secondary healthy</li>
+<li>AND NOT maintenance_window</li>
+</ul>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">if primary_down and secondary_ok and not maintenance:
+    failover()
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-18--abuse-detection">🟣 Puzzle 18 — Abuse Detection</h2>
+<p>Block user if:</p>
+<ul>
+<li>reports &gt; 5</li>
+<li>AND (spam OR harassment)</li>
+<li>AND NOT verified_user</li>
+</ul>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">if reports &gt; 5 and (spam or harassment) and not verified:
+    block()
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-19--financial-transaction-approval">🟣 Puzzle 19 — Financial Transaction Approval</h2>
+<p>Approve if:</p>
+<ul>
+<li>balance sufficient</li>
+<li>AND not frozen</li>
+<li>AND (trusted_merchant OR small_amount)</li>
+</ul>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">if balance &gt;= amount and not frozen and (trusted or amount &lt; 50):
+    approve()
+</code></pre>
+</details>
+<hr>
+<h2 id="-puzzle-20--senior-level-thinking">🟣 Puzzle 20 — Senior-Level Thinking</h2>
+<p><strong>Explain (no code):</strong><br>
+Why grouping conditions incorrectly can cause:</p>
+<ul>
+<li>security bugs</li>
+<li>outages</li>
+<li>financial loss</li>
+</ul>
+<details>
+<summary>✅ Solution</summary>
+<p>Because logical precedence mistakes (<code>and</code> / <code>or</code>) can:</p>
+<ul>
+<li>bypass security</li>
+<li>trigger actions unintentionally</li>
+<li>scale systems incorrectly</li>
+</ul>
+<p>Senior engineers design logic <strong>defensively</strong>.</p>
+</details>
+<hr>
+<h2 id="-final-truth">🏁 Final Truth</h2>
+<p>If you master <strong>logic composition</strong>,<br>
+you master <strong>engineering power</strong>.</p>
+<p>Teach this.
+Spread this.
+Make engineers better.</p>
+<hr>
           </div>
 
           
@@ -1239,15 +1489,9 @@ interviewers assume you understand <strong>algorithmic reasoning</strong>.</p>
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-07-indexing-and-containers/" rel="next">LC-TEST-07 — Indexing &amp; Containers Mastery</a>
+    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-15-algorithm-test-v2/" rel="next">LC-TEST-15 — Algorithm Test (V2)</a>
   </div>
   
-  
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-09-sliding-windows/" rel="prev">LC-TEST-09 — Sliding Window Like a Pro</a>
-  </div>
   
 </div>
 
@@ -1256,7 +1500,7 @@ interviewers assume you understand <strong>algorithmic reasoning</strong>.</p>
         </div>
 
         <div class="body-footer">
-          <p>Last updated on 2025</p>
+          <p>Last updated on 2026</p>
 
           
 

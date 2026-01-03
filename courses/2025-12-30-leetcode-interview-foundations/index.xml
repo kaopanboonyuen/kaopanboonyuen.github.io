@@ -494,11 +494,24 @@ Big-O is &lt;strong&gt;thinking about scale&lt;/strong&gt;.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;This chapter builds that instinct.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;-absolute-basics-interview-warm-up&#34;&gt;🔁 Absolute Basics (Interview Warm-Up)&lt;/h2&gt;
-&lt;p&gt;These problems look easy, but &lt;strong&gt;many candidates fail them&lt;/strong&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;-problem-1--count-prime-numbers-classic-warm-up&#34;&gt;🔢 Problem 1 — Count Prime Numbers (Classic Warm-Up)&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
-Given &lt;code&gt;n&lt;/code&gt;, count how many prime numbers are &lt;code&gt;&amp;lt; n&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;1-absolute-basics-interview-warm-up&#34;&gt;1. Absolute Basics (Interview Warm-Up)&lt;/h2&gt;
+&lt;p&gt;These problems look &lt;em&gt;deceptively easy&lt;/em&gt;, yet &lt;strong&gt;many candidates fail them&lt;/strong&gt; — not because they can’t code, but because they &lt;strong&gt;don’t think flexibly&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 The goal is &lt;strong&gt;not&lt;/strong&gt; to memorize one solution,&lt;br&gt;
+but to understand &lt;strong&gt;why many solutions are possible&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;11-problem--count-prime-numbers&#34;&gt;1.1 Problem — Count Prime Numbers&lt;/h2&gt;
+&lt;h3 id=&#34;task&#34;&gt;Task&lt;/h3&gt;
+&lt;p&gt;Given an integer &lt;code&gt;n&lt;/code&gt;, &lt;strong&gt;count how many prime numbers are strictly less than &lt;code&gt;n&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A prime number is a number:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;greater than 1&lt;/li&gt;
+&lt;li&gt;divisible &lt;strong&gt;only&lt;/strong&gt; by 1 and itself&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;12-baseline-reference-solution-most-common&#34;&gt;1.2 Baseline Reference Solution (Most Common)&lt;/h2&gt;
+&lt;p&gt;This is the solution &lt;strong&gt;everyone knows&lt;/strong&gt; — and that’s exactly why it’s &lt;em&gt;not enough&lt;/em&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def count_primes(n):
     def is_prime(x):
         if x &amp;lt; 2:
@@ -514,13 +527,1420 @@ Given &lt;code&gt;n&lt;/code&gt;, count how many prime numbers are &lt;code&gt;&
             count += 1
     return count
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;🧠 Why interviewers love this:&lt;/p&gt;
+&lt;p&gt;✅ Correct
+❌ Predictable
+❌ Shows &lt;strong&gt;only one way of thinking&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;13-how-strong-candidates-think-about-is_primex&#34;&gt;1.3 How Strong Candidates &lt;em&gt;Think&lt;/em&gt; About &lt;code&gt;is_prime(x)&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;A strong engineer does &lt;strong&gt;not&lt;/strong&gt; ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“How do I write &lt;code&gt;is_prime&lt;/code&gt;?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;They ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;“What conditions must be violated for a number to be prime?”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This mindset unlocks &lt;strong&gt;multiple valid implementations&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;131-idea-1--divisor-search-for-loop&#34;&gt;1.3.1 Idea 1 — Divisor Search (For Loop)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Thinking:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“If a number has &lt;em&gt;any&lt;/em&gt; divisor other than 1 and itself, it’s not prime.”&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;Loop control&lt;/li&gt;
-&lt;li&gt;Early break&lt;/li&gt;
-&lt;li&gt;Math intuition&lt;/li&gt;
-&lt;li&gt;Nested functions&lt;/li&gt;
+&lt;li&gt;Stop early when a divisor is found&lt;/li&gt;
+&lt;li&gt;No need to check beyond √x&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;This leads to the classic &lt;code&gt;for&lt;/code&gt;-loop solution.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;132-idea-2--same-logic-different-control-flow-while-loop&#34;&gt;1.3.2 Idea 2 — Same Logic, Different Control Flow (&lt;code&gt;while&lt;/code&gt; loop)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Thinking:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“The logic doesn’t depend on &lt;code&gt;for&lt;/code&gt; — it depends on &lt;em&gt;iteration&lt;/em&gt;.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def is_prime(x):
+    if x &amp;lt; 2:
+        return False
+    i = 2
+    while i * i &amp;lt;= x:
+        if x % i == 0:
+            return False
+        i += 1
+    return True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;✨ Same math
+✨ Same correctness
+✨ &lt;strong&gt;Different reasoning style&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This shows &lt;strong&gt;control-flow mastery&lt;/strong&gt;, not memorization.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;133-idea-3--mathematical-elimination&#34;&gt;1.3.3 Idea 3 — Mathematical Elimination&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Thinking:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Most numbers are not prime. Can I eliminate many cases early?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def is_prime(x):
+    if x &amp;lt; 2:
+        return False
+    if x == 2:
+        return True
+    if x % 2 == 0:
+        return False
+
+    i = 3
+    while i * i &amp;lt;= x:
+        if x % i == 0:
+            return False
+        i += 2
+    return True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🎯 Insight:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Skip even numbers entirely&lt;/li&gt;
+&lt;li&gt;Half the work, same correctness&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This demonstrates &lt;strong&gt;performance awareness&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;134-idea-4--conceptual-shift-precomputation&#34;&gt;1.3.4 Idea 4 — Conceptual Shift (Precomputation)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Thinking:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Why test each number independently?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Instead:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Precompute primes once&lt;/li&gt;
+&lt;li&gt;Reuse results&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This leads naturally to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sieve of Eratosthenes&lt;/li&gt;
+&lt;li&gt;Boolean arrays&lt;/li&gt;
+&lt;li&gt;Time–space tradeoffs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🚀 This is how &lt;strong&gt;simple problems evolve into algorithms&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;14-what-interviewers-actually-evaluate&#34;&gt;1.4 What Interviewers &lt;em&gt;Actually&lt;/em&gt; Evaluate&lt;/h2&gt;
+&lt;p&gt;They are &lt;strong&gt;not&lt;/strong&gt; checking if you remember &lt;code&gt;sqrt(x)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;They look for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✔ Logical decomposition&lt;/li&gt;
+&lt;li&gt;✔ Early termination&lt;/li&gt;
+&lt;li&gt;✔ Control-flow flexibility&lt;/li&gt;
+&lt;li&gt;✔ Mathematical intuition&lt;/li&gt;
+&lt;li&gt;✔ Ability to explain &lt;em&gt;why&lt;/em&gt; a solution works&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;15-teaching-message&#34;&gt;1.5 Teaching Message&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;If you can write the same logic in multiple ways,
+you truly understand it.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Anyone can copy:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i in range(2, int(x**0.5) + 1):
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Only strong thinkers can say:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“That’s just &lt;em&gt;one&lt;/em&gt; way to express the idea.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-interview-follow-up--get-all-prime-numbers&#34;&gt;2. Interview Follow-Up — Get &lt;em&gt;All&lt;/em&gt; Prime Numbers&lt;/h2&gt;
+&lt;p&gt;After you solve &lt;strong&gt;counting primes&lt;/strong&gt;, a strong interviewer often asks:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;❓ &lt;em&gt;“Okay. How would you return &lt;strong&gt;all prime numbers&lt;/strong&gt;?”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is where &lt;strong&gt;thinking depth&lt;/strong&gt; matters.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;21-first-question-to-ask-yourself-very-important&#34;&gt;2.1 First Question to Ask Yourself (Very Important)&lt;/h2&gt;
+&lt;p&gt;A weak candidate immediately writes code.&lt;/p&gt;
+&lt;p&gt;A strong candidate pauses and asks:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🧠 &lt;strong&gt;“Up to what range?”&lt;/strong&gt;&lt;br&gt;
+🧠 &lt;strong&gt;“Once or many queries?”&lt;/strong&gt;&lt;br&gt;
+🧠 &lt;strong&gt;“Do I care about speed or memory?”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;These questions decide the solution.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;22-method-1--brute-force-trial-division&#34;&gt;2.2 Method 1 — Brute Force (Trial Division)&lt;/h2&gt;
+&lt;h3 id=&#34;idea&#34;&gt;Idea&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“A number is prime if it survives divisor testing.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is the &lt;strong&gt;most direct&lt;/strong&gt; extension of &lt;code&gt;is_prime(x)&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def all_primes_bruteforce(n):
+    primes = []
+
+    for x in range(2, n):
+        is_prime = True
+        for i in range(2, int(x**0.5) + 1):
+            if x % i == 0:
+                is_prime = False
+                break
+        if is_prime:
+            primes.append(x)
+
+    return primes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;why-this-still-matters&#34;&gt;Why This Still Matters&lt;/h3&gt;
+&lt;p&gt;✔ Easy to explain
+✔ Easy to verify
+✔ Good for &lt;strong&gt;small &lt;code&gt;n&lt;/code&gt;&lt;/strong&gt;
+❌ Repeats work many times&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Interview signal: &lt;em&gt;“I understand the baseline before optimizing.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;23-method-2--control-flow-mastery-while-based-thinking&#34;&gt;2.3 Method 2 — Control-Flow Mastery (While-Based Thinking)&lt;/h2&gt;
+&lt;h3 id=&#34;idea-1&#34;&gt;Idea&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“The algorithm doesn’t depend on &lt;code&gt;for&lt;/code&gt; — only on logic.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def all_primes_while(n):
+    primes = []
+
+    x = 2
+    while x &amp;lt; n:
+        i = 2
+        prime = True
+        while i * i &amp;lt;= x:
+            if x % i == 0:
+                prime = False
+                break
+            i += 1
+        if prime:
+            primes.append(x)
+        x += 1
+
+    return primes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;why-interviewers-like-this&#34;&gt;Why Interviewers Like This&lt;/h3&gt;
+&lt;p&gt;✔ Shows &lt;strong&gt;loop control confidence&lt;/strong&gt;
+✔ Demonstrates flexibility
+✔ Not locked to syntax patterns&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Same math, different brain.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;24-method-3--mathematical-elimination-smarter-trial-division&#34;&gt;2.4 Method 3 — Mathematical Elimination (Smarter Trial Division)&lt;/h2&gt;
+&lt;h3 id=&#34;idea-2&#34;&gt;Idea&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Most numbers are obviously not prime.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Key observations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2 is the only even prime&lt;/li&gt;
+&lt;li&gt;Skip all even numbers&lt;/li&gt;
+&lt;li&gt;Check only odd divisors&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def all_primes_optimized(n):
+    if n &amp;lt;= 2:
+        return []
+
+    primes = [2]
+
+    for x in range(3, n, 2):
+        prime = True
+        for i in range(3, int(x**0.5) + 1, 2):
+            if x % i == 0:
+                prime = False
+                break
+        if prime:
+            primes.append(x)
+
+    return primes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;interview-gold-signal&#34;&gt;Interview Gold Signal&lt;/h3&gt;
+&lt;p&gt;✔ Cuts work ~50%
+✔ Shows &lt;strong&gt;mathematical reasoning&lt;/strong&gt;
+✔ Same correctness, better performance&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;25-method-4--conceptual-leap-sieve-of-eratosthenes&#34;&gt;2.5 Method 4 — Conceptual Leap (Sieve of Eratosthenes)&lt;/h2&gt;
+&lt;h3 id=&#34;idea-shift-this-is-the-key-moment&#34;&gt;Idea Shift (This Is the Key Moment)&lt;/h3&gt;
+&lt;p&gt;Instead of asking:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Is this number prime?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;“Which numbers are definitely NOT prime?”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This flips the problem.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;sieve-algorithm&#34;&gt;Sieve Algorithm&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def all_primes_sieve(n):
+    if n &amp;lt;= 2:
+        return []
+
+    is_prime = [True] * n
+    is_prime[0] = is_prime[1] = False
+
+    p = 2
+    while p * p &amp;lt; n:
+        if is_prime[p]:
+            for multiple in range(p * p, n, p):
+                is_prime[multiple] = False
+        p += 1
+
+    return [i for i in range(n) if is_prime[i]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;why-this-impresses-interviewers&#34;&gt;Why This Impresses Interviewers&lt;/h3&gt;
+&lt;p&gt;✔ Classic algorithm knowledge
+✔ Time complexity: &lt;strong&gt;O(n log log n)&lt;/strong&gt;
+✔ No repeated primality checks
+✔ Shows &lt;strong&gt;algorithmic maturity&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is where warm-up ends and &lt;em&gt;real CS begins&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;26-method-5--incremental-prime-building-reuse-knowledge&#34;&gt;2.6 Method 5 — Incremental Prime Building (Reuse Knowledge)&lt;/h2&gt;
+&lt;h3 id=&#34;idea-3&#34;&gt;Idea&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“To test a number, I only need &lt;strong&gt;previous primes&lt;/strong&gt;.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def all_primes_incremental(n):
+    primes = []
+
+    for x in range(2, n):
+        prime = True
+        for p in primes:
+            if p * p &amp;gt; x:
+                break
+            if x % p == 0:
+                prime = False
+                break
+        if prime:
+            primes.append(x)
+
+    return primes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;why-this-is-subtle-and-powerful&#34;&gt;Why This Is Subtle and Powerful&lt;/h3&gt;
+&lt;p&gt;✔ Avoids redundant checks
+✔ Natural optimization
+✔ Bridges brute force → sieve thinking&lt;/p&gt;
+&lt;p&gt;Interviewers often smile at this one 😄&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;27-how-to-explain-this-like-a-pro-talking-points&#34;&gt;2.7 How to Explain This Like a Pro (Talking Points)&lt;/h2&gt;
+&lt;p&gt;When asked &lt;strong&gt;“How do you get all primes?”&lt;/strong&gt;, say:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“There are multiple valid strategies, depending on constraints.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Then briefly summarize:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Method&lt;/th&gt;
+&lt;th&gt;Key Idea&lt;/th&gt;
+&lt;th&gt;Best When&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Brute force&lt;/td&gt;
+&lt;td&gt;Test each number&lt;/td&gt;
+&lt;td&gt;Small &lt;code&gt;n&lt;/code&gt;, clarity&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Optimized trial&lt;/td&gt;
+&lt;td&gt;Skip evens&lt;/td&gt;
+&lt;td&gt;Medium &lt;code&gt;n&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Incremental&lt;/td&gt;
+&lt;td&gt;Reuse primes&lt;/td&gt;
+&lt;td&gt;Streaming primes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Sieve&lt;/td&gt;
+&lt;td&gt;Mark composites&lt;/td&gt;
+&lt;td&gt;Large &lt;code&gt;n&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;28-teaching-message-very-strong&#34;&gt;2.8 Teaching Message (Very Strong)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;The problem is not about primes.&lt;/strong&gt;
+It is about &lt;strong&gt;how you think, structure, and optimize&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If a student can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Write it in &lt;strong&gt;multiple ways&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Explain &lt;strong&gt;why each works&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Choose based on &lt;strong&gt;constraints&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;👉 They are interview-ready.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-containers--indexing--the-hidden-power-behind-easy-problems&#34;&gt;3. Containers &amp;amp; Indexing — The Hidden Power Behind Easy Problems&lt;/h2&gt;
+&lt;p&gt;Many interview problems are labeled &lt;em&gt;easy&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;They are not testing difficulty.&lt;br&gt;
+They are testing &lt;strong&gt;how well you control containers and indexing&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;31-containers-you-must-master-not-memorize&#34;&gt;3.1 Containers You Must Master (Not Memorize)&lt;/h2&gt;
+&lt;p&gt;Before writing any algorithm, ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;🧠 &lt;em&gt;“What container represents my idea most clearly?”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Container&lt;/th&gt;
+&lt;th&gt;When to Use&lt;/th&gt;
+&lt;th&gt;Interview Signal&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;list&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Ordered, indexed data&lt;/td&gt;
+&lt;td&gt;Iteration, slicing&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;set&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Uniqueness, fast lookup&lt;/td&gt;
+&lt;td&gt;Optimization thinking&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;dict&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Mapping, frequency&lt;/td&gt;
+&lt;td&gt;Real-world modeling&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;tuple&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Fixed structure&lt;/td&gt;
+&lt;td&gt;Safety &amp;amp; intent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Most LeetCode problems are &lt;strong&gt;container problems in disguise&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;32-indexing--where-real-control-begins&#34;&gt;3.2 Indexing — Where Real Control Begins&lt;/h2&gt;
+&lt;h3 id=&#34;basic-indexing&#34;&gt;Basic Indexing&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;arr = [10, 20, 30, 40, 50]
+
+arr[0]    # 10
+arr[1]    # 20
+arr[-1]   # 50
+arr[-2]   # 40
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Thinking:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Positive index → from the front&lt;/li&gt;
+&lt;li&gt;Negative index → from the back&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Interview hint: Negative indexing often removes edge-case code.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;33-slicing-syntax-start--stop--step&#34;&gt;3.3 Slicing Syntax (Start : Stop : Step)&lt;/h2&gt;
+&lt;p&gt;This is &lt;strong&gt;non-negotiable knowledge&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;arr[start : stop : step]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Component&lt;/th&gt;
+&lt;th&gt;Meaning&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;start&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Where to begin (inclusive)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;stop&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Where to end (exclusive)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;step&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;How to move&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;331-basic-slicing-warm-up&#34;&gt;3.3.1 Basic Slicing (Warm-Up)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;arr = [0, 1, 2, 3, 4, 5, 6]
+
+arr[1:5]     # [1, 2, 3, 4]
+arr[:4]      # [0, 1, 2, 3]
+arr[3:]      # [3, 4, 5, 6]
+arr[:]       # full copy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Thinking:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Python slicing avoids off-by-one bugs.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;34-step--where-you-impress-people&#34;&gt;3.4 Step — Where You Impress People&lt;/h2&gt;
+&lt;h3 id=&#34;skipping-elements&#34;&gt;Skipping Elements&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;arr[::2]     # every 2nd element
+arr[1::2]    # odd indices
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Used in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Optimizing prime checks&lt;/li&gt;
+&lt;li&gt;Sampling data&lt;/li&gt;
+&lt;li&gt;Window-based problems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;reverse-without-a-loop--interview-favorite&#34;&gt;Reverse Without a Loop (🔥 Interview Favorite)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;arr[::-1]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;No temp variables
+No loop
+No bugs&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Many candidates forget this. Interviewers do not.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;35-advanced-slicing-patterns-real-leetcode-use&#34;&gt;3.5 Advanced Slicing Patterns (Real LeetCode Use)&lt;/h2&gt;
+&lt;h3 id=&#34;process-only-odd-numbers&#34;&gt;Process Only Odd Numbers&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;nums = list(range(20))
+odds = nums[1::2]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Used in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Prime optimization&lt;/li&gt;
+&lt;li&gt;Parity problems&lt;/li&gt;
+&lt;li&gt;Bit manipulation prep&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;sliding-window-intuition-without-writing-it-yet&#34;&gt;Sliding Window Intuition (Without Writing It Yet)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;window_size = 3
+for i in range(len(arr) - window_size + 1):
+    window = arr[i : i + window_size]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 This idea powers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Max subarray&lt;/li&gt;
+&lt;li&gt;Moving average&lt;/li&gt;
+&lt;li&gt;Time-series features&lt;/li&gt;
+&lt;li&gt;NLP n-grams&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;36-rangestart-stop-step--the-loop-twin-of-slicing&#34;&gt;3.6 &lt;code&gt;range(start, stop, step)&lt;/code&gt; — The Loop Twin of Slicing&lt;/h2&gt;
+&lt;p&gt;Many people misuse &lt;code&gt;range&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Strong candidates &lt;strong&gt;design it&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;range(start, stop, step)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;examples-that-matter&#34;&gt;Examples That Matter&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;range(5)           # 0,1,2,3,4
+range(2, 10)       # 2..9
+range(1, 10, 2)    # odd numbers
+range(10, 0, -1)   # reverse loop
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;prime-optimization-example-tie-back&#34;&gt;Prime Optimization Example (Tie Back)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i in range(3, int(x**0.5) + 1, 2):
+    ...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Insight:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start at 3&lt;/li&gt;
+&lt;li&gt;Stop at √x&lt;/li&gt;
+&lt;li&gt;Step by 2 (skip evens)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is &lt;strong&gt;not syntax&lt;/strong&gt; — it is &lt;strong&gt;thinking encoded into iteration&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;37-containers--indexing--real-world-thinking&#34;&gt;3.7 Containers + Indexing = Real-World Thinking&lt;/h2&gt;
+&lt;h3 id=&#34;example-marking-non-primes-sieve-recall&#34;&gt;Example: Marking Non-Primes (Sieve Recall)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;is_prime = [True] * n
+is_prime[0] = is_prime[1] = False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Container choice: list&lt;/li&gt;
+&lt;li&gt;Index = number itself&lt;/li&gt;
+&lt;li&gt;Value = property of that number&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is how abstract math becomes code.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;38-interviewer-mental-checklist-they-wont-tell-you&#34;&gt;3.8 Interviewer Mental Checklist (They Won’t Tell You)&lt;/h2&gt;
+&lt;p&gt;They silently ask:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Does this candidate know slicing?&lt;/li&gt;
+&lt;li&gt;Do they avoid unnecessary loops?&lt;/li&gt;
+&lt;li&gt;Can they control iteration boundaries?&lt;/li&gt;
+&lt;li&gt;Can they reverse, skip, and window cleanly?&lt;/li&gt;
+&lt;li&gt;Do they understand start/stop/step?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If yes → &lt;strong&gt;strong hire signal&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;39-teaching-message-very-strong&#34;&gt;3.9 Teaching Message (Very Strong)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Containers are not data.&lt;/strong&gt;
+&lt;strong&gt;They are thinking tools.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you master:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Indexing&lt;/li&gt;
+&lt;li&gt;Slicing&lt;/li&gt;
+&lt;li&gt;Step control&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Your code is shorter&lt;/li&gt;
+&lt;li&gt;Your logic is clearer&lt;/li&gt;
+&lt;li&gt;Your interviews go smoother&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;310-final-impression-line-use-this-verbally&#34;&gt;3.10 Final Impression Line (Use This Verbally)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Most problems are solved not by clever algorithms,
+but by precise control of containers and iteration.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;🔥 This framing &lt;strong&gt;always&lt;/strong&gt; impresses.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-applied-problem--lionel-messi-at-fc-barcelona-&#34;&gt;4. Applied Problem — Lionel Messi at FC Barcelona 🐐&lt;/h2&gt;
+&lt;p&gt;Abstract concepts only stick when people can &lt;strong&gt;see them in real life&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;So let’s apply containers and indexing to a story &lt;strong&gt;everyone knows&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;41-problem-story-real-world-framing&#34;&gt;4.1 Problem Story (Real-World Framing)&lt;/h2&gt;
+&lt;p&gt;Lionel Messi played for &lt;strong&gt;FC Barcelona&lt;/strong&gt; from &lt;strong&gt;2004 to 2021&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Each season, we record how many goals he scored in all competitions.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;messi_goals = [
+    1,   # 2004
+    6,   # 2005
+    17,  # 2006
+    16,  # 2007
+    38,  # 2008
+    47,  # 2009
+    53,  # 2010
+    73,  # 2011 (peak)
+    60,  # 2012
+    41,  # 2013
+    58,  # 2014
+    41,  # 2015
+    54,  # 2016
+    45,  # 2017
+    51,  # 2018
+    36,  # 2019
+    31   # 2020
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Container choice:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;list&lt;/code&gt; → ordered by time&lt;/li&gt;
+&lt;li&gt;index → season offset&lt;/li&gt;
+&lt;li&gt;value → performance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is already &lt;strong&gt;data modeling&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;42-problem-1--first-last-and-peak-seasons&#34;&gt;4.2 Problem 1 — First, Last, and Peak Seasons&lt;/h2&gt;
+&lt;h3 id=&#34;task-1&#34;&gt;Task&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;First season goals&lt;/li&gt;
+&lt;li&gt;Last season goals&lt;/li&gt;
+&lt;li&gt;Peak scoring season&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;solution-indexing&#34;&gt;Solution (Indexing)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;first_season = messi_goals[0]
+last_season = messi_goals[-1]
+peak_goals = max(messi_goals)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Thinking:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Index &lt;code&gt;0&lt;/code&gt; → beginning of career&lt;/li&gt;
+&lt;li&gt;Index &lt;code&gt;-1&lt;/code&gt; → end of career&lt;/li&gt;
+&lt;li&gt;Built-in functions reduce logic noise&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;43-problem-2--prime-messi-era-slicing&#34;&gt;4.3 Problem 2 — Prime Messi Era (Slicing)&lt;/h2&gt;
+&lt;h3 id=&#34;story&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;Fans often say:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Messi’s &lt;strong&gt;prime years&lt;/strong&gt; were from 2009 to 2012.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;task-2&#34;&gt;Task&lt;/h3&gt;
+&lt;p&gt;Extract only those seasons.&lt;/p&gt;
+&lt;h3 id=&#34;thinking-first&#34;&gt;Thinking First&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Data starts at 2004&lt;/li&gt;
+&lt;li&gt;2009 is index &lt;code&gt;5&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;2012 is index &lt;code&gt;8&lt;/code&gt; (exclusive → stop at 9)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;solution&#34;&gt;Solution&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;prime_years = messi_goals[5:9]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Result:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;[47, 53, 73, 60]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 This is &lt;strong&gt;timeline slicing&lt;/strong&gt; — used everywhere in real systems.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;44-problem-3--every-other-season-step-control&#34;&gt;4.4 Problem 3 — Every Other Season (Step Control)&lt;/h2&gt;
+&lt;h3 id=&#34;story-1&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;Analysts want to study &lt;strong&gt;long-term consistency&lt;/strong&gt;, skipping every other season.&lt;/p&gt;
+&lt;h3 id=&#34;task-3&#34;&gt;Task&lt;/h3&gt;
+&lt;p&gt;Select goals from alternating seasons.&lt;/p&gt;
+&lt;h3 id=&#34;solution-1&#34;&gt;Solution&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;alternate_seasons = messi_goals[::2]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Meaning:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start at beginning&lt;/li&gt;
+&lt;li&gt;Go to end&lt;/li&gt;
+&lt;li&gt;Step = 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This pattern appears in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sampling&lt;/li&gt;
+&lt;li&gt;Signal processing&lt;/li&gt;
+&lt;li&gt;Optimization loops&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;45-problem-4--late-career-decline-analysis-negative-indexing&#34;&gt;4.5 Problem 4 — Late-Career Decline Analysis (Negative Indexing)&lt;/h2&gt;
+&lt;h3 id=&#34;story-2&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;Sports analysts often study &lt;strong&gt;late-career performance&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;task-4&#34;&gt;Task&lt;/h3&gt;
+&lt;p&gt;Extract the &lt;strong&gt;last 5 seasons&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;solution-2&#34;&gt;Solution&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;late_career = messi_goals[-5:]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Why this is powerful:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No need to know list length&lt;/li&gt;
+&lt;li&gt;Works even if data grows&lt;/li&gt;
+&lt;li&gt;Avoids edge-case bugs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;46-problem-5--reverse-career-timeline-interview-favorite&#34;&gt;4.6 Problem 5 — Reverse Career Timeline (Interview Favorite)&lt;/h2&gt;
+&lt;h3 id=&#34;story-3&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;A visualization tool wants data &lt;strong&gt;from last season to first&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;task-5&#34;&gt;Task&lt;/h3&gt;
+&lt;p&gt;Reverse the list.&lt;/p&gt;
+&lt;h3 id=&#34;solution-3&#34;&gt;Solution&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;reverse_timeline = messi_goals[::-1]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🔥 No loop
+🔥 No temp variable
+🔥 Clean and expressive&lt;/p&gt;
+&lt;p&gt;Interviewers &lt;em&gt;love&lt;/em&gt; this.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;47-problem-6--sliding-window-form-analysis&#34;&gt;4.7 Problem 6 — Sliding Window (Form Analysis)&lt;/h2&gt;
+&lt;h3 id=&#34;story-4&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;Coaches analyze &lt;strong&gt;3-season form windows&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;task-6&#34;&gt;Task&lt;/h3&gt;
+&lt;p&gt;Compute 3-season goal windows.&lt;/p&gt;
+&lt;h3 id=&#34;solution-4&#34;&gt;Solution&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;window_size = 3
+windows = []
+
+for i in range(len(messi_goals) - window_size + 1):
+    window = messi_goals[i : i + window_size]
+    windows.append(window)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 This exact pattern appears in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Stock prices&lt;/li&gt;
+&lt;li&gt;Time-series forecasting&lt;/li&gt;
+&lt;li&gt;NLP n-grams&lt;/li&gt;
+&lt;li&gt;Sports analytics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;48-problem-7--labeling-seasons-with-a-dictionary&#34;&gt;4.8 Problem 7 — Labeling Seasons with a Dictionary&lt;/h2&gt;
+&lt;h3 id=&#34;story-5&#34;&gt;Story&lt;/h3&gt;
+&lt;p&gt;We want to map &lt;strong&gt;season → goals&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;solution-container-upgrade&#34;&gt;Solution (Container Upgrade)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;years = list(range(2004, 2004 + len(messi_goals)))
+messi_by_year = dict(zip(years, messi_goals))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now you can ask:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;messi_by_year[2011]   # 73
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 This is &lt;strong&gt;real-world data modeling&lt;/strong&gt;, not toy code.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;49-interviewer-level-insight-say-this-out-loud&#34;&gt;4.9 Interviewer-Level Insight (Say This Out Loud)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“I model time-series data using ordered containers,
+then use indexing and slicing to express questions clearly.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This sentence alone changes how interviewers see you.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;410-teaching-message-strong--memorable&#34;&gt;4.10 Teaching Message (Strong &amp;amp; Memorable)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Containers tell the story.&lt;/strong&gt;
+&lt;strong&gt;Indexing lets you ask questions.&lt;/strong&gt;
+&lt;strong&gt;Slicing answers them cleanly.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If students understand this section, they are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LeetCode-ready&lt;/li&gt;
+&lt;li&gt;Interview-ready&lt;/li&gt;
+&lt;li&gt;Real-world-ready&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-olympic-puzzle--the-messi-challenge-advanced-edition-&#34;&gt;5. Olympic Puzzle — The Messi Challenge (Advanced Edition) 🏅⚽&lt;/h2&gt;
+&lt;p&gt;This puzzle looks fun.&lt;/p&gt;
+&lt;p&gt;In reality, it tests:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;loop control&lt;/li&gt;
+&lt;li&gt;state tracking&lt;/li&gt;
+&lt;li&gt;early exits&lt;/li&gt;
+&lt;li&gt;skipping logic&lt;/li&gt;
+&lt;li&gt;recursion thinking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Exactly what &lt;strong&gt;top interviews&lt;/strong&gt; look for.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;51-the-dataset-given&#34;&gt;5.1 The Dataset (Given)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;messi_goals = [
+    1, 6, 17, 16, 38, 47, 53, 73, 60,
+    41, 58, 41, 54, 45, 51, 36, 31
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Each element is goals per season, in order.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;52-olympic-rules-strict&#34;&gt;5.2 Olympic Rules (Strict)&lt;/h2&gt;
+&lt;p&gt;You &lt;strong&gt;must use&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;✅ &lt;code&gt;for&lt;/code&gt; loop
+✅ &lt;code&gt;while&lt;/code&gt; loop
+✅ &lt;code&gt;break&lt;/code&gt;
+✅ &lt;code&gt;continue&lt;/code&gt;
+✅ indexing or slicing
+✅ at least one container
+⭐ recursion = &lt;strong&gt;bonus gold medal&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;❌ No &lt;code&gt;max()&lt;/code&gt;
+❌ No sorting
+❌ No libraries&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;53-the-challenge-&#34;&gt;5.3 The Challenge 🧩&lt;/h2&gt;
+&lt;h3 id=&#34;main-task&#34;&gt;Main Task&lt;/h3&gt;
+&lt;p&gt;Find the &lt;strong&gt;longest consecutive streak&lt;/strong&gt; where:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Messi scored &lt;strong&gt;more than 40 goals&lt;/strong&gt;
+in &lt;strong&gt;back-to-back seasons&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Then output:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Length of the streak&lt;/li&gt;
+&lt;li&gt;Goals in the streak&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;54-think-like-an-engineer-say-this-first&#34;&gt;5.4 Think Like an Engineer (Say This First)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“This is sequential data, so I will scan it linearly
+and track state transitions.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That sentence alone is interview gold.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;55-core-scan--while-loop--continue&#34;&gt;5.5 Core Scan — &lt;code&gt;while&lt;/code&gt; Loop + &lt;code&gt;continue&lt;/code&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;i = 0
+current = []
+longest = []
+
+while i &amp;lt; len(messi_goals):
+
+    # Skip low-scoring seasons early
+    if messi_goals[i] &amp;lt;= 40:
+        current = []
+        i += 1
+        continue   # ⬅ skip rest of loop immediately
+
+    current.append(messi_goals[i])
+
+    if len(current) &amp;gt; len(longest):
+        longest = current.copy()
+
+    i += 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;why-this-is-powerful&#34;&gt;Why This Is Powerful&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;continue&lt;/code&gt; avoids deep nesting&lt;/li&gt;
+&lt;li&gt;logic is &lt;strong&gt;flat and readable&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;state resets cleanly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Interviewers &lt;em&gt;love&lt;/em&gt; this pattern.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;56-early-exit-logic--break&#34;&gt;5.6 Early Exit Logic — &lt;code&gt;break&lt;/code&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;scenario&#34;&gt;Scenario&lt;/h3&gt;
+&lt;p&gt;What if the interviewer adds:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Stop once you find a streak of &lt;strong&gt;5 seasons&lt;/strong&gt;.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now &lt;code&gt;break&lt;/code&gt; becomes necessary.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if len(longest) == 5:
+    break   # ⬅ mission complete, exit loop early
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Insight:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;break&lt;/code&gt; expresses &lt;strong&gt;confidence&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You stop because you &lt;em&gt;know&lt;/em&gt; the goal is reached&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;57-verifying-the-result&#34;&gt;5.7 Verifying the Result&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(&amp;quot;Longest streak length:&amp;quot;, len(longest))
+print(&amp;quot;Goals:&amp;quot;, longest)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Expected:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Longest streak length: 5
+Goals: [47, 53, 73, 60, 41]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;58-using-a-for-loop--index-recovery&#34;&gt;5.8 Using a &lt;code&gt;for&lt;/code&gt; Loop — Index Recovery&lt;/h2&gt;
+&lt;p&gt;Now locate &lt;strong&gt;where&lt;/strong&gt; the streak starts.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;start_index = -1
+
+for i in range(len(messi_goals)):
+    if messi_goals[i:i+len(longest)] == longest:
+        start_index = i
+        break   # ⬅ first match is enough
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;constructs-used-here&#34;&gt;Constructs Used Here&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;for&lt;/code&gt; loop&lt;/li&gt;
+&lt;li&gt;slicing&lt;/li&gt;
+&lt;li&gt;comparison&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;break&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;59-bonus---recursive-thinking-very-impressive&#34;&gt;5.9 BONUS 🥇 — Recursive Thinking (Very Impressive)&lt;/h2&gt;
+&lt;h3 id=&#34;idea-4&#34;&gt;Idea&lt;/h3&gt;
+&lt;p&gt;Instead of scanning manually, ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“What is the longest valid streak starting at index &lt;code&gt;i&lt;/code&gt;?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That question is &lt;strong&gt;recursive by nature&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;recursive-function&#34;&gt;Recursive Function&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def streak_from(i):
+    if i &amp;gt;= len(messi_goals):
+        return []
+
+    if messi_goals[i] &amp;lt;= 40:
+        return []
+
+    return [messi_goals[i]] + streak_from(i + 1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;using-recursion-to-find-the-best-streak&#34;&gt;Using Recursion to Find the Best Streak&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;best = []
+
+for i in range(len(messi_goals)):
+    current = streak_from(i)
+    if len(current) &amp;gt; len(best):
+        best = current
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Why This Is Gold&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clear base case&lt;/li&gt;
+&lt;li&gt;Clear recursive step&lt;/li&gt;
+&lt;li&gt;Matches human reasoning&lt;/li&gt;
+&lt;li&gt;Shows algorithmic maturity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;510-interviewer-level-explanation-say-this&#34;&gt;5.10 Interviewer-Level Explanation (Say This)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“I used iteration for efficiency
+and recursion to express the problem naturally.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That sentence &lt;strong&gt;changes your level instantly&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;511-why-this-puzzle-is-olympic-level-&#34;&gt;5.11 Why This Puzzle Is Olympic-Level 🏆&lt;/h2&gt;
+&lt;p&gt;It combines:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;container modeling&lt;/li&gt;
+&lt;li&gt;indexing &amp;amp; slicing&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;for&lt;/code&gt; vs &lt;code&gt;while&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;break&lt;/code&gt; &amp;amp; &lt;code&gt;continue&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;recursion&lt;/li&gt;
+&lt;li&gt;edge-case awareness&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All in &lt;strong&gt;one coherent story&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;512-teaching-message-very-strong&#34;&gt;5.12 Teaching Message (Very Strong)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Loops control time.&lt;/strong&gt;
+&lt;strong&gt;Containers control space.&lt;/strong&gt;
+&lt;strong&gt;Recursion controls structure.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If someone understands all three —
+they understand programming.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-final-boss-puzzle--messi-legendary-season-run--complete-edition&#34;&gt;6. FINAL BOSS PUZZLE — Messi Legendary Season Run 🐐🏆 (Complete Edition)&lt;/h2&gt;
+&lt;p&gt;This is the &lt;strong&gt;ultimate recap problem&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;It tests:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;logic composition&lt;/li&gt;
+&lt;li&gt;condition design&lt;/li&gt;
+&lt;li&gt;container modeling&lt;/li&gt;
+&lt;li&gt;loop mastery&lt;/li&gt;
+&lt;li&gt;real-world reasoning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If someone solves this &lt;strong&gt;cleanly and explains it&lt;/strong&gt; —&lt;br&gt;
+they are &lt;strong&gt;ready for any interview&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;61-the-dataset-multi-dimensional-reality&#34;&gt;6.1 The Dataset (Multi-Dimensional Reality)&lt;/h2&gt;
+&lt;p&gt;Each season now has &lt;strong&gt;four attributes&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seasons = [
+    {&amp;quot;goals&amp;quot;: 1,  &amp;quot;assists&amp;quot;: 0,  &amp;quot;yellow&amp;quot;: 0, &amp;quot;red&amp;quot;: 0},
+    {&amp;quot;goals&amp;quot;: 6,  &amp;quot;assists&amp;quot;: 3,  &amp;quot;yellow&amp;quot;: 1, &amp;quot;red&amp;quot;: 0},
+    {&amp;quot;goals&amp;quot;: 17, &amp;quot;assists&amp;quot;: 7,  &amp;quot;yellow&amp;quot;: 2, &amp;quot;red&amp;quot;: 0},
+    {&amp;quot;goals&amp;quot;: 16, &amp;quot;assists&amp;quot;: 11, &amp;quot;yellow&amp;quot;: 1, &amp;quot;red&amp;quot;: 0},
+    {&amp;quot;goals&amp;quot;: 38, &amp;quot;assists&amp;quot;: 17, &amp;quot;yellow&amp;quot;: 3, &amp;quot;red&amp;quot;: 0},
+    {&amp;quot;goals&amp;quot;: 47, &amp;quot;assists&amp;quot;: 18, &amp;quot;yellow&amp;quot;: 2, &amp;quot;red&amp;quot;: 0},
+    {&amp;quot;goals&amp;quot;: 53, &amp;quot;assists&amp;quot;: 24, &amp;quot;yellow&amp;quot;: 1, &amp;quot;red&amp;quot;: 0},
+    {&amp;quot;goals&amp;quot;: 73, &amp;quot;assists&amp;quot;: 30, &amp;quot;yellow&amp;quot;: 2, &amp;quot;red&amp;quot;: 0},
+    {&amp;quot;goals&amp;quot;: 60, &amp;quot;assists&amp;quot;: 16, &amp;quot;yellow&amp;quot;: 3, &amp;quot;red&amp;quot;: 0},
+    {&amp;quot;goals&amp;quot;: 41, &amp;quot;assists&amp;quot;: 14, &amp;quot;yellow&amp;quot;: 4, &amp;quot;red&amp;quot;: 0},
+    {&amp;quot;goals&amp;quot;: 58, &amp;quot;assists&amp;quot;: 27, &amp;quot;yellow&amp;quot;: 2, &amp;quot;red&amp;quot;: 0},
+    {&amp;quot;goals&amp;quot;: 41, &amp;quot;assists&amp;quot;: 19, &amp;quot;yellow&amp;quot;: 3, &amp;quot;red&amp;quot;: 0},
+    {&amp;quot;goals&amp;quot;: 54, &amp;quot;assists&amp;quot;: 16, &amp;quot;yellow&amp;quot;: 2, &amp;quot;red&amp;quot;: 0},
+    {&amp;quot;goals&amp;quot;: 45, &amp;quot;assists&amp;quot;: 18, &amp;quot;yellow&amp;quot;: 3, &amp;quot;red&amp;quot;: 0},
+    {&amp;quot;goals&amp;quot;: 51, &amp;quot;assists&amp;quot;: 19, &amp;quot;yellow&amp;quot;: 1, &amp;quot;red&amp;quot;: 0},
+    {&amp;quot;goals&amp;quot;: 36, &amp;quot;assists&amp;quot;: 14, &amp;quot;yellow&amp;quot;: 4, &amp;quot;red&amp;quot;: 1},
+    {&amp;quot;goals&amp;quot;: 31, &amp;quot;assists&amp;quot;: 9,  &amp;quot;yellow&amp;quot;: 2, &amp;quot;red&amp;quot;: 0}
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 This is &lt;strong&gt;real data modeling&lt;/strong&gt; — not toy arrays.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;62-the-legendary-run-definition-hard-logic&#34;&gt;6.2 The Legendary Run Definition (Hard Logic)&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;Legendary Run&lt;/strong&gt; is a &lt;strong&gt;consecutive streak&lt;/strong&gt; of seasons where:&lt;/p&gt;
+&lt;h3 id=&#34;performance-conditions&#34;&gt;Performance Conditions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;goals &lt;strong&gt;&amp;gt; 40&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;assists &lt;strong&gt;≥ 15&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;discipline-conditions&#34;&gt;Discipline Conditions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;red cards == &lt;strong&gt;0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;yellow cards &lt;strong&gt;≤ 3&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;aggregate-constraints&#34;&gt;Aggregate Constraints&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;streak length &lt;strong&gt;≥ 3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;average goals &lt;strong&gt;&amp;gt; 50 OR&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;(average assists &lt;strong&gt;&amp;gt; 20 AND max goals ≥ 70&lt;/strong&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Yes — this is &lt;strong&gt;intentional complexity&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;63-output-requirements&#34;&gt;6.3 Output Requirements&lt;/h2&gt;
+&lt;p&gt;Return:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Legendary streak (list of seasons)&lt;/li&gt;
+&lt;li&gt;Start index&lt;/li&gt;
+&lt;li&gt;End index&lt;/li&gt;
+&lt;li&gt;Average goals&lt;/li&gt;
+&lt;li&gt;Average assists&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;64-olympic-rules-no-shortcuts&#34;&gt;6.4 Olympic Rules (No Shortcuts)&lt;/h2&gt;
+&lt;p&gt;You MUST use:&lt;/p&gt;
+&lt;p&gt;✅ &lt;code&gt;while&lt;/code&gt; loop
+✅ &lt;code&gt;for&lt;/code&gt; loop
+✅ &lt;code&gt;break&lt;/code&gt;
+✅ &lt;code&gt;continue&lt;/code&gt;
+✅ indexing
+✅ slicing
+✅ &lt;code&gt;list&lt;/code&gt; and &lt;code&gt;dict&lt;/code&gt;
+⭐ recursion (required)&lt;/p&gt;
+&lt;p&gt;❌ No &lt;code&gt;sum()&lt;/code&gt;
+❌ No &lt;code&gt;max()&lt;/code&gt;
+❌ No sorting
+❌ No libraries&lt;/p&gt;
+&lt;p&gt;There is &lt;strong&gt;only one correct result&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;65-recursive-helpers-no-built-ins-allowed&#34;&gt;6.5 Recursive Helpers (No Built-ins Allowed)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def recursive_sum(arr, key):
+    if not arr:
+        return 0
+    return arr[0][key] + recursive_sum(arr[1:], key)
+
+def recursive_max(arr, key):
+    if len(arr) == 1:
+        return arr[0][key]
+    rest_max = recursive_max(arr[1:], key)
+    return arr[0][key] if arr[0][key] &amp;gt; rest_max else rest_max
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 This proves &lt;strong&gt;algorithmic understanding&lt;/strong&gt;, not memorization.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;66-core-scan--nested-while--continue&#34;&gt;6.6 Core Scan — Nested &lt;code&gt;while&lt;/code&gt; + &lt;code&gt;continue&lt;/code&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;i = 0
+best = {
+    &amp;quot;streak&amp;quot;: [],
+    &amp;quot;start&amp;quot;: -1,
+    &amp;quot;end&amp;quot;: -1,
+    &amp;quot;avg_goals&amp;quot;: 0,
+    &amp;quot;avg_assists&amp;quot;: 0
+}
+
+while i &amp;lt; len(seasons):
+
+    s = seasons[i]
+
+    # Early rejection (discipline + performance)
+    if not (
+        s[&amp;quot;goals&amp;quot;] &amp;gt; 40 and
+        s[&amp;quot;assists&amp;quot;] &amp;gt;= 15 and
+        s[&amp;quot;red&amp;quot;] == 0 and
+        s[&amp;quot;yellow&amp;quot;] &amp;lt;= 3
+    ):
+        i += 1
+        continue
+
+    j = i
+    current = []
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;67-build-the-consecutive-run&#34;&gt;6.7 Build the Consecutive Run&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    while j &amp;lt; len(seasons):
+        s = seasons[j]
+
+        if (
+            s[&amp;quot;goals&amp;quot;] &amp;gt; 40 and
+            s[&amp;quot;assists&amp;quot;] &amp;gt;= 15 and
+            s[&amp;quot;red&amp;quot;] == 0 and
+            s[&amp;quot;yellow&amp;quot;] &amp;lt;= 3
+        ):
+            current.append(s)
+            j += 1
+        else:
+            break
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Uses:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;indexing&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;while&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;compound conditions&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;break&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;68-validate-the-run-complex-logic-zone&#34;&gt;6.8 Validate the Run (Complex Logic Zone)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    if len(current) &amp;gt;= 3:
+        avg_goals = recursive_sum(current, &amp;quot;goals&amp;quot;) / len(current)
+        avg_assists = recursive_sum(current, &amp;quot;assists&amp;quot;) / len(current)
+        max_goals = recursive_max(current, &amp;quot;goals&amp;quot;)
+
+        if (
+            avg_goals &amp;gt; 50 or
+            (avg_assists &amp;gt; 20 and max_goals &amp;gt;= 70)
+        ):
+            if avg_goals &amp;gt; best[&amp;quot;avg_goals&amp;quot;]:
+                best[&amp;quot;streak&amp;quot;] = current
+                best[&amp;quot;start&amp;quot;] = i
+                best[&amp;quot;end&amp;quot;] = j - 1
+                best[&amp;quot;avg_goals&amp;quot;] = avg_goals
+                best[&amp;quot;avg_assists&amp;quot;] = avg_assists
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🔥 This block alone tests &lt;strong&gt;real logical maturity&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;69-smart-exit--break-with-confidence&#34;&gt;6.9 Smart Exit — &lt;code&gt;break&lt;/code&gt; with Confidence&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;    if len(current) &amp;gt;= 5:
+        break
+
+    i = j
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Why this matters:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Shows optimization instinct&lt;/li&gt;
+&lt;li&gt;Avoids brute force thinking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;610-final-output&#34;&gt;6.10 Final Output&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(&amp;quot;Legendary Run:&amp;quot;, best[&amp;quot;streak&amp;quot;])
+print(&amp;quot;Start Index:&amp;quot;, best[&amp;quot;start&amp;quot;])
+print(&amp;quot;End Index:&amp;quot;, best[&amp;quot;end&amp;quot;])
+print(&amp;quot;Avg Goals:&amp;quot;, best[&amp;quot;avg_goals&amp;quot;])
+print(&amp;quot;Avg Assists:&amp;quot;, best[&amp;quot;avg_assists&amp;quot;])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;expected-result&#34;&gt;Expected Result&lt;/h3&gt;
+&lt;p&gt;The legendary run corresponds to Messi’s &lt;strong&gt;2009–2013 peak&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;611-where-everything-appears-final-recap&#34;&gt;6.11 Where EVERYTHING Appears (Final Recap)&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Concept&lt;/th&gt;
+&lt;th&gt;Used&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;list / dict&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;indexing&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;slicing logic&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;for loop&lt;/td&gt;
+&lt;td&gt;validation &amp;amp; explanation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;while loop&lt;/td&gt;
+&lt;td&gt;core scan&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;break&lt;/td&gt;
+&lt;td&gt;boundary control&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;continue&lt;/td&gt;
+&lt;td&gt;early rejection&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AND / OR logic&lt;/td&gt;
+&lt;td&gt;heavy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;recursion&lt;/td&gt;
+&lt;td&gt;aggregation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;state tracking&lt;/td&gt;
+&lt;td&gt;best run&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;This is &lt;strong&gt;complete mastery&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;612-ultimate-teaching-message-mic-drop&#34;&gt;6.12 Ultimate Teaching Message (Mic Drop)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Easy problems test syntax.&lt;/strong&gt;
+&lt;strong&gt;Hard problems test logic.&lt;/strong&gt;
+&lt;strong&gt;Great problems test judgment.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If someone solves this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;They can reason&lt;/li&gt;
+&lt;li&gt;They can model&lt;/li&gt;
+&lt;li&gt;They can explain&lt;/li&gt;
+&lt;li&gt;They can build real systems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;613-final-line-&#34;&gt;6.13 Final Line 🐐⚽🔥&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Messi wasn’t great because he scored goals.
+He was great because he satisfied &lt;em&gt;every condition&lt;/em&gt;
+under pressure — every season.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-final-ultimate-cheat-sheet--messi-edition-&#34;&gt;7. Final Ultimate Cheat Sheet — Messi Edition 🐐⚽&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;A Complete Recap of Python Thinking&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This section is a &lt;strong&gt;one-page mental model&lt;/strong&gt; of Python fundamentals.&lt;/p&gt;
+&lt;p&gt;If you understand &lt;strong&gt;everything here&lt;/strong&gt;,&lt;br&gt;
+you understand &lt;strong&gt;how to think in Python&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;71-data-modeling-everything-starts-here&#34;&gt;7.1 Data Modeling (Everything Starts Here)&lt;/h2&gt;
+&lt;p&gt;Messi’s Barcelona career modeled as structured data:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;season = {
+    &amp;quot;goals&amp;quot;: 73,
+    &amp;quot;assists&amp;quot;: 30,
+    &amp;quot;yellow&amp;quot;: 2,
+    &amp;quot;red&amp;quot;: 0
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Key idea:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;dict&lt;/code&gt; models &lt;strong&gt;real-world entities&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;keys = attributes&lt;/li&gt;
+&lt;li&gt;values = facts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;72-logic-conditions--and--or--not-core-thinking&#34;&gt;7.2 Logic Conditions — AND / OR / NOT (Core Thinking)&lt;/h2&gt;
+&lt;h3 id=&#34;example-legendary-season-rule&#34;&gt;Example: Legendary Season Rule&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;is_legendary = (
+    season[&amp;quot;goals&amp;quot;] &amp;gt; 40 and
+    season[&amp;quot;assists&amp;quot;] &amp;gt;= 15 and
+    season[&amp;quot;red&amp;quot;] == 0 and
+    season[&amp;quot;yellow&amp;quot;] &amp;lt;= 3
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;mixed-logic-interview-favorite&#34;&gt;Mixed Logic (Interview Favorite)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;is_iconic = (
+    season[&amp;quot;goals&amp;quot;] &amp;gt; 50 or
+    (season[&amp;quot;assists&amp;quot;] &amp;gt; 20 and season[&amp;quot;goals&amp;quot;] &amp;gt;= 70)
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Rule of thumb:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;and&lt;/code&gt; → &lt;strong&gt;all must pass&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;or&lt;/code&gt; → &lt;strong&gt;at least one passes&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;parentheses = &lt;strong&gt;thinking clarity&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;73-while-loop--when-you-dont-know-the-end&#34;&gt;7.3 &lt;code&gt;while&lt;/code&gt; Loop — When You Don’t Know the End&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;i = 0
+while i &amp;lt; len(seasons):
+    if seasons[i][&amp;quot;red&amp;quot;] &amp;gt; 0:
+        i += 1
+        continue
+    i += 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Use &lt;code&gt;while&lt;/code&gt; when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;scanning&lt;/li&gt;
+&lt;li&gt;searching&lt;/li&gt;
+&lt;li&gt;state-based logic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;74-continue--skip-noise-early&#34;&gt;7.4 &lt;code&gt;continue&lt;/code&gt; — Skip Noise Early&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if season[&amp;quot;goals&amp;quot;] &amp;lt;= 40:
+    continue
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;✔ avoids deep nesting
+✔ keeps logic flat
+✔ very interview-friendly&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;75-break--stop-with-confidence&#34;&gt;7.5 &lt;code&gt;break&lt;/code&gt; — Stop With Confidence&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if len(streak) &amp;gt;= 5:
+    break
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 &lt;code&gt;break&lt;/code&gt; means:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“I know I’m done.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Strong signal of control.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;76-for-loop--when-order-is-known&#34;&gt;7.6 &lt;code&gt;for&lt;/code&gt; Loop — When Order Is Known&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for season in seasons:
+    print(season[&amp;quot;goals&amp;quot;])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or with index:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i in range(len(seasons)):
+    print(i, seasons[i][&amp;quot;goals&amp;quot;])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Use &lt;code&gt;for&lt;/code&gt; when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;iteration count is clear&lt;/li&gt;
+&lt;li&gt;data is stable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;77-indexing--slicing--timeline-control&#34;&gt;7.7 Indexing &amp;amp; Slicing — Timeline Control&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seasons[0]      # first season
+seasons[-1]     # last season
+seasons[5:9]    # Messi prime
+seasons[::-1]   # reverse career
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Slicing = &lt;strong&gt;asking questions about time&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;78-functions-def--name-your-thinking&#34;&gt;7.8 Functions (&lt;code&gt;def&lt;/code&gt;) — Name Your Thinking&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def is_legendary(season):
+    return (
+        season[&amp;quot;goals&amp;quot;] &amp;gt; 40 and
+        season[&amp;quot;assists&amp;quot;] &amp;gt;= 15 and
+        season[&amp;quot;red&amp;quot;] == 0
+    )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Functions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;compress logic&lt;/li&gt;
+&lt;li&gt;improve readability&lt;/li&gt;
+&lt;li&gt;reduce bugs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;79-decorators--behavior-on-top-of-behavior-advanced-basic&#34;&gt;7.9 Decorators — Behavior on Top of Behavior (Advanced Basic)&lt;/h2&gt;
+&lt;h3 id=&#34;motivation&#34;&gt;Motivation&lt;/h3&gt;
+&lt;p&gt;You want to &lt;strong&gt;add behavior&lt;/strong&gt; without changing logic.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def log_check(func):
+    def wrapper(season):
+        result = func(season)
+        print(&amp;quot;Checked season →&amp;quot;, result)
+        return result
+    return wrapper
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;@log_check
+def is_goat_season(season):
+    return season[&amp;quot;goals&amp;quot;] &amp;gt;= 70
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Decorators =
+&lt;strong&gt;logic + policy separation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Very impressive when explained simply.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;710-classes--modeling-the-real-world&#34;&gt;7.10 Classes — Modeling the Real World&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class MessiSeason:
+    def __init__(self, goals, assists, yellow, red):
+        self.goals = goals
+        self.assists = assists
+        self.yellow = yellow
+        self.red = red
+
+    def is_clean(self):
+        return self.red == 0 and self.yellow &amp;lt;= 3
+
+    def is_legendary(self):
+        return self.goals &amp;gt; 40 and self.assists &amp;gt;= 15 and self.is_clean()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Usage:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;season_2011 = MessiSeason(73, 30, 2, 0)
+season_2011.is_legendary()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;🧠 Classes =
+&lt;strong&gt;data + behavior together&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is real software design.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;711-how-everything-fits-together-mental-map&#34;&gt;7.11 How Everything Fits Together (Mental Map)&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Concept&lt;/th&gt;
+&lt;th&gt;Purpose&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;dict / class&lt;/td&gt;
+&lt;td&gt;model reality&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;if / and / or&lt;/td&gt;
+&lt;td&gt;express rules&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;while&lt;/td&gt;
+&lt;td&gt;scan &amp;amp; search&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;continue&lt;/td&gt;
+&lt;td&gt;skip noise&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;break&lt;/td&gt;
+&lt;td&gt;stop early&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;for&lt;/td&gt;
+&lt;td&gt;controlled iteration&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;slicing&lt;/td&gt;
+&lt;td&gt;timeline logic&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;def&lt;/td&gt;
+&lt;td&gt;name thinking&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;decorator&lt;/td&gt;
+&lt;td&gt;extend behavior&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;class&lt;/td&gt;
+&lt;td&gt;design systems&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;This is the &lt;strong&gt;full stack of thinking&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;712-final-teaching-message-ultimate&#34;&gt;7.12 Final Teaching Message (Ultimate)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Syntax is vocabulary.&lt;/strong&gt;
+&lt;strong&gt;Logic is grammar.&lt;/strong&gt;
+&lt;strong&gt;Structure is storytelling.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Messi didn’t become the GOAT by knowing rules —
+he mastered &lt;strong&gt;when and how&lt;/strong&gt; to apply them.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;713-final-line-&#34;&gt;7.13 Final Line 🐐🔥&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“If you can model Messi’s career in code,
+you can model almost anything in the real world.”&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;-problem-2--frequency-counter-real-life&#34;&gt;🔢 Problem 2 — Frequency Counter (Real Life)&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
@@ -3081,10 +4501,10 @@ this is &lt;strong&gt;graduation&lt;/strong&gt; 🎓🐐⚽&lt;/p&gt;
     </item>
     
     <item>
-      <title>LC-TEST-11 — FIFA World Cup 2026 Ultimate Analytics</title>
-      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-12-fifa-world-cup/</link>
+      <title>LC-TEST-12 — FIFA World Cup 2026 Ultimate Analytics</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-12-fifa-world-cup-copy/</link>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-12-fifa-world-cup/</guid>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-12-fifa-world-cup-copy/</guid>
       <description>&lt;h2 id=&#34;-why-this-problem-is-brutal-in-a-good-way&#34;&gt;🌍 Why This Problem Is Brutal (In a Good Way)&lt;/h2&gt;
 &lt;p&gt;This problem simulates:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -3385,6 +4805,1516 @@ Interview-safe.&lt;/p&gt;
 ⚙️ You can handle real datasets
 🏆 LeetCode Hard ≠ scary anymore&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-13 — Messi Puzzle</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-13-messi-puzzle/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-13-messi-puzzle/</guid>
+      <description>&lt;h2 id=&#34;-why-this-document-exists&#34;&gt;🌍 Why This Document Exists&lt;/h2&gt;
+&lt;p&gt;This is &lt;strong&gt;not&lt;/strong&gt; a LeetCode cheat list.&lt;/p&gt;
+&lt;p&gt;This is a &lt;strong&gt;thinking gym&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You will train:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🧠 Logic&lt;/li&gt;
+&lt;li&gt;🔁 Loop mastery&lt;/li&gt;
+&lt;li&gt;📦 Containers&lt;/li&gt;
+&lt;li&gt;🔢 Indexing (start / stop / step)&lt;/li&gt;
+&lt;li&gt;⚙️ Functions, recursion, decorators, classes&lt;/li&gt;
+&lt;li&gt;🚦 Complex conditions (and / or / nested)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All wrapped in &lt;strong&gt;fun football stories&lt;/strong&gt; — because learning should feel alive.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-python-logic-olympics-20-puzzles&#34;&gt;🥇 Python Logic Olympics (20 Puzzles)&lt;/h1&gt;
+&lt;p&gt;Difficulty increases &lt;strong&gt;gradually&lt;/strong&gt;.
+Try each puzzle &lt;strong&gt;before opening the solution&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-1--messis-goal-counter-warm-up&#34;&gt;🟢 Puzzle 1 — Messi’s Goal Counter (Warm-Up)&lt;/h2&gt;
+&lt;p&gt;Messi scored goals in matches:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;goals = [1, 0, 2, 1, 3, 0]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt; Count total goals using a loop (no &lt;code&gt;sum()&lt;/code&gt;).&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;total = 0
+for g in goals:
+    total += g
+print(total)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-2--prime-jersey-numbers&#34;&gt;🟢 Puzzle 2 — Prime Jersey Numbers&lt;/h2&gt;
+&lt;p&gt;Messi wore jerseys from &lt;code&gt;1&lt;/code&gt; to &lt;code&gt;n&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt; Return &lt;strong&gt;all prime numbers &amp;lt; n&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def is_prime(x):
+    if x &amp;lt; 2:
+        return False
+    i = 2
+    while i * i &amp;lt;= x:
+        if x % i == 0:
+            return False
+        i += 1
+    return True
+
+def primes_less_than(n):
+    return [i for i in range(n) if is_prime(i)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-3--skipping-injured-matches-continue&#34;&gt;🟢 Puzzle 3 — Skipping Injured Matches (continue)&lt;/h2&gt;
+&lt;p&gt;Messi missed matches marked as &lt;code&gt;&amp;quot;injured&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;matches = [&amp;quot;goal&amp;quot;, &amp;quot;goal&amp;quot;, &amp;quot;injured&amp;quot;, &amp;quot;goal&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt; Count goals, skip injured matches.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;count = 0
+for m in matches:
+    if m == &amp;quot;injured&amp;quot;:
+        continue
+    count += 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-4--stop-at-red-card-break&#34;&gt;🟡 Puzzle 4 — Stop at Red Card (break)&lt;/h2&gt;
+&lt;p&gt;Stop counting goals once Messi gets a &lt;code&gt;&amp;quot;red&amp;quot;&lt;/code&gt; card.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;events = [&amp;quot;goal&amp;quot;, &amp;quot;goal&amp;quot;, &amp;quot;red&amp;quot;, &amp;quot;goal&amp;quot;]
+count = 0
+for e in events:
+    if e == &amp;quot;red&amp;quot;:
+        break
+    if e == &amp;quot;goal&amp;quot;:
+        count += 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-5--indexing-like-a-pro&#34;&gt;🟡 Puzzle 5 — Indexing Like a Pro&lt;/h2&gt;
+&lt;p&gt;Get &lt;strong&gt;every second match&lt;/strong&gt; Messi played.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;matches = [&amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;, &amp;quot;C&amp;quot;, &amp;quot;D&amp;quot;, &amp;quot;E&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(matches[::2])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-6--goals-in-first-half-only&#34;&gt;🟡 Puzzle 6 — Goals in First Half Only&lt;/h2&gt;
+&lt;p&gt;First half = first &lt;code&gt;len(matches)//2&lt;/code&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;half = len(matches) // 2
+print(matches[:half])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-7--yellow--red-logic-and--or&#34;&gt;🟡 Puzzle 7 — Yellow + Red Logic (AND / OR)&lt;/h2&gt;
+&lt;p&gt;Messi is suspended if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;red card&lt;/li&gt;
+&lt;li&gt;OR 2+ yellow cards&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;yellow = 2
+red = False
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;suspended = red or yellow &amp;gt;= 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-8--recursive-goal-sum&#34;&gt;🟠 Puzzle 8 — Recursive Goal Sum&lt;/h2&gt;
+&lt;p&gt;Sum goals using &lt;strong&gt;recursion only&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def recursive_sum(arr):
+    if not arr:
+        return 0
+    return arr[0] + recursive_sum(arr[1:])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-9--assist--goal-filter&#34;&gt;🟠 Puzzle 9 — Assist + Goal Filter&lt;/h2&gt;
+&lt;p&gt;Count matches where Messi had &lt;strong&gt;goal AND assist&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;stats = [(1,1), (1,0), (0,1), (1,1)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;count = 0
+for g, a in stats:
+    if g == 1 and a == 1:
+        count += 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-10--dictionary-aggregation&#34;&gt;🟠 Puzzle 10 — Dictionary Aggregation&lt;/h2&gt;
+&lt;p&gt;Track total goals per season.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seasons = {&amp;quot;2019&amp;quot;: 30, &amp;quot;2020&amp;quot;: 25}
+total = sum(seasons.values())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-11--decorator-match-logger&#34;&gt;🔵 Puzzle 11 — Decorator: Match Logger&lt;/h2&gt;
+&lt;p&gt;Log before and after Messi plays.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def logger(fn):
+    def wrapper():
+        print(&amp;quot;Match start&amp;quot;)
+        fn()
+        print(&amp;quot;Match end&amp;quot;)
+    return wrapper
+
+@logger
+def play():
+    print(&amp;quot;Messi scores!&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-12--class-player-card-system&#34;&gt;🔵 Puzzle 12 — Class: Player Card System&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class Player:
+    def __init__(self):
+        self.yellow = 0
+        self.red = False
+
+    def foul(self):
+        self.yellow += 1
+        if self.yellow &amp;gt;= 2:
+            self.red = True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-13--while-loop-simulator&#34;&gt;🔵 Puzzle 13 — While Loop Simulator&lt;/h2&gt;
+&lt;p&gt;Simulate Messi scoring until stamina hits zero.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;stamina = 5
+goals = 0
+while stamina &amp;gt; 0:
+    goals += 1
+    stamina -= 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-14--nested-containers&#34;&gt;🔴 Puzzle 14 — Nested Containers&lt;/h2&gt;
+&lt;p&gt;Count goals from nested tournament data.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;tournament = [[1,2],[0,1],[3]]
+total = sum(sum(match) for match in tournament)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-15--sliding-window-advanced-indexing&#34;&gt;🔴 Puzzle 15 — Sliding Window (Advanced Indexing)&lt;/h2&gt;
+&lt;p&gt;Max goals in &lt;strong&gt;2 consecutive matches&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;goals = [1,2,0,3]
+max_sum = 0
+for i in range(len(goals)-1):
+    max_sum = max(max_sum, goals[i] + goals[i+1])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-16--complex-conditions&#34;&gt;🔴 Puzzle 16 — Complex Conditions&lt;/h2&gt;
+&lt;p&gt;Valid match if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;goals ≥ 1&lt;/li&gt;
+&lt;li&gt;assists ≥ 1&lt;/li&gt;
+&lt;li&gt;no red card&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;valid = goals &amp;gt;= 1 and assists &amp;gt;= 1 and not red
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-17--recursive-match-tree&#34;&gt;🔴 Puzzle 17 — Recursive Match Tree&lt;/h2&gt;
+&lt;p&gt;Traverse knockout tree recursively.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def traverse(node):
+    if not node:
+        return 0
+    return node[&amp;quot;goals&amp;quot;] + traverse(node.get(&amp;quot;next&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-18--state-machine-logic&#34;&gt;🟣 Puzzle 18 — State Machine Logic&lt;/h2&gt;
+&lt;p&gt;Messi state: &lt;code&gt;&amp;quot;play&amp;quot; → &amp;quot;yellow&amp;quot; → &amp;quot;red&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;state = &amp;quot;play&amp;quot;
+if foul:
+    state = &amp;quot;yellow&amp;quot; if state == &amp;quot;play&amp;quot; else &amp;quot;red&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-19--full-match-engine&#34;&gt;🟣 Puzzle 19 — Full Match Engine&lt;/h2&gt;
+&lt;p&gt;Combine:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;loops&lt;/li&gt;
+&lt;li&gt;conditions&lt;/li&gt;
+&lt;li&gt;classes&lt;/li&gt;
+&lt;li&gt;break/continue&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for minute in range(90):
+    if red:
+        break
+    if injured:
+        continue
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-20--final-boss-everything&#34;&gt;🏆 Puzzle 20 — FINAL BOSS (Everything)&lt;/h2&gt;
+&lt;p&gt;Simulate Messi’s season:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;goals&lt;/li&gt;
+&lt;li&gt;assists&lt;/li&gt;
+&lt;li&gt;yellow/red cards&lt;/li&gt;
+&lt;li&gt;suspension logic&lt;/li&gt;
+&lt;li&gt;class + function + loop + recursion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Condensed)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class Messi:
+    def __init__(self):
+        self.goals = 0
+        self.yellow = 0
+        self.red = False
+
+    def play_match(self, g, a, y):
+        if self.red:
+            return
+        self.goals += g
+        self.yellow += y
+        if self.yellow &amp;gt;= 2:
+            self.red = True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-message&#34;&gt;🧠 Final Message&lt;/h2&gt;
+&lt;p&gt;If you understand &lt;strong&gt;this entire document&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;You don’t just “know Python”.&lt;/p&gt;
+&lt;p&gt;You &lt;strong&gt;think like a software engineer&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;⚽🐐 Messi would approve.&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-14 — Algorithm Test (V1)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-14-algorithm-test-v1/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-14-algorithm-test-v1/</guid>
+      <description>&lt;h2 id=&#34;-why-this-document-exists&#34;&gt;🌍 Why This Document Exists&lt;/h2&gt;
+&lt;p&gt;This is &lt;strong&gt;not&lt;/strong&gt; a LeetCode solution dump.&lt;/p&gt;
+&lt;p&gt;This is a &lt;strong&gt;real-world algorithm thinking gym&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You will train:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🧠 Problem decomposition&lt;/li&gt;
+&lt;li&gt;📊 Data processing at scale&lt;/li&gt;
+&lt;li&gt;⏱ Time &amp;amp; space complexity awareness&lt;/li&gt;
+&lt;li&gt;🔁 Iteration, recursion, sliding windows&lt;/li&gt;
+&lt;li&gt;🧮 Hash maps, sets, heaps, stacks&lt;/li&gt;
+&lt;li&gt;🧵 Real production-like constraints&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Inspired by &lt;strong&gt;Google, AWS, Microsoft, OpenAI interviews&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-python-logic-olympics--real-world-edition-20-problems&#34;&gt;🏆 Python Logic Olympics — Real World Edition (20 Problems)&lt;/h1&gt;
+&lt;p&gt;Difficulty increases &lt;strong&gt;gradually&lt;/strong&gt;.
+&lt;strong&gt;Do not open solutions too early.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-1--log-entry-counter-warm-up&#34;&gt;🟢 Problem 1 — Log Entry Counter (Warm-Up)&lt;/h2&gt;
+&lt;p&gt;You receive API logs per minute:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;logs = [12, 0, 7, 3, 9, 0, 15]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Each number represents requests in that minute.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Count the &lt;strong&gt;total number of requests&lt;/strong&gt; without using &lt;code&gt;sum()&lt;/code&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;total = 0
+for x in logs:
+    total += x
+print(total)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-2--healthy-server-detection&#34;&gt;🟢 Problem 2 — Healthy Server Detection&lt;/h2&gt;
+&lt;p&gt;Each server sends a heartbeat signal:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;heartbeat = [True, True, False, True, True]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A server is &lt;strong&gt;healthy&lt;/strong&gt; only if &lt;strong&gt;no False exists&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Return &lt;code&gt;True&lt;/code&gt; if the system is healthy, else &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;healthy = True
+for h in heartbeat:
+    if not h:
+        healthy = False
+        break
+print(healthy)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-3--unique-user-ids&#34;&gt;🟢 Problem 3 — Unique User IDs&lt;/h2&gt;
+&lt;p&gt;User login stream:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;users = [101, 203, 101, 405, 203, 999]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Return the &lt;strong&gt;number of unique users&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;unique = set()
+for u in users:
+    unique.add(u)
+print(len(unique))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-4--first-repeated-transaction&#34;&gt;🟡 Problem 4 — First Repeated Transaction&lt;/h2&gt;
+&lt;p&gt;Transactions arrive in order:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;tx = [&amp;quot;A12&amp;quot;, &amp;quot;B33&amp;quot;, &amp;quot;C90&amp;quot;, &amp;quot;B33&amp;quot;, &amp;quot;D10&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Return the &lt;strong&gt;first repeated transaction ID&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seen = set()
+for t in tx:
+    if t in seen:
+        print(t)
+        break
+    seen.add(t)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-5--sliding-window-cpu-alert&#34;&gt;🟡 Problem 5 — Sliding Window CPU Alert&lt;/h2&gt;
+&lt;p&gt;CPU usage per second:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;cpu = [40, 60, 80, 90, 30, 20, 85]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Detect if &lt;strong&gt;any 3 consecutive seconds&lt;/strong&gt; exceed &lt;strong&gt;200 total usage&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i in range(len(cpu) - 2):
+    if cpu[i] + cpu[i+1] + cpu[i+2] &amp;gt; 200:
+        print(True)
+        break
+else:
+    print(False)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-6--rate-limiter&#34;&gt;🟡 Problem 6 — Rate Limiter&lt;/h2&gt;
+&lt;p&gt;Requests arrive with timestamps (seconds):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;requests = [1, 1, 1, 2, 2, 3, 10]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Rule:&lt;/strong&gt; Max &lt;strong&gt;3 requests per second&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Return timestamps that violate the rule.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from collections import defaultdict
+
+count = defaultdict(int)
+violations = []
+
+for r in requests:
+    count[r] += 1
+    if count[r] &amp;gt; 3:
+        violations.append(r)
+
+print(violations)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-7--most-frequent-error-code&#34;&gt;🟡 Problem 7 — Most Frequent Error Code&lt;/h2&gt;
+&lt;p&gt;System errors:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;errors = [500, 404, 500, 403, 404, 500]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Return the &lt;strong&gt;most frequent error code&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;freq = {}
+for e in errors:
+    freq[e] = freq.get(e, 0) + 1
+
+print(max(freq, key=freq.get))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-8--data-chunking&#34;&gt;🟡 Problem 8 — Data Chunking&lt;/h2&gt;
+&lt;p&gt;Large dataset needs batching:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;data = list(range(10))
+batch_size = 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Split data into batches of size &lt;code&gt;batch_size&lt;/code&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;batches = []
+for i in range(0, len(data), batch_size):
+    batches.append(data[i:i+batch_size])
+print(batches)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-9--valid-json-brackets&#34;&gt;🔵 Problem 9 — Valid JSON Brackets&lt;/h2&gt;
+&lt;p&gt;Incoming JSON stream (simplified):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;s = &amp;quot;{[()()]}&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Check if brackets are valid.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;stack = []
+pairs = {&#39;)&#39;:&#39;(&#39;, &#39;]&#39;:&#39;[&#39;, &#39;}&#39;:&#39;{&#39;}
+
+for c in s:
+    if c in &#39;([{&#39;:
+        stack.append(c)
+    else:
+        if not stack or stack.pop() != pairs[c]:
+            print(False)
+            break
+else:
+    print(len(stack) == 0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-10--longest-continuous-uptime&#34;&gt;🔵 Problem 10 — Longest Continuous Uptime&lt;/h2&gt;
+&lt;p&gt;Service status:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;status = [1,1,0,1,1,1,0,1]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;1 = up&lt;/code&gt;, &lt;code&gt;0 = down&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Find longest continuous uptime.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;max_up = cur = 0
+for s in status:
+    if s == 1:
+        cur += 1
+        max_up = max(max_up, cur)
+    else:
+        cur = 0
+print(max_up)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-11--merge-sorted-event-streams&#34;&gt;🔵 Problem 11 — Merge Sorted Event Streams&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a = [1,3,5]
+b = [2,4,6]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Merge into sorted order &lt;strong&gt;without sort()&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;i = j = 0
+res = []
+
+while i &amp;lt; len(a) and j &amp;lt; len(b):
+    if a[i] &amp;lt; b[j]:
+        res.append(a[i]); i += 1
+    else:
+        res.append(b[j]); j += 1
+
+res.extend(a[i:])
+res.extend(b[j:])
+print(res)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-12--anomaly-score-detection&#34;&gt;🔵 Problem 12 — Anomaly Score Detection&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;scores = [10, 12, 11, 50, 13]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Rule:&lt;/strong&gt;
+An anomaly is &amp;gt; &lt;strong&gt;2× average&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;avg = sum(scores) / len(scores)
+print([x for x in scores if x &amp;gt; 2 * avg])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-13--lru-cache-simulation&#34;&gt;🔴 Problem 13 — LRU Cache Simulation&lt;/h2&gt;
+&lt;p&gt;Capacity = 2
+Access pattern:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;access = [&amp;quot;A&amp;quot;,&amp;quot;B&amp;quot;,&amp;quot;A&amp;quot;,&amp;quot;C&amp;quot;,&amp;quot;B&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Simulate LRU eviction.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;cache = []
+cap = 2
+
+for x in access:
+    if x in cache:
+        cache.remove(x)
+    elif len(cache) == cap:
+        cache.pop(0)
+    cache.append(x)
+
+print(cache)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-14--top-k-frequent-events&#34;&gt;🔴 Problem 14 — Top-K Frequent Events&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;events = [&amp;quot;login&amp;quot;,&amp;quot;pay&amp;quot;,&amp;quot;login&amp;quot;,&amp;quot;logout&amp;quot;,&amp;quot;login&amp;quot;,&amp;quot;pay&amp;quot;]
+k = 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from collections import Counter
+print([x for x,_ in Counter(events).most_common(k)])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-15--shortest-error-window&#34;&gt;🔴 Problem 15 — Shortest Error Window&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;logs = [&amp;quot;OK&amp;quot;,&amp;quot;ERR&amp;quot;,&amp;quot;OK&amp;quot;,&amp;quot;ERR&amp;quot;,&amp;quot;ERR&amp;quot;,&amp;quot;OK&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Smallest subarray containing &lt;strong&gt;2 ERR&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;left = 0
+err = 0
+best = float(&amp;quot;inf&amp;quot;)
+
+for right in range(len(logs)):
+    if logs[right] == &amp;quot;ERR&amp;quot;:
+        err += 1
+    while err &amp;gt;= 2:
+        best = min(best, right - left + 1)
+        if logs[left] == &amp;quot;ERR&amp;quot;:
+            err -= 1
+        left += 1
+
+print(best)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-16--task-scheduling-greedy&#34;&gt;🔴 Problem 16 — Task Scheduling (Greedy)&lt;/h2&gt;
+&lt;p&gt;Tasks with deadlines:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;tasks = [(3,10),(1,5),(2,7)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;(duration, deadline)&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;tasks.sort(key=lambda x: x[1])
+time = 0
+
+for d, dead in tasks:
+    time += d
+    if time &amp;gt; dead:
+        print(False)
+        break
+else:
+    print(True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-17--dependency-resolution-graph&#34;&gt;🔴 Problem 17 — Dependency Resolution (Graph)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;deps = {&amp;quot;A&amp;quot;:[&amp;quot;B&amp;quot;],&amp;quot;B&amp;quot;:[&amp;quot;C&amp;quot;],&amp;quot;C&amp;quot;:[]}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Detect cycles.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;vis = set()
+path = set()
+
+def dfs(n):
+    if n in path: return True
+    if n in vis: return False
+    path.add(n)
+    for nei in deps[n]:
+        if dfs(nei): return True
+    path.remove(n)
+    vis.add(n)
+    return False
+
+print(any(dfs(x) for x in deps))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-18--api-burst-detection&#34;&gt;🔴 Problem 18 — API Burst Detection&lt;/h2&gt;
+&lt;p&gt;Requests timestamps:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;t = [1,2,3,3,3,3,4]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Burst = 4 in same second.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from collections import Counter
+print(any(v &amp;gt;= 4 for v in Counter(t).values()))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-19--median-of-data-stream&#34;&gt;🔴 Problem 19 — Median of Data Stream&lt;/h2&gt;
+&lt;p&gt;Stream:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;nums = [5,15,1,3]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import heapq
+low, high = [], []
+
+for n in nums:
+    heapq.heappush(low, -n)
+    heapq.heappush(high, -heapq.heappop(low))
+    if len(high) &amp;gt; len(low):
+        heapq.heappush(low, -heapq.heappop(high))
+
+    if len(low) &amp;gt; len(high):
+        print(-low[0])
+    else:
+        print((-low[0] + high[0]) / 2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-20--distributed-log-consistency&#34;&gt;🔴 Problem 20 — Distributed Log Consistency&lt;/h2&gt;
+&lt;p&gt;Multiple replicas send logs:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;replicas = [
+  [&amp;quot;A&amp;quot;,&amp;quot;B&amp;quot;,&amp;quot;C&amp;quot;],
+  [&amp;quot;A&amp;quot;,&amp;quot;C&amp;quot;],
+  [&amp;quot;A&amp;quot;,&amp;quot;B&amp;quot;,&amp;quot;C&amp;quot;,&amp;quot;D&amp;quot;]
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Find logs present in &lt;strong&gt;all replicas&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;common = set(replicas[0])
+for r in replicas[1:]:
+    common &amp;amp;= set(r)
+print(list(common))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-advice&#34;&gt;🎯 Final Advice&lt;/h2&gt;
+&lt;p&gt;If you can &lt;strong&gt;explain these aloud&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can pass &lt;strong&gt;FAANG Python interviews&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You understand &lt;strong&gt;real engineering logic&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You are no longer memorizing — you are &lt;strong&gt;thinking&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-15 — Algorithm Test (V2)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-15-algorithm-test-v2/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-15-algorithm-test-v2/</guid>
+      <description>&lt;h2 id=&#34;-why-this-document-exists&#34;&gt;🌍 Why This Document Exists&lt;/h2&gt;
+&lt;p&gt;This is &lt;strong&gt;not&lt;/strong&gt; about memorizing tricks.&lt;/p&gt;
+&lt;p&gt;This is about learning how &lt;strong&gt;real engineers think&lt;/strong&gt; at:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Google&lt;/li&gt;
+&lt;li&gt;AWS&lt;/li&gt;
+&lt;li&gt;OpenAI&lt;/li&gt;
+&lt;li&gt;Microsoft&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You will practice:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🧠 Algorithmic thinking&lt;/li&gt;
+&lt;li&gt;🧱 Data structures&lt;/li&gt;
+&lt;li&gt;⚙️ Python internals&lt;/li&gt;
+&lt;li&gt;🚦 Edge cases&lt;/li&gt;
+&lt;li&gt;📊 Real-world constraints&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-python-algorithm-thinking--20-real-world-puzzles&#34;&gt;🧠 Python Algorithm Thinking — 20 Real-World Puzzles&lt;/h1&gt;
+&lt;p&gt;Difficulty increases gradually.&lt;br&gt;
+&lt;strong&gt;Do not open solutions too early.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-1--api-request-counter&#34;&gt;🟢 Puzzle 1 — API Request Counter&lt;/h2&gt;
+&lt;p&gt;A server receives API calls per minute:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;requests = [120, 98, 135, 102, 87]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Calculate the total number of requests &lt;strong&gt;without using &lt;code&gt;sum()&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;total = 0
+for r in requests:
+    total += r
+print(total)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-2--log-error-filter&#34;&gt;🟢 Puzzle 2 — Log Error Filter&lt;/h2&gt;
+&lt;p&gt;System logs:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;logs = [&amp;quot;INFO&amp;quot;, &amp;quot;ERROR&amp;quot;, &amp;quot;INFO&amp;quot;, &amp;quot;WARN&amp;quot;, &amp;quot;ERROR&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Return how many &lt;code&gt;&amp;quot;ERROR&amp;quot;&lt;/code&gt; logs exist.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;count = 0
+for log in logs:
+    if log == &amp;quot;ERROR&amp;quot;:
+        count += 1
+print(count)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-3--user-id-deduplication&#34;&gt;🟢 Puzzle 3 — User ID Deduplication&lt;/h2&gt;
+&lt;p&gt;User IDs arriving from multiple services:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ids = [101, 102, 101, 103, 102, 104]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Return &lt;strong&gt;unique IDs&lt;/strong&gt; while preserving order.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seen = set()
+result = []
+
+for i in ids:
+    if i not in seen:
+        seen.add(i)
+        result.append(i)
+
+print(result)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-4--rate-limit-trigger&#34;&gt;🟢 Puzzle 4 — Rate Limit Trigger&lt;/h2&gt;
+&lt;p&gt;Requests per second:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;traffic = [3, 5, 7, 12, 4, 15, 6]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Return all values &lt;strong&gt;above 10&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;result = []
+for t in traffic:
+    if t &amp;gt; 10:
+        result.append(t)
+print(result)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-5--first-non-repeating-event&#34;&gt;🟡 Puzzle 5 — First Non-Repeating Event&lt;/h2&gt;
+&lt;p&gt;Event stream:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;events = [&amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;, &amp;quot;A&amp;quot;, &amp;quot;C&amp;quot;, &amp;quot;B&amp;quot;, &amp;quot;D&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Return the &lt;strong&gt;first event that appears only once&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from collections import Counter
+
+counts = Counter(events)
+for e in events:
+    if counts[e] == 1:
+        print(e)
+        break
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-6--sliding-window-cpu-average&#34;&gt;🟡 Puzzle 6 — Sliding Window CPU Average&lt;/h2&gt;
+&lt;p&gt;CPU usage over time:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;cpu = [20, 30, 50, 40, 60, 70]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Return the &lt;strong&gt;maximum average of any window of size 3&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;max_avg = 0
+for i in range(len(cpu) - 2):
+    avg = (cpu[i] + cpu[i+1] + cpu[i+2]) / 3
+    max_avg = max(max_avg, avg)
+
+print(max_avg)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-7--password-strength-validator&#34;&gt;🟡 Puzzle 7 — Password Strength Validator&lt;/h2&gt;
+&lt;p&gt;Rules:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;≥ 8 chars&lt;/li&gt;
+&lt;li&gt;at least 1 digit&lt;/li&gt;
+&lt;li&gt;at least 1 uppercase&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Return &lt;code&gt;True / False&lt;/code&gt; for a password.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def strong(p):
+    return (
+        len(p) &amp;gt;= 8 and
+        any(c.isdigit() for c in p) and
+        any(c.isupper() for c in p)
+    )
+
+print(strong(&amp;quot;Pass1234&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-8--api-retry-simulator&#34;&gt;🟡 Puzzle 8 — API Retry Simulator&lt;/h2&gt;
+&lt;p&gt;Retry delays:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;delays = [1, 2, 4, 8, 16]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Return cumulative wait time.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;total = 0
+for d in delays:
+    total += d
+print(total)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-9--time-based-key-store&#34;&gt;🟡 Puzzle 9 — Time-Based Key Store&lt;/h2&gt;
+&lt;p&gt;Operations:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ops = [(&amp;quot;set&amp;quot;,&amp;quot;a&amp;quot;,1),(&amp;quot;set&amp;quot;,&amp;quot;a&amp;quot;,2),(&amp;quot;get&amp;quot;,&amp;quot;a&amp;quot;)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Return latest value for &lt;code&gt;&amp;quot;a&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;store = {}
+for op in ops:
+    if op[0] == &amp;quot;set&amp;quot;:
+        store[op[1]] = op[2]
+
+print(store[&amp;quot;a&amp;quot;])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-10--merge-sorted-logs&#34;&gt;🔵 Puzzle 10 — Merge Sorted Logs&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a = [1,4,7]
+b = [2,3,6]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Merge into one sorted list.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;i = j = 0
+result = []
+
+while i &amp;lt; len(a) and j &amp;lt; len(b):
+    if a[i] &amp;lt; b[j]:
+        result.append(a[i])
+        i += 1
+    else:
+        result.append(b[j])
+        j += 1
+
+result.extend(a[i:])
+result.extend(b[j:])
+print(result)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-11--detect-configuration-drift&#34;&gt;🔵 Puzzle 11 — Detect Configuration Drift&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;expected = {&amp;quot;cpu&amp;quot;:4,&amp;quot;ram&amp;quot;:16}
+actual = {&amp;quot;cpu&amp;quot;:8,&amp;quot;ram&amp;quot;:16}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Return keys that differ.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;diff = []
+for k in expected:
+    if expected[k] != actual.get(k):
+        diff.append(k)
+
+print(diff)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-12--circular-queue-overflow&#34;&gt;🔵 Puzzle 12 — Circular Queue Overflow&lt;/h2&gt;
+&lt;p&gt;Queue size = 3&lt;br&gt;
+Operations:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ops = [&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;,&amp;quot;push&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Detect overflow.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;size = 3
+count = 0
+
+for op in ops:
+    if op == &amp;quot;push&amp;quot;:
+        count += 1
+        if count &amp;gt; size:
+            print(&amp;quot;Overflow&amp;quot;)
+            break
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-13--longest-stable-network-period&#34;&gt;🔵 Puzzle 13 — Longest Stable Network Period&lt;/h2&gt;
+&lt;p&gt;Latency data:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;latency = [20,22,21,50,51,20,21]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Longest subarray where difference ≤ 2.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;max_len = 1
+start = 0
+
+for end in range(len(latency)):
+    if abs(latency[end] - latency[start]) &amp;gt; 2:
+        start = end
+    max_len = max(max_len, end - start + 1)
+
+print(max_len)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-14--deadlock-detection-graph&#34;&gt;🔴 Puzzle 14 — Deadlock Detection (Graph)&lt;/h2&gt;
+&lt;p&gt;Edges:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;edges = {&amp;quot;A&amp;quot;:[&amp;quot;B&amp;quot;],&amp;quot;B&amp;quot;:[&amp;quot;C&amp;quot;],&amp;quot;C&amp;quot;:[&amp;quot;A&amp;quot;]}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Detect cycle.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;visited = set()
+stack = set()
+
+def dfs(n):
+    if n in stack:
+        return True
+    if n in visited:
+        return False
+    visited.add(n)
+    stack.add(n)
+    for nei in edges.get(n,[]):
+        if dfs(nei):
+            return True
+    stack.remove(n)
+    return False
+
+print(any(dfs(n) for n in edges))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-15--token-bucket-rate-limiter&#34;&gt;🔴 Puzzle 15 — Token Bucket Rate Limiter&lt;/h2&gt;
+&lt;p&gt;Capacity = 5&lt;br&gt;
+Requests = 7&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Allow or reject.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;tokens = 5
+for i in range(7):
+    if tokens &amp;gt; 0:
+        tokens -= 1
+        print(&amp;quot;Allowed&amp;quot;)
+    else:
+        print(&amp;quot;Rejected&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-16--lru-cache-core-idea&#34;&gt;🔴 Puzzle 16 — LRU Cache (Core Idea)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Evict least recently used key.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from collections import OrderedDict
+
+cache = OrderedDict()
+cache[&amp;quot;a&amp;quot;] = 1
+cache[&amp;quot;b&amp;quot;] = 2
+cache.move_to_end(&amp;quot;a&amp;quot;)
+cache.popitem(last=False)
+print(cache)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-17--distributed-id-generator&#34;&gt;🔴 Puzzle 17 — Distributed ID Generator&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Ensure uniqueness.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import time
+
+def gen():
+    return int(time.time() * 1000)
+
+print(gen())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-18--batch-job-scheduler&#34;&gt;🔴 Puzzle 18 — Batch Job Scheduler&lt;/h2&gt;
+&lt;p&gt;Jobs with durations:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;jobs = [3,1,2]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Minimize total wait time.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;jobs.sort()
+time = 0
+total = 0
+for j in jobs:
+    total += time
+    time += j
+print(total)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-19--model-version-rollback&#34;&gt;🔴 Puzzle 19 — Model Version Rollback&lt;/h2&gt;
+&lt;p&gt;Versions:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;versions = [1,2,3,4,3,2]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Detect rollback.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for i in range(1,len(versions)):
+    if versions[i] &amp;lt; versions[i-1]:
+        print(&amp;quot;Rollback detected&amp;quot;)
+        break
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-20--system-design-thinking&#34;&gt;🟣 Puzzle 20 — System Design Thinking&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Explain (no code):&lt;br&gt;
+How would you design &lt;strong&gt;a rate-limited, cached, fault-tolerant API&lt;/strong&gt;?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;p&gt;Key ideas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Load balancer&lt;/li&gt;
+&lt;li&gt;Rate limiter&lt;/li&gt;
+&lt;li&gt;Cache (Redis)&lt;/li&gt;
+&lt;li&gt;Retry + circuit breaker&lt;/li&gt;
+&lt;li&gt;Monitoring&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-thought&#34;&gt;🏁 Final Thought&lt;/h2&gt;
+&lt;p&gt;If you can &lt;strong&gt;solve + explain&lt;/strong&gt; these,
+you are thinking like a &lt;strong&gt;real Python engineer&lt;/strong&gt; — not a tutorial follower.&lt;/p&gt;
+&lt;p&gt;Teach others.
+Make the world better.&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-16 — Algorithm Test (V3)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-16-algorithm-test-v3/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-16-algorithm-test-v3/</guid>
+      <description>&lt;h2 id=&#34;-why-this-document-exists&#34;&gt;🌍 Why This Document Exists&lt;/h2&gt;
+&lt;p&gt;This document trains &lt;strong&gt;engineering judgment&lt;/strong&gt;, not syntax.&lt;/p&gt;
+&lt;p&gt;Real interviews test:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;how you &lt;strong&gt;combine conditions&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;how you &lt;strong&gt;eliminate wrong paths&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;how you &lt;strong&gt;protect systems with logic&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you master this → you think like a &lt;strong&gt;senior Python engineer&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-python-algorithm-thinking--20-advanced-logic-puzzles&#34;&gt;🧠 Python Algorithm Thinking — 20 Advanced Logic Puzzles&lt;/h1&gt;
+&lt;p&gt;Rules:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No shortcuts&lt;/li&gt;
+&lt;li&gt;Read carefully&lt;/li&gt;
+&lt;li&gt;Think in &lt;strong&gt;conditions&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-1--smart-api-throttling&#34;&gt;🟢 Puzzle 1 — Smart API Throttling&lt;/h2&gt;
+&lt;p&gt;API request has:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;requests = [
+    {&amp;quot;user&amp;quot;:&amp;quot;A&amp;quot;,&amp;quot;count&amp;quot;:90,&amp;quot;premium&amp;quot;:False},
+    {&amp;quot;user&amp;quot;:&amp;quot;B&amp;quot;,&amp;quot;count&amp;quot;:120,&amp;quot;premium&amp;quot;:True},
+    {&amp;quot;user&amp;quot;:&amp;quot;C&amp;quot;,&amp;quot;count&amp;quot;:120,&amp;quot;premium&amp;quot;:False},
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Rules:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Block if &lt;code&gt;count &amp;gt; 100&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;BUT allow if &lt;code&gt;premium == True&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Return users that are &lt;strong&gt;blocked&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;blocked = []
+
+for r in requests:
+    if r[&amp;quot;count&amp;quot;] &amp;gt; 100 and not r[&amp;quot;premium&amp;quot;]:
+        blocked.append(r[&amp;quot;user&amp;quot;])
+
+print(blocked)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-2--secure-login-validator&#34;&gt;🟢 Puzzle 2 — Secure Login Validator&lt;/h2&gt;
+&lt;p&gt;A login attempt is valid if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;username exists&lt;/li&gt;
+&lt;li&gt;password matches&lt;/li&gt;
+&lt;li&gt;account is active &lt;strong&gt;OR&lt;/strong&gt; admin override is true&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;user = {
+  &amp;quot;exists&amp;quot;: True,
+  &amp;quot;password_ok&amp;quot;: True,
+  &amp;quot;active&amp;quot;: False,
+  &amp;quot;admin_override&amp;quot;: True
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;br&gt;
+Return &lt;code&gt;True / False&lt;/code&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;valid = (
+    user[&amp;quot;exists&amp;quot;]
+    and user[&amp;quot;password_ok&amp;quot;]
+    and (user[&amp;quot;active&amp;quot;] or user[&amp;quot;admin_override&amp;quot;])
+)
+
+print(valid)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-3--production-error-escalation&#34;&gt;🟢 Puzzle 3 — Production Error Escalation&lt;/h2&gt;
+&lt;p&gt;Error should be escalated if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;severity ≥ 8&lt;/li&gt;
+&lt;li&gt;AND (service is &lt;code&gt;&amp;quot;payment&amp;quot;&lt;/code&gt; OR &lt;code&gt;&amp;quot;auth&amp;quot;&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;AND NOT during maintenance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;error = {&amp;quot;sev&amp;quot;:9,&amp;quot;service&amp;quot;:&amp;quot;payment&amp;quot;,&amp;quot;maintenance&amp;quot;:False}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if (
+    error[&amp;quot;sev&amp;quot;] &amp;gt;= 8
+    and error[&amp;quot;service&amp;quot;] in (&amp;quot;payment&amp;quot;,&amp;quot;auth&amp;quot;)
+    and not error[&amp;quot;maintenance&amp;quot;]
+):
+    print(&amp;quot;Escalate&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-4--smart-cache-usage&#34;&gt;🟡 Puzzle 4 — Smart Cache Usage&lt;/h2&gt;
+&lt;p&gt;Use cache if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cache exists&lt;/li&gt;
+&lt;li&gt;AND (data fresh OR forced_cache=True)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;cache = {&amp;quot;exists&amp;quot;:True,&amp;quot;fresh&amp;quot;:False}
+forced_cache = True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;use_cache = (
+    cache[&amp;quot;exists&amp;quot;]
+    and (cache[&amp;quot;fresh&amp;quot;] or forced_cache)
+)
+
+print(use_cache)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-5--fraud-detection-rule&#34;&gt;🟡 Puzzle 5 — Fraud Detection Rule&lt;/h2&gt;
+&lt;p&gt;Transaction is suspicious if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;amount &amp;gt; 10_000&lt;/li&gt;
+&lt;li&gt;OR (amount &amp;gt; 3_000 AND country not trusted)&lt;/li&gt;
+&lt;li&gt;AND NOT internal_transfer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;tx = {&amp;quot;amount&amp;quot;:5000,&amp;quot;trusted&amp;quot;:False,&amp;quot;internal&amp;quot;:False}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if (
+    (tx[&amp;quot;amount&amp;quot;] &amp;gt; 10000
+    or (tx[&amp;quot;amount&amp;quot;] &amp;gt; 3000 and not tx[&amp;quot;trusted&amp;quot;]))
+    and not tx[&amp;quot;internal&amp;quot;]
+):
+    print(&amp;quot;Suspicious&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-6--multi-level-access-control&#34;&gt;🟡 Puzzle 6 — Multi-Level Access Control&lt;/h2&gt;
+&lt;p&gt;Access granted if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;role is &lt;code&gt;&amp;quot;admin&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;OR (role &lt;code&gt;&amp;quot;dev&amp;quot;&lt;/code&gt; AND env &lt;code&gt;&amp;quot;staging&amp;quot;&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;OR (role &lt;code&gt;&amp;quot;viewer&amp;quot;&lt;/code&gt; AND read_only=True)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;user = {&amp;quot;role&amp;quot;:&amp;quot;dev&amp;quot;,&amp;quot;env&amp;quot;:&amp;quot;staging&amp;quot;,&amp;quot;read_only&amp;quot;:False}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if (
+    user[&amp;quot;role&amp;quot;] == &amp;quot;admin&amp;quot;
+    or (user[&amp;quot;role&amp;quot;] == &amp;quot;dev&amp;quot; and user[&amp;quot;env&amp;quot;] == &amp;quot;staging&amp;quot;)
+    or (user[&amp;quot;role&amp;quot;] == &amp;quot;viewer&amp;quot; and user[&amp;quot;read_only&amp;quot;])
+):
+    print(&amp;quot;Access granted&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-7--intelligent-retry-logic&#34;&gt;🟡 Puzzle 7 — Intelligent Retry Logic&lt;/h2&gt;
+&lt;p&gt;Retry request if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;status &amp;gt;= 500&lt;/li&gt;
+&lt;li&gt;AND retries &amp;lt; 3&lt;/li&gt;
+&lt;li&gt;AND NOT timeout&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;req = {&amp;quot;status&amp;quot;:502,&amp;quot;retries&amp;quot;:2,&amp;quot;timeout&amp;quot;:False}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if (
+    req[&amp;quot;status&amp;quot;] &amp;gt;= 500
+    and req[&amp;quot;retries&amp;quot;] &amp;lt; 3
+    and not req[&amp;quot;timeout&amp;quot;]
+):
+    print(&amp;quot;Retry&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-8--data-pipeline-drop-rule&#34;&gt;🔵 Puzzle 8 — Data Pipeline Drop Rule&lt;/h2&gt;
+&lt;p&gt;Drop record if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;missing required field&lt;/li&gt;
+&lt;li&gt;OR invalid format&lt;/li&gt;
+&lt;li&gt;OR (late arrival AND not backfill)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;rec = {&amp;quot;missing&amp;quot;:False,&amp;quot;invalid&amp;quot;:False,&amp;quot;late&amp;quot;:True,&amp;quot;backfill&amp;quot;:False}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if (
+    rec[&amp;quot;missing&amp;quot;]
+    or rec[&amp;quot;invalid&amp;quot;]
+    or (rec[&amp;quot;late&amp;quot;] and not rec[&amp;quot;backfill&amp;quot;])
+):
+    print(&amp;quot;Drop&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-9--alert-noise-reduction&#34;&gt;🔵 Puzzle 9 — Alert Noise Reduction&lt;/h2&gt;
+&lt;p&gt;Send alert if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;severity ≥ 7&lt;/li&gt;
+&lt;li&gt;AND (new_error OR error_rate &amp;gt; threshold)&lt;/li&gt;
+&lt;li&gt;AND NOT already_alerted&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if (
+    sev &amp;gt;= 7
+    and (new_error or rate &amp;gt; threshold)
+    and not alerted
+):
+    print(&amp;quot;Alert&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-10--smart-autoscaling-decision&#34;&gt;🔵 Puzzle 10 — Smart Autoscaling Decision&lt;/h2&gt;
+&lt;p&gt;Scale up if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cpu &amp;gt; 70 AND mem &amp;gt; 70&lt;/li&gt;
+&lt;li&gt;OR queue &amp;gt; 1000&lt;/li&gt;
+&lt;li&gt;AND NOT maintenance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if (
+    ((cpu &amp;gt; 70 and mem &amp;gt; 70) or queue &amp;gt; 1000)
+    and not maintenance
+):
+    print(&amp;quot;Scale up&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-11--complex-log-filtering&#34;&gt;🔴 Puzzle 11 — Complex Log Filtering&lt;/h2&gt;
+&lt;p&gt;Keep log if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;level is ERROR or WARN&lt;/li&gt;
+&lt;li&gt;AND service not deprecated&lt;/li&gt;
+&lt;li&gt;AND (env is prod OR flagged)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if (
+    log[&amp;quot;level&amp;quot;] in (&amp;quot;ERROR&amp;quot;,&amp;quot;WARN&amp;quot;)
+    and not log[&amp;quot;deprecated&amp;quot;]
+    and (log[&amp;quot;env&amp;quot;] == &amp;quot;prod&amp;quot; or log[&amp;quot;flagged&amp;quot;])
+):
+    kept.append(log)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-12--deployment-gate&#34;&gt;🔴 Puzzle 12 — Deployment Gate&lt;/h2&gt;
+&lt;p&gt;Allow deploy if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tests passed&lt;/li&gt;
+&lt;li&gt;AND security approved&lt;/li&gt;
+&lt;li&gt;AND (low_risk OR manager_approved)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if (
+    tests_ok
+    and security_ok
+    and (low_risk or manager_ok)
+):
+    print(&amp;quot;Deploy&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-13--feature-flag-evaluation&#34;&gt;🔴 Puzzle 13 — Feature Flag Evaluation&lt;/h2&gt;
+&lt;p&gt;Enable feature if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;flag_on&lt;/li&gt;
+&lt;li&gt;AND user_beta&lt;/li&gt;
+&lt;li&gt;AND NOT region_blocked&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if flag and beta and not blocked:
+    enable()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-14--dead-letter-queue-rule&#34;&gt;🔴 Puzzle 14 — Dead Letter Queue Rule&lt;/h2&gt;
+&lt;p&gt;Send to DLQ if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;retries exhausted&lt;/li&gt;
+&lt;li&gt;OR malformed payload&lt;/li&gt;
+&lt;li&gt;AND NOT manual_override&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if (
+    (retries == 0 or malformed)
+    and not manual_override
+):
+    send_dlq()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-15--ai-model-safety-gate&#34;&gt;🔴 Puzzle 15 — AI Model Safety Gate&lt;/h2&gt;
+&lt;p&gt;Allow response if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;confidence &amp;gt; 0.9&lt;/li&gt;
+&lt;li&gt;AND NOT hallucinated&lt;/li&gt;
+&lt;li&gt;AND (verified_source OR human_reviewed)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if (
+    conf &amp;gt; 0.9
+    and not hallucinated
+    and (verified or reviewed)
+):
+    respond()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-16--distributed-lock-acquisition&#34;&gt;🟣 Puzzle 16 — Distributed Lock Acquisition&lt;/h2&gt;
+&lt;p&gt;Acquire lock if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;lock free&lt;/li&gt;
+&lt;li&gt;OR expired&lt;/li&gt;
+&lt;li&gt;AND requester authorized&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if (
+    (free or expired)
+    and authorized
+):
+    acquire()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-17--multi-region-failover&#34;&gt;🟣 Puzzle 17 — Multi-Region Failover&lt;/h2&gt;
+&lt;p&gt;Failover if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;primary down&lt;/li&gt;
+&lt;li&gt;AND secondary healthy&lt;/li&gt;
+&lt;li&gt;AND NOT maintenance_window&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if primary_down and secondary_ok and not maintenance:
+    failover()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-18--abuse-detection&#34;&gt;🟣 Puzzle 18 — Abuse Detection&lt;/h2&gt;
+&lt;p&gt;Block user if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;reports &amp;gt; 5&lt;/li&gt;
+&lt;li&gt;AND (spam OR harassment)&lt;/li&gt;
+&lt;li&gt;AND NOT verified_user&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if reports &amp;gt; 5 and (spam or harassment) and not verified:
+    block()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-19--financial-transaction-approval&#34;&gt;🟣 Puzzle 19 — Financial Transaction Approval&lt;/h2&gt;
+&lt;p&gt;Approve if:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;balance sufficient&lt;/li&gt;
+&lt;li&gt;AND not frozen&lt;/li&gt;
+&lt;li&gt;AND (trusted_merchant OR small_amount)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;if balance &amp;gt;= amount and not frozen and (trusted or amount &amp;lt; 50):
+    approve()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-puzzle-20--senior-level-thinking&#34;&gt;🟣 Puzzle 20 — Senior-Level Thinking&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Explain (no code):&lt;/strong&gt;&lt;br&gt;
+Why grouping conditions incorrectly can cause:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;security bugs&lt;/li&gt;
+&lt;li&gt;outages&lt;/li&gt;
+&lt;li&gt;financial loss&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;p&gt;Because logical precedence mistakes (&lt;code&gt;and&lt;/code&gt; / &lt;code&gt;or&lt;/code&gt;) can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bypass security&lt;/li&gt;
+&lt;li&gt;trigger actions unintentionally&lt;/li&gt;
+&lt;li&gt;scale systems incorrectly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Senior engineers design logic &lt;strong&gt;defensively&lt;/strong&gt;.&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-truth&#34;&gt;🏁 Final Truth&lt;/h2&gt;
+&lt;p&gt;If you master &lt;strong&gt;logic composition&lt;/strong&gt;,&lt;br&gt;
+you master &lt;strong&gt;engineering power&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Teach this.
+Spread this.
+Make engineers better.&lt;/p&gt;
 &lt;hr&gt;</description>
     </item>
     
