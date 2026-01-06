@@ -13742,11 +13742,17 @@ else:
 &lt;p&gt;Requests arrive with timestamps (seconds):&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;requests = [1, 1, 1, 2, 2, 3, 10]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Rule:&lt;/strong&gt; Max &lt;strong&gt;3 requests per second&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Rule:&lt;/strong&gt;
+Max &lt;strong&gt;3 requests per second&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
 Return timestamps that violate the rule.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-key-idea&#34;&gt;🧠 Key Idea&lt;/h3&gt;
+&lt;p&gt;We need to &lt;strong&gt;count how many times each second appears&lt;/strong&gt;.
+If a timestamp appears &lt;strong&gt;more than 3 times&lt;/strong&gt;, it violates the rate limit.&lt;/p&gt;
+&lt;hr&gt;
 &lt;details&gt;
-&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;summary&gt;✅ Solution 1 — Using a Dictionary (Readable &amp; Pythonic)&lt;/summary&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from collections import defaultdict
 
 count = defaultdict(int)
@@ -13759,7 +13765,93 @@ for r in requests:
 
 print(violations)
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Why this works&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dictionary keeps count per second&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;defaultdict(int)&lt;/code&gt; avoids key-checking&lt;/li&gt;
+&lt;li&gt;Time complexity: &lt;strong&gt;O(n)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/details&gt;
+&lt;hr&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution 2 — NO Library, Pure Python (Interview-Ready)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;count = {}
+violations = []
+
+for r in requests:
+    if r not in count:
+        count[r] = 1
+    else:
+        count[r] += 1
+
+    if count[r] &amp;gt; 3:
+        violations.append(r)
+
+print(violations)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Why this impresses juniors&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No magic imports&lt;/li&gt;
+&lt;li&gt;Shows how dictionaries work internally&lt;/li&gt;
+&lt;li&gt;Common in &lt;strong&gt;low-level interviews&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Time complexity:&lt;/strong&gt; &lt;code&gt;O(n)&lt;/code&gt;
+&lt;strong&gt;Space complexity:&lt;/strong&gt; &lt;code&gt;O(n)&lt;/code&gt;&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution 3 — Sorted + Counter Variable (Conceptual)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;violations = []
+
+prev = None
+current_count = 0
+
+for r in requests:
+    if r == prev:
+        current_count += 1
+    else:
+        prev = r
+        current_count = 1
+
+    if current_count &amp;gt; 3:
+        violations.append(r)
+
+print(violations)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Why this is powerful&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Uses &lt;strong&gt;no extra data structure&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Works because input is &lt;strong&gt;sorted&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Demonstrates understanding of &lt;strong&gt;state tracking&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;⚠️ If input is not sorted → must sort first (&lt;code&gt;O(n log n)&lt;/code&gt;)&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-interview-takeaway&#34;&gt;🎯 Interview Takeaway&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Approach&lt;/th&gt;
+&lt;th&gt;Skill Shown&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;defaultdict&lt;/td&gt;
+&lt;td&gt;Python fluency&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;manual dict&lt;/td&gt;
+&lt;td&gt;Core fundamentals&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;state tracking&lt;/td&gt;
+&lt;td&gt;Algorithmic thinking&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;👉 &lt;strong&gt;Good engineers know libraries&lt;/strong&gt;
+👉 &lt;strong&gt;Great engineers know how to replace them&lt;/strong&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;-problem-7--most-frequent-error-code&#34;&gt;🟡 Problem 7 — Most Frequent Error Code&lt;/h2&gt;
 &lt;p&gt;System errors:&lt;/p&gt;
@@ -15913,6 +16005,759 @@ Synonyms are unrelated, and semantics are not captured.
 &lt;p&gt;Before LLMs, there was understanding.
 Before transformers, there was thinking.&lt;/p&gt;
 &lt;p&gt;This is how &lt;strong&gt;real NLP engineers are made&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-20 — Algorithm Test (V4)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-20-algorithm-test-v4/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-20-algorithm-test-v4/</guid>
+      <description>&lt;h2 id=&#34;-why-this-document-exists&#34;&gt;🌍 Why This Document Exists&lt;/h2&gt;
+&lt;p&gt;This is &lt;strong&gt;not&lt;/strong&gt; a LeetCode solution dump.&lt;/p&gt;
+&lt;p&gt;This is a &lt;strong&gt;real-world algorithm thinking gym&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You will train:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🧠 Problem decomposition&lt;/li&gt;
+&lt;li&gt;📊 Data processing at scale&lt;/li&gt;
+&lt;li&gt;⏱ Time &amp;amp; space complexity awareness&lt;/li&gt;
+&lt;li&gt;🔁 Iteration, recursion, sliding windows&lt;/li&gt;
+&lt;li&gt;🧮 Hash maps, sets, heaps, stacks&lt;/li&gt;
+&lt;li&gt;🧵 Real production-like constraints&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Inspired by &lt;strong&gt;Google, Microsoft, OpenAI interviews&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-python-logic-olympics--real-world-edition-20-problems&#34;&gt;🏆 Python Logic Olympics — Real World Edition (20 Problems)&lt;/h1&gt;
+&lt;p&gt;Difficulty increases &lt;strong&gt;gradually&lt;/strong&gt;.&lt;br&gt;
+⚠️ &lt;em&gt;Do not open solutions too early.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-1--manual-sum-warm-up&#34;&gt;🟢 Problem 1 — Manual Sum (Warm-Up)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;logs = [12, 0, 7, 3, 9, 0, 15]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Sum all values &lt;strong&gt;without using &lt;code&gt;sum()&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;total = 0
+for x in logs:
+    total += x
+print(total)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n)
+&lt;strong&gt;Space:&lt;/strong&gt; O(1)&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-2--boolean-health-check&#34;&gt;🟢 Problem 2 — Boolean Health Check&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;heartbeat = [True, True, False, True]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Healthy only if &lt;strong&gt;no False exists&lt;/strong&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Early Exit&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;healthy = True
+for h in heartbeat:
+    if not h:
+        healthy = False
+        break
+print(healthy)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n)
+&lt;strong&gt;Space:&lt;/strong&gt; O(1)&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-3--unique-user-count&#34;&gt;🟢 Problem 3 — Unique User Count&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;users = [101, 203, 101, 405, 203]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution 1 — Set&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(len(set(users)))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n)
+&lt;strong&gt;Space:&lt;/strong&gt; O(n)&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution 2 — NO LIB (Pure)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seen = {}
+count = 0
+for u in users:
+    if u not in seen:
+        seen[u] = True
+        count += 1
+print(count)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-4--first-duplicate-event&#34;&gt;🟡 Problem 4 — First Duplicate Event&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;events = [&amp;quot;A&amp;quot;,&amp;quot;B&amp;quot;,&amp;quot;C&amp;quot;,&amp;quot;B&amp;quot;,&amp;quot;D&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Hash Tracking&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seen = set()
+for e in events:
+    if e in seen:
+        print(e)
+        break
+    seen.add(e)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n)
+&lt;strong&gt;Space:&lt;/strong&gt; O(n)&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-5--fixed-sliding-window-alert&#34;&gt;🟡 Problem 5 — Fixed Sliding Window Alert&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;cpu = [40,60,80,90,30]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Alert if any &lt;strong&gt;3 consecutive sum &amp;gt; 200&lt;/strong&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Sliding Window&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;window = cpu[0] + cpu[1] + cpu[2]
+
+for i in range(3, len(cpu)):
+    if window &amp;gt; 200:
+        print(True)
+        break
+    window += cpu[i] - cpu[i-3]
+else:
+    print(window &amp;gt; 200)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n)
+&lt;strong&gt;Space:&lt;/strong&gt; O(1)&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-6--rate-limiter-multi-solution&#34;&gt;🟡 Problem 6 — Rate Limiter (Multi-Solution)&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;(same as your version — unchanged)&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-7--most-frequent-element&#34;&gt;🟡 Problem 7 — Most Frequent Element&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;errors = [500,404,500,403,404,500]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution 1 — Dict&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;freq = {}
+for e in errors:
+    freq[e] = freq.get(e, 0) + 1
+
+best = None
+best_count = 0
+for k,v in freq.items():
+    if v &amp;gt; best_count:
+        best, best_count = k, v
+print(best)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-8--manual-chunking&#34;&gt;🔵 Problem 8 — Manual Chunking&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;data = [0,1,2,3,4,5,6]
+size = 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — No Lib&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;res = []
+i = 0
+while i &amp;lt; len(data):
+    batch = []
+    for j in range(size):
+        if i+j &amp;lt; len(data):
+            batch.append(data[i+j])
+    res.append(batch)
+    i += size
+print(res)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n)
+&lt;strong&gt;Space:&lt;/strong&gt; O(n)&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-9--valid-parentheses&#34;&gt;🔵 Problem 9 — Valid Parentheses&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;s = &amp;quot;{[()()]}&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Stack&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;stack = []
+pairs = {&#39;)&#39;:&#39;(&#39;, &#39;]&#39;:&#39;[&#39;, &#39;}&#39;:&#39;{&#39;}
+
+for c in s:
+    if c in pairs.values():
+        stack.append(c)
+    else:
+        if not stack or stack.pop() != pairs[c]:
+            print(False)
+            break
+else:
+    print(len(stack) == 0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-10--longest-1s-streak&#34;&gt;🔵 Problem 10 — Longest 1s Streak&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;status = [1,1,0,1,1,1]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;cur = best = 0
+for s in status:
+    if s == 1:
+        cur += 1
+        best = max(best, cur)
+    else:
+        cur = 0
+print(best)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-11--merge-sorted-lists-no-sort&#34;&gt;🔵 Problem 11 — Merge Sorted Lists (NO SORT)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a = [1,3,5]
+b = [2,4,6]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Two Pointers&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;i = j = 0
+res = []
+
+while i &amp;lt; len(a) and j &amp;lt; len(b):
+    if a[i] &amp;lt; b[j]:
+        res.append(a[i]); i += 1
+    else:
+        res.append(b[j]); j += 1
+
+res += a[i:] + b[j:]
+print(res)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-12--anomaly-detection&#34;&gt;🔴 Problem 12 — Anomaly Detection&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;scores = [10,12,11,50,13]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Anomaly &amp;gt; &lt;strong&gt;2× average&lt;/strong&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Pure&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;total = 0
+for s in scores:
+    total += s
+avg = total / len(scores)
+
+res = []
+for s in scores:
+    if s &amp;gt; 2 * avg:
+        res.append(s)
+print(res)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-13--lru-cache-simulation&#34;&gt;🔴 Problem 13 — LRU Cache Simulation&lt;/h2&gt;
+&lt;p&gt;Capacity = 2&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;access = [&amp;quot;A&amp;quot;,&amp;quot;B&amp;quot;,&amp;quot;A&amp;quot;,&amp;quot;C&amp;quot;,&amp;quot;B&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — List Only&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;cache = []
+
+for x in access:
+    if x in cache:
+        cache.remove(x)
+    elif len(cache) == 2:
+        cache.pop(0)
+    cache.append(x)
+
+print(cache)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-14--top-k-frequency-no-counter&#34;&gt;🔴 Problem 14 — Top-K Frequency (NO Counter)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;events = [&amp;quot;login&amp;quot;,&amp;quot;pay&amp;quot;,&amp;quot;login&amp;quot;,&amp;quot;logout&amp;quot;,&amp;quot;login&amp;quot;,&amp;quot;pay&amp;quot;]
+k = 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Manual Count + Sort&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;freq = {}
+for e in events:
+    freq[e] = freq.get(e, 0) + 1
+
+items = list(freq.items())
+items.sort(key=lambda x: x[1], reverse=True)
+
+print([x[0] for x in items[:k]])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-15--smallest-window-with-2-err&#34;&gt;🔴 Problem 15 — Smallest Window with 2 ERR&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;logs = [&amp;quot;OK&amp;quot;,&amp;quot;ERR&amp;quot;,&amp;quot;OK&amp;quot;,&amp;quot;ERR&amp;quot;,&amp;quot;ERR&amp;quot;,&amp;quot;OK&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Sliding Window&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;left = err = 0
+best = float(&amp;quot;inf&amp;quot;)
+
+for right in range(len(logs)):
+    if logs[right] == &amp;quot;ERR&amp;quot;:
+        err += 1
+
+    while err &amp;gt;= 2:
+        best = min(best, right - left + 1)
+        if logs[left] == &amp;quot;ERR&amp;quot;:
+            err -= 1
+        left += 1
+
+print(best)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-16--greedy-scheduling&#34;&gt;🔴 Problem 16 — Greedy Scheduling&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;tasks = [(3,10),(1,5),(2,7)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;tasks.sort(key=lambda x: x[1])
+time = 0
+
+for d, dead in tasks:
+    time += d
+    if time &amp;gt; dead:
+        print(False)
+        break
+else:
+    print(True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-17--cycle-detection-graph&#34;&gt;🔴 Problem 17 — Cycle Detection (Graph)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;deps = {&amp;quot;A&amp;quot;:[&amp;quot;B&amp;quot;],&amp;quot;B&amp;quot;:[&amp;quot;C&amp;quot;],&amp;quot;C&amp;quot;:[]}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — DFS&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;vis, path = set(), set()
+
+def dfs(n):
+    if n in path: return True
+    if n in vis: return False
+    path.add(n)
+    for nei in deps[n]:
+        if dfs(nei): return True
+    path.remove(n)
+    vis.add(n)
+    return False
+
+print(any(dfs(x) for x in deps))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-18--burst-detection-no-counter&#34;&gt;🔴 Problem 18 — Burst Detection (NO Counter)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;t = [1,2,3,3,3,3,4]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Manual Count&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;count = {}
+for x in t:
+    count[x] = count.get(x, 0) + 1
+    if count[x] &amp;gt;= 4:
+        print(True)
+        break
+else:
+    print(False)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-19--streaming-median-concept&#34;&gt;🔴 Problem 19 — Streaming Median (Concept)&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;(Heap version optional — logic focus)&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-20--log-consistency&#34;&gt;🔴 Problem 20 — Log Consistency&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;replicas = [[&amp;quot;A&amp;quot;,&amp;quot;B&amp;quot;,&amp;quot;C&amp;quot;],[&amp;quot;A&amp;quot;,&amp;quot;C&amp;quot;],[&amp;quot;A&amp;quot;,&amp;quot;B&amp;quot;,&amp;quot;C&amp;quot;,&amp;quot;D&amp;quot;]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Intersection&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;common = set(replicas[0])
+for r in replicas[1:]:
+    common &amp;amp;= set(r)
+print(list(common))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-advice&#34;&gt;🎯 Final Advice&lt;/h2&gt;
+&lt;p&gt;If you can &lt;strong&gt;explain these out loud&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You pass &lt;strong&gt;FAANG Python interviews&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You think like a &lt;strong&gt;real engineer&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You don’t memorize — you &lt;strong&gt;reason&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;🔥 &lt;em&gt;This is interview maturity.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-21 — Algorithm Test (V5)</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-21-algorithm-test-v5/</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-21-algorithm-test-v5/</guid>
+      <description>&lt;h2 id=&#34;-why-this-exists&#34;&gt;🪄 Why This Exists&lt;/h2&gt;
+&lt;p&gt;Top companies &lt;strong&gt;do not only test coding&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;They test:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Logical reasoning&lt;/li&gt;
+&lt;li&gt;Mathematical intuition&lt;/li&gt;
+&lt;li&gt;Pattern recognition&lt;/li&gt;
+&lt;li&gt;Constraint thinking&lt;/li&gt;
+&lt;li&gt;How you explain ideas simply&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This chapter trains &lt;strong&gt;your brain&lt;/strong&gt;, not just Python syntax.&lt;/p&gt;
+&lt;p&gt;🎭 Theme: &lt;strong&gt;Harry Potter × Disney&lt;/strong&gt;
+Because great engineers still know how to have fun.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-wizard--cartoon-logic-olympics-20-puzzles&#34;&gt;🧩 Wizard &amp;amp; Cartoon Logic Olympics (20 Puzzles)&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-1--harrys-spell-counter&#34;&gt;🟢 Problem 1 — Harry’s Spell Counter&lt;/h2&gt;
+&lt;p&gt;Harry casts spells with power values:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;spells = [3, 5, 2, 7]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Calculate total spell power &lt;strong&gt;without using &lt;code&gt;sum()&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;total = 0
+for s in spells:
+    total += s
+print(total)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n)
+&lt;strong&gt;Space:&lt;/strong&gt; O(1)&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-2--sorting-hat-decision&#34;&gt;🟢 Problem 2 — Sorting Hat Decision&lt;/h2&gt;
+&lt;p&gt;Students’ bravery scores:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;bravery = [7, 8, 6, 9]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Gryffindor accepts only if &lt;strong&gt;all scores ≥ 7&lt;/strong&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Early Exit&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ok = True
+for b in bravery:
+    if b &amp;lt; 7:
+        ok = False
+        break
+print(ok)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-3--mickeys-unique-balloons-&#34;&gt;🟢 Problem 3 — Mickey’s Unique Balloons 🎈&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;balloons = [&amp;quot;red&amp;quot;,&amp;quot;blue&amp;quot;,&amp;quot;red&amp;quot;,&amp;quot;yellow&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;How many &lt;strong&gt;unique colors&lt;/strong&gt;?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — NO LIB&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seen = {}
+count = 0
+for b in balloons:
+    if b not in seen:
+        seen[b] = True
+        count += 1
+print(count)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-4--first-repeated-spell-dark-magic&#34;&gt;🟡 Problem 4 — First Repeated Spell (Dark Magic)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;spells = [&amp;quot;Lumos&amp;quot;,&amp;quot;Accio&amp;quot;,&amp;quot;Expelliarmus&amp;quot;,&amp;quot;Accio&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Hash Memory&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seen = set()
+for s in spells:
+    if s in seen:
+        print(s)
+        break
+    seen.add(s)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-5--elsas-ice-power-window-&#34;&gt;🟡 Problem 5 — Elsa’s Ice Power Window ❄️&lt;/h2&gt;
+&lt;p&gt;Ice power per minute:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;power = [30, 60, 80, 20, 40]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Alert if &lt;strong&gt;any 3 consecutive minutes &amp;gt; 150&lt;/strong&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Sliding Window (Pure)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;window = power[0] + power[1] + power[2]
+
+for i in range(3, len(power)):
+    if window &amp;gt; 150:
+        print(True)
+        break
+    window += power[i] - power[i-3]
+else:
+    print(window &amp;gt; 150)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-6--hogwarts-staircases-steps-puzzle&#34;&gt;🟡 Problem 6 — Hogwarts Staircases (Steps Puzzle)&lt;/h2&gt;
+&lt;p&gt;A wizard climbs &lt;code&gt;n&lt;/code&gt; steps.
+Can move &lt;strong&gt;1 or 2 steps&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+Ways to reach step &lt;code&gt;n = 5&lt;/code&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — DP (Pure)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n = 5
+a, b = 1, 1
+for _ in range(n):
+    a, b = b, a + b
+print(a)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n)
+&lt;strong&gt;Space:&lt;/strong&gt; O(1)&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-7--simbas-territory-peaks-&#34;&gt;🟡 Problem 7 — Simba’s Territory Peaks 🦁&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;land = [1, 3, 2, 4, 1]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Count &lt;strong&gt;peaks&lt;/strong&gt; (greater than neighbors)&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Manual Scan&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;count = 0
+for i in range(1, len(land)-1):
+    if land[i] &amp;gt; land[i-1] and land[i] &amp;gt; land[i+1]:
+        count += 1
+print(count)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-8--olafs-snowball-balance-&#34;&gt;🟡 Problem 8 — Olaf’s Snowball Balance ☃️&lt;/h2&gt;
+&lt;p&gt;Snowballs weights:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;balls = [1,2,3,6]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Can split into &lt;strong&gt;two equal-sum groups&lt;/strong&gt;?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Prefix Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;total = 0
+for b in balls:
+    total += b
+
+left = 0
+possible = False
+for b in balls:
+    left += b
+    if left * 2 == total:
+        possible = True
+        break
+
+print(possible)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-9--hermiones-prime-spell-&#34;&gt;🔵 Problem 9 — Hermione’s Prime Spell 🔢&lt;/h2&gt;
+&lt;p&gt;Is &lt;code&gt;n = 29&lt;/code&gt; prime?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Pure Math&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n = 29
+prime = n &amp;gt; 1
+
+i = 2
+while i * i &amp;lt;= n:
+    if n % i == 0:
+        prime = False
+        break
+    i += 1
+
+print(prime)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-10--buzz-lightyear-range-&#34;&gt;🔵 Problem 10 — Buzz Lightyear Range 🚀&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;nums = [1, 4, 7, 10]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Find &lt;strong&gt;max distance between adjacent numbers&lt;/strong&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;best = 0
+for i in range(1, len(nums)):
+    best = max(best, nums[i] - nums[i-1])
+print(best)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-11--aladdins-magic-carpet-turns&#34;&gt;🔵 Problem 11 — Aladdin’s Magic Carpet Turns&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;path = &amp;quot;LLRRLR&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Start at 0.
+Left = −1, Right = +1
+Did Aladdin &lt;strong&gt;return to start&lt;/strong&gt;?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Counter&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pos = 0
+for p in path:
+    pos += -1 if p == &amp;quot;L&amp;quot; else 1
+print(pos == 0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-12--moanas-island-jump-&#34;&gt;🔵 Problem 12 — Moana’s Island Jump 🌊&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;stones = [2,3,1,1,4]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Each number = max jump length.
+Can reach last stone?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Greedy&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;reach = 0
+for i, s in enumerate(stones):
+    if i &amp;gt; reach:
+        print(False)
+        break
+    reach = max(reach, i + s)
+else:
+    print(True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-13--darth-vader-balance-force-split&#34;&gt;🔴 Problem 13 — Darth Vader Balance (Force Split)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;force = [1,5,11,5]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Split into equal sum?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Subset Sum (DP)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;total = sum(force)
+if total % 2 != 0:
+    print(False)
+else:
+    target = total // 2
+    dp = {0}
+    for f in force:
+        dp |= {x + f for x in dp}
+    print(target in dp)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-14--hogwarts-class-scheduler&#34;&gt;🔴 Problem 14 — Hogwarts Class Scheduler&lt;/h2&gt;
+&lt;p&gt;Classes durations:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;classes = [30, 15, 60, 45]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Fit into &lt;strong&gt;90 minutes&lt;/strong&gt; max?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Greedy Sort&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;classes.sort()
+time = 0
+
+for c in classes:
+    time += c
+    if time &amp;gt; 90:
+        print(False)
+        break
+else:
+    print(True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-15--peter-pans-lost-numbers&#34;&gt;🔴 Problem 15 — Peter Pan’s Lost Numbers&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;nums = [1,2,4,5]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Missing number from &lt;code&gt;1..5&lt;/code&gt;?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Math Trick&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n = 5
+expected = n * (n + 1) // 2
+actual = 0
+for x in nums:
+    actual += x
+print(expected - actual)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-16--toy-story-pair-sum-&#34;&gt;🔴 Problem 16 — Toy Story Pair Sum 🧸&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;nums = [2,7,11,15]
+target = 9
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Hash&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seen = {}
+for i, n in enumerate(nums):
+    if target - n in seen:
+        print(seen[target - n], i)
+        break
+    seen[n] = i
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-17--wizards-mirror-palindrome&#34;&gt;🔴 Problem 17 — Wizard’s Mirror Palindrome&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;s = &amp;quot;racecar&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Two Pointers&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;l, r = 0, len(s)-1
+ok = True
+
+while l &amp;lt; r:
+    if s[l] != s[r]:
+        ok = False
+        break
+    l += 1
+    r -= 1
+
+print(ok)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-18--cinderellas-time-loop-&#34;&gt;🔴 Problem 18 — Cinderella’s Time Loop ⏰&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;times = [1,2,3,4,5]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Rotate right by 2 &lt;strong&gt;without slicing&lt;/strong&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Manual Rotate&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;k = 2
+for _ in range(k):
+    last = times[-1]
+    i = len(times) - 1
+    while i &amp;gt; 0:
+        times[i] = times[i-1]
+        i -= 1
+    times[0] = last
+
+print(times)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-19--thanos-balance-check-&#34;&gt;🔴 Problem 19 — Thanos Balance Check ⚖️&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;nums = [3,3,3,3]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;All values equal?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;same = True
+for i in range(1, len(nums)):
+    if nums[i] != nums[0]:
+        same = False
+        break
+print(same)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-20--avengers-final-merge-&#34;&gt;🔴 Problem 20 — Avengers Final Merge 🛡️&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a = [1,3,5]
+b = [2,4,6]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Merge sorted arrays (again, no &lt;code&gt;sort()&lt;/code&gt;)&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution — Two Pointers&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;i = j = 0
+res = []
+
+while i &amp;lt; len(a) and j &amp;lt; len(b):
+    if a[i] &amp;lt; b[j]:
+        res.append(a[i]); i += 1
+    else:
+        res.append(b[j]); j += 1
+
+res += a[i:] + b[j:]
+print(res)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-words&#34;&gt;🏁 Final Words&lt;/h2&gt;
+&lt;p&gt;If you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Solve these&lt;/li&gt;
+&lt;li&gt;Explain &lt;strong&gt;why&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Smile while doing it 😄&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then you are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🧠 Logically strong&lt;/li&gt;
+&lt;li&gt;💼 Interview ready&lt;/li&gt;
+&lt;li&gt;❤️ Still human&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Great engineers can reason.
+Legendary engineers can make it fun.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;</description>
     </item>
     

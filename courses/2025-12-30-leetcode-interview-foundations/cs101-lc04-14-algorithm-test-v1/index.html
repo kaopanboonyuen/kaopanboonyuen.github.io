@@ -972,6 +972,14 @@
 
   <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-19-nlp-basic-v3/">LC-TEST-19 — Basic NLP (V3)</a></li>
 
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-20-algorithm-test-v4/">LC-TEST-20 — Algorithm Test (V4)</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-21-algorithm-test-v5/">LC-TEST-21 — Algorithm Test (V5)</a></li>
+
       
         </ul>
       
@@ -1007,7 +1015,12 @@
     <li><a href="#-problem-3--unique-user-ids">🟢 Problem 3 — Unique User IDs</a></li>
     <li><a href="#-problem-4--first-repeated-transaction">🟡 Problem 4 — First Repeated Transaction</a></li>
     <li><a href="#-problem-5--sliding-window-cpu-alert">🟡 Problem 5 — Sliding Window CPU Alert</a></li>
-    <li><a href="#-problem-6--rate-limiter">🟡 Problem 6 — Rate Limiter</a></li>
+    <li><a href="#-problem-6--rate-limiter">🟡 Problem 6 — Rate Limiter</a>
+      <ul>
+        <li><a href="#-key-idea">🧠 Key Idea</a></li>
+        <li><a href="#-interview-takeaway">🎯 Interview Takeaway</a></li>
+      </ul>
+    </li>
     <li><a href="#-problem-7--most-frequent-error-code">🟡 Problem 7 — Most Frequent Error Code</a></li>
     <li><a href="#-problem-8--data-chunking">🟡 Problem 8 — Data Chunking</a></li>
     <li><a href="#-problem-9--valid-json-brackets">🔵 Problem 9 — Valid JSON Brackets</a></li>
@@ -1188,11 +1201,17 @@ else:
 <p>Requests arrive with timestamps (seconds):</p>
 <pre><code class="language-python">requests = [1, 1, 1, 2, 2, 3, 10]
 </code></pre>
-<p><strong>Rule:</strong> Max <strong>3 requests per second</strong>.</p>
+<p><strong>Rule:</strong>
+Max <strong>3 requests per second</strong></p>
 <p><strong>Task:</strong>
 Return timestamps that violate the rule.</p>
+<hr>
+<h3 id="-key-idea">🧠 Key Idea</h3>
+<p>We need to <strong>count how many times each second appears</strong>.
+If a timestamp appears <strong>more than 3 times</strong>, it violates the rate limit.</p>
+<hr>
 <details>
-<summary>✅ Solution</summary>
+<summary>✅ Solution 1 — Using a Dictionary (Readable & Pythonic)</summary>
 <pre><code class="language-python">from collections import defaultdict
 
 count = defaultdict(int)
@@ -1205,7 +1224,93 @@ for r in requests:
 
 print(violations)
 </code></pre>
+<p><strong>Why this works</strong></p>
+<ul>
+<li>Dictionary keeps count per second</li>
+<li><code>defaultdict(int)</code> avoids key-checking</li>
+<li>Time complexity: <strong>O(n)</strong></li>
+</ul>
 </details>
+<hr>
+<details>
+<summary>✅ Solution 2 — NO Library, Pure Python (Interview-Ready)</summary>
+<pre><code class="language-python">count = {}
+violations = []
+
+for r in requests:
+    if r not in count:
+        count[r] = 1
+    else:
+        count[r] += 1
+
+    if count[r] &gt; 3:
+        violations.append(r)
+
+print(violations)
+</code></pre>
+<p><strong>Why this impresses juniors</strong></p>
+<ul>
+<li>No magic imports</li>
+<li>Shows how dictionaries work internally</li>
+<li>Common in <strong>low-level interviews</strong></li>
+</ul>
+<p><strong>Time complexity:</strong> <code>O(n)</code>
+<strong>Space complexity:</strong> <code>O(n)</code></p>
+</details>
+<hr>
+<details>
+<summary>✅ Solution 3 — Sorted + Counter Variable (Conceptual)</summary>
+<pre><code class="language-python">violations = []
+
+prev = None
+current_count = 0
+
+for r in requests:
+    if r == prev:
+        current_count += 1
+    else:
+        prev = r
+        current_count = 1
+
+    if current_count &gt; 3:
+        violations.append(r)
+
+print(violations)
+</code></pre>
+<p><strong>Why this is powerful</strong></p>
+<ul>
+<li>Uses <strong>no extra data structure</strong></li>
+<li>Works because input is <strong>sorted</strong></li>
+<li>Demonstrates understanding of <strong>state tracking</strong></li>
+</ul>
+<p>⚠️ If input is not sorted → must sort first (<code>O(n log n)</code>)</p>
+</details>
+<hr>
+<h3 id="-interview-takeaway">🎯 Interview Takeaway</h3>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Skill Shown</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>defaultdict</td>
+<td>Python fluency</td>
+</tr>
+<tr>
+<td>manual dict</td>
+<td>Core fundamentals</td>
+</tr>
+<tr>
+<td>state tracking</td>
+<td>Algorithmic thinking</td>
+</tr>
+</tbody>
+</table>
+<p>👉 <strong>Good engineers know libraries</strong>
+👉 <strong>Great engineers know how to replace them</strong></p>
 <hr>
 <h2 id="-problem-7--most-frequent-error-code">🟡 Problem 7 — Most Frequent Error Code</h2>
 <p>System errors:</p>
