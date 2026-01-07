@@ -19532,9 +19532,9 @@ Can you find it?&lt;/p&gt;
 &lt;summary&gt;✅ Solution 1 — Math Trick (Sum Formula)&lt;/summary&gt;
 &lt;h3 id=&#34;-idea&#34;&gt;💡 Idea&lt;/h3&gt;
 &lt;p&gt;If numbers from &lt;code&gt;1..n&lt;/code&gt; were complete, their sum would be:&lt;/p&gt;
-&lt;p&gt;[
+&lt;p&gt;$$
 \frac{n(n+1)}{2}
-]&lt;/p&gt;
+$$&lt;/p&gt;
 &lt;p&gt;Since &lt;strong&gt;one number is missing&lt;/strong&gt;, subtract the actual sum from the expected sum.&lt;/p&gt;
 &lt;h3 id=&#34;-why-it-works&#34;&gt;🧠 Why it works&lt;/h3&gt;
 &lt;p&gt;The difference between the two sums is exactly the missing number.&lt;/p&gt;
