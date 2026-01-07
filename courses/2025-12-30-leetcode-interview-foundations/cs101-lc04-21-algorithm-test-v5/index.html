@@ -980,6 +980,10 @@
 
   <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-21-algorithm-test-v5/">LC-TEST-21 — Algorithm Test (V5)</a></li>
 
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-22-recap-basic-logic/">LC-TEST-22 — Recap Basic Logic</a></li>
+
       
         </ul>
       
@@ -1024,7 +1028,23 @@
     <li><a href="#-problem-12--moanas-island-jump-">🔵 Problem 12 — Moana’s Island Jump 🌊</a></li>
     <li><a href="#-problem-13--darth-vader-balance-force-split">🔴 Problem 13 — Darth Vader Balance (Force Split)</a></li>
     <li><a href="#-problem-14--hogwarts-class-scheduler">🔴 Problem 14 — Hogwarts Class Scheduler</a></li>
-    <li><a href="#-problem-15--peter-pans-lost-numbers">🔴 Problem 15 — Peter Pan’s Lost Numbers</a></li>
+    <li><a href="#-problem-15--peter-pans-lost-numbers">🔴 Problem 15 — Peter Pan’s Lost Numbers</a>
+      <ul>
+        <li><a href="#-idea">💡 Idea</a></li>
+        <li><a href="#-why-it-works">🧠 Why it works</a></li>
+        <li><a href="#-idea-plain-english">💡 Idea (Plain English)</a></li>
+        <li><a href="#-why-it-works-step-by-step">🧠 Why it works (Step by Step)</a></li>
+        <li><a href="#-simple-example">🔍 Simple Example</a></li>
+        <li><a href="#-code">🧪 Code</a></li>
+        <li><a href="#-idea-1">💡 Idea</a></li>
+        <li><a href="#-why-it-works-1">🧠 Why it works</a></li>
+        <li><a href="#-idea-2">💡 Idea</a></li>
+        <li><a href="#-why-this-can-fail">❌ Why this can fail</a></li>
+        <li><a href="#-when-it-works">✅ When it works</a></li>
+        <li><a href="#-verdict">📌 Verdict</a></li>
+      </ul>
+    </li>
+    <li><a href="#-final-thoughts">🧩 Final Thoughts</a></li>
     <li><a href="#-problem-16--toy-story-pair-sum-">🔴 Problem 16 — Toy Story Pair Sum 🧸</a></li>
     <li><a href="#-problem-17--wizards-mirror-palindrome">🔴 Problem 17 — Wizard’s Mirror Palindrome</a></li>
     <li><a href="#-problem-18--cinderellas-time-loop-">🔴 Problem 18 — Cinderella’s Time Loop ⏰</a></li>
@@ -1346,19 +1366,189 @@ else:
 </details>
 <hr>
 <h2 id="-problem-15--peter-pans-lost-numbers">🔴 Problem 15 — Peter Pan’s Lost Numbers</h2>
-<pre><code class="language-python">nums = [1,2,4,5]
+<pre><code class="language-python">nums = [1, 2, 4, 5]
 </code></pre>
-<p>Missing number from <code>1..5</code>?</p>
+<p>There is <strong>one missing number</strong> from the range <code>1..n</code>.
+Can you find it?</p>
+<hr>
 <details>
-<summary>✅ Solution — Math Trick</summary>
-<pre><code class="language-python">n = 5
+<summary>✅ Solution 1 — Math Trick (Sum Formula)</summary>
+<h3 id="-idea">💡 Idea</h3>
+<p>If numbers from <code>1..n</code> were complete, their sum would be:</p>
+<p>[
+\frac{n(n+1)}{2}
+]</p>
+<p>Since <strong>one number is missing</strong>, subtract the actual sum from the expected sum.</p>
+<h3 id="-why-it-works">🧠 Why it works</h3>
+<p>The difference between the two sums is exactly the missing number.</p>
+<pre><code class="language-python">nums = [1, 2, 4, 5]
+
+n = len(nums) + 1
 expected = n * (n + 1) // 2
-actual = 0
-for x in nums:
-    actual += x
+actual = sum(nums)
+
 print(expected - actual)
 </code></pre>
+<p>⏱ Time: <code>O(n)</code>
+📦 Space: <code>O(1)</code></p>
 </details>
+<hr>
+<details>
+<summary>✅ Solution 2 — Using XOR (Beginner Friendly)</summary>
+<h3 id="-idea-plain-english">💡 Idea (Plain English)</h3>
+<p><strong>XOR (<code>^</code>) checks whether two values are the same or different.</strong></p>
+<ul>
+<li>Same → <code>0</code></li>
+<li>Different → <code>1</code></li>
+</ul>
+<p>You only need to remember these two rules:</p>
+<pre><code>a ^ a = 0   # same values cancel out
+a ^ 0 = a   # XOR with 0 keeps the value
+</code></pre>
+<hr>
+<h3 id="-why-it-works-step-by-step">🧠 Why it works (Step by Step)</h3>
+<p>We XOR together:</p>
+<ul>
+<li>all numbers from <code>1..n</code></li>
+<li>all numbers in the array</li>
+</ul>
+<p>What happens?</p>
+<ul>
+<li>Numbers that <strong>exist in the array</strong> appear twice
+→ they cancel out (<code>a ^ a = 0</code>)</li>
+<li>The <strong>missing number</strong> appears only once
+→ it does NOT cancel out and remains</li>
+</ul>
+<p>That remaining value is the missing number.</p>
+<hr>
+<h3 id="-simple-example">🔍 Simple Example</h3>
+<pre><code>1 ^ 1 = 0
+2 ^ 2 = 0
+4 ^ 4 = 0
+5 ^ 5 = 0
+</code></pre>
+<p>The number <code>3</code> has no pair, so it survives.</p>
+<hr>
+<h3 id="-code">🧪 Code</h3>
+<pre><code class="language-python">nums = [1, 2, 4, 5]
+
+n = len(nums) + 1
+xor_all = 0
+
+for i in range(1, n + 1):
+    xor_all ^= i
+
+for x in nums:
+    xor_all ^= x
+
+print(xor_all)
+</code></pre>
+<hr>
+<p>⏱ Time: <code>O(n)</code>
+📦 Space: <code>O(1)</code>
+😎 Bonus: No math formula required</p>
+</details>
+<hr>
+<details>
+<summary>✅ Solution 3 — Hash Set (Most Intuitive)</summary>
+<h3 id="-idea-1">💡 Idea</h3>
+<p>Store all numbers in a set, then scan from <code>1..n</code> to find what’s missing.</p>
+<h3 id="-why-it-works-1">🧠 Why it works</h3>
+<p>Set lookup is <code>O(1)</code>, making the solution simple and readable.</p>
+<pre><code class="language-python">nums = [1, 2, 4, 5]
+
+num_set = set(nums)
+n = len(nums) + 1
+
+for i in range(1, n + 1):
+    if i not in num_set:
+        print(i)
+        break
+</code></pre>
+<p>⏱ Time: <code>O(n)</code>
+📦 Space: <code>O(n)</code>
+👍 Best for beginners / clarity</p>
+</details>
+<hr>
+<details>
+<summary>⚠️ Solution 4 — Using <code>max()</code> (⚠️ Not Always Safe)</summary>
+<h3 id="-idea-2">💡 Idea</h3>
+<p>Assume the largest number in the array is <code>n</code>, then apply the sum formula.</p>
+<pre><code class="language-python">nums = [1, 2, 4, 5]
+
+n = max(nums)
+expected = n * (n + 1) // 2
+actual = sum(nums)
+
+print(expected - actual)
+</code></pre>
+<h3 id="-why-this-can-fail">❌ Why this can fail</h3>
+<p>This approach <strong>assumes the missing number is NOT <code>n</code></strong>.</p>
+<h4 id="example-where-it-breaks">Example where it breaks:</h4>
+<pre><code class="language-python">nums = [1, 2, 3, 4]  # missing 5
+</code></pre>
+<ul>
+<li><code>max(nums) = 4</code></li>
+<li>Expected sum = <code>1 + 2 + 3 + 4 = 10</code></li>
+<li>Actual sum = <code>10</code></li>
+<li>Result = <code>0</code> ❌ (wrong)</li>
+</ul>
+<h3 id="-when-it-works">✅ When it works</h3>
+<ul>
+<li>Numbers start from <code>1</code></li>
+<li>Missing number is <strong>not the last one</strong></li>
+<li>Array is guaranteed to contain <code>n</code></li>
+</ul>
+<h3 id="-verdict">📌 Verdict</h3>
+<blockquote>
+<p>This solution is <strong>clever but dangerous</strong>
+Use only if the problem explicitly guarantees that <code>n</code> exists in the array.</p>
+</blockquote>
+</details>
+<hr>
+<h2 id="-final-thoughts">🧩 Final Thoughts</h2>
+<table>
+<thead>
+<tr>
+<th>Solution</th>
+<th>Time</th>
+<th>Space</th>
+<th>Best Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Math Trick</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>Interviews, clean code</td>
+</tr>
+<tr>
+<td>XOR</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>Bitwise lovers 😎</td>
+</tr>
+<tr>
+<td>Hash Set</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>Readability &amp; teaching</td>
+</tr>
+<tr>
+<td>max()</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>⚠️ Risky</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⭐ <strong>Recommended:</strong>
+Use <strong>Math Trick</strong> for interviews,
+<strong>Hash Set</strong> for clarity,
+<strong>XOR</strong> to impress hardcore engineers.</p>
+</blockquote>
 <hr>
 <h2 id="-problem-16--toy-story-pair-sum-">🔴 Problem 16 — Toy Story Pair Sum 🧸</h2>
 <pre><code class="language-python">nums = [2,7,11,15]
@@ -1486,6 +1676,12 @@ Legendary engineers can make it fun.</strong></p>
     <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-20-algorithm-test-v4/" rel="next">LC-TEST-20 — Algorithm Test (V4)</a>
   </div>
   
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-22-recap-basic-logic/" rel="prev">LC-TEST-22 — Recap Basic Logic</a>
+  </div>
   
 </div>
 

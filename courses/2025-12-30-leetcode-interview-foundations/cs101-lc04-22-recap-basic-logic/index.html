@@ -33,7 +33,7 @@
   <meta name="description" content="" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-05-two-sum/" />
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-22-recap-basic-logic/" />
 
   
 
@@ -285,7 +285,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-05-two-sum/" />
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-22-recap-basic-logic/" />
 
   
   
@@ -302,18 +302,18 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Teerapong Panboonyuen" />
-  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-05-two-sum/" />
-  <meta property="og:title" content="LC-TEST-05 — Two Sum (Brute Force → Hash Map) | Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-22-recap-basic-logic/" />
+  <meta property="og:title" content="LC-TEST-22 — Recap Basic Logic | Teerapong Panboonyuen" />
   <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
         property="article:published_time"
-        content="2025-12-30T00:00:00&#43;00:00"
+        content="2026-01-01T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2025-12-30T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2026-01-01T00:00:00&#43;00:00">
   
 
   
@@ -330,11 +330,11 @@
 
 
 
-  <title>LC-TEST-05 — Two Sum (Brute Force → Hash Map) | Teerapong Panboonyuen</title>
+  <title>LC-TEST-22 — Recap Basic Logic | Teerapong Panboonyuen</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="3bc542cb2d4c6add11db44058a36e53a" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="a39414dc3ab3a906912eb1f4be3d97d5" >
 
   
   
@@ -914,7 +914,7 @@
 
 
 
-  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-05-two-sum/">LC-TEST-05 — Two Sum (Brute Force → Hash Map)</a></li>
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-05-two-sum/">LC-TEST-05 — Two Sum (Brute Force → Hash Map)</a></li>
 
 
 
@@ -982,7 +982,7 @@
 
 
 
-  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-22-recap-basic-logic/">LC-TEST-22 — Recap Basic Logic</a></li>
+  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-22-recap-basic-logic/">LC-TEST-22 — Recap Basic Logic</a></li>
 
       
         </ul>
@@ -1010,65 +1010,40 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#-problem-statement">🧩 Problem Statement</a></li>
-    <li><a href="#-sample-input---output">📥 Sample Input / 📤 Output</a></li>
-    <li><a href="#-interviewer-expectation">🧠 Interviewer Expectation</a></li>
-    <li><a href="#-approach-1--brute-force-nested-loop">🧩 Approach 1 — Brute Force (Nested Loop)</a>
-      <ul>
-        <li><a href="#-complexity">⏱️ Complexity</a></li>
-      </ul>
-    </li>
-    <li><a href="#-approach-2--hash-map-optimal">🧩 Approach 2 — Hash Map (Optimal)</a>
-      <ul>
-        <li><a href="#-idea">💡 Idea</a></li>
-        <li><a href="#-complexity-1">⏱️ Complexity</a></li>
-      </ul>
-    </li>
-    <li><a href="#-takeaway">🏁 Takeaway</a></li>
+    <li><a href="#-why-learn-logic-first">🧠 Why Learn Logic First?</a></li>
   </ul>
 
   <ul>
-    <li><a href="#-problem-statement-1">🧩 Problem Statement</a></li>
-    <li><a href="#-sample-matrix">📥 Sample Matrix</a></li>
-    <li><a href="#-row-wise-traversal">🧩 Row-wise Traversal</a></li>
-    <li><a href="#-column-wise-traversal">🧩 Column-wise Traversal</a></li>
-    <li><a href="#-diagonal-traversal">🧩 Diagonal Traversal</a></li>
-    <li><a href="#-spiral-traversal-interview-favorite">🧩 Spiral Traversal (Interview Favorite)</a></li>
-    <li><a href="#-complexity-2">⏱️ Complexity</a></li>
-    <li><a href="#-takeaway-1">🏁 Takeaway</a></li>
+    <li><a href="#-and-">✅ AND (&amp;&amp;)</a></li>
+    <li><a href="#-or-">🔵 OR (||)</a></li>
+    <li><a href="#-not-">❌ NOT (!)</a></li>
+    <li><a href="#-xor-exclusive-or">⚡ XOR (Exclusive OR)</a></li>
+    <li><a href="#-nand-not-and">🔥 NAND (NOT AND)</a></li>
+    <li><a href="#-xnor-not-xor">💎 XNOR (NOT XOR)</a></li>
   </ul>
 
   <ul>
-    <li><a href="#-problem-statement-2">🧩 Problem Statement</a></li>
-    <li><a href="#-example">📥 Example</a></li>
-    <li><a href="#-brute-force">🧩 Brute Force</a></li>
-    <li><a href="#-prefix-sum-optimization">🧩 Prefix Sum Optimization</a>
-      <ul>
-        <li><a href="#-idea-1">💡 Idea</a></li>
-      </ul>
-    </li>
-    <li><a href="#-complexity-3">⏱️ Complexity</a></li>
-    <li><a href="#-takeaway-2">🏁 Takeaway</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#-problem-statement-3">🧩 Problem Statement</a></li>
-    <li><a href="#-example-1">📥 Example</a></li>
-    <li><a href="#-brute-force-1">🧩 Brute Force</a></li>
-    <li><a href="#-sliding-window-optimization">🧩 Sliding Window Optimization</a></li>
-    <li><a href="#-complexity-4">⏱️ Complexity</a></li>
-    <li><a href="#-takeaway-3">🏁 Takeaway</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#-why-linear-algebra-matters">🎯 Why Linear Algebra Matters</a></li>
-    <li><a href="#-vectors">🧮 Vectors</a></li>
-    <li><a href="#-vector-addition">➕ Vector Addition</a></li>
-    <li><a href="#-dot-product-core-of-neural-networks">✖️ Dot Product (Core of Neural Networks)</a></li>
-    <li><a href="#-matrices">🧱 Matrices</a></li>
-    <li><a href="#-matrix-multiplication">✖️ Matrix Multiplication</a></li>
-    <li><a href="#-ai-interpretation">🧠 AI Interpretation</a></li>
-    <li><a href="#-final-thought">🏁 Final Thought</a></li>
+    <li><a href="#-problem-1--harrys-spell-permission">🟢 Problem 1 — Harry’s Spell Permission</a></li>
+    <li><a href="#-problem-2--elsa-can-use-ice">🟢 Problem 2 — Elsa Can Use Ice?</a></li>
+    <li><a href="#-problem-3--door-access-card">🟢 Problem 3 — Door Access Card</a></li>
+    <li><a href="#-problem-4--mickeys-safety-rule">🟢 Problem 4 — Mickey’s Safety Rule</a></li>
+    <li><a href="#-problem-5--clone-detection">🟢 Problem 5 — Clone Detection</a></li>
+    <li><a href="#-problem-6--any-villain-nearby">🟡 Problem 6 — Any Villain Nearby?</a></li>
+    <li><a href="#-problem-7--all-students-passed">🟡 Problem 7 — All Students Passed?</a></li>
+    <li><a href="#-problem-8--light-toggle-switch">🟡 Problem 8 — Light Toggle Switch</a></li>
+    <li><a href="#-problem-9--password-check">🟡 Problem 9 — Password Check</a></li>
+    <li><a href="#-problem-10--emergency-shutdown">🟡 Problem 10 — Emergency Shutdown</a></li>
+    <li><a href="#-problem-11--the-broken-spell-lock">🧙 Problem 11 — The Broken Spell Lock</a></li>
+    <li><a href="#-problem-12--potion-choice-confusion">🧙 Problem 12 — Potion Choice Confusion</a></li>
+    <li><a href="#-problem-13--the-mirror-of-truth">🧙 Problem 13 — The Mirror of Truth</a></li>
+    <li><a href="#-problem-14--moodys-paradox-curse">🧙 Problem 14 — Moody’s Paradox Curse</a></li>
+    <li><a href="#-problem-15--patronus-confidence-test">🧙 Problem 15 — Patronus Confidence Test</a></li>
+    <li><a href="#-problem-16--the-room-of-requirement">🧙 Problem 16 — The Room of Requirement</a></li>
+    <li><a href="#-problem-17--forbidden-knowledge-scroll">🧙 Problem 17 — Forbidden Knowledge Scroll</a></li>
+    <li><a href="#-problem-18--twin-wand-resonance">🧙 Problem 18 — Twin Wand Resonance</a></li>
+    <li><a href="#-problem-19--identity-verification-charm">🧙 Problem 19 — Identity Verification Charm</a></li>
+    <li><a href="#-problem-20--final-hogwarts-gate">🧙 Problem 20 — Final Hogwarts Gate</a></li>
+    <li><a href="#-final-mental-model">🧠 Final Mental Model</a></li>
   </ul>
 </nav>
 
@@ -1118,7 +1093,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        LC-TEST-05 — Two Sum (Brute Force → Hash Map)
+        LC-TEST-22 — Recap Basic Logic
       </li>
     </ol>
   </nav>
@@ -1126,334 +1101,586 @@
 
           
 
-          <h1>LC-TEST-05 — Two Sum (Brute Force → Hash Map)</h1>
+          <h1>LC-TEST-22 — Recap Basic Logic</h1>
 
           <div class="article-style">
-            <h2 id="-problem-statement">🧩 Problem Statement</h2>
-<p>Given an integer array <code>nums</code> and an integer <code>target</code>, return the <strong>indices of two numbers</strong> such that they add up to <code>target</code>.</p>
-<p>You may assume that <strong>exactly one solution exists</strong>, and you may not use the same element twice.</p>
+            <h2 id="-why-learn-logic-first">🧠 Why Learn Logic First?</h2>
+<p>Before computers understand <strong>code</strong>,<br>
+they understand <strong>logic</strong>.</p>
+<p>Every <code>if</code>, every loop, every algorithm<br>
+is built from <strong>simple logical rules</strong>.</p>
+<p>If your logic is strong:</p>
+<ul>
+<li>Code becomes obvious</li>
+<li>Bugs become visible</li>
+<li>Interviews become easier</li>
+</ul>
+<p>This chapter builds <strong>mental foundations</strong>.</p>
 <hr>
-<h2 id="-sample-input---output">📥 Sample Input / 📤 Output</h2>
+<h1 id="-logic-gates--explained-for-humans">🔌 Logic Gates — Explained for Humans</h1>
+<p>Think in <strong>TRUE / FALSE</strong>, not code.</p>
+<hr>
+<h2 id="-and-">✅ AND (&amp;&amp;)</h2>
+<blockquote>
+<p>TRUE <strong>only if everything is TRUE</strong></p>
+</blockquote>
 <table>
 <thead>
 <tr>
-<th>nums</th>
-<th>target</th>
-<th>Output</th>
+<th>A</th>
+<th>B</th>
+<th>A AND B</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>[2,7,11,15]</td>
-<td>9</td>
-<td>[0,1]</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
 </tr>
 <tr>
-<td>[3,2,4]</td>
-<td>6</td>
-<td>[1,2]</td>
+<td>T</td>
+<td>F</td>
+<td>F</td>
 </tr>
 <tr>
-<td>[3,3]</td>
-<td>6</td>
-<td>[0,1]</td>
+<td>F</td>
+<td>T</td>
+<td>F</td>
 </tr>
 <tr>
-<td>[1,5,1,5]</td>
-<td>10</td>
-<td>[1,3]</td>
-</tr>
-<tr>
-<td>[-1,-2,-3,-4]</td>
-<td>-6</td>
-<td>[1,3]</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
 </tr>
 </tbody>
 </table>
-<hr>
-<h2 id="-interviewer-expectation">🧠 Interviewer Expectation</h2>
-<p>This problem tests:</p>
-<ul>
-<li>Nested loop thinking</li>
-<li>Optimization awareness</li>
-<li>Hash map mastery</li>
-</ul>
-<hr>
-<h2 id="-approach-1--brute-force-nested-loop">🧩 Approach 1 — Brute Force (Nested Loop)</h2>
-<pre><code class="language-python">def two_sum_bruteforce(nums, target):
-    n = len(nums)
-
-    for i in range(n):
-        for j in range(i + 1, n):
-            if nums[i] + nums[j] == target:
-                return [i, j]
-</code></pre>
-<h3 id="-complexity">⏱️ Complexity</h3>
-<ul>
-<li>Time: <strong>O(n²)</strong></li>
-<li>Space: <strong>O(1)</strong></li>
-</ul>
-<p>🟡 Correct but inefficient.</p>
-<hr>
-<h2 id="-approach-2--hash-map-optimal">🧩 Approach 2 — Hash Map (Optimal)</h2>
-<h3 id="-idea">💡 Idea</h3>
-<p>Store numbers we have seen and check if <code>target - current</code> exists.</p>
-<pre><code class="language-python">def two_sum(nums, target):
-    seen = {}
-
-    for i, v in enumerate(nums):
-        complement = target - v
-
-        if complement in seen:
-            return [seen[complement], i]
-
-        seen[v] = i
-</code></pre>
-<h3 id="-complexity-1">⏱️ Complexity</h3>
-<ul>
-<li>Time: <strong>O(n)</strong></li>
-<li>Space: <strong>O(n)</strong></li>
-</ul>
-<p>🟢 Interview-ready solution.</p>
-<hr>
-<h2 id="-takeaway">🏁 Takeaway</h2>
+<p>🧠 Real life:</p>
 <blockquote>
-<p>“Use brute force to understand the problem.
-Use hash maps to solve it like a professional.”</p>
+<p>“I will go outside <strong>if</strong> it is sunny <strong>AND</strong> I finish work.”</p>
 </blockquote>
-<hr>
-<h1 id="-matrix-traversal-patterns">📘 Matrix Traversal Patterns</h1>
-<h2 id="-problem-statement-1">🧩 Problem Statement</h2>
-<p>Given a 2D matrix, traverse it in different patterns:</p>
-<ul>
-<li>Row-wise</li>
-<li>Column-wise</li>
-<li>Diagonal</li>
-<li>Spiral</li>
-</ul>
-<hr>
-<h2 id="-sample-matrix">📥 Sample Matrix</h2>
-<pre><code class="language-text">1  2  3
-4  5  6
-7  8  9
+<pre><code class="language-python">sunny = True
+finished_work = False
+print(sunny and finished_work)  # False
 </code></pre>
 <hr>
-<h2 id="-row-wise-traversal">🧩 Row-wise Traversal</h2>
-<pre><code class="language-python">for row in matrix:
-    for value in row:
-        print(value)
-</code></pre>
-<hr>
-<h2 id="-column-wise-traversal">🧩 Column-wise Traversal</h2>
-<pre><code class="language-python">rows, cols = len(matrix), len(matrix[0])
-
-for c in range(cols):
-    for r in range(rows):
-        print(matrix[r][c])
-</code></pre>
-<hr>
-<h2 id="-diagonal-traversal">🧩 Diagonal Traversal</h2>
-<pre><code class="language-python">n = len(matrix)
-
-for i in range(n):
-    print(matrix[i][i])
-</code></pre>
-<hr>
-<h2 id="-spiral-traversal-interview-favorite">🧩 Spiral Traversal (Interview Favorite)</h2>
-<pre><code class="language-python">def spiral(matrix):
-    res = []
-    top, bottom = 0, len(matrix)-1
-    left, right = 0, len(matrix[0])-1
-
-    while top &lt;= bottom and left &lt;= right:
-        for c in range(left, right+1):
-            res.append(matrix[top][c])
-        top += 1
-
-        for r in range(top, bottom+1):
-            res.append(matrix[r][right])
-        right -= 1
-
-        if top &lt;= bottom:
-            for c in range(right, left-1, -1):
-                res.append(matrix[bottom][c])
-            bottom -= 1
-
-        if left &lt;= right:
-            for r in range(bottom, top-1, -1):
-                res.append(matrix[r][left])
-            left += 1
-
-    return res
-</code></pre>
-<hr>
-<h2 id="-complexity-2">⏱️ Complexity</h2>
-<ul>
-<li>Time: <strong>O(m × n)</strong></li>
-<li>Space: <strong>O(1)</strong> (excluding output)</li>
-</ul>
-<hr>
-<h2 id="-takeaway-1">🏁 Takeaway</h2>
-<p>Matrix traversal shows <strong>index control mastery</strong>, critical for vision and AI tasks.</p>
-<hr>
-<h1 id="-prefix-sum-killing-nested-loops">📘 Prefix Sum (Killing Nested Loops)</h1>
-<h2 id="-problem-statement-2">🧩 Problem Statement</h2>
-<p>Given an array <code>nums</code>, answer multiple range sum queries efficiently.</p>
-<hr>
-<h2 id="-example">📥 Example</h2>
-<p>nums = <code>[1, 2, 3, 4, 5]</code><br>
-Query sum of range <code>[1,3]</code> → <code>2 + 3 + 4 = 9</code></p>
-<hr>
-<h2 id="-brute-force">🧩 Brute Force</h2>
-<pre><code class="language-python">def range_sum(nums, l, r):
-    total = 0
-    for i in range(l, r+1):
-        total += nums[i]
-    return total
-</code></pre>
-<p>⏱️ <strong>O(n)</strong> per query ❌</p>
-<hr>
-<h2 id="-prefix-sum-optimization">🧩 Prefix Sum Optimization</h2>
-<h3 id="-idea-1">💡 Idea</h3>
-<p>Precompute cumulative sums once.</p>
-<pre><code class="language-python">def build_prefix(nums):
-    prefix = [0]
-    for v in nums:
-        prefix.append(prefix[-1] + v)
-    return prefix
-
-def range_sum(prefix, l, r):
-    return prefix[r+1] - prefix[l]
-</code></pre>
-<hr>
-<h2 id="-complexity-3">⏱️ Complexity</h2>
-<ul>
-<li>Preprocessing: <strong>O(n)</strong></li>
-<li>Query: <strong>O(1)</strong></li>
-</ul>
-<p>🟢 Essential for AI data pipelines.</p>
-<hr>
-<h2 id="-takeaway-2">🏁 Takeaway</h2>
-<p>Prefix sums turn <strong>nested loops into math</strong>.</p>
-<hr>
-<h1 id="-sliding-window">📘 Sliding Window</h1>
-<h2 id="-problem-statement-3">🧩 Problem Statement</h2>
-<p>Given an array <code>nums</code> and integer <code>k</code>, find the <strong>maximum sum of any subarray of size k</strong>.</p>
-<hr>
-<h2 id="-example-1">📥 Example</h2>
-<p>nums = <code>[2,1,5,1,3,2]</code>, k = 3<br>
-Output → <code>9</code> (<code>[5,1,3]</code>)</p>
-<hr>
-<h2 id="-brute-force-1">🧩 Brute Force</h2>
-<pre><code class="language-python">def max_sum(nums, k):
-    max_sum = 0
-    for i in range(len(nums) - k + 1):
-        max_sum = max(max_sum, sum(nums[i:i+k]))
-    return max_sum
-</code></pre>
-<p>⏱️ <strong>O(nk)</strong> ❌</p>
-<hr>
-<h2 id="-sliding-window-optimization">🧩 Sliding Window Optimization</h2>
-<pre><code class="language-python">def max_sum(nums, k):
-    window_sum = sum(nums[:k])
-    max_sum = window_sum
-
-    for i in range(k, len(nums)):
-        window_sum += nums[i]
-        window_sum -= nums[i-k]
-        max_sum = max(max_sum, window_sum)
-
-    return max_sum
-</code></pre>
-<hr>
-<h2 id="-complexity-4">⏱️ Complexity</h2>
-<ul>
-<li>Time: <strong>O(n)</strong></li>
-<li>Space: <strong>O(1)</strong></li>
-</ul>
-<hr>
-<h2 id="-takeaway-3">🏁 Takeaway</h2>
-<p>Sliding window is <strong>mandatory knowledge</strong> for interviews.</p>
-<hr>
-<h1 id="-linear-algebra-for-ai-vectors--matrices">📘 Linear Algebra for AI (Vectors &amp; Matrices)</h1>
-<h2 id="-why-linear-algebra-matters">🎯 Why Linear Algebra Matters</h2>
-<p>Linear algebra is the <strong>language of AI</strong>:</p>
-<ul>
-<li>Neural networks</li>
-<li>Embeddings</li>
-<li>Transformers</li>
-<li>Computer vision</li>
-</ul>
-<hr>
-<h2 id="-vectors">🧮 Vectors</h2>
-<p>A vector represents <strong>features</strong>.</p>
-<pre><code class="language-python">x = [1, 2, 3]
-</code></pre>
-<hr>
-<h2 id="-vector-addition">➕ Vector Addition</h2>
-<pre><code class="language-python">def add(a, b):
-    return [a[i] + b[i] for i in range(len(a))]
-</code></pre>
-<p>⏱️ O(n)</p>
-<hr>
-<h2 id="-dot-product-core-of-neural-networks">✖️ Dot Product (Core of Neural Networks)</h2>
-<pre><code class="language-python">def dot(a, b):
-    return sum(a[i] * b[i] for i in range(len(a)))
-</code></pre>
-<hr>
-<h2 id="-matrices">🧱 Matrices</h2>
-<pre><code class="language-python">A = [
-    [1, 2],
-    [3, 4]
-]
-</code></pre>
-<hr>
-<h2 id="-matrix-multiplication">✖️ Matrix Multiplication</h2>
-<pre><code class="language-python">def matmul(A, B):
-    res = [[0]*len(B[0]) for _ in range(len(A))]
-
-    for i in range(len(A)):
-        for j in range(len(B[0])):
-            for k in range(len(B)):
-                res[i][j] += A[i][k] * B[k][j]
-
-    return res
-</code></pre>
-<p>⏱️ <strong>O(n³)</strong></p>
-<hr>
-<h2 id="-ai-interpretation">🧠 AI Interpretation</h2>
+<h2 id="-or-">🔵 OR (||)</h2>
+<blockquote>
+<p>TRUE if <strong>at least one</strong> is TRUE</p>
+</blockquote>
 <table>
 <thead>
 <tr>
-<th>Math</th>
-<th>AI Meaning</th>
+<th>A</th>
+<th>B</th>
+<th>A OR B</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Vector</td>
-<td>Feature embedding</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
 </tr>
 <tr>
-<td>Dot product</td>
-<td>Similarity</td>
+<td>T</td>
+<td>F</td>
+<td>T</td>
 </tr>
 <tr>
-<td>Matrix</td>
-<td>Layer weights</td>
+<td>F</td>
+<td>T</td>
+<td>T</td>
 </tr>
 <tr>
-<td>MatMul</td>
-<td>Forward pass</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
 </tr>
 </tbody>
 </table>
-<hr>
-<h2 id="-final-thought">🏁 Final Thought</h2>
+<p>🧠 Real life:</p>
 <blockquote>
-<p>If algorithms are <strong>logic</strong>,
-linear algebra is <strong>meaning</strong> in AI.</p>
+<p>“I am happy if I have coffee <strong>OR</strong> tea.”</p>
 </blockquote>
+<pre><code class="language-python">coffee = False
+tea = True
+print(coffee or tea)  # True
+</code></pre>
+<hr>
+<h2 id="-not-">❌ NOT (!)</h2>
+<blockquote>
+<p>Flips the value</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>NOT A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T</td>
+<td>F</td>
+</tr>
+<tr>
+<td>F</td>
+<td>T</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">is_raining = True
+print(not is_raining)  # False
+</code></pre>
+<hr>
+<h2 id="-xor-exclusive-or">⚡ XOR (Exclusive OR)</h2>
+<blockquote>
+<p>TRUE <strong>only if values are different</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A XOR B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T</td>
+<td>T</td>
+<td>F</td>
+</tr>
+<tr>
+<td>T</td>
+<td>F</td>
+<td>T</td>
+</tr>
+<tr>
+<td>F</td>
+<td>T</td>
+<td>T</td>
+</tr>
+<tr>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<p>🧠 Memory trick:</p>
+<blockquote>
+<p><strong>Same = false, Different = true</strong></p>
+</blockquote>
+<pre><code class="language-python">print(True ^ True)    # False
+print(True ^ False)   # True
+</code></pre>
+<hr>
+<h2 id="-nand-not-and">🔥 NAND (NOT AND)</h2>
+<blockquote>
+<p>AND, then flip it
+Used heavily in real hardware</p>
+</blockquote>
+<pre><code class="language-python">A = True
+B = True
+print(not (A and B))  # False
+</code></pre>
+<hr>
+<h2 id="-xnor-not-xor">💎 XNOR (NOT XOR)</h2>
+<blockquote>
+<p>TRUE if values are the same</p>
+</blockquote>
+<pre><code class="language-python">A = True
+B = True
+print(not (A ^ B))  # True
+</code></pre>
+<p>🧠 Meaning:</p>
+<blockquote>
+<p>“Are these two states equal?”</p>
+</blockquote>
+<hr>
+<h1 id="-wizard--cartoon-logic-20-puzzles">🧩 Wizard &amp; Cartoon Logic (20 Puzzles)</h1>
+<p>These puzzles <strong>train thinking</strong>, not syntax.</p>
+<hr>
+<h2 id="-problem-1--harrys-spell-permission">🟢 Problem 1 — Harry’s Spell Permission</h2>
+<p>Harry can cast a spell only if:</p>
+<ul>
+<li>wand works</li>
+<li>spell learned</li>
+</ul>
+<pre><code class="language-python">wand = True
+learned = False
+</code></pre>
+<details>
+<summary>✅ Solution — AND Logic</summary>
+<pre><code class="language-python">print(wand and learned)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-2--elsa-can-use-ice">🟢 Problem 2 — Elsa Can Use Ice?</h2>
+<p>Elsa can use ice if:</p>
+<ul>
+<li>not tired</li>
+<li>OR emotion controlled</li>
+</ul>
+<pre><code class="language-python">tired = True
+control = True
+</code></pre>
+<details>
+<summary>✅ Solution — OR + NOT</summary>
+<pre><code class="language-python">print((not tired) or control)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-3--door-access-card">🟢 Problem 3 — Door Access Card</h2>
+<p>Door opens only if exactly one card is valid.</p>
+<pre><code class="language-python">cardA = True
+cardB = False
+</code></pre>
+<details>
+<summary>✅ Solution — XOR</summary>
+<pre><code class="language-python">print(cardA ^ cardB)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-4--mickeys-safety-rule">🟢 Problem 4 — Mickey’s Safety Rule</h2>
+<p>Alarm rings unless <strong>both</strong> conditions are safe.</p>
+<pre><code class="language-python">fire = False
+door_closed = True
+</code></pre>
+<details>
+<summary>✅ Solution — NAND</summary>
+<pre><code class="language-python">print(not (not fire and door_closed))
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-5--clone-detection">🟢 Problem 5 — Clone Detection</h2>
+<p>Are two magic clones identical?</p>
+<pre><code class="language-python">clone1 = True
+clone2 = True
+</code></pre>
+<details>
+<summary>✅ Solution — XNOR</summary>
+<pre><code class="language-python">print(not (clone1 ^ clone2))
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-6--any-villain-nearby">🟡 Problem 6 — Any Villain Nearby?</h2>
+<pre><code class="language-python">villains = [False, False, True, False]
+</code></pre>
+<details>
+<summary>✅ Solution — OR Scan</summary>
+<pre><code class="language-python">danger = False
+for v in villains:
+    danger = danger or v
+print(danger)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-7--all-students-passed">🟡 Problem 7 — All Students Passed?</h2>
+<pre><code class="language-python">scores = [True, True, True, False]
+</code></pre>
+<details>
+<summary>✅ Solution — AND Scan</summary>
+<pre><code class="language-python">ok = True
+for s in scores:
+    ok = ok and s
+print(ok)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-8--light-toggle-switch">🟡 Problem 8 — Light Toggle Switch</h2>
+<p>Switch toggles state each press.</p>
+<pre><code class="language-python">presses = [True, True, False, True]
+</code></pre>
+<details>
+<summary>✅ Solution — XOR Accumulate</summary>
+<pre><code class="language-python">state = False
+for p in presses:
+    state ^= p
+print(state)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-9--password-check">🟡 Problem 9 — Password Check</h2>
+<p>Correct only if length ≥ 8 AND has number.</p>
+<pre><code class="language-python">length_ok = True
+has_number = False
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">print(length_ok and has_number)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-10--emergency-shutdown">🟡 Problem 10 — Emergency Shutdown</h2>
+<p>Shutdown if NOT safe OR power lost.</p>
+<pre><code class="language-python">safe = True
+power = False
+</code></pre>
+<details>
+<summary>✅ Solution</summary>
+<pre><code class="language-python">print((not safe) or (not power))
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-11--the-broken-spell-lock">🧙 Problem 11 — The Broken Spell Lock</h2>
+<p>A spell door opens only if:</p>
+<ul>
+<li>the spell is activated</li>
+<li>AND the wand is stable</li>
+</ul>
+<p>But today:</p>
+<ul>
+<li>the spell is activated ❌</li>
+<li>the wand is unstable ❌</li>
+</ul>
+<p>The system inverts the final result.</p>
+<pre><code class="language-python">spell = True
+wand = False
+print(not (spell and wand))
+</code></pre>
+<p>🧠 Think:</p>
+<ul>
+<li>Does the spell activate?</li>
+<li>What does NOT do at the end?</li>
+</ul>
+<details>
+<summary>✅ Solution Explanation</summary>
+<ul>
+<li><code>spell and wand</code> → <code>False</code></li>
+<li><code>not False</code> → <code>True</code></li>
+</ul>
+<p><strong>Door opens</strong></p>
+</details>
+<hr>
+<h2 id="-problem-12--potion-choice-confusion">🧙 Problem 12 — Potion Choice Confusion</h2>
+<p>Hermione drinks a potion if:</p>
+<ul>
+<li>it is sweet</li>
+<li>OR (it is bitter AND effective)</li>
+</ul>
+<p>Today:</p>
+<ul>
+<li>sweet ❌</li>
+<li>bitter ❌</li>
+<li>effective ❌</li>
+</ul>
+<pre><code class="language-python">sweet = True
+bitter = False
+effective = False
+print(sweet or bitter and effective)
+</code></pre>
+<p>🧠 Rule reminder:</p>
+<blockquote>
+<p>AND runs before OR</p>
+</blockquote>
+<details>
+<summary>✅ Solution Explanation</summary>
+<ul>
+<li><code>bitter and effective</code> → <code>False</code></li>
+<li><code>sweet or False</code> → <code>True</code></li>
+</ul>
+<p><strong>Potion is consumed</strong></p>
+</details>
+<hr>
+<h2 id="-problem-13--the-mirror-of-truth">🧙 Problem 13 — The Mirror of Truth</h2>
+<p>The mirror lights up if:</p>
+<ul>
+<li>exactly one spell is real</li>
+<li>AND the wizard is focused</li>
+</ul>
+<pre><code class="language-python">spell_real = True
+illusion = False
+focused = True
+print((spell_real ^ illusion) and focused)
+</code></pre>
+<p>🧠 XOR question:</p>
+<blockquote>
+<p>Are the spells different?</p>
+</blockquote>
+<details>
+<summary>✅ Solution Explanation</summary>
+<ul>
+<li><code>spell_real ^ illusion</code> → <code>True</code></li>
+<li><code>True and True</code> → <code>True</code></li>
+</ul>
+<p><strong>Mirror lights up</strong></p>
+</details>
+<hr>
+<h2 id="-problem-14--moodys-paradox-curse">🧙 Problem 14 — Moody’s Paradox Curse</h2>
+<p>Mad-Eye Moody casts a curse that:</p>
+<ul>
+<li>flips the spell result</li>
+<li>then checks if it differs from danger</li>
+</ul>
+<pre><code class="language-python">spell = True
+danger = False
+print(not spell ^ danger)
+</code></pre>
+<p>🧠 Careful:</p>
+<blockquote>
+<p>NOT runs before XOR</p>
+</blockquote>
+<details>
+<summary>✅ Solution Explanation</summary>
+<ul>
+<li><code>not spell</code> → <code>False</code></li>
+<li><code>False ^ False</code> → <code>False</code></li>
+</ul>
+<p><strong>Curse fails</strong></p>
+</details>
+<hr>
+<h2 id="-problem-15--patronus-confidence-test">🧙 Problem 15 — Patronus Confidence Test</h2>
+<p>A Patronus appears if:</p>
+<ul>
+<li>wizard believes</li>
+<li>AND the wizard is not afraid</li>
+</ul>
+<pre><code class="language-python">believe = True
+afraid = False
+print(believe and not afraid)
+</code></pre>
+<details>
+<summary>✅ Solution Explanation</summary>
+<ul>
+<li><code>not afraid</code> → <code>True</code></li>
+<li><code>True and True</code> → <code>True</code></li>
+</ul>
+<p><strong>Patronus summoned successfully</strong></p>
+</details>
+<hr>
+<h2 id="-problem-16--the-room-of-requirement">🧙 Problem 16 — The Room of Requirement</h2>
+<p>The room appears if:</p>
+<ul>
+<li>any hidden desire exists</li>
+</ul>
+<pre><code class="language-python">desire1 = False
+desire2 = False
+desire3 = True
+print(desire1 or desire2 or desire3)
+</code></pre>
+<details>
+<summary>✅ Solution Explanation</summary>
+<ul>
+<li>At least one <code>True</code> → <code>True</code></li>
+</ul>
+<p><strong>Room appears</strong></p>
+</details>
+<hr>
+<h2 id="-problem-17--forbidden-knowledge-scroll">🧙 Problem 17 — Forbidden Knowledge Scroll</h2>
+<p>The scroll activates only if:</p>
+<ul>
+<li>NOT even one guardian is awake</li>
+</ul>
+<pre><code class="language-python">guardian1 = False
+guardian2 = True
+print(not (guardian1 or guardian2))
+</code></pre>
+<p>🧠 Think:</p>
+<blockquote>
+<p>If ANY guardian is awake → blocked</p>
+</blockquote>
+<details>
+<summary>✅ Solution Explanation</summary>
+<ul>
+<li><code>False or True</code> → <code>True</code></li>
+<li><code>not True</code> → <code>False</code></li>
+</ul>
+<p><strong>Scroll remains sealed</strong></p>
+</details>
+<hr>
+<h2 id="-problem-18--twin-wand-resonance">🧙 Problem 18 — Twin Wand Resonance</h2>
+<p>Two twin wands resonate if:</p>
+<ul>
+<li>their magic differs</li>
+<li>OR the backup charm activates</li>
+</ul>
+<pre><code class="language-python">wandA = True
+wandB = True
+backup = False
+print((wandA ^ wandB) or backup)
+</code></pre>
+<details>
+<summary>✅ Solution Explanation</summary>
+<ul>
+<li><code>True ^ True</code> → <code>False</code></li>
+<li><code>False or False</code> → <code>False</code></li>
+</ul>
+<p><strong>No resonance</strong></p>
+</details>
+<hr>
+<h2 id="-problem-19--identity-verification-charm">🧙 Problem 19 — Identity Verification Charm</h2>
+<p>The charm passes if:</p>
+<ul>
+<li>the identity is NOT different</li>
+</ul>
+<pre><code class="language-python">real = True
+fake = False
+print(not (real ^ fake))
+</code></pre>
+<p>🧠 Meaning:</p>
+<blockquote>
+<p>Are they the same?</p>
+</blockquote>
+<details>
+<summary>✅ Solution Explanation</summary>
+<ul>
+<li><code>True ^ False</code> → <code>True</code></li>
+<li><code>not True</code> → <code>False</code></li>
+</ul>
+<p><strong>Verification failed</strong></p>
+</details>
+<hr>
+<h2 id="-problem-20--final-hogwarts-gate">🧙 Problem 20 — Final Hogwarts Gate</h2>
+<p>The final gate opens if:</p>
+<ul>
+<li>both keys are active</li>
+<li>OR the override rune is active</li>
+<li>BUT the result is flipped</li>
+</ul>
+<pre><code class="language-python">key1 = True
+key2 = False
+override = True
+print((key1 and key2) ^ override)
+</code></pre>
+<p>🧠 Slow down:</p>
+<blockquote>
+<p>Evaluate AND → then XOR</p>
+</blockquote>
+<details>
+<summary>✅ Solution Explanation</summary>
+<ul>
+<li><code>key1 and key2</code> → <code>False</code></li>
+<li><code>False ^ True</code> → <code>True</code></li>
+</ul>
+<p><strong>Gate opens</strong></p>
+</details>
+<hr>
+<h2 id="-final-mental-model">🧠 Final Mental Model</h2>
+<blockquote>
+<p>Computers don’t think in English
+They think in <strong>logic switches</strong></p>
+</blockquote>
+<p>If you master:</p>
+<ul>
+<li>AND</li>
+<li>OR</li>
+<li>NOT</li>
+<li>XOR</li>
+</ul>
+<p>You master:</p>
+<ul>
+<li><code>if</code></li>
+<li><code>while</code></li>
+<li>algorithms</li>
+<li>interviews</li>
+</ul>
+<hr>
+<p>You’re not learning Python.
+You’re learning <strong>how machines think</strong> 🧠⚡</p>
+<hr>
           </div>
 
           
@@ -1470,15 +1697,9 @@ linear algebra is <strong>meaning</strong> in AI.</p>
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-04-nested-loop/" rel="next">LC-TEST-04 — Nested Loops (Thinking Beyond O(n²))</a>
+    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-21-algorithm-test-v5/" rel="next">LC-TEST-21 — Algorithm Test (V5)</a>
   </div>
   
-  
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-06-probability-ai/" rel="prev">LC-TEST-06 — Probability for Machine Learning</a>
-  </div>
   
 </div>
 
@@ -1487,7 +1708,7 @@ linear algebra is <strong>meaning</strong> in AI.</p>
         </div>
 
         <div class="body-footer">
-          <p>Last updated on 2025</p>
+          <p>Last updated on 2026</p>
 
           
 
