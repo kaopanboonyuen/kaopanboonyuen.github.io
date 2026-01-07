@@ -7796,6 +7796,390 @@ Insight is about &lt;strong&gt;asking the right questions&lt;/strong&gt;.&lt;/p&
     </item>
     
     <item>
+      <title>DE101-PD07 — Pandas with Python</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd07-pandas-with-python/</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd07-pandas-with-python/</guid>
+      <description>&lt;h2 id=&#34;-why-this-document-exists&#34;&gt;🌍 Why This Document Exists&lt;/h2&gt;
+&lt;p&gt;Data Engineer interviews &lt;strong&gt;do not test pandas syntax&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;They test:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Can you reason about data?&lt;/li&gt;
+&lt;li&gt;Can you aggregate correctly?&lt;/li&gt;
+&lt;li&gt;Do you understand edge cases?&lt;/li&gt;
+&lt;li&gt;Can you explain trade-offs?&lt;/li&gt;
+&lt;li&gt;Do you fall back to logic when tools disappear?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This chapter trains &lt;strong&gt;real data thinking&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-pandas-logic--data-engineer-edition-20-problems&#34;&gt;🏆 Pandas Logic — Data Engineer Edition (20 Problems)&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-mock-dataset-used-in-many-problems&#34;&gt;📦 Mock Dataset (Used in Many Problems)&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+
+data = {
+    &amp;quot;user_id&amp;quot;: [1,1,2,2,3,3,3],
+    &amp;quot;event&amp;quot;: [&amp;quot;login&amp;quot;,&amp;quot;pay&amp;quot;,&amp;quot;login&amp;quot;,&amp;quot;logout&amp;quot;,&amp;quot;login&amp;quot;,&amp;quot;pay&amp;quot;,&amp;quot;logout&amp;quot;],
+    &amp;quot;amount&amp;quot;: [0,100,0,0,0,200,0],
+    &amp;quot;day&amp;quot;: [&amp;quot;Mon&amp;quot;,&amp;quot;Mon&amp;quot;,&amp;quot;Mon&amp;quot;,&amp;quot;Tue&amp;quot;,&amp;quot;Tue&amp;quot;,&amp;quot;Tue&amp;quot;,&amp;quot;Wed&amp;quot;]
+}
+
+df = pd.DataFrame(data)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-1--count-total-rows&#34;&gt;🟢 Problem 1 — Count Total Rows&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;
+How many rows are in the dataset?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.shape[0]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;count = 0
+for _ in df.itertuples():
+    count += 1
+print(count)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time:&lt;/strong&gt; O(n)&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-2--unique-users&#34;&gt;🟢 Problem 2 — Unique Users&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;user_id&amp;quot;].nunique()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seen = set()
+for u in df[&amp;quot;user_id&amp;quot;]:
+    seen.add(u)
+print(len(seen))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-3--filter-login-events&#34;&gt;🟢 Problem 3 — Filter Login Events&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[df[&amp;quot;event&amp;quot;] == &amp;quot;login&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;rows = []
+for r in df.to_dict(&amp;quot;records&amp;quot;):
+    if r[&amp;quot;event&amp;quot;] == &amp;quot;login&amp;quot;:
+        rows.append(r)
+print(rows)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-4--total-revenue&#34;&gt;🟡 Problem 4 — Total Revenue&lt;/h2&gt;
+&lt;p&gt;Sum of all &lt;code&gt;amount&lt;/code&gt;&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;amount&amp;quot;].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;total = 0
+for a in df[&amp;quot;amount&amp;quot;]:
+    total += a
+print(total)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-5--revenue-per-user&#34;&gt;🟡 Problem 5 — Revenue per User&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;user_id&amp;quot;)[&amp;quot;amount&amp;quot;].sum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;rev = {}
+for u, a in zip(df[&amp;quot;user_id&amp;quot;], df[&amp;quot;amount&amp;quot;]):
+    rev[u] = rev.get(u, 0) + a
+print(rev)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-6--count-events-per-day&#34;&gt;🟡 Problem 6 — Count Events per Day&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;day&amp;quot;).size()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;count = {}
+for d in df[&amp;quot;day&amp;quot;]:
+    count[d] = count.get(d, 0) + 1
+print(count)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-7--users-who-ever-paid&#34;&gt;🟡 Problem 7 — Users Who Ever Paid&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[df[&amp;quot;amount&amp;quot;] &amp;gt; 0][&amp;quot;user_id&amp;quot;].unique()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;paid = set()
+for u, a in zip(df[&amp;quot;user_id&amp;quot;], df[&amp;quot;amount&amp;quot;]):
+    if a &amp;gt; 0:
+        paid.add(u)
+print(list(paid))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-8--max-transaction-amount&#34;&gt;🟡 Problem 8 — Max Transaction Amount&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;amount&amp;quot;].max()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;mx = 0
+for a in df[&amp;quot;amount&amp;quot;]:
+    if a &amp;gt; mx:
+        mx = a
+print(mx)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-9--user-with-highest-revenue&#34;&gt;🔵 Problem 9 — User with Highest Revenue&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;user_id&amp;quot;)[&amp;quot;amount&amp;quot;].sum().idxmax()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;rev = {}
+for u, a in zip(df[&amp;quot;user_id&amp;quot;], df[&amp;quot;amount&amp;quot;]):
+    rev[u] = rev.get(u, 0) + a
+
+best = max(rev, key=rev.get)
+print(best)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-10--days-with-no-payments&#34;&gt;🔵 Problem 10 — Days with No Payments&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;day&amp;quot;)[&amp;quot;amount&amp;quot;].sum()[lambda x: x == 0]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;daily = {}
+for d, a in zip(df[&amp;quot;day&amp;quot;], df[&amp;quot;amount&amp;quot;]):
+    daily[d] = daily.get(d, 0) + a
+
+print([d for d,v in daily.items() if v == 0])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-11--add-is_payment-column&#34;&gt;🔵 Problem 11 — Add Is_Payment Column&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;is_payment&amp;quot;] = df[&amp;quot;amount&amp;quot;] &amp;gt; 0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;flags = []
+for a in df[&amp;quot;amount&amp;quot;]:
+    flags.append(a &amp;gt; 0)
+print(flags)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-12--session-count-per-user&#34;&gt;🔵 Problem 12 — Session Count per User&lt;/h2&gt;
+&lt;p&gt;(Login = session start)&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[df[&amp;quot;event&amp;quot;] == &amp;quot;login&amp;quot;].groupby(&amp;quot;user_id&amp;quot;).size()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sessions = {}
+for u, e in zip(df[&amp;quot;user_id&amp;quot;], df[&amp;quot;event&amp;quot;]):
+    if e == &amp;quot;login&amp;quot;:
+        sessions[u] = sessions.get(u, 0) + 1
+print(sessions)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-13--conversion-rate-per-user&#34;&gt;🔴 Problem 13 — Conversion Rate per User&lt;/h2&gt;
+&lt;p&gt;(pay / login)&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;logins = df[df[&amp;quot;event&amp;quot;]==&amp;quot;login&amp;quot;].groupby(&amp;quot;user_id&amp;quot;).size()
+pays = df[df[&amp;quot;event&amp;quot;]==&amp;quot;pay&amp;quot;].groupby(&amp;quot;user_id&amp;quot;).size()
+(pays / logins).fillna(0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;logins, pays = {}, {}
+
+for u, e in zip(df[&amp;quot;user_id&amp;quot;], df[&amp;quot;event&amp;quot;]):
+    if e == &amp;quot;login&amp;quot;:
+        logins[u] = logins.get(u, 0) + 1
+    if e == &amp;quot;pay&amp;quot;:
+        pays[u] = pays.get(u, 0) + 1
+
+rate = {u: pays.get(u,0)/logins[u] for u in logins}
+print(rate)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-14--detect-duplicate-rows&#34;&gt;🔴 Problem 14 — Detect Duplicate Rows&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[df.duplicated()]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;seen = set()
+dups = []
+
+for r in df.to_dict(&amp;quot;records&amp;quot;):
+    t = tuple(r.items())
+    if t in seen:
+        dups.append(r)
+    else:
+        seen.add(t)
+
+print(dups)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-15--sort-by-revenue-desc&#34;&gt;🔴 Problem 15 — Sort by Revenue Desc&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.sort_values(&amp;quot;amount&amp;quot;, ascending=False)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;rows = df.to_dict(&amp;quot;records&amp;quot;)
+rows.sort(key=lambda x: x[&amp;quot;amount&amp;quot;], reverse=True)
+print(rows)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-16--top-day-by-revenue&#34;&gt;🔴 Problem 16 — Top Day by Revenue&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.groupby(&amp;quot;day&amp;quot;)[&amp;quot;amount&amp;quot;].sum().idxmax()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;daily = {}
+for d, a in zip(df[&amp;quot;day&amp;quot;], df[&amp;quot;amount&amp;quot;]):
+    daily[d] = daily.get(d, 0) + a
+
+print(max(daily, key=daily.get))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-17--pivot-table-user--event&#34;&gt;🔴 Problem 17 — Pivot Table (User × Event)&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pd.pivot_table(df, index=&amp;quot;user_id&amp;quot;, columns=&amp;quot;event&amp;quot;, values=&amp;quot;amount&amp;quot;, aggfunc=&amp;quot;count&amp;quot;, fill_value=0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pivot = {}
+
+for u, e in zip(df[&amp;quot;user_id&amp;quot;], df[&amp;quot;event&amp;quot;]):
+    pivot.setdefault(u, {})
+    pivot[u][e] = pivot[u].get(e, 0) + 1
+
+print(pivot)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-18--find-users-with-no-logout&#34;&gt;🔴 Problem 18 — Find Users with No Logout&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;users = set(df[&amp;quot;user_id&amp;quot;])
+logout = set(df[df[&amp;quot;event&amp;quot;]==&amp;quot;logout&amp;quot;][&amp;quot;user_id&amp;quot;])
+users - logout
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;users, logout = set(), set()
+for u, e in zip(df[&amp;quot;user_id&amp;quot;], df[&amp;quot;event&amp;quot;]):
+    users.add(u)
+    if e == &amp;quot;logout&amp;quot;:
+        logout.add(u)
+print(users - logout)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-19--running-total-revenue&#34;&gt;🔴 Problem 19 — Running Total Revenue&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pandas&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df[&amp;quot;running_total&amp;quot;] = df[&amp;quot;amount&amp;quot;].cumsum()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Pure Logic&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;run = 0
+res = []
+for a in df[&amp;quot;amount&amp;quot;]:
+    run += a
+    res.append(run)
+print(res)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-20--data-engineer-sanity-check&#34;&gt;🔴 Problem 20 — Data Engineer Sanity Check&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question (Interview):&lt;/strong&gt;
+When does pandas fail?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Expected Answer&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Very large datasets (memory-bound)&lt;/li&gt;
+&lt;li&gt;Skewed groupby keys&lt;/li&gt;
+&lt;li&gt;Hidden NaNs&lt;/li&gt;
+&lt;li&gt;Timezone bugs&lt;/li&gt;
+&lt;li&gt;When logic is unclear&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;👉 &lt;strong&gt;Strong DEs fall back to logic, not APIs&lt;/strong&gt;&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-advice-very-important&#34;&gt;🎯 Final Advice (Very Important)&lt;/h2&gt;
+&lt;p&gt;If you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Explain pandas &lt;strong&gt;and&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Replace pandas with logic&lt;/li&gt;
+&lt;li&gt;Talk about &lt;strong&gt;trade-offs&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then you are &lt;strong&gt;Data Engineer ready&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tools change.
+Thinking does not.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
       <title>LC-TEST-03 — Linear Search</title>
       <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-03-linear-search/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
@@ -13347,7 +13731,7 @@ Interview-safe.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;All wrapped in &lt;strong&gt;fun football stories&lt;/strong&gt; — because learning should feel alive.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;-python-logic-olympics-20-puzzles&#34;&gt;🥇 Python Logic Olympics (20 Puzzles)&lt;/h1&gt;
+&lt;h1 id=&#34;-python-logic--20-puzzles&#34;&gt;🥇 Python Logic  (20 Puzzles)&lt;/h1&gt;
 &lt;p&gt;Difficulty increases &lt;strong&gt;gradually&lt;/strong&gt;.
 Try each puzzle &lt;strong&gt;before opening the solution&lt;/strong&gt;.&lt;/p&gt;
 &lt;hr&gt;
@@ -13651,7 +14035,7 @@ if foul:
 &lt;/ul&gt;
 &lt;p&gt;Inspired by &lt;strong&gt;Google, AWS, Microsoft, OpenAI interviews&lt;/strong&gt;.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;-python-logic-olympics--real-world-edition-20-problems&#34;&gt;🏆 Python Logic Olympics — Real World Edition (20 Problems)&lt;/h1&gt;
+&lt;h1 id=&#34;-python-logic---real-world-edition-20-problems&#34;&gt;🏆 Python Logic  — Real World Edition (20 Problems)&lt;/h1&gt;
 &lt;p&gt;Difficulty increases &lt;strong&gt;gradually&lt;/strong&gt;.
 &lt;strong&gt;Do not open solutions too early.&lt;/strong&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -15737,8 +16121,7 @@ What replaced TF-IDF?&lt;/p&gt;
 &lt;li&gt;you understand &lt;strong&gt;why embeddings work&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;You are &lt;strong&gt;ready for real NLP&lt;/strong&gt;.&lt;/p&gt;
-&lt;hr&gt;
-</description>
+&lt;hr&gt;</description>
     </item>
     
     <item>
@@ -16027,7 +16410,7 @@ Before transformers, there was thinking.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;Inspired by &lt;strong&gt;Google, Microsoft, OpenAI interviews&lt;/strong&gt;.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;-python-logic-olympics--real-world-edition-20-problems&#34;&gt;🏆 Python Logic Olympics — Real World Edition (20 Problems)&lt;/h1&gt;
+&lt;h1 id=&#34;-python-logic---real-world-edition-20-problems&#34;&gt;🏆 Python Logic  — Real World Edition (20 Problems)&lt;/h1&gt;
 &lt;p&gt;Difficulty increases &lt;strong&gt;gradually&lt;/strong&gt;.&lt;br&gt;
 ⚠️ &lt;em&gt;Do not open solutions too early.&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -16397,7 +16780,7 @@ print(list(common))
 &lt;p&gt;🎭 Theme: &lt;strong&gt;Harry Potter × Disney&lt;/strong&gt;
 Because great engineers still know how to have fun.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;-wizard--cartoon-logic-olympics-20-puzzles&#34;&gt;🧩 Wizard &amp;amp; Cartoon Logic Olympics (20 Puzzles)&lt;/h1&gt;
+&lt;h1 id=&#34;-wizard--cartoon-logic--20-puzzles&#34;&gt;🧩 Wizard &amp;amp; Cartoon Logic  (20 Puzzles)&lt;/h1&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;-problem-1--harrys-spell-counter&#34;&gt;🟢 Problem 1 — Harry’s Spell Counter&lt;/h2&gt;
 &lt;p&gt;Harry casts spells with power values:&lt;/p&gt;

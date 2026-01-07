@@ -4784,7 +4784,7 @@ Interview-safe.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;All wrapped in &lt;strong&gt;fun football stories&lt;/strong&gt; — because learning should feel alive.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;-python-logic-olympics-20-puzzles&#34;&gt;🥇 Python Logic Olympics (20 Puzzles)&lt;/h1&gt;
+&lt;h1 id=&#34;-python-logic--20-puzzles&#34;&gt;🥇 Python Logic  (20 Puzzles)&lt;/h1&gt;
 &lt;p&gt;Difficulty increases &lt;strong&gt;gradually&lt;/strong&gt;.
 Try each puzzle &lt;strong&gt;before opening the solution&lt;/strong&gt;.&lt;/p&gt;
 &lt;hr&gt;
@@ -5088,7 +5088,7 @@ if foul:
 &lt;/ul&gt;
 &lt;p&gt;Inspired by &lt;strong&gt;Google, AWS, Microsoft, OpenAI interviews&lt;/strong&gt;.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;-python-logic-olympics--real-world-edition-20-problems&#34;&gt;🏆 Python Logic Olympics — Real World Edition (20 Problems)&lt;/h1&gt;
+&lt;h1 id=&#34;-python-logic---real-world-edition-20-problems&#34;&gt;🏆 Python Logic  — Real World Edition (20 Problems)&lt;/h1&gt;
 &lt;p&gt;Difficulty increases &lt;strong&gt;gradually&lt;/strong&gt;.
 &lt;strong&gt;Do not open solutions too early.&lt;/strong&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -7174,8 +7174,7 @@ What replaced TF-IDF?&lt;/p&gt;
 &lt;li&gt;you understand &lt;strong&gt;why embeddings work&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;You are &lt;strong&gt;ready for real NLP&lt;/strong&gt;.&lt;/p&gt;
-&lt;hr&gt;
-</description>
+&lt;hr&gt;</description>
     </item>
     
     <item>
@@ -7464,7 +7463,7 @@ Before transformers, there was thinking.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;Inspired by &lt;strong&gt;Google, Microsoft, OpenAI interviews&lt;/strong&gt;.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;-python-logic-olympics--real-world-edition-20-problems&#34;&gt;🏆 Python Logic Olympics — Real World Edition (20 Problems)&lt;/h1&gt;
+&lt;h1 id=&#34;-python-logic---real-world-edition-20-problems&#34;&gt;🏆 Python Logic  — Real World Edition (20 Problems)&lt;/h1&gt;
 &lt;p&gt;Difficulty increases &lt;strong&gt;gradually&lt;/strong&gt;.&lt;br&gt;
 ⚠️ &lt;em&gt;Do not open solutions too early.&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -7834,7 +7833,7 @@ print(list(common))
 &lt;p&gt;🎭 Theme: &lt;strong&gt;Harry Potter × Disney&lt;/strong&gt;
 Because great engineers still know how to have fun.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;-wizard--cartoon-logic-olympics-20-puzzles&#34;&gt;🧩 Wizard &amp;amp; Cartoon Logic Olympics (20 Puzzles)&lt;/h1&gt;
+&lt;h1 id=&#34;-wizard--cartoon-logic--20-puzzles&#34;&gt;🧩 Wizard &amp;amp; Cartoon Logic  (20 Puzzles)&lt;/h1&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;-problem-1--harrys-spell-counter&#34;&gt;🟢 Problem 1 — Harry’s Spell Counter&lt;/h2&gt;
 &lt;p&gt;Harry casts spells with power values:&lt;/p&gt;

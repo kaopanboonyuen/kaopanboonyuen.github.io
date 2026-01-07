@@ -33,7 +33,7 @@
   <meta name="description" content="" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd01-intro/" />
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd07-pandas-with-python/" />
 
   
 
@@ -285,7 +285,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd01-intro/" />
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd07-pandas-with-python/" />
 
   
   
@@ -302,8 +302,8 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Teerapong Panboonyuen" />
-  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd01-intro/" />
-  <meta property="og:title" content="DE101-PD01 — Pandas &amp; the Data Engineering Mindset | Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd07-pandas-with-python/" />
+  <meta property="og:title" content="DE101-PD07 — Pandas with Python | Teerapong Panboonyuen" />
   <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
@@ -330,11 +330,11 @@
 
 
 
-  <title>DE101-PD01 — Pandas &amp; the Data Engineering Mindset | Teerapong Panboonyuen</title>
+  <title>DE101-PD07 — Pandas with Python | Teerapong Panboonyuen</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="429e642ab1ba1024643c4e1cd120894e" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="2c9ef815d9ca172e2d4f7dc3642ccee0" >
 
   
   
@@ -886,7 +886,7 @@
       
 
 
-  <li class="active"><a href="/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd01-intro/">DE101-PD01 — Pandas &amp; the Data Engineering Mindset</a></li>
+  <li class=""><a href="/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd01-intro/">DE101-PD01 — Pandas &amp; the Data Engineering Mindset</a></li>
 
 
 
@@ -910,7 +910,7 @@
 
 
 
-  <li class=""><a href="/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd07-pandas-with-python/">DE101-PD07 — Pandas with Python</a></li>
+  <li class="active"><a href="/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd07-pandas-with-python/">DE101-PD07 — Pandas with Python</a></li>
 
       
         </ul>
@@ -938,34 +938,32 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#-why-this-chapter-matters">🎯 Why This Chapter Matters</a></li>
-    <li><a href="#-what-pandas-actually-is">🧠 What Pandas Actually Is</a></li>
-    <li><a href="#-the-data-engineering-pipeline-high-level">🏗️ The Data Engineering Pipeline (High Level)</a></li>
-    <li><a href="#-pandas-is-not-just-for-notebooks">🧠 Pandas Is NOT Just for Notebooks</a></li>
-    <li><a href="#-example-real-world-use-cases">🧪 Example: Real-World Use Cases</a>
-      <ul>
-        <li><a href="#google">Google</a></li>
-        <li><a href="#meta">Meta</a></li>
-        <li><a href="#openai">OpenAI</a></li>
-      </ul>
-    </li>
-    <li><a href="#-good-pandas-code-has-these-properties">🧠 Good Pandas Code Has These Properties</a>
-      <ul>
-        <li><a href="#1-readable">1️⃣ Readable</a></li>
-        <li><a href="#2-testable">2️⃣ Testable</a></li>
-        <li><a href="#3-deterministic">3️⃣ Deterministic</a></li>
-        <li><a href="#4-scalable-within-reason">4️⃣ Scalable (Within Reason)</a></li>
-      </ul>
-    </li>
-    <li><a href="#-pandas-vs-sql-vs-spark">🧠 Pandas vs SQL vs Spark</a></li>
-    <li><a href="#-pandas-as-a-thinking-tool">🧩 Pandas as a Thinking Tool</a></li>
-    <li><a href="#-common-beginner-mistakes">🧠 Common Beginner Mistakes</a></li>
-    <li><a href="#-minimal-example-end-to-end-thinking">🧪 Minimal Example (End-to-End Thinking)</a></li>
-    <li><a href="#-pandas--testing">🧠 Pandas + Testing</a></li>
-    <li><a href="#-when-pandas-is-enough">🧠 When Pandas Is Enough</a></li>
-    <li><a href="#-when-pandas-is-not-enough">🚧 When Pandas Is NOT Enough</a></li>
-    <li><a href="#-engineers-rule-of-thumb">🧠 Engineer’s Rule of Thumb</a></li>
-    <li><a href="#-final-takeaway">🏁 Final Takeaway</a></li>
+    <li><a href="#-why-this-document-exists">🌍 Why This Document Exists</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-mock-dataset-used-in-many-problems">📦 Mock Dataset (Used in Many Problems)</a></li>
+    <li><a href="#-problem-1--count-total-rows">🟢 Problem 1 — Count Total Rows</a></li>
+    <li><a href="#-problem-2--unique-users">🟢 Problem 2 — Unique Users</a></li>
+    <li><a href="#-problem-3--filter-login-events">🟢 Problem 3 — Filter Login Events</a></li>
+    <li><a href="#-problem-4--total-revenue">🟡 Problem 4 — Total Revenue</a></li>
+    <li><a href="#-problem-5--revenue-per-user">🟡 Problem 5 — Revenue per User</a></li>
+    <li><a href="#-problem-6--count-events-per-day">🟡 Problem 6 — Count Events per Day</a></li>
+    <li><a href="#-problem-7--users-who-ever-paid">🟡 Problem 7 — Users Who Ever Paid</a></li>
+    <li><a href="#-problem-8--max-transaction-amount">🟡 Problem 8 — Max Transaction Amount</a></li>
+    <li><a href="#-problem-9--user-with-highest-revenue">🔵 Problem 9 — User with Highest Revenue</a></li>
+    <li><a href="#-problem-10--days-with-no-payments">🔵 Problem 10 — Days with No Payments</a></li>
+    <li><a href="#-problem-11--add-is_payment-column">🔵 Problem 11 — Add Is_Payment Column</a></li>
+    <li><a href="#-problem-12--session-count-per-user">🔵 Problem 12 — Session Count per User</a></li>
+    <li><a href="#-problem-13--conversion-rate-per-user">🔴 Problem 13 — Conversion Rate per User</a></li>
+    <li><a href="#-problem-14--detect-duplicate-rows">🔴 Problem 14 — Detect Duplicate Rows</a></li>
+    <li><a href="#-problem-15--sort-by-revenue-desc">🔴 Problem 15 — Sort by Revenue Desc</a></li>
+    <li><a href="#-problem-16--top-day-by-revenue">🔴 Problem 16 — Top Day by Revenue</a></li>
+    <li><a href="#-problem-17--pivot-table-user--event">🔴 Problem 17 — Pivot Table (User × Event)</a></li>
+    <li><a href="#-problem-18--find-users-with-no-logout">🔴 Problem 18 — Find Users with No Logout</a></li>
+    <li><a href="#-problem-19--running-total-revenue">🔴 Problem 19 — Running Total Revenue</a></li>
+    <li><a href="#-problem-20--data-engineer-sanity-check">🔴 Problem 20 — Data Engineer Sanity Check</a></li>
+    <li><a href="#-final-advice-very-important">🎯 Final Advice (Very Important)</a></li>
   </ul>
 </nav>
 
@@ -1015,7 +1013,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        DE101-PD01 — Pandas & the Data Engineering Mindset
+        DE101-PD07 — Pandas with Python
       </li>
     </ol>
   </nav>
@@ -1023,222 +1021,386 @@
 
           
 
-          <h1>DE101-PD01 — Pandas &amp; the Data Engineering Mindset</h1>
+          <h1>DE101-PD07 — Pandas with Python</h1>
 
           <div class="article-style">
-            <p>
-  <i class="fas fa-clock  pr-1 fa-fw"></i> ~45–60 minutes</p>
-<h2 id="-why-this-chapter-matters">🎯 Why This Chapter Matters</h2>
-<p>Before learning Pandas syntax, you must learn <strong>how engineers think about data</strong>.</p>
-<p>Pandas is not just:</p>
+            <h2 id="-why-this-document-exists">🌍 Why This Document Exists</h2>
+<p>Data Engineer interviews <strong>do not test pandas syntax</strong>.</p>
+<p>They test:</p>
 <ul>
-<li>A tool for Jupyter notebooks</li>
-<li>A library for homework</li>
+<li>Can you reason about data?</li>
+<li>Can you aggregate correctly?</li>
+<li>Do you understand edge cases?</li>
+<li>Can you explain trade-offs?</li>
+<li>Do you fall back to logic when tools disappear?</li>
 </ul>
-<p>Pandas is:</p>
-<blockquote>
-<p>A bridge between raw data and real systems.</p>
-</blockquote>
+<p>This chapter trains <strong>real data thinking</strong>.</p>
 <hr>
-<h2 id="-what-pandas-actually-is">🧠 What Pandas Actually Is</h2>
-<p><strong>Pandas</strong> is the core Python library for working with <strong>structured data</strong>.</p>
-<p>It sits between:</p>
-<ul>
-<li>Raw files (CSV, JSON, Excel, Parquet)</li>
-<li>Databases (PostgreSQL, MySQL, BigQuery)</li>
-<li>Data warehouses &amp; lakes</li>
-<li>Machine learning pipelines</li>
-<li>Analytics dashboards</li>
-</ul>
-<p>If data has rows and columns, Pandas is usually involved.</p>
+<h1 id="-pandas-logic--data-engineer-edition-20-problems">🏆 Pandas Logic — Data Engineer Edition (20 Problems)</h1>
 <hr>
-<h2 id="-the-data-engineering-pipeline-high-level">🏗️ The Data Engineering Pipeline (High Level)</h2>
-<p>Every real data system follows this flow:</p>
-<ol>
-<li>Ingest data (files, APIs, logs)</li>
-<li>Clean and validate</li>
-<li>Transform and enrich</li>
-<li>Aggregate and summarize</li>
-<li>Store or feed to ML models</li>
-</ol>
-<p>Pandas lives mostly in <strong>steps 2–4</strong>.</p>
-<hr>
-<h2 id="-pandas-is-not-just-for-notebooks">🧠 Pandas Is NOT Just for Notebooks</h2>
-<p>Beginner mistake:</p>
-<blockquote>
-<p>“Pandas is only for exploration.”</p>
-</blockquote>
-<p>Professional reality:</p>
-<ul>
-<li>Production ETL jobs use Pandas</li>
-<li>Feature engineering uses Pandas</li>
-<li>Data validation uses Pandas</li>
-<li>Research pipelines start in Pandas</li>
-</ul>
-<hr>
-<h2 id="-example-real-world-use-cases">🧪 Example: Real-World Use Cases</h2>
-<h3 id="google">Google</h3>
-<ul>
-<li>Experiment analysis</li>
-<li>Metric validation</li>
-<li>Feature debugging</li>
-</ul>
-<h3 id="meta">Meta</h3>
-<ul>
-<li>A/B testing</li>
-<li>User behavior analysis</li>
-<li>Dataset sanity checks</li>
-</ul>
-<h3 id="openai">OpenAI</h3>
-<ul>
-<li>Dataset preprocessing</li>
-<li>Filtering &amp; labeling</li>
-<li>Feature extraction</li>
-<li>Evaluation pipelines</li>
-</ul>
-<p>All start with Pandas.</p>
-<hr>
-<h2 id="-good-pandas-code-has-these-properties">🧠 Good Pandas Code Has These Properties</h2>
-<h3 id="1-readable">1️⃣ Readable</h3>
-<pre><code class="language-python">df[df[&quot;country&quot;] == &quot;US&quot;][&quot;revenue&quot;].mean()
-</code></pre>
-<p>Anyone should understand it.</p>
-<hr>
-<h3 id="2-testable">2️⃣ Testable</h3>
-<pre><code class="language-python">assert df[&quot;age&quot;].min() &gt;= 0
-</code></pre>
-<p>Bad data is worse than no data.</p>
-<hr>
-<h3 id="3-deterministic">3️⃣ Deterministic</h3>
-<p>Same input → same output
-No hidden randomness.</p>
-<hr>
-<h3 id="4-scalable-within-reason">4️⃣ Scalable (Within Reason)</h3>
-<p>Good Pandas code:</p>
-<ul>
-<li>Works for 1k rows</li>
-<li>Still works for 10M rows</li>
-</ul>
-<hr>
-<h2 id="-pandas-vs-sql-vs-spark">🧠 Pandas vs SQL vs Spark</h2>
-<table>
-<thead>
-<tr>
-<th>Tool</th>
-<th>Best For</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Pandas</td>
-<td>Prototyping, analysis, ML</td>
-</tr>
-<tr>
-<td>SQL</td>
-<td>Large-scale aggregation</td>
-</tr>
-<tr>
-<td>Spark</td>
-<td>Distributed big data</td>
-</tr>
-</tbody>
-</table>
-<p>Engineers <strong>combine</strong> tools, not worship one.</p>
-<hr>
-<h2 id="-pandas-as-a-thinking-tool">🧩 Pandas as a Thinking Tool</h2>
-<p>Pandas teaches you:</p>
-<ul>
-<li>Data modeling</li>
-<li>Schema awareness</li>
-<li>Edge cases</li>
-<li>Performance thinking</li>
-</ul>
-<p>These skills transfer to:</p>
-<ul>
-<li>SQL</li>
-<li>Spark</li>
-<li>Flink</li>
-<li>DuckDB</li>
-<li>Polars</li>
-</ul>
-<hr>
-<h2 id="-common-beginner-mistakes">🧠 Common Beginner Mistakes</h2>
-<p>❌ Writing everything in one line
-❌ Ignoring dtypes
-❌ Silent NaNs
-❌ Copy-paste pipelines
-❌ No validation</p>
-<hr>
-<h2 id="-minimal-example-end-to-end-thinking">🧪 Minimal Example (End-to-End Thinking)</h2>
+<h2 id="-mock-dataset-used-in-many-problems">📦 Mock Dataset (Used in Many Problems)</h2>
 <pre><code class="language-python">import pandas as pd
 
-df = pd.read_csv(&quot;users.csv&quot;)
+data = {
+    &quot;user_id&quot;: [1,1,2,2,3,3,3],
+    &quot;event&quot;: [&quot;login&quot;,&quot;pay&quot;,&quot;login&quot;,&quot;logout&quot;,&quot;login&quot;,&quot;pay&quot;,&quot;logout&quot;],
+    &quot;amount&quot;: [0,100,0,0,0,200,0],
+    &quot;day&quot;: [&quot;Mon&quot;,&quot;Mon&quot;,&quot;Mon&quot;,&quot;Tue&quot;,&quot;Tue&quot;,&quot;Tue&quot;,&quot;Wed&quot;]
+}
 
-df = (
-    df
-    .dropna(subset=[&quot;age&quot;])
-    .assign(age=lambda x: x[&quot;age&quot;].astype(int))
-)
-
-assert df[&quot;age&quot;].min() &gt;= 0
+df = pd.DataFrame(data)
 </code></pre>
-<p>This is production thinking.</p>
 <hr>
-<h2 id="-pandas--testing">🧠 Pandas + Testing</h2>
-<pre><code class="language-python">def test_no_negative_age(df):
-    assert (df[&quot;age&quot;] &gt;= 0).all()
+<h2 id="-problem-1--count-total-rows">🟢 Problem 1 — Count Total Rows</h2>
+<p><strong>Task:</strong>
+How many rows are in the dataset?</p>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">df.shape[0]
 </code></pre>
-<p>Engineers test data, not just code.</p>
-<hr>
-<h2 id="-when-pandas-is-enough">🧠 When Pandas Is Enough</h2>
-<details class="spoiler "  id="spoiler-1">
-  <summary>Is Pandas enough for big data?</summary>
-  <p><p>Pandas is perfect for:</p>
-<ul>
-<li>Prototyping</li>
-<li>Medium-scale data (up to tens of millions of rows)</li>
-<li>ML feature engineering</li>
-<li>Research workflows</li>
-</ul>
-<p>It often pairs with:</p>
-<ul>
-<li>SQL</li>
-<li>Spark</li>
-<li>Arrow</li>
-</ul>
-</p>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">count = 0
+for _ in df.itertuples():
+    count += 1
+print(count)
+</code></pre>
+<p><strong>Time:</strong> O(n)</p>
 </details>
 <hr>
-<h2 id="-when-pandas-is-not-enough">🚧 When Pandas Is NOT Enough</h2>
-<p>Signs you should scale:</p>
-<ul>
-<li>Memory errors</li>
-<li>Very slow joins</li>
-<li>Daily batch jobs taking hours</li>
-</ul>
-<p>At that point:</p>
-<ul>
-<li>Keep logic</li>
-<li>Change engine</li>
-</ul>
+<h2 id="-problem-2--unique-users">🟢 Problem 2 — Unique Users</h2>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">df[&quot;user_id&quot;].nunique()
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">seen = set()
+for u in df[&quot;user_id&quot;]:
+    seen.add(u)
+print(len(seen))
+</code></pre>
+</details>
 <hr>
-<h2 id="-engineers-rule-of-thumb">🧠 Engineer’s Rule of Thumb</h2>
+<h2 id="-problem-3--filter-login-events">🟢 Problem 3 — Filter Login Events</h2>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">df[df[&quot;event&quot;] == &quot;login&quot;]
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">rows = []
+for r in df.to_dict(&quot;records&quot;):
+    if r[&quot;event&quot;] == &quot;login&quot;:
+        rows.append(r)
+print(rows)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-4--total-revenue">🟡 Problem 4 — Total Revenue</h2>
+<p>Sum of all <code>amount</code></p>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">df[&quot;amount&quot;].sum()
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">total = 0
+for a in df[&quot;amount&quot;]:
+    total += a
+print(total)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-5--revenue-per-user">🟡 Problem 5 — Revenue per User</h2>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">df.groupby(&quot;user_id&quot;)[&quot;amount&quot;].sum()
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">rev = {}
+for u, a in zip(df[&quot;user_id&quot;], df[&quot;amount&quot;]):
+    rev[u] = rev.get(u, 0) + a
+print(rev)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-6--count-events-per-day">🟡 Problem 6 — Count Events per Day</h2>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">df.groupby(&quot;day&quot;).size()
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">count = {}
+for d in df[&quot;day&quot;]:
+    count[d] = count.get(d, 0) + 1
+print(count)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-7--users-who-ever-paid">🟡 Problem 7 — Users Who Ever Paid</h2>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">df[df[&quot;amount&quot;] &gt; 0][&quot;user_id&quot;].unique()
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">paid = set()
+for u, a in zip(df[&quot;user_id&quot;], df[&quot;amount&quot;]):
+    if a &gt; 0:
+        paid.add(u)
+print(list(paid))
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-8--max-transaction-amount">🟡 Problem 8 — Max Transaction Amount</h2>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">df[&quot;amount&quot;].max()
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">mx = 0
+for a in df[&quot;amount&quot;]:
+    if a &gt; mx:
+        mx = a
+print(mx)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-9--user-with-highest-revenue">🔵 Problem 9 — User with Highest Revenue</h2>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">df.groupby(&quot;user_id&quot;)[&quot;amount&quot;].sum().idxmax()
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">rev = {}
+for u, a in zip(df[&quot;user_id&quot;], df[&quot;amount&quot;]):
+    rev[u] = rev.get(u, 0) + a
+
+best = max(rev, key=rev.get)
+print(best)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-10--days-with-no-payments">🔵 Problem 10 — Days with No Payments</h2>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">df.groupby(&quot;day&quot;)[&quot;amount&quot;].sum()[lambda x: x == 0]
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">daily = {}
+for d, a in zip(df[&quot;day&quot;], df[&quot;amount&quot;]):
+    daily[d] = daily.get(d, 0) + a
+
+print([d for d,v in daily.items() if v == 0])
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-11--add-is_payment-column">🔵 Problem 11 — Add Is_Payment Column</h2>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">df[&quot;is_payment&quot;] = df[&quot;amount&quot;] &gt; 0
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">flags = []
+for a in df[&quot;amount&quot;]:
+    flags.append(a &gt; 0)
+print(flags)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-12--session-count-per-user">🔵 Problem 12 — Session Count per User</h2>
+<p>(Login = session start)</p>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">df[df[&quot;event&quot;] == &quot;login&quot;].groupby(&quot;user_id&quot;).size()
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">sessions = {}
+for u, e in zip(df[&quot;user_id&quot;], df[&quot;event&quot;]):
+    if e == &quot;login&quot;:
+        sessions[u] = sessions.get(u, 0) + 1
+print(sessions)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-13--conversion-rate-per-user">🔴 Problem 13 — Conversion Rate per User</h2>
+<p>(pay / login)</p>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">logins = df[df[&quot;event&quot;]==&quot;login&quot;].groupby(&quot;user_id&quot;).size()
+pays = df[df[&quot;event&quot;]==&quot;pay&quot;].groupby(&quot;user_id&quot;).size()
+(pays / logins).fillna(0)
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">logins, pays = {}, {}
+
+for u, e in zip(df[&quot;user_id&quot;], df[&quot;event&quot;]):
+    if e == &quot;login&quot;:
+        logins[u] = logins.get(u, 0) + 1
+    if e == &quot;pay&quot;:
+        pays[u] = pays.get(u, 0) + 1
+
+rate = {u: pays.get(u,0)/logins[u] for u in logins}
+print(rate)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-14--detect-duplicate-rows">🔴 Problem 14 — Detect Duplicate Rows</h2>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">df[df.duplicated()]
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">seen = set()
+dups = []
+
+for r in df.to_dict(&quot;records&quot;):
+    t = tuple(r.items())
+    if t in seen:
+        dups.append(r)
+    else:
+        seen.add(t)
+
+print(dups)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-15--sort-by-revenue-desc">🔴 Problem 15 — Sort by Revenue Desc</h2>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">df.sort_values(&quot;amount&quot;, ascending=False)
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">rows = df.to_dict(&quot;records&quot;)
+rows.sort(key=lambda x: x[&quot;amount&quot;], reverse=True)
+print(rows)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-16--top-day-by-revenue">🔴 Problem 16 — Top Day by Revenue</h2>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">df.groupby(&quot;day&quot;)[&quot;amount&quot;].sum().idxmax()
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">daily = {}
+for d, a in zip(df[&quot;day&quot;], df[&quot;amount&quot;]):
+    daily[d] = daily.get(d, 0) + a
+
+print(max(daily, key=daily.get))
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-17--pivot-table-user--event">🔴 Problem 17 — Pivot Table (User × Event)</h2>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">pd.pivot_table(df, index=&quot;user_id&quot;, columns=&quot;event&quot;, values=&quot;amount&quot;, aggfunc=&quot;count&quot;, fill_value=0)
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">pivot = {}
+
+for u, e in zip(df[&quot;user_id&quot;], df[&quot;event&quot;]):
+    pivot.setdefault(u, {})
+    pivot[u][e] = pivot[u].get(e, 0) + 1
+
+print(pivot)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-18--find-users-with-no-logout">🔴 Problem 18 — Find Users with No Logout</h2>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">users = set(df[&quot;user_id&quot;])
+logout = set(df[df[&quot;event&quot;]==&quot;logout&quot;][&quot;user_id&quot;])
+users - logout
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">users, logout = set(), set()
+for u, e in zip(df[&quot;user_id&quot;], df[&quot;event&quot;]):
+    users.add(u)
+    if e == &quot;logout&quot;:
+        logout.add(u)
+print(users - logout)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-19--running-total-revenue">🔴 Problem 19 — Running Total Revenue</h2>
+<details>
+<summary>✅ Pandas</summary>
+<pre><code class="language-python">df[&quot;running_total&quot;] = df[&quot;amount&quot;].cumsum()
+</code></pre>
+</details>
+<details>
+<summary>✅ Pure Logic</summary>
+<pre><code class="language-python">run = 0
+res = []
+for a in df[&quot;amount&quot;]:
+    run += a
+    res.append(run)
+print(res)
+</code></pre>
+</details>
+<hr>
+<h2 id="-problem-20--data-engineer-sanity-check">🔴 Problem 20 — Data Engineer Sanity Check</h2>
+<p><strong>Question (Interview):</strong>
+When does pandas fail?</p>
+<details>
+<summary>✅ Expected Answer</summary>
+<ul>
+<li>Very large datasets (memory-bound)</li>
+<li>Skewed groupby keys</li>
+<li>Hidden NaNs</li>
+<li>Timezone bugs</li>
+<li>When logic is unclear</li>
+</ul>
+<p>👉 <strong>Strong DEs fall back to logic, not APIs</strong></p>
+</details>
+<hr>
+<h2 id="-final-advice-very-important">🎯 Final Advice (Very Important)</h2>
+<p>If you can:</p>
+<ul>
+<li>Explain pandas <strong>and</strong></li>
+<li>Replace pandas with logic</li>
+<li>Talk about <strong>trade-offs</strong></li>
+</ul>
+<p>Then you are <strong>Data Engineer ready</strong>.</p>
 <blockquote>
-<p>Prototype in Pandas
-Validate logic
-Scale only when needed</p>
+<p>Tools change.
+Thinking does not.</p>
 </blockquote>
-<p>This is how real teams work.</p>
 <hr>
-<h2 id="-final-takeaway">🏁 Final Takeaway</h2>
-<p>Pandas is not a toy.
-It is a <strong>thinking framework</strong>.</p>
-<p>If you master Pandas:</p>
-<ul>
-<li>You understand data</li>
-<li>You avoid silent bugs</li>
-<li>You build reliable systems</li>
-</ul>
           </div>
 
           
@@ -1254,9 +1416,10 @@ It is a <strong>thinking framework</strong>.</p>
   
   
   <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd02-core-structures/" rel="prev">DE101-PD02 — Pandas Series, DataFrame, and Indexing (Real-World Mindset)</a>
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/2025-12-30-pandas-data-engineering-foundations/de101-pd06-finging-insights/" rel="next">DE101-PD06 — Finding Insights with Pandas (From Data to Decisions)</a>
   </div>
+  
   
 </div>
 
