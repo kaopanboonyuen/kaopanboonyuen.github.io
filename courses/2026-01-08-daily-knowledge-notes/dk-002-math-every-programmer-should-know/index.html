@@ -1,0 +1,3703 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Teerapong Panboonyuen" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08f2e04360a1c87f5ad39547c02bf219.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know/" />
+  <meta property="og:title" content="DK-002 — Math Every Programmer Should Know | Teerapong Panboonyuen" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2026-01-10T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2026-01-10T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>DK-002 — Math Every Programmer Should Know | Teerapong Panboonyuen</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="1d332ee686057260516d807ab7592699" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.4be02a3b391999348b0c7478778a0e4b.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#awards"><span>Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#press"><span>Press</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Featured</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#tags"><span>Topics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#communities"><span>Communities</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://x.com/kaopanboonyuen" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          Knowledge Notes
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/courses/"><i class="fas fa-arrow-left pr-1"></i>Courses</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/courses/2026-01-08-daily-knowledge-notes/">Knowledge Notes</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class="active"><a href="/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know/">DK-002 — Math Every Programmer Should Know</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-001-harry-potter-overview/">DK-001 — The Harry Potter Universe (A Beginner-Friendly Guide)</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-why-this-note-exists">🎯 Why This Note Exists</a></li>
+    <li><a href="#-gcd--lcm--the-backbone-of-discrete-math-for-programmers">🔢 GCD &amp; LCM — The Backbone of Discrete Math for Programmers</a>
+      <ul>
+        <li><a href="#-greatest-common-divisor-gcd">🔹 Greatest Common Divisor (GCD)</a></li>
+        <li><a href="#-gcd--euclidean-algorithm">📐 GCD — Euclidean Algorithm</a></li>
+        <li><a href="#-input--output-test-cases">✅ Input → Output (Test Cases)</a></li>
+        <li><a href="#-pure-python-code-no-library">🧑‍💻 Pure Python Code (No Library)</a></li>
+        <li><a href="#-helps-solve">🧠 Helps Solve</a></li>
+        <li><a href="#-typical-questions">🧩 Typical Questions</a></li>
+        <li><a href="#-builds-intuition">🧠 Builds Intuition</a></li>
+      </ul>
+    </li>
+    <li><a href="#-least-common-multiple-lcm">🔹 Least Common Multiple (LCM)</a>
+      <ul>
+        <li><a href="#-relationship-between-gcd-and-lcm">📐 Relationship Between GCD and LCM</a></li>
+        <li><a href="#-input--output-test-cases-1">✅ Input → Output (Test Cases)</a></li>
+        <li><a href="#-pure-python-code">🧑‍💻 Pure Python Code</a></li>
+        <li><a href="#-helps-solve-1">🧠 Helps Solve</a></li>
+        <li><a href="#-typical-questions-1">🧩 Typical Questions</a></li>
+        <li><a href="#-builds-intuition-1">🧠 Builds Intuition</a></li>
+      </ul>
+    </li>
+    <li><a href="#-gcd--lcm-together--real-insight">🔁 GCD &amp; LCM Together — Real Insight</a>
+      <ul>
+        <li><a href="#-identity-to-remember-forever">📐 Identity to Remember Forever</a></li>
+        <li><a href="#-quick-verification-test">✅ Quick Verification (Test)</a></li>
+        <li><a href="#-why-this-matters-for-programmers">🧠 Why This Matters for Programmers</a></li>
+      </ul>
+    </li>
+    <li><a href="#-mental-model-very-important">🎯 Mental Model (Very Important)</a></li>
+    <li><a href="#5-prime-numbers">5️⃣ Prime Numbers</a>
+      <ul>
+        <li><a href="#-what-is-a-prime-number">📘 What Is a Prime Number?</a></li>
+        <li><a href="#-mathematical-definition">🧠 Mathematical Definition</a></li>
+        <li><a href="#-input--output-test-cases-2">✅ Input → Output (Test Cases)</a></li>
+        <li><a href="#-pure-python-code-1">🐍 Pure Python Code</a></li>
+        <li><a href="#-why-programmers-care">💡 Why Programmers Care</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-modular-arithmetic-">6️⃣ Modular Arithmetic (<code>%</code>)</a>
+      <ul>
+        <li><a href="#-what-is-modulo">📘 What Is Modulo?</a></li>
+        <li><a href="#-everyday-intuition">🧠 Everyday Intuition</a></li>
+        <li><a href="#-input--output-test-cases-3">✅ Input → Output (Test Cases)</a></li>
+        <li><a href="#-pure-python-code-2">🐍 Pure Python Code</a></li>
+        <li><a href="#-why-modulo-is-everywhere">💡 Why Modulo Is Everywhere</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-fractions--simplification">7️⃣ Fractions &amp; Simplification</a>
+      <ul>
+        <li><a href="#-what-is-a-fraction">📘 What Is a Fraction?</a></li>
+        <li><a href="#-simplification-rule">🧠 Simplification Rule</a></li>
+        <li><a href="#-input--output-test-cases-4">✅ Input → Output (Test Cases)</a></li>
+        <li><a href="#-pure-python-code-3">🐍 Pure Python Code</a></li>
+        <li><a href="#-why-this-matters">💡 Why This Matters</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-powers--logarithms">8️⃣ Powers &amp; Logarithms</a>
+      <ul>
+        <li><a href="#-powers-exponents">📘 Powers (Exponents)</a></li>
+        <li><a href="#-logarithms-opposite-of-power">🧠 Logarithms (Opposite of Power)</a></li>
+        <li><a href="#-input--output-test-cases-5">✅ Input → Output (Test Cases)</a></li>
+        <li><a href="#-pure-python-code-no-libraries">🐍 Pure Python Code (No Libraries)</a></li>
+        <li><a href="#-programmer-insight">💡 Programmer Insight</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-fibonacci-sequence">9️⃣ Fibonacci Sequence</a>
+      <ul>
+        <li><a href="#-what-is-fibonacci">📘 What Is Fibonacci?</a></li>
+        <li><a href="#-input--output-test-cases-6">✅ Input → Output (Test Cases)</a></li>
+        <li><a href="#-pure-python-code-iterative">🐍 Pure Python Code (Iterative)</a></li>
+        <li><a href="#-why-fibonacci-is-taught">💡 Why Fibonacci Is Taught</a></li>
+      </ul>
+    </li>
+    <li><a href="#-final-thought-for-students">🏁 Final Thought for Students</a></li>
+    <li><a href="#-big-o-intuition-algorithm-growth">🔟 Big-O Intuition (Algorithm Growth)</a>
+      <ul>
+        <li><a href="#-what-is-big-o">📘 What Is Big-O?</a></li>
+        <li><a href="#-common-big-o-forms">🧠 Common Big-O Forms</a></li>
+        <li><a href="#-example-linear-vs-quadratic">🧪 Example: Linear vs Quadratic</a></li>
+        <li><a href="#-mental-model">💡 Mental Model</a></li>
+      </ul>
+    </li>
+    <li><a href="#11-probability-basics">1️⃣1️⃣ Probability Basics</a>
+      <ul>
+        <li><a href="#-what-is-probability">📘 What Is Probability?</a></li>
+        <li><a href="#-examples">🧠 Examples</a></li>
+        <li><a href="#-input--output-test-cases-7">✅ Input → Output (Test Cases)</a></li>
+        <li><a href="#-pure-python-code-4">🐍 Pure Python Code</a></li>
+        <li><a href="#-programmer-insight-1">💡 Programmer Insight</a></li>
+      </ul>
+    </li>
+    <li><a href="#12-bitwise-math">1️⃣2️⃣ Bitwise Math</a>
+      <ul>
+        <li><a href="#-what-are-bits">📘 What Are Bits?</a></li>
+        <li><a href="#-common-bitwise-operators">🧠 Common Bitwise Operators</a></li>
+        <li><a href="#-examples-1">🧪 Examples</a></li>
+        <li><a href="#-why-bitwise-matters">💡 Why Bitwise Matters</a></li>
+      </ul>
+    </li>
+    <li><a href="#13-matrix-basics">1️⃣3️⃣ Matrix Basics</a>
+      <ul>
+        <li><a href="#-what-is-a-matrix">📘 What Is a Matrix?</a></li>
+        <li><a href="#-matrix-addition-rule">🧠 Matrix Addition Rule</a></li>
+        <li><a href="#-pure-python-code-5">🐍 Pure Python Code</a></li>
+        <li><a href="#-programmer-insight-2">💡 Programmer Insight</a></li>
+      </ul>
+    </li>
+    <li><a href="#14-math-behind-hashing">1️⃣4️⃣ Math Behind Hashing</a>
+      <ul>
+        <li><a href="#-what-is-hashing">📘 What Is Hashing?</a></li>
+        <li><a href="#-core-properties">🧠 Core Properties</a></li>
+        <li><a href="#-simple-hash-formula">🧪 Simple Hash Formula</a></li>
+        <li><a href="#-pure-python-hash-example">🐍 Pure Python Hash Example</a></li>
+        <li><a href="#-why-hashing-matters">💡 Why Hashing Matters</a></li>
+      </ul>
+    </li>
+    <li><a href="#-final-wisdom-for-programmers">🧠 Final Wisdom for Programmers</a></li>
+    <li><a href="#15-differentiation-derivative">1️⃣5️⃣ Differentiation (Derivative)</a>
+      <ul>
+        <li><a href="#-what-is-differentiation">📘 What is Differentiation?</a></li>
+        <li><a href="#-mathematical-definition-1">🧠 Mathematical Definition</a></li>
+        <li><a href="#-input--output-examples">✅ Input → Output (Examples)</a></li>
+        <li><a href="#-pure-python-code-numerical-derivative">🐍 Pure Python Code (Numerical Derivative)</a></li>
+        <li><a href="#-programmer-insight-3">💡 Programmer Insight</a></li>
+      </ul>
+    </li>
+    <li><a href="#16-integration-integral">1️⃣6️⃣ Integration (Integral)</a>
+      <ul>
+        <li><a href="#-what-is-integration">📘 What is Integration?</a></li>
+        <li><a href="#-mathematical-definition-2">🧠 Mathematical Definition</a></li>
+        <li><a href="#-input--output-examples-1">✅ Input → Output (Examples)</a></li>
+        <li><a href="#-pure-python-code-numerical-integration-via-rectangle-method">🐍 Pure Python Code (Numerical Integration via Rectangle Method)</a></li>
+        <li><a href="#-step-by-step-example">🧪 Step-by-Step Example</a></li>
+        <li><a href="#-programmer-insight-4">💡 Programmer Insight</a></li>
+      </ul>
+    </li>
+    <li><a href="#17-linking-derivative--integral">1️⃣7️⃣ Linking Derivative &amp; Integral</a>
+      <ul>
+        <li><a href="#-demonstration-check-inverse">🐍 Demonstration (Check Inverse)</a></li>
+        <li><a href="#-final-insight">💡 Final Insight</a></li>
+      </ul>
+    </li>
+    <li><a href="#18-partial-derivatives--chain-rule">1️⃣8️⃣ Partial Derivatives &amp; Chain Rule</a>
+      <ul>
+        <li><a href="#-what-is-a-partial-derivative">📘 What is a Partial Derivative?</a></li>
+        <li><a href="#-input--output-examples-2">✅ Input → Output (Examples)</a></li>
+        <li><a href="#-pure-python-code-numerical-partial-derivative">🐍 Pure Python Code (Numerical Partial Derivative)</a></li>
+        <li><a href="#-what-is-the-chain-rule">📘 What is the Chain Rule?</a></li>
+        <li><a href="#-pure-python-code-numerical-chain-rule">🐍 Pure Python Code (Numerical Chain Rule)</a></li>
+      </ul>
+    </li>
+    <li><a href="#19-backpropagation-in-neural-networks">1️⃣9️⃣ Backpropagation in Neural Networks</a>
+      <ul>
+        <li><a href="#-what-is-backpropagation">📘 What is Backpropagation?</a></li>
+        <li><a href="#-intuition-with-a-tiny-neural-network">🧠 Intuition with a Tiny Neural Network</a></li>
+        <li><a href="#-pure-python-example-single-neuron">🐍 Pure Python Example (Single Neuron)</a></li>
+        <li><a href="#-step-by-step-example-1">✅ Step-by-Step Example</a></li>
+        <li><a href="#-programmer-insight-5">💡 Programmer Insight</a></li>
+      </ul>
+    </li>
+    <li><a href="#20-logarithms-detailed-recap">2️⃣0️⃣ Logarithms (Detailed Recap)</a>
+      <ul>
+        <li><a href="#-what-is-a-logarithm">📘 What is a Logarithm?</a></li>
+        <li><a href="#-examples-2">🧠 Examples</a></li>
+        <li><a href="#-basic-properties-of-logarithms">✅ Basic Properties of Logarithms</a></li>
+        <li><a href="#-step-by-step-example-2">🧪 Step-by-Step Example</a></li>
+        <li><a href="#-pure-python-code-numerical-logarithms">🐍 Pure Python Code (Numerical Logarithms)</a></li>
+        <li><a href="#-visual-intuition">🧠 Visual Intuition</a></li>
+        <li><a href="#-applications-in-programming">💡 Applications in Programming</a></li>
+        <li><a href="#-quick-exercises">🧪 Quick Exercises</a></li>
+        <li><a href="#-mental-models">🧠 Mental Models</a></li>
+      </ul>
+    </li>
+    <li><a href="#-87-math-equations-every-programmer-should-know">🧠 87 Math Equations Every Programmer Should Know</a>
+      <ul>
+        <li><a href="#1-arithmetic-series-sum">1️⃣ Arithmetic Series Sum</a></li>
+        <li><a href="#2-sum-of-range-ab">2️⃣ Sum of Range [a..b]</a></li>
+        <li><a href="#3-difference-of-two-numbers">3️⃣ Difference of Two Numbers</a></li>
+        <li><a href="#4-mean-average">4️⃣ Mean (Average)</a></li>
+        <li><a href="#5-weighted-average">5️⃣ Weighted Average</a></li>
+        <li><a href="#6-modulo">6️⃣ Modulo</a></li>
+        <li><a href="#7-even--odd-check">7️⃣ Even / Odd Check</a></li>
+        <li><a href="#8-square">8️⃣ Square</a></li>
+        <li><a href="#9-cube">9️⃣ Cube</a></li>
+        <li><a href="#-power-exponentiation">🔟 Power (Exponentiation)</a></li>
+        <li><a href="#11-factorial">1️⃣1️⃣ Factorial</a></li>
+        <li><a href="#12-permutations">1️⃣2️⃣ Permutations</a></li>
+        <li><a href="#13-combinations">1️⃣3️⃣ Combinations</a></li>
+        <li><a href="#14-fibonacci-sequence">1️⃣4️⃣ Fibonacci Sequence</a></li>
+        <li><a href="#15-prefix-sum">1️⃣5️⃣ Prefix Sum</a></li>
+        <li><a href="#16-sliding-window-sum">1️⃣6️⃣ Sliding Window Sum</a></li>
+        <li><a href="#17-xor-property">1️⃣7️⃣ XOR Property</a></li>
+        <li><a href="#18-binary-representation">1️⃣8️⃣ Binary Representation</a></li>
+        <li><a href="#19-pythagorean-theorem">1️⃣9️⃣ Pythagorean Theorem</a></li>
+        <li><a href="#20-euclidean-distance-2d">2️⃣0️⃣ Euclidean Distance (2D)</a></li>
+        <li><a href="#21-manhattan-distance">2️⃣1️⃣ Manhattan Distance</a></li>
+        <li><a href="#22-minmax-normalization">2️⃣2️⃣ Min–Max Normalization</a></li>
+        <li><a href="#23-probability">2️⃣3️⃣ Probability</a></li>
+        <li><a href="#24-expected-value">2️⃣4️⃣ Expected Value</a></li>
+        <li><a href="#25-log-base-2-loop-count">2️⃣5️⃣ Log Base 2 (Loop Count)</a></li>
+        <li><a href="#26-big-o-n">2️⃣6️⃣ Big-O (n²)</a></li>
+        <li><a href="#27-recurrence-relation">2️⃣7️⃣ Recurrence Relation</a></li>
+        <li><a href="#28-gradient-idea-slope">2️⃣8️⃣ Gradient Idea (Slope)</a></li>
+        <li><a href="#29-linear-equation">2️⃣9️⃣ Linear Equation</a></li>
+        <li><a href="#30-state-transition">3️⃣0️⃣ State Transition</a></li>
+        <li><a href="#31-ratio">3️⃣1️⃣ Ratio</a></li>
+        <li><a href="#32-percentage">3️⃣2️⃣ Percentage</a></li>
+        <li><a href="#33-ceiling-division">3️⃣3️⃣ Ceiling Division</a></li>
+        <li><a href="#34-gcd-euclidean-algorithm">3️⃣4️⃣ GCD (Euclidean Algorithm)</a></li>
+        <li><a href="#35-lcm">3️⃣5️⃣ LCM</a></li>
+        <li><a href="#36-prime-check">3️⃣6️⃣ Prime Check</a></li>
+        <li><a href="#37-count-digits">3️⃣7️⃣ Count Digits</a></li>
+        <li><a href="#38-reverse-number">3️⃣8️⃣ Reverse Number</a></li>
+        <li><a href="#39-palindrome-check">3️⃣9️⃣ Palindrome Check</a></li>
+        <li><a href="#40-sum-of-digits">4️⃣0️⃣ Sum of Digits</a></li>
+        <li><a href="#41-binary-search-steps">4️⃣1️⃣ Binary Search Steps</a></li>
+        <li><a href="#42-graph-degree-count">4️⃣2️⃣ Graph Degree Count</a></li>
+        <li><a href="#43-bfs-node-count">4️⃣3️⃣ BFS Node Count</a></li>
+        <li><a href="#44-dfs-depth">4️⃣4️⃣ DFS Depth</a></li>
+        <li><a href="#45-entropy-binary">4️⃣5️⃣ Entropy (Binary)</a></li>
+        <li><a href="#46-loss-squared-error">4️⃣6️⃣ Loss (Squared Error)</a></li>
+        <li><a href="#47-sigmoid-manual">4️⃣7️⃣ Sigmoid (Manual)</a></li>
+        <li><a href="#48-softmax-2-values">4️⃣8️⃣ Softmax (2 values)</a></li>
+        <li><a href="#49-monte-carlo-average">4️⃣9️⃣ Monte Carlo Average</a></li>
+        <li><a href="#50-law-of-large-numbers">5️⃣0️⃣ Law of Large Numbers</a></li>
+        <li><a href="#51-arithmetic-progression-general">5️⃣1️⃣ Arithmetic Progression (General)</a></li>
+        <li><a href="#52-geometric-progression-term">5️⃣2️⃣ Geometric Progression Term</a></li>
+        <li><a href="#53-sum-of-geometric-progression">5️⃣3️⃣ Sum of Geometric Progression</a></li>
+        <li><a href="#54-inclusionexclusion-principle">5️⃣4️⃣ Inclusion–Exclusion Principle</a></li>
+        <li><a href="#55-gcd-property">5️⃣5️⃣ GCD Property</a></li>
+        <li><a href="#56-modular-addition">5️⃣6️⃣ Modular Addition</a></li>
+        <li><a href="#57-modular-multiplication">5️⃣7️⃣ Modular Multiplication</a></li>
+        <li><a href="#58-modular-exponentiation">5️⃣8️⃣ Modular Exponentiation</a></li>
+        <li><a href="#59-fermats-little-theorem">5️⃣9️⃣ Fermat’s Little Theorem</a></li>
+        <li><a href="#60-modular-inverse-prime">6️⃣0️⃣ Modular Inverse (Prime)</a></li>
+        <li><a href="#61-chinese-remainder-2-eq">6️⃣1️⃣ Chinese Remainder (2 eq)</a></li>
+        <li><a href="#62-pigeonhole-principle">6️⃣2️⃣ Pigeonhole Principle</a></li>
+        <li><a href="#63-prime-counting-intuition">6️⃣3️⃣ Prime Counting Intuition</a></li>
+        <li><a href="#64-perfect-square-check">6️⃣4️⃣ Perfect Square Check</a></li>
+        <li><a href="#65-divisor-counting">6️⃣5️⃣ Divisor Counting</a></li>
+        <li><a href="#66-sum-of-divisors">6️⃣6️⃣ Sum of Divisors</a></li>
+        <li><a href="#67-euler-totient-φ">6️⃣7️⃣ Euler Totient (φ)</a></li>
+        <li><a href="#68-binomial-theorem">6️⃣8️⃣ Binomial Theorem</a></li>
+        <li><a href="#69-pascal-triangle-rule">6️⃣9️⃣ Pascal Triangle Rule</a></li>
+        <li><a href="#70-catalan-numbers">7️⃣0️⃣ Catalan Numbers</a></li>
+        <li><a href="#71-principle-of-mathematical-induction">7️⃣1️⃣ Principle of Mathematical Induction</a></li>
+        <li><a href="#72-invariant-concept">7️⃣2️⃣ Invariant Concept</a></li>
+        <li><a href="#73-symmetry">7️⃣3️⃣ Symmetry</a></li>
+        <li><a href="#74-extremal-principle">7️⃣4️⃣ Extremal Principle</a></li>
+        <li><a href="#75-greedy-choice-property">7️⃣5️⃣ Greedy Choice Property</a></li>
+        <li><a href="#76-am--gm">7️⃣6️⃣ AM ≥ GM</a></li>
+        <li><a href="#77-cauchyschwarz-vector-intuition">7️⃣7️⃣ Cauchy–Schwarz (Vector Intuition)</a></li>
+        <li><a href="#78-triangle-inequality">7️⃣8️⃣ Triangle Inequality</a></li>
+        <li><a href="#79-counting-paths-grid">7️⃣9️⃣ Counting Paths (Grid)</a></li>
+        <li><a href="#80-matrix-power-transition">8️⃣0️⃣ Matrix Power (Transition)</a></li>
+        <li><a href="#81-recursion-tree-size">8️⃣1️⃣ Recursion Tree Size</a></li>
+        <li><a href="#82-probability-complement">8️⃣2️⃣ Probability Complement</a></li>
+        <li><a href="#83-expected-steps">8️⃣3️⃣ Expected Steps</a></li>
+        <li><a href="#84-random-walk-expectation">8️⃣4️⃣ Random Walk Expectation</a></li>
+        <li><a href="#85-variance-identity">8️⃣5️⃣ Variance Identity</a></li>
+        <li><a href="#86-chebyshev-intuition">8️⃣6️⃣ Chebyshev Intuition</a></li>
+        <li><a href="#87-graph-handshaking-lemma">8️⃣7️⃣ Graph Handshaking Lemma</a></li>
+      </ul>
+    </li>
+    <li><a href="#-final-thought">🏁 Final Thought</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+  
+  
+
+  <li class="breadcrumb-item">
+    <a href="/">
+      
+        Home
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/">
+      
+        Courses
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/2026-01-08-daily-knowledge-notes/">
+      
+        Knowledge Notes
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        DK-002 — Math Every Programmer Should Know
+      </li>
+    </ol>
+  </nav>
+
+
+          
+
+          <h1>DK-002 — Math Every Programmer Should Know</h1>
+
+          <div class="article-style">
+            <hr>
+<h2 id="-why-this-note-exists">🎯 Why This Note Exists</h2>
+<p>Programming is the art of <strong>turning ideas into systems</strong>.
+Mathematics is the art of <strong>thinking clearly about those systems</strong>.</p>
+<p>You don’t need advanced math.
+But if you are a programmer, <strong>there are equations you must recognize instinctively</strong>.</p>
+<p>This note presents <strong>87 essential math equations</strong>, each with:</p>
+<ul>
+<li>Plain explanation</li>
+<li>Concrete input → output examples (like test cases)</li>
+<li><strong>Pure Python code only</strong> (no libraries, no shortcuts)</li>
+</ul>
+<p>If math feels friendly,
+<strong>coding becomes powerful and fun</strong>.</p>
+<hr>
+<h2 id="-gcd--lcm--the-backbone-of-discrete-math-for-programmers">🔢 GCD &amp; LCM — The Backbone of Discrete Math for Programmers</h2>
+<hr>
+<h3 id="-greatest-common-divisor-gcd">🔹 Greatest Common Divisor (GCD)</h3>
+<p><strong>Definition</strong></p>
+<p>The <strong>Greatest Common Divisor (GCD)</strong> of two integers <code>a</code> and <code>b</code>
+is the <strong>largest integer</strong> that divides both without remainder.</p>
+<hr>
+<h3 id="-gcd--euclidean-algorithm">📐 GCD — Euclidean Algorithm</h3>
+<p>$$
+\gcd(a, b) = \gcd(b, a \bmod b)
+$$</p>
+<p>This works because:</p>
+<blockquote>
+<p>Dividing by the remainder preserves common divisors.</p>
+</blockquote>
+<hr>
+<h3 id="-input--output-test-cases">✅ Input → Output (Test Cases)</h3>
+<table>
+<thead>
+<tr>
+<th>a</th>
+<th>b</th>
+<th>gcd(a,b)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12</td>
+<td>18</td>
+<td>6</td>
+</tr>
+<tr>
+<td>20</td>
+<td>8</td>
+<td>4</td>
+</tr>
+<tr>
+<td>17</td>
+<td>5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>100</td>
+<td>25</td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-pure-python-code-no-library">🧑‍💻 Pure Python Code (No Library)</h3>
+<pre><code class="language-python">def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+print(gcd(12, 18))   # 6
+print(gcd(20, 8))    # 4
+print(gcd(17, 5))    # 1
+print(gcd(100, 25))  # 25
+</code></pre>
+<hr>
+<h3 id="-helps-solve">🧠 Helps Solve</h3>
+<ul>
+<li>Fraction simplification</li>
+<li>Ratio normalization</li>
+<li>Periodic cycles</li>
+<li>Cryptography (RSA basics)</li>
+<li>Grid / tiling problems</li>
+</ul>
+<hr>
+<h3 id="-typical-questions">🧩 Typical Questions</h3>
+<ul>
+<li>“Simplify this fraction”</li>
+<li>“Do these two cycles ever align?”</li>
+<li>“What is the repeating interval?”</li>
+</ul>
+<hr>
+<h3 id="-builds-intuition">🧠 Builds Intuition</h3>
+<blockquote>
+<p>Repeated subtraction is slow.
+<strong>Remainders reveal structure faster.</strong></p>
+</blockquote>
+<hr>
+<h2 id="-least-common-multiple-lcm">🔹 Least Common Multiple (LCM)</h2>
+<p><strong>Definition</strong></p>
+<p>The <strong>Least Common Multiple (LCM)</strong> of two integers
+is the <strong>smallest positive number</strong> divisible by both.</p>
+<hr>
+<h3 id="-relationship-between-gcd-and-lcm">📐 Relationship Between GCD and LCM</h3>
+<p>$$
+\text{lcm}(a, b) = \frac{a \times b}{\gcd(a, b)}
+$$</p>
+<p>This identity is <strong>critical</strong> and used everywhere.</p>
+<hr>
+<h3 id="-input--output-test-cases-1">✅ Input → Output (Test Cases)</h3>
+<table>
+<thead>
+<tr>
+<th>a</th>
+<th>b</th>
+<th>lcm(a,b)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>6</td>
+<td>12</td>
+</tr>
+<tr>
+<td>5</td>
+<td>7</td>
+<td>35</td>
+</tr>
+<tr>
+<td>8</td>
+<td>12</td>
+<td>24</td>
+</tr>
+<tr>
+<td>6</td>
+<td>15</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-pure-python-code">🧑‍💻 Pure Python Code</h3>
+<pre><code class="language-python">def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+def lcm(a, b):
+    return a * b // gcd(a, b)
+
+print(lcm(4, 6))    # 12
+print(lcm(5, 7))    # 35
+print(lcm(8, 12))   # 24
+print(lcm(6, 15))   # 30
+</code></pre>
+<hr>
+<h3 id="-helps-solve-1">🧠 Helps Solve</h3>
+<ul>
+<li>Synchronization problems</li>
+<li>Scheduling systems</li>
+<li>Clock / cycle alignment</li>
+<li>Repeating events</li>
+</ul>
+<hr>
+<h3 id="-typical-questions-1">🧩 Typical Questions</h3>
+<ul>
+<li>“When will these two jobs run together again?”</li>
+<li>“What is the smallest shared interval?”</li>
+</ul>
+<hr>
+<h3 id="-builds-intuition-1">🧠 Builds Intuition</h3>
+<blockquote>
+<p>GCD removes overlap.
+LCM rebuilds alignment.</p>
+</blockquote>
+<hr>
+<h2 id="-gcd--lcm-together--real-insight">🔁 GCD &amp; LCM Together — Real Insight</h2>
+<h3 id="-identity-to-remember-forever">📐 Identity to Remember Forever</h3>
+<p>$$
+\gcd(a,b) \times \text{lcm}(a,b) = a \times b
+$$</p>
+<hr>
+<h3 id="-quick-verification-test">✅ Quick Verification (Test)</h3>
+<pre><code class="language-python">a, b = 12, 18
+print(gcd(a, b) * lcm(a, b) == a * b)
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>True
+</code></pre>
+<hr>
+<h3 id="-why-this-matters-for-programmers">🧠 Why This Matters for Programmers</h3>
+<ul>
+<li>Prevents overflow logic errors</li>
+<li>Enables optimal loop bounds</li>
+<li>Unlocks number theory problems</li>
+<li>Appears in <strong>interviews constantly</strong></li>
+</ul>
+<hr>
+<h2 id="-mental-model-very-important">🎯 Mental Model (Very Important)</h2>
+<blockquote>
+<p><strong>GCD answers:</strong>
+“What do these numbers share?”</p>
+</blockquote>
+<blockquote>
+<p><strong>LCM answers:</strong>
+“When do they meet again?”</p>
+</blockquote>
+<p>If a problem mentions:</p>
+<ul>
+<li><em>sharing</em> → think <strong>GCD</strong></li>
+<li><em>alignment / repetition</em> → think <strong>LCM</strong></li>
+</ul>
+<hr>
+<h2 id="5-prime-numbers">5️⃣ Prime Numbers</h2>
+<h3 id="-what-is-a-prime-number">📘 What Is a Prime Number?</h3>
+<p>A <strong>prime number</strong> is a number that:</p>
+<blockquote>
+<p>Has <strong>exactly two divisors</strong>: <code>1</code> and itself</p>
+</blockquote>
+<p>Examples:</p>
+<ul>
+<li>Prime: <code>2, 3, 5, 7, 11</code></li>
+<li>Not prime: <code>1, 4, 6, 8, 9</code></li>
+</ul>
+<hr>
+<h3 id="-mathematical-definition">🧠 Mathematical Definition</h3>
+<p>For a number <code>n</code>:</p>
+<p>$$
+n &gt; 1 \quad \text{and} \quad n \bmod k \neq 0 ;; \forall k \in [2, \sqrt{n}]
+$$</p>
+<hr>
+<h3 id="-input--output-test-cases-2">✅ Input → Output (Test Cases)</h3>
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>Is Prime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>True</td>
+</tr>
+<tr>
+<td>3</td>
+<td>True</td>
+</tr>
+<tr>
+<td>4</td>
+<td>False</td>
+</tr>
+<tr>
+<td>9</td>
+<td>False</td>
+</tr>
+<tr>
+<td>13</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-pure-python-code-1">🐍 Pure Python Code</h3>
+<pre><code class="language-python">def is_prime(n):
+    if n &lt;= 1:
+        return False
+
+    i = 2
+    while i * i &lt;= n:
+        if n % i == 0:
+            return False
+        i += 1
+
+    return True
+
+# Tests
+print(is_prime(2))   # True
+print(is_prime(9))   # False
+print(is_prime(13))  # True
+</code></pre>
+<hr>
+<h3 id="-why-programmers-care">💡 Why Programmers Care</h3>
+<p>Used in:</p>
+<ul>
+<li>Security &amp; cryptography</li>
+<li>Hashing</li>
+<li>Random number systems</li>
+</ul>
+<p>Mental model:</p>
+<blockquote>
+<p>Primes are the <strong>atoms of numbers</strong>.</p>
+</blockquote>
+<hr>
+<h2 id="6-modular-arithmetic-">6️⃣ Modular Arithmetic (<code>%</code>)</h2>
+<h3 id="-what-is-modulo">📘 What Is Modulo?</h3>
+<p>Modulo gives the <strong>remainder</strong> after division.</p>
+<p>$$
+a \bmod b
+$$</p>
+<p>Example:</p>
+<ul>
+<li><code>17 % 5 = 2</code></li>
+</ul>
+<hr>
+<h3 id="-everyday-intuition">🧠 Everyday Intuition</h3>
+<p>Clock arithmetic:</p>
+<ul>
+<li><code>(9 + 5) % 12 = 2</code></li>
+<li>Time <strong>wraps around</strong></li>
+</ul>
+<hr>
+<h3 id="-input--output-test-cases-3">✅ Input → Output (Test Cases)</h3>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10 % 3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>14 % 7</td>
+<td>0</td>
+</tr>
+<tr>
+<td>23 % 4</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-pure-python-code-2">🐍 Pure Python Code</h3>
+<pre><code class="language-python">print(10 % 3)   # 1
+print(14 % 7)   # 0
+print(23 % 4)   # 3
+</code></pre>
+<hr>
+<h3 id="-why-modulo-is-everywhere">💡 Why Modulo Is Everywhere</h3>
+<p>Used in:</p>
+<ul>
+<li>Index wrapping</li>
+<li>Cyclic buffers</li>
+<li>Hash tables</li>
+<li>Cryptography</li>
+</ul>
+<p>Mental model:</p>
+<blockquote>
+<p>Modulo keeps numbers <strong>bounded</strong>.</p>
+</blockquote>
+<hr>
+<h2 id="7-fractions--simplification">7️⃣ Fractions &amp; Simplification</h2>
+<h3 id="-what-is-a-fraction">📘 What Is a Fraction?</h3>
+<p>A fraction represents a <strong>ratio</strong>:</p>
+<p>$$
+\frac{a}{b}
+$$</p>
+<p>Example:</p>
+<ul>
+<li><code>8 / 12 = 2 / 3</code></li>
+</ul>
+<hr>
+<h3 id="-simplification-rule">🧠 Simplification Rule</h3>
+<p>Divide numerator and denominator by their GCD:</p>
+<p>$$
+\frac{a}{b} = \frac{a \div \gcd(a, b)}{b \div \gcd(a, b)}
+$$</p>
+<hr>
+<h3 id="-input--output-test-cases-4">✅ Input → Output (Test Cases)</h3>
+<table>
+<thead>
+<tr>
+<th>Fraction</th>
+<th>Simplified</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8/12</td>
+<td>2/3</td>
+</tr>
+<tr>
+<td>10/20</td>
+<td>1/2</td>
+</tr>
+<tr>
+<td>7/9</td>
+<td>7/9</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-pure-python-code-3">🐍 Pure Python Code</h3>
+<pre><code class="language-python">def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+def simplify_fraction(a, b):
+    g = gcd(a, b)
+    return a // g, b // g
+
+# Tests
+print(simplify_fraction(8, 12))   # (2, 3)
+print(simplify_fraction(10, 20))  # (1, 2)
+print(simplify_fraction(7, 9))    # (7, 9)
+</code></pre>
+<hr>
+<h3 id="-why-this-matters">💡 Why This Matters</h3>
+<p>Used in:</p>
+<ul>
+<li>Percentages</li>
+<li>Financial calculations</li>
+<li>Scaling systems</li>
+</ul>
+<p>Mental model:</p>
+<blockquote>
+<p>Reduce before you reason.</p>
+</blockquote>
+<hr>
+<h2 id="8-powers--logarithms">8️⃣ Powers &amp; Logarithms</h2>
+<h3 id="-powers-exponents">📘 Powers (Exponents)</h3>
+<p>$$
+a^n = a \times a \times \dots \times a
+$$</p>
+<p>Example:</p>
+<ul>
+<li><code>2^5 = 32</code></li>
+</ul>
+<hr>
+<h3 id="-logarithms-opposite-of-power">🧠 Logarithms (Opposite of Power)</h3>
+<p>$$
+\log_b(x) = n \quad \text{means} \quad b^n = x
+$$</p>
+<p>Example:</p>
+<ul>
+<li><code>log₂(8) = 3</code></li>
+</ul>
+<hr>
+<h3 id="-input--output-test-cases-5">✅ Input → Output (Test Cases)</h3>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2^4</td>
+<td>16</td>
+</tr>
+<tr>
+<td>3^3</td>
+<td>27</td>
+</tr>
+<tr>
+<td>log₂(8)</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-pure-python-code-no-libraries">🐍 Pure Python Code (No Libraries)</h3>
+<pre><code class="language-python">def power(a, n):
+    result = 1
+    for _ in range(n):
+        result *= a
+    return result
+
+def log_base(b, x):
+    count = 0
+    while x &gt; 1:
+        x //= b
+        count += 1
+    return count
+
+# Tests
+print(power(2, 4))      # 16
+print(power(3, 3))      # 27
+print(log_base(2, 8))   # 3
+</code></pre>
+<hr>
+<h3 id="-programmer-insight">💡 Programmer Insight</h3>
+<ul>
+<li>Powers grow fast</li>
+<li>Logs grow slow</li>
+</ul>
+<p>Mental model:</p>
+<blockquote>
+<p>Logs explain why algorithms scale.</p>
+</blockquote>
+<hr>
+<h2 id="9-fibonacci-sequence">9️⃣ Fibonacci Sequence</h2>
+<h3 id="-what-is-fibonacci">📘 What Is Fibonacci?</h3>
+<p>A sequence where:</p>
+<p>$$
+F(n) = F(n-1) + F(n-2)
+$$</p>
+<p>Starting values:</p>
+<ul>
+<li><code>F(0) = 0</code></li>
+<li><code>F(1) = 1</code></li>
+</ul>
+<p>Sequence:</p>
+<pre><code>0, 1, 1, 2, 3, 5, 8, 13, ...
+</code></pre>
+<hr>
+<h3 id="-input--output-test-cases-6">✅ Input → Output (Test Cases)</h3>
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>F(n)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>8</td>
+<td>21</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-pure-python-code-iterative">🐍 Pure Python Code (Iterative)</h3>
+<pre><code class="language-python">def fibonacci(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+
+    a, b = 0, 1
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+    return b
+
+# Tests
+print(fibonacci(0))  # 0
+print(fibonacci(1))  # 1
+print(fibonacci(5))  # 5
+print(fibonacci(8))  # 21
+</code></pre>
+<hr>
+<h3 id="-why-fibonacci-is-taught">💡 Why Fibonacci Is Taught</h3>
+<p>Used to teach:</p>
+<ul>
+<li>Recursion vs iteration</li>
+<li>Dynamic programming</li>
+<li>Growth patterns</li>
+</ul>
+<p>Mental model:</p>
+<blockquote>
+<p>The present depends on the past.</p>
+</blockquote>
+<hr>
+<h2 id="-final-thought-for-students">🏁 Final Thought for Students</h2>
+<p>Math is not about numbers.
+It’s about <strong>patterns</strong>.</p>
+<p>Once you see patterns,
+code becomes a language for expressing them.</p>
+<hr>
+<h2 id="-big-o-intuition-algorithm-growth">🔟 Big-O Intuition (Algorithm Growth)</h2>
+<h3 id="-what-is-big-o">📘 What Is Big-O?</h3>
+<p>Big-O describes <strong>how fast an algorithm grows</strong> as input size <code>n</code> increases.</p>
+<p>It ignores:</p>
+<ul>
+<li>Constants</li>
+<li>Hardware</li>
+<li>Language</li>
+</ul>
+<p>It focuses on:</p>
+<blockquote>
+<p><strong>Growth trend</strong></p>
+</blockquote>
+<hr>
+<h3 id="-common-big-o-forms">🧠 Common Big-O Forms</h3>
+<table>
+<thead>
+<tr>
+<th>Big-O</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O(1)</td>
+<td>Constant</td>
+<td>Access array</td>
+</tr>
+<tr>
+<td>O(n)</td>
+<td>Linear</td>
+<td>Loop</td>
+</tr>
+<tr>
+<td>O(n²)</td>
+<td>Quadratic</td>
+<td>Nested loops</td>
+</tr>
+<tr>
+<td>O(log n)</td>
+<td>Logarithmic</td>
+<td>Binary search</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-example-linear-vs-quadratic">🧪 Example: Linear vs Quadratic</h3>
+<pre><code class="language-python">def linear(n):
+    count = 0
+    for _ in range(n):
+        count += 1
+    return count
+
+def quadratic(n):
+    count = 0
+    for _ in range(n):
+        for _ in range(n):
+            count += 1
+    return count
+
+print(linear(5))     # 5
+print(quadratic(5))  # 25
+</code></pre>
+<hr>
+<h3 id="-mental-model">💡 Mental Model</h3>
+<ul>
+<li>Loops → add <code>n</code></li>
+<li>Nested loops → multiply <code>n</code></li>
+<li>Halving each step → log <code>n</code></li>
+</ul>
+<blockquote>
+<p>Big-O is about <strong>how pain grows</strong>.</p>
+</blockquote>
+<hr>
+<h2 id="11-probability-basics">1️⃣1️⃣ Probability Basics</h2>
+<h3 id="-what-is-probability">📘 What Is Probability?</h3>
+<p>Probability measures <strong>how likely</strong> an event is.</p>
+<p>$$
+P(event) = \frac{\text{favorable outcomes}}{\text{total outcomes}}
+$$</p>
+<hr>
+<h3 id="-examples">🧠 Examples</h3>
+<ul>
+<li>
+<p>Coin flip:</p>
+<ul>
+<li>Heads = <code>1 / 2</code></li>
+</ul>
+</li>
+<li>
+<p>Dice roll:</p>
+<ul>
+<li>Rolling a 6 = <code>1 / 6</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="-input--output-test-cases-7">✅ Input → Output (Test Cases)</h3>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Probability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coin heads</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>Dice 6</td>
+<td>~0.1667</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-pure-python-code-4">🐍 Pure Python Code</h3>
+<pre><code class="language-python">def probability(favorable, total):
+    return favorable / total
+
+# Tests
+print(probability(1, 2))   # 0.5
+print(probability(1, 6))   # 0.1666...
+</code></pre>
+<hr>
+<h3 id="-programmer-insight-1">💡 Programmer Insight</h3>
+<p>Used in:</p>
+<ul>
+<li>Randomized algorithms</li>
+<li>Simulations</li>
+<li>AI &amp; ML</li>
+<li>Risk systems</li>
+</ul>
+<p>Mental model:</p>
+<blockquote>
+<p>Probability quantifies uncertainty.</p>
+</blockquote>
+<hr>
+<h2 id="12-bitwise-math">1️⃣2️⃣ Bitwise Math</h2>
+<h3 id="-what-are-bits">📘 What Are Bits?</h3>
+<p>Computers think in <strong>binary</strong>:</p>
+<pre><code>0 or 1
+</code></pre>
+<p>Bitwise operations work at this level.</p>
+<hr>
+<h3 id="-common-bitwise-operators">🧠 Common Bitwise Operators</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;</code></td>
+<td>AND</td>
+<td></td>
+</tr>
+<tr>
+<td><code>OR</code></td>
+<td>OR</td>
+<td></td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>XOR</td>
+<td></td>
+</tr>
+<tr>
+<td><code>&lt;&lt;</code></td>
+<td>Left shift</td>
+<td></td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td>Right shift</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-examples-1">🧪 Examples</h3>
+<pre><code class="language-python">print(5 &amp; 3)   # 1   (101 &amp; 011)
+print(5 | 3)   # 7   (101 | 011)
+print(5 ^ 3)   # 6   (101 ^ 011)
+print(1 &lt;&lt; 3)  # 8
+print(8 &gt;&gt; 2)  # 2
+</code></pre>
+<hr>
+<h3 id="-why-bitwise-matters">💡 Why Bitwise Matters</h3>
+<p>Used in:</p>
+<ul>
+<li>Performance optimization</li>
+<li>Flags &amp; permissions</li>
+<li>Cryptography</li>
+<li>Low-level systems</li>
+</ul>
+<p>Mental model:</p>
+<blockquote>
+<p>Bits are switches.</p>
+</blockquote>
+<hr>
+<h2 id="13-matrix-basics">1️⃣3️⃣ Matrix Basics</h2>
+<h3 id="-what-is-a-matrix">📘 What Is a Matrix?</h3>
+<p>A matrix is a <strong>2D grid of numbers</strong>.</p>
+<p>Example:</p>
+<p>$$
+\begin{bmatrix}
+1 &amp; 2 <br>
+3 &amp; 4
+\end{bmatrix}
+$$</p>
+<hr>
+<h3 id="-matrix-addition-rule">🧠 Matrix Addition Rule</h3>
+<p>Same size matrices:</p>
+<p>$$
+C[i][j] = A[i][j] + B[i][j]
+$$</p>
+<hr>
+<h3 id="-pure-python-code-5">🐍 Pure Python Code</h3>
+<pre><code class="language-python">def add_matrices(A, B):
+    result = []
+    for i in range(len(A)):
+        row = []
+        for j in range(len(A[0])):
+            row.append(A[i][j] + B[i][j])
+        result.append(row)
+    return result
+
+# Tests
+A = [[1, 2], [3, 4]]
+B = [[5, 6], [7, 8]]
+
+print(add_matrices(A, B))
+# [[6, 8], [10, 12]]
+</code></pre>
+<hr>
+<h3 id="-programmer-insight-2">💡 Programmer Insight</h3>
+<p>Used in:</p>
+<ul>
+<li>Graphics</li>
+<li>Machine learning</li>
+<li>Games</li>
+<li>Transformations</li>
+</ul>
+<p>Mental model:</p>
+<blockquote>
+<p>Matrices transform space.</p>
+</blockquote>
+<hr>
+<h2 id="14-math-behind-hashing">1️⃣4️⃣ Math Behind Hashing</h2>
+<h3 id="-what-is-hashing">📘 What Is Hashing?</h3>
+<p>Hashing maps data of any size to a <strong>fixed-size number</strong>.</p>
+<p>Example:</p>
+<pre><code>&quot;cat&quot; → 312
+&quot;dog&quot; → 417
+</code></pre>
+<hr>
+<h3 id="-core-properties">🧠 Core Properties</h3>
+<p>A good hash:</p>
+<ul>
+<li>Is fast</li>
+<li>Distributes evenly</li>
+<li>Is deterministic</li>
+</ul>
+<hr>
+<h3 id="-simple-hash-formula">🧪 Simple Hash Formula</h3>
+<p>$$
+hash = (hash \times base + value) \bmod size
+$$</p>
+<hr>
+<h3 id="-pure-python-hash-example">🐍 Pure Python Hash Example</h3>
+<pre><code class="language-python">def simple_hash(s, size=100):
+    h = 0
+    for ch in s:
+        h = (h * 31 + ord(ch)) % size
+    return h
+
+# Tests
+print(simple_hash(&quot;cat&quot;))
+print(simple_hash(&quot;dog&quot;))
+print(simple_hash(&quot;cat&quot;))  # same every time
+</code></pre>
+<hr>
+<h3 id="-why-hashing-matters">💡 Why Hashing Matters</h3>
+<p>Used in:</p>
+<ul>
+<li>Dictionaries</li>
+<li>Sets</li>
+<li>Databases</li>
+<li>Password storage</li>
+</ul>
+<p>Mental model:</p>
+<blockquote>
+<p>Hashing turns structure into position.</p>
+</blockquote>
+<hr>
+<h2 id="-final-wisdom-for-programmers">🧠 Final Wisdom for Programmers</h2>
+<p>Math is not school math.
+It’s <strong>thinking math</strong>.</p>
+<p>When you understand:</p>
+<ul>
+<li>Growth (Big-O)</li>
+<li>Uncertainty (Probability)</li>
+<li>Structure (Bits &amp; Matrices)</li>
+<li>Mapping (Hashing)</li>
+</ul>
+<p>You stop guessing
+and start designing.</p>
+<hr>
+<h2 id="15-differentiation-derivative">1️⃣5️⃣ Differentiation (Derivative)</h2>
+<h3 id="-what-is-differentiation">📘 What is Differentiation?</h3>
+<p>Differentiation measures <strong>how a function changes</strong> as its input changes.
+In simple terms:</p>
+<blockquote>
+<p>The derivative tells us the <strong>slope of a function</strong> at any point.</p>
+</blockquote>
+<hr>
+<h3 id="-mathematical-definition-1">🧠 Mathematical Definition</h3>
+<p>For a function (f(x)):</p>
+<p>$$
+f&rsquo;(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+$$</p>
+<p>Intuition:</p>
+<ul>
+<li>How steep is the curve at point <code>x</code>?</li>
+<li>Rate of change.</li>
+</ul>
+<hr>
+<h3 id="-input--output-examples">✅ Input → Output (Examples)</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>x</th>
+<th>f&rsquo;(x)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f(x) = x²</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr>
+<td>f(x) = 3x³</td>
+<td>2</td>
+<td>36</td>
+</tr>
+<tr>
+<td>f(x) = 5x</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>f(x) = 7</td>
+<td>10</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-pure-python-code-numerical-derivative">🐍 Pure Python Code (Numerical Derivative)</h3>
+<pre><code class="language-python">def derivative(f, x, h=1e-5):
+    return (f(x + h) - f(x)) / h
+
+# Test functions
+def f1(x): return x**2
+def f2(x): return 3*x**3
+def f3(x): return 5*x
+def f4(x): return 7
+
+# Tests
+print(derivative(f1, 3))  # ~6
+print(derivative(f2, 2))  # ~36
+print(derivative(f3, 4))  # ~5
+print(derivative(f4, 10)) # ~0
+</code></pre>
+<hr>
+<h3 id="-programmer-insight-3">💡 Programmer Insight</h3>
+<ul>
+<li>Used in physics simulations: velocity = derivative of position</li>
+<li>Optimization: slope = gradient</li>
+<li>Machine learning: gradient descent</li>
+</ul>
+<p>Mental model:</p>
+<blockquote>
+<p>Derivative = <strong>“how fast things change”</strong>.</p>
+</blockquote>
+<hr>
+<h2 id="16-integration-integral">1️⃣6️⃣ Integration (Integral)</h2>
+<h3 id="-what-is-integration">📘 What is Integration?</h3>
+<p>Integration measures <strong>the area under a curve</strong>.
+In simple terms:</p>
+<blockquote>
+<p>Integration tells us <strong>the total accumulated quantity</strong>.</p>
+</blockquote>
+<hr>
+<h3 id="-mathematical-definition-2">🧠 Mathematical Definition</h3>
+<p>For a function (f(x)):</p>
+<p>$$
+\int_a^b f(x) dx \approx \text{area under } f(x) \text{ from } x=a \text{ to } x=b
+$$</p>
+<hr>
+<h3 id="-input--output-examples-1">✅ Input → Output (Examples)</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Interval</th>
+<th>Integral (Approx)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f(x) = x</td>
+<td>0→3</td>
+<td>4.5</td>
+</tr>
+<tr>
+<td>f(x) = x²</td>
+<td>0→2</td>
+<td>8/3 ≈ 2.6667</td>
+</tr>
+<tr>
+<td>f(x) = 3x³</td>
+<td>1→2</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-pure-python-code-numerical-integration-via-rectangle-method">🐍 Pure Python Code (Numerical Integration via Rectangle Method)</h3>
+<pre><code class="language-python">def integrate(f, a, b, n=1000):
+    dx = (b - a) / n
+    total = 0
+    for i in range(n):
+        total += f(a + i*dx) * dx
+    return total
+
+# Test functions
+def f1(x): return x
+def f2(x): return x**2
+def f3(x): return 3*x**3
+
+# Tests
+print(integrate(f1, 0, 3))     # ~4.5
+print(integrate(f2, 0, 2))     # ~2.6667
+print(integrate(f3, 1, 2))     # ~15
+</code></pre>
+<hr>
+<h3 id="-step-by-step-example">🧪 Step-by-Step Example</h3>
+<p>Integral of f(x) = x from 0 to 3:</p>
+<pre><code>Divide interval [0,3] into 1000 rectangles
+Each width dx = 0.003
+Sum: dx * (f(0) + f(0.003) + ... + f(2.997)) ≈ 4.5
+</code></pre>
+<hr>
+<h3 id="-programmer-insight-4">💡 Programmer Insight</h3>
+<ul>
+<li>Used in physics: distance = ∫ velocity dt</li>
+<li>Probability: area under PDF</li>
+<li>Graphics: total light, area, volume</li>
+</ul>
+<p>Mental model:</p>
+<blockquote>
+<p>Integral = <strong>“sum of infinitely many tiny pieces”</strong>.</p>
+</blockquote>
+<hr>
+<h2 id="17-linking-derivative--integral">1️⃣7️⃣ Linking Derivative &amp; Integral</h2>
+<ul>
+<li><strong>Derivative</strong> → rate of change</li>
+<li><strong>Integral</strong> → accumulated change</li>
+</ul>
+<p>They are <strong>inverse operations</strong>:</p>
+<p>$$
+\frac{d}{dx} \int f(x) dx = f(x)
+$$</p>
+<p>$$
+\int \frac{d}{dx} f(x) dx = f(x) + C
+$$</p>
+<hr>
+<h3 id="-demonstration-check-inverse">🐍 Demonstration (Check Inverse)</h3>
+<pre><code class="language-python">def f(x): return x**2
+
+# Derivative at x
+x = 3
+print(derivative(f, x))  # ~6
+
+# Integral from 0 to x
+print(integrate(lambda t: 2*t, 0, x))  # ~9, matches f(3)-f(0)
+</code></pre>
+<hr>
+<h3 id="-final-insight">💡 Final Insight</h3>
+<ul>
+<li><strong>Derivatives</strong> help you <strong>understand local behavior</strong></li>
+<li><strong>Integrals</strong> help you <strong>accumulate global behavior</strong></li>
+<li>Together, they form the <strong>calculus toolbox for programming and simulation</strong></li>
+</ul>
+<p>Mental model:</p>
+<blockquote>
+<p>Derivative = <strong>speed</strong>, Integral = <strong>distance traveled</strong></p>
+</blockquote>
+<hr>
+<h2 id="18-partial-derivatives--chain-rule">1️⃣8️⃣ Partial Derivatives &amp; Chain Rule</h2>
+<h3 id="-what-is-a-partial-derivative">📘 What is a Partial Derivative?</h3>
+<p>A <strong>partial derivative</strong> measures <strong>how a multivariable function changes with respect to one variable</strong>, keeping the others constant.</p>
+<p>Example: (f(x, y) = x^2y + 3y)</p>
+<ul>
+<li>Partial derivative wrt (x):</li>
+</ul>
+<p>$$
+\frac{\partial f}{\partial x} = 2xy
+$$</p>
+<ul>
+<li>Partial derivative wrt (y):</li>
+</ul>
+<p>$$
+\frac{\partial f}{\partial y} = x^2 + 3
+$$</p>
+<hr>
+<h3 id="-input--output-examples-2">✅ Input → Output (Examples)</h3>
+<table>
+<thead>
+<tr>
+<th>f(x, y)</th>
+<th>∂f/∂x</th>
+<th>∂f/∂y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x²y + 3y</td>
+<td>2xy</td>
+<td>x² + 3</td>
+</tr>
+<tr>
+<td>x*y + y²</td>
+<td>y</td>
+<td>x + 2y</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-pure-python-code-numerical-partial-derivative">🐍 Pure Python Code (Numerical Partial Derivative)</h3>
+<pre><code class="language-python">def partial_derivative(f, x, y, var='x', h=1e-5):
+    if var == 'x':
+        return (f(x+h, y) - f(x, y)) / h
+    elif var == 'y':
+        return (f(x, y+h) - f(x, y)) / h
+    else:
+        raise ValueError(&quot;var must be 'x' or 'y'&quot;)
+
+# Test function
+def f(x, y): return x**2 * y + 3*y
+
+print(partial_derivative(f, 2, 3, 'x'))  # ~12
+print(partial_derivative(f, 2, 3, 'y'))  # ~7
+</code></pre>
+<hr>
+<h3 id="-what-is-the-chain-rule">📘 What is the Chain Rule?</h3>
+<p>The <strong>chain rule</strong> lets you compute derivatives of <strong>nested functions</strong>:</p>
+<p>If (z = f(g(x))):</p>
+<p>$$
+\frac{dz}{dx} = \frac{dz}{dg} \cdot \frac{dg}{dx}
+$$</p>
+<p>Example:
+(z = (3x + 2)^2)</p>
+<ul>
+<li>g(x) = 3x + 2</li>
+<li>f(g) = g²</li>
+<li>dz/dx = f&rsquo;(g) * g&rsquo;(x) = 2g * 3 = 6*(3x + 2)</li>
+</ul>
+<hr>
+<h3 id="-pure-python-code-numerical-chain-rule">🐍 Pure Python Code (Numerical Chain Rule)</h3>
+<pre><code class="language-python">def chain_rule(f, g, x, h=1e-5):
+    g_x = g(x)
+    df_dg = (f(g_x + h) - f(g_x)) / h
+    dg_dx = (g(x + h) - g_x) / h
+    return df_dg * dg_dx
+
+# Example: z = (3x + 2)^2
+def f(g): return g**2
+def g(x): return 3*x + 2
+
+print(chain_rule(f, g, 1))  # ~30, same as 6*(3*1+2)
+</code></pre>
+<hr>
+<h2 id="19-backpropagation-in-neural-networks">1️⃣9️⃣ Backpropagation in Neural Networks</h2>
+<h3 id="-what-is-backpropagation">📘 What is Backpropagation?</h3>
+<p>Backpropagation uses <strong>chain rule + partial derivatives</strong> to compute <strong>gradients of loss wrt each weight</strong>.</p>
+<ul>
+<li>Goal: Update weights to <strong>minimize loss</strong></li>
+<li>Uses derivative of loss wrt weights</li>
+</ul>
+<hr>
+<h3 id="-intuition-with-a-tiny-neural-network">🧠 Intuition with a Tiny Neural Network</h3>
+<pre><code>x → [w1] → h = w1*x → [w2] → y_hat = w2*h
+Loss L = (y_hat - y_true)^2
+</code></pre>
+<ul>
+<li>Step 1: Compute forward: h, y_hat</li>
+<li>Step 2: Compute ∂L/∂w2 = ∂L/∂y_hat * ∂y_hat/∂w2</li>
+<li>Step 3: Compute ∂L/∂w1 = ∂L/∂y_hat * ∂y_hat/∂h * ∂h/∂w1</li>
+</ul>
+<p>This is <strong>just chain rule in action</strong>.</p>
+<hr>
+<h3 id="-pure-python-example-single-neuron">🐍 Pure Python Example (Single Neuron)</h3>
+<pre><code class="language-python"># Inputs
+x = 2.0
+y_true = 10.0
+w1 = 0.5
+w2 = 1.0
+lr = 0.1  # learning rate
+
+# Forward pass
+h = w1 * x
+y_hat = w2 * h
+loss = (y_hat - y_true)**2
+print(&quot;Initial loss:&quot;, loss)
+
+# Backward pass (manual derivatives)
+dL_dyhat = 2 * (y_hat - y_true)
+dL_dw2 = dL_dyhat * h
+dL_dw1 = dL_dyhat * w2 * x
+
+# Update weights
+w1 -= lr * dL_dw1
+w2 -= lr * dL_dw2
+
+print(&quot;Updated w1, w2:&quot;, w1, w2)
+</code></pre>
+<hr>
+<h3 id="-step-by-step-example-1">✅ Step-by-Step Example</h3>
+<ul>
+<li>
+<p>Forward: h = 0.5 * 2 = 1, y_hat = 1 * 1 = 1</p>
+</li>
+<li>
+<p>Loss: (1 - 10)² = 81</p>
+</li>
+<li>
+<p>Derivative: ∂L/∂w2 = 2*(1-10)*1 = -18</p>
+</li>
+<li>
+<p>Update: w2_new = 1 - 0.1*(-18) = 2.8</p>
+</li>
+<li>
+<p>Derivative: ∂L/∂w1 = 2*(1-10)<em>1</em>2 = -36</p>
+</li>
+<li>
+<p>Update: w1_new = 0.5 - 0.1*(-36) = 4.1</p>
+</li>
+</ul>
+<blockquote>
+<p>Chain rule applied automatically through the chain of computations.</p>
+</blockquote>
+<hr>
+<h3 id="-programmer-insight-5">💡 Programmer Insight</h3>
+<ul>
+<li>Backprop = <strong>chain rule over networks</strong></li>
+<li>Allows neural networks to <strong>learn efficiently</strong></li>
+<li>Generalizes to <strong>any depth</strong> (deep learning)</li>
+</ul>
+<p>Mental model:</p>
+<blockquote>
+<p>Forward = compute output, Backward = compute “how each weight affects loss”</p>
+</blockquote>
+<hr>
+<h2 id="20-logarithms-detailed-recap">2️⃣0️⃣ Logarithms (Detailed Recap)</h2>
+<h3 id="-what-is-a-logarithm">📘 What is a Logarithm?</h3>
+<p>A <strong>logarithm</strong> answers the question:</p>
+<blockquote>
+<p>“To what power must I raise a base to get a number?”</p>
+</blockquote>
+<p>Mathematically:</p>
+<p>$$
+\log_b(x) = y \quad \text{means} \quad b^y = x
+$$</p>
+<ul>
+<li><code>b</code> = base (must be &gt;0, ≠1)</li>
+<li><code>x</code> = number (must be &gt;0)</li>
+<li><code>y</code> = logarithm value</li>
+</ul>
+<hr>
+<h3 id="-examples-2">🧠 Examples</h3>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Meaning</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>log₂(8)</td>
+<td>2^? = 8</td>
+<td>3</td>
+</tr>
+<tr>
+<td>log₁₀(1000)</td>
+<td>10^? = 1000</td>
+<td>3</td>
+</tr>
+<tr>
+<td>ln(e^2)</td>
+<td>e^? = e²</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>ln(x) = natural log = log base e (~2.718)</p>
+</blockquote>
+<hr>
+<h3 id="-basic-properties-of-logarithms">✅ Basic Properties of Logarithms</h3>
+<ol>
+<li><strong>Log of 1</strong>:</li>
+</ol>
+<p>$$
+\log_b(1) = 0 \quad \text{because } b^0 = 1
+$$</p>
+<ol start="2">
+<li><strong>Log of the base</strong>:</li>
+</ol>
+<p>$$
+\log_b(b) = 1 \quad \text{because } b^1 = b
+$$</p>
+<ol start="3">
+<li><strong>Product Rule</strong>:</li>
+</ol>
+<p>$$
+\log_b(xy) = \log_b(x) + \log_b(y)
+$$</p>
+<ol start="4">
+<li><strong>Quotient Rule</strong>:</li>
+</ol>
+<p>$$
+\log_b(x/y) = \log_b(x) - \log_b(y)
+$$</p>
+<ol start="5">
+<li><strong>Power Rule</strong>:</li>
+</ol>
+<p>$$
+\log_b(x^k) = k \cdot \log_b(x)
+$$</p>
+<ol start="6">
+<li><strong>Change of Base Formula</strong>:</li>
+</ol>
+<p>$$
+\log_b(x) = \frac{\log_k(x)}{\log_k(b)}
+$$</p>
+<hr>
+<h3 id="-step-by-step-example-2">🧪 Step-by-Step Example</h3>
+<p>Compute log₂(32):</p>
+<pre><code>2^? = 32
+2^5 = 32
+→ log₂(32) = 5
+</code></pre>
+<p>Check using product rule:</p>
+<pre><code>log₂(32) = log₂(2*16) = log₂(2) + log₂(16) = 1 + 4 = 5
+</code></pre>
+<hr>
+<h3 id="-pure-python-code-numerical-logarithms">🐍 Pure Python Code (Numerical Logarithms)</h3>
+<pre><code class="language-python">import math
+
+# Basic logs
+print(math.log2(8))     # 3
+print(math.log10(1000)) # 3
+print(math.log(math.e)) # 1 (natural log base e)
+
+# Natural log
+print(math.log(math.e**2))  # 2
+
+# Change of base
+def log_base(x, b):
+    return math.log(x) / math.log(b)
+
+print(log_base(32, 2))  # 5
+</code></pre>
+<hr>
+<h3 id="-visual-intuition">🧠 Visual Intuition</h3>
+<ul>
+<li><strong>Logarithms grow slowly</strong> compared to linear or exponential functions.</li>
+<li>They “compress” large numbers into smaller scales.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>log₂(x)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>8</td>
+<td>3</td>
+</tr>
+<tr>
+<td>16</td>
+<td>4</td>
+</tr>
+<tr>
+<td>32</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Log is the <strong>inverse of exponentiation</strong>.</p>
+</blockquote>
+<hr>
+<h3 id="-applications-in-programming">💡 Applications in Programming</h3>
+<ol>
+<li><strong>Algorithm analysis</strong>: Binary search → O(log n)</li>
+<li><strong>Data compression &amp; scaling</strong>: e.g., decibels, log scales</li>
+<li><strong>Probability / Information theory</strong>: Entropy uses log</li>
+<li><strong>Machine learning</strong>: Log loss, softmax, log probabilities</li>
+</ol>
+<hr>
+<h3 id="-quick-exercises">🧪 Quick Exercises</h3>
+<p>Compute:</p>
+<ol>
+<li>log₂(64) → 2^? = 64 → 6 ✅</li>
+<li>log₁₀(100) → 10^? = 100 → 2 ✅</li>
+<li>ln(e^5) → e^? = e^5 → 5 ✅</li>
+</ol>
+<hr>
+<h3 id="-mental-models">🧠 Mental Models</h3>
+<ul>
+<li>
+<p>Exponentiation: “start small → get big”</p>
+</li>
+<li>
+<p>Logarithm: “start big → see how many steps back to base”</p>
+</li>
+<li>
+<p>Logs <strong>turn multiplication into addition</strong></p>
+</li>
+<li>
+<p>Logs <strong>turn exponentiation into multiplication</strong></p>
+</li>
+</ul>
+<hr>
+<h2 id="-87-math-equations-every-programmer-should-know">🧠 87 Math Equations Every Programmer Should Know</h2>
+<hr>
+<h3 id="1-arithmetic-series-sum">1️⃣ Arithmetic Series Sum</h3>
+<p>$$\frac{n(n+1)}{2}$$</p>
+<p><strong>Input → Output</strong></p>
+<ul>
+<li>n=5 → 15</li>
+<li>n=10 → 55</li>
+</ul>
+<pre><code class="language-python">n = 10
+result = n * (n + 1) // 2
+print(result)
+</code></pre>
+<hr>
+<h3 id="2-sum-of-range-ab">2️⃣ Sum of Range [a..b]</h3>
+<p>$$\frac{(a+b)(b-a+1)}{2}$$</p>
+<p><strong>Input → Output</strong></p>
+<ul>
+<li>a=3, b=7 → 25</li>
+</ul>
+<pre><code class="language-python">a, b = 3, 7
+result = (a + b) * (b - a + 1) // 2
+print(result)
+</code></pre>
+<hr>
+<h3 id="3-difference-of-two-numbers">3️⃣ Difference of Two Numbers</h3>
+<p>$$|a-b|$$</p>
+<p><strong>Input → Output</strong></p>
+<ul>
+<li>a=10, b=3 → 7</li>
+</ul>
+<pre><code class="language-python">a, b = 10, 3
+print(a-b if a&gt;b else b-a)
+</code></pre>
+<hr>
+<h3 id="4-mean-average">4️⃣ Mean (Average)</h3>
+<p>$$\frac{\sum x}{n}$$</p>
+<p><strong>Input → Output</strong></p>
+<ul>
+<li>[2,4,6] → 4</li>
+</ul>
+<pre><code class="language-python">nums = [2,4,6]
+print(sum(nums)//len(nums))
+</code></pre>
+<hr>
+<h3 id="5-weighted-average">5️⃣ Weighted Average</h3>
+<p>$$\frac{\sum w_ix_i}{\sum w_i}$$</p>
+<p><strong>Input → Output</strong></p>
+<ul>
+<li>scores=[80,90], weights=[2,3] → 86</li>
+</ul>
+<pre><code class="language-python">scores = [80,90]
+weights = [2,3]
+total = 0
+w_sum = 0
+for i in range(len(scores)):
+    total += scores[i] * weights[i]
+    w_sum += weights[i]
+print(total // w_sum)
+</code></pre>
+<hr>
+<h3 id="6-modulo">6️⃣ Modulo</h3>
+<p>$$a \bmod b$$</p>
+<p><strong>Input → Output</strong></p>
+<ul>
+<li>17 mod 5 → 2</li>
+</ul>
+<pre><code class="language-python">print(17 % 5)
+</code></pre>
+<hr>
+<h3 id="7-even--odd-check">7️⃣ Even / Odd Check</h3>
+<p>$$n \bmod 2$$</p>
+<p><strong>Input → Output</strong></p>
+<ul>
+<li>7 → odd</li>
+</ul>
+<pre><code class="language-python">n = 7
+print(&quot;odd&quot; if n % 2 else &quot;even&quot;)
+</code></pre>
+<hr>
+<h3 id="8-square">8️⃣ Square</h3>
+<p>$$n^2$$</p>
+<p><strong>Input → Output</strong></p>
+<ul>
+<li>6 → 36</li>
+</ul>
+<pre><code class="language-python">n = 6
+print(n*n)
+</code></pre>
+<hr>
+<h3 id="9-cube">9️⃣ Cube</h3>
+<p>$$n^3$$</p>
+<p><strong>Input → Output</strong></p>
+<ul>
+<li>3 → 27</li>
+</ul>
+<pre><code class="language-python">n = 3
+print(n*n*n)
+</code></pre>
+<hr>
+<h3 id="-power-exponentiation">🔟 Power (Exponentiation)</h3>
+<p>$$a^b$$</p>
+<p><strong>Input → Output</strong></p>
+<ul>
+<li>2^5 → 32</li>
+</ul>
+<pre><code class="language-python">a, b = 2, 5
+result = 1
+for _ in range(b):
+    result *= a
+print(result)
+</code></pre>
+<hr>
+<h3 id="11-factorial">1️⃣1️⃣ Factorial</h3>
+<p>$$n!$$</p>
+<p><strong>Input → Output</strong></p>
+<ul>
+<li>5 → 120</li>
+</ul>
+<pre><code class="language-python">n = 5
+fact = 1
+for i in range(1, n+1):
+    fact *= i
+print(fact)
+</code></pre>
+<hr>
+<h3 id="12-permutations">1️⃣2️⃣ Permutations</h3>
+<p>$$P(n,k)=\frac{n!}{(n-k)!}$$</p>
+<p><strong>Input → Output</strong></p>
+<ul>
+<li>n=5, k=2 → 20</li>
+</ul>
+<pre><code class="language-python">n, k = 5, 2
+res = 1
+for i in range(n, n-k, -1):
+    res *= i
+print(res)
+</code></pre>
+<hr>
+<h3 id="13-combinations">1️⃣3️⃣ Combinations</h3>
+<p>$$C(n,k)=\frac{n!}{k!(n-k)!}$$</p>
+<p><strong>Input → Output</strong></p>
+<ul>
+<li>n=5, k=2 → 10</li>
+</ul>
+<pre><code class="language-python">n, k = 5, 2
+num = 1
+den = 1
+for i in range(k):
+    num *= (n-i)
+    den *= (i+1)
+print(num//den)
+</code></pre>
+<hr>
+<h3 id="14-fibonacci-sequence">1️⃣4️⃣ Fibonacci Sequence</h3>
+<p>$$F_n = F_{n-1}+F_{n-2}$$</p>
+<p><strong>Input → Output</strong></p>
+<ul>
+<li>n=7 → 13</li>
+</ul>
+<pre><code class="language-python">n = 7
+a, b = 0, 1
+for _ in range(n):
+    a, b = b, a+b
+print(a)
+</code></pre>
+<hr>
+<h3 id="15-prefix-sum">1️⃣5️⃣ Prefix Sum</h3>
+<p>$$P[i]=P[i-1]+a[i]$$</p>
+<p><strong>Input → Output</strong></p>
+<ul>
+<li>[1,2,3,4] → [0,1,3,6,10]</li>
+</ul>
+<pre><code class="language-python">arr = [1,2,3,4]
+prefix = [0]
+for x in arr:
+    prefix.append(prefix[-1] + x)
+print(prefix)
+</code></pre>
+<hr>
+<h3 id="16-sliding-window-sum">1️⃣6️⃣ Sliding Window Sum</h3>
+<p>$$S_{i+1}=S_i-a_i+a_{i+k}$$</p>
+<pre><code class="language-python">arr = [1,2,3,4,5]
+k = 3
+s = sum(arr[:k])
+print(s)
+for i in range(len(arr)-k):
+    s = s - arr[i] + arr[i+k]
+    print(s)
+</code></pre>
+<hr>
+<h3 id="17-xor-property">1️⃣7️⃣ XOR Property</h3>
+<p>$$a\oplus a = 0$$</p>
+<p><strong>Input → Output</strong></p>
+<ul>
+<li>[1,2,2,3,3] → 1</li>
+</ul>
+<pre><code class="language-python">nums = [1,2,2,3,3]
+x = 0
+for n in nums:
+    x ^= n
+print(x)
+</code></pre>
+<hr>
+<h3 id="18-binary-representation">1️⃣8️⃣ Binary Representation</h3>
+<p>$$\sum b_i2^i$$</p>
+<pre><code class="language-python">n = 13
+binary = &quot;&quot;
+while n:
+    binary = str(n%2) + binary
+    n //= 2
+print(binary)
+</code></pre>
+<hr>
+<h3 id="19-pythagorean-theorem">1️⃣9️⃣ Pythagorean Theorem</h3>
+<p>$$a^2+b^2=c^2$$</p>
+<pre><code class="language-python">a, b = 3, 4
+c = (a*a + b*b)**0.5
+print(c)
+</code></pre>
+<hr>
+<h3 id="20-euclidean-distance-2d">2️⃣0️⃣ Euclidean Distance (2D)</h3>
+<p>$$\sqrt{(x1-x2)^2+(y1-y2)^2}$$</p>
+<pre><code class="language-python">x1,y1,x2,y2 = 1,1,4,5
+d = ((x1-x2)**2 + (y1-y2)**2)**0.5
+print(d)
+</code></pre>
+<hr>
+<h3 id="21-manhattan-distance">2️⃣1️⃣ Manhattan Distance</h3>
+<p>$$|x1-x2|+|y1-y2|$$</p>
+<pre><code class="language-python">print(abs(1-4) + abs(1-5))
+</code></pre>
+<hr>
+<h3 id="22-minmax-normalization">2️⃣2️⃣ Min–Max Normalization</h3>
+<p>$$\frac{x-min}{max-min}$$</p>
+<pre><code class="language-python">x, mn, mx = 75, 50, 100
+print((x-mn)/(mx-mn))
+</code></pre>
+<hr>
+<h3 id="23-probability">2️⃣3️⃣ Probability</h3>
+<p>$$P=\frac{favorable}{total}$$</p>
+<pre><code class="language-python">print(1/6)
+</code></pre>
+<hr>
+<h3 id="24-expected-value">2️⃣4️⃣ Expected Value</h3>
+<p>$$E(X)=\sum xP(x)$$</p>
+<pre><code class="language-python">values = [0,1]
+probs = [0.7,0.3]
+ev = 0
+for i in range(2):
+    ev += values[i]*probs[i]
+print(ev)
+</code></pre>
+<hr>
+<h3 id="25-log-base-2-loop-count">2️⃣5️⃣ Log Base 2 (Loop Count)</h3>
+<p>$$2^k = n$$</p>
+<pre><code class="language-python">n = 16
+k = 0
+while n &gt; 1:
+    n //= 2
+    k += 1
+print(k)
+</code></pre>
+<hr>
+<h3 id="26-big-o-n">2️⃣6️⃣ Big-O (n²)</h3>
+<pre><code class="language-python">count = 0
+n = 5
+for i in range(n):
+    for j in range(n):
+        count += 1
+print(count)
+</code></pre>
+<hr>
+<h3 id="27-recurrence-relation">2️⃣7️⃣ Recurrence Relation</h3>
+<p>$$T(n)=T(n-1)+1$$</p>
+<pre><code class="language-python">def T(n):
+    if n==0: return 0
+    return T(n-1)+1
+print(T(5))
+</code></pre>
+<hr>
+<h3 id="28-gradient-idea-slope">2️⃣8️⃣ Gradient Idea (Slope)</h3>
+<p>$$\frac{\Delta y}{\Delta x}$$</p>
+<pre><code class="language-python">x1,y1 = 1,2
+x2,y2 = 4,8
+print((y2-y1)/(x2-x1))
+</code></pre>
+<hr>
+<h3 id="29-linear-equation">2️⃣9️⃣ Linear Equation</h3>
+<p>$$y=ax+b$$</p>
+<pre><code class="language-python">a,b,x = 2,3,5
+print(a*x+b)
+</code></pre>
+<hr>
+<h3 id="30-state-transition">3️⃣0️⃣ State Transition</h3>
+<p>$$S_{t+1}=f(S_t)$$</p>
+<pre><code class="language-python">state = 1
+for _ in range(5):
+    state = state * 2
+print(state)
+</code></pre>
+<hr>
+<h3 id="31-ratio">3️⃣1️⃣ Ratio</h3>
+<p>$$a:b$$</p>
+<pre><code class="language-python">a,b = 2,5
+print(a/(a+b), b/(a+b))
+</code></pre>
+<hr>
+<h3 id="32-percentage">3️⃣2️⃣ Percentage</h3>
+<p>$$\frac{part}{whole}$$</p>
+<pre><code class="language-python">print(30/200*100)
+</code></pre>
+<hr>
+<h3 id="33-ceiling-division">3️⃣3️⃣ Ceiling Division</h3>
+<p>$$\lceil a/b \rceil$$</p>
+<pre><code class="language-python">a,b = 10,3
+print((a+b-1)//b)
+</code></pre>
+<hr>
+<h3 id="34-gcd-euclidean-algorithm">3️⃣4️⃣ GCD (Euclidean Algorithm)</h3>
+<pre><code class="language-python">a,b = 48,18
+while b:
+    a,b = b, a%b
+print(a)
+</code></pre>
+<hr>
+<h3 id="35-lcm">3️⃣5️⃣ LCM</h3>
+<pre><code class="language-python">a,b = 4,6
+g = a
+c = b
+while c:
+    g,c = c, g%c
+print(a*b//g)
+</code></pre>
+<hr>
+<h3 id="36-prime-check">3️⃣6️⃣ Prime Check</h3>
+<pre><code class="language-python">n = 29
+is_prime = True
+for i in range(2, n):
+    if n % i == 0:
+        is_prime = False
+print(is_prime)
+</code></pre>
+<hr>
+<h3 id="37-count-digits">3️⃣7️⃣ Count Digits</h3>
+<pre><code class="language-python">n = 12345
+count = 0
+while n:
+    n //= 10
+    count += 1
+print(count)
+</code></pre>
+<hr>
+<h3 id="38-reverse-number">3️⃣8️⃣ Reverse Number</h3>
+<pre><code class="language-python">n = 1234
+rev = 0
+while n:
+    rev = rev*10 + n%10
+    n //= 10
+print(rev)
+</code></pre>
+<hr>
+<h3 id="39-palindrome-check">3️⃣9️⃣ Palindrome Check</h3>
+<pre><code class="language-python">s = &quot;racecar&quot;
+print(s == s[::-1])
+</code></pre>
+<hr>
+<h3 id="40-sum-of-digits">4️⃣0️⃣ Sum of Digits</h3>
+<pre><code class="language-python">n = 123
+s = 0
+while n:
+    s += n%10
+    n //= 10
+print(s)
+</code></pre>
+<hr>
+<h3 id="41-binary-search-steps">4️⃣1️⃣ Binary Search Steps</h3>
+<pre><code class="language-python">arr = [1,3,5,7,9]
+target = 7
+l,r = 0,len(arr)-1
+steps = 0
+while l&lt;=r:
+    m = (l+r)//2
+    steps += 1
+    if arr[m]==target: break
+    elif arr[m]&lt;target: l=m+1
+    else: r=m-1
+print(steps)
+</code></pre>
+<hr>
+<h3 id="42-graph-degree-count">4️⃣2️⃣ Graph Degree Count</h3>
+<pre><code class="language-python">edges = [(1,2),(2,3),(2,4)]
+degree = {}
+for u,v in edges:
+    degree[u] = degree.get(u,0)+1
+    degree[v] = degree.get(v,0)+1
+print(degree)
+</code></pre>
+<hr>
+<h3 id="43-bfs-node-count">4️⃣3️⃣ BFS Node Count</h3>
+<pre><code class="language-python">graph = {1:[2,3],2:[4],3:[],4:[]}
+queue = [1]
+visited = set()
+count = 0
+while queue:
+    node = queue.pop(0)
+    if node in visited: continue
+    visited.add(node)
+    count += 1
+    queue += graph[node]
+print(count)
+</code></pre>
+<hr>
+<h3 id="44-dfs-depth">4️⃣4️⃣ DFS Depth</h3>
+<pre><code class="language-python">def dfs(node, depth):
+    if node is None: return depth
+    return dfs(None, depth+1)
+print(dfs(1,0))
+</code></pre>
+<hr>
+<h3 id="45-entropy-binary">4️⃣5️⃣ Entropy (Binary)</h3>
+<pre><code class="language-python">p = 0.5
+entropy = -p*(p**0.0) - p*(p**0.0)
+print(entropy)
+</code></pre>
+<hr>
+<h3 id="46-loss-squared-error">4️⃣6️⃣ Loss (Squared Error)</h3>
+<pre><code class="language-python">y, y_hat = 10, 7
+print((y-y_hat)**2)
+</code></pre>
+<hr>
+<h3 id="47-sigmoid-manual">4️⃣7️⃣ Sigmoid (Manual)</h3>
+<pre><code class="language-python">x = 0
+print(1/(1+2.71828**(-x)))
+</code></pre>
+<hr>
+<h3 id="48-softmax-2-values">4️⃣8️⃣ Softmax (2 values)</h3>
+<pre><code class="language-python">a,b = 2,1
+ea = 2.71828**a
+eb = 2.71828**b
+print(ea/(ea+eb), eb/(ea+eb))
+</code></pre>
+<hr>
+<h3 id="49-monte-carlo-average">4️⃣9️⃣ Monte Carlo Average</h3>
+<pre><code class="language-python">import random
+s = 0
+n = 1000
+for _ in range(n):
+    s += 1
+print(s/n)
+</code></pre>
+<hr>
+<h3 id="50-law-of-large-numbers">5️⃣0️⃣ Law of Large Numbers</h3>
+<pre><code class="language-python">s = 0
+n = 10000
+for i in range(1,n+1):
+    s += i
+print(s/n)
+</code></pre>
+<hr>
+<h3 id="51-arithmetic-progression-general">5️⃣1️⃣ Arithmetic Progression (General)</h3>
+<p>$$a_n = a_1 + (n-1)d$$</p>
+<p><strong>Input → Output</strong></p>
+<ul>
+<li>a₁=2, d=3, n=5 → 14</li>
+</ul>
+<pre><code class="language-python">a1, d, n = 2, 3, 5
+print(a1 + (n-1)*d)
+</code></pre>
+<p><strong>Helps solve:</strong></p>
+<ul>
+<li>Sequence prediction</li>
+<li>Index-based patterns</li>
+</ul>
+<p><strong>Builds intuition:</strong></p>
+<blockquote>
+<p>Position matters as much as value.</p>
+</blockquote>
+<hr>
+<h3 id="52-geometric-progression-term">5️⃣2️⃣ Geometric Progression Term</h3>
+<p>$$a_n = a_1 r^{n-1}$$</p>
+<pre><code class="language-python">a1, r, n = 3, 2, 4
+print(a1 * (r**(n-1)))
+</code></pre>
+<p><strong>Helps solve:</strong></p>
+<ul>
+<li>Explosive growth</li>
+<li>Recursive structures</li>
+</ul>
+<hr>
+<h3 id="53-sum-of-geometric-progression">5️⃣3️⃣ Sum of Geometric Progression</h3>
+<p>$$S_n = a \frac{r^n-1}{r-1}$$</p>
+<pre><code class="language-python">a, r, n = 1, 2, 5
+print(a*(r**n-1)//(r-1))
+</code></pre>
+<p><strong>Helps solve:</strong></p>
+<ul>
+<li>Infinite-like growth</li>
+<li>Algorithm bounds</li>
+</ul>
+<hr>
+<h3 id="54-inclusionexclusion-principle">5️⃣4️⃣ Inclusion–Exclusion Principle</h3>
+<p>$$|A∪B| = |A|+|B|-|A∩B|$$</p>
+<pre><code class="language-python">A = {1,2,3}
+B = {3,4}
+print(len(A)+len(B)-len(A&amp;B))
+</code></pre>
+<p><strong>Helps solve:</strong></p>
+<ul>
+<li>Counting overlaps</li>
+<li>Probability traps</li>
+</ul>
+<hr>
+<h3 id="55-gcd-property">5️⃣5️⃣ GCD Property</h3>
+<p>$$gcd(a,b)=gcd(b,a\bmod b)$$</p>
+<pre><code class="language-python">a,b = 1071,462
+while b:
+    a,b = b,a%b
+print(a)
+</code></pre>
+<p><strong>Helps solve:</strong></p>
+<ul>
+<li>Number theory</li>
+<li>Periodicity</li>
+</ul>
+<hr>
+<h3 id="56-modular-addition">5️⃣6️⃣ Modular Addition</h3>
+<p>$$(a+b)\bmod m$$</p>
+<pre><code class="language-python">a,b,m = 17,29,5
+print((a+b)%m)
+</code></pre>
+<p><strong>Helps solve:</strong></p>
+<ul>
+<li>Large number safety</li>
+</ul>
+<hr>
+<h3 id="57-modular-multiplication">5️⃣7️⃣ Modular Multiplication</h3>
+<p>$$(a·b)\bmod m$$</p>
+<pre><code class="language-python">print((123*456)%7)
+</code></pre>
+<p><strong>Helps solve:</strong></p>
+<ul>
+<li>Cryptography basics</li>
+</ul>
+<hr>
+<h3 id="58-modular-exponentiation">5️⃣8️⃣ Modular Exponentiation</h3>
+<p>$$a^b \bmod m$$</p>
+<pre><code class="language-python">a,b,m = 3,13,7
+res = 1
+for _ in range(b):
+    res = (res*a)%m
+print(res)
+</code></pre>
+<p><strong>Helps solve:</strong></p>
+<ul>
+<li>Secure computation</li>
+</ul>
+<hr>
+<h3 id="59-fermats-little-theorem">5️⃣9️⃣ Fermat’s Little Theorem</h3>
+<p>$$a^{p-1}≡1 \pmod p$$</p>
+<pre><code class="language-python">a,p = 3,7
+print((a**(p-1))%p)
+</code></pre>
+<p><strong>Helps solve:</strong></p>
+<ul>
+<li>Fast inverse mod</li>
+</ul>
+<hr>
+<h3 id="60-modular-inverse-prime">6️⃣0️⃣ Modular Inverse (Prime)</h3>
+<p>$$a^{p-2} \bmod p$$</p>
+<pre><code class="language-python">a,p = 3,7
+print((a**(p-2))%p)
+</code></pre>
+<hr>
+<h3 id="61-chinese-remainder-2-eq">6️⃣1️⃣ Chinese Remainder (2 eq)</h3>
+<p>$$x≡a (m), x≡b (n)$$</p>
+<pre><code class="language-python"># brute for demo
+for x in range(1,50):
+    if x%3==2 and x%5==3:
+        print(x)
+        break
+</code></pre>
+<hr>
+<h3 id="62-pigeonhole-principle">6️⃣2️⃣ Pigeonhole Principle</h3>
+<p>$$n+1 items → n boxes$$</p>
+<pre><code class="language-python">items, boxes = 11,10
+print(items&gt;boxes)
+</code></pre>
+<hr>
+<h3 id="63-prime-counting-intuition">6️⃣3️⃣ Prime Counting Intuition</h3>
+<p>$$\pi(n)$$</p>
+<pre><code class="language-python">n=20
+primes=[]
+for i in range(2,n+1):
+    ok=True
+    for j in range(2,i):
+        if i%j==0: ok=False
+    if ok: primes.append(i)
+print(len(primes))
+</code></pre>
+<hr>
+<h3 id="64-perfect-square-check">6️⃣4️⃣ Perfect Square Check</h3>
+<p>$$k^2=n$$</p>
+<pre><code class="language-python">n=49
+print(int(n**0.5)**2==n)
+</code></pre>
+<hr>
+<h3 id="65-divisor-counting">6️⃣5️⃣ Divisor Counting</h3>
+<p>$$n=∏p_i^{e_i} → ∏(e_i+1)$$</p>
+<pre><code class="language-python">n=36
+count=0
+for i in range(1,n+1):
+    if n%i==0: count+=1
+print(count)
+</code></pre>
+<hr>
+<h3 id="66-sum-of-divisors">6️⃣6️⃣ Sum of Divisors</h3>
+<pre><code class="language-python">n=12
+s=0
+for i in range(1,n+1):
+    if n%i==0: s+=i
+print(s)
+</code></pre>
+<hr>
+<h3 id="67-euler-totient-φ">6️⃣7️⃣ Euler Totient (φ)</h3>
+<pre><code class="language-python">n=9
+count=0
+for i in range(1,n+1):
+    if __import__('math').gcd(i,n)==1:
+        count+=1
+print(count)
+</code></pre>
+<hr>
+<h3 id="68-binomial-theorem">6️⃣8️⃣ Binomial Theorem</h3>
+<p>$$(a+b)^n$$</p>
+<pre><code class="language-python">a,b,n = 1,2,3
+print((a+b)**n)
+</code></pre>
+<hr>
+<h3 id="69-pascal-triangle-rule">6️⃣9️⃣ Pascal Triangle Rule</h3>
+<p>$$C(n,k)=C(n-1,k-1)+C(n-1,k)$$</p>
+<pre><code class="language-python">C=[[1]]
+for i in range(1,5):
+    row=[1]
+    for j in range(1,i):
+        row.append(C[i-1][j-1]+C[i-1][j])
+    row.append(1)
+    C.append(row)
+print(C)
+</code></pre>
+<hr>
+<h3 id="70-catalan-numbers">7️⃣0️⃣ Catalan Numbers</h3>
+<p>$$C_n = \frac{1}{n+1}{2n \choose n}$$</p>
+<pre><code class="language-python">n=4
+num=1
+den=1
+for i in range(n):
+    num*=2*n-i
+    den*=i+1
+print(num//den//(n+1))
+</code></pre>
+<hr>
+<h3 id="71-principle-of-mathematical-induction">7️⃣1️⃣ Principle of Mathematical Induction</h3>
+<pre><code class="language-python"># verify sum 1..n = n(n+1)/2
+for n in range(1,10):
+    if sum(range(1,n+1))!=n*(n+1)//2:
+        print(False)
+print(True)
+</code></pre>
+<hr>
+<h3 id="72-invariant-concept">7️⃣2️⃣ Invariant Concept</h3>
+<pre><code class="language-python"># parity invariant
+nums=[1,3,5]
+print(sum(nums)%2)
+</code></pre>
+<hr>
+<h3 id="73-symmetry">7️⃣3️⃣ Symmetry</h3>
+<pre><code class="language-python">arr=[1,2,3,2,1]
+print(arr==arr[::-1])
+</code></pre>
+<hr>
+<h3 id="74-extremal-principle">7️⃣4️⃣ Extremal Principle</h3>
+<pre><code class="language-python">arr=[3,7,2,9,4]
+print(max(arr), min(arr))
+</code></pre>
+<hr>
+<h3 id="75-greedy-choice-property">7️⃣5️⃣ Greedy Choice Property</h3>
+<pre><code class="language-python">coins=[5,2,1]
+amount=11
+cnt=0
+for c in coins:
+    cnt+=amount//c
+    amount%=c
+print(cnt)
+</code></pre>
+<hr>
+<h3 id="76-am--gm">7️⃣6️⃣ AM ≥ GM</h3>
+<p>$$\frac{a+b}{2} ≥ \sqrt{ab}$$</p>
+<pre><code class="language-python">a,b=4,9
+print((a+b)/2 &gt;= (a*b)**0.5)
+</code></pre>
+<hr>
+<h3 id="77-cauchyschwarz-vector-intuition">7️⃣7️⃣ Cauchy–Schwarz (Vector Intuition)</h3>
+<pre><code class="language-python">a=[1,2]
+b=[3,4]
+dot= a[0]*b[0]+a[1]*b[1]
+print(dot)
+</code></pre>
+<hr>
+<h3 id="78-triangle-inequality">7️⃣8️⃣ Triangle Inequality</h3>
+<pre><code class="language-python">a,b,c=3,4,8
+print(a+b&gt;c)
+</code></pre>
+<hr>
+<h3 id="79-counting-paths-grid">7️⃣9️⃣ Counting Paths (Grid)</h3>
+<p>$$C(m+n,m)$$</p>
+<pre><code class="language-python">m,n=2,3
+num=1
+den=1
+for i in range(m):
+    num*=m+n-i
+    den*=i+1
+print(num//den)
+</code></pre>
+<hr>
+<h3 id="80-matrix-power-transition">8️⃣0️⃣ Matrix Power (Transition)</h3>
+<pre><code class="language-python"># Fibonacci via transition idea
+n=5
+a,b=0,1
+for _ in range(n):
+    a,b=b,a+b
+print(a)
+</code></pre>
+<hr>
+<h3 id="81-recursion-tree-size">8️⃣1️⃣ Recursion Tree Size</h3>
+<pre><code class="language-python">def f(n):
+    if n==0: return 1
+    return f(n-1)+f(n-1)
+print(f(4))
+</code></pre>
+<hr>
+<h3 id="82-probability-complement">8️⃣2️⃣ Probability Complement</h3>
+<p>$$P(A^c)=1-P(A)$$</p>
+<pre><code class="language-python">p=0.3
+print(1-p)
+</code></pre>
+<hr>
+<h3 id="83-expected-steps">8️⃣3️⃣ Expected Steps</h3>
+<pre><code class="language-python">steps=[1,2,3]
+probs=[0.2,0.3,0.5]
+print(sum(steps[i]*probs[i] for i in range(3)))
+</code></pre>
+<hr>
+<h3 id="84-random-walk-expectation">8️⃣4️⃣ Random Walk Expectation</h3>
+<pre><code class="language-python">pos=0
+for _ in range(1000): pos+=1
+print(pos/1000)
+</code></pre>
+<hr>
+<h3 id="85-variance-identity">8️⃣5️⃣ Variance Identity</h3>
+<pre><code class="language-python">xs=[1,2,3]
+mean=sum(xs)/len(xs)
+var=sum((x-mean)**2 for x in xs)/len(xs)
+print(var)
+</code></pre>
+<hr>
+<h3 id="86-chebyshev-intuition">8️⃣6️⃣ Chebyshev Intuition</h3>
+<pre><code class="language-python"># bound idea
+print(&quot;few values far from mean&quot;)
+</code></pre>
+<hr>
+<h3 id="87-graph-handshaking-lemma">8️⃣7️⃣ Graph Handshaking Lemma</h3>
+<pre><code class="language-python">edges=[(1,2),(2,3)]
+deg={}
+for u,v in edges:
+    deg[u]=deg.get(u,0)+1
+    deg[v]=deg.get(v,0)+1
+print(sum(deg.values())==2*len(edges))
+</code></pre>
+<hr>
+<h2 id="-final-thought">🏁 Final Thought</h2>
+<blockquote>
+<p>Mathematics is not about formulas.
+It is about <strong>confidence in thinking</strong>.</p>
+</blockquote>
+<p>If you understand these 50 ideas,
+you are no longer just writing code.</p>
+<p>You are <strong>designing systems</strong>.</p>
+<hr>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/2026-01-08-daily-knowledge-notes/dk-001-harry-potter-overview/" rel="prev">DK-001 — The Harry Potter Universe (A Beginner-Friendly Guide)</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on 2026</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    ©2026 Kao Panboonyuen
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Built using <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> and the <a href="https://github.com/wowchemy/starter-hugo-academic" target="_blank" rel="noopener">Wowchemy academic template</a>. View <a href="https://github.com/kaopanboonyuen/kaopanboonyuen.github.io" target="_blank" rel="noopener">source</a>.
+        
+  </p>
+</footer>
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/golang.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.b36873e4e886c7b03b21e4eb97d9b6d7.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

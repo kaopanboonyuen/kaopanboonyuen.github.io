@@ -13,6 +13,2241 @@
     </image>
     
     <item>
+      <title>DK-002 — Math Every Programmer Should Know</title>
+      <link>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know/</link>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know/</guid>
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;-why-this-note-exists&#34;&gt;🎯 Why This Note Exists&lt;/h2&gt;
+&lt;p&gt;Programming is the art of &lt;strong&gt;turning ideas into systems&lt;/strong&gt;.
+Mathematics is the art of &lt;strong&gt;thinking clearly about those systems&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You don’t need advanced math.
+But if you are a programmer, &lt;strong&gt;there are equations you must recognize instinctively&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This note presents &lt;strong&gt;87 essential math equations&lt;/strong&gt;, each with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain explanation&lt;/li&gt;
+&lt;li&gt;Concrete input → output examples (like test cases)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pure Python code only&lt;/strong&gt; (no libraries, no shortcuts)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If math feels friendly,
+&lt;strong&gt;coding becomes powerful and fun&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-gcd--lcm--the-backbone-of-discrete-math-for-programmers&#34;&gt;🔢 GCD &amp;amp; LCM — The Backbone of Discrete Math for Programmers&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-greatest-common-divisor-gcd&#34;&gt;🔹 Greatest Common Divisor (GCD)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Greatest Common Divisor (GCD)&lt;/strong&gt; of two integers &lt;code&gt;a&lt;/code&gt; and &lt;code&gt;b&lt;/code&gt;
+is the &lt;strong&gt;largest integer&lt;/strong&gt; that divides both without remainder.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-gcd--euclidean-algorithm&#34;&gt;📐 GCD — Euclidean Algorithm&lt;/h3&gt;
+&lt;p&gt;$$
+\gcd(a, b) = \gcd(b, a \bmod b)
+$$&lt;/p&gt;
+&lt;p&gt;This works because:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dividing by the remainder preserves common divisors.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-input--output-test-cases&#34;&gt;✅ Input → Output (Test Cases)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;a&lt;/th&gt;
+&lt;th&gt;b&lt;/th&gt;
+&lt;th&gt;gcd(a,b)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-pure-python-code-no-library&#34;&gt;🧑‍💻 Pure Python Code (No Library)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+print(gcd(12, 18))   # 6
+print(gcd(20, 8))    # 4
+print(gcd(17, 5))    # 1
+print(gcd(100, 25))  # 25
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-helps-solve&#34;&gt;🧠 Helps Solve&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fraction simplification&lt;/li&gt;
+&lt;li&gt;Ratio normalization&lt;/li&gt;
+&lt;li&gt;Periodic cycles&lt;/li&gt;
+&lt;li&gt;Cryptography (RSA basics)&lt;/li&gt;
+&lt;li&gt;Grid / tiling problems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-typical-questions&#34;&gt;🧩 Typical Questions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;“Simplify this fraction”&lt;/li&gt;
+&lt;li&gt;“Do these two cycles ever align?”&lt;/li&gt;
+&lt;li&gt;“What is the repeating interval?”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-builds-intuition&#34;&gt;🧠 Builds Intuition&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Repeated subtraction is slow.
+&lt;strong&gt;Remainders reveal structure faster.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-least-common-multiple-lcm&#34;&gt;🔹 Least Common Multiple (LCM)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Least Common Multiple (LCM)&lt;/strong&gt; of two integers
+is the &lt;strong&gt;smallest positive number&lt;/strong&gt; divisible by both.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-relationship-between-gcd-and-lcm&#34;&gt;📐 Relationship Between GCD and LCM&lt;/h3&gt;
+&lt;p&gt;$$
+\text{lcm}(a, b) = \frac{a \times b}{\gcd(a, b)}
+$$&lt;/p&gt;
+&lt;p&gt;This identity is &lt;strong&gt;critical&lt;/strong&gt; and used everywhere.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-input--output-test-cases-1&#34;&gt;✅ Input → Output (Test Cases)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;a&lt;/th&gt;
+&lt;th&gt;b&lt;/th&gt;
+&lt;th&gt;lcm(a,b)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;35&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-pure-python-code&#34;&gt;🧑‍💻 Pure Python Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+def lcm(a, b):
+    return a * b // gcd(a, b)
+
+print(lcm(4, 6))    # 12
+print(lcm(5, 7))    # 35
+print(lcm(8, 12))   # 24
+print(lcm(6, 15))   # 30
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-helps-solve-1&#34;&gt;🧠 Helps Solve&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Synchronization problems&lt;/li&gt;
+&lt;li&gt;Scheduling systems&lt;/li&gt;
+&lt;li&gt;Clock / cycle alignment&lt;/li&gt;
+&lt;li&gt;Repeating events&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-typical-questions-1&#34;&gt;🧩 Typical Questions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;“When will these two jobs run together again?”&lt;/li&gt;
+&lt;li&gt;“What is the smallest shared interval?”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-builds-intuition-1&#34;&gt;🧠 Builds Intuition&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GCD removes overlap.
+LCM rebuilds alignment.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-gcd--lcm-together--real-insight&#34;&gt;🔁 GCD &amp;amp; LCM Together — Real Insight&lt;/h2&gt;
+&lt;h3 id=&#34;-identity-to-remember-forever&#34;&gt;📐 Identity to Remember Forever&lt;/h3&gt;
+&lt;p&gt;$$
+\gcd(a,b) \times \text{lcm}(a,b) = a \times b
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-quick-verification-test&#34;&gt;✅ Quick Verification (Test)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a, b = 12, 18
+print(gcd(a, b) * lcm(a, b) == a * b)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-why-this-matters-for-programmers&#34;&gt;🧠 Why This Matters for Programmers&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Prevents overflow logic errors&lt;/li&gt;
+&lt;li&gt;Enables optimal loop bounds&lt;/li&gt;
+&lt;li&gt;Unlocks number theory problems&lt;/li&gt;
+&lt;li&gt;Appears in &lt;strong&gt;interviews constantly&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-mental-model-very-important&#34;&gt;🎯 Mental Model (Very Important)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;GCD answers:&lt;/strong&gt;
+“What do these numbers share?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;LCM answers:&lt;/strong&gt;
+“When do they meet again?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If a problem mentions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;sharing&lt;/em&gt; → think &lt;strong&gt;GCD&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;alignment / repetition&lt;/em&gt; → think &lt;strong&gt;LCM&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-prime-numbers&#34;&gt;5️⃣ Prime Numbers&lt;/h2&gt;
+&lt;h3 id=&#34;-what-is-a-prime-number&#34;&gt;📘 What Is a Prime Number?&lt;/h3&gt;
+&lt;p&gt;A &lt;strong&gt;prime number&lt;/strong&gt; is a number that:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Has &lt;strong&gt;exactly two divisors&lt;/strong&gt;: &lt;code&gt;1&lt;/code&gt; and itself&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Prime: &lt;code&gt;2, 3, 5, 7, 11&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Not prime: &lt;code&gt;1, 4, 6, 8, 9&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-mathematical-definition&#34;&gt;🧠 Mathematical Definition&lt;/h3&gt;
+&lt;p&gt;For a number &lt;code&gt;n&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;$$
+n &amp;gt; 1 \quad \text{and} \quad n \bmod k \neq 0 ;; \forall k \in [2, \sqrt{n}]
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-input--output-test-cases-2&#34;&gt;✅ Input → Output (Test Cases)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;n&lt;/th&gt;
+&lt;th&gt;Is Prime&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;False&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;True&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-pure-python-code-1&#34;&gt;🐍 Pure Python Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def is_prime(n):
+    if n &amp;lt;= 1:
+        return False
+
+    i = 2
+    while i * i &amp;lt;= n:
+        if n % i == 0:
+            return False
+        i += 1
+
+    return True
+
+# Tests
+print(is_prime(2))   # True
+print(is_prime(9))   # False
+print(is_prime(13))  # True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-why-programmers-care&#34;&gt;💡 Why Programmers Care&lt;/h3&gt;
+&lt;p&gt;Used in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Security &amp;amp; cryptography&lt;/li&gt;
+&lt;li&gt;Hashing&lt;/li&gt;
+&lt;li&gt;Random number systems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mental model:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Primes are the &lt;strong&gt;atoms of numbers&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-modular-arithmetic-&#34;&gt;6️⃣ Modular Arithmetic (&lt;code&gt;%&lt;/code&gt;)&lt;/h2&gt;
+&lt;h3 id=&#34;-what-is-modulo&#34;&gt;📘 What Is Modulo?&lt;/h3&gt;
+&lt;p&gt;Modulo gives the &lt;strong&gt;remainder&lt;/strong&gt; after division.&lt;/p&gt;
+&lt;p&gt;$$
+a \bmod b
+$$&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;17 % 5 = 2&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-everyday-intuition&#34;&gt;🧠 Everyday Intuition&lt;/h3&gt;
+&lt;p&gt;Clock arithmetic:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;(9 + 5) % 12 = 2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Time &lt;strong&gt;wraps around&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-input--output-test-cases-3&#34;&gt;✅ Input → Output (Test Cases)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Expression&lt;/th&gt;
+&lt;th&gt;Result&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;10 % 3&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14 % 7&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;23 % 4&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-pure-python-code-2&#34;&gt;🐍 Pure Python Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(10 % 3)   # 1
+print(14 % 7)   # 0
+print(23 % 4)   # 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-why-modulo-is-everywhere&#34;&gt;💡 Why Modulo Is Everywhere&lt;/h3&gt;
+&lt;p&gt;Used in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Index wrapping&lt;/li&gt;
+&lt;li&gt;Cyclic buffers&lt;/li&gt;
+&lt;li&gt;Hash tables&lt;/li&gt;
+&lt;li&gt;Cryptography&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mental model:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Modulo keeps numbers &lt;strong&gt;bounded&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-fractions--simplification&#34;&gt;7️⃣ Fractions &amp;amp; Simplification&lt;/h2&gt;
+&lt;h3 id=&#34;-what-is-a-fraction&#34;&gt;📘 What Is a Fraction?&lt;/h3&gt;
+&lt;p&gt;A fraction represents a &lt;strong&gt;ratio&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;$$
+\frac{a}{b}
+$$&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;8 / 12 = 2 / 3&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-simplification-rule&#34;&gt;🧠 Simplification Rule&lt;/h3&gt;
+&lt;p&gt;Divide numerator and denominator by their GCD:&lt;/p&gt;
+&lt;p&gt;$$
+\frac{a}{b} = \frac{a \div \gcd(a, b)}{b \div \gcd(a, b)}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-input--output-test-cases-4&#34;&gt;✅ Input → Output (Test Cases)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Fraction&lt;/th&gt;
+&lt;th&gt;Simplified&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;8/12&lt;/td&gt;
+&lt;td&gt;2/3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10/20&lt;/td&gt;
+&lt;td&gt;1/2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7/9&lt;/td&gt;
+&lt;td&gt;7/9&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-pure-python-code-3&#34;&gt;🐍 Pure Python Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+def simplify_fraction(a, b):
+    g = gcd(a, b)
+    return a // g, b // g
+
+# Tests
+print(simplify_fraction(8, 12))   # (2, 3)
+print(simplify_fraction(10, 20))  # (1, 2)
+print(simplify_fraction(7, 9))    # (7, 9)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-why-this-matters&#34;&gt;💡 Why This Matters&lt;/h3&gt;
+&lt;p&gt;Used in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Percentages&lt;/li&gt;
+&lt;li&gt;Financial calculations&lt;/li&gt;
+&lt;li&gt;Scaling systems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mental model:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Reduce before you reason.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8-powers--logarithms&#34;&gt;8️⃣ Powers &amp;amp; Logarithms&lt;/h2&gt;
+&lt;h3 id=&#34;-powers-exponents&#34;&gt;📘 Powers (Exponents)&lt;/h3&gt;
+&lt;p&gt;$$
+a^n = a \times a \times \dots \times a
+$$&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2^5 = 32&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-logarithms-opposite-of-power&#34;&gt;🧠 Logarithms (Opposite of Power)&lt;/h3&gt;
+&lt;p&gt;$$
+\log_b(x) = n \quad \text{means} \quad b^n = x
+$$&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;log₂(8) = 3&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-input--output-test-cases-5&#34;&gt;✅ Input → Output (Test Cases)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Expression&lt;/th&gt;
+&lt;th&gt;Result&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;2^4&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3^3&lt;/td&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;log₂(8)&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-pure-python-code-no-libraries&#34;&gt;🐍 Pure Python Code (No Libraries)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def power(a, n):
+    result = 1
+    for _ in range(n):
+        result *= a
+    return result
+
+def log_base(b, x):
+    count = 0
+    while x &amp;gt; 1:
+        x //= b
+        count += 1
+    return count
+
+# Tests
+print(power(2, 4))      # 16
+print(power(3, 3))      # 27
+print(log_base(2, 8))   # 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-programmer-insight&#34;&gt;💡 Programmer Insight&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Powers grow fast&lt;/li&gt;
+&lt;li&gt;Logs grow slow&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mental model:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Logs explain why algorithms scale.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9-fibonacci-sequence&#34;&gt;9️⃣ Fibonacci Sequence&lt;/h2&gt;
+&lt;h3 id=&#34;-what-is-fibonacci&#34;&gt;📘 What Is Fibonacci?&lt;/h3&gt;
+&lt;p&gt;A sequence where:&lt;/p&gt;
+&lt;p&gt;$$
+F(n) = F(n-1) + F(n-2)
+$$&lt;/p&gt;
+&lt;p&gt;Starting values:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;F(0) = 0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;F(1) = 1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sequence:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;0, 1, 1, 2, 3, 5, 8, 13, ...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-input--output-test-cases-6&#34;&gt;✅ Input → Output (Test Cases)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;n&lt;/th&gt;
+&lt;th&gt;F(n)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-pure-python-code-iterative&#34;&gt;🐍 Pure Python Code (Iterative)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def fibonacci(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+
+    a, b = 0, 1
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+    return b
+
+# Tests
+print(fibonacci(0))  # 0
+print(fibonacci(1))  # 1
+print(fibonacci(5))  # 5
+print(fibonacci(8))  # 21
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-why-fibonacci-is-taught&#34;&gt;💡 Why Fibonacci Is Taught&lt;/h3&gt;
+&lt;p&gt;Used to teach:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Recursion vs iteration&lt;/li&gt;
+&lt;li&gt;Dynamic programming&lt;/li&gt;
+&lt;li&gt;Growth patterns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mental model:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The present depends on the past.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-thought-for-students&#34;&gt;🏁 Final Thought for Students&lt;/h2&gt;
+&lt;p&gt;Math is not about numbers.
+It’s about &lt;strong&gt;patterns&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Once you see patterns,
+code becomes a language for expressing them.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-big-o-intuition-algorithm-growth&#34;&gt;🔟 Big-O Intuition (Algorithm Growth)&lt;/h2&gt;
+&lt;h3 id=&#34;-what-is-big-o&#34;&gt;📘 What Is Big-O?&lt;/h3&gt;
+&lt;p&gt;Big-O describes &lt;strong&gt;how fast an algorithm grows&lt;/strong&gt; as input size &lt;code&gt;n&lt;/code&gt; increases.&lt;/p&gt;
+&lt;p&gt;It ignores:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Constants&lt;/li&gt;
+&lt;li&gt;Hardware&lt;/li&gt;
+&lt;li&gt;Language&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It focuses on:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Growth trend&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-common-big-o-forms&#34;&gt;🧠 Common Big-O Forms&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Big-O&lt;/th&gt;
+&lt;th&gt;Meaning&lt;/th&gt;
+&lt;th&gt;Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;O(1)&lt;/td&gt;
+&lt;td&gt;Constant&lt;/td&gt;
+&lt;td&gt;Access array&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;O(n)&lt;/td&gt;
+&lt;td&gt;Linear&lt;/td&gt;
+&lt;td&gt;Loop&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;O(n²)&lt;/td&gt;
+&lt;td&gt;Quadratic&lt;/td&gt;
+&lt;td&gt;Nested loops&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;O(log n)&lt;/td&gt;
+&lt;td&gt;Logarithmic&lt;/td&gt;
+&lt;td&gt;Binary search&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-example-linear-vs-quadratic&#34;&gt;🧪 Example: Linear vs Quadratic&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def linear(n):
+    count = 0
+    for _ in range(n):
+        count += 1
+    return count
+
+def quadratic(n):
+    count = 0
+    for _ in range(n):
+        for _ in range(n):
+            count += 1
+    return count
+
+print(linear(5))     # 5
+print(quadratic(5))  # 25
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-mental-model&#34;&gt;💡 Mental Model&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Loops → add &lt;code&gt;n&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Nested loops → multiply &lt;code&gt;n&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Halving each step → log &lt;code&gt;n&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Big-O is about &lt;strong&gt;how pain grows&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;11-probability-basics&#34;&gt;1️⃣1️⃣ Probability Basics&lt;/h2&gt;
+&lt;h3 id=&#34;-what-is-probability&#34;&gt;📘 What Is Probability?&lt;/h3&gt;
+&lt;p&gt;Probability measures &lt;strong&gt;how likely&lt;/strong&gt; an event is.&lt;/p&gt;
+&lt;p&gt;$$
+P(event) = \frac{\text{favorable outcomes}}{\text{total outcomes}}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-examples&#34;&gt;🧠 Examples&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Coin flip:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Heads = &lt;code&gt;1 / 2&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dice roll:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Rolling a 6 = &lt;code&gt;1 / 6&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-input--output-test-cases-7&#34;&gt;✅ Input → Output (Test Cases)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Scenario&lt;/th&gt;
+&lt;th&gt;Probability&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Coin heads&lt;/td&gt;
+&lt;td&gt;0.5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dice 6&lt;/td&gt;
+&lt;td&gt;~0.1667&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-pure-python-code-4&#34;&gt;🐍 Pure Python Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def probability(favorable, total):
+    return favorable / total
+
+# Tests
+print(probability(1, 2))   # 0.5
+print(probability(1, 6))   # 0.1666...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-programmer-insight-1&#34;&gt;💡 Programmer Insight&lt;/h3&gt;
+&lt;p&gt;Used in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Randomized algorithms&lt;/li&gt;
+&lt;li&gt;Simulations&lt;/li&gt;
+&lt;li&gt;AI &amp;amp; ML&lt;/li&gt;
+&lt;li&gt;Risk systems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mental model:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Probability quantifies uncertainty.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;12-bitwise-math&#34;&gt;1️⃣2️⃣ Bitwise Math&lt;/h2&gt;
+&lt;h3 id=&#34;-what-are-bits&#34;&gt;📘 What Are Bits?&lt;/h3&gt;
+&lt;p&gt;Computers think in &lt;strong&gt;binary&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;0 or 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Bitwise operations work at this level.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-common-bitwise-operators&#34;&gt;🧠 Common Bitwise Operators&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Operator&lt;/th&gt;
+&lt;th&gt;Meaning&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&amp;amp;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;AND&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;OR&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;OR&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;^&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;XOR&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;&amp;lt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Left shift&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Right shift&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-examples-1&#34;&gt;🧪 Examples&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(5 &amp;amp; 3)   # 1   (101 &amp;amp; 011)
+print(5 | 3)   # 7   (101 | 011)
+print(5 ^ 3)   # 6   (101 ^ 011)
+print(1 &amp;lt;&amp;lt; 3)  # 8
+print(8 &amp;gt;&amp;gt; 2)  # 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-why-bitwise-matters&#34;&gt;💡 Why Bitwise Matters&lt;/h3&gt;
+&lt;p&gt;Used in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Performance optimization&lt;/li&gt;
+&lt;li&gt;Flags &amp;amp; permissions&lt;/li&gt;
+&lt;li&gt;Cryptography&lt;/li&gt;
+&lt;li&gt;Low-level systems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mental model:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Bits are switches.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;13-matrix-basics&#34;&gt;1️⃣3️⃣ Matrix Basics&lt;/h2&gt;
+&lt;h3 id=&#34;-what-is-a-matrix&#34;&gt;📘 What Is a Matrix?&lt;/h3&gt;
+&lt;p&gt;A matrix is a &lt;strong&gt;2D grid of numbers&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;p&gt;$$
+\begin{bmatrix}
+1 &amp;amp; 2 &lt;br&gt;
+3 &amp;amp; 4
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-matrix-addition-rule&#34;&gt;🧠 Matrix Addition Rule&lt;/h3&gt;
+&lt;p&gt;Same size matrices:&lt;/p&gt;
+&lt;p&gt;$$
+C[i][j] = A[i][j] + B[i][j]
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-pure-python-code-5&#34;&gt;🐍 Pure Python Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def add_matrices(A, B):
+    result = []
+    for i in range(len(A)):
+        row = []
+        for j in range(len(A[0])):
+            row.append(A[i][j] + B[i][j])
+        result.append(row)
+    return result
+
+# Tests
+A = [[1, 2], [3, 4]]
+B = [[5, 6], [7, 8]]
+
+print(add_matrices(A, B))
+# [[6, 8], [10, 12]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-programmer-insight-2&#34;&gt;💡 Programmer Insight&lt;/h3&gt;
+&lt;p&gt;Used in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Graphics&lt;/li&gt;
+&lt;li&gt;Machine learning&lt;/li&gt;
+&lt;li&gt;Games&lt;/li&gt;
+&lt;li&gt;Transformations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mental model:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Matrices transform space.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;14-math-behind-hashing&#34;&gt;1️⃣4️⃣ Math Behind Hashing&lt;/h2&gt;
+&lt;h3 id=&#34;-what-is-hashing&#34;&gt;📘 What Is Hashing?&lt;/h3&gt;
+&lt;p&gt;Hashing maps data of any size to a &lt;strong&gt;fixed-size number&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;cat&amp;quot; → 312
+&amp;quot;dog&amp;quot; → 417
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-core-properties&#34;&gt;🧠 Core Properties&lt;/h3&gt;
+&lt;p&gt;A good hash:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Is fast&lt;/li&gt;
+&lt;li&gt;Distributes evenly&lt;/li&gt;
+&lt;li&gt;Is deterministic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-simple-hash-formula&#34;&gt;🧪 Simple Hash Formula&lt;/h3&gt;
+&lt;p&gt;$$
+hash = (hash \times base + value) \bmod size
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-pure-python-hash-example&#34;&gt;🐍 Pure Python Hash Example&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def simple_hash(s, size=100):
+    h = 0
+    for ch in s:
+        h = (h * 31 + ord(ch)) % size
+    return h
+
+# Tests
+print(simple_hash(&amp;quot;cat&amp;quot;))
+print(simple_hash(&amp;quot;dog&amp;quot;))
+print(simple_hash(&amp;quot;cat&amp;quot;))  # same every time
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-why-hashing-matters&#34;&gt;💡 Why Hashing Matters&lt;/h3&gt;
+&lt;p&gt;Used in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dictionaries&lt;/li&gt;
+&lt;li&gt;Sets&lt;/li&gt;
+&lt;li&gt;Databases&lt;/li&gt;
+&lt;li&gt;Password storage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mental model:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hashing turns structure into position.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-wisdom-for-programmers&#34;&gt;🧠 Final Wisdom for Programmers&lt;/h2&gt;
+&lt;p&gt;Math is not school math.
+It’s &lt;strong&gt;thinking math&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;When you understand:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Growth (Big-O)&lt;/li&gt;
+&lt;li&gt;Uncertainty (Probability)&lt;/li&gt;
+&lt;li&gt;Structure (Bits &amp;amp; Matrices)&lt;/li&gt;
+&lt;li&gt;Mapping (Hashing)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You stop guessing
+and start designing.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;15-differentiation-derivative&#34;&gt;1️⃣5️⃣ Differentiation (Derivative)&lt;/h2&gt;
+&lt;h3 id=&#34;-what-is-differentiation&#34;&gt;📘 What is Differentiation?&lt;/h3&gt;
+&lt;p&gt;Differentiation measures &lt;strong&gt;how a function changes&lt;/strong&gt; as its input changes.
+In simple terms:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The derivative tells us the &lt;strong&gt;slope of a function&lt;/strong&gt; at any point.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-mathematical-definition-1&#34;&gt;🧠 Mathematical Definition&lt;/h3&gt;
+&lt;p&gt;For a function (f(x)):&lt;/p&gt;
+&lt;p&gt;$$
+f&amp;rsquo;(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+$$&lt;/p&gt;
+&lt;p&gt;Intuition:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How steep is the curve at point &lt;code&gt;x&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;Rate of change.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-input--output-examples&#34;&gt;✅ Input → Output (Examples)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Function&lt;/th&gt;
+&lt;th&gt;x&lt;/th&gt;
+&lt;th&gt;f&amp;rsquo;(x)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;f(x) = x²&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;f(x) = 3x³&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;36&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;f(x) = 5x&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;f(x) = 7&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-pure-python-code-numerical-derivative&#34;&gt;🐍 Pure Python Code (Numerical Derivative)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def derivative(f, x, h=1e-5):
+    return (f(x + h) - f(x)) / h
+
+# Test functions
+def f1(x): return x**2
+def f2(x): return 3*x**3
+def f3(x): return 5*x
+def f4(x): return 7
+
+# Tests
+print(derivative(f1, 3))  # ~6
+print(derivative(f2, 2))  # ~36
+print(derivative(f3, 4))  # ~5
+print(derivative(f4, 10)) # ~0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-programmer-insight-3&#34;&gt;💡 Programmer Insight&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Used in physics simulations: velocity = derivative of position&lt;/li&gt;
+&lt;li&gt;Optimization: slope = gradient&lt;/li&gt;
+&lt;li&gt;Machine learning: gradient descent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mental model:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Derivative = &lt;strong&gt;“how fast things change”&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;16-integration-integral&#34;&gt;1️⃣6️⃣ Integration (Integral)&lt;/h2&gt;
+&lt;h3 id=&#34;-what-is-integration&#34;&gt;📘 What is Integration?&lt;/h3&gt;
+&lt;p&gt;Integration measures &lt;strong&gt;the area under a curve&lt;/strong&gt;.
+In simple terms:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Integration tells us &lt;strong&gt;the total accumulated quantity&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-mathematical-definition-2&#34;&gt;🧠 Mathematical Definition&lt;/h3&gt;
+&lt;p&gt;For a function (f(x)):&lt;/p&gt;
+&lt;p&gt;$$
+\int_a^b f(x) dx \approx \text{area under } f(x) \text{ from } x=a \text{ to } x=b
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-input--output-examples-1&#34;&gt;✅ Input → Output (Examples)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Function&lt;/th&gt;
+&lt;th&gt;Interval&lt;/th&gt;
+&lt;th&gt;Integral (Approx)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;f(x) = x&lt;/td&gt;
+&lt;td&gt;0→3&lt;/td&gt;
+&lt;td&gt;4.5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;f(x) = x²&lt;/td&gt;
+&lt;td&gt;0→2&lt;/td&gt;
+&lt;td&gt;8/3 ≈ 2.6667&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;f(x) = 3x³&lt;/td&gt;
+&lt;td&gt;1→2&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-pure-python-code-numerical-integration-via-rectangle-method&#34;&gt;🐍 Pure Python Code (Numerical Integration via Rectangle Method)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def integrate(f, a, b, n=1000):
+    dx = (b - a) / n
+    total = 0
+    for i in range(n):
+        total += f(a + i*dx) * dx
+    return total
+
+# Test functions
+def f1(x): return x
+def f2(x): return x**2
+def f3(x): return 3*x**3
+
+# Tests
+print(integrate(f1, 0, 3))     # ~4.5
+print(integrate(f2, 0, 2))     # ~2.6667
+print(integrate(f3, 1, 2))     # ~15
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-step-by-step-example&#34;&gt;🧪 Step-by-Step Example&lt;/h3&gt;
+&lt;p&gt;Integral of f(x) = x from 0 to 3:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Divide interval [0,3] into 1000 rectangles
+Each width dx = 0.003
+Sum: dx * (f(0) + f(0.003) + ... + f(2.997)) ≈ 4.5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-programmer-insight-4&#34;&gt;💡 Programmer Insight&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Used in physics: distance = ∫ velocity dt&lt;/li&gt;
+&lt;li&gt;Probability: area under PDF&lt;/li&gt;
+&lt;li&gt;Graphics: total light, area, volume&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mental model:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Integral = &lt;strong&gt;“sum of infinitely many tiny pieces”&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;17-linking-derivative--integral&#34;&gt;1️⃣7️⃣ Linking Derivative &amp;amp; Integral&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Derivative&lt;/strong&gt; → rate of change&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integral&lt;/strong&gt; → accumulated change&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;They are &lt;strong&gt;inverse operations&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;$$
+\frac{d}{dx} \int f(x) dx = f(x)
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\int \frac{d}{dx} f(x) dx = f(x) + C
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-demonstration-check-inverse&#34;&gt;🐍 Demonstration (Check Inverse)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def f(x): return x**2
+
+# Derivative at x
+x = 3
+print(derivative(f, x))  # ~6
+
+# Integral from 0 to x
+print(integrate(lambda t: 2*t, 0, x))  # ~9, matches f(3)-f(0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-final-insight&#34;&gt;💡 Final Insight&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Derivatives&lt;/strong&gt; help you &lt;strong&gt;understand local behavior&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrals&lt;/strong&gt; help you &lt;strong&gt;accumulate global behavior&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Together, they form the &lt;strong&gt;calculus toolbox for programming and simulation&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mental model:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Derivative = &lt;strong&gt;speed&lt;/strong&gt;, Integral = &lt;strong&gt;distance traveled&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;18-partial-derivatives--chain-rule&#34;&gt;1️⃣8️⃣ Partial Derivatives &amp;amp; Chain Rule&lt;/h2&gt;
+&lt;h3 id=&#34;-what-is-a-partial-derivative&#34;&gt;📘 What is a Partial Derivative?&lt;/h3&gt;
+&lt;p&gt;A &lt;strong&gt;partial derivative&lt;/strong&gt; measures &lt;strong&gt;how a multivariable function changes with respect to one variable&lt;/strong&gt;, keeping the others constant.&lt;/p&gt;
+&lt;p&gt;Example: (f(x, y) = x^2y + 3y)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Partial derivative wrt (x):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+\frac{\partial f}{\partial x} = 2xy
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Partial derivative wrt (y):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+\frac{\partial f}{\partial y} = x^2 + 3
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-input--output-examples-2&#34;&gt;✅ Input → Output (Examples)&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;f(x, y)&lt;/th&gt;
+&lt;th&gt;∂f/∂x&lt;/th&gt;
+&lt;th&gt;∂f/∂y&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;x²y + 3y&lt;/td&gt;
+&lt;td&gt;2xy&lt;/td&gt;
+&lt;td&gt;x² + 3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;x*y + y²&lt;/td&gt;
+&lt;td&gt;y&lt;/td&gt;
+&lt;td&gt;x + 2y&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-pure-python-code-numerical-partial-derivative&#34;&gt;🐍 Pure Python Code (Numerical Partial Derivative)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def partial_derivative(f, x, y, var=&#39;x&#39;, h=1e-5):
+    if var == &#39;x&#39;:
+        return (f(x+h, y) - f(x, y)) / h
+    elif var == &#39;y&#39;:
+        return (f(x, y+h) - f(x, y)) / h
+    else:
+        raise ValueError(&amp;quot;var must be &#39;x&#39; or &#39;y&#39;&amp;quot;)
+
+# Test function
+def f(x, y): return x**2 * y + 3*y
+
+print(partial_derivative(f, 2, 3, &#39;x&#39;))  # ~12
+print(partial_derivative(f, 2, 3, &#39;y&#39;))  # ~7
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-what-is-the-chain-rule&#34;&gt;📘 What is the Chain Rule?&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;chain rule&lt;/strong&gt; lets you compute derivatives of &lt;strong&gt;nested functions&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;If (z = f(g(x))):&lt;/p&gt;
+&lt;p&gt;$$
+\frac{dz}{dx} = \frac{dz}{dg} \cdot \frac{dg}{dx}
+$$&lt;/p&gt;
+&lt;p&gt;Example:
+(z = (3x + 2)^2)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;g(x) = 3x + 2&lt;/li&gt;
+&lt;li&gt;f(g) = g²&lt;/li&gt;
+&lt;li&gt;dz/dx = f&amp;rsquo;(g) * g&amp;rsquo;(x) = 2g * 3 = 6*(3x + 2)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-pure-python-code-numerical-chain-rule&#34;&gt;🐍 Pure Python Code (Numerical Chain Rule)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def chain_rule(f, g, x, h=1e-5):
+    g_x = g(x)
+    df_dg = (f(g_x + h) - f(g_x)) / h
+    dg_dx = (g(x + h) - g_x) / h
+    return df_dg * dg_dx
+
+# Example: z = (3x + 2)^2
+def f(g): return g**2
+def g(x): return 3*x + 2
+
+print(chain_rule(f, g, 1))  # ~30, same as 6*(3*1+2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;19-backpropagation-in-neural-networks&#34;&gt;1️⃣9️⃣ Backpropagation in Neural Networks&lt;/h2&gt;
+&lt;h3 id=&#34;-what-is-backpropagation&#34;&gt;📘 What is Backpropagation?&lt;/h3&gt;
+&lt;p&gt;Backpropagation uses &lt;strong&gt;chain rule + partial derivatives&lt;/strong&gt; to compute &lt;strong&gt;gradients of loss wrt each weight&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Goal: Update weights to &lt;strong&gt;minimize loss&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Uses derivative of loss wrt weights&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-intuition-with-a-tiny-neural-network&#34;&gt;🧠 Intuition with a Tiny Neural Network&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;x → [w1] → h = w1*x → [w2] → y_hat = w2*h
+Loss L = (y_hat - y_true)^2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Step 1: Compute forward: h, y_hat&lt;/li&gt;
+&lt;li&gt;Step 2: Compute ∂L/∂w2 = ∂L/∂y_hat * ∂y_hat/∂w2&lt;/li&gt;
+&lt;li&gt;Step 3: Compute ∂L/∂w1 = ∂L/∂y_hat * ∂y_hat/∂h * ∂h/∂w1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is &lt;strong&gt;just chain rule in action&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-pure-python-example-single-neuron&#34;&gt;🐍 Pure Python Example (Single Neuron)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Inputs
+x = 2.0
+y_true = 10.0
+w1 = 0.5
+w2 = 1.0
+lr = 0.1  # learning rate
+
+# Forward pass
+h = w1 * x
+y_hat = w2 * h
+loss = (y_hat - y_true)**2
+print(&amp;quot;Initial loss:&amp;quot;, loss)
+
+# Backward pass (manual derivatives)
+dL_dyhat = 2 * (y_hat - y_true)
+dL_dw2 = dL_dyhat * h
+dL_dw1 = dL_dyhat * w2 * x
+
+# Update weights
+w1 -= lr * dL_dw1
+w2 -= lr * dL_dw2
+
+print(&amp;quot;Updated w1, w2:&amp;quot;, w1, w2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-step-by-step-example-1&#34;&gt;✅ Step-by-Step Example&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Forward: h = 0.5 * 2 = 1, y_hat = 1 * 1 = 1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Loss: (1 - 10)² = 81&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Derivative: ∂L/∂w2 = 2*(1-10)*1 = -18&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Update: w2_new = 1 - 0.1*(-18) = 2.8&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Derivative: ∂L/∂w1 = 2*(1-10)&lt;em&gt;1&lt;/em&gt;2 = -36&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Update: w1_new = 0.5 - 0.1*(-36) = 4.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Chain rule applied automatically through the chain of computations.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-programmer-insight-5&#34;&gt;💡 Programmer Insight&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Backprop = &lt;strong&gt;chain rule over networks&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Allows neural networks to &lt;strong&gt;learn efficiently&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Generalizes to &lt;strong&gt;any depth&lt;/strong&gt; (deep learning)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mental model:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Forward = compute output, Backward = compute “how each weight affects loss”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;20-logarithms-detailed-recap&#34;&gt;2️⃣0️⃣ Logarithms (Detailed Recap)&lt;/h2&gt;
+&lt;h3 id=&#34;-what-is-a-logarithm&#34;&gt;📘 What is a Logarithm?&lt;/h3&gt;
+&lt;p&gt;A &lt;strong&gt;logarithm&lt;/strong&gt; answers the question:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“To what power must I raise a base to get a number?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Mathematically:&lt;/p&gt;
+&lt;p&gt;$$
+\log_b(x) = y \quad \text{means} \quad b^y = x
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;b&lt;/code&gt; = base (must be &amp;gt;0, ≠1)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x&lt;/code&gt; = number (must be &amp;gt;0)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;y&lt;/code&gt; = logarithm value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-examples-2&#34;&gt;🧠 Examples&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Expression&lt;/th&gt;
+&lt;th&gt;Meaning&lt;/th&gt;
+&lt;th&gt;Result&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;log₂(8)&lt;/td&gt;
+&lt;td&gt;2^? = 8&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;log₁₀(1000)&lt;/td&gt;
+&lt;td&gt;10^? = 1000&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ln(e^2)&lt;/td&gt;
+&lt;td&gt;e^? = e²&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ln(x) = natural log = log base e (~2.718)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-basic-properties-of-logarithms&#34;&gt;✅ Basic Properties of Logarithms&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Log of 1&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+\log_b(1) = 0 \quad \text{because } b^0 = 1
+$$&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Log of the base&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+\log_b(b) = 1 \quad \text{because } b^1 = b
+$$&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Product Rule&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+\log_b(xy) = \log_b(x) + \log_b(y)
+$$&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Quotient Rule&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+\log_b(x/y) = \log_b(x) - \log_b(y)
+$$&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Power Rule&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+\log_b(x^k) = k \cdot \log_b(x)
+$$&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Change of Base Formula&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+\log_b(x) = \frac{\log_k(x)}{\log_k(b)}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-step-by-step-example-2&#34;&gt;🧪 Step-by-Step Example&lt;/h3&gt;
+&lt;p&gt;Compute log₂(32):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;2^? = 32
+2^5 = 32
+→ log₂(32) = 5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check using product rule:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;log₂(32) = log₂(2*16) = log₂(2) + log₂(16) = 1 + 4 = 5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-pure-python-code-numerical-logarithms&#34;&gt;🐍 Pure Python Code (Numerical Logarithms)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import math
+
+# Basic logs
+print(math.log2(8))     # 3
+print(math.log10(1000)) # 3
+print(math.log(math.e)) # 1 (natural log base e)
+
+# Natural log
+print(math.log(math.e**2))  # 2
+
+# Change of base
+def log_base(x, b):
+    return math.log(x) / math.log(b)
+
+print(log_base(32, 2))  # 5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-visual-intuition&#34;&gt;🧠 Visual Intuition&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Logarithms grow slowly&lt;/strong&gt; compared to linear or exponential functions.&lt;/li&gt;
+&lt;li&gt;They “compress” large numbers into smaller scales.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;x&lt;/th&gt;
+&lt;th&gt;log₂(x)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Log is the &lt;strong&gt;inverse of exponentiation&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-applications-in-programming&#34;&gt;💡 Applications in Programming&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Algorithm analysis&lt;/strong&gt;: Binary search → O(log n)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data compression &amp;amp; scaling&lt;/strong&gt;: e.g., decibels, log scales&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Probability / Information theory&lt;/strong&gt;: Entropy uses log&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Machine learning&lt;/strong&gt;: Log loss, softmax, log probabilities&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-quick-exercises&#34;&gt;🧪 Quick Exercises&lt;/h3&gt;
+&lt;p&gt;Compute:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;log₂(64) → 2^? = 64 → 6 ✅&lt;/li&gt;
+&lt;li&gt;log₁₀(100) → 10^? = 100 → 2 ✅&lt;/li&gt;
+&lt;li&gt;ln(e^5) → e^? = e^5 → 5 ✅&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-mental-models&#34;&gt;🧠 Mental Models&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Exponentiation: “start small → get big”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Logarithm: “start big → see how many steps back to base”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Logs &lt;strong&gt;turn multiplication into addition&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Logs &lt;strong&gt;turn exponentiation into multiplication&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-87-math-equations-every-programmer-should-know&#34;&gt;🧠 87 Math Equations Every Programmer Should Know&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;1-arithmetic-series-sum&#34;&gt;1️⃣ Arithmetic Series Sum&lt;/h3&gt;
+&lt;p&gt;$$\frac{n(n+1)}{2}$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input → Output&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;n=5 → 15&lt;/li&gt;
+&lt;li&gt;n=10 → 55&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n = 10
+result = n * (n + 1) // 2
+print(result)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-sum-of-range-ab&#34;&gt;2️⃣ Sum of Range [a..b]&lt;/h3&gt;
+&lt;p&gt;$$\frac{(a+b)(b-a+1)}{2}$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input → Output&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a=3, b=7 → 25&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a, b = 3, 7
+result = (a + b) * (b - a + 1) // 2
+print(result)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-difference-of-two-numbers&#34;&gt;3️⃣ Difference of Two Numbers&lt;/h3&gt;
+&lt;p&gt;$$|a-b|$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input → Output&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a=10, b=3 → 7&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a, b = 10, 3
+print(a-b if a&amp;gt;b else b-a)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-mean-average&#34;&gt;4️⃣ Mean (Average)&lt;/h3&gt;
+&lt;p&gt;$$\frac{\sum x}{n}$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input → Output&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[2,4,6] → 4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;nums = [2,4,6]
+print(sum(nums)//len(nums))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;5-weighted-average&#34;&gt;5️⃣ Weighted Average&lt;/h3&gt;
+&lt;p&gt;$$\frac{\sum w_ix_i}{\sum w_i}$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input → Output&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;scores=[80,90], weights=[2,3] → 86&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;scores = [80,90]
+weights = [2,3]
+total = 0
+w_sum = 0
+for i in range(len(scores)):
+    total += scores[i] * weights[i]
+    w_sum += weights[i]
+print(total // w_sum)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;6-modulo&#34;&gt;6️⃣ Modulo&lt;/h3&gt;
+&lt;p&gt;$$a \bmod b$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input → Output&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;17 mod 5 → 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(17 % 5)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;7-even--odd-check&#34;&gt;7️⃣ Even / Odd Check&lt;/h3&gt;
+&lt;p&gt;$$n \bmod 2$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input → Output&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;7 → odd&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n = 7
+print(&amp;quot;odd&amp;quot; if n % 2 else &amp;quot;even&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;8-square&#34;&gt;8️⃣ Square&lt;/h3&gt;
+&lt;p&gt;$$n^2$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input → Output&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;6 → 36&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n = 6
+print(n*n)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;9-cube&#34;&gt;9️⃣ Cube&lt;/h3&gt;
+&lt;p&gt;$$n^3$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input → Output&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3 → 27&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n = 3
+print(n*n*n)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-power-exponentiation&#34;&gt;🔟 Power (Exponentiation)&lt;/h3&gt;
+&lt;p&gt;$$a^b$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input → Output&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2^5 → 32&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a, b = 2, 5
+result = 1
+for _ in range(b):
+    result *= a
+print(result)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;11-factorial&#34;&gt;1️⃣1️⃣ Factorial&lt;/h3&gt;
+&lt;p&gt;$$n!$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input → Output&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;5 → 120&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n = 5
+fact = 1
+for i in range(1, n+1):
+    fact *= i
+print(fact)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;12-permutations&#34;&gt;1️⃣2️⃣ Permutations&lt;/h3&gt;
+&lt;p&gt;$$P(n,k)=\frac{n!}{(n-k)!}$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input → Output&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;n=5, k=2 → 20&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n, k = 5, 2
+res = 1
+for i in range(n, n-k, -1):
+    res *= i
+print(res)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;13-combinations&#34;&gt;1️⃣3️⃣ Combinations&lt;/h3&gt;
+&lt;p&gt;$$C(n,k)=\frac{n!}{k!(n-k)!}$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input → Output&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;n=5, k=2 → 10&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n, k = 5, 2
+num = 1
+den = 1
+for i in range(k):
+    num *= (n-i)
+    den *= (i+1)
+print(num//den)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;14-fibonacci-sequence&#34;&gt;1️⃣4️⃣ Fibonacci Sequence&lt;/h3&gt;
+&lt;p&gt;$$F_n = F_{n-1}+F_{n-2}$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input → Output&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;n=7 → 13&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n = 7
+a, b = 0, 1
+for _ in range(n):
+    a, b = b, a+b
+print(a)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;15-prefix-sum&#34;&gt;1️⃣5️⃣ Prefix Sum&lt;/h3&gt;
+&lt;p&gt;$$P[i]=P[i-1]+a[i]$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input → Output&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[1,2,3,4] → [0,1,3,6,10]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;arr = [1,2,3,4]
+prefix = [0]
+for x in arr:
+    prefix.append(prefix[-1] + x)
+print(prefix)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;16-sliding-window-sum&#34;&gt;1️⃣6️⃣ Sliding Window Sum&lt;/h3&gt;
+&lt;p&gt;$$S_{i+1}=S_i-a_i+a_{i+k}$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;arr = [1,2,3,4,5]
+k = 3
+s = sum(arr[:k])
+print(s)
+for i in range(len(arr)-k):
+    s = s - arr[i] + arr[i+k]
+    print(s)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;17-xor-property&#34;&gt;1️⃣7️⃣ XOR Property&lt;/h3&gt;
+&lt;p&gt;$$a\oplus a = 0$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input → Output&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[1,2,2,3,3] → 1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;nums = [1,2,2,3,3]
+x = 0
+for n in nums:
+    x ^= n
+print(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;18-binary-representation&#34;&gt;1️⃣8️⃣ Binary Representation&lt;/h3&gt;
+&lt;p&gt;$$\sum b_i2^i$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n = 13
+binary = &amp;quot;&amp;quot;
+while n:
+    binary = str(n%2) + binary
+    n //= 2
+print(binary)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;19-pythagorean-theorem&#34;&gt;1️⃣9️⃣ Pythagorean Theorem&lt;/h3&gt;
+&lt;p&gt;$$a^2+b^2=c^2$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a, b = 3, 4
+c = (a*a + b*b)**0.5
+print(c)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;20-euclidean-distance-2d&#34;&gt;2️⃣0️⃣ Euclidean Distance (2D)&lt;/h3&gt;
+&lt;p&gt;$$\sqrt{(x1-x2)^2+(y1-y2)^2}$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x1,y1,x2,y2 = 1,1,4,5
+d = ((x1-x2)**2 + (y1-y2)**2)**0.5
+print(d)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;21-manhattan-distance&#34;&gt;2️⃣1️⃣ Manhattan Distance&lt;/h3&gt;
+&lt;p&gt;$$|x1-x2|+|y1-y2|$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(abs(1-4) + abs(1-5))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;22-minmax-normalization&#34;&gt;2️⃣2️⃣ Min–Max Normalization&lt;/h3&gt;
+&lt;p&gt;$$\frac{x-min}{max-min}$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x, mn, mx = 75, 50, 100
+print((x-mn)/(mx-mn))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;23-probability&#34;&gt;2️⃣3️⃣ Probability&lt;/h3&gt;
+&lt;p&gt;$$P=\frac{favorable}{total}$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(1/6)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;24-expected-value&#34;&gt;2️⃣4️⃣ Expected Value&lt;/h3&gt;
+&lt;p&gt;$$E(X)=\sum xP(x)$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;values = [0,1]
+probs = [0.7,0.3]
+ev = 0
+for i in range(2):
+    ev += values[i]*probs[i]
+print(ev)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;25-log-base-2-loop-count&#34;&gt;2️⃣5️⃣ Log Base 2 (Loop Count)&lt;/h3&gt;
+&lt;p&gt;$$2^k = n$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n = 16
+k = 0
+while n &amp;gt; 1:
+    n //= 2
+    k += 1
+print(k)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;26-big-o-n&#34;&gt;2️⃣6️⃣ Big-O (n²)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;count = 0
+n = 5
+for i in range(n):
+    for j in range(n):
+        count += 1
+print(count)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;27-recurrence-relation&#34;&gt;2️⃣7️⃣ Recurrence Relation&lt;/h3&gt;
+&lt;p&gt;$$T(n)=T(n-1)+1$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def T(n):
+    if n==0: return 0
+    return T(n-1)+1
+print(T(5))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;28-gradient-idea-slope&#34;&gt;2️⃣8️⃣ Gradient Idea (Slope)&lt;/h3&gt;
+&lt;p&gt;$$\frac{\Delta y}{\Delta x}$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x1,y1 = 1,2
+x2,y2 = 4,8
+print((y2-y1)/(x2-x1))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;29-linear-equation&#34;&gt;2️⃣9️⃣ Linear Equation&lt;/h3&gt;
+&lt;p&gt;$$y=ax+b$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a,b,x = 2,3,5
+print(a*x+b)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;30-state-transition&#34;&gt;3️⃣0️⃣ State Transition&lt;/h3&gt;
+&lt;p&gt;$$S_{t+1}=f(S_t)$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;state = 1
+for _ in range(5):
+    state = state * 2
+print(state)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;31-ratio&#34;&gt;3️⃣1️⃣ Ratio&lt;/h3&gt;
+&lt;p&gt;$$a:b$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a,b = 2,5
+print(a/(a+b), b/(a+b))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;32-percentage&#34;&gt;3️⃣2️⃣ Percentage&lt;/h3&gt;
+&lt;p&gt;$$\frac{part}{whole}$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(30/200*100)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;33-ceiling-division&#34;&gt;3️⃣3️⃣ Ceiling Division&lt;/h3&gt;
+&lt;p&gt;$$\lceil a/b \rceil$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a,b = 10,3
+print((a+b-1)//b)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;34-gcd-euclidean-algorithm&#34;&gt;3️⃣4️⃣ GCD (Euclidean Algorithm)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a,b = 48,18
+while b:
+    a,b = b, a%b
+print(a)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;35-lcm&#34;&gt;3️⃣5️⃣ LCM&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a,b = 4,6
+g = a
+c = b
+while c:
+    g,c = c, g%c
+print(a*b//g)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;36-prime-check&#34;&gt;3️⃣6️⃣ Prime Check&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n = 29
+is_prime = True
+for i in range(2, n):
+    if n % i == 0:
+        is_prime = False
+print(is_prime)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;37-count-digits&#34;&gt;3️⃣7️⃣ Count Digits&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n = 12345
+count = 0
+while n:
+    n //= 10
+    count += 1
+print(count)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;38-reverse-number&#34;&gt;3️⃣8️⃣ Reverse Number&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n = 1234
+rev = 0
+while n:
+    rev = rev*10 + n%10
+    n //= 10
+print(rev)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;39-palindrome-check&#34;&gt;3️⃣9️⃣ Palindrome Check&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;s = &amp;quot;racecar&amp;quot;
+print(s == s[::-1])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;40-sum-of-digits&#34;&gt;4️⃣0️⃣ Sum of Digits&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n = 123
+s = 0
+while n:
+    s += n%10
+    n //= 10
+print(s)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;41-binary-search-steps&#34;&gt;4️⃣1️⃣ Binary Search Steps&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;arr = [1,3,5,7,9]
+target = 7
+l,r = 0,len(arr)-1
+steps = 0
+while l&amp;lt;=r:
+    m = (l+r)//2
+    steps += 1
+    if arr[m]==target: break
+    elif arr[m]&amp;lt;target: l=m+1
+    else: r=m-1
+print(steps)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;42-graph-degree-count&#34;&gt;4️⃣2️⃣ Graph Degree Count&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;edges = [(1,2),(2,3),(2,4)]
+degree = {}
+for u,v in edges:
+    degree[u] = degree.get(u,0)+1
+    degree[v] = degree.get(v,0)+1
+print(degree)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;43-bfs-node-count&#34;&gt;4️⃣3️⃣ BFS Node Count&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;graph = {1:[2,3],2:[4],3:[],4:[]}
+queue = [1]
+visited = set()
+count = 0
+while queue:
+    node = queue.pop(0)
+    if node in visited: continue
+    visited.add(node)
+    count += 1
+    queue += graph[node]
+print(count)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;44-dfs-depth&#34;&gt;4️⃣4️⃣ DFS Depth&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def dfs(node, depth):
+    if node is None: return depth
+    return dfs(None, depth+1)
+print(dfs(1,0))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;45-entropy-binary&#34;&gt;4️⃣5️⃣ Entropy (Binary)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;p = 0.5
+entropy = -p*(p**0.0) - p*(p**0.0)
+print(entropy)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;46-loss-squared-error&#34;&gt;4️⃣6️⃣ Loss (Squared Error)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;y, y_hat = 10, 7
+print((y-y_hat)**2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;47-sigmoid-manual&#34;&gt;4️⃣7️⃣ Sigmoid (Manual)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = 0
+print(1/(1+2.71828**(-x)))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;48-softmax-2-values&#34;&gt;4️⃣8️⃣ Softmax (2 values)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a,b = 2,1
+ea = 2.71828**a
+eb = 2.71828**b
+print(ea/(ea+eb), eb/(ea+eb))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;49-monte-carlo-average&#34;&gt;4️⃣9️⃣ Monte Carlo Average&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+s = 0
+n = 1000
+for _ in range(n):
+    s += 1
+print(s/n)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;50-law-of-large-numbers&#34;&gt;5️⃣0️⃣ Law of Large Numbers&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;s = 0
+n = 10000
+for i in range(1,n+1):
+    s += i
+print(s/n)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;51-arithmetic-progression-general&#34;&gt;5️⃣1️⃣ Arithmetic Progression (General)&lt;/h3&gt;
+&lt;p&gt;$$a_n = a_1 + (n-1)d$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Input → Output&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a₁=2, d=3, n=5 → 14&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a1, d, n = 2, 3, 5
+print(a1 + (n-1)*d)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Helps solve:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sequence prediction&lt;/li&gt;
+&lt;li&gt;Index-based patterns&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Builds intuition:&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Position matters as much as value.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;52-geometric-progression-term&#34;&gt;5️⃣2️⃣ Geometric Progression Term&lt;/h3&gt;
+&lt;p&gt;$$a_n = a_1 r^{n-1}$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a1, r, n = 3, 2, 4
+print(a1 * (r**(n-1)))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Helps solve:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Explosive growth&lt;/li&gt;
+&lt;li&gt;Recursive structures&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;53-sum-of-geometric-progression&#34;&gt;5️⃣3️⃣ Sum of Geometric Progression&lt;/h3&gt;
+&lt;p&gt;$$S_n = a \frac{r^n-1}{r-1}$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a, r, n = 1, 2, 5
+print(a*(r**n-1)//(r-1))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Helps solve:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Infinite-like growth&lt;/li&gt;
+&lt;li&gt;Algorithm bounds&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;54-inclusionexclusion-principle&#34;&gt;5️⃣4️⃣ Inclusion–Exclusion Principle&lt;/h3&gt;
+&lt;p&gt;$$|A∪B| = |A|+|B|-|A∩B|$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;A = {1,2,3}
+B = {3,4}
+print(len(A)+len(B)-len(A&amp;amp;B))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Helps solve:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Counting overlaps&lt;/li&gt;
+&lt;li&gt;Probability traps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;55-gcd-property&#34;&gt;5️⃣5️⃣ GCD Property&lt;/h3&gt;
+&lt;p&gt;$$gcd(a,b)=gcd(b,a\bmod b)$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a,b = 1071,462
+while b:
+    a,b = b,a%b
+print(a)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Helps solve:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Number theory&lt;/li&gt;
+&lt;li&gt;Periodicity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;56-modular-addition&#34;&gt;5️⃣6️⃣ Modular Addition&lt;/h3&gt;
+&lt;p&gt;$$(a+b)\bmod m$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a,b,m = 17,29,5
+print((a+b)%m)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Helps solve:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Large number safety&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;57-modular-multiplication&#34;&gt;5️⃣7️⃣ Modular Multiplication&lt;/h3&gt;
+&lt;p&gt;$$(a·b)\bmod m$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print((123*456)%7)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Helps solve:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cryptography basics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;58-modular-exponentiation&#34;&gt;5️⃣8️⃣ Modular Exponentiation&lt;/h3&gt;
+&lt;p&gt;$$a^b \bmod m$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a,b,m = 3,13,7
+res = 1
+for _ in range(b):
+    res = (res*a)%m
+print(res)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Helps solve:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Secure computation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;59-fermats-little-theorem&#34;&gt;5️⃣9️⃣ Fermat’s Little Theorem&lt;/h3&gt;
+&lt;p&gt;$$a^{p-1}≡1 \pmod p$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a,p = 3,7
+print((a**(p-1))%p)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Helps solve:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fast inverse mod&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;60-modular-inverse-prime&#34;&gt;6️⃣0️⃣ Modular Inverse (Prime)&lt;/h3&gt;
+&lt;p&gt;$$a^{p-2} \bmod p$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a,p = 3,7
+print((a**(p-2))%p)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;61-chinese-remainder-2-eq&#34;&gt;6️⃣1️⃣ Chinese Remainder (2 eq)&lt;/h3&gt;
+&lt;p&gt;$$x≡a (m), x≡b (n)$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# brute for demo
+for x in range(1,50):
+    if x%3==2 and x%5==3:
+        print(x)
+        break
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;62-pigeonhole-principle&#34;&gt;6️⃣2️⃣ Pigeonhole Principle&lt;/h3&gt;
+&lt;p&gt;$$n+1 items → n boxes$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;items, boxes = 11,10
+print(items&amp;gt;boxes)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;63-prime-counting-intuition&#34;&gt;6️⃣3️⃣ Prime Counting Intuition&lt;/h3&gt;
+&lt;p&gt;$$\pi(n)$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n=20
+primes=[]
+for i in range(2,n+1):
+    ok=True
+    for j in range(2,i):
+        if i%j==0: ok=False
+    if ok: primes.append(i)
+print(len(primes))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;64-perfect-square-check&#34;&gt;6️⃣4️⃣ Perfect Square Check&lt;/h3&gt;
+&lt;p&gt;$$k^2=n$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n=49
+print(int(n**0.5)**2==n)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;65-divisor-counting&#34;&gt;6️⃣5️⃣ Divisor Counting&lt;/h3&gt;
+&lt;p&gt;$$n=∏p_i^{e_i} → ∏(e_i+1)$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n=36
+count=0
+for i in range(1,n+1):
+    if n%i==0: count+=1
+print(count)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;66-sum-of-divisors&#34;&gt;6️⃣6️⃣ Sum of Divisors&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n=12
+s=0
+for i in range(1,n+1):
+    if n%i==0: s+=i
+print(s)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;67-euler-totient-φ&#34;&gt;6️⃣7️⃣ Euler Totient (φ)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n=9
+count=0
+for i in range(1,n+1):
+    if __import__(&#39;math&#39;).gcd(i,n)==1:
+        count+=1
+print(count)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;68-binomial-theorem&#34;&gt;6️⃣8️⃣ Binomial Theorem&lt;/h3&gt;
+&lt;p&gt;$$(a+b)^n$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a,b,n = 1,2,3
+print((a+b)**n)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;69-pascal-triangle-rule&#34;&gt;6️⃣9️⃣ Pascal Triangle Rule&lt;/h3&gt;
+&lt;p&gt;$$C(n,k)=C(n-1,k-1)+C(n-1,k)$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;C=[[1]]
+for i in range(1,5):
+    row=[1]
+    for j in range(1,i):
+        row.append(C[i-1][j-1]+C[i-1][j])
+    row.append(1)
+    C.append(row)
+print(C)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;70-catalan-numbers&#34;&gt;7️⃣0️⃣ Catalan Numbers&lt;/h3&gt;
+&lt;p&gt;$$C_n = \frac{1}{n+1}{2n \choose n}$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;n=4
+num=1
+den=1
+for i in range(n):
+    num*=2*n-i
+    den*=i+1
+print(num//den//(n+1))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;71-principle-of-mathematical-induction&#34;&gt;7️⃣1️⃣ Principle of Mathematical Induction&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# verify sum 1..n = n(n+1)/2
+for n in range(1,10):
+    if sum(range(1,n+1))!=n*(n+1)//2:
+        print(False)
+print(True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;72-invariant-concept&#34;&gt;7️⃣2️⃣ Invariant Concept&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# parity invariant
+nums=[1,3,5]
+print(sum(nums)%2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;73-symmetry&#34;&gt;7️⃣3️⃣ Symmetry&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;arr=[1,2,3,2,1]
+print(arr==arr[::-1])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;74-extremal-principle&#34;&gt;7️⃣4️⃣ Extremal Principle&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;arr=[3,7,2,9,4]
+print(max(arr), min(arr))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;75-greedy-choice-property&#34;&gt;7️⃣5️⃣ Greedy Choice Property&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;coins=[5,2,1]
+amount=11
+cnt=0
+for c in coins:
+    cnt+=amount//c
+    amount%=c
+print(cnt)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;76-am--gm&#34;&gt;7️⃣6️⃣ AM ≥ GM&lt;/h3&gt;
+&lt;p&gt;$$\frac{a+b}{2} ≥ \sqrt{ab}$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a,b=4,9
+print((a+b)/2 &amp;gt;= (a*b)**0.5)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;77-cauchyschwarz-vector-intuition&#34;&gt;7️⃣7️⃣ Cauchy–Schwarz (Vector Intuition)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a=[1,2]
+b=[3,4]
+dot= a[0]*b[0]+a[1]*b[1]
+print(dot)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;78-triangle-inequality&#34;&gt;7️⃣8️⃣ Triangle Inequality&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;a,b,c=3,4,8
+print(a+b&amp;gt;c)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;79-counting-paths-grid&#34;&gt;7️⃣9️⃣ Counting Paths (Grid)&lt;/h3&gt;
+&lt;p&gt;$$C(m+n,m)$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;m,n=2,3
+num=1
+den=1
+for i in range(m):
+    num*=m+n-i
+    den*=i+1
+print(num//den)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;80-matrix-power-transition&#34;&gt;8️⃣0️⃣ Matrix Power (Transition)&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Fibonacci via transition idea
+n=5
+a,b=0,1
+for _ in range(n):
+    a,b=b,a+b
+print(a)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;81-recursion-tree-size&#34;&gt;8️⃣1️⃣ Recursion Tree Size&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def f(n):
+    if n==0: return 1
+    return f(n-1)+f(n-1)
+print(f(4))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;82-probability-complement&#34;&gt;8️⃣2️⃣ Probability Complement&lt;/h3&gt;
+&lt;p&gt;$$P(A^c)=1-P(A)$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;p=0.3
+print(1-p)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;83-expected-steps&#34;&gt;8️⃣3️⃣ Expected Steps&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;steps=[1,2,3]
+probs=[0.2,0.3,0.5]
+print(sum(steps[i]*probs[i] for i in range(3)))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;84-random-walk-expectation&#34;&gt;8️⃣4️⃣ Random Walk Expectation&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pos=0
+for _ in range(1000): pos+=1
+print(pos/1000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;85-variance-identity&#34;&gt;8️⃣5️⃣ Variance Identity&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;xs=[1,2,3]
+mean=sum(xs)/len(xs)
+var=sum((x-mean)**2 for x in xs)/len(xs)
+print(var)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;86-chebyshev-intuition&#34;&gt;8️⃣6️⃣ Chebyshev Intuition&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# bound idea
+print(&amp;quot;few values far from mean&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;87-graph-handshaking-lemma&#34;&gt;8️⃣7️⃣ Graph Handshaking Lemma&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;edges=[(1,2),(2,3)]
+deg={}
+for u,v in edges:
+    deg[u]=deg.get(u,0)+1
+    deg[v]=deg.get(v,0)+1
+print(sum(deg.values())==2*len(edges))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-thought&#34;&gt;🏁 Final Thought&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Mathematics is not about formulas.
+It is about &lt;strong&gt;confidence in thinking&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you understand these 50 ideas,
+you are no longer just writing code.&lt;/p&gt;
+&lt;p&gt;You are &lt;strong&gt;designing systems&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
       <title>DK-001 — The Harry Potter Universe (A Beginner-Friendly Guide)</title>
       <link>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-001-harry-potter-overview/</link>
       <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
