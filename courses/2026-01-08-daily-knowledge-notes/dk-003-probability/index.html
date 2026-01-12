@@ -1,0 +1,2627 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Teerapong Panboonyuen" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-003-probability/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08f2e04360a1c87f5ad39547c02bf219.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-003-probability/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-003-probability/" />
+  <meta property="og:title" content="DK-003 — Probability | Teerapong Panboonyuen" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2026-01-12T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2026-01-12T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>DK-003 — Probability | Teerapong Panboonyuen</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="3ba329f811f866be255eceb205eb4bab" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.4be02a3b391999348b0c7478778a0e4b.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#awards"><span>Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#press"><span>Press</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Featured</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#tags"><span>Topics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#communities"><span>Communities</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://x.com/kaopanboonyuen" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          Knowledge Notes
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/courses/"><i class="fas fa-arrow-left pr-1"></i>Courses</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/courses/2026-01-08-daily-knowledge-notes/">Knowledge Notes</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class="active"><a href="/courses/2026-01-08-daily-knowledge-notes/dk-003-probability/">DK-003 — Probability</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know-copy/">DK-002 — Math Every Programmer Should Know</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-001-harry-potter-overview/">DK-001 — The Harry Potter Universe (A Beginner-Friendly Guide)</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-why-this-note-exists">🎯 Why This Note Exists</a></li>
+    <li><a href="#-what-is-probability-human-version">🎲 What Is Probability? (Human Version)</a></li>
+    <li><a href="#-messi-example--simple-probability">⚽ Messi Example — Simple Probability</a></li>
+    <li><a href="#-harry-potter-example--house-sorting">🧙 Harry Potter Example — House Sorting</a></li>
+    <li><a href="#-sample-space--events">📦 Sample Space &amp; Events</a>
+      <ul>
+        <li><a href="#sample-space-ω">Sample Space (Ω)</a></li>
+        <li><a href="#event">Event</a></li>
+      </ul>
+    </li>
+    <li><a href="#-addition-rule-or">➕ Addition Rule (OR)</a>
+      <ul>
+        <li><a href="#-card-example">🎴 Card Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#-multiplication-rule-and">✖️ Multiplication Rule (AND)</a>
+      <ul>
+        <li><a href="#-messi-example">⚽ Messi Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#-conditional-probability--the-core-idea">🔗 Conditional Probability — The CORE IDEA</a>
+      <ul>
+        <li><a href="#-formula">📐 Formula</a></li>
+      </ul>
+    </li>
+    <li><a href="#-intuition-very-important">🧠 Intuition (Very Important)</a></li>
+    <li><a href="#-harry-potter-example--conditional-probability">🧙 Harry Potter Example — Conditional Probability</a></li>
+    <li><a href="#-bayes-theorem-the-famous-one">🔄 Bayes’ Theorem (The Famous One)</a>
+      <ul>
+        <li><a href="#-formula-1">📐 Formula</a></li>
+      </ul>
+    </li>
+    <li><a href="#-why-bayes-is-powerful">🧠 Why Bayes Is Powerful</a></li>
+    <li><a href="#-messi-injury-example--bayes-thinking">⚽ Messi Injury Example — Bayes Thinking</a></li>
+    <li><a href="#-statistics-you-must-know-light--practical">📊 Statistics You Must Know (Light &amp; Practical)</a>
+      <ul>
+        <li><a href="#mean-average">Mean (Average)</a></li>
+        <li><a href="#variance--standard-deviation">Variance &amp; Standard Deviation</a></li>
+      </ul>
+    </li>
+    <li><a href="#-from-probability-to-machine-learning">🤖 From Probability to Machine Learning</a></li>
+    <li><a href="#-naive-bayes--final-boss-but-simple">🧠 Naive Bayes — Final Boss (But Simple)</a>
+      <ul>
+        <li><a href="#core-assumption">Core Assumption</a></li>
+        <li><a href="#-formula-2">📐 Formula</a></li>
+      </ul>
+    </li>
+    <li><a href="#-spam-email-example-classic">📧 Spam Email Example (Classic)</a></li>
+    <li><a href="#-harry-potter-sorting-hat--naive-bayes-style">🧙 Harry Potter Sorting Hat — Naive Bayes Style</a></li>
+    <li><a href="#-final-mental-model-remember-this">🧠 Final Mental Model (Remember This)</a></li>
+    <li><a href="#-from-scores-to-probabilities-the-ai-bridge">🔢 From Scores to Probabilities (The AI Bridge)</a></li>
+    <li><a href="#-sigmoid-function--probability-for-binary-decisions">🔁 Sigmoid Function — Probability for Binary Decisions</a>
+      <ul>
+        <li><a href="#-when-to-use-sigmoid">🎯 When to Use Sigmoid</a></li>
+        <li><a href="#-sigmoid-formula">📐 Sigmoid Formula</a></li>
+      </ul>
+    </li>
+    <li><a href="#-intuition-human-version">🧠 Intuition (Human Version)</a></li>
+    <li><a href="#-messi-example--sigmoid-intuition">⚽ Messi Example — Sigmoid Intuition</a>
+      <ul>
+        <li><a href="#step-by-step-calculation">Step-by-step calculation</a></li>
+      </ul>
+    </li>
+    <li><a href="#-pure-python--sigmoid-no-libraries">🧑‍💻 Pure Python — Sigmoid (NO Libraries)</a></li>
+    <li><a href="#-key-sigmoid-landmarks-very-important">📌 Key Sigmoid Landmarks (Very Important)</a></li>
+    <li><a href="#-logistic-regression--probability-model">🧠 Logistic Regression = Probability Model</a></li>
+    <li><a href="#-why-sigmoid-works-for-probability">🎯 Why Sigmoid Works for Probability</a></li>
+    <li><a href="#-softmax--probability-for-multiple-classes">🌈 Softmax — Probability for Multiple Classes</a>
+      <ul>
+        <li><a href="#-when-to-use-softmax">🎯 When to Use Softmax</a></li>
+        <li><a href="#-softmax-formula">📐 Softmax Formula</a></li>
+      </ul>
+    </li>
+    <li><a href="#-intuition-human-version-1">🧠 Intuition (Human Version)</a></li>
+    <li><a href="#-harry-potter-example--sorting-hat-scores">🧙 Harry Potter Example — Sorting Hat Scores</a>
+      <ul>
+        <li><a href="#step-by-step-softmax-calculation">Step-by-step Softmax Calculation</a></li>
+      </ul>
+    </li>
+    <li><a href="#-pure-python--softmax-no-libraries">🧑‍💻 Pure Python — Softmax (NO Libraries)</a></li>
+    <li><a href="#-sigmoid-vs-softmax-must-remember">🔑 Sigmoid vs Softmax (Must Remember)</a></li>
+    <li><a href="#-final-unifying-picture-very-important">🧠 Final Unifying Picture (Very Important)</a></li>
+    <li><a href="#-final-thought-for-students">🏁 Final Thought for Students</a></li>
+    <li><a href="#-closing-thought">🏁 Closing Thought</a></li>
+    <li><a href="#-why-ai-needs-a-loss-function">📉 Why AI Needs a “Loss Function”</a></li>
+    <li><a href="#-cross-entropy-loss--probability-punishment">🔥 Cross-Entropy Loss — Probability Punishment</a>
+      <ul>
+        <li><a href="#-what-cross-entropy-measures">🎯 What Cross-Entropy Measures</a></li>
+      </ul>
+    </li>
+    <li><a href="#-binary-cross-entropy-most-important-first">🎯 Binary Cross-Entropy (Most Important First)</a>
+      <ul>
+        <li><a href="#-formula-3">📐 Formula</a></li>
+      </ul>
+    </li>
+    <li><a href="#-intuition-human-version-2">🧠 Intuition (Human Version)</a></li>
+    <li><a href="#-messi-injury-example--cross-entropy">⚽ Messi Injury Example — Cross-Entropy</a>
+      <ul>
+        <li><a href="#case-1--good-prediction">Case 1 — Good prediction</a></li>
+        <li><a href="#case-2--terrible-prediction">Case 2 — Terrible prediction</a></li>
+      </ul>
+    </li>
+    <li><a href="#-why-log-is-used-very-important">📉 Why LOG is Used (Very Important)</a></li>
+    <li><a href="#-reason-1-log-turns-multiplication-into-addition">📉 Reason 1: Log Turns Multiplication into Addition</a></li>
+    <li><a href="#-reason-2-log-explodes-confident-mistakes">📉 Reason 2: Log Explodes Confident Mistakes</a></li>
+    <li><a href="#-reason-3-log-likelihood--probability-maximization">📉 Reason 3: Log-Likelihood = Probability Maximization</a></li>
+    <li><a href="#-cross-entropy--negative-log-likelihood">🧠 Cross-Entropy = Negative Log-Likelihood</a></li>
+    <li><a href="#-logistic-regression--from-scratch-pure-python">🤖 Logistic Regression — From Scratch (Pure Python)</a></li>
+    <li><a href="#-logistic-regression-model">🧠 Logistic Regression Model</a>
+      <ul>
+        <li><a href="#step-1--linear-score">Step 1 — Linear Score</a></li>
+        <li><a href="#step-2--sigmoid">Step 2 — Sigmoid</a></li>
+        <li><a href="#step-3--cross-entropy-loss">Step 3 — Cross-Entropy Loss</a></li>
+      </ul>
+    </li>
+    <li><a href="#-pure-python-implementation-no-libs">🧑‍💻 Pure Python Implementation (NO LIBS)</a>
+      <ul>
+        <li><a href="#-math-helpers">🔢 Math Helpers</a></li>
+        <li><a href="#-loss-function">📉 Loss Function</a></li>
+        <li><a href="#-training-loop-1-feature">🔁 Training Loop (1 Feature)</a></li>
+      </ul>
+    </li>
+    <li><a href="#-what-students-should-realize">🧠 What Students Should Realize</a></li>
+    <li><a href="#-everything-connects-final-mental-map">🔗 Everything Connects (Final Mental Map)</a></li>
+    <li><a href="#-final-truth-put-this-on-a-slide">🏁 Final Truth (Put This on a Slide)</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-what-backpropagation-really-is">🎯 What Backpropagation Really Is</a></li>
+    <li><a href="#-chain-rule-foundation">🔗 Chain Rule (Foundation)</a></li>
+    <li><a href="#-minimal-neural-network-one-neuron">🧠 Minimal Neural Network (One Neuron)</a>
+      <ul>
+        <li><a href="#definitions">Definitions</a></li>
+      </ul>
+    </li>
+    <li><a href="#-goal-of-backpropagation">🔥 Goal of Backpropagation</a></li>
+    <li><a href="#-step-by-step-gradient-derivation">✍️ Step-by-Step Gradient Derivation</a>
+      <ul>
+        <li><a href="#step-1--loss--prediction">Step 1 — Loss → Prediction</a></li>
+        <li><a href="#step-2--prediction--linear-score">Step 2 — Prediction → Linear Score</a></li>
+        <li><a href="#step-3--linear-score--parameters">Step 3 — Linear Score → Parameters</a></li>
+      </ul>
+    </li>
+    <li><a href="#-why-this-is-powerful">🧠 Why This Is Powerful</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-why-convolution-exists">🎯 Why Convolution Exists</a></li>
+    <li><a href="#-definition-of-convolution">🧠 Definition of Convolution</a></li>
+    <li><a href="#-1d-convolution-example">🧊 1D Convolution Example</a></li>
+    <li><a href="#-manual-computation">✍️ Manual Computation</a></li>
+    <li><a href="#-cnn-processing-pipeline">🧠 CNN Processing Pipeline</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-the-numerical-problem">❌ The Numerical Problem</a></li>
+    <li><a href="#-log-sum-exp-identity">✅ Log-Sum-Exp Identity</a></li>
+    <li><a href="#-why-this-works">🧠 Why This Works</a></li>
+    <li><a href="#-stable-cross-entropy-direct-form">📉 Stable Cross-Entropy (Direct Form)</a>
+      <ul>
+        <li><a href="#1-what-does-probability-measure">1️⃣ What does probability measure?</a></li>
+        <li><a href="#2-if-messi-scores-8-goals-out-of-10-penalties-what-is-the-probability-he-scores">2️⃣ If Messi scores 8 goals out of 10 penalties, what is the probability he scores?</a></li>
+        <li><a href="#3-what-is-the-sample-space-when-rolling-a-standard-die">3️⃣ What is the <strong>sample space</strong> when rolling a standard die?</a></li>
+        <li><a href="#4-if-gryffindor-has-40-students-out-of-100-what-is">4️⃣ If Gryffindor has 40 students out of 100, what is</a></li>
+        <li><a href="#5-what-does-an-event-mean-in-probability">5️⃣ What does an <strong>event</strong> mean in probability?</a></li>
+        <li><a href="#6-what-is-the-probability-range-of-any-event">6️⃣ What is the probability range of any event?</a></li>
+        <li><a href="#7-which-formula-represents-conditional-probability">7️⃣ Which formula represents <strong>conditional probability</strong>?</a></li>
+        <li><a href="#8-what-does-pa--b-mean-in-plain-english">8️⃣ What does P(A | B) mean in plain English?</a></li>
+        <li><a href="#9-in-hogwarts-terms-conditional-probability-means">9️⃣ In Hogwarts terms, conditional probability means:</a></li>
+        <li><a href="#-which-rule-is-used-for-independent-events">🔟 Which rule is used for <strong>independent events</strong>?</a></li>
+        <li><a href="#11-if-messi-scores-with-probability-08">1️⃣1️⃣ If Messi scores with probability 0.8</a></li>
+        <li><a href="#12-what-problem-does-the-addition-rule-solve">1️⃣2️⃣ What problem does the <strong>addition rule</strong> solve?</a></li>
+        <li><a href="#13-what-is-bayes-theorem-mainly-used-for">1️⃣3️⃣ What is <strong>Bayes’ Theorem</strong> mainly used for?</a></li>
+        <li><a href="#14-which-formula-is-bayes-theorem">1️⃣4️⃣ Which formula is Bayes’ Theorem?</a></li>
+        <li><a href="#15-in-messi-injury-analysis-bayes-helps-answer">1️⃣5️⃣ In Messi injury analysis, Bayes helps answer:</a></li>
+        <li><a href="#16-what-does-mean-average-measure">1️⃣6️⃣ What does <strong>mean (average)</strong> measure?</a></li>
+        <li><a href="#17-high-variance-means-what">1️⃣7️⃣ High variance means what?</a></li>
+        <li><a href="#18-who-has-lower-variance-in-exam-scores">1️⃣8️⃣ Who has lower variance in exam scores?</a></li>
+        <li><a href="#19-what-is-the-key-assumption-of-naive-bayes">1️⃣9️⃣ What is the key assumption of <strong>Naive Bayes</strong>?</a></li>
+        <li><a href="#20-why-is-naive-bayes-powerful-despite-being-naive">2️⃣0️⃣ Why is Naive Bayes powerful despite being “naive”?</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+  
+  
+
+  <li class="breadcrumb-item">
+    <a href="/">
+      
+        Home
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/">
+      
+        Courses
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/2026-01-08-daily-knowledge-notes/">
+      
+        Knowledge Notes
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        DK-003 — Probability
+      </li>
+    </ol>
+  </nav>
+
+
+          
+
+          <h1>DK-003 — Probability</h1>
+
+          <div class="article-style">
+            <hr>
+<h2 id="-why-this-note-exists">🎯 Why This Note Exists</h2>
+<p>Probability is not about gambling.<br>
+It is about <strong>reasoning under uncertainty</strong>.</p>
+<p>Every time you:</p>
+<ul>
+<li>design an AI model</li>
+<li>debug noisy data</li>
+<li>read metrics (accuracy, precision, recall)</li>
+<li>make decisions with incomplete information</li>
+</ul>
+<p>You are doing <strong>probability thinking</strong>.</p>
+<p>This note is a <strong>full recap</strong> of probability &amp; statistics you <em>must</em> know,
+from zero intuition → conditional probability → <strong>Naive Bayes</strong>.</p>
+<p>No heavy math.
+Only <strong>ideas you can remember forever</strong>.</p>
+<hr>
+<h2 id="-what-is-probability-human-version">🎲 What Is Probability? (Human Version)</h2>
+<p><strong>Probability = how likely something is to happen</strong></p>
+<p>It is always a number between:</p>
+<p>$$
+0 \le P(\text{event}) \le 1
+$$</p>
+<ul>
+<li><code>0</code> → impossible</li>
+<li><code>1</code> → guaranteed</li>
+</ul>
+<hr>
+<h2 id="-messi-example--simple-probability">⚽ Messi Example — Simple Probability</h2>
+<p>Imagine:</p>
+<ul>
+<li>Messi takes <strong>10 penalties</strong></li>
+<li>He scores <strong>8 goals</strong></li>
+</ul>
+<p>Probability Messi scores:</p>
+<p>$$
+P(\text{goal}) = \frac{8}{10} = 0.8
+$$</p>
+<p>Human meaning:</p>
+<blockquote>
+<p>If Messi takes a penalty,<br>
+<strong>80% chance</strong> it goes in.</p>
+</blockquote>
+<hr>
+<h2 id="-harry-potter-example--house-sorting">🧙 Harry Potter Example — House Sorting</h2>
+<p>Suppose Hogwarts has 100 students:</p>
+<table>
+<thead>
+<tr>
+<th>House</th>
+<th>Students</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gryffindor</td>
+<td>40</td>
+</tr>
+<tr>
+<td>Slytherin</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Ravenclaw</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Hufflepuff</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<p>Probability a random student is Gryffindor:</p>
+<p>$$
+P(\text{Gryffindor}) = \frac{40}{100} = 0.4
+$$</p>
+<hr>
+<h2 id="-sample-space--events">📦 Sample Space &amp; Events</h2>
+<h3 id="sample-space-ω">Sample Space (Ω)</h3>
+<p>All possible outcomes.</p>
+<p>Example: rolling a die</p>
+<p>$$
+\Omega = {1,2,3,4,5,6}
+$$</p>
+<h3 id="event">Event</h3>
+<p>A subset of outcomes.</p>
+<p>Example:</p>
+<ul>
+<li>Event A = “even number” = <code>{2,4,6}</code></li>
+</ul>
+<hr>
+<h2 id="-addition-rule-or">➕ Addition Rule (OR)</h2>
+<p>Probability that <strong>A or B</strong> happens:</p>
+<p>$$
+P(A \cup B) = P(A) + P(B) - P(A \cap B)
+$$</p>
+<h3 id="-card-example">🎴 Card Example</h3>
+<ul>
+<li>A = draw a <strong>Heart</strong></li>
+<li>B = draw a <strong>Face card</strong></li>
+</ul>
+<p>We subtract overlap to avoid <strong>double counting</strong>.</p>
+<hr>
+<h2 id="-multiplication-rule-and">✖️ Multiplication Rule (AND)</h2>
+<p>For <strong>independent events</strong>:</p>
+<p>$$
+P(A \cap B) = P(A) \times P(B)
+$$</p>
+<h3 id="-messi-example">⚽ Messi Example</h3>
+<ul>
+<li>Probability Messi scores = 0.8</li>
+<li>Probability goalkeeper guesses wrong = 0.7</li>
+</ul>
+<p>Both happen:</p>
+<p>$$
+0.8 \times 0.7 = 0.56
+$$</p>
+<hr>
+<h2 id="-conditional-probability--the-core-idea">🔗 Conditional Probability — The CORE IDEA</h2>
+<h3 id="-formula">📐 Formula</h3>
+<p>$$
+P(A \mid B) = \frac{P(A \cap B)}{P(B)}
+$$</p>
+<p>Read as:</p>
+<blockquote>
+<p>Probability of <strong>A</strong>,<br>
+<strong>given that B already happened</strong></p>
+</blockquote>
+<hr>
+<h2 id="-intuition-very-important">🧠 Intuition (Very Important)</h2>
+<p>Conditional probability <strong>changes the universe</strong>.</p>
+<p>You are no longer asking:</p>
+<blockquote>
+<p>“What is the chance overall?”</p>
+</blockquote>
+<p>You are asking:</p>
+<blockquote>
+<p>“What is the chance <strong>inside a filtered world</strong>?”</p>
+</blockquote>
+<hr>
+<h2 id="-harry-potter-example--conditional-probability">🧙 Harry Potter Example — Conditional Probability</h2>
+<p>Suppose:</p>
+<ul>
+<li>40% of students are Gryffindor</li>
+<li>Among Gryffindor, <strong>70% are brave</strong></li>
+</ul>
+<p>Question:</p>
+<blockquote>
+<p>What is the probability a student is <strong>brave given Gryffindor</strong>?</p>
+</blockquote>
+<p>$$
+P(\text{Brave} \mid \text{Gryffindor}) = 0.7
+$$</p>
+<p>The universe is now <strong>only Gryffindor students</strong>.</p>
+<hr>
+<h2 id="-bayes-theorem-the-famous-one">🔄 Bayes’ Theorem (The Famous One)</h2>
+<h3 id="-formula-1">📐 Formula</h3>
+<p>$$
+P(A \mid B) =
+\frac{P(B \mid A),P(A)}{P(B)}
+$$</p>
+<p>This is just <strong>conditional probability rearranged</strong>.</p>
+<hr>
+<h2 id="-why-bayes-is-powerful">🧠 Why Bayes Is Powerful</h2>
+<p>Bayes lets you:</p>
+<blockquote>
+<p><strong>Reverse the direction of thinking</strong></p>
+</blockquote>
+<p>From:</p>
+<ul>
+<li>“If I know the cause, what happens?”</li>
+</ul>
+<p>To:</p>
+<ul>
+<li><strong>“If I see the result, what is the cause?”</strong></li>
+</ul>
+<p>This is the heart of:</p>
+<ul>
+<li>diagnosis</li>
+<li>spam detection</li>
+<li>machine learning</li>
+<li>Naive Bayes</li>
+</ul>
+<hr>
+<h2 id="-messi-injury-example--bayes-thinking">⚽ Messi Injury Example — Bayes Thinking</h2>
+<p>Suppose:</p>
+<ul>
+<li>1% of players are injured</li>
+<li>If injured, Messi plays badly 90% of the time</li>
+<li>If not injured, Messi plays badly 5% of the time</li>
+</ul>
+<p>You see Messi plays badly.</p>
+<p>Question:</p>
+<blockquote>
+<p>What is the probability he is injured?</p>
+</blockquote>
+<p>This is <strong>Bayes</strong>.</p>
+<hr>
+<h2 id="-statistics-you-must-know-light--practical">📊 Statistics You Must Know (Light &amp; Practical)</h2>
+<h3 id="mean-average">Mean (Average)</h3>
+<p>$$
+\mu = \frac{1}{n} \sum x
+$$</p>
+<p>Messi goals per match → overall performance.</p>
+<hr>
+<h3 id="variance--standard-deviation">Variance &amp; Standard Deviation</h3>
+<p>How <strong>spread out</strong> the data is.</p>
+<ul>
+<li>Low variance → consistent</li>
+<li>High variance → unpredictable</li>
+</ul>
+<p>Harry Potter exams:</p>
+<ul>
+<li>Hermione → low variance</li>
+<li>Seamus → 🔥💥 high variance</li>
+</ul>
+<hr>
+<h2 id="-from-probability-to-machine-learning">🤖 From Probability to Machine Learning</h2>
+<p>Most ML models answer:</p>
+<blockquote>
+<p>“Given features X, what is the probability of class Y?”</p>
+</blockquote>
+<p>This is exactly:</p>
+<p>$$
+P(Y \mid X)
+$$</p>
+<hr>
+<h2 id="-naive-bayes--final-boss-but-simple">🧠 Naive Bayes — Final Boss (But Simple)</h2>
+<h3 id="core-assumption">Core Assumption</h3>
+<blockquote>
+<p><strong>Features are conditionally independent</strong></p>
+</blockquote>
+<p>That’s why it’s called <strong>naive</strong>.</p>
+<hr>
+<h3 id="-formula-2">📐 Formula</h3>
+<p>$$
+P(C \mid x_1,x_2,\dots,x_n)
+\propto
+P(C)\prod_{i=1}^{n} P(x_i \mid C)
+$$</p>
+<p>Meaning:</p>
+<ul>
+<li>Start with prior belief <code>P(C)</code></li>
+<li>Multiply likelihoods of features</li>
+<li>Choose the class with highest score</li>
+</ul>
+<hr>
+<h2 id="-spam-email-example-classic">📧 Spam Email Example (Classic)</h2>
+<p>Features:</p>
+<ul>
+<li>contains &ldquo;free&rdquo;</li>
+<li>contains &ldquo;win&rdquo;</li>
+<li>contains &ldquo;urgent&rdquo;</li>
+</ul>
+<p>Class:</p>
+<ul>
+<li>Spam / Not Spam</li>
+</ul>
+<p>Naive Bayes asks:</p>
+<blockquote>
+<p>If an email has these words,<br>
+which class is more probable?</p>
+</blockquote>
+<hr>
+<h2 id="-harry-potter-sorting-hat--naive-bayes-style">🧙 Harry Potter Sorting Hat — Naive Bayes Style</h2>
+<p>Features:</p>
+<ul>
+<li>brave = yes</li>
+<li>ambitious = no</li>
+<li>loves books = yes</li>
+</ul>
+<p>Compute probability for each house:</p>
+<ul>
+<li>Gryffindor</li>
+<li>Ravenclaw</li>
+<li>Slytherin</li>
+<li>Hufflepuff</li>
+</ul>
+<p>Pick <strong>max probability</strong>.</p>
+<p>🎩✨ That’s Naive Bayes.</p>
+<hr>
+<h2 id="-final-mental-model-remember-this">🧠 Final Mental Model (Remember This)</h2>
+<p>Probability is about:</p>
+<ol>
+<li><strong>Counting possibilities</strong></li>
+<li><strong>Filtering worlds</strong></li>
+<li><strong>Updating belief with evidence</strong></li>
+</ol>
+<p>If you understand:</p>
+<ul>
+<li>P(A)</li>
+<li>P(A ∣ B)</li>
+<li>Bayes’ rule</li>
+</ul>
+<p>You already think like:</p>
+<ul>
+<li>a data scientist</li>
+<li>an AI engineer</li>
+<li>a rational decision-maker</li>
+</ul>
+<hr>
+<h2 id="-from-scores-to-probabilities-the-ai-bridge">🔢 From Scores to Probabilities (The AI Bridge)</h2>
+<p>In real AI systems, models <strong>do not output probabilities directly</strong>.</p>
+<p>They output <strong>scores</strong> (also called <em>logits</em>).</p>
+<p>Example:</p>
+<ul>
+<li>Messi form score = <code>2.3</code></li>
+<li>Harry bravery score = <code>-1.2</code></li>
+</ul>
+<p>These scores:</p>
+<ul>
+<li>can be <strong>negative</strong></li>
+<li>can be <strong>larger than 1</strong></li>
+<li>are <strong>not probabilities</strong></li>
+</ul>
+<p>So we need a function that converts:</p>
+<blockquote>
+<p><strong>any real number → valid probability</strong></p>
+</blockquote>
+<p>That’s where <strong>Sigmoid</strong> and <strong>Softmax</strong> come in.</p>
+<hr>
+<h2 id="-sigmoid-function--probability-for-binary-decisions">🔁 Sigmoid Function — Probability for Binary Decisions</h2>
+<h3 id="-when-to-use-sigmoid">🎯 When to Use Sigmoid</h3>
+<p>Use <strong>Sigmoid</strong> when:</p>
+<ul>
+<li>only <strong>2 outcomes</strong></li>
+<li>yes / no</li>
+<li>spam / not spam</li>
+<li>injured / not injured</li>
+</ul>
+<p>This is the heart of <strong>Logistic Regression</strong>.</p>
+<hr>
+<h3 id="-sigmoid-formula">📐 Sigmoid Formula</h3>
+<p>$$
+\sigma(x) = \frac{1}{1 + e^{-x}}
+$$</p>
+<p>Properties:</p>
+<ul>
+<li>Output is <strong>always between 0 and 1</strong></li>
+<li>Large positive <code>x</code> → probability close to 1</li>
+<li>Large negative <code>x</code> → probability close to 0</li>
+</ul>
+<hr>
+<h2 id="-intuition-human-version">🧠 Intuition (Human Version)</h2>
+<p>Sigmoid answers:</p>
+<blockquote>
+<p>“Given this score,
+<strong>how confident should I be?</strong>”</p>
+</blockquote>
+<p>It <strong>squashes</strong> any number into a probability.</p>
+<hr>
+<h2 id="-messi-example--sigmoid-intuition">⚽ Messi Example — Sigmoid Intuition</h2>
+<p>Suppose an AI model computes:</p>
+<pre><code>Messi injury score = 2.0
+</code></pre>
+<p>This means:</p>
+<ul>
+<li>evidence <strong>supports injury</strong></li>
+</ul>
+<p>Let’s compute probability.</p>
+<h3 id="step-by-step-calculation">Step-by-step calculation</h3>
+<p>$$
+\sigma(2) = \frac{1}{1 + e^{-2}}
+$$</p>
+<p>We know:</p>
+<ul>
+<li>$$ e^{-2} \approx 0.135 $$</li>
+</ul>
+<p>So:</p>
+<p>$$
+\sigma(2) \approx \frac{1}{1 + 0.135} \approx 0.88
+$$</p>
+<p>🎯 Interpretation:</p>
+<blockquote>
+<p><strong>88% probability Messi is injured</strong></p>
+</blockquote>
+<hr>
+<h2 id="-pure-python--sigmoid-no-libraries">🧑‍💻 Pure Python — Sigmoid (NO Libraries)</h2>
+<pre><code class="language-python">def exp(x):
+    # simple exponential approximation
+    e = 2.718281828
+    return e ** x
+
+def sigmoid(x):
+    return 1 / (1 + exp(-x))
+
+print(sigmoid(2))     # ~0.88
+print(sigmoid(0))     # 0.5
+print(sigmoid(-2))    # ~0.12
+</code></pre>
+<hr>
+<h2 id="-key-sigmoid-landmarks-very-important">📌 Key Sigmoid Landmarks (Very Important)</h2>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>sigmoid(x)</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-∞</td>
+<td>0</td>
+<td>impossible</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>~0.12</td>
+<td>unlikely</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0.5</td>
+<td>unsure</td>
+</tr>
+<tr>
+<td>+2</td>
+<td>~0.88</td>
+<td>likely</td>
+</tr>
+<tr>
+<td>+∞</td>
+<td>1</td>
+<td>guaranteed</td>
+</tr>
+</tbody>
+</table>
+<p>This explains <strong>decision boundaries in AI</strong>.</p>
+<hr>
+<h2 id="-logistic-regression--probability-model">🧠 Logistic Regression = Probability Model</h2>
+<p>Logistic Regression does:</p>
+<ol>
+<li>Compute a score
+$$ z = w_1x_1 + w_2x_2 + b $$</li>
+<li>Convert score → probability using <strong>Sigmoid</strong></li>
+<li>Decide using a threshold (e.g. 0.5)</li>
+</ol>
+<p>So it is <strong>pure probability thinking</strong>, not magic.</p>
+<hr>
+<h2 id="-why-sigmoid-works-for-probability">🎯 Why Sigmoid Works for Probability</h2>
+<p>Because it satisfies:</p>
+<ul>
+<li>outputs in <code>[0,1]</code></li>
+<li>smooth &amp; differentiable</li>
+<li>interpretable as <strong>confidence</strong></li>
+</ul>
+<p>That’s why:</p>
+<ul>
+<li>Logistic Regression</li>
+<li>Binary classifiers</li>
+<li>Neural networks (binary output)</li>
+</ul>
+<p>all use Sigmoid.</p>
+<hr>
+<h2 id="-softmax--probability-for-multiple-classes">🌈 Softmax — Probability for Multiple Classes</h2>
+<h3 id="-when-to-use-softmax">🎯 When to Use Softmax</h3>
+<p>Use <strong>Softmax</strong> when:</p>
+<ul>
+<li>more than 2 classes</li>
+<li>image classification</li>
+<li>language models</li>
+<li>Hogwarts house sorting 🧙</li>
+</ul>
+<hr>
+<h3 id="-softmax-formula">📐 Softmax Formula</h3>
+<p>For scores $$ z_1, z_2, \dots, z_n $$</p>
+<p>$$
+\text{softmax}(z_i) =
+\frac{e^{z_i}}{\sum_{j=1}^{n} e^{z_j}}
+$$</p>
+<hr>
+<h2 id="-intuition-human-version-1">🧠 Intuition (Human Version)</h2>
+<p>Softmax:</p>
+<ul>
+<li>
+<p>turns <strong>scores into probabilities</strong></p>
+</li>
+<li>
+<p>ensures:</p>
+<ul>
+<li>all probabilities ≥ 0</li>
+<li>sum = 1</li>
+</ul>
+</li>
+</ul>
+<p>It answers:</p>
+<blockquote>
+<p>“Which class is <strong>most likely</strong>,
+relative to the others?”</p>
+</blockquote>
+<hr>
+<h2 id="-harry-potter-example--sorting-hat-scores">🧙 Harry Potter Example — Sorting Hat Scores</h2>
+<p>Suppose the Sorting Hat gives scores:</p>
+<table>
+<thead>
+<tr>
+<th>House</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gryffindor</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Ravenclaw</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Slytherin</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>Hufflepuff</td>
+<td>0.0</td>
+</tr>
+</tbody>
+</table>
+<p>These are <strong>not probabilities yet</strong>.</p>
+<hr>
+<h3 id="step-by-step-softmax-calculation">Step-by-step Softmax Calculation</h3>
+<p>Compute exponentials:</p>
+<ul>
+<li>( e^{2.0} ≈ 7.39 )</li>
+<li>( e^{1.0} ≈ 2.72 )</li>
+<li>( e^{0.5} ≈ 1.65 )</li>
+<li>( e^{0.0} = 1.0 )</li>
+</ul>
+<p>Sum:</p>
+<p>$$
+7.39 + 2.72 + 1.65 + 1.0 = 12.76
+$$</p>
+<p>Final probabilities:</p>
+<table>
+<thead>
+<tr>
+<th>House</th>
+<th>Probability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gryffindor</td>
+<td>7.39 / 12.76 ≈ <strong>0.58</strong></td>
+</tr>
+<tr>
+<td>Ravenclaw</td>
+<td>2.72 / 12.76 ≈ 0.21</td>
+</tr>
+<tr>
+<td>Slytherin</td>
+<td>1.65 / 12.76 ≈ 0.13</td>
+</tr>
+<tr>
+<td>Hufflepuff</td>
+<td>1.0 / 12.76 ≈ 0.08</td>
+</tr>
+</tbody>
+</table>
+<p>🎩 Result: <strong>Gryffindor wins</strong></p>
+<hr>
+<h2 id="-pure-python--softmax-no-libraries">🧑‍💻 Pure Python — Softmax (NO Libraries)</h2>
+<pre><code class="language-python">def exp(x):
+    e = 2.718281828
+    return e ** x
+
+def softmax(scores):
+    exp_scores = [exp(s) for s in scores]
+    total = sum(exp_scores)
+    return [s / total for s in exp_scores]
+
+scores = [2.0, 1.0, 0.5, 0.0]
+probs = softmax(scores)
+
+for house, p in zip(
+    [&quot;Gryffindor&quot;, &quot;Ravenclaw&quot;, &quot;Slytherin&quot;, &quot;Hufflepuff&quot;],
+    probs
+):
+    print(house, round(p, 3))
+</code></pre>
+<hr>
+<h2 id="-sigmoid-vs-softmax-must-remember">🔑 Sigmoid vs Softmax (Must Remember)</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Sigmoid</th>
+<th>Softmax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output classes</td>
+<td>2</td>
+<td>≥ 2</td>
+</tr>
+<tr>
+<td>Output sum</td>
+<td>not required</td>
+<td>always = 1</td>
+</tr>
+<tr>
+<td>Typical use</td>
+<td>binary classification</td>
+<td>multiclass classification</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>spam / not spam</td>
+<td>digit 0–9</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="-final-unifying-picture-very-important">🧠 Final Unifying Picture (Very Important)</h2>
+<p>Everything connects:</p>
+<pre><code>Raw score (logit)
+   ↓
+Sigmoid / Softmax
+   ↓
+Probability
+   ↓
+Decision
+</code></pre>
+<p>This means:</p>
+<ul>
+<li>Logistic Regression</li>
+<li>Naive Bayes</li>
+<li>Neural Networks</li>
+<li>Deep Learning</li>
+</ul>
+<p>👉 are <strong>probabilistic models at heart</strong></p>
+<hr>
+<h2 id="-final-thought-for-students">🏁 Final Thought for Students</h2>
+<blockquote>
+<p>AI does not predict labels.
+<strong>AI predicts probabilities.</strong></p>
+</blockquote>
+<p>Once students understand:</p>
+<ul>
+<li>probability</li>
+<li>Bayes</li>
+<li>Sigmoid</li>
+<li>Softmax</li>
+</ul>
+<p>They are <strong>AI-ready</strong>, not just ML-ready.</p>
+<hr>
+<h2 id="-closing-thought">🏁 Closing Thought</h2>
+<blockquote>
+<p>Probability is not math to memorize.<br>
+It is <strong>logic for uncertain worlds</strong>.</p>
+</blockquote>
+<p>Once this clicks,
+<strong>AI stops being magic</strong><br>
+and becomes <strong>engineering</strong>.</p>
+<hr>
+<h2 id="-why-ai-needs-a-loss-function">📉 Why AI Needs a “Loss Function”</h2>
+<p>A model outputs a <strong>probability</strong>.
+But training needs a <strong>number to minimize</strong>.</p>
+<p>Loss answers one question:</p>
+<blockquote>
+<p>“How wrong is this probability?”</p>
+</blockquote>
+<p>If prediction is perfect → loss = 0
+If prediction is confident but wrong → loss = <strong>huge</strong></p>
+<hr>
+<h2 id="-cross-entropy-loss--probability-punishment">🔥 Cross-Entropy Loss — Probability Punishment</h2>
+<h3 id="-what-cross-entropy-measures">🎯 What Cross-Entropy Measures</h3>
+<p>Cross-Entropy measures:</p>
+<blockquote>
+<p><strong>Distance between true probability and predicted probability</strong></p>
+</blockquote>
+<p>It strongly punishes:</p>
+<ul>
+<li>confident wrong predictions</li>
+<li>weak confidence in correct answers</li>
+</ul>
+<p>This is why it dominates <strong>modern AI</strong>.</p>
+<hr>
+<h2 id="-binary-cross-entropy-most-important-first">🎯 Binary Cross-Entropy (Most Important First)</h2>
+<p>Used with <strong>Sigmoid / Logistic Regression</strong></p>
+<h3 id="-formula-3">📐 Formula</h3>
+<p>For one data point:</p>
+<p>$$
+L(y, \hat{y}) = - \big[ y \log(\hat{y}) + (1-y)\log(1-\hat{y}) \big]
+$$</p>
+<p>Where:</p>
+<ul>
+<li><code>y</code> = true label (0 or 1)</li>
+<li><code>ŷ</code> = predicted probability</li>
+</ul>
+<hr>
+<h2 id="-intuition-human-version-2">🧠 Intuition (Human Version)</h2>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Loss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Correct &amp; confident</td>
+<td>very small</td>
+</tr>
+<tr>
+<td>Correct but unsure</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>Wrong &amp; confident</td>
+<td><strong>huge</strong></td>
+</tr>
+</tbody>
+</table>
+<p>AI learns by <strong>avoiding embarrassment</strong> 😅</p>
+<hr>
+<h2 id="-messi-injury-example--cross-entropy">⚽ Messi Injury Example — Cross-Entropy</h2>
+<p>True label:</p>
+<pre><code>y = 1   (Messi is injured)
+</code></pre>
+<h3 id="case-1--good-prediction">Case 1 — Good prediction</h3>
+<pre><code>ŷ = 0.9
+</code></pre>
+<p>Loss:</p>
+<p>$$
+L = -\log(0.9) ≈ 0.105
+$$</p>
+<p>✅ small punishment</p>
+<hr>
+<h3 id="case-2--terrible-prediction">Case 2 — Terrible prediction</h3>
+<pre><code>ŷ = 0.01
+</code></pre>
+<p>Loss:</p>
+<p>$$
+L = -\log(0.01) ≈ 4.6
+$$</p>
+<p>🔥 massive punishment</p>
+<hr>
+<h2 id="-why-log-is-used-very-important">📉 Why LOG is Used (Very Important)</h2>
+<p>Students always ask:</p>
+<blockquote>
+<p>“Why not just (y − ŷ)² ?”</p>
+</blockquote>
+<p>Here is the real reason.</p>
+<hr>
+<h2 id="-reason-1-log-turns-multiplication-into-addition">📉 Reason 1: Log Turns Multiplication into Addition</h2>
+<p>Probabilities multiply:</p>
+<p>$$
+P = P_1 \times P_2 \times P_3
+$$</p>
+<p>Taking log:</p>
+<p>$$
+\log P = \log P_1 + \log P_2 + \log P_3
+$$</p>
+<p>✅ numerically stable
+✅ easier to optimize
+✅ no underflow</p>
+<hr>
+<h2 id="-reason-2-log-explodes-confident-mistakes">📉 Reason 2: Log Explodes Confident Mistakes</h2>
+<p>If:</p>
+<pre><code>ŷ → 0 but y = 1
+</code></pre>
+<p>Then:</p>
+<pre><code>log(ŷ) → -∞
+</code></pre>
+<p>🔥 Loss → ∞</p>
+<p>This <strong>forces the model to learn fast</strong>.</p>
+<hr>
+<h2 id="-reason-3-log-likelihood--probability-maximization">📉 Reason 3: Log-Likelihood = Probability Maximization</h2>
+<p>Training AI is actually:</p>
+<blockquote>
+<p><strong>Maximize probability of observed data</strong></p>
+</blockquote>
+<p>But optimizers <strong>minimize</strong>, so we use:</p>
+<p>$$
+\text{Loss} = - \log(\text{Likelihood})
+$$</p>
+<p>This gives:</p>
+<ul>
+<li>Cross-Entropy</li>
+<li>Log-Loss</li>
+<li>Negative Log-Likelihood (NLL)</li>
+</ul>
+<p>👉 all the same family.</p>
+<hr>
+<h2 id="-cross-entropy--negative-log-likelihood">🧠 Cross-Entropy = Negative Log-Likelihood</h2>
+<p>This identity is <strong>core AI knowledge</strong>:</p>
+<blockquote>
+<p><strong>Training a classifier = maximizing likelihood</strong></p>
+</blockquote>
+<p>Loss just flips the sign.</p>
+<hr>
+<h2 id="-logistic-regression--from-scratch-pure-python">🤖 Logistic Regression — From Scratch (Pure Python)</h2>
+<p>Now everything connects.</p>
+<hr>
+<h2 id="-logistic-regression-model">🧠 Logistic Regression Model</h2>
+<h3 id="step-1--linear-score">Step 1 — Linear Score</h3>
+<p>$$
+z = wx + b
+$$</p>
+<h3 id="step-2--sigmoid">Step 2 — Sigmoid</h3>
+<p>$$
+\hat{y} = \sigma(z)
+$$</p>
+<h3 id="step-3--cross-entropy-loss">Step 3 — Cross-Entropy Loss</h3>
+<p>$$
+L = -[y\log(\hat{y}) + (1-y)\log(1-\hat{y})]
+$$</p>
+<hr>
+<h2 id="-pure-python-implementation-no-libs">🧑‍💻 Pure Python Implementation (NO LIBS)</h2>
+<h3 id="-math-helpers">🔢 Math Helpers</h3>
+<pre><code class="language-python">def exp(x):
+    e = 2.718281828
+    return e ** x
+
+def log(x):
+    # natural log approximation
+    n = 1000
+    return n * ((x ** (1/n)) - 1)
+
+def sigmoid(x):
+    return 1 / (1 + exp(-x))
+</code></pre>
+<hr>
+<h3 id="-loss-function">📉 Loss Function</h3>
+<pre><code class="language-python">def binary_cross_entropy(y, y_hat):
+    eps = 1e-9  # avoid log(0)
+    return - (y * log(y_hat + eps) +
+              (1 - y) * log(1 - y_hat + eps))
+</code></pre>
+<hr>
+<h3 id="-training-loop-1-feature">🔁 Training Loop (1 Feature)</h3>
+<pre><code class="language-python"># training data
+X = [1, 2, 3, 4]      # feature (e.g. injury indicators)
+Y = [0, 0, 1, 1]      # labels
+
+# parameters
+w = 0.0
+b = 0.0
+lr = 0.1
+
+for epoch in range(1000):
+    dw = 0
+    db = 0
+    loss = 0
+
+    for x, y in zip(X, Y):
+        z = w * x + b
+        y_hat = sigmoid(z)
+
+        loss += binary_cross_entropy(y, y_hat)
+
+        # gradients
+        dw += (y_hat - y) * x
+        db += (y_hat - y)
+
+    # update
+    w -= lr * dw / len(X)
+    b -= lr * db / len(X)
+
+    if epoch % 200 == 0:
+        print(&quot;epoch&quot;, epoch, &quot;loss&quot;, round(loss, 4))
+</code></pre>
+<hr>
+<h2 id="-what-students-should-realize">🧠 What Students Should Realize</h2>
+<p>This model:</p>
+<ul>
+<li>uses <strong>probability</strong></li>
+<li>uses <strong>log</strong></li>
+<li>uses <strong>cross-entropy</strong></li>
+<li>uses <strong>gradient descent</strong></li>
+</ul>
+<p>👉 This is <strong>real AI</strong>, not toy math.</p>
+<hr>
+<h2 id="-everything-connects-final-mental-map">🔗 Everything Connects (Final Mental Map)</h2>
+<pre><code>Linear score
+   ↓
+Sigmoid
+   ↓
+Probability
+   ↓
+Log
+   ↓
+Cross-Entropy
+   ↓
+Gradient Descent
+   ↓
+Learning
+</code></pre>
+<hr>
+<h2 id="-final-truth-put-this-on-a-slide">🏁 Final Truth (Put This on a Slide)</h2>
+<blockquote>
+<p><strong>AI is not guessing labels.</strong>
+<strong>AI is optimizing probabilities using logs.</strong></p>
+</blockquote>
+<p>Once students understand this,
+they can:</p>
+<ul>
+<li>read ML papers</li>
+<li>debug models</li>
+<li>move to deep learning smoothly</li>
+</ul>
+<hr>
+<h1 id="-backpropagation--derived-by-hand-no-magic">🧠 Backpropagation — Derived by Hand (No Magic)</h1>
+<h2 id="-what-backpropagation-really-is">🎯 What Backpropagation Really Is</h2>
+<p>Backpropagation is <strong>not magic</strong>.</p>
+<p>It is simply:</p>
+<blockquote>
+<p><strong>The chain rule applied repeatedly, backwards</strong></p>
+</blockquote>
+<hr>
+<h2 id="-chain-rule-foundation">🔗 Chain Rule (Foundation)</h2>
+<p>$$
+y = f(g(x))
+$$</p>
+<p>$$
+\frac{dy}{dx} = \frac{dy}{dg} \cdot \frac{dg}{dx}
+$$</p>
+<p>Backpropagation applies this rule <strong>from the loss back to the parameters</strong>.</p>
+<hr>
+<h2 id="-minimal-neural-network-one-neuron">🧠 Minimal Neural Network (One Neuron)</h2>
+<p>Pipeline:</p>
+<p>$$
+x \rightarrow z \rightarrow \hat{y} \rightarrow L
+$$</p>
+<h3 id="definitions">Definitions</h3>
+<p>Linear transformation:</p>
+<p>$$
+z = wx + b
+$$</p>
+<p>Sigmoid activation:</p>
+<p>$$
+\hat{y} = \sigma(z)
+$$</p>
+<p>$$
+\sigma(z) = \frac{1}{1 + e^{-z}}
+$$</p>
+<p>Binary cross-entropy loss:</p>
+<p>$$
+L = -[y\log(\hat{y}) + (1-y)\log(1-\hat{y})]
+$$</p>
+<hr>
+<h2 id="-goal-of-backpropagation">🔥 Goal of Backpropagation</h2>
+<p>We want to compute:</p>
+<p>$$
+\frac{\partial L}{\partial w}
+$$</p>
+<p>$$
+\frac{\partial L}{\partial b}
+$$</p>
+<p>These gradients tell us <strong>how to update the model</strong>.</p>
+<hr>
+<h2 id="-step-by-step-gradient-derivation">✍️ Step-by-Step Gradient Derivation</h2>
+<h3 id="step-1--loss--prediction">Step 1 — Loss → Prediction</h3>
+<hr>
+<h3 id="step-2--prediction--linear-score">Step 2 — Prediction → Linear Score</h3>
+<p>📌 <strong>This equation is the heart of modern AI</strong></p>
+<hr>
+<h3 id="step-3--linear-score--parameters">Step 3 — Linear Score → Parameters</h3>
+<p>Partial derivatives:</p>
+<p>$$
+\frac{\partial z}{\partial w} = x
+$$</p>
+<p>$$
+\frac{\partial z}{\partial b} = 1
+$$</p>
+<p>Final gradients:</p>
+<p>$$
+\frac{\partial L}{\partial w} = (\hat{y} - y)x
+$$</p>
+<p>$$
+\frac{\partial L}{\partial b} = (\hat{y} - y)
+$$</p>
+<hr>
+<h2 id="-why-this-is-powerful">🧠 Why This Is Powerful</h2>
+<ul>
+<li>
+<p>No complicated calculus during training</p>
+</li>
+<li>
+<p>Same gradient structure works for:</p>
+<ul>
+<li>Logistic Regression</li>
+<li>Neural Networks</li>
+<li>Deep Learning</li>
+</ul>
+</li>
+</ul>
+<p>Backpropagation is <strong>reusable probability calculus</strong>.</p>
+<hr>
+<h1 id="-cnn-from-scratch--mathematical-view">🔥 CNN From Scratch — Mathematical View</h1>
+<h2 id="-why-convolution-exists">🎯 Why Convolution Exists</h2>
+<p>Fully connected networks:</p>
+<ul>
+<li>ignore spatial structure</li>
+<li>require too many parameters</li>
+</ul>
+<p>Convolutions exploit:</p>
+<blockquote>
+<p><strong>Local connectivity and weight sharing</strong></p>
+</blockquote>
+<hr>
+<h2 id="-definition-of-convolution">🧠 Definition of Convolution</h2>
+<p>A convolution is a <strong>sliding dot product</strong>.</p>
+<hr>
+<h2 id="-1d-convolution-example">🧊 1D Convolution Example</h2>
+<p>Input signal:</p>
+<p>$$
+x = [1, 2, 3, 4, 5]
+$$</p>
+<p>Kernel:</p>
+<p>$$
+k = [1, 0, -1]
+$$</p>
+<hr>
+<h2 id="-manual-computation">✍️ Manual Computation</h2>
+<p>$$
+[1,2,3] \cdot [1,0,-1] = -2
+$$</p>
+<p>$$
+[2,3,4] \cdot [1,0,-1] = -2
+$$</p>
+<p>$$
+[3,4,5] \cdot [1,0,-1] = -2
+$$</p>
+<p>Output:</p>
+<p>$$
+[-2, -2, -2]
+$$</p>
+<hr>
+<h2 id="-cnn-processing-pipeline">🧠 CNN Processing Pipeline</h2>
+<p>$$
+\text{Image}
+\rightarrow
+\text{Convolution}
+\rightarrow
+\text{ReLU}
+\rightarrow
+\text{Pooling}
+\rightarrow
+\text{Fully Connected}
+\rightarrow
+\text{Softmax}
+$$</p>
+<p>CNNs still end with <strong>Softmax + Cross-Entropy</strong>,
+making them <strong>probabilistic classifiers</strong>.</p>
+<hr>
+<h1 id="-numerical-stability--log-sum-exp-trick">🧪 Numerical Stability — Log-Sum-Exp Trick</h1>
+<h2 id="-the-numerical-problem">❌ The Numerical Problem</h2>
+<p>Softmax definition:</p>
+<p>$$
+\text{softmax}(z_i) =
+\frac{e^{z_i}}{\sum_j e^{z_j}}
+$$</p>
+<p>If logits are large:</p>
+<p>$$
+z = [1000, 1001, 1002]
+$$</p>
+<p>Then:</p>
+<p>$$
+e^{1002} \rightarrow \infty
+$$</p>
+<p>💥 overflow breaks training.</p>
+<hr>
+<h2 id="-log-sum-exp-identity">✅ Log-Sum-Exp Identity</h2>
+<p>Let:</p>
+<p>$$
+m = \max(z)
+$$</p>
+<hr>
+<h2 id="-why-this-works">🧠 Why This Works</h2>
+<ul>
+<li>Keeps exponentials numerically small</li>
+<li>Preserves exact probabilities</li>
+<li>Used in all major deep-learning frameworks</li>
+</ul>
+<hr>
+<h2 id="-stable-cross-entropy-direct-form">📉 Stable Cross-Entropy (Direct Form)</h2>
+<p>Instead of computing:</p>
+<p>$$
+\text{Softmax} \rightarrow \log \rightarrow \text{Loss}
+$$</p>
+<p>We compute:</p>
+<p>$$
+L = -z_y + \log \sum_i e^{z_i}
+$$</p>
+<p>(using log-sum-exp)</p>
+<hr>
+<h3 id="1-what-does-probability-measure">1️⃣ What does probability measure?</h3>
+<details class="spoiler "  id="spoiler-0">
+  <summary>Show answer</summary>
+  <p>How likely an event is to happen, represented by a number between 0 and 1.</p>
+</details>
+<hr>
+<h3 id="2-if-messi-scores-8-goals-out-of-10-penalties-what-is-the-probability-he-scores">2️⃣ If Messi scores 8 goals out of 10 penalties, what is the probability he scores?</h3>
+<p>A) 0.2
+B) 0.5
+C) 0.8
+D) 1.0</p>
+<details class="spoiler "  id="spoiler-1">
+  <summary>Show answer</summary>
+  <p>C) 0.8</p>
+</details>
+<hr>
+<h3 id="3-what-is-the-sample-space-when-rolling-a-standard-die">3️⃣ What is the <strong>sample space</strong> when rolling a standard die?</h3>
+<details class="spoiler "  id="spoiler-2">
+  <summary>Show answer</summary>
+  <p>{1, 2, 3, 4, 5, 6}</p>
+</details>
+<hr>
+<h3 id="4-if-gryffindor-has-40-students-out-of-100-what-is">4️⃣ If Gryffindor has 40 students out of 100, what is</h3>
+<p>P(Gryffindor)?</p>
+<details class="spoiler "  id="spoiler-3">
+  <summary>Show answer</summary>
+  <p>40 / 100 = 0.4</p>
+</details>
+<hr>
+<h3 id="5-what-does-an-event-mean-in-probability">5️⃣ What does an <strong>event</strong> mean in probability?</h3>
+<details class="spoiler "  id="spoiler-4">
+  <summary>Show answer</summary>
+  <p>A subset of the sample space (a group of outcomes).</p>
+</details>
+<hr>
+<h3 id="6-what-is-the-probability-range-of-any-event">6️⃣ What is the probability range of any event?</h3>
+<p>A) −1 to 1
+B) 0 to 10
+C) 0 to 1
+D) Any real number</p>
+<details class="spoiler "  id="spoiler-5">
+  <summary>Show answer</summary>
+  <p>C) 0 to 1</p>
+</details>
+<hr>
+<h3 id="7-which-formula-represents-conditional-probability">7️⃣ Which formula represents <strong>conditional probability</strong>?</h3>
+<p>A) P(A ∪ B)
+B) P(A ∩ B)
+C) P(A | B) = P(A ∩ B) / P(B)
+D) P(A) + P(B)</p>
+<details class="spoiler "  id="spoiler-6">
+  <summary>Show answer</summary>
+  <p>C) P(A | B) = P(A ∩ B) / P(B)</p>
+</details>
+<hr>
+<h3 id="8-what-does-pa--b-mean-in-plain-english">8️⃣ What does P(A | B) mean in plain English?</h3>
+<details class="spoiler "  id="spoiler-7">
+  <summary>Show answer</summary>
+  <p>The probability of A happening, given that B has already happened.</p>
+</details>
+<hr>
+<h3 id="9-in-hogwarts-terms-conditional-probability-means">9️⃣ In Hogwarts terms, conditional probability means:</h3>
+<details class="spoiler "  id="spoiler-8">
+  <summary>Show answer</summary>
+  <p>You only look at students inside a specific house, not the whole school.</p>
+</details>
+<hr>
+<h3 id="-which-rule-is-used-for-independent-events">🔟 Which rule is used for <strong>independent events</strong>?</h3>
+<details class="spoiler "  id="spoiler-9">
+  <summary>Show answer</summary>
+  <p>Multiplication rule: P(A ∩ B) = P(A) × P(B)</p>
+</details>
+<hr>
+<h3 id="11-if-messi-scores-with-probability-08">1️⃣1️⃣ If Messi scores with probability 0.8</h3>
+<p>and the goalkeeper guesses wrong with probability 0.7,
+what is the probability both happen?</p>
+<details class="spoiler "  id="spoiler-10">
+  <summary>Show answer</summary>
+  <p>0.8 × 0.7 = 0.56</p>
+</details>
+<hr>
+<h3 id="12-what-problem-does-the-addition-rule-solve">1️⃣2️⃣ What problem does the <strong>addition rule</strong> solve?</h3>
+<details class="spoiler "  id="spoiler-11">
+  <summary>Show answer</summary>
+  <p>It avoids double-counting overlapping events.</p>
+</details>
+<hr>
+<h3 id="13-what-is-bayes-theorem-mainly-used-for">1️⃣3️⃣ What is <strong>Bayes’ Theorem</strong> mainly used for?</h3>
+<details class="spoiler "  id="spoiler-12">
+  <summary>Show answer</summary>
+  <p>Reversing probability: updating beliefs after seeing evidence.</p>
+</details>
+<hr>
+<h3 id="14-which-formula-is-bayes-theorem">1️⃣4️⃣ Which formula is Bayes’ Theorem?</h3>
+<p>A) P(A ∩ B)
+B) P(A | B) = P(B | A)P(A) / P(B)
+C) P(A) + P(B)
+D) P(A) − P(B)</p>
+<details class="spoiler "  id="spoiler-13">
+  <summary>Show answer</summary>
+  <p>B) P(A | B) = P(B | A)P(A) / P(B)</p>
+</details>
+<hr>
+<h3 id="15-in-messi-injury-analysis-bayes-helps-answer">1️⃣5️⃣ In Messi injury analysis, Bayes helps answer:</h3>
+<details class="spoiler "  id="spoiler-14">
+  <summary>Show answer</summary>
+  <p>Given Messi played badly, how likely is it that he is injured?</p>
+</details>
+<hr>
+<h3 id="16-what-does-mean-average-measure">1️⃣6️⃣ What does <strong>mean (average)</strong> measure?</h3>
+<details class="spoiler "  id="spoiler-15">
+  <summary>Show answer</summary>
+  <p>The central value of the data.</p>
+</details>
+<hr>
+<h3 id="17-high-variance-means-what">1️⃣7️⃣ High variance means what?</h3>
+<details class="spoiler "  id="spoiler-16">
+  <summary>Show answer</summary>
+  <p>Data is spread out and unpredictable.</p>
+</details>
+<hr>
+<h3 id="18-who-has-lower-variance-in-exam-scores">1️⃣8️⃣ Who has lower variance in exam scores?</h3>
+<p>A) Hermione
+B) Seamus</p>
+<details class="spoiler "  id="spoiler-17">
+  <summary>Show answer</summary>
+  <p>A) Hermione</p>
+</details>
+<hr>
+<h3 id="19-what-is-the-key-assumption-of-naive-bayes">1️⃣9️⃣ What is the key assumption of <strong>Naive Bayes</strong>?</h3>
+<details class="spoiler "  id="spoiler-18">
+  <summary>Show answer</summary>
+  <p>Features are conditionally independent given the class.</p>
+</details>
+<hr>
+<h3 id="20-why-is-naive-bayes-powerful-despite-being-naive">2️⃣0️⃣ Why is Naive Bayes powerful despite being “naive”?</h3>
+<details class="spoiler "  id="spoiler-19">
+  <summary>Show answer</summary>
+  <p>Because it is simple, fast, and works surprisingly well in real-world problems like spam detection and text classification.</p>
+</details>
+<hr>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know-copy/" rel="prev">DK-002 — Math Every Programmer Should Know</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on 2026</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    ©2026 Kao Panboonyuen
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Built using <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> and the <a href="https://github.com/wowchemy/starter-hugo-academic" target="_blank" rel="noopener">Wowchemy academic template</a>. View <a href="https://github.com/kaopanboonyuen/kaopanboonyuen.github.io" target="_blank" rel="noopener">source</a>.
+        
+  </p>
+</footer>
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/golang.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.b36873e4e886c7b03b21e4eb97d9b6d7.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

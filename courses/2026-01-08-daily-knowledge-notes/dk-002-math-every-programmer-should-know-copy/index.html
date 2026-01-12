@@ -33,7 +33,7 @@
   <meta name="description" content="" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know/" />
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know-copy/" />
 
   
 
@@ -285,7 +285,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know/" />
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know-copy/" />
 
   
   
@@ -302,7 +302,7 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Teerapong Panboonyuen" />
-  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know/" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know-copy/" />
   <meta property="og:title" content="DK-002 — Math Every Programmer Should Know | Teerapong Panboonyuen" />
   <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
@@ -334,7 +334,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="1d332ee686057260516d807ab7592699" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="996c5a51b0bbb0ac4eda2b3fc2fa68f9" >
 
   
   
@@ -886,7 +886,11 @@
       
 
 
-  <li class="active"><a href="/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know/">DK-002 — Math Every Programmer Should Know</a></li>
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-003-probability/">DK-003 — Probability</a></li>
+
+
+
+  <li class="active"><a href="/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know-copy/">DK-002 — Math Every Programmer Should Know</a></li>
 
 
 
@@ -919,41 +923,52 @@
       <nav id="TableOfContents">
   <ul>
     <li><a href="#-why-this-note-exists">🎯 Why This Note Exists</a></li>
-    <li><a href="#-gcd--lcm--the-backbone-of-discrete-math-for-programmers">🔢 GCD &amp; LCM — The Backbone of Discrete Math for Programmers</a>
+    <li><a href="#-gcd--lcm--the-backbone-of-discrete-math-for-programmers">🔢 GCD &amp; LCM — The Backbone of Discrete Math for Programmers</a></li>
+    <li><a href="#-greatest-common-divisor-gcd">🔹 Greatest Common Divisor (GCD)</a>
       <ul>
-        <li><a href="#-greatest-common-divisor-gcd">🔹 Greatest Common Divisor (GCD)</a></li>
-        <li><a href="#-gcd--euclidean-algorithm">📐 GCD — Euclidean Algorithm</a></li>
-        <li><a href="#-input--output-test-cases">✅ Input → Output (Test Cases)</a></li>
-        <li><a href="#-pure-python-code-no-library">🧑‍💻 Pure Python Code (No Library)</a></li>
+        <li><a href="#definition-human-version">Definition (Human Version)</a></li>
+        <li><a href="#-gcd--euclidean-algorithm-core-idea">📐 GCD — Euclidean Algorithm (Core Idea)</a></li>
+        <li><a href="#-input--output-easy-2-number-examples">✅ Input → Output (Easy 2-Number Examples)</a></li>
+        <li><a href="#-pure-python--gcd-of-2-numbers">🧑‍💻 Pure Python — GCD of 2 Numbers</a></li>
+      </ul>
+    </li>
+    <li><a href="#-gcd-of-more-than-2-numbers-very-important">🔁 GCD of MORE Than 2 Numbers (Very Important)</a>
+      <ul>
+        <li><a href="#-mathematical-rule">📐 Mathematical Rule</a></li>
+        <li><a href="#-input--output-multiple-numbers">✅ Input → Output (Multiple Numbers)</a></li>
+        <li><a href="#-pure-python--gcd-for-dynamic-n-numbers">🧑‍💻 Pure Python — GCD for Dynamic n Numbers</a></li>
+        <li><a href="#-how-to-think-about-gcd-for-juniors">🧠 How to THINK About GCD (For Juniors)</a></li>
         <li><a href="#-helps-solve">🧠 Helps Solve</a></li>
-        <li><a href="#-typical-questions">🧩 Typical Questions</a></li>
-        <li><a href="#-builds-intuition">🧠 Builds Intuition</a></li>
       </ul>
     </li>
     <li><a href="#-least-common-multiple-lcm">🔹 Least Common Multiple (LCM)</a>
       <ul>
-        <li><a href="#-relationship-between-gcd-and-lcm">📐 Relationship Between GCD and LCM</a></li>
-        <li><a href="#-input--output-test-cases-1">✅ Input → Output (Test Cases)</a></li>
-        <li><a href="#-pure-python-code">🧑‍💻 Pure Python Code</a></li>
-        <li><a href="#-helps-solve-1">🧠 Helps Solve</a></li>
-        <li><a href="#-typical-questions-1">🧩 Typical Questions</a></li>
-        <li><a href="#-builds-intuition-1">🧠 Builds Intuition</a></li>
+        <li><a href="#definition-human-version-1">Definition (Human Version)</a></li>
+        <li><a href="#-relationship-between-gcd-and-lcm-critical-identity">📐 Relationship Between GCD and LCM (Critical Identity)</a></li>
+        <li><a href="#-input--output-2-numbers">✅ Input → Output (2 Numbers)</a></li>
+        <li><a href="#-pure-python--lcm-of-2-numbers">🧑‍💻 Pure Python — LCM of 2 Numbers</a></li>
       </ul>
     </li>
-    <li><a href="#-gcd--lcm-together--real-insight">🔁 GCD &amp; LCM Together — Real Insight</a>
+    <li><a href="#-lcm-of-more-than-2-numbers">🔁 LCM of MORE Than 2 Numbers</a>
       <ul>
-        <li><a href="#-identity-to-remember-forever">📐 Identity to Remember Forever</a></li>
-        <li><a href="#-quick-verification-test">✅ Quick Verification (Test)</a></li>
-        <li><a href="#-why-this-matters-for-programmers">🧠 Why This Matters for Programmers</a></li>
+        <li><a href="#-mathematical-rule-1">📐 Mathematical Rule</a></li>
+        <li><a href="#-input--output">✅ Input → Output</a></li>
+        <li><a href="#-pure-python--lcm-for-dynamic-n-numbers">🧑‍💻 Pure Python — LCM for Dynamic n Numbers</a></li>
+        <li><a href="#-how-to-think-about-lcm-for-juniors">🧠 How to THINK About LCM (For Juniors)</a></li>
       </ul>
     </li>
-    <li><a href="#-mental-model-very-important">🎯 Mental Model (Very Important)</a></li>
+    <li><a href="#-gcd--lcm-together--one-formula-to-rule-them-all">🔁 GCD &amp; LCM Together — One Formula to Rule Them All</a>
+      <ul>
+        <li><a href="#-verification">✅ Verification</a></li>
+      </ul>
+    </li>
+    <li><a href="#-final-mental-model-remember-forever">🎯 Final Mental Model (Remember Forever)</a></li>
     <li><a href="#5-prime-numbers">5️⃣ Prime Numbers</a>
       <ul>
         <li><a href="#-what-is-a-prime-number">📘 What Is a Prime Number?</a></li>
         <li><a href="#-mathematical-definition">🧠 Mathematical Definition</a></li>
-        <li><a href="#-input--output-test-cases-2">✅ Input → Output (Test Cases)</a></li>
-        <li><a href="#-pure-python-code-1">🐍 Pure Python Code</a></li>
+        <li><a href="#-input--output-test-cases">✅ Input → Output (Test Cases)</a></li>
+        <li><a href="#-pure-python-code">🐍 Pure Python Code</a></li>
         <li><a href="#-why-programmers-care">💡 Why Programmers Care</a></li>
       </ul>
     </li>
@@ -961,8 +976,8 @@
       <ul>
         <li><a href="#-what-is-modulo">📘 What Is Modulo?</a></li>
         <li><a href="#-everyday-intuition">🧠 Everyday Intuition</a></li>
-        <li><a href="#-input--output-test-cases-3">✅ Input → Output (Test Cases)</a></li>
-        <li><a href="#-pure-python-code-2">🐍 Pure Python Code</a></li>
+        <li><a href="#-input--output-test-cases-1">✅ Input → Output (Test Cases)</a></li>
+        <li><a href="#-pure-python-code-1">🐍 Pure Python Code</a></li>
         <li><a href="#-why-modulo-is-everywhere">💡 Why Modulo Is Everywhere</a></li>
       </ul>
     </li>
@@ -970,8 +985,8 @@
       <ul>
         <li><a href="#-what-is-a-fraction">📘 What Is a Fraction?</a></li>
         <li><a href="#-simplification-rule">🧠 Simplification Rule</a></li>
-        <li><a href="#-input--output-test-cases-4">✅ Input → Output (Test Cases)</a></li>
-        <li><a href="#-pure-python-code-3">🐍 Pure Python Code</a></li>
+        <li><a href="#-input--output-test-cases-2">✅ Input → Output (Test Cases)</a></li>
+        <li><a href="#-pure-python-code-2">🐍 Pure Python Code</a></li>
         <li><a href="#-why-this-matters">💡 Why This Matters</a></li>
       </ul>
     </li>
@@ -979,7 +994,7 @@
       <ul>
         <li><a href="#-powers-exponents">📘 Powers (Exponents)</a></li>
         <li><a href="#-logarithms-opposite-of-power">🧠 Logarithms (Opposite of Power)</a></li>
-        <li><a href="#-input--output-test-cases-5">✅ Input → Output (Test Cases)</a></li>
+        <li><a href="#-input--output-test-cases-3">✅ Input → Output (Test Cases)</a></li>
         <li><a href="#-pure-python-code-no-libraries">🐍 Pure Python Code (No Libraries)</a></li>
         <li><a href="#-programmer-insight">💡 Programmer Insight</a></li>
       </ul>
@@ -987,7 +1002,7 @@
     <li><a href="#9-fibonacci-sequence">9️⃣ Fibonacci Sequence</a>
       <ul>
         <li><a href="#-what-is-fibonacci">📘 What Is Fibonacci?</a></li>
-        <li><a href="#-input--output-test-cases-6">✅ Input → Output (Test Cases)</a></li>
+        <li><a href="#-input--output-test-cases-4">✅ Input → Output (Test Cases)</a></li>
         <li><a href="#-pure-python-code-iterative">🐍 Pure Python Code (Iterative)</a></li>
         <li><a href="#-why-fibonacci-is-taught">💡 Why Fibonacci Is Taught</a></li>
       </ul>
@@ -1005,8 +1020,8 @@
       <ul>
         <li><a href="#-what-is-probability">📘 What Is Probability?</a></li>
         <li><a href="#-examples">🧠 Examples</a></li>
-        <li><a href="#-input--output-test-cases-7">✅ Input → Output (Test Cases)</a></li>
-        <li><a href="#-pure-python-code-4">🐍 Pure Python Code</a></li>
+        <li><a href="#-input--output-test-cases-5">✅ Input → Output (Test Cases)</a></li>
+        <li><a href="#-pure-python-code-3">🐍 Pure Python Code</a></li>
         <li><a href="#-programmer-insight-1">💡 Programmer Insight</a></li>
       </ul>
     </li>
@@ -1022,7 +1037,7 @@
       <ul>
         <li><a href="#-what-is-a-matrix">📘 What Is a Matrix?</a></li>
         <li><a href="#-matrix-addition-rule">🧠 Matrix Addition Rule</a></li>
-        <li><a href="#-pure-python-code-5">🐍 Pure Python Code</a></li>
+        <li><a href="#-pure-python-code-4">🐍 Pure Python Code</a></li>
         <li><a href="#-programmer-insight-2">💡 Programmer Insight</a></li>
       </ul>
     </li>
@@ -1260,22 +1275,36 @@ But if you are a programmer, <strong>there are equations you must recognize inst
 <strong>coding becomes powerful and fun</strong>.</p>
 <hr>
 <h2 id="-gcd--lcm--the-backbone-of-discrete-math-for-programmers">🔢 GCD &amp; LCM — The Backbone of Discrete Math for Programmers</h2>
+<p>This section teaches <strong>how to think</strong>, not just how to calculate.</p>
+<p>If you understand GCD / LCM deeply,
+you unlock:</p>
+<ul>
+<li>number structure</li>
+<li>cycle alignment</li>
+<li>cryptography intuition</li>
+<li>many interview &amp; olympiad tricks</li>
+</ul>
 <hr>
-<h3 id="-greatest-common-divisor-gcd">🔹 Greatest Common Divisor (GCD)</h3>
-<p><strong>Definition</strong></p>
-<p>The <strong>Greatest Common Divisor (GCD)</strong> of two integers <code>a</code> and <code>b</code>
-is the <strong>largest integer</strong> that divides both without remainder.</p>
+<h2 id="-greatest-common-divisor-gcd">🔹 Greatest Common Divisor (GCD)</h2>
+<h3 id="definition-human-version">Definition (Human Version)</h3>
+<p>The <strong>Greatest Common Divisor (GCD)</strong> of numbers<br>
+is the <strong>largest size of a block</strong> that can evenly divide <strong>everything</strong>.</p>
+<p>If one number cannot fit the block → block is too large.</p>
 <hr>
-<h3 id="-gcd--euclidean-algorithm">📐 GCD — Euclidean Algorithm</h3>
+<h3 id="-gcd--euclidean-algorithm-core-idea">📐 GCD — Euclidean Algorithm (Core Idea)</h3>
 <p>$$
 \gcd(a, b) = \gcd(b, a \bmod b)
 $$</p>
-<p>This works because:</p>
+<p>Why this works:</p>
 <blockquote>
-<p>Dividing by the remainder preserves common divisors.</p>
+<p>Any divisor of <code>a</code> and <code>b</code><br>
+is also a divisor of <code>b</code> and <code>(a mod b)</code>.</p>
 </blockquote>
+<p>So we <strong>throw away the big number</strong><br>
+and keep only the <strong>remainder structure</strong>.</p>
+<p>This makes GCD <strong>fast even for huge numbers</strong>.</p>
 <hr>
-<h3 id="-input--output-test-cases">✅ Input → Output (Test Cases)</h3>
+<h3 id="-input--output-easy-2-number-examples">✅ Input → Output (Easy 2-Number Examples)</h3>
 <table>
 <thead>
 <tr>
@@ -1308,7 +1337,7 @@ $$</p>
 </tbody>
 </table>
 <hr>
-<h3 id="-pure-python-code-no-library">🧑‍💻 Pure Python Code (No Library)</h3>
+<h3 id="-pure-python--gcd-of-2-numbers">🧑‍💻 Pure Python — GCD of 2 Numbers</h3>
 <pre><code class="language-python">def gcd(a, b):
     while b != 0:
         a, b = b, a % b
@@ -1320,40 +1349,102 @@ print(gcd(17, 5))    # 1
 print(gcd(100, 25))  # 25
 </code></pre>
 <hr>
+<h2 id="-gcd-of-more-than-2-numbers-very-important">🔁 GCD of MORE Than 2 Numbers (Very Important)</h2>
+<h3 id="-mathematical-rule">📐 Mathematical Rule</h3>
+<p>GCD naturally extends to many numbers:</p>
+<p>$$
+\gcd(a, b, c, d) = \gcd(\gcd(\gcd(a, b), c), d)
+$$</p>
+<p>Key insight:</p>
+<blockquote>
+<p><strong>GCD is associative</strong>
+So we can reduce many numbers step by step.</p>
+</blockquote>
+<hr>
+<h3 id="-input--output-multiple-numbers">✅ Input → Output (Multiple Numbers)</h3>
+<table>
+<thead>
+<tr>
+<th>Numbers</th>
+<th>GCD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[12, 18, 24]</td>
+<td>6</td>
+</tr>
+<tr>
+<td>[8, 16, 32]</td>
+<td>8</td>
+</tr>
+<tr>
+<td>[6, 10, 15]</td>
+<td>1</td>
+</tr>
+<tr>
+<td>[21, 42, 84, 105]</td>
+<td>21</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-pure-python--gcd-for-dynamic-n-numbers">🧑‍💻 Pure Python — GCD for Dynamic n Numbers</h3>
+<pre><code class="language-python">def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+def gcd_many(nums):
+    result = nums[0]
+    for x in nums[1:]:
+        result = gcd(result, x)
+    return result
+
+print(gcd_many([12, 18, 24]))        # 6
+print(gcd_many([8, 16, 32]))         # 8
+print(gcd_many([6, 10, 15]))         # 1
+print(gcd_many([21, 42, 84, 105]))   # 21
+</code></pre>
+<hr>
+<h3 id="-how-to-think-about-gcd-for-juniors">🧠 How to THINK About GCD (For Juniors)</h3>
+<p>Ask only <strong>one question</strong>:</p>
+<blockquote>
+<p>“What is the <strong>largest unit</strong> that fits into <strong>all numbers</strong>?”</p>
+</blockquote>
+<p>Mental checklist:</p>
+<ul>
+<li>If GCD = 1 → numbers are <strong>independent</strong></li>
+<li>If GCD &gt; 1 → numbers <strong>share structure</strong></li>
+</ul>
+<hr>
 <h3 id="-helps-solve">🧠 Helps Solve</h3>
 <ul>
 <li>Fraction simplification</li>
 <li>Ratio normalization</li>
-<li>Periodic cycles</li>
-<li>Cryptography (RSA basics)</li>
 <li>Grid / tiling problems</li>
+<li>Cryptography (RSA intuition)</li>
+<li>Checking coprime numbers</li>
 </ul>
-<hr>
-<h3 id="-typical-questions">🧩 Typical Questions</h3>
-<ul>
-<li>“Simplify this fraction”</li>
-<li>“Do these two cycles ever align?”</li>
-<li>“What is the repeating interval?”</li>
-</ul>
-<hr>
-<h3 id="-builds-intuition">🧠 Builds Intuition</h3>
-<blockquote>
-<p>Repeated subtraction is slow.
-<strong>Remainders reveal structure faster.</strong></p>
-</blockquote>
 <hr>
 <h2 id="-least-common-multiple-lcm">🔹 Least Common Multiple (LCM)</h2>
-<p><strong>Definition</strong></p>
-<p>The <strong>Least Common Multiple (LCM)</strong> of two integers
-is the <strong>smallest positive number</strong> divisible by both.</p>
+<h3 id="definition-human-version-1">Definition (Human Version)</h3>
+<p>The <strong>Least Common Multiple (LCM)</strong> is:</p>
+<blockquote>
+<p>The <strong>earliest time / size</strong> when <strong>all numbers align perfectly</strong></p>
+</blockquote>
 <hr>
-<h3 id="-relationship-between-gcd-and-lcm">📐 Relationship Between GCD and LCM</h3>
+<h3 id="-relationship-between-gcd-and-lcm-critical-identity">📐 Relationship Between GCD and LCM (Critical Identity)</h3>
 <p>$$
 \text{lcm}(a, b) = \frac{a \times b}{\gcd(a, b)}
 $$</p>
-<p>This identity is <strong>critical</strong> and used everywhere.</p>
+<p>Why this works:</p>
+<blockquote>
+<p>GCD removes overlap
+LCM rebuilds alignment without duplication</p>
+</blockquote>
 <hr>
-<h3 id="-input--output-test-cases-1">✅ Input → Output (Test Cases)</h3>
+<h3 id="-input--output-2-numbers">✅ Input → Output (2 Numbers)</h3>
 <table>
 <thead>
 <tr>
@@ -1386,7 +1477,7 @@ $$</p>
 </tbody>
 </table>
 <hr>
-<h3 id="-pure-python-code">🧑‍💻 Pure Python Code</h3>
+<h3 id="-pure-python--lcm-of-2-numbers">🧑‍💻 Pure Python — LCM of 2 Numbers</h3>
 <pre><code class="language-python">def gcd(a, b):
     while b != 0:
         a, b = b, a % b
@@ -1401,61 +1492,86 @@ print(lcm(8, 12))   # 24
 print(lcm(6, 15))   # 30
 </code></pre>
 <hr>
-<h3 id="-helps-solve-1">🧠 Helps Solve</h3>
-<ul>
-<li>Synchronization problems</li>
-<li>Scheduling systems</li>
-<li>Clock / cycle alignment</li>
-<li>Repeating events</li>
-</ul>
+<h2 id="-lcm-of-more-than-2-numbers">🔁 LCM of MORE Than 2 Numbers</h2>
+<h3 id="-mathematical-rule-1">📐 Mathematical Rule</h3>
+<p>$$
+\text{lcm}(a,b,c,d) = \text{lcm}(\text{lcm}(\text{lcm}(a,b),c),d)
+$$</p>
 <hr>
-<h3 id="-typical-questions-1">🧩 Typical Questions</h3>
-<ul>
-<li>“When will these two jobs run together again?”</li>
-<li>“What is the smallest shared interval?”</li>
-</ul>
+<h3 id="-input--output">✅ Input → Output</h3>
+<table>
+<thead>
+<tr>
+<th>Numbers</th>
+<th>LCM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[4, 6, 8]</td>
+<td>24</td>
+</tr>
+<tr>
+<td>[3, 5, 7]</td>
+<td>105</td>
+</tr>
+<tr>
+<td>[6, 10, 15]</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
 <hr>
-<h3 id="-builds-intuition-1">🧠 Builds Intuition</h3>
+<h3 id="-pure-python--lcm-for-dynamic-n-numbers">🧑‍💻 Pure Python — LCM for Dynamic n Numbers</h3>
+<pre><code class="language-python">def lcm_many(nums):
+    result = nums[0]
+    for x in nums[1:]:
+        result = lcm(result, x)
+    return result
+
+print(lcm_many([4, 6, 8]))     # 24
+print(lcm_many([3, 5, 7]))     # 105
+print(lcm_many([6, 10, 15]))   # 30
+</code></pre>
+<hr>
+<h3 id="-how-to-think-about-lcm-for-juniors">🧠 How to THINK About LCM (For Juniors)</h3>
+<p>Ask this question:</p>
 <blockquote>
-<p>GCD removes overlap.
-LCM rebuilds alignment.</p>
+<p>“When will <strong>everything meet again</strong>?”</p>
 </blockquote>
+<p>Use LCM when:</p>
+<ul>
+<li>cycles repeat</li>
+<li>schedules align</li>
+<li>events synchronize</li>
+</ul>
 <hr>
-<h2 id="-gcd--lcm-together--real-insight">🔁 GCD &amp; LCM Together — Real Insight</h2>
-<h3 id="-identity-to-remember-forever">📐 Identity to Remember Forever</h3>
+<h2 id="-gcd--lcm-together--one-formula-to-rule-them-all">🔁 GCD &amp; LCM Together — One Formula to Rule Them All</h2>
 <p>$$
 \gcd(a,b) \times \text{lcm}(a,b) = a \times b
 $$</p>
 <hr>
-<h3 id="-quick-verification-test">✅ Quick Verification (Test)</h3>
+<h3 id="-verification">✅ Verification</h3>
 <pre><code class="language-python">a, b = 12, 18
 print(gcd(a, b) * lcm(a, b) == a * b)
 </code></pre>
-<p><strong>Output</strong></p>
+<p>Output:</p>
 <pre><code>True
 </code></pre>
 <hr>
-<h3 id="-why-this-matters-for-programmers">🧠 Why This Matters for Programmers</h3>
-<ul>
-<li>Prevents overflow logic errors</li>
-<li>Enables optimal loop bounds</li>
-<li>Unlocks number theory problems</li>
-<li>Appears in <strong>interviews constantly</strong></li>
-</ul>
-<hr>
-<h2 id="-mental-model-very-important">🎯 Mental Model (Very Important)</h2>
+<h2 id="-final-mental-model-remember-forever">🎯 Final Mental Model (Remember Forever)</h2>
 <blockquote>
-<p><strong>GCD answers:</strong>
+<p><strong>GCD asks:</strong>
 “What do these numbers share?”</p>
 </blockquote>
 <blockquote>
-<p><strong>LCM answers:</strong>
-“When do they meet again?”</p>
+<p><strong>LCM asks:</strong>
+“When do they align again?”</p>
 </blockquote>
 <p>If a problem mentions:</p>
 <ul>
-<li><em>sharing</em> → think <strong>GCD</strong></li>
-<li><em>alignment / repetition</em> → think <strong>LCM</strong></li>
+<li><strong>sharing / reducing / simplifying</strong> → think <strong>GCD</strong></li>
+<li><strong>timing / repetition / synchronization</strong> → think <strong>LCM</strong></li>
 </ul>
 <hr>
 <h2 id="5-prime-numbers">5️⃣ Prime Numbers</h2>
@@ -1476,7 +1592,7 @@ print(gcd(a, b) * lcm(a, b) == a * b)
 n &gt; 1 \quad \text{and} \quad n \bmod k \neq 0 ;; \forall k \in [2, \sqrt{n}]
 $$</p>
 <hr>
-<h3 id="-input--output-test-cases-2">✅ Input → Output (Test Cases)</h3>
+<h3 id="-input--output-test-cases">✅ Input → Output (Test Cases)</h3>
 <table>
 <thead>
 <tr>
@@ -1508,7 +1624,7 @@ $$</p>
 </tbody>
 </table>
 <hr>
-<h3 id="-pure-python-code-1">🐍 Pure Python Code</h3>
+<h3 id="-pure-python-code">🐍 Pure Python Code</h3>
 <pre><code class="language-python">def is_prime(n):
     if n &lt;= 1:
         return False
@@ -1557,7 +1673,7 @@ $$</p>
 <li>Time <strong>wraps around</strong></li>
 </ul>
 <hr>
-<h3 id="-input--output-test-cases-3">✅ Input → Output (Test Cases)</h3>
+<h3 id="-input--output-test-cases-1">✅ Input → Output (Test Cases)</h3>
 <table>
 <thead>
 <tr>
@@ -1581,7 +1697,7 @@ $$</p>
 </tbody>
 </table>
 <hr>
-<h3 id="-pure-python-code-2">🐍 Pure Python Code</h3>
+<h3 id="-pure-python-code-1">🐍 Pure Python Code</h3>
 <pre><code class="language-python">print(10 % 3)   # 1
 print(14 % 7)   # 0
 print(23 % 4)   # 3
@@ -1617,7 +1733,7 @@ $$</p>
 \frac{a}{b} = \frac{a \div \gcd(a, b)}{b \div \gcd(a, b)}
 $$</p>
 <hr>
-<h3 id="-input--output-test-cases-4">✅ Input → Output (Test Cases)</h3>
+<h3 id="-input--output-test-cases-2">✅ Input → Output (Test Cases)</h3>
 <table>
 <thead>
 <tr>
@@ -1641,7 +1757,7 @@ $$</p>
 </tbody>
 </table>
 <hr>
-<h3 id="-pure-python-code-3">🐍 Pure Python Code</h3>
+<h3 id="-pure-python-code-2">🐍 Pure Python Code</h3>
 <pre><code class="language-python">def gcd(a, b):
     while b != 0:
         a, b = b, a % b
@@ -1688,7 +1804,7 @@ $$</p>
 <li><code>log₂(8) = 3</code></li>
 </ul>
 <hr>
-<h3 id="-input--output-test-cases-5">✅ Input → Output (Test Cases)</h3>
+<h3 id="-input--output-test-cases-3">✅ Input → Output (Test Cases)</h3>
 <table>
 <thead>
 <tr>
@@ -1757,7 +1873,7 @@ $$</p>
 <pre><code>0, 1, 1, 2, 3, 5, 8, 13, ...
 </code></pre>
 <hr>
-<h3 id="-input--output-test-cases-6">✅ Input → Output (Test Cases)</h3>
+<h3 id="-input--output-test-cases-4">✅ Input → Output (Test Cases)</h3>
 <table>
 <thead>
 <tr>
@@ -1920,7 +2036,7 @@ $$</p>
 </li>
 </ul>
 <hr>
-<h3 id="-input--output-test-cases-7">✅ Input → Output (Test Cases)</h3>
+<h3 id="-input--output-test-cases-5">✅ Input → Output (Test Cases)</h3>
 <table>
 <thead>
 <tr>
@@ -1940,7 +2056,7 @@ $$</p>
 </tbody>
 </table>
 <hr>
-<h3 id="-pure-python-code-4">🐍 Pure Python Code</h3>
+<h3 id="-pure-python-code-3">🐍 Pure Python Code</h3>
 <pre><code class="language-python">def probability(favorable, total):
     return favorable / total
 
@@ -2045,7 +2161,7 @@ $$</p>
 C[i][j] = A[i][j] + B[i][j]
 $$</p>
 <hr>
-<h3 id="-pure-python-code-5">🐍 Pure Python Code</h3>
+<h3 id="-pure-python-code-4">🐍 Pure Python Code</h3>
 <pre><code class="language-python">def add_matrices(A, B):
     result = []
     for i in range(len(A)):
@@ -3483,6 +3599,13 @@ you are no longer just writing code.</p>
           <div class="article-widget">
             
 <div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/2026-01-08-daily-knowledge-notes/dk-003-probability/" rel="next">DK-003 — Probability</a>
+  </div>
   
   
   
