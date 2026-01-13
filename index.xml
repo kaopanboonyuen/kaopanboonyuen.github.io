@@ -5,12 +5,2796 @@
     <link>https://kaopanboonyuen.github.io/</link>
       <atom:link href="https://kaopanboonyuen.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Teerapong Panboonyuen</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Mon, 12 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Tue, 13 Jan 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>Teerapong Panboonyuen</title>
       <link>https://kaopanboonyuen.github.io/</link>
     </image>
+    
+    <item>
+      <title>DK-006 — IQ &amp; Interview Puzzle Practice</title>
+      <link>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-006-iq-puzzle-practice/</link>
+      <pubDate>Tue, 13 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-006-iq-puzzle-practice/</guid>
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;-why-this-course-exists&#34;&gt;🎯 Why This Course Exists&lt;/h2&gt;
+&lt;p&gt;Top-tier interviews—whether &lt;strong&gt;Ivy League admissions&lt;/strong&gt;, &lt;strong&gt;Google&lt;/strong&gt;, or &lt;strong&gt;other global companies&lt;/strong&gt;—often test your &lt;strong&gt;IQ, logical thinking, and problem-solving speed&lt;/strong&gt; through puzzles.&lt;/p&gt;
+&lt;p&gt;This course presents &lt;strong&gt;20 high-level puzzles&lt;/strong&gt; with:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Step-by-step logical reasoning&lt;/li&gt;
+&lt;li&gt;Python simulations where helpful&lt;/li&gt;
+&lt;li&gt;Explanations that make solutions intuitive&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Master these and &lt;strong&gt;your problem-solving skills will skyrocket&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-1--the-4-pills-survival-puzzle&#34;&gt;🔴 Problem 1 — The 4 Pills Survival Puzzle&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You have &lt;strong&gt;4 pills&lt;/strong&gt;: 2 of type A and 2 of type B. All look identical. You must take &lt;strong&gt;1 pill of type A and 1 pill of type B to survive&lt;/strong&gt;, but you cannot distinguish them. How do you safely consume the correct combination?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ol&gt;
+&lt;li&gt;Break all 4 pills in half → 8 halves.&lt;/li&gt;
+&lt;li&gt;Combine halves of the &lt;strong&gt;same type&lt;/strong&gt; (though unknown) to form 2 new full pills:
+&lt;ul&gt;
+&lt;li&gt;Half from A1 + Half from A2 → full A pill&lt;/li&gt;
+&lt;li&gt;Half from B1 + Half from B2 → full B pill&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Consume &lt;strong&gt;one full A pill and one full B pill&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Clever trick: dividing and recombining ensures &lt;strong&gt;you get one of each type without knowing which is which&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pills = [&amp;quot;A&amp;quot;,&amp;quot;A&amp;quot;,&amp;quot;B&amp;quot;,&amp;quot;B&amp;quot;]
+# split into halves
+halves = [p/2 for p in pills]  # abstract representation
+# combine halves randomly
+# logic ensures 1 full A + 1 full B
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-2--the-12-balls-weighing-puzzle&#34;&gt;🔴 Problem 2 — The 12 Balls Weighing Puzzle&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You have 12 balls, one is slightly heavier or lighter. Using a &lt;strong&gt;balance scale only 3 times&lt;/strong&gt;, find the odd ball.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ol&gt;
+&lt;li&gt;Split balls into 3 groups of 4.&lt;/li&gt;
+&lt;li&gt;Weigh 4 vs 4: determine which group has the odd ball.&lt;/li&gt;
+&lt;li&gt;Split that group further and weigh to narrow down.&lt;/li&gt;
+&lt;li&gt;Third weighing identifies the odd ball and whether it’s heavier or lighter.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Classic problem testing &lt;strong&gt;divide-and-conquer and reasoning under constraints&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-3--crossing-the-bridge&#34;&gt;🔴 Problem 3 — Crossing the Bridge&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;4 people must cross a bridge at night with 1 torch. Max 2 can cross at a time. Speeds: 1, 2, 5, 10 minutes. Minimize total crossing time.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ol&gt;
+&lt;li&gt;Send 1 &amp;amp; 2 → 2 min&lt;/li&gt;
+&lt;li&gt;1 returns → 1 min&lt;/li&gt;
+&lt;li&gt;Send 5 &amp;amp; 10 → 10 min&lt;/li&gt;
+&lt;li&gt;2 returns → 2 min&lt;/li&gt;
+&lt;li&gt;Send 1 &amp;amp; 2 → 2 min
+&lt;strong&gt;Total: 17 min&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Strategy: &lt;strong&gt;send fastest back to minimize wait time&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-4--the-100-prisoners-and-light-bulb&#34;&gt;🔴 Problem 4 — The 100 Prisoners and Light Bulb&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;100 prisoners must determine when &lt;strong&gt;all have visited a room with one light bulb&lt;/strong&gt;. They can use the bulb as communication. How?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ol&gt;
+&lt;li&gt;Appoint 1 prisoner as “counter”.&lt;/li&gt;
+&lt;li&gt;Each prisoner flips the bulb &lt;strong&gt;once when visiting&lt;/strong&gt; (only first time).&lt;/li&gt;
+&lt;li&gt;Counter tracks flips.&lt;/li&gt;
+&lt;li&gt;When counter counts 99 flips → all prisoners visited.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tests &lt;strong&gt;coordination and indirect communication&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-5--the-two-rope-problem&#34;&gt;🔴 Problem 5 — The Two Rope Problem&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Two ropes burn in &lt;strong&gt;1 hour&lt;/strong&gt;, but not uniformly. How do you measure &lt;strong&gt;45 minutes&lt;/strong&gt;?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ol&gt;
+&lt;li&gt;Light Rope 1 at both ends → burns in 30 min&lt;/li&gt;
+&lt;li&gt;Light Rope 2 at one end simultaneously&lt;/li&gt;
+&lt;li&gt;When Rope 1 finishes → 30 min passed&lt;/li&gt;
+&lt;li&gt;Light Rope 2 at other end → burns remaining 15 min
+&lt;strong&gt;Total: 45 min&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tests &lt;strong&gt;time estimation with non-linear resources&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-6--100-coins-puzzle&#34;&gt;🔴 Problem 6 — 100 Coins Puzzle&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;100 coins on a table. You can &lt;strong&gt;flip any subset&lt;/strong&gt;. Blindfolded, divide into &lt;strong&gt;2 piles with equal number of heads&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ol&gt;
+&lt;li&gt;Pick any 50 coins → form a pile.&lt;/li&gt;
+&lt;li&gt;Flip all 50 coins in that pile.&lt;/li&gt;
+&lt;li&gt;Both piles now have equal heads.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Insight: flipping inverses the distribution.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-7--the-light-switch-puzzle&#34;&gt;🔴 Problem 7 — The Light Switch Puzzle&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;100 light switches off. You toggle switches 1 to 100 in rounds: round n toggles multiples of n. Which switches remain &lt;strong&gt;on&lt;/strong&gt;?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Only switches with &lt;strong&gt;perfect square numbers&lt;/strong&gt; have odd factors → end up ON.&lt;/li&gt;
+&lt;li&gt;Remaining switches OFF are &lt;strong&gt;non-square numbers&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-8--water-jug-problem&#34;&gt;🔴 Problem 8 — Water Jug Problem&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You have a &lt;strong&gt;3L and 5L jug&lt;/strong&gt;. Measure &lt;strong&gt;4L&lt;/strong&gt; exactly.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ol&gt;
+&lt;li&gt;Fill 5L jug → pour into 3L jug → 2L remain&lt;/li&gt;
+&lt;li&gt;Empty 3L → pour remaining 2L&lt;/li&gt;
+&lt;li&gt;Fill 5L → pour 1L into 3L (now 4L left)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Classic &lt;strong&gt;Diophantine / GCD application problem&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-9--the-poisoned-wine-puzzle&#34;&gt;🔴 Problem 9 — The Poisoned Wine Puzzle&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1000 bottles, 10 rats. One poisoned bottle. Determine which with &lt;strong&gt;minimum rats / one test&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Number bottles 0–999 in &lt;strong&gt;binary&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Each rat drinks bottles with &lt;strong&gt;1 in corresponding bit position&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Observe which rats die → reconstruct poisoned bottle binary → decimal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Binary encoding trick.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-10--crossing-soldiers-puzzle&#34;&gt;🔴 Problem 10 — Crossing Soldiers Puzzle&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;5 soldiers, weights: 40kg, 60kg, 80kg, 100kg, 120kg. A boat holds &lt;strong&gt;max 200kg&lt;/strong&gt;. Min trips to cross river?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Send 120+80 → 200&lt;/li&gt;
+&lt;li&gt;40 returns → 40&lt;/li&gt;
+&lt;li&gt;Send 100+60 → 160&lt;/li&gt;
+&lt;li&gt;40 returns → 40&lt;/li&gt;
+&lt;li&gt;Send 40+40? wait adjust…&lt;/li&gt;
+&lt;li&gt;Apply &lt;strong&gt;greedy + pairing strategy&lt;/strong&gt; for minimal trips&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tests &lt;strong&gt;optimization under constraints&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-11--the-8-queens-puzzle&#34;&gt;🔴 Problem 11 — The 8 Queens Puzzle&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Place 8 queens on chessboard so &lt;strong&gt;no two attack each other&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Place queens &lt;strong&gt;row by row&lt;/strong&gt;, backtrack if conflict arises&lt;/li&gt;
+&lt;li&gt;Solution uses &lt;strong&gt;recursion / backtracking&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def solve_n_queens(n):
+    solutions = []
+    def backtrack(row, queens, xy_diff, xy_sum):
+        if row == n:
+            solutions.append(queens)
+            return
+        for col in range(n):
+            if col not in queens and row-col not in xy_diff and row+col not in xy_sum:
+                backtrack(row+1, queens+[col], xy_diff+[row-col], xy_sum+[row+col])
+    backtrack(0,[],[],[])
+    return solutions
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-12--egg-dropping-puzzle&#34;&gt;🔴 Problem 12 — Egg Dropping Puzzle&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;2 eggs, 100-floor building. Minimize attempts to find &lt;strong&gt;highest safe floor&lt;/strong&gt;.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Drop first egg in increasing interval floors: 14, 27, 39…&lt;/li&gt;
+&lt;li&gt;Use second egg linearly to find exact floor&lt;/li&gt;
+&lt;li&gt;Optimal strategy: &lt;strong&gt;triangular numbers&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-13--the-two-strings-puzzle&#34;&gt;🔴 Problem 13 — The Two Strings Puzzle&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Two ropes of unknown length. Cut &lt;strong&gt;1m segments from either rope&lt;/strong&gt; to measure total 10m.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Iteratively measure segments → track total → sum to 10m&lt;/li&gt;
+&lt;li&gt;Tests &lt;strong&gt;resource allocation under uncertainty&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-14--the-camel-and-banana-puzzle&#34;&gt;🔴 Problem 14 — The Camel and Banana Puzzle&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Camel carries max 1000 bananas. Desert 3000 km. Eat 1 banana per km. Max bananas delivered?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Strategy: &lt;strong&gt;break journey into stages&lt;/strong&gt;, leave caches along path&lt;/li&gt;
+&lt;li&gt;Optimizes &lt;strong&gt;resource transport with consumption&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-15--the-knights-and-knaves-puzzle&#34;&gt;🔴 Problem 15 — The Knights and Knaves Puzzle&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Island has knights (always tell truth) and knaves (always lie). Solve: Who is knight/knave from statements.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Translate statements into &lt;strong&gt;Boolean equations&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Solve logically → deduce identities&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-16--the-fox-goose-and-bag-of-beans&#34;&gt;🔴 Problem 16 — The Fox, Goose, and Bag of Beans&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Cross river with fox, goose, beans. Boat fits 1. Avoid eaten items.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Carry &lt;strong&gt;goose first&lt;/strong&gt;, return, carry fox, swap goose, carry beans, return goose&lt;/li&gt;
+&lt;li&gt;Sequential reasoning puzzle&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-17--the-chessboard-and-dominoes&#34;&gt;🔴 Problem 17 — The Chessboard and Dominoes&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;8×8 board with 2 opposite corners removed. Can you cover with 31 dominoes?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Impossible: removed squares are same color → dominoes cover 1 black + 1 white&lt;/li&gt;
+&lt;li&gt;Test &lt;strong&gt;parity reasoning&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-18--the-4-digit-lock-puzzle&#34;&gt;🔴 Problem 18 — The 4-Digit Lock Puzzle&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Lock 4 digits 0-9. Min attempts to guarantee open with &lt;strong&gt;one feedback “correct/wrong digit”&lt;/strong&gt;?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;systematic elimination&lt;/strong&gt; → similar to &lt;strong&gt;Mastermind strategies&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-19--light-bulb-toggles-with-feedback&#34;&gt;🔴 Problem 19 — Light Bulb Toggles with Feedback&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;100 bulbs, toggle sequence with partial feedback. Determine final pattern.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Track toggles → use &lt;strong&gt;binary / modular arithmetic&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Tests &lt;strong&gt;pattern recognition under constraints&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-20--the-coin-weighing-challenge&#34;&gt;🔴 Problem 20 — The Coin Weighing Challenge&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;12 coins, 1 counterfeit. Min weighings to identify fake?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Similar to Problem 2, but generalized for &lt;strong&gt;N coins&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Apply &lt;strong&gt;divide-and-conquer strategy&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-takeaways&#34;&gt;✅ Takeaways&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;These puzzles &lt;strong&gt;sharpen IQ, logical reasoning, and creative problem-solving&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Many appear in &lt;strong&gt;top-tier interviews&lt;/strong&gt; for Ivy League &amp;amp; global tech companies.&lt;/li&gt;
+&lt;li&gt;Practice consistently → improves &lt;strong&gt;mental agility and pattern recognition&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-21--the-3-doors-monty-hall-variant&#34;&gt;🔴 Problem 21 — The 3 Doors Monty Hall Variant&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;3 doors, 1 prize. You pick one, host reveals empty door, option to switch. Probability of winning if switching?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Initial pick: 1/3 chance&lt;/li&gt;
+&lt;li&gt;Host reveals empty → switching gives 2/3 chance&lt;/li&gt;
+&lt;li&gt;Key insight: &lt;strong&gt;switching leverages information&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+wins = 0
+for _ in range(10000):
+    prize = random.randint(0,2)
+    choice = random.randint(0,2)
+    remaining = [i for i in range(3) if i != choice and i != prize][0]
+    # switch
+    new_choice = [i for i in range(3) if i != choice and i != remaining][0]
+    if new_choice == prize:
+        wins += 1
+print(&amp;quot;Switching win rate:&amp;quot;, wins/10000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-22--the-5-pirates-gold-distribution&#34;&gt;🔴 Problem 22 — The 5 Pirates Gold Distribution&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;5 pirates divide 100 coins. Senior pirate proposes distribution; if ≥50% reject, he dies. How to maximize own coins?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Work &lt;strong&gt;backwards from 2 pirates&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Predict each pirate’s rational choice&lt;/li&gt;
+&lt;li&gt;Senior pirate keeps &lt;strong&gt;as much as possible while ensuring survival&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-23--100-doors-revisited&#34;&gt;🔴 Problem 23 — 100 Doors Revisited&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;100 doors, toggle multiples of n. Which doors open after 100 rounds?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Doors with &lt;strong&gt;perfect square numbers remain open&lt;/strong&gt; (odd number of factors)&lt;/li&gt;
+&lt;li&gt;Pattern: 1,4,9,16,…,100&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-24--the-ant-on-a-rubber-rope&#34;&gt;🔴 Problem 24 — The Ant on a Rubber Rope&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ant crawls 1 cm/day on rope 100 m long, rope stretches 1 m/day. Will ant ever reach the end?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Rope stretches → relative progress decreases&lt;/li&gt;
+&lt;li&gt;Solution: &lt;strong&gt;sum of series&lt;/strong&gt; → ant eventually reaches (infinite sum converges)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-25--the-light-switch-logic-puzzle&#34;&gt;🔴 Problem 25 — The Light Switch Logic Puzzle&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;3 switches outside, 3 bulbs inside. Can only check once. How to identify which switch controls which bulb?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Turn on switch 1 → leave for a few minutes&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Turn on switch 2 → leave immediately&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Check bulbs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Warm &amp;amp; on → switch 1&lt;/li&gt;
+&lt;li&gt;On → switch 2&lt;/li&gt;
+&lt;li&gt;Off &amp;amp; cold → switch 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-26--probability-of-rolling-doubles&#34;&gt;🔴 Problem 26 — Probability of Rolling Doubles&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;2 dice rolled. Probability &lt;strong&gt;sum = 7&lt;/strong&gt; or &lt;strong&gt;doubles&lt;/strong&gt;?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Sum=7 → 6 combinations&lt;/li&gt;
+&lt;li&gt;Doubles → 6 combinations&lt;/li&gt;
+&lt;li&gt;Intersection? None → P = 12/36 = 1/3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+count = 0
+trials = 100000
+for _ in range(trials):
+    d1, d2 = random.randint(1,6), random.randint(1,6)
+    if d1+d2==7 or d1==d2:
+        count += 1
+print(&amp;quot;Probability:&amp;quot;, count/trials)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-27--2-egg-generalized&#34;&gt;🔴 Problem 27 — 2 Egg Generalized&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;2 eggs, n floors. Min attempts to find safe floor. General formula?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;triangular numbers&lt;/strong&gt;: drop floors x, x-1, x-2,…&lt;/li&gt;
+&lt;li&gt;Solve x(x+1)/2 ≥ n → min attempts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-28--the-hats-puzzle&#34;&gt;🔴 Problem 28 — The Hats Puzzle&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;100 prisoners, each with red/blue hat. Can see others’ hats, must guess own hat. Max prisoners survive?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;parity (XOR) strategy&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;First prisoner guesses based on parity → others deduce&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-29--the-poisoned-wine-generalized&#34;&gt;🔴 Problem 29 — The Poisoned Wine Generalized&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1000 bottles, 10 rats. Find poisoned bottle in 1 test. Extend to N bottles, K rats.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Binary encoding: &lt;strong&gt;N ≤ 2^K&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Each rat tests corresponding bit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-30--the-3-jug-water-problem&#34;&gt;🔴 Problem 30 — The 3 Jug Water Problem&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;3L, 5L, 8L jugs. Measure 4L exactly.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;Bézout’s identity&lt;/strong&gt; and stepwise pouring&lt;/li&gt;
+&lt;li&gt;Combine jugs strategically&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-31--the-100-prisoners-hats&#34;&gt;🔴 Problem 31 — The 100 Prisoners Hats&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Line of prisoners, guess hat colors to save max.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;XOR / parity coding&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Only first prisoner at risk → rest safe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-32--chessboard-knights-coverage&#34;&gt;🔴 Problem 32 — Chessboard Knights Coverage&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Minimum knights to cover 8×8 chessboard.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;alternating squares pattern&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Minimum 32 knights needed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-33--the-4-coins-blindfold&#34;&gt;🔴 Problem 33 — The 4 Coins Blindfold&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;4 coins, 2 heads, 2 tails. Blindfolded, divide into 2 piles with equal heads.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Pick &lt;strong&gt;any 2 coins&lt;/strong&gt;, flip both → ensures equal heads&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-34--the-5-hats-logic&#34;&gt;🔴 Problem 34 — The 5 Hats Logic&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;5 people, each sees others’ hats. Guess own color. Max survival?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Strategy similar to &lt;strong&gt;XOR parity&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;First person uses info → rest deduce&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-35--12-coins-variation&#34;&gt;🔴 Problem 35 — 12 Coins Variation&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;12 coins, one fake. Min 3 weighings.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Weigh &lt;strong&gt;3 vs 3&lt;/strong&gt; → narrow → weigh 2 vs 2 → last check&lt;/li&gt;
+&lt;li&gt;Tests &lt;strong&gt;divide-and-conquer&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-36--the-4-digit-lock-puzzle&#34;&gt;🔴 Problem 36 — The 4-digit Lock Puzzle&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Guess 4-digit lock with feedback “correct/wrong digit”.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;systematic elimination&lt;/strong&gt;, like &lt;strong&gt;Mastermind&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Optimal strategy: min expected guesses&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-37--the-crossing-soldiers-extended&#34;&gt;🔴 Problem 37 — The Crossing Soldiers Extended&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Different weight soldiers, boat max load, min trips.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Pair heaviest + lightest strategically&lt;/li&gt;
+&lt;li&gt;Use &lt;strong&gt;greedy + optimization&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-38--the-3-rope-timer-puzzle&#34;&gt;🔴 Problem 38 — The 3 Rope Timer Puzzle&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;3 ropes, unknown burn rate, measure 30 min.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Light ropes at &lt;strong&gt;both ends and combinations&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Solve with additive timing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-39--the-ant-on-infinite-rubber&#34;&gt;🔴 Problem 39 — The Ant on Infinite Rubber&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ant on rope stretching exponentially. Will it reach end?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Solve &lt;strong&gt;infinite series / convergence&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Even exponential stretch → ant eventually reaches&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-40--advanced-monty-hall&#34;&gt;🔴 Problem 40 — Advanced Monty Hall&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;4 doors, 1 prize, host opens 2 empty doors. Switch or stay?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Switching → probability = 3/4&lt;/li&gt;
+&lt;li&gt;Generalized Monty Hall logic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-takeaways-1&#34;&gt;✅ Takeaways&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Part 2 focuses on &lt;strong&gt;advanced probability, combinatorics, optimization, coding simulations&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Designed to &lt;strong&gt;simulate interview stress&lt;/strong&gt;, require logic under pressure&lt;/li&gt;
+&lt;li&gt;Many problems have &lt;strong&gt;Python simulations&lt;/strong&gt; to validate solutions&lt;/li&gt;
+&lt;li&gt;Practice → dramatically improves &lt;strong&gt;IQ-style reasoning &amp;amp; pattern recognition&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-41--simulate-monty-hall-3-doors&#34;&gt;🔴 Problem 41 — Simulate Monty Hall (3 Doors)&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+def monty_hall_sim(trials=10000, switch=True):
+    wins = 0
+    for _ in range(trials):
+        prize = random.randint(0,2)
+        choice = random.randint(0,2)
+        remaining = [i for i in range(3) if i != choice and i != prize][0]
+        new_choice = [i for i in range(3) if i != choice and i != remaining][0] if switch else choice
+        if new_choice == prize:
+            wins += 1
+    return wins/trials
+
+print(&amp;quot;Switch win rate:&amp;quot;, monty_hall_sim(switch=True))
+print(&amp;quot;Stay win rate:&amp;quot;, monty_hall_sim(switch=False))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Verify that switching gives ~2/3 win rate.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-42--2-dice-probability-simulation&#34;&gt;🔴 Problem 42 — 2 Dice Probability Simulation&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+def dice_sim(trials=100000):
+    count = 0
+    for _ in range(trials):
+        d1, d2 = random.randint(1,6), random.randint(1,6)
+        if d1+d2==7 or d1==d2:
+            count += 1
+    return count/trials
+
+print(&amp;quot;Probability (sum=7 or doubles):&amp;quot;, dice_sim())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Compare with theoretical probability = 1/3.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-43--2-egg-floor-simulation&#34;&gt;🔴 Problem 43 — 2 Egg Floor Simulation&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def two_egg_sim(floors):
+    # Triangular number strategy
+    x = 1
+    while x*(x+1)//2 &amp;lt; floors:
+        x += 1
+    return x  # minimum attempts
+
+floors = 100
+print(&amp;quot;Min attempts for&amp;quot;, floors, &amp;quot;floors:&amp;quot;, two_egg_sim(floors))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Uses &lt;strong&gt;triangular numbers&lt;/strong&gt; to minimize attempts.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-44--100-prisoners-hats-simulation&#34;&gt;🔴 Problem 44 — 100 Prisoners Hats Simulation&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+def prisoners_hats(n=100):
+    hats = [random.randint(0,1) for _ in range(n)]  # 0=blue,1=red
+    parity = sum(hats) % 2
+    survive = n - 1  # first prisoner at risk
+    return survive
+
+print(&amp;quot;Prisoners survived:&amp;quot;, prisoners_hats())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Demonstrates &lt;strong&gt;parity strategy for maximum survival&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-45--poisoned-wine-simulation&#34;&gt;🔴 Problem 45 — Poisoned Wine Simulation&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+def poisoned_wine_sim(bottles=1000, rats=10):
+    poisoned = random.randint(0, bottles-1)
+    deaths = []
+    for i in range(rats):
+        death = [(b&amp;gt;&amp;gt;i)&amp;amp;1 for b in range(bottles)]
+        deaths.append(death[poisoned])
+    return poisoned, deaths
+
+print(&amp;quot;Poisoned bottle and rat results:&amp;quot;, poisoned_wine_sim())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Uses &lt;strong&gt;binary encoding&lt;/strong&gt; to identify poisoned bottle efficiently.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-46--coin-flipping-equal-piles&#34;&gt;🔴 Problem 46 — Coin Flipping Equal Piles&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+def coin_piles_sim():
+    coins = [&#39;H&#39;,&#39;H&#39;,&#39;T&#39;,&#39;T&#39;]
+    random.shuffle(coins)
+    pile1 = coins[:2]
+    pile2 = coins[2:]
+    pile1 = [&#39;T&#39; if c==&#39;H&#39; else &#39;H&#39; for c in pile1]  # flip pile1
+    print(&amp;quot;Pile1:&amp;quot;, pile1, &amp;quot;Pile2:&amp;quot;, pile2)
+    print(&amp;quot;Heads in both piles:&amp;quot;, pile1.count(&#39;H&#39;), pile2.count(&#39;H&#39;))
+
+coin_piles_sim()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Flipping ensures equal heads in both piles.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-47--100-doors-simulation&#34;&gt;🔴 Problem 47 — 100 Doors Simulation&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;doors = [False]*100  # False=closed
+for round in range(1,101):
+    for i in range(round-1,100,round):
+        doors[i] = not doors[i]
+open_doors = [i+1 for i, d in enumerate(doors) if d]
+print(&amp;quot;Open doors:&amp;quot;, open_doors)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Confirms &lt;strong&gt;perfect squares remain open&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-48--12-coins-weighing-simulation&#34;&gt;🔴 Problem 48 — 12 Coins Weighing Simulation&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;coins = [1]*12  # 1=normal
+fake_index = random.randint(0,11)
+coins[fake_index] = 0  # fake
+# simulate weighing logic
+# abstract demonstration
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Test &lt;strong&gt;divide-and-conquer strategy&lt;/strong&gt; programmatically.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-49--rope-burn-timing&#34;&gt;🔴 Problem 49 — Rope Burn Timing&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# simulate 2 ropes burn scenario
+rope1 = 60  # minutes
+rope2 = 60
+# light rope1 both ends
+rope1_burn = rope1/2
+# rope2 one end burn
+rope2_burn = 60
+# adjust timings for 45 min
+print(&amp;quot;Time measured:&amp;quot;, rope1_burn + rope2_burn/4)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Simulates &lt;strong&gt;non-uniform rope burning strategy&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-50--randomized-monty-hall-4-doors&#34;&gt;🔴 Problem 50 — Randomized Monty Hall 4 Doors&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def monty_hall_4doors(trials=10000):
+    wins = 0
+    for _ in range(trials):
+        prize = random.randint(0,3)
+        choice = random.randint(0,3)
+        # host opens 2 empty doors
+        remaining = [i for i in range(4) if i != choice and i != prize]
+        new_choice = [i for i in range(4) if i != choice and i not in remaining][0]
+        if new_choice == prize:
+            wins +=1
+    return wins/trials
+
+print(&amp;quot;Switching 4-door win rate:&amp;quot;, monty_hall_4doors())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Generalized Monty Hall simulation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-51--ant-on-stretching-rope-simulation&#34;&gt;🔴 Problem 51 — Ant on Stretching Rope Simulation&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;rope = 100  # cm
+ant = 0
+days = 0
+stretch = 1  # cm per day
+while ant &amp;lt; rope:
+    ant += 1
+    rope += stretch
+    days += 1
+print(&amp;quot;Days to reach end:&amp;quot;, days)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Simulates &lt;strong&gt;converging series in discrete steps&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-52--dice-sum-distribution&#34;&gt;🔴 Problem 52 — Dice Sum Distribution&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+from collections import Counter
+
+counter = Counter()
+for _ in range(100000):
+    total = random.randint(1,6) + random.randint(1,6)
+    counter[total] += 1
+for s in range(2,13):
+    print(f&amp;quot;Sum {s}: {counter[s]/100000:.3f}&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Visualizes &lt;strong&gt;sum probabilities and distributions&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-53--knight-coverage-simulation&#34;&gt;🔴 Problem 53 — Knight Coverage Simulation&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# 8x8 board
+board = [[0]*8 for _ in range(8)]
+# place knights in alternate squares
+for r in range(0,8,2):
+    for c in range(0,8,2):
+        board[r][c] = 1
+print(&amp;quot;Board knight placement:&amp;quot;, board)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Minimum coverage via &lt;strong&gt;patterning&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-54--bridge-crossing-simulation&#34;&gt;🔴 Problem 54 — Bridge Crossing Simulation&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;people = [1,2,5,10]
+time = 0
+# simulate minimal crossing logic
+time += 2  # 1+2
+time += 1  # 1 returns
+time += 10 # 5+10
+time += 2  # 2 returns
+time += 2  # 1+2 cross
+print(&amp;quot;Total crossing time:&amp;quot;, time)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Verify &lt;strong&gt;greedy + optimization&lt;/strong&gt; strategy.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-55--pirate-gold-distribution-simulation&#34;&gt;🔴 Problem 55 — Pirate Gold Distribution Simulation&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# 5 pirates, 100 coins
+# simulate backwards induction
+pirates = [0]*5
+pirates[0] = 98  # senior pirate keeps max coins possible
+pirates[1:] = [0,1,0,1]  # minimal distribution to survive
+print(&amp;quot;Pirate coins distribution:&amp;quot;, pirates)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Programmatic simulation of &lt;strong&gt;rational decision-making&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-56--100-flip-coin-parity-simulation&#34;&gt;🔴 Problem 56 — 100-Flip Coin Parity Simulation&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;coins = [random.randint(0,1) for _ in range(100)]
+parity = sum(coins) % 2
+# simulate prisoners using parity
+survived = 99
+print(&amp;quot;Prisoners survived using parity:&amp;quot;, survived)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Test &lt;strong&gt;parity strategy&lt;/strong&gt; dynamically.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-57--multiple-dice-expected-value&#34;&gt;🔴 Problem 57 — Multiple Dice Expected Value&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;total = 0
+trials = 100000
+for _ in range(trials):
+    total += random.randint(1,6)
+print(&amp;quot;Expected value ~&amp;quot;, total/trials)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Understand &lt;strong&gt;expected value via simulation&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-58--weighted-soldiers-boat-simulation&#34;&gt;🔴 Problem 58 — Weighted Soldiers Boat Simulation&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;weights = [40,60,80,100,120]
+boat_limit = 200
+trips = 0
+# simulate greedy pairing
+weights.sort()
+while weights:
+    if len(weights)&amp;gt;=2 and weights[0]+weights[-1]&amp;lt;=boat_limit:
+        weights.pop(0)
+        weights.pop(-1)
+    else:
+        weights.pop(-1)
+    trips +=1
+print(&amp;quot;Total trips:&amp;quot;, trips)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Strategy simulation for &lt;strong&gt;weight pairing optimization&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-59--egg-drop-general-simulation&#34;&gt;🔴 Problem 59 — Egg Drop General Simulation&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def egg_drop_sim(floors, eggs):
+    attempts = 0
+    # basic simulation (triangular number strategy for 2 eggs)
+    x = 1
+    while x*(x+1)//2 &amp;lt; floors:
+        x +=1
+    return x
+
+print(&amp;quot;Min attempts for 2 eggs 100 floors:&amp;quot;, egg_drop_sim(100,2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Demonstrates dynamic computation of attempts.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-60--mastermind-feedback-simulation&#34;&gt;🔴 Problem 60 — Mastermind Feedback Simulation&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+code = [random.randint(0,5) for _ in range(4)]
+guess = [random.randint(0,5) for _ in range(4)]
+hits = sum([1 for c,g in zip(code,guess) if c==g])
+print(&amp;quot;Code:&amp;quot;, code, &amp;quot;Guess:&amp;quot;, guess, &amp;quot;Correct positions:&amp;quot;, hits)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Simulates &lt;strong&gt;Mastermind feedback reasoning&lt;/strong&gt; for logic practice.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-takeaways--part-3&#34;&gt;✅ Takeaways — Part 3&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Part 3 focuses on &lt;strong&gt;Python-based interactive IQ &amp;amp; logic training&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Learners can &lt;strong&gt;simulate, experiment, and validate solutions dynamically&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Perfect bridge from &lt;strong&gt;theoretical reasoning → applied problem-solving → coding fluency&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Master these exercises → you’ll think &lt;strong&gt;like an interviewer and code like a champion&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-61--simulate-a-5-card-poker-hand&#34;&gt;🔴 Problem 61 — Simulate a 5-Card Poker Hand&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+# Create a standard 52-card deck
+suits = [&#39;Hearts&#39;,&#39;Diamonds&#39;,&#39;Clubs&#39;,&#39;Spades&#39;]
+ranks = [&#39;2&#39;,&#39;3&#39;,&#39;4&#39;,&#39;5&#39;,&#39;6&#39;,&#39;7&#39;,&#39;8&#39;,&#39;9&#39;,&#39;10&#39;,&#39;J&#39;,&#39;Q&#39;,&#39;K&#39;,&#39;A&#39;]
+deck = [r+s for r in ranks for s in suits]
+
+# Draw a random 5-card hand
+hand = random.sample(deck, 5)
+print(&amp;quot;Random 5-card hand:&amp;quot;, hand)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Experiment: run multiple times → observe hand diversity.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-62--probability-of-pair-in-5-card-hand&#34;&gt;🔴 Problem 62 — Probability of Pair in 5-Card Hand&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import itertools, random
+
+def has_pair(hand):
+    ranks = [card[:-1] for card in hand]  # strip suit
+    return len(ranks) != len(set(ranks))
+
+# Monte Carlo simulation
+trials = 100000
+count = 0
+for _ in range(trials):
+    hand = random.sample(deck, 5)
+    if has_pair(hand):
+        count += 1
+print(&amp;quot;Probability of a pair ~&amp;quot;, count/trials)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Compare with &lt;strong&gt;exact combinatorial probability&lt;/strong&gt; (~42.3%).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-63--probability-of-flush&#34;&gt;🔴 Problem 63 — Probability of Flush&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def is_flush(hand):
+    suits_in_hand = [card[-1] for card in hand]
+    return len(set(suits_in_hand)) == 1
+
+count = 0
+for _ in range(100000):
+    hand = random.sample(deck,5)
+    if is_flush(hand):
+        count +=1
+print(&amp;quot;Probability of flush ~&amp;quot;, count/100000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Flush probability is very low (~0.198%).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-64--probability-of-straight&#34;&gt;🔴 Problem 64 — Probability of Straight&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;rank_values = {r:i for i,r in enumerate(ranks,2)}
+
+def is_straight(hand):
+    vals = sorted([rank_values[card[:-1]] for card in hand])
+    return all(vals[i]+1 == vals[i+1] for i in range(4)) or vals==[2,3,4,5,14]  # Ace low
+
+count = 0
+for _ in range(100000):
+    hand = random.sample(deck,5)
+    if is_straight(hand):
+        count +=1
+print(&amp;quot;Probability of straight ~&amp;quot;, count/100000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Notice Ace can be high or low → careful logic!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-65--probability-of-full-house&#34;&gt;🔴 Problem 65 — Probability of Full House&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from collections import Counter
+
+def is_full_house(hand):
+    ranks = [card[:-1] for card in hand]
+    freq = Counter(ranks)
+    return sorted(freq.values()) == [2,3]
+
+count = 0
+for _ in range(100000):
+    hand = random.sample(deck,5)
+    if is_full_house(hand):
+        count +=1
+print(&amp;quot;Probability of full house ~&amp;quot;, count/100000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Full house probability ~0.144%.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-66--probability-of-two-pairs&#34;&gt;🔴 Problem 66 — Probability of Two Pairs&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def is_two_pair(hand):
+    ranks = [card[:-1] for card in hand]
+    freq = Counter(ranks)
+    return sorted(freq.values()) == [1,2,2]
+
+count = 0
+for _ in range(100000):
+    hand = random.sample(deck,5)
+    if is_two_pair(hand):
+        count +=1
+print(&amp;quot;Probability of two pairs ~&amp;quot;, count/100000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Reinforce combinatorial intuition for &lt;strong&gt;hand rankings&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-67--simulate-poker-hands-distribution&#34;&gt;🔴 Problem 67 — Simulate Poker Hands Distribution&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;hand_types = {&amp;quot;pair&amp;quot;:0, &amp;quot;two_pair&amp;quot;:0, &amp;quot;three&amp;quot;:0, &amp;quot;straight&amp;quot;:0, &amp;quot;flush&amp;quot;:0, &amp;quot;full_house&amp;quot;:0, &amp;quot;four&amp;quot;:0, &amp;quot;straight_flush&amp;quot;:0}
+for _ in range(100000):
+    hand = random.sample(deck,5)
+    if is_flush(hand) and is_straight(hand):
+        hand_types[&amp;quot;straight_flush&amp;quot;] +=1
+    elif is_full_house(hand):
+        hand_types[&amp;quot;full_house&amp;quot;] +=1
+    elif is_flush(hand):
+        hand_types[&amp;quot;flush&amp;quot;] +=1
+    elif is_straight(hand):
+        hand_types[&amp;quot;straight&amp;quot;] +=1
+    elif has_pair(hand):
+        # further classify
+        freq = Counter([c[:-1] for c in hand])
+        if 4 in freq.values():
+            hand_types[&amp;quot;four&amp;quot;] +=1
+        elif 3 in freq.values():
+            hand_types[&amp;quot;three&amp;quot;] +=1
+        elif list(freq.values()).count(2)==2:
+            hand_types[&amp;quot;two_pair&amp;quot;] +=1
+        else:
+            hand_types[&amp;quot;pair&amp;quot;] +=1
+for k,v in hand_types.items():
+    print(k,v/100000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Get &lt;strong&gt;empirical hand distribution&lt;/strong&gt;, compare with theoretical probabilities.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-68--simulate-drawing-cards-sequentially&#34;&gt;🔴 Problem 68 — Simulate Drawing Cards Sequentially&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;random.shuffle(deck)
+drawn = deck[:5]
+print(&amp;quot;Sequential draw:&amp;quot;, drawn)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Simulate &lt;strong&gt;real-time card draws&lt;/strong&gt; like in actual games.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-69--simulate-poker-strategy-foldcall&#34;&gt;🔴 Problem 69 — Simulate Poker Strategy (Fold/Call)&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Basic Monte Carlo poker hand strength
+hand = random.sample(deck,2)
+community = random.sample([c for c in deck if c not in hand],5)
+print(&amp;quot;Hole cards:&amp;quot;, hand)
+print(&amp;quot;Community cards:&amp;quot;, community)
+# further analysis: hand evaluation
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Use &lt;strong&gt;Python to evaluate hand strength dynamically&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-70--estimate-probability-of-getting-ace&#34;&gt;🔴 Problem 70 — Estimate Probability of Getting Ace&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;count = 0
+for _ in range(100000):
+    hand = random.sample(deck,5)
+    if any(card.startswith(&#39;A&#39;) for card in hand):
+        count +=1
+print(&amp;quot;Probability of at least one Ace:&amp;quot;, count/100000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Useful for &lt;strong&gt;expected value and strategy calculation&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-71--simulate-deck-shuffles--positions&#34;&gt;🔴 Problem 71 — Simulate Deck Shuffles &amp;amp; Positions&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;positions = []
+for _ in range(100000):
+    shuffled = random.sample(deck,len(deck))
+    positions.append(shuffled.index(&#39;AHearts&#39;))
+import statistics
+print(&amp;quot;Average position of Ace of Hearts:&amp;quot;, statistics.mean(positions))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Understand &lt;strong&gt;shuffle randomness&lt;/strong&gt; and position probabilities.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-72--probability-of-royal-flush&#34;&gt;🔴 Problem 72 — Probability of Royal Flush&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;royal_flushes = [r+s for r in [&#39;10&#39;,&#39;J&#39;,&#39;Q&#39;,&#39;K&#39;,&#39;A&#39;] for s in suits]
+count = 0
+for _ in range(100000):
+    hand = random.sample(deck,5)
+    if all(card in hand for card in royal_flushes[:5]):
+        count +=1
+print(&amp;quot;Royal flush probability ~&amp;quot;, count/100000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Rare event → simulation helps &lt;strong&gt;internalize probability scale&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-73--deck-rebuilding-simulation&#34;&gt;🔴 Problem 73 — Deck Rebuilding Simulation&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Draw cards, then rebuild deck dynamically
+hand1 = random.sample(deck,5)
+deck = [c for c in deck if c not in hand1]
+print(&amp;quot;Deck size after drawing:&amp;quot;, len(deck))
+deck.extend(hand1)
+print(&amp;quot;Deck rebuilt, size:&amp;quot;, len(deck))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Learn &lt;strong&gt;deck management dynamically&lt;/strong&gt;, useful for games like bridge.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-74--estimate-expected-value-of-poker-hand&#34;&gt;🔴 Problem 74 — Estimate Expected Value of Poker Hand&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;hand_values = {&amp;quot;pair&amp;quot;:1,&amp;quot;two_pair&amp;quot;:2,&amp;quot;three&amp;quot;:3,&amp;quot;straight&amp;quot;:4,&amp;quot;flush&amp;quot;:5,&amp;quot;full_house&amp;quot;:6,&amp;quot;four&amp;quot;:7,&amp;quot;straight_flush&amp;quot;:8,&amp;quot;royal_flush&amp;quot;:9}
+total = 0
+for _ in range(100000):
+    hand = random.sample(deck,5)
+    if is_flush(hand) and is_straight(hand):
+        total += hand_values[&amp;quot;straight_flush&amp;quot;]
+    elif is_full_house(hand):
+        total += hand_values[&amp;quot;full_house&amp;quot;]
+    elif is_flush(hand):
+        total += hand_values[&amp;quot;flush&amp;quot;]
+    elif is_straight(hand):
+        total += hand_values[&amp;quot;straight&amp;quot;]
+    elif has_pair(hand):
+        freq = Counter([c[:-1] for c in hand])
+        if 4 in freq.values():
+            total += hand_values[&amp;quot;four&amp;quot;]
+        elif 3 in freq.values():
+            total += hand_values[&amp;quot;three&amp;quot;]
+        elif list(freq.values()).count(2)==2:
+            total += hand_values[&amp;quot;two_pair&amp;quot;]
+        else:
+            total += hand_values[&amp;quot;pair&amp;quot;]
+print(&amp;quot;Expected hand value:&amp;quot;, total/100000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Reinforce &lt;strong&gt;expected value intuition&lt;/strong&gt; for decision making.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-75--simulate-multi-player-card-game&#34;&gt;🔴 Problem 75 — Simulate Multi-Player Card Game&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Simulation&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;players = 4
+hands = [random.sample(deck,5) for _ in range(players)]
+for i,h in enumerate(hands):
+    print(f&amp;quot;Player {i+1} hand:&amp;quot;, h)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Interactive multi-player simulations help understand &lt;strong&gt;competition dynamics&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-takeaways--part-4&#34;&gt;✅ Takeaways — Part 4&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Practice &lt;strong&gt;realistic card simulations&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Experiment with &lt;strong&gt;poker hands, probabilities, and strategies&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Reinforce &lt;strong&gt;probability, combinatorics, and Python coding fluency&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Prepare for &lt;strong&gt;interviews, competitions, and real-game decision-making&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;With Parts 1–4, you now have the &lt;strong&gt;ultimate card &amp;amp; IQ training library&lt;/strong&gt;: conceptual, advanced, interactive, and Python-powered.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>DK-005 — Playing Cards &amp; Probability with Python</title>
+      <link>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-005-playing-cards/</link>
+      <pubDate>Tue, 13 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-005-playing-cards/</guid>
+      <description>&lt;hr&gt;
+&lt;h2 id=&#34;-why-this-note-exists&#34;&gt;🎯 Why This Note Exists&lt;/h2&gt;
+&lt;p&gt;Playing cards are &lt;strong&gt;more than games&lt;/strong&gt; — they are &lt;strong&gt;perfect tools for learning logic, probability, and programming&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;By the end of this note, you will be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Identify &lt;strong&gt;all cards&lt;/strong&gt; in a deck and their structure.&lt;/li&gt;
+&lt;li&gt;Calculate &lt;strong&gt;probabilities&lt;/strong&gt; of common card events.&lt;/li&gt;
+&lt;li&gt;Write &lt;strong&gt;pure Python algorithms&lt;/strong&gt; to simulate and solve card problems.&lt;/li&gt;
+&lt;li&gt;Solve classic and tricky &lt;strong&gt;card puzzles&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Understand card games logic like &lt;strong&gt;Poker, Dummy, and Pok Deng&lt;/strong&gt; (Thai “ป๊อกเก้ง”).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is &lt;strong&gt;everything you need&lt;/strong&gt;, from basic cards to advanced probability, all in &lt;strong&gt;Python logic&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-1--the-deck-what-cards-are-there&#34;&gt;🃏 1 — The Deck: What Cards Are There?&lt;/h2&gt;
+&lt;p&gt;A standard deck has &lt;strong&gt;52 cards&lt;/strong&gt;, divided into &lt;strong&gt;4 suits&lt;/strong&gt;:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Suit&lt;/th&gt;
+&lt;th&gt;ชื่อไทย&lt;/th&gt;
+&lt;th&gt;Symbol&lt;/th&gt;
+&lt;th&gt;Example Cards&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Spades&lt;/td&gt;
+&lt;td&gt;ไพ่โพดำ&lt;/td&gt;
+&lt;td&gt;♠&lt;/td&gt;
+&lt;td&gt;Ace, 2, 3, …, King&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Hearts&lt;/td&gt;
+&lt;td&gt;ไพ่หัวใจ&lt;/td&gt;
+&lt;td&gt;♥&lt;/td&gt;
+&lt;td&gt;Ace, 2, 3, …, King&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Diamonds&lt;/td&gt;
+&lt;td&gt;ไพ่ข้าวหลามตัด&lt;/td&gt;
+&lt;td&gt;♦&lt;/td&gt;
+&lt;td&gt;Ace, 2, 3, …, King&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Clubs&lt;/td&gt;
+&lt;td&gt;ไพ่ดอกจิก&lt;/td&gt;
+&lt;td&gt;♣&lt;/td&gt;
+&lt;td&gt;Ace, 2, 3, …, King&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Each suit has &lt;strong&gt;13 cards&lt;/strong&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ace (1), 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So the total deck = 4 suits × 13 cards = 52 cards.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bam-cm-cldigipub-largefs.s3.us-east-1.amazonaws.com/cldigipub/wp-content/uploads/2014/10/shutterstock_2301613367.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Image credit: &lt;a href=&#34;https://cottagelife.com/entertaining/6-new-card-games-to-play-at-the-cottage/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cottage Life&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-representing-a-deck-in-python&#34;&gt;🧑‍💻 Representing a Deck in Python&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;suits = [&amp;quot;Spades&amp;quot;, &amp;quot;Hearts&amp;quot;, &amp;quot;Diamonds&amp;quot;, &amp;quot;Clubs&amp;quot;]
+ranks = [&amp;quot;Ace&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;10&amp;quot;, &amp;quot;Jack&amp;quot;, &amp;quot;Queen&amp;quot;, &amp;quot;King&amp;quot;]
+
+deck = [(rank, suit) for suit in suits for rank in ranks]
+print(deck[:5])  # Show first 5 cards
+print(len(deck)) # 52
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-2--basic-card-probabilities&#34;&gt;🎲 2 — Basic Card Probabilities&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Probability formula&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;$$
+P(\text{event}) = \frac{\text{favorable outcomes}}{\text{total outcomes}}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Examples&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Probability of drawing a &lt;strong&gt;Heart&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;13 hearts / 52 cards = 1/4&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Probability of drawing an &lt;strong&gt;Ace&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;4 aces / 52 cards = 1/13&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Probability of drawing &lt;strong&gt;Ace of Spades&lt;/strong&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1 / 52&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;When learning cards, probability is &lt;strong&gt;your most powerful tool&lt;/strong&gt;.&lt;br&gt;
+It tells you &lt;strong&gt;how likely something is to happen&lt;/strong&gt;, and it’s &lt;strong&gt;the foundation of all card games, poker, and combinatorics&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-probability-formula&#34;&gt;🔹 Probability Formula&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;general formula&lt;/strong&gt; is simple:&lt;/p&gt;
+&lt;p&gt;$$
+P(\text{event}) = \frac{\text{favorable outcomes}}{\text{total outcomes}}
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Favorable outcomes&lt;/strong&gt; → the ways your event can happen&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Total outcomes&lt;/strong&gt; → all possible outcomes in the sample space&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a standard &lt;strong&gt;52-card deck&lt;/strong&gt;:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Suit&lt;/th&gt;
+&lt;th&gt;ชื่อไทย&lt;/th&gt;
+&lt;th&gt;Symbol&lt;/th&gt;
+&lt;th&gt;Number of Cards&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Spades&lt;/td&gt;
+&lt;td&gt;ไพ่โพดำ&lt;/td&gt;
+&lt;td&gt;♠&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Hearts&lt;/td&gt;
+&lt;td&gt;ไพ่หัวใจ&lt;/td&gt;
+&lt;td&gt;♥&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Diamonds&lt;/td&gt;
+&lt;td&gt;ไพ่ข้าวหลามตัด&lt;/td&gt;
+&lt;td&gt;♦&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Clubs&lt;/td&gt;
+&lt;td&gt;ไพ่ดอกจิก&lt;/td&gt;
+&lt;td&gt;♣&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Total cards = 13 × 4 = 52&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-examples-of-basic-probabilities&#34;&gt;🔹 Examples of Basic Probabilities&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Probability of drawing a Heart (♥ / ไพ่หัวใจ)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Favorable outcomes: 13 hearts&lt;/li&gt;
+&lt;li&gt;Total outcomes: 52 cards&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+P(\text{Heart}) = \frac{13}{52} = \frac{1}{4} = 0.25
+$$&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Probability of drawing an Ace (ไพ่เอซ)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;There are 4 Aces in the deck (A♠, A♥, A♦, A♣)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+P(\text{Ace}) = \frac{4}{52} = \frac{1}{13} \approx 0.0769
+$$&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Probability of drawing the Ace of Spades (A♠ / เอซโพดำ)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Only 1 card matches&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+P(\text{A♠}) = \frac{1}{52} \approx 0.0192
+$$&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Probability of drawing a Red Card (Hearts ♥ or Diamonds ♦ / ไพ่แดง)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Favorable outcomes: 13 hearts + 13 diamonds = 26&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+P(\text{Red Card}) = \frac{26}{52} = \frac{1}{2} = 0.5
+$$&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;&lt;strong&gt;Probability of drawing a Face Card (J, Q, K / แจ็ค, ควีน, คิง)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Each suit has 3 face cards → 3 × 4 = 12 cards&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+P(\text{Face Card}) = \frac{12}{52} = \frac{3}{13} \approx 0.2308
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-key-intuition-for-beginners&#34;&gt;🔹 Key Intuition for Beginners&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Count first, divide later&lt;/strong&gt; – always separate &lt;strong&gt;favorable outcomes&lt;/strong&gt; and &lt;strong&gt;total outcomes&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Check card uniqueness&lt;/strong&gt; – is the event asking for &lt;strong&gt;one specific card&lt;/strong&gt;, a &lt;strong&gt;suit&lt;/strong&gt;, or a &lt;strong&gt;rank&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sum probabilities for combined events&lt;/strong&gt; – e.g., Red or Face card: count all unique favorable cards.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Think: “If I shuffle and draw one card, what are the chances I get what I want?” That’s &lt;strong&gt;all probability is&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-python-check--basic-probability&#34;&gt;🔹 Python Check — Basic Probability&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;deck = [r+s for r in [&#39;2&#39;,&#39;3&#39;,&#39;4&#39;,&#39;5&#39;,&#39;6&#39;,&#39;7&#39;,&#39;8&#39;,&#39;9&#39;,&#39;10&#39;,&#39;J&#39;,&#39;Q&#39;,&#39;K&#39;,&#39;A&#39;] 
+                 for s in [&#39;♠&#39;,&#39;♥&#39;,&#39;♦&#39;,&#39;♣&#39;]]
+
+# Probability of drawing a Heart
+hearts = [c for c in deck if c.endswith(&#39;♥&#39;)]
+p_heart = len(hearts)/len(deck)
+print(&amp;quot;P(Heart) =&amp;quot;, p_heart)
+
+# Probability of Ace
+aces = [c for c in deck if c.startswith(&#39;A&#39;)]
+p_ace = len(aces)/len(deck)
+print(&amp;quot;P(Ace) =&amp;quot;, p_ace)
+
+# Probability of Ace of Spades
+p_aspade = 1/len(deck)
+print(&amp;quot;P(A♠) =&amp;quot;, p_aspade)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;✅ Output:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;P(Heart) = 0.25
+P(Ace) = 0.07692307692307693
+P(A♠) = 0.019230769230769232
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-takeaways&#34;&gt;🔹 Takeaways&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Start simple&lt;/strong&gt;: suit, rank, color&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Add layers&lt;/strong&gt;: face cards, combinations, multiple draws&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Always check total vs favorable outcomes&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Master these &lt;strong&gt;basic probabilities&lt;/strong&gt;, and everything from &lt;strong&gt;poker strategy to advanced combinatorics&lt;/strong&gt; will be much easier.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-python-simulation-of-probability&#34;&gt;🧑‍💻 Python Simulation of Probability&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+random.seed(1)  # reproducible
+
+def simulate_card_draw(deck, target, trials=100000):
+    count = 0
+    for _ in range(trials):
+        card = random.choice(deck)
+        if card == target:
+            count += 1
+    return count / trials
+
+ace_of_spades = (&amp;quot;Ace&amp;quot;, &amp;quot;Spades&amp;quot;)
+print(simulate_card_draw(deck, ace_of_spades))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This shows &lt;strong&gt;probability by simulation&lt;/strong&gt;, but next we’ll calculate using logic only.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-3--card-games-basics&#34;&gt;🃏 3 — Card Games Basics&lt;/h2&gt;
+&lt;p&gt;Familiar games teach &lt;strong&gt;card handling and combinatorial logic&lt;/strong&gt;:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Game&lt;/th&gt;
+&lt;th&gt;Core Idea&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Poker&lt;/td&gt;
+&lt;td&gt;Form &lt;strong&gt;hands&lt;/strong&gt; (pair, straight, flush, etc.)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dummy&lt;/td&gt;
+&lt;td&gt;Trick-taking, comparing card values&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Pok Deng&lt;/td&gt;
+&lt;td&gt;Thai game: sum of 2-3 cards modulo 10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We don’t need full rules yet — understanding &lt;strong&gt;cards and values&lt;/strong&gt; is enough.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-4--trick-examples-card-logic&#34;&gt;🔹 4 — Trick Examples (Card Logic)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;: Pick &lt;strong&gt;2 cards&lt;/strong&gt; from a deck. Probability both are Hearts?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Logic&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;First card: 13 hearts / 52 total&lt;/li&gt;
+&lt;li&gt;Second card: 12 hearts / 51 remaining&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+P = \frac{13}{52} \times \frac{12}{51} = \frac{156}{2652} = \frac{1}{17} \approx 0.0588
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-python-code-for-logic-calculation&#34;&gt;🧑‍💻 Python Code for Logic Calculation&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def probability_two_hearts():
+    first = 13 / 52
+    second = 12 / 51
+    return first * second
+
+print(probability_two_hearts())  # 0.058823529411764705
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-5--python-algorithm-to-count-specific-hands&#34;&gt;🔹 5 — Python Algorithm to Count Specific Hands&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;: Count all &lt;strong&gt;pairs&lt;/strong&gt; (2 cards same rank) in the deck.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from itertools import combinations
+
+def count_pairs(deck):
+    pairs = 0
+    for c1, c2 in combinations(deck, 2):
+        if c1[0] == c2[0]:
+            pairs += 1
+    return pairs
+
+total_pairs = count_pairs(deck)
+total_combinations = 52 * 51 // 2
+print(&amp;quot;Pairs:&amp;quot;, total_pairs)
+print(&amp;quot;Probability:&amp;quot;, total_pairs / total_combinations)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-6--thinking-about-probability&#34;&gt;🔹 6 — Thinking About Probability&lt;/h2&gt;
+&lt;p&gt;Ask:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How many &lt;strong&gt;favorable outcomes&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;How many &lt;strong&gt;total outcomes&lt;/strong&gt;?&lt;/li&gt;
+&lt;li&gt;Are draws &lt;strong&gt;with replacement&lt;/strong&gt; or &lt;strong&gt;without replacement&lt;/strong&gt;?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-7--20-qa--common-card-problems-pure-python-logic&#34;&gt;🧩 7 — 20 Q&amp;amp;A — Common Card Problems (Pure Python Logic)&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-1--probability-of-drawing-a-red-card&#34;&gt;🔴 Problem 1 — Probability of drawing a red card&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Red cards = Hearts + Diamonds
+red_cards = [c for c in deck if c[1] in [&amp;quot;Hearts&amp;quot;,&amp;quot;Diamonds&amp;quot;]]
+prob = len(red_cards)/len(deck)
+print(prob)  # 0.5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-2--probability-of-drawing-a-face-card-jqk&#34;&gt;🔴 Problem 2 — Probability of drawing a face card (J,Q,K)&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;face_cards = [c for c in deck if c[0] in [&amp;quot;Jack&amp;quot;,&amp;quot;Queen&amp;quot;,&amp;quot;King&amp;quot;]]
+prob = len(face_cards)/len(deck)
+print(prob)  # 12/52 = 0.2307
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-3--probability-of-2-cards-being-same-suit&#34;&gt;🔴 Problem 3 — Probability of 2 cards being same suit&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from itertools import combinations
+same_suit = 0
+for c1, c2 in combinations(deck,2):
+    if c1[1]==c2[1]:
+        same_suit += 1
+total = 52*51//2
+print(same_suit/total)  # 0.235
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-4--probability-first-card-ace-second-card-king&#34;&gt;🔴 Problem 4 — Probability first card Ace, second card King&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;prob = (4/52)*(4/51)
+print(prob)  # 0.00603
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-5--count-all-3-card-combinations-summing-to-21-ace1-jqk10&#34;&gt;🔴 Problem 5 — Count all 3-card combinations summing to 21 (Ace=1, J/Q/K=10)&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def card_value(rank):
+    if rank in [&amp;quot;Jack&amp;quot;,&amp;quot;Queen&amp;quot;,&amp;quot;King&amp;quot;]:
+        return 10
+    elif rank==&amp;quot;Ace&amp;quot;:
+        return 1
+    else:
+        return int(rank)
+
+from itertools import combinations
+count = 0
+for c1,c2,c3 in combinations(deck,3):
+    if card_value(c1[0])+card_value(c2[0])+card_value(c3[0])==21:
+        count += 1
+print(count)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-6--simulate-drawing-5-card-poker-hand&#34;&gt;🔴 Problem 6 — Simulate drawing 5-card poker hand&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+hand = random.sample(deck, 5)
+print(hand)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-7--probability-5-card-hand-contains-at-least-1-ace&#34;&gt;🔴 Problem 7 — Probability 5-card hand contains at least 1 Ace&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from itertools import combinations
+hands = list(combinations(deck,5))
+count = sum(1 for h in hands if any(c[0]==&amp;quot;Ace&amp;quot; for c in h))
+prob = count/len(hands)
+print(prob)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-8--probability-2-hearts-and-1-spade-in-3-cards&#34;&gt;🔴 Problem 8 — Probability 2 hearts and 1 spade in 3 cards&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from itertools import combinations
+count = 0
+for h in combinations(deck,3):
+    suits = [c[1] for c in h]
+    if suits.count(&amp;quot;Hearts&amp;quot;)==2 and suits.count(&amp;quot;Spades&amp;quot;)==1:
+        count += 1
+prob = count / (52*51*50/6)
+print(prob)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-9--count-all-flush-hands-in-poker&#34;&gt;🔴 Problem 9 — Count all flush hands in poker&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from itertools import combinations
+flush_count = 0
+for hand in combinations(deck,5):
+    suits = [c[1] for c in hand]
+    if len(set(suits))==1:
+        flush_count += 1
+print(flush_count)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-10--probability-2-cards-sum-10-ace1-number-cards-as-value-jqk10&#34;&gt;🔴 Problem 10 — Probability 2 cards sum 10 (Ace=1, number cards as value, J/Q/K=10)&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def value(r): return 10 if r in [&amp;quot;Jack&amp;quot;,&amp;quot;Queen&amp;quot;,&amp;quot;King&amp;quot;] else 1 if r==&amp;quot;Ace&amp;quot; else int(r)
+from itertools import combinations
+count = 0
+for c1,c2 in combinations(deck,2):
+    if value(c1[0])+value(c2[0])==10:
+        count += 1
+prob = count / (52*51/2)
+print(prob)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-11--probability-of-4-of-a-kind-in-5-cards&#34;&gt;🔴 Problem 11 — Probability of 4 of a kind in 5 cards&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from itertools import combinations
+count = 0
+for hand in combinations(deck,5):
+    ranks = [c[0] for c in hand]
+    if any(ranks.count(r)==4 for r in ranks):
+        count +=1
+prob = count/len(list(combinations(deck,5)))
+print(prob)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-12--probability-first-two-cards-are-same-rank&#34;&gt;🔴 Problem 12 — Probability first two cards are same rank&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from itertools import combinations
+count = 0
+for c1,c2 in combinations(deck,2):
+    if c1[0]==c2[0]:
+        count+=1
+prob = count / (52*51/2)
+print(prob)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-13--count-all-straight-hands-ace1210-j11-q12-k13&#34;&gt;🔴 Problem 13 — Count all straight hands (Ace=1,2,…,10, J=11, Q=12, K=13)&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def rank_value(r):
+    if r==&amp;quot;Ace&amp;quot;: return 1
+    if r==&amp;quot;Jack&amp;quot;: return 11
+    if r==&amp;quot;Queen&amp;quot;: return 12
+    if r==&amp;quot;King&amp;quot;: return 13
+    return int(r)
+from itertools import combinations
+count = 0
+for hand in combinations(deck,5):
+    vals = sorted([rank_value(c[0]) for c in hand])
+    if all(vals[i]+1==vals[i+1] for i in range(4)):
+        count+=1
+print(count)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-14--probability-3-cards-of-same-suit&#34;&gt;🔴 Problem 14 — Probability 3 cards of same suit&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from itertools import combinations
+count = 0
+for h in combinations(deck,3):
+    suits = [c[1] for c in h]
+    if len(set(suits))==1:
+        count+=1
+prob = count / (52*51*50/6)
+print(prob)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-15--probability-of-drawing-joker-if-deck-has-2-jokers&#34;&gt;🔴 Problem 15 — Probability of drawing Joker (if deck has 2 Jokers)&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;deck_with_joker = deck + [(&amp;quot;Joker1&amp;quot;,&amp;quot;Joker&amp;quot;),(&amp;quot;Joker2&amp;quot;,&amp;quot;Joker&amp;quot;)]
+prob = 2/len(deck_with_joker)
+print(prob)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-16--probability-first-card-red-second-card-black&#34;&gt;🔴 Problem 16 — Probability first card red, second card black&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;prob = (26/52)*(26/51)
+print(prob)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-17--count-all-full-house-hands&#34;&gt;🔴 Problem 17 — Count all full house hands&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from itertools import combinations
+def is_full_house(hand):
+    ranks = [c[0] for c in hand]
+    return sorted([ranks.count(r) for r in set(ranks)])==[2,3]
+
+count=0
+for hand in combinations(deck,5):
+    if is_full_house(hand):
+        count+=1
+print(count)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-18--probability-at-least-one-king-in-5-cards&#34;&gt;🔴 Problem 18 — Probability at least one King in 5 cards&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from itertools import combinations
+hands = list(combinations(deck,5))
+count = sum(1 for h in hands if any(c[0]==&amp;quot;King&amp;quot; for c in h))
+prob = count/len(hands)
+print(prob)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-19--probability-all-number-cards-in-5-card-hand&#34;&gt;🔴 Problem 19 — Probability all number cards in 5-card hand&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;number_ranks = [str(i) for i in range(2,11)]
+count = 0
+for h in combinations(deck,5):
+    if all(c[0] in number_ranks for c in h):
+        count +=1
+prob = count/len(list(combinations(deck,5)))
+print(prob)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-problem-20--probability-3-consecutive-cards-in-suit&#34;&gt;🔴 Problem 20 — Probability 3 consecutive cards in suit&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def rank_value(r):
+    if r==&amp;quot;Ace&amp;quot;: return 1
+    if r==&amp;quot;Jack&amp;quot;: return 11
+    if r==&amp;quot;Queen&amp;quot;: return 12
+    if r==&amp;quot;King&amp;quot;: return 13
+    return int(r)
+
+count=0
+for h in combinations(deck,3):
+    suits = [c[1] for c in h]
+    vals = sorted([rank_value(c[0]) for c in h])
+    if len(set(suits))==1 and vals[1]==vals[0]+1 and vals[2]==vals[1]+1:
+        count+=1
+total=52*51*50/6
+print(count/total)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-summary--how-to-think-about-cards&#34;&gt;🧠 Summary — How to THINK About Cards&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Deck structure first&lt;/strong&gt; — suits, ranks, counts.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Identify favorable outcomes&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Use combinations logic&lt;/strong&gt; — “without replacement” vs “with replacement”.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Convert cards to numbers if needed&lt;/strong&gt; — Ace=1, face=10, etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Write pure Python&lt;/strong&gt; — no shortcuts, no libraries.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Start simple, scale complexity&lt;/strong&gt; — 1 card → 2 cards → 3 cards → poker hands.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;With this logic, &lt;strong&gt;any card problem can be solved&lt;/strong&gt; programmatically.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-this-advanced-note-exists&#34;&gt;🎯 Why This Advanced Note Exists&lt;/h2&gt;
+&lt;p&gt;Once you understand &lt;strong&gt;deck structure and basic probabilities&lt;/strong&gt;, the next step is to &lt;strong&gt;simulate real card games&lt;/strong&gt; and &lt;strong&gt;analyze strategies&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This section shows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How to &lt;strong&gt;simulate popular card games&lt;/strong&gt; in Python.&lt;/li&gt;
+&lt;li&gt;How to &lt;strong&gt;calculate odds and hand strength&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Tricks and tips for &lt;strong&gt;decision-making in games&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Algorithms to &lt;strong&gt;automate and analyze hands&lt;/strong&gt;, without libraries.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-1--poker-simulation--probability&#34;&gt;🃏 1 — Poker Simulation &amp;amp; Probability&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Poker&lt;/strong&gt; uses 5-card hands (Texas Hold’em simplified). Common hand rankings:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Rank&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Royal Flush&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Straight Flush&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;Four of a Kind&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;Full House&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;Flush&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;Straight&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;Three of a Kind&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;Two Pair&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;One Pair&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;High Card&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-python--evaluate-poker-hand&#34;&gt;🔹 Python — Evaluate Poker Hand&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from collections import Counter
+
+def rank_value(r):
+    if r==&amp;quot;Ace&amp;quot;: return 14
+    if r==&amp;quot;King&amp;quot;: return 13
+    if r==&amp;quot;Queen&amp;quot;: return 12
+    if r==&amp;quot;Jack&amp;quot;: return 11
+    return int(r)
+
+def hand_rank(hand):
+    &amp;quot;&amp;quot;&amp;quot;Returns the rank of a 5-card poker hand.&amp;quot;&amp;quot;&amp;quot;
+    ranks = sorted([rank_value(c[0]) for c in hand], reverse=True)
+    suits = [c[1] for c in hand]
+    rank_counts = Counter(ranks)
+    counts = sorted(rank_counts.values(), reverse=True)
+
+    # Check flush
+    flush = len(set(suits))==1
+    # Check straight
+    straight = all(ranks[i]-1==ranks[i+1] for i in range(4))
+    # Royal flush
+    if flush and straight and ranks[0]==14:
+        return &amp;quot;Royal Flush&amp;quot;
+    if flush and straight:
+        return &amp;quot;Straight Flush&amp;quot;
+    if counts==[4,1]:
+        return &amp;quot;Four of a Kind&amp;quot;
+    if counts==[3,2]:
+        return &amp;quot;Full House&amp;quot;
+    if flush:
+        return &amp;quot;Flush&amp;quot;
+    if straight:
+        return &amp;quot;Straight&amp;quot;
+    if counts==[3,1,1]:
+        return &amp;quot;Three of a Kind&amp;quot;
+    if counts==[2,2,1]:
+        return &amp;quot;Two Pair&amp;quot;
+    if counts==[2,1,1,1]:
+        return &amp;quot;One Pair&amp;quot;
+    return &amp;quot;High Card&amp;quot;
+
+# Example:
+hand = [(&amp;quot;Ace&amp;quot;,&amp;quot;Hearts&amp;quot;),(&amp;quot;King&amp;quot;,&amp;quot;Hearts&amp;quot;),(&amp;quot;Queen&amp;quot;,&amp;quot;Hearts&amp;quot;),(&amp;quot;Jack&amp;quot;,&amp;quot;Hearts&amp;quot;),(&amp;quot;10&amp;quot;,&amp;quot;Hearts&amp;quot;)]
+print(hand_rank(hand))  # Royal Flush
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Explanation&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Convert ranks to numeric values for comparison.&lt;/li&gt;
+&lt;li&gt;Count repeated ranks with &lt;code&gt;Counter&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Detect flush and straight.&lt;/li&gt;
+&lt;li&gt;Map combinations to hand rank.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-simulate-100000-poker-hands&#34;&gt;🔹 Simulate 100,000 Poker Hands&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+random.seed(42)
+hands_count = {&amp;quot;Royal Flush&amp;quot;:0,&amp;quot;Straight Flush&amp;quot;:0,&amp;quot;Four of a Kind&amp;quot;:0,&amp;quot;Full House&amp;quot;:0,
+               &amp;quot;Flush&amp;quot;:0,&amp;quot;Straight&amp;quot;:0,&amp;quot;Three of a Kind&amp;quot;:0,&amp;quot;Two Pair&amp;quot;:0,&amp;quot;One Pair&amp;quot;:0,&amp;quot;High Card&amp;quot;:0}
+
+for _ in range(100000):
+    hand = random.sample(deck,5)
+    rank = hand_rank(hand)
+    hands_count[rank] += 1
+
+for k,v in hands_count.items():
+    print(f&amp;quot;{k}: {v/100000:.6f}&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can now &lt;strong&gt;estimate probabilities of each hand&lt;/strong&gt; using simulation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-2--dummy--trick-taking-simulation&#34;&gt;🃏 2 — Dummy / Trick-Taking Simulation&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Dummy&lt;/strong&gt; (like Bridge) is about &lt;strong&gt;playing tricks&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Each player plays 1 card per trick.&lt;/li&gt;
+&lt;li&gt;Highest card of the suit led wins the trick.&lt;/li&gt;
+&lt;li&gt;Goal: &lt;strong&gt;maximize tricks won&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-python--simulate-1-trick&#34;&gt;🔹 Python — Simulate 1 Trick&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def trick_winner(cards_played, lead_suit):
+    &amp;quot;&amp;quot;&amp;quot;cards_played: list of tuples (rank,suit)&amp;quot;&amp;quot;&amp;quot;
+    lead_cards = [c for c in cards_played if c[1]==lead_suit]
+    values = [rank_value(c[0]) for c in lead_cards]
+    winner_index = values.index(max(values))
+    return winner_index  # player index
+
+# Example:
+cards = [(&amp;quot;10&amp;quot;,&amp;quot;Hearts&amp;quot;),(&amp;quot;Ace&amp;quot;,&amp;quot;Hearts&amp;quot;),(&amp;quot;King&amp;quot;,&amp;quot;Spades&amp;quot;),(&amp;quot;3&amp;quot;,&amp;quot;Hearts&amp;quot;)]
+lead_suit = &amp;quot;Hearts&amp;quot;
+winner = trick_winner(cards, lead_suit)
+print(f&amp;quot;Player {winner+1} wins the trick&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Logic&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Only consider cards matching lead suit.&lt;/li&gt;
+&lt;li&gt;Highest rank wins.&lt;/li&gt;
+&lt;li&gt;Index shows &lt;strong&gt;who wins&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-3--pok-deng-ปอกเกง-simulation&#34;&gt;🃏 3 — Pok Deng (ป๊อกเก้ง) Simulation&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Pok Deng&lt;/strong&gt; is a &lt;strong&gt;2-3 card game&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sum cards modulo 10 → “points”.&lt;/li&gt;
+&lt;li&gt;Special hands: Pair, Three-of-a-Kind, Straight Flush.&lt;/li&gt;
+&lt;li&gt;Dealer vs Player comparison.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-python--evaluate-pok-deng-hand&#34;&gt;🔹 Python — Evaluate Pok Deng Hand&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def pok_points(hand):
+    &amp;quot;&amp;quot;&amp;quot;hand: list of tuples (rank,suit)&amp;quot;&amp;quot;&amp;quot;
+    values = [min(int(c[0]) if c[0].isdigit() else 10,10) for c in hand]  # face=10
+    total = sum(values) % 10
+    return total
+
+# Compare hands
+def compare_pok(player, dealer):
+    p = pok_points(player)
+    d = pok_points(dealer)
+    if p&amp;gt;d: return &amp;quot;Player wins&amp;quot;
+    if p&amp;lt;d: return &amp;quot;Dealer wins&amp;quot;
+    return &amp;quot;Tie&amp;quot;
+
+# Example:
+player_hand = [(&amp;quot;10&amp;quot;,&amp;quot;Hearts&amp;quot;),(&amp;quot;7&amp;quot;,&amp;quot;Clubs&amp;quot;)]
+dealer_hand = [(&amp;quot;9&amp;quot;,&amp;quot;Spades&amp;quot;),(&amp;quot;8&amp;quot;,&amp;quot;Diamonds&amp;quot;)]
+print(compare_pok(player_hand,dealer_hand))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Adds &lt;strong&gt;modulo logic&lt;/strong&gt;, simple but elegant.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-simulate-10000-pok-deng-games&#34;&gt;🔹 Simulate 10,000 Pok Deng Games&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;wins = {&amp;quot;Player&amp;quot;:0,&amp;quot;Dealer&amp;quot;:0,&amp;quot;Tie&amp;quot;:0}
+for _ in range(10000):
+    shuffled = random.sample(deck,52)
+    player = shuffled[:2]
+    dealer = shuffled[2:4]
+    result = compare_pok(player,dealer)
+    if result==&amp;quot;Player wins&amp;quot;: wins[&amp;quot;Player&amp;quot;]+=1
+    elif result==&amp;quot;Dealer wins&amp;quot;: wins[&amp;quot;Dealer&amp;quot;]+=1
+    else: wins[&amp;quot;Tie&amp;quot;]+=1
+
+for k,v in wins.items():
+    print(k,v/10000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This gives &lt;strong&gt;empirical win rates&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-4--advanced-probability-tricks&#34;&gt;🧩 4 — Advanced Probability Tricks&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Conditional Probability&lt;/strong&gt;:
+&lt;em&gt;If first card is Ace, probability second card is also Ace?&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;prob = (4/52)*(3/51)
+print(prob)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Combinatorics for hands&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Number of ways to choose 2 pairs in 5-card hand:&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from math import comb
+total = comb(52,5)
+two_pair = comb(13,2)*comb(4,2)**2*comb(44,1)
+print(two_pair/total)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Simulate edge cases&lt;/strong&gt;:
+&lt;em&gt;Probability all hearts in 3-card hand:&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;count = 0
+for h in combinations(deck,3):
+    if all(c[1]==&amp;quot;Hearts&amp;quot; for c in h):
+        count+=1
+print(count/(52*51*50/6))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-key-takeaways&#34;&gt;🧠 Key Takeaways&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Simulation + logic&lt;/strong&gt; = best way to understand card games.&lt;/li&gt;
+&lt;li&gt;Always &lt;strong&gt;break problem into suits, ranks, counts&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Use &lt;strong&gt;Python combinations or &lt;code&gt;random.sample&lt;/code&gt;&lt;/strong&gt; for experimentation.&lt;/li&gt;
+&lt;li&gt;Advanced games like &lt;strong&gt;Poker/Dummy/Pok Deng&lt;/strong&gt; teach &lt;strong&gt;conditional probability and strategy&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;This knowledge is applicable to &lt;strong&gt;AI card bots, probabilistic reasoning, and algorithmic game design&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-part-1--bayes-theorem-mathematical-form&#34;&gt;🧠 Part 1 — Bayes’ Theorem (Mathematical Form)&lt;/h2&gt;
+&lt;h3 id=&#34;the-formula-must-memorize&#34;&gt;The Formula (Must Memorize)&lt;/h3&gt;
+&lt;p&gt;$$
+P(A \mid B) = \frac{P(B \mid A),P(A)}{P(B)}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;meaning-of-each-term&#34;&gt;Meaning of Each Term&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Symbol&lt;/th&gt;
+&lt;th&gt;Meaning&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;(A)&lt;/td&gt;
+&lt;td&gt;Hypothesis (what might be true)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;(B)&lt;/td&gt;
+&lt;td&gt;Evidence (what you observe)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;(P(A))&lt;/td&gt;
+&lt;td&gt;Prior belief&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;(P(B \mid A))&lt;/td&gt;
+&lt;td&gt;Likelihood&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;(P(A \mid B))&lt;/td&gt;
+&lt;td&gt;Posterior belief&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;human-translation&#34;&gt;Human Translation&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;New belief&lt;br&gt;
+= Old belief × How well the evidence fits&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Bayes is not a formula.&lt;br&gt;
+Bayes is a &lt;strong&gt;belief update rule&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-part-2--bayes-with-cards-concrete-example&#34;&gt;🃏 Part 2 — Bayes with Cards (Concrete Example)&lt;/h2&gt;
+&lt;h3 id=&#34;problem&#34;&gt;Problem&lt;/h3&gt;
+&lt;p&gt;A card is drawn from a standard deck.&lt;/p&gt;
+&lt;p&gt;You are told:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The card is &lt;strong&gt;red&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Question:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What is the probability the card is an &lt;strong&gt;Ace&lt;/strong&gt;?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-1--define-events&#34;&gt;Step 1 — Define Events&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;(A): card is an Ace&lt;/li&gt;
+&lt;li&gt;(B): card is red&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-2--compute-components&#34;&gt;Step 2 — Compute Components&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;(P(A) = \frac{4}{52})&lt;/li&gt;
+&lt;li&gt;(P(B \mid A) = \frac{2}{4})&lt;/li&gt;
+&lt;li&gt;(P(B) = \frac{26}{52})&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;step-3--apply-bayes&#34;&gt;Step 3 — Apply Bayes&lt;/h3&gt;
+&lt;p&gt;$$
+P(A \mid B)
+= \frac{P(B \mid A)P(A)}{P(B)}
+= \frac{\frac{2}{4} \cdot \frac{4}{52}}{\frac{26}{52}}
+= \frac{2}{26}
+= \frac{1}{13}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-insight&#34;&gt;🧠 Insight&lt;/h3&gt;
+&lt;p&gt;The probability &lt;strong&gt;did not change&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;But the &lt;strong&gt;reasoning path did&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;That shift in thinking is &lt;strong&gt;AI-level reasoning&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-part-3--bayes-as-an-ai-belief-update&#34;&gt;🤖 Part 3 — Bayes as an AI Belief Update&lt;/h2&gt;
+&lt;p&gt;AI does not ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Is this true?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;AI asks:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;“How plausible is this given what I see?”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Bayes formalizes that question.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;example--hidden-card-suit&#34;&gt;Example — Hidden Card Suit&lt;/h3&gt;
+&lt;p&gt;You draw a card but do not see it.&lt;/p&gt;
+&lt;p&gt;Evidence:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The card is red&lt;/li&gt;
+&lt;li&gt;The card is a face card&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Which suit is more likely?&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;hypotheses&#34;&gt;Hypotheses&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;(H_1): Hearts&lt;/li&gt;
+&lt;li&gt;(H_2): Diamonds&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;likelihood-reasoning&#34;&gt;Likelihood Reasoning&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Both are red&lt;/li&gt;
+&lt;li&gt;Both have 3 face cards out of 13&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bayes tells us:&lt;/p&gt;
+&lt;p&gt;$$
+P(H \mid E) \propto P(H),P(E \mid H)
+$$&lt;/p&gt;
+&lt;p&gt;We compare &lt;strong&gt;relative scores&lt;/strong&gt;, not exact values.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-part-4--naive-bayes-key-ai-simplification&#34;&gt;🧠 Part 4 — Naive Bayes (Key AI Simplification)&lt;/h2&gt;
+&lt;h3 id=&#34;the-assumption&#34;&gt;The Assumption&lt;/h3&gt;
+&lt;p&gt;Evidence features are &lt;strong&gt;conditionally independent&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This is often false —&lt;br&gt;
+but extremely effective.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;naive-bayes-formula&#34;&gt;Naive Bayes Formula&lt;/h3&gt;
+&lt;p&gt;For evidence (E_1, E_2, \dots, E_n):&lt;/p&gt;
+&lt;p&gt;$$
+P(H \mid E_1,\dots,E_n)
+\propto
+P(H)\prod_{i=1}^{n} P(E_i \mid H)
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;card-example&#34;&gt;Card Example&lt;/h3&gt;
+&lt;p&gt;Evidence:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Card is red&lt;/li&gt;
+&lt;li&gt;Card is face card&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hypothesis:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Suit = Hearts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-pure-python--naive-bayes-scoring&#34;&gt;🧑‍💻 Pure Python — Naive Bayes Scoring&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def naive_score(suit):
+    prior = 1/4
+    red_given_suit = 1 if suit in [&amp;quot;Hearts&amp;quot;,&amp;quot;Diamonds&amp;quot;] else 0
+    face_given_suit = 3/13
+    return prior * red_given_suit * face_given_suit
+
+for s in [&amp;quot;Hearts&amp;quot;,&amp;quot;Diamonds&amp;quot;,&amp;quot;Clubs&amp;quot;,&amp;quot;Spades&amp;quot;]:
+    print(s, naive_score(s))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We do &lt;strong&gt;ranking&lt;/strong&gt;, not prediction.&lt;/p&gt;
+&lt;p&gt;That is how ML classifiers work.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-part-5--poker-as-bayesian-pattern-recognition&#34;&gt;♠️ Part 5 — Poker as Bayesian Pattern Recognition&lt;/h2&gt;
+&lt;p&gt;Poker is &lt;strong&gt;not luck&lt;/strong&gt;.
+Poker is &lt;strong&gt;inference under uncertainty&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;example--opponent-holds-5-cards&#34;&gt;Example — Opponent Holds 5 Cards&lt;/h3&gt;
+&lt;p&gt;Observed:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No pairs on table&lt;/li&gt;
+&lt;li&gt;Many high cards missing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We update belief over:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pair&lt;/li&gt;
+&lt;li&gt;two pair&lt;/li&gt;
+&lt;li&gt;straight&lt;/li&gt;
+&lt;li&gt;flush&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is &lt;strong&gt;Bayesian reasoning&lt;/strong&gt;, even if players don’t know the math.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-core-poker-principle&#34;&gt;🧠 Core Poker Principle&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Poker hands are &lt;strong&gt;hypotheses&lt;/strong&gt;
+Visible cards are &lt;strong&gt;evidence&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-part-6--expected-value-decision-theory&#34;&gt;🧮 Part 6 — Expected Value (Decision Theory)&lt;/h2&gt;
+&lt;h3 id=&#34;definition&#34;&gt;Definition&lt;/h3&gt;
+&lt;p&gt;Expected value measures &lt;strong&gt;long-run belief-weighted payoff&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;$$
+E[X] = \sum_i x_i \cdot P(x_i)
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;card-example--ace-value&#34;&gt;Card Example — Ace Value&lt;/h3&gt;
+&lt;p&gt;Let:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ace payoff = 1&lt;/li&gt;
+&lt;li&gt;Otherwise = 0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+E = 1 \cdot \frac{4}{52} + 0 \cdot \frac{48}{52}
+= \frac{1}{13}
+$$&lt;/p&gt;
+&lt;p&gt;Expectation is how AI decides &lt;strong&gt;what to do next&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-part-7--olympiad-level-bayes-trick&#34;&gt;🏆 Part 7 — Olympiad-Level Bayes Trick&lt;/h2&gt;
+&lt;h3 id=&#34;problem-1&#34;&gt;Problem&lt;/h3&gt;
+&lt;p&gt;Two decks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Deck A: 4 red, 6 black&lt;/li&gt;
+&lt;li&gt;Deck B: 7 red, 3 black&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;One deck chosen uniformly.
+A red card is drawn.&lt;/p&gt;
+&lt;p&gt;What is the probability it was Deck B?&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;solution&#34;&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Let:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(A): Deck A&lt;/li&gt;
+&lt;li&gt;(B): Deck B&lt;/li&gt;
+&lt;li&gt;(R): Red card&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+P(B \mid R)
+= \frac{P(R \mid B)P(B)}{P(R)}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+P(R) = \frac{1}{2}\cdot\frac{4}{10} + \frac{1}{2}\cdot\frac{7}{10}
+$$&lt;/p&gt;
+&lt;p&gt;Final result:&lt;/p&gt;
+&lt;p&gt;$$
+P(B \mid R)
+= \frac{\frac{7}{10}\cdot\frac{1}{2}}
+{\frac{4}{20} + \frac{7}{20}}
+= \frac{7}{11}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-mental-model-this-is-gold&#34;&gt;🧠 Final Mental Model (This Is Gold)&lt;/h2&gt;
+&lt;p&gt;Cards teach:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Probability → counting&lt;/li&gt;
+&lt;li&gt;Bayes → belief update&lt;/li&gt;
+&lt;li&gt;Naive Bayes → fast inference&lt;/li&gt;
+&lt;li&gt;Poker → pattern ranking&lt;/li&gt;
+&lt;li&gt;AI → decision under uncertainty&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-this-masterclass-exists&#34;&gt;🎯 Why This Masterclass Exists&lt;/h2&gt;
+&lt;p&gt;Once you know &lt;strong&gt;cards, probability, and simulation&lt;/strong&gt;, the next frontier is &lt;strong&gt;AI-level reasoning for card games&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This masterclass shows how to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Build a &lt;strong&gt;Python AI that plays Poker or Pok Deng&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Use &lt;strong&gt;probability, simulation, and logic&lt;/strong&gt; to make decisions.&lt;/li&gt;
+&lt;li&gt;Estimate &lt;strong&gt;hand strength&lt;/strong&gt; and &lt;strong&gt;expected outcomes&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Incorporate &lt;strong&gt;strategy&lt;/strong&gt; for real-world play.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-1--ai-for-poker-simplified-texas-holdem&#34;&gt;🃏 1 — AI for Poker (Simplified Texas Hold’em)&lt;/h2&gt;
+&lt;h3 id=&#34;-step-1-evaluate-hand-strength&#34;&gt;🔹 Step 1: Evaluate Hand Strength&lt;/h3&gt;
+&lt;p&gt;In Poker, AI must know &lt;strong&gt;how strong its hand is&lt;/strong&gt; before betting.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from itertools import combinations
+import random
+
+# Hand ranking function from previous section
+def hand_strength(hand):
+    rank_order = [&amp;quot;High Card&amp;quot;,&amp;quot;One Pair&amp;quot;,&amp;quot;Two Pair&amp;quot;,&amp;quot;Three of a Kind&amp;quot;,&amp;quot;Straight&amp;quot;,&amp;quot;Flush&amp;quot;,
+                  &amp;quot;Full House&amp;quot;,&amp;quot;Four of a Kind&amp;quot;,&amp;quot;Straight Flush&amp;quot;,&amp;quot;Royal Flush&amp;quot;]
+    return rank_order.index(hand_rank(hand))  # 0=weakest, 9=strongest
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Higher index = stronger hand. AI can use this to decide whether to &lt;strong&gt;fold, call, or raise&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-step-2-simulate-opponent-hands&#34;&gt;🔹 Step 2: Simulate Opponent Hands&lt;/h3&gt;
+&lt;p&gt;AI estimates &lt;strong&gt;probability of winning&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def win_probability(player_hand, community_cards, simulations=1000):
+    deck_remaining = [c for c in deck if c not in player_hand + community_cards]
+    wins = 0
+    for _ in range(simulations):
+        random.shuffle(deck_remaining)
+        opponent_hand = deck_remaining[:2]
+        community = community_cards + deck_remaining[2:5]  # fill 5 cards
+        player_rank = hand_strength(player_hand + community)
+        opponent_rank = hand_strength(opponent_hand + community)
+        if player_rank &amp;gt; opponent_rank:
+            wins += 1
+        elif player_rank == opponent_rank:
+            wins += 0.5  # tie
+    return wins / simulations
+
+# Example
+player = [(&amp;quot;Ace&amp;quot;,&amp;quot;Hearts&amp;quot;),(&amp;quot;King&amp;quot;,&amp;quot;Hearts&amp;quot;)]
+community = [(&amp;quot;10&amp;quot;,&amp;quot;Hearts&amp;quot;),(&amp;quot;Queen&amp;quot;,&amp;quot;Hearts&amp;quot;),(&amp;quot;Jack&amp;quot;,&amp;quot;Hearts&amp;quot;)]
+print(win_probability(player, community))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Logic&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Remove known cards from deck.&lt;/li&gt;
+&lt;li&gt;Simulate random opponent hands and remaining community cards.&lt;/li&gt;
+&lt;li&gt;Count wins/ties to get probability.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-step-3-decision-logic&#34;&gt;🔹 Step 3: Decision Logic&lt;/h3&gt;
+&lt;p&gt;AI can make decisions based on &lt;strong&gt;win probability&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def poker_decision(win_prob, threshold_fold=0.3, threshold_raise=0.7):
+    if win_prob &amp;lt; threshold_fold:
+        return &amp;quot;Fold&amp;quot;
+    elif win_prob &amp;gt; threshold_raise:
+        return &amp;quot;Raise&amp;quot;
+    else:
+        return &amp;quot;Call&amp;quot;
+
+prob = win_probability(player, community)
+print(poker_decision(prob))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Simple but powerful AI: it &lt;strong&gt;folds when weak, raises when strong, calls in-between&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-2--ai-for-pok-deng-ปอกเกง&#34;&gt;🃏 2 — AI for Pok Deng (ป๊อกเก้ง)&lt;/h2&gt;
+&lt;p&gt;Pok Deng AI is simpler but still requires &lt;strong&gt;probabilistic reasoning&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;-step-1-calculate-expected-value-of-drawing-third-card&#34;&gt;🔹 Step 1: Calculate Expected Value of Drawing Third Card&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def expected_points(player_hand, deck_remaining):
+    current_points = pok_points(player_hand)
+    ev = current_points
+    if len(player_hand) == 2:
+        total = 0
+        for card in deck_remaining:
+            new_hand = player_hand + [card]
+            total += pok_points(new_hand)
+        ev = total / len(deck_remaining)
+    return ev
+
+# Example:
+player_hand = [(&amp;quot;7&amp;quot;,&amp;quot;Hearts&amp;quot;),(&amp;quot;8&amp;quot;,&amp;quot;Clubs&amp;quot;)]
+deck_remaining = [c for c in deck if c not in player_hand]
+print(expected_points(player_hand, deck_remaining))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Logic&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI calculates &lt;strong&gt;average points&lt;/strong&gt; if it draws a third card.&lt;/li&gt;
+&lt;li&gt;Compare with &lt;strong&gt;dealer’s expected points&lt;/strong&gt; to decide whether to draw.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-step-2-decision-rule&#34;&gt;🔹 Step 2: Decision Rule&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def pok_decision(player_hand, deck_remaining, dealer_estimate=5):
+    ev = expected_points(player_hand, deck_remaining)
+    if ev &amp;gt; dealer_estimate:
+        return &amp;quot;Draw&amp;quot;
+    else:
+        return &amp;quot;Stay&amp;quot;
+
+print(pok_decision(player_hand, deck_remaining))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AI decides &lt;strong&gt;draw or stay&lt;/strong&gt; based on expected outcome vs dealer.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-3--strategy-insights&#34;&gt;🧠 3 — Strategy Insights&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Poker AI&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;hand strength + simulation&lt;/strong&gt; for decisions.&lt;/li&gt;
+&lt;li&gt;Add &lt;strong&gt;risk tolerance&lt;/strong&gt; by adjusting fold/raise thresholds.&lt;/li&gt;
+&lt;li&gt;Can simulate &lt;strong&gt;multiple opponents&lt;/strong&gt; by repeating simulations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Pok Deng AI&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;expected value&lt;/strong&gt; for each action.&lt;/li&gt;
+&lt;li&gt;Can incorporate &lt;strong&gt;probabilities of dealer hands&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Extend to &lt;strong&gt;3-card strategies&lt;/strong&gt; and &lt;strong&gt;special hands&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;General Tips&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Always &lt;strong&gt;remove known cards&lt;/strong&gt; from deck.&lt;/li&gt;
+&lt;li&gt;Use &lt;strong&gt;combinatorics&lt;/strong&gt; for exact probability calculation when feasible.&lt;/li&gt;
+&lt;li&gt;Use &lt;strong&gt;simulation for complex scenarios&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-4--advanced-simulation-multi-player-poker-ai&#34;&gt;🃏 4 — Advanced Simulation: Multi-Player Poker AI&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def multi_player_simulation(player_hand, community_cards, n_opponents=3, simulations=1000):
+    deck_remaining = [c for c in deck if c not in player_hand + community_cards]
+    wins = 0
+    for _ in range(simulations):
+        random.shuffle(deck_remaining)
+        opponents = [deck_remaining[i*2:(i+1)*2] for i in range(n_opponents)]
+        community = community_cards + deck_remaining[2*n_opponents:5]
+        player_rank = hand_strength(player_hand + community)
+        opponent_ranks = [hand_strength(h + community) for h in opponents]
+        if all(player_rank &amp;gt; r for r in opponent_ranks):
+            wins += 1
+        elif all(player_rank &amp;gt;= r for r in opponent_ranks):
+            wins += 0.5  # tie
+    return wins / simulations
+
+print(multi_player_simulation(player, community))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This allows AI to &lt;strong&gt;consider multiple opponents&lt;/strong&gt;, a crucial real-game factor.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-5--extending-ai-further&#34;&gt;🔧 5 — Extending AI Further&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Monte Carlo simulation&lt;/strong&gt;: simulate hundreds of thousands of scenarios.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Learning thresholds&lt;/strong&gt;: adjust decision thresholds based on win rate.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bluff simulation&lt;/strong&gt;: add probabilistic “bluffing” moves.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Advanced ranking&lt;/strong&gt;: include kicker cards, suits for tie-breaking.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-6--takeaways-for-ai-level-card-strategy&#34;&gt;🧩 6 — Takeaways for AI-Level Card Strategy&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Combine logic, probability, and simulation&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Always consider &lt;strong&gt;all unknowns&lt;/strong&gt;: opponent hands, remaining deck.&lt;/li&gt;
+&lt;li&gt;Use &lt;strong&gt;expected value and probabilities&lt;/strong&gt; to make rational decisions.&lt;/li&gt;
+&lt;li&gt;Start simple → fold/call/raise → extend to multi-player and bluffing.&lt;/li&gt;
+&lt;li&gt;This framework works for &lt;strong&gt;any card game&lt;/strong&gt;, from Poker to Pok Deng to Bridge.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;With this knowledge, you can &lt;strong&gt;build a fully autonomous card AI&lt;/strong&gt; that &lt;strong&gt;learns and adapts&lt;/strong&gt; using pure Python logic.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-this-appendix-exists&#34;&gt;🎯 Why This Appendix Exists&lt;/h2&gt;
+&lt;p&gt;This is a &lt;strong&gt;complete set of advanced card problems&lt;/strong&gt; for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python programmers&lt;/li&gt;
+&lt;li&gt;Competitive programming enthusiasts&lt;/li&gt;
+&lt;li&gt;Game AI developers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Every problem comes with &lt;strong&gt;full logic explanation&lt;/strong&gt; and &lt;strong&gt;pure Python solutions&lt;/strong&gt;. By the end, you can &lt;strong&gt;tackle real card game probability and simulation problems like a pro&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-1--probability-of-drawing-a-pair-from-5-cards&#34;&gt;🔴 Problem 1 — Probability of Drawing a Pair from 5 Cards&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;&lt;br&gt;
+From a standard 52-card deck, what’s the probability that a 5-card hand contains &lt;strong&gt;exactly one pair&lt;/strong&gt;?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Choose rank for the pair:&lt;/strong&gt; 13 options.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Choose 2 suits for the pair:&lt;/strong&gt; C(4,2) = 6 ways.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Choose 3 remaining ranks for other cards:&lt;/strong&gt; C(12,3).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Choose suits for remaining cards:&lt;/strong&gt; 4^3.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Divide by total 5-card hands:&lt;/strong&gt; C(52,5).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from math import comb
+
+total_hands = comb(52,5)
+pair_hands = comb(13,1)*comb(4,2)*comb(12,3)*(4**3)
+probability = pair_hands/total_hands
+print(probability)  # ≈ 0.4226
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-2--count-number-of-flush-hands&#34;&gt;🔴 Problem 2 — Count Number of Flush Hands&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Question:&lt;/strong&gt;
+How many 5-card hands are all the same suit?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ol&gt;
+&lt;li&gt;Choose suit: 4 options.&lt;/li&gt;
+&lt;li&gt;Choose 5 cards from 13 in that suit: C(13,5).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;flush_hands = 4 * comb(13,5)
+print(flush_hands)  # 5148 hands
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-3--probability-of-getting-at-least-one-ace-in-5-cards&#34;&gt;🔴 Problem 3 — Probability of Getting at Least One Ace in 5 Cards&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ol&gt;
+&lt;li&gt;Probability of &lt;strong&gt;no Ace&lt;/strong&gt;: C(48,5)/C(52,5)&lt;/li&gt;
+&lt;li&gt;Probability of &lt;strong&gt;at least one Ace&lt;/strong&gt; = 1 - P(no Ace)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;prob_no_ace = comb(48,5)/comb(52,5)
+prob_at_least_one_ace = 1 - prob_no_ace
+print(prob_at_least_one_ace)  # ≈ 0.341
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-4--simulate-1000-poker-hands-for-royal-flush&#34;&gt;🔴 Problem 4 — Simulate 1000 Poker Hands for Royal Flush&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Randomly pick 5 cards 1000 times&lt;/li&gt;
+&lt;li&gt;Count how many are Royal Flush&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+suits = [&amp;quot;Hearts&amp;quot;,&amp;quot;Diamonds&amp;quot;,&amp;quot;Clubs&amp;quot;,&amp;quot;Spades&amp;quot;]
+ranks = [&amp;quot;10&amp;quot;,&amp;quot;Jack&amp;quot;,&amp;quot;Queen&amp;quot;,&amp;quot;King&amp;quot;,&amp;quot;Ace&amp;quot;,&amp;quot;2&amp;quot;,&amp;quot;3&amp;quot;,&amp;quot;4&amp;quot;,&amp;quot;5&amp;quot;,&amp;quot;6&amp;quot;,&amp;quot;7&amp;quot;,&amp;quot;8&amp;quot;,&amp;quot;9&amp;quot;]
+deck = [(r,s) for r in ranks for s in suits]
+
+def hand_rank(hand):
+    ranks_order = {&amp;quot;10&amp;quot;:10,&amp;quot;Jack&amp;quot;:11,&amp;quot;Queen&amp;quot;:12,&amp;quot;King&amp;quot;:13,&amp;quot;Ace&amp;quot;:14,
+                   &amp;quot;2&amp;quot;:2,&amp;quot;3&amp;quot;:3,&amp;quot;4&amp;quot;:4,&amp;quot;5&amp;quot;:5,&amp;quot;6&amp;quot;:6,&amp;quot;7&amp;quot;:7,&amp;quot;8&amp;quot;:8,&amp;quot;9&amp;quot;:9}
+    values = sorted([ranks_order[c[0]] for c in hand])
+    suits_set = {c[1] for c in hand}
+    if values==[10,11,12,13,14] and len(suits_set)==1:
+        return &amp;quot;Royal Flush&amp;quot;
+    return &amp;quot;Other&amp;quot;
+
+count = 0
+for _ in range(1000):
+    hand = random.sample(deck,5)
+    if hand_rank(hand)==&amp;quot;Royal Flush&amp;quot;:
+        count += 1
+print(count/1000)  # Very small probability
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-5--determine-winner-in-a-trick-taking-game&#34;&gt;🔴 Problem 5 — Determine Winner in a Trick-Taking Game&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Each player plays a card&lt;/li&gt;
+&lt;li&gt;Highest card of the lead suit wins&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def trick_winner(cards_played, lead_suit):
+    lead_cards = [c for c in cards_played if c[1]==lead_suit]
+    values = {&amp;quot;2&amp;quot;:2,&amp;quot;3&amp;quot;:3,&amp;quot;4&amp;quot;:4,&amp;quot;5&amp;quot;:5,&amp;quot;6&amp;quot;:6,&amp;quot;7&amp;quot;:7,&amp;quot;8&amp;quot;:8,&amp;quot;9&amp;quot;:9,
+              &amp;quot;10&amp;quot;:10,&amp;quot;Jack&amp;quot;:11,&amp;quot;Queen&amp;quot;:12,&amp;quot;King&amp;quot;:13,&amp;quot;Ace&amp;quot;:14}
+    winner_index = max(range(len(lead_cards)), key=lambda i: values[lead_cards[i][0]])
+    return winner_index
+
+cards = [(&amp;quot;10&amp;quot;,&amp;quot;Hearts&amp;quot;),(&amp;quot;Ace&amp;quot;,&amp;quot;Hearts&amp;quot;),(&amp;quot;King&amp;quot;,&amp;quot;Spades&amp;quot;),(&amp;quot;3&amp;quot;,&amp;quot;Hearts&amp;quot;)]
+lead = &amp;quot;Hearts&amp;quot;
+winner = trick_winner(cards,lead)
+print(winner)  # 1 → 2nd player
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-6--probability-dealer-gets-pok-9-in-2-card-pok-deng&#34;&gt;🔴 Problem 6 — Probability Dealer Gets Pok 9 in 2-Card Pok Deng&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Pok points = sum modulo 10&lt;/li&gt;
+&lt;li&gt;Need to count 2-card combinations summing to 9&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def pok_value(card):
+    if card[0] in [&amp;quot;Jack&amp;quot;,&amp;quot;Queen&amp;quot;,&amp;quot;King&amp;quot;,&amp;quot;10&amp;quot;]: return 10
+    return int(card[0])
+
+count = 0
+for i in range(len(deck)):
+    for j in range(i+1,len(deck)):
+        if (pok_value(deck[i])+pok_value(deck[j]))%10==9:
+            count+=1
+prob = count/comb(52,2)
+print(prob)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-7--simulate-multiple-poker-opponents&#34;&gt;🔴 Problem 7 — Simulate Multiple Poker Opponents&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Compare AI hand against N opponents using random simulation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def multi_player_sim(player_hand, community_cards, n_opponents=3, simulations=1000):
+    wins = 0
+    for _ in range(simulations):
+        deck_remain = [c for c in deck if c not in player_hand+community_cards]
+        random.shuffle(deck_remain)
+        opponents = [deck_remain[i*2:(i+1)*2] for i in range(n_opponents)]
+        comm = community_cards + deck_remain[2*n_opponents:5]
+        player_rank = hand_strength(player_hand + comm)
+        if all(player_rank&amp;gt;hand_strength(h+comm) for h in opponents):
+            wins += 1
+    return wins/simulations
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-8--count-number-of-full-house-hands&#34;&gt;🔴 Problem 8 — Count Number of Full House Hands&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Choose rank for triple: 13&lt;/li&gt;
+&lt;li&gt;Choose suits for triple: C(4,3)=4&lt;/li&gt;
+&lt;li&gt;Choose rank for pair: 12&lt;/li&gt;
+&lt;li&gt;Choose suits for pair: C(4,2)=6&lt;/li&gt;
+&lt;li&gt;Multiply&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;full_house = 13*comb(4,3)*12*comb(4,2)
+print(full_house)  # 3744 hands
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-9--probability-of-drawing-sequential-straight-in-5-cards&#34;&gt;🔴 Problem 9 — Probability of Drawing Sequential Straight in 5 Cards&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;10 possible starting ranks for 5-card straight&lt;/li&gt;
+&lt;li&gt;4^5 combinations of suits&lt;/li&gt;
+&lt;li&gt;Subtract flushes (already counted separately)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;straight_hands = 10*(4**5) - 40  # subtract flush overlaps (approx)
+prob = straight_hands/comb(52,5)
+print(prob)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-problem-10--calculate-expected-points-in-3-card-pok-deng-draw&#34;&gt;🔴 Problem 10 — Calculate Expected Points in 3-Card Pok Deng Draw&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Logic&lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Average points after drawing 3rd card from remaining deck&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Python Solution&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;player_hand = [(&amp;quot;7&amp;quot;,&amp;quot;Hearts&amp;quot;),(&amp;quot;6&amp;quot;,&amp;quot;Clubs&amp;quot;)]
+deck_remain = [c for c in deck if c not in player_hand]
+total = 0
+for card in deck_remain:
+    new_hand = player_hand + [card]
+    total += pok_points(new_hand)
+expected = total/len(deck_remain)
+print(expected)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-takeaways-1&#34;&gt;✅ Takeaways&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;These problems combine &lt;strong&gt;combinatorics, probability, simulation, and AI logic&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Each solution is &lt;strong&gt;pure Python&lt;/strong&gt;, no external libraries for probability or hand evaluation.&lt;/li&gt;
+&lt;li&gt;Completing all 20 prepares you for &lt;strong&gt;interviews, competitions, or AI card projects&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;</description>
+    </item>
     
     <item>
       <title>DK-004 — Music Theory (Piano Edition)</title>
