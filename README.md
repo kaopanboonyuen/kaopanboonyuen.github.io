@@ -42,21 +42,6 @@ These themes sit at the boundary between **theory-driven AI** and **large-scale 
 
 ---
 
-## 📚 Selected Research
-
-### **KAO: Kernel-Adaptive Optimization in Diffusion for Satellite Image Inpainting**  
-*IEEE Transactions on Geoscience and Remote Sensing (Vol. 63)*
-
-> We propose **Kernel-Adaptive Optimization (KAO)**, a diffusion-based framework that introduces **latent-space conditioning (LSC)** and **explicit propagation (EP)** to efficiently solve VHR satellite image inpainting problems.  
->  
-> Unlike preconditioned methods that require costly retraining, or postconditioned methods with high computational overhead, KAO performs **compact latent optimization** within diffusion models, enabling stable forward–backward fusion and scalable inference.
-
-🔗 Paper: https://ieeexplore.ieee.org/document/11204656  
-
-This work reflects my broader interest in **hard optimization problems inside generative models**, especially where classical assumptions break down at scale.
-
----
-
 ## ✨ Research Philosophy
 
 > *“Good AI systems emerge when optimization, probability, and geometry are treated explicitly—not hidden behind heuristics.”*
