@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en">
-    <img src="https://img.shields.io/badge/Google%20Scholar-Research-blue?logo=google-scholar&logoColor=white" />
+    <img src="https://img.shields.io/badge/Google%20Scholar-Publications-blue?logo=google-scholar&logoColor=white" />
   </a>
   <a href="https://github.com/kaopanboonyuen">
     <img src="https://img.shields.io/badge/GitHub-kaopanboonyuen-black?logo=github" />
@@ -13,40 +13,69 @@
 </p>
 
 <p align="center">
-🚀 <b>AI • Machine Learning • Geospatial Intelligence</b>
+🚀 <b>Representation Learning • Diffusion Models • Geospatial AI</b>
 </p>
 
 ---
 
-This repository serves as my **personal research and engineering hub**, showcasing projects, experiments, and explorations across:
+This repository serves as my **personal research and engineering workspace**, collecting projects, prototypes, and research artifacts at the intersection of:
 
-- 🤖 **Artificial Intelligence & Machine Learning**
-- 🧠 **Deep Learning & Computer Vision**
-- 🌍 **Geospatial Data Science & Remote Sensing**
-- ⚙️ **Applied AI Systems & Research Prototypes**
+- 🧠 **Representation Learning & Generative Models**
+- 🌫️ **Diffusion Models & Stochastic Processes**
+- 📐 **Optimization Theory for Deep Learning**
+- 🌍 **Geospatial AI & Remote Sensing at Scale**
 
-My work focuses on **bridging theory and real-world impact**—from academic-style research to production-ready AI systems.  
-This space evolves continuously as I learn, build, and push ideas forward.
+My work emphasizes **mathematically grounded AI systems**—where optimization theory, probabilistic modeling, and geometric structure are treated as first-class design principles, not afterthoughts.
 
 ---
 
-## ✨ Philosophy
+## 🧠 Research Focus
 
-> *“Strong AI systems are built where mathematical rigor meets engineering discipline.”*
+I am particularly interested in:
+
+- **Latent-space optimization** for generative models  
+- **Diffusion-based inverse problems** (inpainting, restoration, uncertainty-aware generation)  
+- **Kernel methods and adaptive optimization** in high-dimensional spaces  
+- **Scalable learning for very high-resolution (VHR) satellite imagery**  
+
+These themes sit at the boundary between **theory-driven AI** and **large-scale real-world deployment**.
+
+---
+
+## 📚 Selected Research
+
+### **KAO: Kernel-Adaptive Optimization in Diffusion for Satellite Image Inpainting**  
+*IEEE Transactions on Geoscience and Remote Sensing (Vol. 63)*
+
+> We propose **Kernel-Adaptive Optimization (KAO)**, a diffusion-based framework that introduces **latent-space conditioning (LSC)** and **explicit propagation (EP)** to efficiently solve VHR satellite image inpainting problems.  
+>  
+> Unlike preconditioned methods that require costly retraining, or postconditioned methods with high computational overhead, KAO performs **compact latent optimization** within diffusion models, enabling stable forward–backward fusion and scalable inference.
+
+🔗 Paper: https://ieeexplore.ieee.org/document/11204656  
+
+This work reflects my broader interest in **hard optimization problems inside generative models**, especially where classical assumptions break down at scale.
+
+---
+
+## ✨ Research Philosophy
+
+> *“Good AI systems emerge when optimization, probability, and geometry are treated explicitly—not hidden behind heuristics.”*
 
 I value:
-- 🧪 **Clean, reproducible research**
-- 🏗️ **Scalable and practical system design**
-- 📖 **Clear communication of complex ideas**
+- 📐 **Mathematical rigor in model design**
+- 🧪 **Reproducible, inspectable experiments**
+- 🏗️ **Systems that scale beyond toy benchmarks**
+- 📖 **Clear articulation of assumptions and limitations**
 
 ---
 
-## 📚 Research & Publications
+## 🛠️ Technical Scope
 
-- 🔍 Google Scholar profile with peer-reviewed publications and citations  
-- 🎓 Focus on applied AI, vision-based systems, and spatial intelligence  
-
-👉 See full list on **[Google Scholar](https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en)**
+- **Core Stack**: Python, PyTorch  
+- **Modeling**: Diffusion Models, Latent Variable Models, Kernel Methods  
+- **Theory**: Optimization, Stochastic Processes, Probabilistic Inference  
+- **Domains**: Computer Vision, Remote Sensing, Geospatial Intelligence  
+- **Systems**: GPU inference pipelines, research-to-production workflows  
 
 ---
 
@@ -54,22 +83,20 @@ I value:
 
 This site is built using **[Hugo](https://gohugo.io)**.
 
-Design inspiration is based on **[Natasha Jaques](https://natashajaques.com)** and the  
-**[Wowchemy Academic Template](https://github.com/wowchemy/starter-hugo-academic)**,  
-with custom modifications to **[wowchemy-hugo-modules](https://github.com/wowchemy/wowchemy-hugo-modules)**.
+The structure and academic layout are inspired by **[Natasha Jaques](https://natashajaques.com)** and the **[Wowchemy Academic Template](https://github.com/wowchemy/starter-hugo-academic)**, with custom extensions to **[wowchemy-hugo-modules](https://github.com/wowchemy/wowchemy-hugo-modules)**.
 
-Special thanks to the open-source and research communities 💙
+Grateful to the open research community for advancing transparent and rigorous AI 🌍
 
 ---
 
 ## 🤝 Let’s Connect
 
-I’m always happy to discuss:
-- AI research & publication ideas  
-- System design & applied ML  
-- Collaboration opportunities  
+I’m always open to discussions around:
+- Diffusion models & generative learning  
+- Optimization and representation learning  
+- Research collaboration & applied AI systems  
 
-📩 **Email**: [panboonyuen.kao@gmail.com](mailto:panboonyuen.kao@gmail.com)
+📩 **Email**: panboonyuen.kao **dot** [at] **gmail** **dot** com
 
 ---
 
