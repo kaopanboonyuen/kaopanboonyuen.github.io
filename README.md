@@ -1,15 +1,77 @@
-# Welcome to Kao Panboonyuen GitHub Page
+# 👋 Welcome to **Kao Panboonyuen’s GitHub Page**
 
-This repository showcases a range of projects and research focused on AI, machine learning, and geospatial data analysis.
+<p align="center">
+  <a href="https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en">
+    <img src="https://img.shields.io/badge/Google%20Scholar-Research-blue?logo=google-scholar&logoColor=white" />
+  </a>
+  <a href="https://github.com/kaopanboonyuen">
+    <img src="https://img.shields.io/badge/GitHub-kaopanboonyuen-black?logo=github" />
+  </a>
+  <a href="https://www.linkedin.com/in/teerapong-panboonyuen">
+    <img src="https://img.shields.io/badge/LinkedIn-Teerapong%20Panboonyuen-0A66C2?logo=linkedin&logoColor=white" />
+  </a>
+</p>
 
-## Credits
+<p align="center">
+🚀 <b>AI • Machine Learning • Geospatial Intelligence</b>
+</p>
 
-This site is built using the [Hugo](https://gohugo.io) templating engine, with design and customization inspired by [Natasha Jaques](https://natashajaques.com). It utilizes the [Wowchemy](https://wowchemy.com/?utm_campaign=poweredby) [academic template](https://github.com/wowchemy/starter-hugo-academic), with custom modifications made to the [wowchemy-hugo-modules](https://github.com/wowchemy/wowchemy-hugo-modules).
+---
 
-A big thank you to Hugo and Natasha for their amazing contributions and inspiration!
+This repository serves as my **personal research and engineering hub**, showcasing projects, experiments, and explorations across:
 
-## Let's Connect
+- 🤖 **Artificial Intelligence & Machine Learning**
+- 🧠 **Deep Learning & Computer Vision**
+- 🌍 **Geospatial Data Science & Remote Sensing**
+- ⚙️ **Applied AI Systems & Research Prototypes**
 
-Feel free to reach out and chat about AI or anything tech-related at [panboonyuen.kao@gmail.com](mailto:panboonyuen.kao@gmail.com). I'm always excited to discuss new ideas and projects!
+My work focuses on **bridging theory and real-world impact**—from academic-style research to production-ready AI systems.  
+This space evolves continuously as I learn, build, and push ideas forward.
 
-Teerapong Panboonyuen (Kao), ธีรพงศ์ ปานบุญยืน (เก้า)
+---
+
+## ✨ Philosophy
+
+> *“Strong AI systems are built where mathematical rigor meets engineering discipline.”*
+
+I value:
+- 🧪 **Clean, reproducible research**
+- 🏗️ **Scalable and practical system design**
+- 📖 **Clear communication of complex ideas**
+
+---
+
+## 📚 Research & Publications
+
+- 🔍 Google Scholar profile with peer-reviewed publications and citations  
+- 🎓 Focus on applied AI, vision-based systems, and spatial intelligence  
+
+👉 See full list on **[Google Scholar](https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&hl=en)**
+
+---
+
+## 🙏 Credits & Acknowledgements
+
+This site is built using **[Hugo](https://gohugo.io)**.
+
+Design inspiration is based on **[Natasha Jaques](https://natashajaques.com)** and the  
+**[Wowchemy Academic Template](https://github.com/wowchemy/starter-hugo-academic)**,  
+with custom modifications to **[wowchemy-hugo-modules](https://github.com/wowchemy/wowchemy-hugo-modules)**.
+
+Special thanks to the open-source and research communities 💙
+
+---
+
+## 🤝 Let’s Connect
+
+I’m always happy to discuss:
+- AI research & publication ideas  
+- System design & applied ML  
+- Collaboration opportunities  
+
+📩 **Email**: [panboonyuen.kao@gmail.com](mailto:panboonyuen.kao@gmail.com)
+
+---
+
+**Teerapong Panboonyuen (Kao)**  
+ธีรพงศ์ ปานบุญยืน (เก้า)

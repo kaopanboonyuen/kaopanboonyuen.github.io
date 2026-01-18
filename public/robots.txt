@@ -1,3 +1,0 @@
-User-agent: *
-
-Sitemap: https://kaopanboonyuen.github.io/sitemap.xml
