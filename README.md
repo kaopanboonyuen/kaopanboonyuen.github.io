@@ -81,7 +81,7 @@ I’m always open to discussions around:
 - Optimization and representation learning  
 - Research collaboration & applied AI systems  
 
-📩 **Email**: panboonyuen.kao **dot** [at] **gmail** **dot** com
+📩 **Email**: panboonyuen.kao [at] **gmail** **dot** com
 
 ---
 
