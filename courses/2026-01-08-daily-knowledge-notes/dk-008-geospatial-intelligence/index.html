@@ -1330,12 +1330,9 @@ Northing: 1,500,000 m
 <h2 id="-map-scale--understanding-distance">📏 Map Scale — Understanding Distance</h2>
 <h3 id="what-is-map-scale">What Is Map Scale?</h3>
 <p>Scale describes the relationship between <strong>map distance</strong> and <strong>real distance</strong>.</p>
-<pre><code>
-$$
+<p>$$
 \text{Scale} = \frac{\text{Map Distance}}{\text{Ground Distance}}
-$$
-
-</code></pre>
+$$</p>
 <p>Examples:</p>
 <ul>
 <li>1:25,000 → large scale (detail)</li>
@@ -2643,10 +2640,9 @@ single_diff = rho_A - rho_B  # satellite clock error removed
 <h3 id="q33--how-can-you-estimate-ground-subsidence-rate-from-a-phase-time-series">Q33 — How can you estimate ground subsidence rate from a phase time series?</h3>
 <details><summary>✅ Answer</summary>
 <p>Convert phase change to displacement, then fit a slope.</p>
-<pre><code>$$
+<p>$$
 \Delta h = \frac{\lambda}{4\pi} \Delta \phi
-$$
-</code></pre>
+$$</p>
 <p>Python:</p>
 <pre><code class="language-python">import numpy as np
 
@@ -2727,10 +2723,9 @@ model.fit(X, y)
 <h3 id="q40--why-is-geoid-undulation-needed-in-engineering-surveys">Q40 — Why is geoid undulation needed in engineering surveys?</h3>
 <details><summary>✅ Answer</summary>
 <p>To convert GNSS height to physical height.</p>
-<pre><code>$$
+<p>$$
 H = h - N
-$$
-</code></pre>
+$$</p>
 <p>Python:</p>
 <pre><code class="language-python">orthometric_height = ellipsoidal_height - geoid_height
 </code></pre>

@@ -128,12 +128,9 @@ Northing: 1,500,000 m
 &lt;h2 id=&#34;-map-scale--understanding-distance&#34;&gt;📏 Map Scale — Understanding Distance&lt;/h2&gt;
 &lt;h3 id=&#34;what-is-map-scale&#34;&gt;What Is Map Scale?&lt;/h3&gt;
 &lt;p&gt;Scale describes the relationship between &lt;strong&gt;map distance&lt;/strong&gt; and &lt;strong&gt;real distance&lt;/strong&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;
-$$
+&lt;p&gt;$$
 \text{Scale} = \frac{\text{Map Distance}}{\text{Ground Distance}}
-$$
-
-&lt;/code&gt;&lt;/pre&gt;
+$$&lt;/p&gt;
 &lt;p&gt;Examples:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;1:25,000 → large scale (detail)&lt;/li&gt;
@@ -1441,10 +1438,9 @@ single_diff = rho_A - rho_B  # satellite clock error removed
 &lt;h3 id=&#34;q33--how-can-you-estimate-ground-subsidence-rate-from-a-phase-time-series&#34;&gt;Q33 — How can you estimate ground subsidence rate from a phase time series?&lt;/h3&gt;
 &lt;details&gt;&lt;summary&gt;✅ Answer&lt;/summary&gt;
 &lt;p&gt;Convert phase change to displacement, then fit a slope.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$$
+&lt;p&gt;$$
 \Delta h = \frac{\lambda}{4\pi} \Delta \phi
-$$
-&lt;/code&gt;&lt;/pre&gt;
+$$&lt;/p&gt;
 &lt;p&gt;Python:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
 
@@ -1525,10 +1521,9 @@ model.fit(X, y)
 &lt;h3 id=&#34;q40--why-is-geoid-undulation-needed-in-engineering-surveys&#34;&gt;Q40 — Why is geoid undulation needed in engineering surveys?&lt;/h3&gt;
 &lt;details&gt;&lt;summary&gt;✅ Answer&lt;/summary&gt;
 &lt;p&gt;To convert GNSS height to physical height.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$$
+&lt;p&gt;$$
 H = h - N
-$$
-&lt;/code&gt;&lt;/pre&gt;
+$$&lt;/p&gt;
 &lt;p&gt;Python:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;orthometric_height = ellipsoidal_height - geoid_height
 &lt;/code&gt;&lt;/pre&gt;
