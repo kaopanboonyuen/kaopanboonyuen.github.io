@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>model-interpretability | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/model-interpretability/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/model-interpretability/index.xml" rel="self" type="application/rss+xml" />
+    <description>model-interpretability</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Mon, 19 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>model-interpretability</title>
+      <link>https://kaopanboonyuen.github.io/tag/model-interpretability/</link>
+    </image>
+    
+    <item>
+      <title>Seeing Isn&#39;t Always Believing: Analysis of Grad-CAM Faithfulness and Localization Reliability in Lung Cancer CT Classification</title>
+      <link>https://kaopanboonyuen.github.io/publication/seeing-isnt-always-believing-analysis-of-grad-cam-faithfulness-and-localization-reliability/</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/seeing-isnt-always-believing-analysis-of-grad-cam-faithfulness-and-localization-reliability/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;compact_01.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
