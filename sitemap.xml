@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-009-llm-recap/</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-008-geospatial-intelligence/</loc>
     <lastmod>2026-01-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -194,6 +197,12 @@
     <loc>https://kaopanboonyuen.github.io/courses/2026-01-01-llm-multimodal/lecture-14-deep-learning-modern-ai-final/</loc>
     <lastmod>2026-01-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://kaopanboonyuen.github.io/courses/</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/</loc>
+    <lastmod>2026-02-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://kaopanboonyuen.github.io/publication-type/1/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -236,9 +245,6 @@
     <loc>https://kaopanboonyuen.github.io/tags/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/</loc>
-    <lastmod>2026-01-29T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://kaopanboonyuen.github.io/author/teerapong-panboonyuen/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -250,9 +256,6 @@
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/vehicle-damage/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/courses/</loc>
-    <lastmod>2026-01-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/clinical-ai/</loc>
     <lastmod>2026-01-19T00:00:00+00:00</lastmod>

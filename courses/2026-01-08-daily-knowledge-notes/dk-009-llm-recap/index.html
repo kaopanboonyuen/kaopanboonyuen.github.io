@@ -1,0 +1,3300 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Teerapong Panboonyuen" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-009-llm-recap/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08f2e04360a1c87f5ad39547c02bf219.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-009-llm-recap/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-009-llm-recap/" />
+  <meta property="og:title" content="DK-009 — From Pretraining to MoE and Agentic Systems | Teerapong Panboonyuen" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2026-02-06T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2026-02-06T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>DK-009 — From Pretraining to MoE and Agentic Systems | Teerapong Panboonyuen</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="79a96096df4e9fd41b273855ea5b386b" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.4be02a3b391999348b0c7478778a0e4b.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#awards"><span>Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#press"><span>Press</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Featured</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#tags"><span>Topics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#communities"><span>Communities</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://x.com/kaopanboonyuen" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          Knowledge Notes
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/courses/"><i class="fas fa-arrow-left pr-1"></i>Courses</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/courses/2026-01-08-daily-knowledge-notes/">Knowledge Notes</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class="active"><a href="/courses/2026-01-08-daily-knowledge-notes/dk-009-llm-recap/">DK-009 — From Pretraining to MoE and Agentic Systems</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-008-geospatial-intelligence/">DK-008 — Geospatial Intelligence</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-007-astronomy/">DK-007 — Astronomy</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-006-iq-puzzle-practice/">DK-006 — IQ Practice</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-005-playing-cards/">DK-005 — Playing Cards &amp; Probability with Python</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-004-music-theory/">DK-004 — Music Theory</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-003-probability/">DK-003 — Probability</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know-copy/">DK-002 — Math Every Programmer Should Know</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-001-harry-potter-overview/">DK-001 — The Harry Potter Universe (A Beginner-Friendly Guide)</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-what-is-an-ai-agent">1️⃣ What Is an AI Agent?</a>
+      <ul>
+        <li><a href="#agent-vs-model">Agent vs Model</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-what-does-an-agent-actually-do">2️⃣ What Does an Agent Actually Do?</a></li>
+    <li><a href="#3-what-is-a-token">3️⃣ What Is a Token?</a>
+      <ul>
+        <li><a href="#are-more-tokens-better">Are More Tokens Better?</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-token--vector--embedding">4️⃣ Token → Vector → Embedding</a>
+      <ul>
+        <li><a href="#what-is-a-vector">What Is a Vector?</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-what-is-latent-space">5️⃣ What Is Latent Space?</a>
+      <ul>
+        <li><a href="#what-is-z">What Is “z”?</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-probability-in-llms">6️⃣ Probability in LLMs</a></li>
+    <li><a href="#7-why-llms-feel-smart">7️⃣ Why LLMs Feel “Smart”</a></li>
+    <li><a href="#8-architecture-mixture-of-experts-moe">8️⃣ Architecture: Mixture-of-Experts (MoE)</a>
+      <ul>
+        <li><a href="#key-parameters-explained">Key Parameters Explained</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-what-tasks-are-llms-trained-for">9️⃣ What Tasks Are LLMs Trained For?</a></li>
+    <li><a href="#-how-are-llms-evaluated">🔟 How Are LLMs Evaluated?</a></li>
+    <li><a href="#11-hardware-required-to-train-models">1️⃣1️⃣ Hardware Required to Train Models</a></li>
+    <li><a href="#12-why-you-can-ask-anything-and-get-answers">1️⃣2️⃣ Why You Can Ask Anything and Get Answers</a></li>
+    <li><a href="#13-from-llms-to-agentic-ai">1️⃣3️⃣ From LLMs to Agentic AI</a></li>
+    <li><a href="#-final-mental-model">🧠 Final Mental Model</a></li>
+    <li><a href="#-closing-thought">🧭 Closing Thought</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1-what-is-a-token">1️⃣ What Is a Token?</a></li>
+    <li><a href="#2-examples-words-subwords-and-symbols">2️⃣ Examples: Words, Subwords, and Symbols</a>
+      <ul>
+        <li><a href="#subword-tokenization-example">Subword Tokenization Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-why-not-just-use-words">3️⃣ Why Not Just Use Words?</a></li>
+    <li><a href="#4-byte-pair-encoding-bpe">4️⃣ Byte Pair Encoding (BPE)</a></li>
+    <li><a href="#5-tokens-across-languages">5️⃣ Tokens Across Languages</a>
+      <ul>
+        <li><a href="#example-chinese">Example: Chinese</a></li>
+        <li><a href="#example-thai">Example: Thai</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-vocabulary-size">6️⃣ Vocabulary Size</a></li>
+    <li><a href="#7-from-token-to-id">7️⃣ From Token to ID</a></li>
+    <li><a href="#8-token--vector-embedding">8️⃣ Token → Vector (Embedding)</a>
+      <ul>
+        <li><a href="#embedding-lookup">Embedding Lookup</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-what-is-an-embedding">9️⃣ What Is an Embedding?</a></li>
+    <li><a href="#-what-is-a-vector">🔟 What Is a Vector?</a></li>
+    <li><a href="#11-what-is-latent-space">1️⃣1️⃣ What Is Latent Space?</a></li>
+    <li><a href="#12-tokens-in-context-position-matters">1️⃣2️⃣ Tokens in Context: Position Matters</a></li>
+    <li><a href="#13-how-tokens-are-used-during-training">1️⃣3️⃣ How Tokens Are Used During Training</a>
+      <ul>
+        <li><a href="#loss-function">Loss Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#14-how-embeddings-are-learned">1️⃣4️⃣ How Embeddings Are Learned</a></li>
+    <li><a href="#15-multilingual-training">1️⃣5️⃣ Multilingual Training</a></li>
+    <li><a href="#16-are-more-tokens-better">1️⃣6️⃣ Are More Tokens Better?</a></li>
+    <li><a href="#17-summary-mental-model">1️⃣7️⃣ Summary Mental Model</a></li>
+    <li><a href="#-final-intuition">🧠 Final Intuition</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1-what-does-model-tree-mean">1️⃣ What Does “Model Tree” Mean?</a></li>
+    <li><a href="#2-base-model-gpt-oss-120b">2️⃣ Base Model: gpt-oss-120b</a>
+      <ul>
+        <li><a href="#what-is-120b-parameters">What is “120B parameters”?</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-tensor-types-bf16-vs-u8">3️⃣ Tensor Types: BF16 vs U8</a></li>
+    <li><a href="#4-adapters-and-lora-low-rank-adaptation">4️⃣ Adapters and LoRA (Low-Rank Adaptation)</a>
+      <ul>
+        <li><a href="#why-lora-matters">Why LoRA matters</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-finetuning-vs-pretraining">5️⃣ Finetuning vs Pretraining</a>
+      <ul>
+        <li><a href="#pretraining">Pretraining</a></li>
+        <li><a href="#finetuning">Finetuning</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-quantized-models">6️⃣ Quantized Models</a></li>
+    <li><a href="#7-what-is-gpt-oss-safeguard-120b">7️⃣ What is gpt-oss-safeguard-120b?</a></li>
+    <li><a href="#8-mixture-of-experts-moe-architecture">8️⃣ Mixture-of-Experts (MoE) Architecture</a>
+      <ul>
+        <li><a href="#dense-model">Dense model:</a></li>
+        <li><a href="#moe-model">MoE model:</a></li>
+        <li><a href="#moe-at-scale">MoE at scale</a></li>
+        <li><a href="#intuition">Intuition</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-architecture-details-explained">9️⃣ Architecture Details Explained</a>
+      <ul>
+        <li><a href="#attention-heads">Attention Heads</a></li>
+        <li><a href="#swiglu-activation">SwiGLU Activation</a></li>
+        <li><a href="#context-length-256k-1">Context Length: 256K</a></li>
+      </ul>
+    </li>
+    <li><a href="#-tokenization-o200k_harmony">🔟 Tokenization (o200k_harmony)</a></li>
+    <li><a href="#11-rag-retrieval-augmented-generation">1️⃣1️⃣ RAG (Retrieval-Augmented Generation)</a></li>
+    <li><a href="#12-agentic-llms">1️⃣2️⃣ Agentic LLMs</a></li>
+    <li><a href="#13-putting-it-all-together">1️⃣3️⃣ Putting It All Together</a></li>
+    <li><a href="#-final-thoughts">🧠 Final Thoughts</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1-what-does-agentic-actually-mean">1️⃣ What Does “Agentic” Actually Mean?</a>
+      <ul>
+        <li><a href="#the-canonical-agent-loop">The canonical agent loop</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-react-plan-act-reflect-and-toolformers">2️⃣ ReAct, Plan-Act-Reflect, and Toolformers</a>
+      <ul>
+        <li><a href="#-react-reason--act">🔹 ReAct (Reason + Act)</a></li>
+        <li><a href="#-planactreflect">🔹 Plan–Act–Reflect</a></li>
+        <li><a href="#-toolformers">🔹 Toolformers</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-why-chain-of-thought-cot-matters">3️⃣ Why Chain-of-Thought (CoT) Matters</a></li>
+    <li><a href="#4-why-open-models-expose-cot">4️⃣ Why Open Models Expose CoT</a>
+      <ul>
+        <li><a href="#proprietary-models">Proprietary models</a></li>
+        <li><a href="#open-weight-models">Open-weight models</a></li>
+        <li><a href="#why-the-open-community-wants-cot">Why the open community wants CoT</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-adjustable-reasoning-effort">5️⃣ Adjustable Reasoning Effort</a></li>
+    <li><a href="#6-why-cot-is-risky--and-still-open">6️⃣ Why CoT Is Risky — and Still Open</a></li>
+    <li><a href="#7-mapping-the-modern-llm-ecosystem">7️⃣ Mapping the Modern LLM Ecosystem</a></li>
+    <li><a href="#-openai">🔵 OpenAI</a></li>
+    <li><a href="#-meta-llama-family">🟣 Meta (LLaMA family)</a></li>
+    <li><a href="#-mistral">🟢 Mistral</a></li>
+    <li><a href="#-open-source-community-oss">⚫ Open-Source Community (OSS)</a></li>
+    <li><a href="#8-comparative-mental-model">8️⃣ Comparative Mental Model</a></li>
+    <li><a href="#9-why-this-ecosystem-exists">9️⃣ Why This Ecosystem Exists</a></li>
+    <li><a href="#-the-new-role-of-the-practitioner">🔟 The New Role of the Practitioner</a></li>
+    <li><a href="#-final-synthesis">🧠 Final Synthesis</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1-attention-explained-with-numbers">1️⃣ Attention Explained with Numbers</a>
+      <ul>
+        <li><a href="#step-1-from-embeddings-to-q-k-v">Step 1: From Embeddings to Q, K, V</a></li>
+        <li><a href="#step-2-similarity-scores">Step 2: Similarity Scores</a></li>
+        <li><a href="#step-3-softmax--probability-distribution">Step 3: Softmax = Probability Distribution</a></li>
+        <li><a href="#step-4-weighted-sum">Step 4: Weighted Sum</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-why-self-attention-works">2️⃣ Why Self-Attention Works</a>
+      <ul>
+        <li><a href="#key-insight">Key Insight</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-multi-head-attention-many-views-of-meaning">3️⃣ Multi-Head Attention: Many Views of Meaning</a></li>
+    <li><a href="#4-why-attention-enables-reasoning">4️⃣ Why Attention Enables Reasoning</a></li>
+    <li><a href="#5-training-dynamics-how-models-actually-learn">5️⃣ Training Dynamics: How Models Actually Learn</a>
+      <ul>
+        <li><a href="#optimization-intuition">Optimization Intuition</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-scaling-laws">6️⃣ Scaling Laws</a>
+      <ul>
+        <li><a href="#consequence">Consequence</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-why-bigger-models-reason-better">7️⃣ Why Bigger Models Reason Better</a></li>
+    <li><a href="#8-when-tokenization-goes-wrong">8️⃣ When Tokenization Goes Wrong</a>
+      <ul>
+        <li><a href="#example-over-fragmentation">Example: Over-Fragmentation</a></li>
+        <li><a href="#multilingual-failure">Multilingual Failure</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-tokenization-and-reasoning-errors">9️⃣ Tokenization and Reasoning Errors</a></li>
+    <li><a href="#-from-embeddings-to-reasoning">🔟 From Embeddings to Reasoning</a>
+      <ul>
+        <li><a href="#reasoning-as-trajectory-in-latent-space">Reasoning as Trajectory in Latent Space</a></li>
+      </ul>
+    </li>
+    <li><a href="#11-why-chain-of-thought-helps">1️⃣1️⃣ Why Chain-of-Thought Helps</a></li>
+    <li><a href="#12-summary-mental-model">1️⃣2️⃣ Summary Mental Model</a></li>
+    <li><a href="#-final-intuition-1">🧠 Final Intuition</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1-what-rnns-were-trying-to-solve">1️⃣ What RNNs Were Trying to Solve</a></li>
+    <li><a href="#2-the-fundamental-limits-of-rnns">2️⃣ The Fundamental Limits of RNNs</a>
+      <ul>
+        <li><a href="#21-vanishing-and-exploding-gradients">2.1 Vanishing and Exploding Gradients</a></li>
+        <li><a href="#22-sequential-bottleneck">2.2 Sequential Bottleneck</a></li>
+        <li><a href="#23-memory-is-compressed-too-early">2.3 Memory is Compressed Too Early</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-why-attention-is-a-structural-upgrade">3️⃣ Why Attention Is a Structural Upgrade</a></li>
+    <li><a href="#4-attention-vs-recurrence-a-direct-comparison">4️⃣ Attention vs Recurrence: A Direct Comparison</a></li>
+    <li><a href="#5-why-transformers-scale-and-rnns-do-not">5️⃣ Why Transformers Scale and RNNs Do Not</a></li>
+    <li><a href="#6-the-death-of-inductive-bias">6️⃣ The Death of Inductive Bias</a></li>
+    <li><a href="#7-final-verdict">7️⃣ Final Verdict</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1-reasoning-is-approximate-inference">1️⃣ Reasoning Is Approximate Inference</a></li>
+    <li><a href="#2-hallucination-as-probability-maximization">2️⃣ Hallucination as Probability Maximization</a></li>
+    <li><a href="#3-shortcut-reasoning">3️⃣ Shortcut Reasoning</a></li>
+    <li><a href="#4-chain-of-thought-collapse">4️⃣ Chain-of-Thought Collapse</a></li>
+    <li><a href="#5-symbolic-fragility">5️⃣ Symbolic Fragility</a></li>
+    <li><a href="#6-out-of-distribution-reasoning">6️⃣ Out-of-Distribution Reasoning</a></li>
+    <li><a href="#7-alignment-vs-reasoning-tension">7️⃣ Alignment vs Reasoning Tension</a></li>
+    <li><a href="#8-summary-of-failure-modes">8️⃣ Summary of Failure Modes</a></li>
+    <li><a href="#-key-insight">🧠 Key Insight</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+  
+  
+
+  <li class="breadcrumb-item">
+    <a href="/">
+      
+        Home
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/">
+      
+        Courses
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/2026-01-08-daily-knowledge-notes/">
+      
+        Knowledge Notes
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        DK-009 — From Pretraining to MoE and Agentic Systems
+      </li>
+    </ol>
+  </nav>
+
+
+          
+
+          <h1>DK-009 — From Pretraining to MoE and Agentic Systems</h1>
+
+          <div class="article-style">
+            <hr>
+<h1 id="-foundations-of-agentic-ai-and-large-language-models">🤖 Foundations of Agentic AI and Large Language Models</h1>
+<p>Artificial Intelligence today is no longer about <em>single predictions</em>.</p>
+<p>Modern AI systems:</p>
+<ul>
+<li><strong>reason</strong></li>
+<li><strong>plan</strong></li>
+<li><strong>act</strong></li>
+<li><strong>observe</strong></li>
+<li><strong>adapt</strong></li>
+</ul>
+<p>At the center of this shift is the combination of:</p>
+<ul>
+<li>Large Language Models (LLMs)</li>
+<li>Agentic workflows</li>
+<li>System-level design</li>
+</ul>
+<p>This chapter is a <strong>true basic foundation</strong>, written for nerds who want to <em>understand</em>, not just <em>use</em>.</p>
+<hr>
+<h2 id="1-what-is-an-ai-agent">1️⃣ What Is an AI Agent?</h2>
+<p>An <strong>AI agent</strong> is not a model.</p>
+<p>An agent is a <strong>system</strong> that uses a model to interact with an environment over time.</p>
+<p>Formally, an agent:</p>
+<ul>
+<li>receives observations</li>
+<li>maintains internal state</li>
+<li>selects actions</li>
+<li>receives feedback</li>
+<li>updates itself</li>
+</ul>
+<p>A minimal agent loop:</p>
+<pre><code>
+Observation → Reasoning → Action → Environment → Observation
+
+</code></pre>
+<hr>
+<h3 id="agent-vs-model">Agent vs Model</h3>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stateless</td>
+<td>Stateful</td>
+</tr>
+<tr>
+<td>Single output</td>
+<td>Continuous loop</td>
+</tr>
+<tr>
+<td>No tools</td>
+<td>Tool-using</td>
+</tr>
+<tr>
+<td>No memory</td>
+<td>Memory-aware</td>
+</tr>
+</tbody>
+</table>
+<p>An LLM becomes <em>agentic</em> only when embedded in this loop.</p>
+<hr>
+<h2 id="2-what-does-an-agent-actually-do">2️⃣ What Does an Agent Actually Do?</h2>
+<p>An agent typically performs tasks like:</p>
+<ul>
+<li>searching information</li>
+<li>writing code</li>
+<li>running programs</li>
+<li>analyzing data</li>
+<li>making decisions</li>
+<li>coordinating tools</li>
+</ul>
+<p>Example:</p>
+<pre><code>
+User: &quot;Analyze my dataset and plot trends&quot;
+
+Agent:
+
+1. Understand task
+2. Plan steps
+3. Load data
+4. Run code
+5. Inspect output
+6. Adjust
+7. Respond
+
+</code></pre>
+<p>This is <strong>goal-directed behavior</strong>.</p>
+<hr>
+<h2 id="3-what-is-a-token">3️⃣ What Is a Token?</h2>
+<p>LLMs do not see words.</p>
+<p>They see <strong>tokens</strong>.</p>
+<p>A token is a discrete unit produced by a tokenizer.</p>
+<p>Example:</p>
+<pre><code>
+&quot;Artificial intelligence is powerful&quot;
+→ [&quot;Artificial&quot;, &quot; intelligence&quot;, &quot; is&quot;, &quot; powerful&quot;]
+
+</code></pre>
+<p>Sometimes:</p>
+<ul>
+<li>one word = one token</li>
+<li>one word = many tokens</li>
+<li>symbols, code, spaces are tokens</li>
+</ul>
+<hr>
+<h3 id="are-more-tokens-better">Are More Tokens Better?</h3>
+<p>No.</p>
+<p>Token count affects:</p>
+<ul>
+<li>cost</li>
+<li>latency</li>
+<li>memory usage</li>
+</ul>
+<p>What matters is <strong>information density</strong>, not raw token count.</p>
+<hr>
+<h2 id="4-token--vector--embedding">4️⃣ Token → Vector → Embedding</h2>
+<p>Each token is mapped to a vector.</p>
+<p>This mapping is called an <strong>embedding</strong>.</p>
+<p>Formally:</p>
+<p>$$
+\text{Embedding}: \mathcal{V} \rightarrow \mathbb{R}^d
+$$</p>
+<p>Where:</p>
+<ul>
+<li>V = vocabulary</li>
+<li>d = embedding dimension</li>
+</ul>
+<hr>
+<h3 id="what-is-a-vector">What Is a Vector?</h3>
+<p>A vector is just a list of numbers:</p>
+<p>$$
+\mathbf{v} = [v_1, v_2, \dots, v_d]
+$$</p>
+<p>Each dimension encodes latent features:</p>
+<ul>
+<li>syntax</li>
+<li>semantics</li>
+<li>style</li>
+<li>function</li>
+</ul>
+<hr>
+<h2 id="5-what-is-latent-space">5️⃣ What Is Latent Space?</h2>
+<p>Latent space is the <strong>geometry of meaning</strong>.</p>
+<p>In latent space:</p>
+<ul>
+<li>similar concepts are close</li>
+<li>different concepts are far apart</li>
+</ul>
+<p>Distance is often measured by cosine similarity:</p>
+<p>$$
+\text{sim}(\mathbf{a}, \mathbf{b}) =
+\frac{\mathbf{a} \cdot \mathbf{b}}{|\mathbf{a}| |\mathbf{b}|}
+$$</p>
+<hr>
+<h3 id="what-is-z">What Is “z”?</h3>
+<p>In ML papers, ( z ) usually denotes a latent variable.</p>
+<p>In LLMs:</p>
+<ul>
+<li>embeddings</li>
+<li>hidden states</li>
+<li>attention outputs</li>
+</ul>
+<p>are all forms of latent representations.</p>
+<hr>
+<h2 id="6-probability-in-llms">6️⃣ Probability in LLMs</h2>
+<p>LLMs model probability distributions over tokens.</p>
+<p>At each step:</p>
+<p>$$
+P(x_t \mid x_1, x_2, \dots, x_{t-1})
+$$</p>
+<p>The model predicts:</p>
+<blockquote>
+<p>“Given everything so far, what token is most likely next?”</p>
+</blockquote>
+<p>Training minimizes cross-entropy loss:</p>
+<p>$$
+\mathcal{L} = -\sum_t \log P(x_t)
+$$</p>
+<hr>
+<h2 id="7-why-llms-feel-smart">7️⃣ Why LLMs Feel “Smart”</h2>
+<p>Because reasoning emerges from:</p>
+<ul>
+<li>scale</li>
+<li>representation</li>
+<li>optimization</li>
+</ul>
+<p>Not because the model “understands” like a human.</p>
+<hr>
+<h2 id="8-architecture-mixture-of-experts-moe">8️⃣ Architecture: Mixture-of-Experts (MoE)</h2>
+<p>MoE replaces one big network with <strong>many specialists</strong>.</p>
+<p>Instead of using all parameters every time,
+the model selects a few experts per token.</p>
+<hr>
+<h3 id="key-parameters-explained">Key Parameters Explained</h3>
+<h4 id="architecture-mixture-of-experts-moe">Architecture: Mixture-of-Experts (MoE)</h4>
+<p>A sparse architecture with expert routing.</p>
+<hr>
+<h4 id="total-parameters-1t">Total Parameters: 1T</h4>
+<p>$$
+1T = 1{,}000{,}000{,}000{,}000
+$$</p>
+<p>These include <strong>all experts combined</strong>.</p>
+<hr>
+<h4 id="activated-parameters-32b">Activated Parameters: 32B</h4>
+<p>Only a subset is used per token:</p>
+<p>$$
+\text{Compute} \propto 32B \ll 1T
+$$</p>
+<p>This makes MoE scalable.</p>
+<hr>
+<h4 id="number-of-layers-61">Number of Layers: 61</h4>
+<p>Total transformer layers.</p>
+<hr>
+<h4 id="number-of-dense-layers-1">Number of Dense Layers: 1</h4>
+<p>One shared layer used by all tokens.</p>
+<hr>
+<h4 id="attention-hidden-dimension-7168">Attention Hidden Dimension: 7168</h4>
+<p>Size of token representation inside attention.</p>
+<hr>
+<h4 id="moe-hidden-dimension-per-expert-2048">MoE Hidden Dimension (per Expert): 2048</h4>
+<p>Each expert is smaller and specialized.</p>
+<hr>
+<h4 id="number-of-experts-384">Number of Experts: 384</h4>
+<p>Total pool of experts.</p>
+<hr>
+<h4 id="selected-experts-per-token-8">Selected Experts per Token: 8</h4>
+<p>Router chooses 8 experts per token.</p>
+<hr>
+<h4 id="number-of-shared-experts-1">Number of Shared Experts: 1</h4>
+<p>Always-active expert for stability.</p>
+<hr>
+<h4 id="vocabulary-size-160k">Vocabulary Size: 160K</h4>
+<p>Number of tokens the model understands.</p>
+<hr>
+<h4 id="context-length-256k">Context Length: 256K</h4>
+<p>Maximum tokens in one forward pass.</p>
+<hr>
+<h4 id="attention-mechanism-mla">Attention Mechanism: MLA</h4>
+<p>Multi-head attention optimized for long context.</p>
+<hr>
+<h4 id="activation-function-swiglu">Activation Function: SwiGLU</h4>
+<p>$$
+\text{SwiGLU}(x) = (xW_1 \odot \sigma(xW_2))W_3
+$$</p>
+<p>Smooth, stable, expressive.</p>
+<hr>
+<h4 id="vision-encoder-moonvit">Vision Encoder: MoonViT</h4>
+<p>Visual encoder for multimodal inputs.</p>
+<hr>
+<h4 id="parameters-of-vision-encoder-400m">Parameters of Vision Encoder: 400M</h4>
+<p>Separate vision model feeding into LLM.</p>
+<hr>
+<h2 id="9-what-tasks-are-llms-trained-for">9️⃣ What Tasks Are LLMs Trained For?</h2>
+<p>Primary objective:</p>
+<ul>
+<li>Next-token prediction</li>
+</ul>
+<p>Emergent abilities:</p>
+<ul>
+<li>reasoning</li>
+<li>coding</li>
+<li>translation</li>
+<li>summarization</li>
+<li>planning</li>
+<li>tool use</li>
+</ul>
+<p>These arise from <strong>generalization</strong>, not explicit programming.</p>
+<hr>
+<h2 id="-how-are-llms-evaluated">🔟 How Are LLMs Evaluated?</h2>
+<p>Evaluation uses benchmarks:</p>
+<ul>
+<li>MMLU</li>
+<li>GSM8K (math)</li>
+<li>HumanEval (code)</li>
+<li>BIG-bench</li>
+<li>Agent task suites</li>
+</ul>
+<p>Metrics include:</p>
+<ul>
+<li>accuracy</li>
+<li>pass@k</li>
+<li>reasoning depth</li>
+<li>tool success rate</li>
+</ul>
+<hr>
+<h2 id="11-hardware-required-to-train-models">1️⃣1️⃣ Hardware Required to Train Models</h2>
+<p>Training requires massive compute.</p>
+<p>Example for 100B+ models:</p>
+<ul>
+<li>NVIDIA H100 GPUs</li>
+<li>Thousands of GPUs</li>
+<li>Millions of GPU-hours</li>
+</ul>
+<p>Approximate relation:</p>
+<p>$$
+\text{Training Cost} \propto \text{Parameters} \times \text{Tokens}
+$$</p>
+<hr>
+<h2 id="12-why-you-can-ask-anything-and-get-answers">1️⃣2️⃣ Why You Can Ask Anything and Get Answers</h2>
+<p>LLMs work because they learn:</p>
+<ul>
+<li>patterns</li>
+<li>abstractions</li>
+<li>relationships</li>
+</ul>
+<p>They do not retrieve answers like a database.</p>
+<p>They <strong>generate</strong> answers probabilistically.</p>
+<hr>
+<h2 id="13-from-llms-to-agentic-ai">1️⃣3️⃣ From LLMs to Agentic AI</h2>
+<p>An agent wraps the LLM with:</p>
+<ul>
+<li>memory</li>
+<li>tools</li>
+<li>control logic</li>
+<li>safety constraints</li>
+</ul>
+<p>This transforms:</p>
+<blockquote>
+<p>language modeling<br>
+into<br>
+<strong>decision-making</strong></p>
+</blockquote>
+<hr>
+<h2 id="-final-mental-model">🧠 Final Mental Model</h2>
+<ul>
+<li>Tokens are symbols</li>
+<li>Embeddings are meaning</li>
+<li>Latent space is geometry</li>
+<li>Probability drives generation</li>
+<li>MoE enables scale</li>
+<li>Agents enable action</li>
+</ul>
+<hr>
+<h2 id="-closing-thought">🧭 Closing Thought</h2>
+<p>LLMs are not magic.</p>
+<p>They are:</p>
+<ul>
+<li>mathematics</li>
+<li>optimization</li>
+<li>systems engineering</li>
+</ul>
+<p>But when combined correctly,
+they form <strong>agentic AI systems</strong>.</p>
+<p>And that is where modern AI truly begins.</p>
+<hr>
+<h1 id="-tokens-embeddings-and-how-language-becomes-numbers">🔤 Tokens, Embeddings, and How Language Becomes Numbers</h1>
+<p>Large Language Models do not understand words.</p>
+<p>They do not understand sentences.</p>
+<p>They do not understand languages.</p>
+<p>They understand <strong>numbers</strong>.</p>
+<p>This chapter explains—step by step—how:</p>
+<ul>
+<li>text becomes tokens</li>
+<li>tokens become vectors</li>
+<li>vectors become embeddings</li>
+<li>embeddings are trained</li>
+<li>multiple languages coexist in one model</li>
+</ul>
+<p>This is the <strong>core mechanical foundation</strong> of LLMs.</p>
+<hr>
+<h2 id="1-what-is-a-token">1️⃣ What Is a Token?</h2>
+<p>A <strong>token</strong> is the smallest unit of text that a language model processes.</p>
+<p>A token is <strong>not</strong>:</p>
+<ul>
+<li>necessarily a word</li>
+<li>necessarily a character</li>
+<li>necessarily a syllable</li>
+</ul>
+<p>It is a unit defined by a <strong>tokenizer</strong>.</p>
+<hr>
+<h2 id="2-examples-words-subwords-and-symbols">2️⃣ Examples: Words, Subwords, and Symbols</h2>
+<p>Consider the sentence:</p>
+<pre><code>
+&quot;Language models are powerful.&quot;
+
+</code></pre>
+<p>A tokenizer might produce:</p>
+<pre><code>
+[&quot;Language&quot;, &quot; models&quot;, &quot; are&quot;, &quot; powerful&quot;, &quot;.&quot;]
+
+</code></pre>
+<p>Each item above is <strong>one token</strong>.</p>
+<hr>
+<h3 id="subword-tokenization-example">Subword Tokenization Example</h3>
+<p>Now consider:</p>
+<pre><code>
+&quot;tokenization&quot;
+
+</code></pre>
+<p>This may become:</p>
+<pre><code>
+[&quot;token&quot;, &quot;ization&quot;]
+
+</code></pre>
+<p>Or even:</p>
+<pre><code>
+[&quot;tok&quot;, &quot;en&quot;, &quot;ization&quot;]
+
+</code></pre>
+<p>Why?</p>
+<p>Because tokenizers optimize for <strong>frequency and efficiency</strong>, not linguistics.</p>
+<hr>
+<h2 id="3-why-not-just-use-words">3️⃣ Why Not Just Use Words?</h2>
+<p>Using full words causes problems:</p>
+<ul>
+<li>Vocabulary explodes</li>
+<li>Rare words are unseen</li>
+<li>New words cannot be handled</li>
+</ul>
+<p>Instead, modern LLMs use <strong>subword tokenization</strong>.</p>
+<hr>
+<h2 id="4-byte-pair-encoding-bpe">4️⃣ Byte Pair Encoding (BPE)</h2>
+<p>Most LLMs use BPE or variants.</p>
+<p>The idea is simple:</p>
+<ol>
+<li>Start with characters</li>
+<li>Merge frequent pairs</li>
+<li>Repeat until vocabulary size is reached</li>
+</ol>
+<p>Formally, BPE minimizes:</p>
+<p>$$
+\text{Total Tokens} = \sum_{i} \text{Length}(x_i)
+$$</p>
+<p>subject to a fixed vocabulary size.</p>
+<hr>
+<h2 id="5-tokens-across-languages">5️⃣ Tokens Across Languages</h2>
+<p>LLMs do <strong>not</strong> have separate vocabularies per language.</p>
+<p>They use <strong>one shared vocabulary</strong>.</p>
+<p>Example:</p>
+<table>
+<thead>
+<tr>
+<th>Language</th>
+<th>Tokenization</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>English</td>
+<td>Subwords</td>
+</tr>
+<tr>
+<td>Thai</td>
+<td>Character-like chunks</td>
+</tr>
+<tr>
+<td>Chinese</td>
+<td>Characters</td>
+</tr>
+<tr>
+<td>Japanese</td>
+<td>Mixed Kanji + Kana</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>Keywords + symbols</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="example-chinese">Example: Chinese</h3>
+<pre><code>
+&quot;人工智能&quot;
+→ [&quot;人&quot;, &quot;工&quot;, &quot;智&quot;, &quot;能&quot;]
+
+</code></pre>
+<p>Each character is already meaningful, so tokenization is straightforward.</p>
+<hr>
+<h3 id="example-thai">Example: Thai</h3>
+<p>Thai has no spaces:</p>
+<pre><code>
+&quot;ภาษาไทยยากไหม&quot;
+
+</code></pre>
+<p>Tokenizer output may look like:</p>
+<pre><code>
+[&quot;ภาษา&quot;, &quot;ไทย&quot;, &quot;ยาก&quot;, &quot;ไหม&quot;]
+
+</code></pre>
+<p>Learned statistically, not linguistically.</p>
+<hr>
+<h2 id="6-vocabulary-size">6️⃣ Vocabulary Size</h2>
+<p>Vocabulary size determines how many unique tokens exist.</p>
+<p>Typical values:</p>
+<ul>
+<li>32K</li>
+<li>50K</li>
+<li>100K</li>
+<li>160K</li>
+<li>200K+</li>
+</ul>
+<p>A larger vocabulary means:</p>
+<ul>
+<li>fewer tokens per sentence</li>
+<li>larger embedding tables</li>
+<li>higher memory cost</li>
+</ul>
+<hr>
+<h2 id="7-from-token-to-id">7️⃣ From Token to ID</h2>
+<p>Each token is mapped to an integer ID.</p>
+<p>Example:</p>
+<pre><code>
+&quot;language&quot; → 48321
+
+</code></pre>
+<p>This is just a lookup.</p>
+<hr>
+<h2 id="8-token--vector-embedding">8️⃣ Token → Vector (Embedding)</h2>
+<p>Token IDs are mapped to vectors via an <strong>embedding matrix</strong>.</p>
+<p>Formally:</p>
+<p>$$
+E \in \mathbb{R}^{|\mathcal{V}| \times d}
+$$</p>
+<p>Where:</p>
+<ul>
+<li>( |\mathcal{V}| ) = vocabulary size</li>
+<li>( d ) = embedding dimension</li>
+</ul>
+<hr>
+<h3 id="embedding-lookup">Embedding Lookup</h3>
+<p>Given token ID ( i ):</p>
+<p>$$
+\mathbf{e}_i = E[i]
+$$</p>
+<p>This vector represents the token in <strong>continuous space</strong>.</p>
+<hr>
+<h2 id="9-what-is-an-embedding">9️⃣ What Is an Embedding?</h2>
+<p>An embedding is:</p>
+<ul>
+<li>a dense vector</li>
+<li>learned during training</li>
+<li>representing semantic and syntactic properties</li>
+</ul>
+<p>Example:</p>
+<p>$$
+\mathbf{e}<em>{\text{king}} - \mathbf{e}</em>{\text{man}} + \mathbf{e}<em>{\text{woman}} \approx \mathbf{e}</em>{\text{queen}}
+$$</p>
+<p>This emerges naturally from training.</p>
+<hr>
+<h2 id="-what-is-a-vector">🔟 What Is a Vector?</h2>
+<p>A vector is a list of real numbers:</p>
+<p>$$
+\mathbf{v} = [v_1, v_2, \dots, v_d]
+$$</p>
+<p>Each dimension has <strong>no human-interpretable meaning alone</strong>.</p>
+<p>Meaning emerges from <strong>relative geometry</strong>.</p>
+<hr>
+<h2 id="11-what-is-latent-space">1️⃣1️⃣ What Is Latent Space?</h2>
+<p>Latent space is the space formed by embeddings.</p>
+<p>In latent space:</p>
+<ul>
+<li>distance encodes similarity</li>
+<li>directions encode relationships</li>
+</ul>
+<p>Distance is often measured by cosine similarity:</p>
+<p>$$
+\text{cosine}(\mathbf{a}, \mathbf{b}) =
+\frac{\mathbf{a} \cdot \mathbf{b}}{|\mathbf{a}| |\mathbf{b}|}
+$$</p>
+<hr>
+<h2 id="12-tokens-in-context-position-matters">1️⃣2️⃣ Tokens in Context: Position Matters</h2>
+<p>Embeddings alone ignore order.</p>
+<p>Transformers add <strong>positional information</strong>:</p>
+<p>$$
+\mathbf{h}_t = \mathbf{e}_t + \mathbf{p}_t
+$$</p>
+<p>Where:</p>
+<ul>
+<li>( \mathbf{p}_t ) = positional encoding</li>
+</ul>
+<p>This allows the model to distinguish:</p>
+<pre><code>
+&quot;dog bites man&quot;
+vs
+&quot;man bites dog&quot;
+
+</code></pre>
+<hr>
+<h2 id="13-how-tokens-are-used-during-training">1️⃣3️⃣ How Tokens Are Used During Training</h2>
+<p>Training objective:</p>
+<p>$$
+P(x_t \mid x_1, \dots, x_{t-1})
+$$</p>
+<p>For a sequence:</p>
+<pre><code>
+&quot;The cat sat&quot;
+
+</code></pre>
+<p>Training pairs are:</p>
+<pre><code>
+&quot;The&quot; → &quot;cat&quot;
+&quot;The cat&quot; → &quot;sat&quot;
+
+</code></pre>
+<hr>
+<h3 id="loss-function">Loss Function</h3>
+<p>Cross-entropy loss:</p>
+<p>$$
+\mathcal{L} = -\log P(x_t)
+$$</p>
+<p>The model is penalized if the correct next token has low probability.</p>
+<hr>
+<h2 id="14-how-embeddings-are-learned">1️⃣4️⃣ How Embeddings Are Learned</h2>
+<p>Embeddings are not pretrained separately.</p>
+<p>They are learned <strong>end-to-end</strong>.</p>
+<p>During backpropagation:</p>
+<ul>
+<li>gradients flow into embedding vectors</li>
+<li>frequent tokens update often</li>
+<li>rare tokens update less</li>
+</ul>
+<p>This is why:</p>
+<ul>
+<li>common words are well-shaped</li>
+<li>rare words are noisier</li>
+</ul>
+<hr>
+<h2 id="15-multilingual-training">1️⃣5️⃣ Multilingual Training</h2>
+<p>Training data mixes languages.</p>
+<p>The model learns:</p>
+<ul>
+<li>shared structure (logic, syntax)</li>
+<li>language-specific patterns</li>
+</ul>
+<p>This creates <strong>cross-lingual embeddings</strong>.</p>
+<p>Example:</p>
+<p>$$
+\mathbf{e}<em>{\text{dog}} \approx \mathbf{e}</em>{\text{犬}} \approx \mathbf{e}_{\text{狗}}
+$$</p>
+<hr>
+<h2 id="16-are-more-tokens-better">1️⃣6️⃣ Are More Tokens Better?</h2>
+<p>No.</p>
+<p>More tokens means:</p>
+<ul>
+<li>more compute</li>
+<li>more memory</li>
+<li>slower inference</li>
+</ul>
+<p>Better tokenization means:</p>
+<ul>
+<li>fewer tokens</li>
+<li>richer embeddings</li>
+</ul>
+<p>Quality beats quantity.</p>
+<hr>
+<h2 id="17-summary-mental-model">1️⃣7️⃣ Summary Mental Model</h2>
+<ul>
+<li>Text → tokens</li>
+<li>Tokens → IDs</li>
+<li>IDs → vectors</li>
+<li>Vectors → latent space</li>
+<li>Latent space → probability</li>
+<li>Probability → language generation</li>
+</ul>
+<hr>
+<h2 id="-final-intuition">🧠 Final Intuition</h2>
+<p>Language models do not store sentences.</p>
+<p>They store <strong>geometric relationships between tokens</strong>.</p>
+<p>Meaning is not memorized.</p>
+<p>It is <strong>emergent</strong>.</p>
+<hr>
+<h1 id="-modern-large-language-models-llms">🧠 Modern Large Language Models (LLMs)</h1>
+<p>Large Language Models are no longer just “big neural networks that predict the next word”.</p>
+<p>They are:</p>
+<ul>
+<li><strong>Reasoning engines</strong></li>
+<li><strong>Tool-using agents</strong></li>
+<li><strong>Modular systems</strong></li>
+<li><strong>Open-weight infrastructures</strong></li>
+</ul>
+<p>This article is a <strong>deep but foundational recap</strong> of modern LLMs—written for people who already speak ML, but feel the ecosystem is moving <em>too fast to track</em>.</p>
+<p>If you’ve ever asked:</p>
+<blockquote>
+<p>“Wait… what exactly is MoE, LoRA, RAG, quantization, or agentic LLMs?”</p>
+</blockquote>
+<p>This is for you.</p>
+<hr>
+<h2 id="1-what-does-model-tree-mean">1️⃣ What Does “Model Tree” Mean?</h2>
+<p>When browsing open models (e.g. on HuggingFace), you often see a structure like:</p>
+<pre><code>
+openai/gpt-oss-120b
+├── Adapters
+├── Finetunes
+├── Merges
+├── Quantizations
+
+</code></pre>
+<p>This is not chaos.<br>
+It is <strong>evolution</strong>.</p>
+<p>Think of a <strong>model tree</strong> as a <em>genetic family</em>:</p>
+<ul>
+<li><strong>Base model</strong> → the pretrained brain</li>
+<li><strong>Adapters</strong> → plug-in skills</li>
+<li><strong>Finetunes</strong> → retrained personalities</li>
+<li><strong>Merges</strong> → hybrid offspring</li>
+<li><strong>Quantizations</strong> → compressed forms</li>
+</ul>
+<hr>
+<h2 id="2-base-model-gpt-oss-120b">2️⃣ Base Model: gpt-oss-120b</h2>
+<pre><code>
+Model size: 120B parameters
+Tensor type: BF16 / U8
+License: Apache 2.0
+
+</code></pre>
+<h3 id="what-is-120b-parameters">What is “120B parameters”?</h3>
+<p>A parameter is a learned scalar value inside the neural network.</p>
+<pre><code>
+120B = 120,000,000,000 parameters
+
+</code></pre>
+<p>Memory footprint (roughly):</p>
+<p>$$
+\text{Memory} \approx \text{Parameters} \times \text{Bytes per parameter}
+$$</p>
+<ul>
+<li>BF16 → ~2 bytes → <strong>~240 GB</strong></li>
+<li>FP32 → ~4 bytes → <strong>~480 GB</strong></li>
+</ul>
+<p>This is why <strong>compression, sharding, and MoE exist</strong>.</p>
+<hr>
+<h2 id="3-tensor-types-bf16-vs-u8">3️⃣ Tensor Types: BF16 vs U8</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Meaning</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BF16</td>
+<td>Brain Floating Point 16</td>
+<td>Training / high-quality inference</td>
+</tr>
+<tr>
+<td>FP16</td>
+<td>IEEE Half Precision</td>
+<td>Legacy GPU inference</td>
+</tr>
+<tr>
+<td>U8 / INT8</td>
+<td>8-bit Integer</td>
+<td>Fast &amp; cheap inference</td>
+</tr>
+<tr>
+<td>INT4</td>
+<td>4-bit Integer</td>
+<td>Extreme compression</td>
+</tr>
+</tbody>
+</table>
+<p>Quantization trades <strong>precision for efficiency</strong>.</p>
+<p>$$
+\text{Smaller precision} \Rightarrow \text{Less memory} \Rightarrow \text{Faster inference}
+$$</p>
+<hr>
+<h2 id="4-adapters-and-lora-low-rank-adaptation">4️⃣ Adapters and LoRA (Low-Rank Adaptation)</h2>
+<p>Adapters are <strong>modular fine-tuning layers</strong>.</p>
+<p>LoRA works by injecting a low-rank update:</p>
+<p>$$
+W&rsquo; = W + \Delta W
+$$</p>
+<p>Where:</p>
+<p>$$
+\Delta W = A B \quad \text{with} \quad \text{rank}(A,B) \ll \text{rank}(W)
+$$</p>
+<h3 id="why-lora-matters">Why LoRA matters</h3>
+<ul>
+<li>Base model is frozen</li>
+<li>Only a few million parameters trained</li>
+<li>Easy to distribute</li>
+<li>Easy to swap</li>
+</ul>
+<p>This is why open-source LLMs scale socially.</p>
+<hr>
+<h2 id="5-finetuning-vs-pretraining">5️⃣ Finetuning vs Pretraining</h2>
+<h3 id="pretraining">Pretraining</h3>
+<p>Pretraining teaches the model <strong>language itself</strong>:</p>
+<p>$$
+\mathcal{L} = -\sum_{t} \log P(x_t \mid x_{&lt;t})
+$$</p>
+<ul>
+<li>Trillions of tokens</li>
+<li>Next-token prediction</li>
+<li>Costs millions of GPU-hours</li>
+<li>One-time process</li>
+</ul>
+<hr>
+<h3 id="finetuning">Finetuning</h3>
+<p>Finetuning teaches the model <strong>how to behave</strong>.</p>
+<ul>
+<li>Instruction following</li>
+<li>Reasoning style</li>
+<li>Domain specialization</li>
+<li>Safety alignment</li>
+</ul>
+<p>This is where “chat”, “assistant”, and “expert” personalities come from.</p>
+<hr>
+<h2 id="6-quantized-models">6️⃣ Quantized Models</h2>
+<p>Quantized models are the <strong>same brain, cheaper hardware</strong>.</p>
+<p>Examples:</p>
+<ul>
+<li>120B → INT8 → fits on multi-GPU servers</li>
+<li>7B → INT4 → fits on a laptop GPU</li>
+</ul>
+<p>Trade-off:</p>
+<p>$$
+\text{Compression} \uparrow \Rightarrow \text{Accuracy} \downarrow \ (\text{slightly})
+$$</p>
+<hr>
+<h2 id="7-what-is-gpt-oss-safeguard-120b">7️⃣ What is gpt-oss-safeguard-120b?</h2>
+<p>This is <strong>not</strong> the main language model.</p>
+<p>It is a <strong>safety enforcement model</strong>.</p>
+<p>Responsibilities:</p>
+<ul>
+<li>Input filtering</li>
+<li>Output moderation</li>
+<li>Policy enforcement</li>
+<li>Risk classification</li>
+</ul>
+<p>In proprietary APIs, this layer is invisible.<br>
+In open-weight systems, <strong>you must build it yourself</strong>.</p>
+<hr>
+<h2 id="8-mixture-of-experts-moe-architecture">8️⃣ Mixture-of-Experts (MoE) Architecture</h2>
+<p>MoE is the defining architecture of modern large-scale LLMs.</p>
+<h3 id="dense-model">Dense model:</h3>
+<p>Every parameter is used every time.</p>
+<h3 id="moe-model">MoE model:</h3>
+<p>Only <strong>some experts</strong> activate per token.</p>
+<hr>
+<h3 id="moe-at-scale">MoE at scale</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total Parameters</td>
+<td>1T</td>
+</tr>
+<tr>
+<td>Activated Parameters</td>
+<td>32B</td>
+</tr>
+<tr>
+<td>Number of Experts</td>
+<td>384</td>
+</tr>
+<tr>
+<td>Experts per Token</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<p>This means:</p>
+<p>$$
+\text{Compute cost} \propto 32B \quad \text{not} \quad 1T
+$$</p>
+<hr>
+<h3 id="intuition">Intuition</h3>
+<p>Instead of:</p>
+<blockquote>
+<p>“Use the whole brain for everything”</p>
+</blockquote>
+<p>We get:</p>
+<blockquote>
+<p>“Call 8 specialists per word”</p>
+</blockquote>
+<hr>
+<h2 id="9-architecture-details-explained">9️⃣ Architecture Details Explained</h2>
+<h3 id="attention-heads">Attention Heads</h3>
+<pre><code>
+64 heads
+
+</code></pre>
+<p>Each head attends to different relationships:</p>
+<ul>
+<li>Syntax</li>
+<li>Semantics</li>
+<li>Long-range dependencies</li>
+</ul>
+<hr>
+<h3 id="swiglu-activation">SwiGLU Activation</h3>
+<p>$$
+\text{SwiGLU}(x) = (xW_1 \odot \sigma(xW_2))W_3
+$$</p>
+<p>Why it’s used:</p>
+<ul>
+<li>Smooth gradients</li>
+<li>Better expressivity</li>
+<li>Stable training</li>
+</ul>
+<hr>
+<h3 id="context-length-256k-1">Context Length: 256K</h3>
+<p>This enables:</p>
+<ul>
+<li>Whole-codebase reasoning</li>
+<li>Long legal / medical documents</li>
+<li>Multi-step agent planning</li>
+</ul>
+<hr>
+<h2 id="-tokenization-o200k_harmony">🔟 Tokenization (o200k_harmony)</h2>
+<p>Vocabulary size:</p>
+<p>$$
+|\mathcal{V}| \approx 200{,}000
+$$</p>
+<p>This includes:</p>
+<ul>
+<li>Natural language</li>
+<li>Code tokens</li>
+<li>Math symbols</li>
+<li>Tool-call syntax</li>
+<li>Agent control tokens</li>
+</ul>
+<p>Tokenizer design is <strong>not trivial</strong>—it directly affects reasoning quality.</p>
+<hr>
+<h2 id="11-rag-retrieval-augmented-generation">1️⃣1️⃣ RAG (Retrieval-Augmented Generation)</h2>
+<p>RAG adds <strong>external memory</strong>:</p>
+<pre><code>
+User → Retriever → Documents → LLM → Answer
+
+</code></pre>
+<p>Strengths:</p>
+<ul>
+<li>Fresh knowledge</li>
+<li>Enterprise data</li>
+<li>Auditable sources</li>
+</ul>
+<p>Limitations:</p>
+<ul>
+<li>Weak for deep reasoning</li>
+<li>Brittle retrieval</li>
+<li>Latency overhead</li>
+</ul>
+<p>RAG is evolving—not obsolete.</p>
+<hr>
+<h2 id="12-agentic-llms">1️⃣2️⃣ Agentic LLMs</h2>
+<p>Modern LLMs are <strong>not single-shot generators</strong>.</p>
+<p>They operate in loops:</p>
+<pre><code>
+Plan → Act → Observe → Reflect → Repeat
+
+</code></pre>
+<p>Tools include:</p>
+<ul>
+<li>Web search</li>
+<li>Python execution</li>
+<li>Databases</li>
+<li>APIs</li>
+</ul>
+<p>This is where LLMs become <strong>systems</strong>, not models.</p>
+<hr>
+<h2 id="13-putting-it-all-together">1️⃣3️⃣ Putting It All Together</h2>
+<p>A modern LLM stack looks like:</p>
+<pre><code>
+Pretrained MoE LLM
+↓
+Finetune / LoRA
+↓
+Quantization
+↓
+RAG + Tools
+↓
+Agent Loop
+↓
+Safety Guards
+
+</code></pre>
+<hr>
+<h2 id="-final-thoughts">🧠 Final Thoughts</h2>
+<p>If LLMs feel overwhelming, that’s because:</p>
+<blockquote>
+<p><strong>They are no longer just models.</strong></p>
+</blockquote>
+<p>They are:</p>
+<ul>
+<li>Architectures</li>
+<li>Systems</li>
+<li>Ecosystems</li>
+<li>Infrastructures</li>
+</ul>
+<p>Understanding them today means thinking like:</p>
+<ul>
+<li>A machine learning researcher</li>
+<li>A systems engineer</li>
+<li>A product architect</li>
+</ul>
+<p>And yes — the pace is brutal.</p>
+<p>But now, you’re back in control.</p>
+<hr>
+<h1 id="-agentic-large-language-models">🤖 Agentic Large Language Models</h1>
+<p>Modern LLMs are no longer passive text generators.</p>
+<p>They are <strong>agents</strong>.</p>
+<p>They:</p>
+<ul>
+<li>Plan actions</li>
+<li>Call tools</li>
+<li>Observe results</li>
+<li>Reflect and revise</li>
+<li>Loop until completion</li>
+</ul>
+<p>Understanding <em>agentic workflows</em> is now a <strong>core literacy</strong> for anyone working with LLMs.</p>
+<hr>
+<h2 id="1-what-does-agentic-actually-mean">1️⃣ What Does “Agentic” Actually Mean?</h2>
+<p>An <strong>agentic LLM</strong> is a model embedded inside a control loop.</p>
+<p>At minimum, the loop looks like:</p>
+<pre><code>
+Thought → Action → Observation → Thought → ...
+
+</code></pre>
+<p>This is not metaphorical.<br>
+It is a <strong>programmatic execution cycle</strong>.</p>
+<hr>
+<h3 id="the-canonical-agent-loop">The canonical agent loop</h3>
+<pre><code>
+1. Parse user intent
+2. Plan intermediate steps
+3. Decide which tool to call
+4. Execute tool
+5. Observe results
+6. Update internal state
+7. Continue or stop
+
+</code></pre>
+<p>This loop transforms LLMs from:</p>
+<blockquote>
+<p>“Answer machines”</p>
+</blockquote>
+<p>into:</p>
+<blockquote>
+<p>“Task-completing systems”</p>
+</blockquote>
+<hr>
+<h2 id="2-react-plan-act-reflect-and-toolformers">2️⃣ ReAct, Plan-Act-Reflect, and Toolformers</h2>
+<p>Most modern agents descend from three ideas:</p>
+<h3 id="-react-reason--act">🔹 ReAct (Reason + Act)</h3>
+<p>The model alternates between reasoning and acting.</p>
+<pre><code>
+Thought: I need recent data.
+Action: WebSearch(query=&quot;...&quot;)
+Observation: ...
+
+</code></pre>
+<p>Reasoning <strong>grounds</strong> tool usage.</p>
+<hr>
+<h3 id="-planactreflect">🔹 Plan–Act–Reflect</h3>
+<p>More structured agent loop:</p>
+<pre><code>
+Plan → Act → Observe → Reflect → Re-plan
+
+</code></pre>
+<p>Reflection is critical:</p>
+<ul>
+<li>Error correction</li>
+<li>Long-horizon reasoning</li>
+<li>Self-debugging</li>
+</ul>
+<hr>
+<h3 id="-toolformers">🔹 Toolformers</h3>
+<p>LLMs trained to <strong>decide when tools are useful</strong>, not just how to use them.</p>
+<p>This is why modern models expose:</p>
+<ul>
+<li>Web search</li>
+<li>Python</li>
+<li>File systems</li>
+<li>APIs</li>
+</ul>
+<hr>
+<h2 id="3-why-chain-of-thought-cot-matters">3️⃣ Why Chain-of-Thought (CoT) Matters</h2>
+<p>Chain-of-Thought is <strong>not verbosity</strong>.</p>
+<p>It is <strong>externalized intermediate computation</strong>.</p>
+<p>Formally, CoT approximates:</p>
+<p>$$
+P(y \mid x) = \sum_{z} P(y \mid z, x) P(z \mid x)
+$$</p>
+<p>Where:</p>
+<ul>
+<li>( x ) = input</li>
+<li>( z ) = latent reasoning steps</li>
+<li>( y ) = output</li>
+</ul>
+<hr>
+<h2 id="4-why-open-models-expose-cot">4️⃣ Why Open Models Expose CoT</h2>
+<p>This is a <em>philosophical and architectural</em> difference.</p>
+<h3 id="proprietary-models">Proprietary models</h3>
+<ul>
+<li>CoT is hidden or summarized</li>
+<li>Exposed reasoning is filtered</li>
+<li>System-level alignment is enforced upstream</li>
+</ul>
+<h3 id="open-weight-models">Open-weight models</h3>
+<ul>
+<li>CoT is <strong>part of the artifact</strong></li>
+<li>Debuggable</li>
+<li>Inspectable</li>
+<li>Modifiable</li>
+</ul>
+<p>This is intentional.</p>
+<hr>
+<h3 id="why-the-open-community-wants-cot">Why the open community wants CoT</h3>
+<ol>
+<li><strong>Debugging</strong>
+<ul>
+<li>Inspect failure modes</li>
+</ul>
+</li>
+<li><strong>Research</strong>
+<ul>
+<li>Analyze reasoning depth</li>
+</ul>
+</li>
+<li><strong>Alignment</strong>
+<ul>
+<li>Study safety trade-offs</li>
+</ul>
+</li>
+<li><strong>Education</strong>
+<ul>
+<li>Teach reasoning, not just answers</li>
+</ul>
+</li>
+</ol>
+<p>Open models treat CoT as:</p>
+<blockquote>
+<p><em>a feature, not a liability</em></p>
+</blockquote>
+<hr>
+<h2 id="5-adjustable-reasoning-effort">5️⃣ Adjustable Reasoning Effort</h2>
+<p>Modern reasoning models expose a control variable:</p>
+<ul>
+<li>Think fast (cheap)</li>
+<li>Think slow (deep)</li>
+</ul>
+<p>Conceptually:</p>
+<p>$$
+\text{Compute} \propto \text{Reasoning Depth}
+$$</p>
+<p>This enables:</p>
+<ul>
+<li>Cost-aware deployment</li>
+<li>Adaptive intelligence</li>
+<li>Agent-level optimization</li>
+</ul>
+<hr>
+<h2 id="6-why-cot-is-risky--and-still-open">6️⃣ Why CoT Is Risky — and Still Open</h2>
+<p>CoT can leak:</p>
+<ul>
+<li>Sensitive heuristics</li>
+<li>Attack strategies</li>
+<li>Unsafe reasoning paths</li>
+</ul>
+<p>Open models accept this risk because:</p>
+<ul>
+<li>They prioritize <strong>transparency</strong></li>
+<li>Safety is enforced at the <strong>system level</strong>, not hidden logic</li>
+</ul>
+<p>This shifts responsibility to the <strong>system designer</strong>.</p>
+<hr>
+<h2 id="7-mapping-the-modern-llm-ecosystem">7️⃣ Mapping the Modern LLM Ecosystem</h2>
+<p>Let’s zoom out.</p>
+<hr>
+<h2 id="-openai">🔵 OpenAI</h2>
+<p><strong>Philosophy</strong>: System-level safety, agent-first APIs</p>
+<ul>
+<li>Strong reasoning models</li>
+<li>Deep tool integration</li>
+<li>Hidden CoT by default</li>
+<li>Heavy alignment layers</li>
+</ul>
+<p>Strengths:</p>
+<ul>
+<li>Production-grade agents</li>
+<li>Robust safety</li>
+<li>Best-in-class reasoning</li>
+</ul>
+<p>Trade-off:</p>
+<ul>
+<li>Limited transparency</li>
+<li>No weight access</li>
+</ul>
+<hr>
+<h2 id="-meta-llama-family">🟣 Meta (LLaMA family)</h2>
+<p><strong>Philosophy</strong>: Open weights, scalable infrastructure</p>
+<ul>
+<li>Dense + MoE research</li>
+<li>Strong multilingual support</li>
+<li>Community-driven fine-tuning</li>
+</ul>
+<p>Strengths:</p>
+<ul>
+<li>Foundation for OSS ecosystem</li>
+<li>Research-friendly</li>
+<li>Broad adoption</li>
+</ul>
+<p>Trade-off:</p>
+<ul>
+<li>Safety is DIY</li>
+<li>Tooling varies by implementation</li>
+</ul>
+<hr>
+<h2 id="-mistral">🟢 Mistral</h2>
+<p><strong>Philosophy</strong>: Efficiency + elegance</p>
+<ul>
+<li>MoE-first designs</li>
+<li>Strong small/medium models</li>
+<li>European regulatory awareness</li>
+</ul>
+<p>Strengths:</p>
+<ul>
+<li>High performance per parameter</li>
+<li>Clean architecture</li>
+<li>Excellent for on-prem</li>
+</ul>
+<p>Trade-off:</p>
+<ul>
+<li>Smaller ecosystem (for now)</li>
+</ul>
+<hr>
+<h2 id="-open-source-community-oss">⚫ Open-Source Community (OSS)</h2>
+<p>This is not one actor — it is an <strong>ecosystem</strong>.</p>
+<p>Includes:</p>
+<ul>
+<li>Weight merges</li>
+<li>Custom LoRA adapters</li>
+<li>Experimental architectures</li>
+<li>Specialized agents</li>
+</ul>
+<p>OSS prioritizes:</p>
+<ul>
+<li>Transparency</li>
+<li>Modularity</li>
+<li>Hackability</li>
+</ul>
+<p>Risk:</p>
+<ul>
+<li>Inconsistent safety</li>
+<li>Fragmentation</li>
+</ul>
+<hr>
+<h2 id="8-comparative-mental-model">8️⃣ Comparative Mental Model</h2>
+<table>
+<thead>
+<tr>
+<th>Axis</th>
+<th>OpenAI</th>
+<th>Meta</th>
+<th>Mistral</th>
+<th>OSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weights</td>
+<td>Closed</td>
+<td>Open</td>
+<td>Open</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>CoT</td>
+<td>Hidden</td>
+<td>Exposed</td>
+<td>Exposed</td>
+<td>Exposed</td>
+</tr>
+<tr>
+<td>Safety</td>
+<td>Centralized</td>
+<td>Optional</td>
+<td>Optional</td>
+<td>DIY</td>
+</tr>
+<tr>
+<td>Agents</td>
+<td>Native</td>
+<td>External</td>
+<td>External</td>
+<td>Experimental</td>
+</tr>
+<tr>
+<td>Research</td>
+<td>Controlled</td>
+<td>Open</td>
+<td>Focused</td>
+<td>Chaotic</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="9-why-this-ecosystem-exists">9️⃣ Why This Ecosystem Exists</h2>
+<p>No single model can optimize for:</p>
+<ul>
+<li>Safety</li>
+<li>Transparency</li>
+<li>Performance</li>
+<li>Cost</li>
+<li>Control</li>
+</ul>
+<p>Different actors choose <strong>different trade-offs</strong>.</p>
+<p>This diversity is healthy.</p>
+<hr>
+<h2 id="-the-new-role-of-the-practitioner">🔟 The New Role of the Practitioner</h2>
+<p>Working with LLMs today means you are no longer just a user.</p>
+<p>You are:</p>
+<ul>
+<li>A system designer</li>
+<li>A safety engineer</li>
+<li>A reasoning architect</li>
+</ul>
+<p>Understanding <strong>agentic workflows</strong> and <strong>CoT exposure</strong> is mandatory.</p>
+<hr>
+<h2 id="-final-synthesis">🧠 Final Synthesis</h2>
+<p>LLMs are no longer:</p>
+<blockquote>
+<p>“Models you query”</p>
+</blockquote>
+<p>They are:</p>
+<blockquote>
+<p>“Systems you design”</p>
+</blockquote>
+<p>Agentic workflows provide <strong>agency</strong>.<br>
+Chain-of-Thought provides <strong>cognition</strong>.<br>
+Open ecosystems provide <strong>freedom</strong>.</p>
+<p>And freedom always comes with responsibility.</p>
+<hr>
+<h1 id="-attention-scaling-laws-and-the-emergence-of-reasoning">🧠 Attention, Scaling Laws, and the Emergence of Reasoning</h1>
+<p>If embeddings explain <strong>what language means</strong>,<br>
+attention explains <strong>how meaning is composed</strong>.</p>
+<p>This chapter answers five fundamental questions:</p>
+<ol>
+<li>What is attention—numerically?</li>
+<li>Why self-attention works so well</li>
+<li>How training dynamics and scaling laws shape intelligence</li>
+<li>When tokenization breaks models</li>
+<li>How embeddings turn into reasoning</li>
+</ol>
+<p>This is where LLMs stop being “vector machines”<br>
+and start behaving like <strong>reasoning systems</strong>.</p>
+<hr>
+<h2 id="1-attention-explained-with-numbers">1️⃣ Attention Explained with Numbers</h2>
+<p>Attention is a <strong>weighted averaging mechanism</strong>.</p>
+<p>Each token decides:</p>
+<blockquote>
+<p>“Which other tokens matter to me right now?”</p>
+</blockquote>
+<hr>
+<h3 id="step-1-from-embeddings-to-q-k-v">Step 1: From Embeddings to Q, K, V</h3>
+<p>For each token embedding ( \mathbf{x} ):</p>
+<p>$$
+\mathbf{q} = \mathbf{x}W_Q,\quad
+\mathbf{k} = \mathbf{x}W_K,\quad
+\mathbf{v} = \mathbf{x}W_V
+$$</p>
+<p>Where:</p>
+<ul>
+<li>( \mathbf{q} ) = query</li>
+<li>( \mathbf{k} ) = key</li>
+<li>( \mathbf{v} ) = value</li>
+</ul>
+<p>All are vectors.</p>
+<hr>
+<h3 id="step-2-similarity-scores">Step 2: Similarity Scores</h3>
+<p>For token ( i ) attending to token ( j ):</p>
+<p>$$
+s_{ij} = \frac{\mathbf{q}_i \cdot \mathbf{k}_j}{\sqrt{d_k}}
+$$</p>
+<p>This measures <strong>relevance</strong>.</p>
+<hr>
+<h3 id="step-3-softmax--probability-distribution">Step 3: Softmax = Probability Distribution</h3>
+<p>$$
+\alpha_{ij} = \frac{\exp(s_{ij})}{\sum_j \exp(s_{ij})}
+$$</p>
+<p>Now:</p>
+<ul>
+<li>( \alpha_{ij} \in [0,1] )</li>
+<li>( \sum_j \alpha_{ij} = 1 )</li>
+</ul>
+<p>Attention is <strong>probabilistic focus</strong>.</p>
+<hr>
+<h3 id="step-4-weighted-sum">Step 4: Weighted Sum</h3>
+<p>$$
+\mathbf{h}<em>i = \sum_j \alpha</em>{ij} \mathbf{v}_j
+$$</p>
+<p>The output token representation is a <strong>mixture of other tokens</strong>.</p>
+<hr>
+<h2 id="2-why-self-attention-works">2️⃣ Why Self-Attention Works</h2>
+<p>Self-attention allows every token to:</p>
+<ul>
+<li>access global context</li>
+<li>dynamically reweight importance</li>
+<li>adapt per task and per position</li>
+</ul>
+<p>This solves three core problems at once:</p>
+<ul>
+<li>long-range dependency</li>
+<li>variable structure</li>
+<li>parallel computation</li>
+</ul>
+<hr>
+<h3 id="key-insight">Key Insight</h3>
+<p>Self-attention is <strong>content-addressable memory</strong>.</p>
+<p>Instead of indexing by position,
+tokens index by <strong>meaning</strong>.</p>
+<hr>
+<h2 id="3-multi-head-attention-many-views-of-meaning">3️⃣ Multi-Head Attention: Many Views of Meaning</h2>
+<p>In practice, attention is multi-headed.</p>
+<p>$$
+\text{Attention} = \text{Concat}(\text{head}_1, \dots, \text{head}_h)W_O
+$$</p>
+<p>Each head learns different relationships:</p>
+<ul>
+<li>syntax</li>
+<li>semantics</li>
+<li>coreference</li>
+<li>arithmetic</li>
+<li>code structure</li>
+</ul>
+<p>This is <strong>distributed reasoning</strong>.</p>
+<hr>
+<h2 id="4-why-attention-enables-reasoning">4️⃣ Why Attention Enables Reasoning</h2>
+<p>Reasoning requires:</p>
+<ul>
+<li>variable binding</li>
+<li>relational comparison</li>
+<li>composition</li>
+</ul>
+<p>Attention enables:</p>
+<p>$$
+\text{Reasoning} \approx \text{Iterative Context Mixing}
+$$</p>
+<p>Each layer refines representations by recontextualizing tokens.</p>
+<hr>
+<h2 id="5-training-dynamics-how-models-actually-learn">5️⃣ Training Dynamics: How Models Actually Learn</h2>
+<p>LLMs are trained with gradient descent.</p>
+<p>Each update minimizes:</p>
+<p>$$
+\mathcal{L} = -\sum_t \log P(x_t \mid x_{&lt;t})
+$$</p>
+<p>Learning emerges from:</p>
+<ul>
+<li>many small updates</li>
+<li>massive data</li>
+<li>overparameterization</li>
+</ul>
+<hr>
+<h3 id="optimization-intuition">Optimization Intuition</h3>
+<p>Early training:</p>
+<ul>
+<li>learns token statistics</li>
+</ul>
+<p>Mid training:</p>
+<ul>
+<li>learns syntax and patterns</li>
+</ul>
+<p>Late training:</p>
+<ul>
+<li>learns abstractions and reasoning heuristics</li>
+</ul>
+<hr>
+<h2 id="6-scaling-laws">6️⃣ Scaling Laws</h2>
+<p>Empirically, performance follows power laws.</p>
+<p>$$
+\mathcal{L}(N, D, C) \propto N^{-\alpha} D^{-\beta} C^{-\gamma}
+$$</p>
+<p>Where:</p>
+<ul>
+<li>( N ) = parameters</li>
+<li>( D ) = data</li>
+<li>( C ) = compute</li>
+</ul>
+<hr>
+<h3 id="consequence">Consequence</h3>
+<ul>
+<li>Bigger models → better reasoning</li>
+<li>More data → better generalization</li>
+<li>More compute → smoother optimization</li>
+</ul>
+<p>There is <strong>no sharp intelligence threshold</strong>—only scale.</p>
+<hr>
+<h2 id="7-why-bigger-models-reason-better">7️⃣ Why Bigger Models Reason Better</h2>
+<p>Large models:</p>
+<ul>
+<li>store more abstractions</li>
+<li>represent deeper hierarchies</li>
+<li>maintain longer dependencies</li>
+</ul>
+<p>Reasoning is not programmed.
+It <strong>emerges</strong> when capacity is sufficient.</p>
+<hr>
+<h2 id="8-when-tokenization-goes-wrong">8️⃣ When Tokenization Goes Wrong</h2>
+<p>Tokenization is a silent failure mode.</p>
+<p>Bad tokenization causes:</p>
+<ul>
+<li>excessive token counts</li>
+<li>broken morphemes</li>
+<li>semantic fragmentation</li>
+</ul>
+<hr>
+<h3 id="example-over-fragmentation">Example: Over-Fragmentation</h3>
+<pre><code>
+&quot;electromagnetism&quot;
+→ [&quot;elec&quot;, &quot;tro&quot;, &quot;mag&quot;, &quot;net&quot;, &quot;ism&quot;]
+
+</code></pre>
+<p>Meaning is diluted across tokens.</p>
+<hr>
+<h3 id="multilingual-failure">Multilingual Failure</h3>
+<p>Low-resource languages may:</p>
+<ul>
+<li>use many tokens per word</li>
+<li>receive fewer gradient updates</li>
+<li>have poorer embeddings</li>
+</ul>
+<p>This directly harms performance.</p>
+<hr>
+<h2 id="9-tokenization-and-reasoning-errors">9️⃣ Tokenization and Reasoning Errors</h2>
+<p>Reasoning depends on <strong>stable symbols</strong>.</p>
+<p>If numbers, variables, or operators are split poorly:</p>
+<ul>
+<li>math fails</li>
+<li>code fails</li>
+<li>logic fails</li>
+</ul>
+<p>This is why modern tokenizers:</p>
+<ul>
+<li>include digits</li>
+<li>include operators</li>
+<li>include code tokens</li>
+</ul>
+<hr>
+<h2 id="-from-embeddings-to-reasoning">🔟 From Embeddings to Reasoning</h2>
+<p>Embeddings alone do not reason.</p>
+<p>Reasoning emerges from:</p>
+<ul>
+<li>attention</li>
+<li>depth</li>
+<li>recurrence across layers</li>
+</ul>
+<p>Each layer computes:</p>
+<p>$$
+\mathbf{H}^{(l+1)} = \text{TransformerBlock}(\mathbf{H}^{(l)})
+$$</p>
+<p>This is <strong>iterative refinement</strong>.</p>
+<hr>
+<h3 id="reasoning-as-trajectory-in-latent-space">Reasoning as Trajectory in Latent Space</h3>
+<p>A reasoning chain is a <strong>path</strong>:</p>
+<p>$$
+\mathbf{z}_0 \rightarrow \mathbf{z}_1 \rightarrow \dots \rightarrow \mathbf{z}_T
+$$</p>
+<p>Each step refines belief.</p>
+<hr>
+<h2 id="11-why-chain-of-thought-helps">1️⃣1️⃣ Why Chain-of-Thought Helps</h2>
+<p>Explicit reasoning externalizes latent steps.</p>
+<p>It:</p>
+<ul>
+<li>stabilizes trajectories</li>
+<li>reduces entropy</li>
+<li>improves correctness</li>
+</ul>
+<p>But the real reasoning happens <strong>inside the vectors</strong>.</p>
+<hr>
+<h2 id="12-summary-mental-model">1️⃣2️⃣ Summary Mental Model</h2>
+<ul>
+<li>Tokens are symbols</li>
+<li>Embeddings are points</li>
+<li>Attention is interaction</li>
+<li>Layers are refinement</li>
+<li>Scale is capacity</li>
+<li>Reasoning is emergence</li>
+</ul>
+<hr>
+<h2 id="-final-intuition-1">🧠 Final Intuition</h2>
+<p>LLMs do not “think” like humans.</p>
+<p>They:</p>
+<ul>
+<li>transform vectors</li>
+<li>mix context</li>
+<li>optimize probabilities</li>
+</ul>
+<p>Yet from this process,
+<strong>reasoning emerges</strong>.</p>
+<p>That is the core miracle of modern AI.</p>
+<hr>
+<h1 id="-why-transformers-replace-rnns-forever">🔄 Why Transformers Replace RNNs Forever</h1>
+<p>Recurrent Neural Networks (RNNs) were once the backbone of sequence modeling.</p>
+<p>Transformers ended that era.</p>
+<p>This chapter explains <strong>why this replacement is permanent</strong>, not a trend.</p>
+<hr>
+<h2 id="1-what-rnns-were-trying-to-solve">1️⃣ What RNNs Were Trying to Solve</h2>
+<p>Language is sequential.</p>
+<p>RNNs model sequences by recurrence:</p>
+<p>$$
+\mathbf{h}_t = f(\mathbf{x}<em>t, \mathbf{h}</em>{t-1})
+$$</p>
+<p>This looks elegant:</p>
+<ul>
+<li>memory through hidden state</li>
+<li>time-aware processing</li>
+</ul>
+<p>But elegance does not scale.</p>
+<hr>
+<h2 id="2-the-fundamental-limits-of-rnns">2️⃣ The Fundamental Limits of RNNs</h2>
+<h3 id="21-vanishing-and-exploding-gradients">2.1 Vanishing and Exploding Gradients</h3>
+<p>Backpropagation through time multiplies Jacobians:</p>
+<p>$$
+\frac{\partial \mathbf{h}_T}{\partial \mathbf{h}<em>t} = \prod</em>{k=t+1}^T \frac{\partial \mathbf{h}<em>k}{\partial \mathbf{h}</em>{k-1}}
+$$</p>
+<p>This product either:</p>
+<ul>
+<li>shrinks to zero</li>
+<li>explodes to infinity</li>
+</ul>
+<p>No architecture tweak fully fixes this.</p>
+<hr>
+<h3 id="22-sequential-bottleneck">2.2 Sequential Bottleneck</h3>
+<p>RNNs must compute:</p>
+<p>$$
+\mathbf{h}_1 \rightarrow \mathbf{h}_2 \rightarrow \dots \rightarrow \mathbf{h}_T
+$$</p>
+<p>This is <strong>inherently serial</strong>.</p>
+<p>GPUs hate serial computation.</p>
+<hr>
+<h3 id="23-memory-is-compressed-too-early">2.3 Memory is Compressed Too Early</h3>
+<p>RNNs force all past context into a fixed-size vector.</p>
+<p>This causes:</p>
+<ul>
+<li>information loss</li>
+<li>interference</li>
+<li>forgetting long-range dependencies</li>
+</ul>
+<hr>
+<h2 id="3-why-attention-is-a-structural-upgrade">3️⃣ Why Attention Is a Structural Upgrade</h2>
+<p>Transformers remove recurrence entirely.</p>
+<p>$$
+\mathbf{H}^{(l+1)} = \text{Attention}(\mathbf{H}^{(l)})
+$$</p>
+<p>Key properties:</p>
+<ul>
+<li>full context access</li>
+<li>parallel computation</li>
+<li>content-based memory</li>
+</ul>
+<hr>
+<h2 id="4-attention-vs-recurrence-a-direct-comparison">4️⃣ Attention vs Recurrence: A Direct Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>RNN</th>
+<th>Transformer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Memory access</td>
+<td>Compressed</td>
+<td>Explicit</td>
+</tr>
+<tr>
+<td>Parallelism</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Long-range dependency</td>
+<td>Weak</td>
+<td>Strong</td>
+</tr>
+<tr>
+<td>Training stability</td>
+<td>Fragile</td>
+<td>Stable</td>
+</tr>
+<tr>
+<td>Scaling behavior</td>
+<td>Poor</td>
+<td>Excellent</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-why-transformers-scale-and-rnns-do-not">5️⃣ Why Transformers Scale and RNNs Do Not</h2>
+<p>Scaling requires:</p>
+<ul>
+<li>predictable gradients</li>
+<li>efficient hardware use</li>
+<li>stable optimization</li>
+</ul>
+<p>Transformers satisfy all three.</p>
+<p>RNNs satisfy none.</p>
+<hr>
+<h2 id="6-the-death-of-inductive-bias">6️⃣ The Death of Inductive Bias</h2>
+<p>RNNs hard-code temporal order.</p>
+<p>Transformers <strong>learn structure from data</strong>.</p>
+<p>This flexibility allows:</p>
+<ul>
+<li>language</li>
+<li>code</li>
+<li>math</li>
+<li>vision</li>
+<li>multimodal reasoning</li>
+</ul>
+<p>One architecture. Many domains.</p>
+<hr>
+<h2 id="7-final-verdict">7️⃣ Final Verdict</h2>
+<p>Transformers did not replace RNNs because they are newer.</p>
+<p>They replaced RNNs because they are:</p>
+<ul>
+<li>structurally superior</li>
+<li>computationally aligned with modern hardware</li>
+<li>compatible with scale</li>
+</ul>
+<p>This replacement is <strong>irreversible</strong>.</p>
+<hr>
+<p><em>Transformers are not better RNNs.<br>
+They are a different species entirely.</em></p>
+<hr>
+<h1 id="-failure-modes-of-reasoning-models">⚠️ Failure Modes of Reasoning Models</h1>
+<p>LLMs can reason.</p>
+<p>But they can also fail—quietly, confidently, and convincingly.</p>
+<p>This chapter dissects <strong>why reasoning models fail</strong>, even at large scale.</p>
+<hr>
+<h2 id="1-reasoning-is-approximate-inference">1️⃣ Reasoning Is Approximate Inference</h2>
+<p>LLMs estimate:</p>
+<p>$$
+P(x_t \mid x_{&lt;t})
+$$</p>
+<p>They do <strong>not</strong> verify truth.
+They maximize likelihood.</p>
+<p>This creates systematic failure modes.</p>
+<hr>
+<h2 id="2-hallucination-as-probability-maximization">2️⃣ Hallucination as Probability Maximization</h2>
+<p>Hallucination occurs when:</p>
+<p>$$
+\arg\max_x P(x \mid \text{context}) \neq \text{truth}
+$$</p>
+<p>If the model has seen similar patterns,
+it may confidently invent details.</p>
+<hr>
+<h2 id="3-shortcut-reasoning">3️⃣ Shortcut Reasoning</h2>
+<p>Models often learn:</p>
+<ul>
+<li>surface heuristics</li>
+<li>dataset biases</li>
+<li>shallow correlations</li>
+</ul>
+<p>Instead of reasoning:</p>
+<blockquote>
+<p>“This looks like problem type X, answer is usually Y.”</p>
+</blockquote>
+<p>This works—until it doesn’t.</p>
+<hr>
+<h2 id="4-chain-of-thought-collapse">4️⃣ Chain-of-Thought Collapse</h2>
+<p>Long reasoning chains can drift.</p>
+<p>Each step compounds error:</p>
+<p>$$
+\epsilon_{total} \approx \sum_t \epsilon_t
+$$</p>
+<p>This leads to:</p>
+<ul>
+<li>incorrect conclusions</li>
+<li>internally consistent nonsense</li>
+</ul>
+<hr>
+<h2 id="5-symbolic-fragility">5️⃣ Symbolic Fragility</h2>
+<p>LLMs struggle with:</p>
+<ul>
+<li>exact arithmetic</li>
+<li>variable binding</li>
+<li>stateful reasoning</li>
+</ul>
+<p>Why?</p>
+<p>Because symbols are <strong>distributed</strong>, not discrete.</p>
+<hr>
+<h2 id="6-out-of-distribution-reasoning">6️⃣ Out-of-Distribution Reasoning</h2>
+<p>Reasoning degrades sharply when:</p>
+<ul>
+<li>assumptions shift</li>
+<li>constraints change</li>
+<li>rules are inverted</li>
+</ul>
+<p>LLMs interpolate well.
+They extrapolate poorly.</p>
+<hr>
+<h2 id="7-alignment-vs-reasoning-tension">7️⃣ Alignment vs Reasoning Tension</h2>
+<p>Safety training can:</p>
+<ul>
+<li>suppress exploration</li>
+<li>bias outputs</li>
+<li>reduce uncertainty expression</li>
+</ul>
+<p>This can mask reasoning errors instead of fixing them.</p>
+<hr>
+<h2 id="8-summary-of-failure-modes">8️⃣ Summary of Failure Modes</h2>
+<table>
+<thead>
+<tr>
+<th>Failure</th>
+<th>Root Cause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hallucination</td>
+<td>Likelihood ≠ Truth</td>
+</tr>
+<tr>
+<td>Logical error</td>
+<td>Approximate inference</td>
+</tr>
+<tr>
+<td>Overconfidence</td>
+<td>Entropy minimization</td>
+</tr>
+<tr>
+<td>Math failure</td>
+<td>Symbolic mismatch</td>
+</tr>
+<tr>
+<td>OOD collapse</td>
+<td>Lack of world grounding</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="-key-insight">🧠 Key Insight</h2>
+<p>LLMs reason statistically, not causally.</p>
+<p>Understanding failure modes is <strong>not a weakness</strong>—
+it is a prerequisite for building better systems.</p>
+<hr>
+<p><em>Reasoning models are powerful—but not infallible.</em></p>
+<hr>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/2026-01-08-daily-knowledge-notes/dk-008-geospatial-intelligence/" rel="prev">DK-008 — Geospatial Intelligence</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on 2026</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    ©2026 Kao Panboonyuen
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Built using <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> and the <a href="https://github.com/wowchemy/starter-hugo-academic" target="_blank" rel="noopener">Wowchemy academic template</a>. View <a href="https://github.com/kaopanboonyuen/kaopanboonyuen.github.io" target="_blank" rel="noopener">source</a>.
+        
+  </p>
+</footer>
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/golang.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.b36873e4e886c7b03b21e4eb97d9b6d7.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>
