@@ -1747,8 +1747,8 @@ E \in \mathbb{R}^{|\mathcal{V}| \times d}
 $$</p>
 <p>Where:</p>
 <ul>
-<li>( |\mathcal{V}| ) = vocabulary size</li>
-<li>( d ) = embedding dimension</li>
+<li>V = vocabulary size</li>
+<li>d = embedding dimension</li>
 </ul>
 <hr>
 <h3 id="embedding-lookup">Embedding Lookup</h3>
@@ -1765,11 +1765,6 @@ $$</p>
 <li>learned during training</li>
 <li>representing semantic and syntactic properties</li>
 </ul>
-<p>Example:</p>
-<p>$$
-\mathbf{e}<em>{\text{king}} - \mathbf{e}</em>{\text{man}} + \mathbf{e}<em>{\text{woman}} \approx \mathbf{e}</em>{\text{queen}}
-$$</p>
-<p>This emerges naturally from training.</p>
 <hr>
 <h2 id="-what-is-a-vector">🔟 What Is a Vector?</h2>
 <p>A vector is a list of real numbers:</p>
@@ -2584,7 +2579,7 @@ and start behaving like <strong>reasoning systems</strong>.</p>
 </blockquote>
 <hr>
 <h3 id="step-1-from-embeddings-to-q-k-v">Step 1: From Embeddings to Q, K, V</h3>
-<p>For each token embedding ( \mathbf{x} ):</p>
+<p>For each token embedding:</p>
 <p>$$
 \mathbf{q} = \mathbf{x}W_Q,\quad
 \mathbf{k} = \mathbf{x}W_K,\quad
@@ -2609,17 +2604,9 @@ $$</p>
 <p>$$
 \alpha_{ij} = \frac{\exp(s_{ij})}{\sum_j \exp(s_{ij})}
 $$</p>
-<p>Now:</p>
-<ul>
-<li>( \alpha_{ij} \in [0,1] )</li>
-<li>( \sum_j \alpha_{ij} = 1 )</li>
-</ul>
 <p>Attention is <strong>probabilistic focus</strong>.</p>
 <hr>
 <h3 id="step-4-weighted-sum">Step 4: Weighted Sum</h3>
-<p>$$
-\mathbf{h}<em>i = \sum_j \alpha</em>{ij} \mathbf{v}_j
-$$</p>
 <p>The output token representation is a <strong>mixture of other tokens</strong>.</p>
 <hr>
 <h2 id="2-why-self-attention-works">2️⃣ Why Self-Attention Works</h2>
@@ -2827,10 +2814,7 @@ $$</p>
 <hr>
 <h2 id="1-what-rnns-were-trying-to-solve">1️⃣ What RNNs Were Trying to Solve</h2>
 <p>Language is sequential.</p>
-<p>RNNs model sequences by recurrence:</p>
-<p>$$
-\mathbf{h}_t = f(\mathbf{x}<em>t, \mathbf{h}</em>{t-1})
-$$</p>
+<p>RNNs model sequences by recurrence.</p>
 <p>This looks elegant:</p>
 <ul>
 <li>memory through hidden state</li>
@@ -2840,10 +2824,7 @@ $$</p>
 <hr>
 <h2 id="2-the-fundamental-limits-of-rnns">2️⃣ The Fundamental Limits of RNNs</h2>
 <h3 id="21-vanishing-and-exploding-gradients">2.1 Vanishing and Exploding Gradients</h3>
-<p>Backpropagation through time multiplies Jacobians:</p>
-<p>$$
-\frac{\partial \mathbf{h}_T}{\partial \mathbf{h}<em>t} = \prod</em>{k=t+1}^T \frac{\partial \mathbf{h}<em>k}{\partial \mathbf{h}</em>{k-1}}
-$$</p>
+<p>Backpropagation through time multiplies Jacobians.</p>
 <p>This product either:</p>
 <ul>
 <li>shrinks to zero</li>

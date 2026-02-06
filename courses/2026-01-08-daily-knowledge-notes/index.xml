@@ -536,8 +536,8 @@ E \in \mathbb{R}^{|\mathcal{V}| \times d}
 $$&lt;/p&gt;
 &lt;p&gt;Where:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;( |\mathcal{V}| ) = vocabulary size&lt;/li&gt;
-&lt;li&gt;( d ) = embedding dimension&lt;/li&gt;
+&lt;li&gt;V = vocabulary size&lt;/li&gt;
+&lt;li&gt;d = embedding dimension&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;embedding-lookup&#34;&gt;Embedding Lookup&lt;/h3&gt;
@@ -554,11 +554,6 @@ $$&lt;/p&gt;
 &lt;li&gt;learned during training&lt;/li&gt;
 &lt;li&gt;representing semantic and syntactic properties&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Example:&lt;/p&gt;
-&lt;p&gt;$$
-\mathbf{e}&lt;em&gt;{\text{king}} - \mathbf{e}&lt;/em&gt;{\text{man}} + \mathbf{e}&lt;em&gt;{\text{woman}} \approx \mathbf{e}&lt;/em&gt;{\text{queen}}
-$$&lt;/p&gt;
-&lt;p&gt;This emerges naturally from training.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;-what-is-a-vector&#34;&gt;🔟 What Is a Vector?&lt;/h2&gt;
 &lt;p&gt;A vector is a list of real numbers:&lt;/p&gt;
@@ -1373,7 +1368,7 @@ and start behaving like &lt;strong&gt;reasoning systems&lt;/strong&gt;.&lt;/p&gt
 &lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;step-1-from-embeddings-to-q-k-v&#34;&gt;Step 1: From Embeddings to Q, K, V&lt;/h3&gt;
-&lt;p&gt;For each token embedding ( \mathbf{x} ):&lt;/p&gt;
+&lt;p&gt;For each token embedding:&lt;/p&gt;
 &lt;p&gt;$$
 \mathbf{q} = \mathbf{x}W_Q,\quad
 \mathbf{k} = \mathbf{x}W_K,\quad
@@ -1398,17 +1393,9 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 \alpha_{ij} = \frac{\exp(s_{ij})}{\sum_j \exp(s_{ij})}
 $$&lt;/p&gt;
-&lt;p&gt;Now:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;( \alpha_{ij} \in [0,1] )&lt;/li&gt;
-&lt;li&gt;( \sum_j \alpha_{ij} = 1 )&lt;/li&gt;
-&lt;/ul&gt;
 &lt;p&gt;Attention is &lt;strong&gt;probabilistic focus&lt;/strong&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;step-4-weighted-sum&#34;&gt;Step 4: Weighted Sum&lt;/h3&gt;
-&lt;p&gt;$$
-\mathbf{h}&lt;em&gt;i = \sum_j \alpha&lt;/em&gt;{ij} \mathbf{v}_j
-$$&lt;/p&gt;
 &lt;p&gt;The output token representation is a &lt;strong&gt;mixture of other tokens&lt;/strong&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;2-why-self-attention-works&#34;&gt;2️⃣ Why Self-Attention Works&lt;/h2&gt;
@@ -1616,10 +1603,7 @@ $$&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;1-what-rnns-were-trying-to-solve&#34;&gt;1️⃣ What RNNs Were Trying to Solve&lt;/h2&gt;
 &lt;p&gt;Language is sequential.&lt;/p&gt;
-&lt;p&gt;RNNs model sequences by recurrence:&lt;/p&gt;
-&lt;p&gt;$$
-\mathbf{h}_t = f(\mathbf{x}&lt;em&gt;t, \mathbf{h}&lt;/em&gt;{t-1})
-$$&lt;/p&gt;
+&lt;p&gt;RNNs model sequences by recurrence.&lt;/p&gt;
 &lt;p&gt;This looks elegant:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;memory through hidden state&lt;/li&gt;
@@ -1629,10 +1613,7 @@ $$&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;2-the-fundamental-limits-of-rnns&#34;&gt;2️⃣ The Fundamental Limits of RNNs&lt;/h2&gt;
 &lt;h3 id=&#34;21-vanishing-and-exploding-gradients&#34;&gt;2.1 Vanishing and Exploding Gradients&lt;/h3&gt;
-&lt;p&gt;Backpropagation through time multiplies Jacobians:&lt;/p&gt;
-&lt;p&gt;$$
-\frac{\partial \mathbf{h}_T}{\partial \mathbf{h}&lt;em&gt;t} = \prod&lt;/em&gt;{k=t+1}^T \frac{\partial \mathbf{h}&lt;em&gt;k}{\partial \mathbf{h}&lt;/em&gt;{k-1}}
-$$&lt;/p&gt;
+&lt;p&gt;Backpropagation through time multiplies Jacobians.&lt;/p&gt;
 &lt;p&gt;This product either:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;shrinks to zero&lt;/li&gt;
