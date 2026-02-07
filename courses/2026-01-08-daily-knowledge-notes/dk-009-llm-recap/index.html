@@ -886,6 +886,10 @@
       
 
 
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-010-agi-problem/">DK-010 — Why AGI Is a Systems Problem, Not a Model</a></li>
+
+
+
   <li class="active"><a href="/courses/2026-01-08-daily-knowledge-notes/dk-009-llm-recap/">DK-009 — From Pretraining to MoE and Agentic Systems</a></li>
 
 
@@ -946,6 +950,94 @@
 
       <nav id="TableOfContents">
   <ul>
+    <li><a href="#1-what-is-mixture-of-experts-moe">1️⃣ What Is Mixture-of-Experts (MoE)?</a>
+      <ul>
+        <li><a href="#11-dense-models-baseline">1.1 Dense Models (Baseline)</a></li>
+        <li><a href="#12-moe-core-idea">1.2 MoE Core Idea</a></li>
+        <li><a href="#13-why-moe-exists">1.3 Why MoE Exists</a></li>
+        <li><a href="#14-moe-is-not-free">1.4 MoE Is Not Free</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-pretraining-the-foundation">2️⃣ Pretraining: The Foundation</a></li>
+    <li><a href="#3-finetuning-changing-behavior-not-knowledge">3️⃣ Finetuning: Changing Behavior, Not Knowledge</a>
+      <ul>
+        <li><a href="#31-what-finetuning-is-good-at">3.1 What Finetuning Is Good At</a></li>
+        <li><a href="#32-what-finetuning-is-bad-at">3.2 What Finetuning Is Bad At</a></li>
+        <li><a href="#33-lora-efficient-finetuning">3.3 LoRA: Efficient Finetuning</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-retrieval-augmented-generation-rag">4️⃣ Retrieval-Augmented Generation (RAG)</a>
+      <ul>
+        <li><a href="#41-rag-architecture">4.1 RAG Architecture</a></li>
+        <li><a href="#42-embedding-step">4.2 Embedding Step</a></li>
+        <li><a href="#43-why-rag-works">4.3 Why RAG Works</a></li>
+        <li><a href="#44-why-rag-fails">4.4 Why RAG Fails</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-training-vs-finetuning-vs-rag-truth-table">5️⃣ Training vs Finetuning vs RAG (Truth Table)</a></li>
+    <li><a href="#6-which-method-is-best">6️⃣ Which Method Is “Best”?</a>
+      <ul>
+        <li><a href="#61-use-pretraining-when">6.1 Use Pretraining When</a></li>
+        <li><a href="#62-use-finetuning-when">6.2 Use Finetuning When</a></li>
+        <li><a href="#63-use-rag-when">6.3 Use RAG When</a></li>
+        <li><a href="#64-use-agents-when">6.4 Use Agents When</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-the-real-llm-stack-systems-view">7️⃣ The Real LLM Stack (Systems View)</a></li>
+    <li><a href="#8-final-reality-check">8️⃣ Final Reality Check</a></li>
+    <li><a href="#-closing-insight">🧠 Closing Insight</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1-is-one-vocabulary-entry-one-word">1️⃣ Is One Vocabulary Entry One Word?</a>
+      <ul>
+        <li><a href="#example-lionel-messi">Example: “Lionel Messi”</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-what-is-a-token">2️⃣ What Is a Token?</a></li>
+    <li><a href="#3-why-tokens-instead-of-words">3️⃣ Why Tokens Instead of Words?</a></li>
+    <li><a href="#4-from-token-to-vector">4️⃣ From Token to Vector</a>
+      <ul>
+        <li><a href="#embedding-lookup">Embedding Lookup</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-what-is-an-embedding">5️⃣ What Is an Embedding?</a>
+      <ul>
+        <li><a href="#lionel-messi-in-embedding-space">Lionel Messi in Embedding Space</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-vector-embedding-latent-space-same-family">6️⃣ Vector, Embedding, Latent Space (Same Family)</a></li>
+    <li><a href="#7-what-does-an-embedding-look-like">7️⃣ What Does an Embedding Look Like?</a></li>
+    <li><a href="#8-key-takeaways-do-not-skip">8️⃣ Key Takeaways (Do Not Skip)</a></li>
+    <li><a href="#-final-intuition">🧠 Final Intuition</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1-the-core-problem">1️⃣ The Core Problem</a></li>
+    <li><a href="#2-attention-is-weighted-interaction">2️⃣ Attention Is Weighted Interaction</a></li>
+    <li><a href="#3-creating-q-k-v">3️⃣ Creating Q, K, V</a></li>
+    <li><a href="#4-attention-scores-who-listens-to-whom">4️⃣ Attention Scores (Who Listens to Whom)</a></li>
+    <li><a href="#5-softmax-turning-scores-into-weights">5️⃣ Softmax: Turning Scores into Weights</a></li>
+    <li><a href="#6-mixing-values-talking-happens-here">6️⃣ Mixing Values (Talking Happens Here)</a></li>
+    <li><a href="#7-lionel-messi-example">7️⃣ Lionel Messi Example</a></li>
+    <li><a href="#8-self-attention-vs-cross-attention">8️⃣ Self-Attention vs Cross-Attention</a></li>
+    <li><a href="#9-multi-head-attention">9️⃣ Multi-Head Attention</a></li>
+    <li><a href="#-key-insight">🧠 Key Insight</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1-one-layer-is-not-thought">1️⃣ One Layer Is Not Thought</a></li>
+    <li><a href="#2-stacking-layers--iterative-refinement">2️⃣ Stacking Layers = Iterative Refinement</a></li>
+    <li><a href="#3-feedforward-networks-nonlinearity">3️⃣ Feedforward Networks (Nonlinearity)</a></li>
+    <li><a href="#4-thought-as-trajectory-in-latent-space">4️⃣ Thought as Trajectory in Latent Space</a></li>
+    <li><a href="#5-example-simple-reasoning">5️⃣ Example: Simple Reasoning</a></li>
+    <li><a href="#6-why-this-feels-like-thinking">6️⃣ Why This Feels Like Thinking</a></li>
+    <li><a href="#7-why-it-sometimes-fails">7️⃣ Why It Sometimes Fails</a></li>
+    <li><a href="#8-chain-of-thought-is-externalized-latent-process">8️⃣ Chain-of-Thought Is Externalized Latent Process</a></li>
+    <li><a href="#-final-insight">🧠 Final Insight</a></li>
+  </ul>
+
+  <ul>
     <li><a href="#1-what-is-an-ai-agent">1️⃣ What Is an AI Agent?</a>
       <ul>
         <li><a href="#agent-vs-model">Agent vs Model</a></li>
@@ -1002,7 +1094,7 @@
     <li><a href="#7-from-token-to-id">7️⃣ From Token to ID</a></li>
     <li><a href="#8-token--vector-embedding">8️⃣ Token → Vector (Embedding)</a>
       <ul>
-        <li><a href="#embedding-lookup">Embedding Lookup</a></li>
+        <li><a href="#embedding-lookup-1">Embedding Lookup</a></li>
       </ul>
     </li>
     <li><a href="#9-what-is-an-embedding">9️⃣ What Is an Embedding?</a></li>
@@ -1018,7 +1110,7 @@
     <li><a href="#15-multilingual-training">1️⃣5️⃣ Multilingual Training</a></li>
     <li><a href="#16-are-more-tokens-better">1️⃣6️⃣ Are More Tokens Better?</a></li>
     <li><a href="#17-summary-mental-model">1️⃣7️⃣ Summary Mental Model</a></li>
-    <li><a href="#-final-intuition">🧠 Final Intuition</a></li>
+    <li><a href="#-final-intuition-1">🧠 Final Intuition</a></li>
   </ul>
 
   <ul>
@@ -1139,7 +1231,7 @@
     </li>
     <li><a href="#11-why-chain-of-thought-helps">1️⃣1️⃣ Why Chain-of-Thought Helps</a></li>
     <li><a href="#12-summary-mental-model">1️⃣2️⃣ Summary Mental Model</a></li>
-    <li><a href="#-final-intuition-1">🧠 Final Intuition</a></li>
+    <li><a href="#-final-intuition-2">🧠 Final Intuition</a></li>
   </ul>
 
   <ul>
@@ -1167,7 +1259,7 @@
     <li><a href="#6-out-of-distribution-reasoning">6️⃣ Out-of-Distribution Reasoning</a></li>
     <li><a href="#7-alignment-vs-reasoning-tension">7️⃣ Alignment vs Reasoning Tension</a></li>
     <li><a href="#8-summary-of-failure-modes">8️⃣ Summary of Failure Modes</a></li>
-    <li><a href="#-key-insight">🧠 Key Insight</a></li>
+    <li><a href="#-key-insight-1">🧠 Key Insight</a></li>
   </ul>
 </nav>
 
@@ -1229,6 +1321,677 @@
 
           <div class="article-style">
             <hr>
+<h1 id="-moe-finetuning-rag-and-training-how-llms-are-actually-built">🧩 MoE, Finetuning, RAG, and Training: How LLMs Are Actually Built</h1>
+<p>Modern LLM development is full of buzzwords.</p>
+<p>Mixture-of-Experts (MoE).<br>
+Finetuning.<br>
+RAG.<br>
+Pretraining.</p>
+<p>Most confusion comes from mixing <strong>what these techniques do</strong> with <strong>what people hope they do</strong>.</p>
+<p>This chapter explains:</p>
+<ul>
+<li>what MoE really is</li>
+<li>what each LLM improvement method actually changes</li>
+<li>when each method works</li>
+<li>when it fundamentally cannot work</li>
+</ul>
+<hr>
+<h2 id="1-what-is-mixture-of-experts-moe">1️⃣ What Is Mixture-of-Experts (MoE)?</h2>
+<p>MoE is <strong>conditional computation</strong>.</p>
+<p>Instead of activating the entire model for every token, MoE activates only a subset.</p>
+<hr>
+<h3 id="11-dense-models-baseline">1.1 Dense Models (Baseline)</h3>
+<p>In a dense transformer:</p>
+<p>$$
+\mathbf{y} = f(\mathbf{x}; \theta)
+$$</p>
+<p>All parameters are used every time.</p>
+<p>Pros:</p>
+<ul>
+<li>simple</li>
+<li>stable</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>expensive</li>
+<li>hard to scale beyond hardware limits</li>
+</ul>
+<hr>
+<h3 id="12-moe-core-idea">1.2 MoE Core Idea</h3>
+<p>MoE decomposes the model:</p>
+<ul>
+<li>many experts: E_1, E_2, E_N</li>
+<li>a router (gating network)</li>
+</ul>
+<p>For each token:</p>
+<p>$$
+\mathbf{y} = \sum_{i \in \mathcal{S}} g_i(\mathbf{x}) E_i(\mathbf{x})
+$$</p>
+<p>Where:</p>
+<ul>
+<li>S = selected experts (e.g. 8 out of 384)</li>
+<li>gi = routing weights</li>
+</ul>
+<hr>
+<h3 id="13-why-moe-exists">1.3 Why MoE Exists</h3>
+<p>MoE lets us build:</p>
+<ul>
+<li><strong>1T parameter models</strong></li>
+<li>while computing only <strong>~30B parameters per token</strong></li>
+</ul>
+<p>This is how:</p>
+<ul>
+<li>GPT-style models scale</li>
+<li>training cost stays (barely) manageable</li>
+</ul>
+<hr>
+<h3 id="14-moe-is-not-free">1.4 MoE Is Not Free</h3>
+<p>MoE introduces:</p>
+<ul>
+<li>routing instability</li>
+<li>load imbalance</li>
+<li>expert collapse</li>
+<li>communication overhead</li>
+</ul>
+<p>MoE improves <strong>capacity</strong>, not <strong>intelligence</strong>.</p>
+<hr>
+<h2 id="2-pretraining-the-foundation">2️⃣ Pretraining: The Foundation</h2>
+<p>Pretraining teaches a model <strong>language itself</strong>.</p>
+<p>What it learns:</p>
+<ul>
+<li>grammar</li>
+<li>facts</li>
+<li>patterns</li>
+<li>implicit reasoning heuristics</li>
+</ul>
+<p>What it does NOT learn:</p>
+<ul>
+<li>your private data</li>
+<li>your business rules</li>
+<li>real-time information</li>
+</ul>
+<p>Pretraining is <strong>expensive and irreversible</strong>.</p>
+<hr>
+<h2 id="3-finetuning-changing-behavior-not-knowledge">3️⃣ Finetuning: Changing Behavior, Not Knowledge</h2>
+<p>Finetuning continues training on new data:</p>
+<p>$$
+\theta&rsquo; = \theta - \alpha \nabla_\theta \mathcal{L}_{\text{task}}
+$$</p>
+<hr>
+<h3 id="31-what-finetuning-is-good-at">3.1 What Finetuning Is Good At</h3>
+<ul>
+<li>style adaptation</li>
+<li>instruction following</li>
+<li>tone control</li>
+<li>domain biasing</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>legal writing</li>
+<li>medical summarization</li>
+<li>customer support tone</li>
+</ul>
+<hr>
+<h3 id="32-what-finetuning-is-bad-at">3.2 What Finetuning Is Bad At</h3>
+<ul>
+<li>memorizing large knowledge bases</li>
+<li>updating fast-changing facts</li>
+<li>precise retrieval</li>
+</ul>
+<p>Finetuning <strong>compresses</strong> information into weights.</p>
+<p>Compression causes forgetting.</p>
+<hr>
+<h3 id="33-lora-efficient-finetuning">3.3 LoRA: Efficient Finetuning</h3>
+<p>LoRA freezes base weights and adds low-rank adapters:</p>
+<p>$$
+W&rsquo; = W + BA
+$$</p>
+<p>Pros:</p>
+<ul>
+<li>cheap</li>
+<li>reversible</li>
+<li>modular</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>limited expressivity</li>
+</ul>
+<hr>
+<h2 id="4-retrieval-augmented-generation-rag">4️⃣ Retrieval-Augmented Generation (RAG)</h2>
+<p>RAG separates:</p>
+<ul>
+<li><strong>knowledge storage</strong></li>
+<li><strong>language generation</strong></li>
+</ul>
+<hr>
+<h3 id="41-rag-architecture">4.1 RAG Architecture</h3>
+<ol>
+<li>Embed documents</li>
+<li>Store in vector database</li>
+<li>Retrieve relevant chunks</li>
+<li>Inject into prompt</li>
+<li>Generate answer</li>
+</ol>
+<hr>
+<h3 id="42-embedding-step">4.2 Embedding Step</h3>
+<p>Each chunk is mapped.</p>
+<p>Similarity:</p>
+<p>$$
+\text{sim}(\mathbf{q}, \mathbf{e}_i) = \cos(\mathbf{q}, \mathbf{e}_i)
+$$</p>
+<hr>
+<h3 id="43-why-rag-works">4.3 Why RAG Works</h3>
+<ul>
+<li>avoids catastrophic forgetting</li>
+<li>updates instantly</li>
+<li>preserves factual accuracy</li>
+<li>auditable sources</li>
+</ul>
+<hr>
+<h3 id="44-why-rag-fails">4.4 Why RAG Fails</h3>
+<p>RAG does NOT:</p>
+<ul>
+<li>reason across many documents</li>
+<li>plan multi-step solutions</li>
+<li>resolve contradictions</li>
+</ul>
+<p>RAG retrieves text.
+The model still guesses.</p>
+<hr>
+<h2 id="5-training-vs-finetuning-vs-rag-truth-table">5️⃣ Training vs Finetuning vs RAG (Truth Table)</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Changes Weights</th>
+<th>Adds Knowledge</th>
+<th>Real-Time Update</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pretraining</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Finetuning</td>
+<td>✅</td>
+<td>⚠️</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>LoRA</td>
+<td>⚠️</td>
+<td>⚠️</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>RAG</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<p>No method replaces the others.</p>
+<hr>
+<h2 id="6-which-method-is-best">6️⃣ Which Method Is “Best”?</h2>
+<p>Wrong question.</p>
+<p>The correct question:</p>
+<blockquote>
+<p>What part of the system is broken?</p>
+</blockquote>
+<hr>
+<h3 id="61-use-pretraining-when">6.1 Use Pretraining When</h3>
+<ul>
+<li>building a foundation model</li>
+<li>massive compute available</li>
+<li>general capability needed</li>
+</ul>
+<hr>
+<h3 id="62-use-finetuning-when">6.2 Use Finetuning When</h3>
+<ul>
+<li>behavior is wrong</li>
+<li>format is wrong</li>
+<li>style is wrong</li>
+</ul>
+<hr>
+<h3 id="63-use-rag-when">6.3 Use RAG When</h3>
+<ul>
+<li>knowledge changes</li>
+<li>traceability matters</li>
+<li>data is large and sparse</li>
+</ul>
+<hr>
+<h3 id="64-use-agents-when">6.4 Use Agents When</h3>
+<ul>
+<li>tasks span time</li>
+<li>decisions affect future states</li>
+<li>planning is required</li>
+</ul>
+<hr>
+<h2 id="7-the-real-llm-stack-systems-view">7️⃣ The Real LLM Stack (Systems View)</h2>
+<p>A real system looks like:</p>
+<p>$$
+\text{LLM} + \text{Memory} + \text{Retrieval} + \text{Tools} + \text{Control Loop}
+$$</p>
+<p>No single technique is sufficient.</p>
+<hr>
+<h2 id="8-final-reality-check">8️⃣ Final Reality Check</h2>
+<ul>
+<li>MoE scales capacity, not understanding</li>
+<li>Finetuning shapes behavior, not truth</li>
+<li>RAG supplies facts, not reasoning</li>
+<li>Training teaches language, not agency</li>
+</ul>
+<hr>
+<h2 id="-closing-insight">🧠 Closing Insight</h2>
+<blockquote>
+<p>Intelligence is not in the model.<br>
+Intelligence emerges from the system.</p>
+</blockquote>
+<hr>
+<h1 id="-vocabulary-tokens-and-embeddings-the-real-basics">🧩 Vocabulary, Tokens, and Embeddings (The Real Basics)</h1>
+<p>Before talking about LLMs, agents, or reasoning,<br>
+we must understand <strong>how text becomes numbers</strong>.</p>
+<p>Everything starts here.</p>
+<hr>
+<h2 id="1-is-one-vocabulary-entry-one-word">1️⃣ Is One Vocabulary Entry One Word?</h2>
+<p><strong>Not necessarily.</strong></p>
+<p>A <strong>vocabulary (vocab)</strong> is a list of <strong>tokens</strong>, not words.</p>
+<p>A token can be:</p>
+<ul>
+<li>a full word</li>
+<li>part of a word</li>
+<li>punctuation</li>
+<li>a space</li>
+<li>a symbol</li>
+</ul>
+<hr>
+<h3 id="example-lionel-messi">Example: “Lionel Messi”</h3>
+<p>Depending on the tokenizer, this can become:</p>
+<ul>
+<li><code>&quot;Lionel&quot;</code> + <code>&quot; Messi&quot;</code></li>
+<li><code>&quot;Lion&quot;</code> + <code>&quot;el&quot;</code> + <code>&quot; Mess&quot;</code> + <code>&quot;i&quot;</code></li>
+<li><code>&quot;Li&quot;</code> + <code>&quot;on&quot;</code> + <code>&quot;el&quot;</code> + <code>&quot; Mess&quot;</code> + <code>&quot;i&quot;</code></li>
+</ul>
+<p>So:</p>
+<p>❌ 1 vocab ≠ 1 word<br>
+✅ 1 vocab = 1 <strong>token unit</strong></p>
+<hr>
+<h2 id="2-what-is-a-token">2️⃣ What Is a Token?</h2>
+<p>A <strong>token</strong> is the smallest unit the model processes.</p>
+<p>Formally:</p>
+<p>$$
+\text{text} \rightarrow \text{tokens} = {t_1, t_2, \dots, t_n}
+$$</p>
+<p>Example sentence:</p>
+<blockquote>
+<p>“Lionel Messi is the best footballer”</p>
+</blockquote>
+<p>Might tokenize as:</p>
+<pre><code>
+[&quot;Lionel&quot;, &quot; Messi&quot;, &quot; is&quot;, &quot; the&quot;, &quot; best&quot;, &quot; football&quot;, &quot;er&quot;]
+
+</code></pre>
+<p>The model never sees letters or words —<br>
+it sees <strong>token IDs</strong>.</p>
+<p>Example:</p>
+<pre><code>
+&quot;Lionel&quot; → 18372
+&quot; Messi&quot; → 91827
+
+</code></pre>
+<hr>
+<h2 id="3-why-tokens-instead-of-words">3️⃣ Why Tokens Instead of Words?</h2>
+<p>Because:</p>
+<ul>
+<li>languages differ</li>
+<li>words are ambiguous</li>
+<li>new words appear</li>
+</ul>
+<p>Tokens allow:</p>
+<ul>
+<li>multilingual support</li>
+<li>efficient compression</li>
+<li>shared subwords across languages</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>English: football</li>
+<li>Spanish: fútbol</li>
+<li>Name: Messi</li>
+</ul>
+<p>The tokenizer learns reusable pieces.</p>
+<hr>
+<h2 id="4-from-token-to-vector">4️⃣ From Token to Vector</h2>
+<p>Once we have token IDs, we convert them to vectors.</p>
+<p>This is done using an <strong>embedding matrix</strong>.</p>
+<hr>
+<h3 id="embedding-lookup">Embedding Lookup</h3>
+<p>Each token ID maps to a vector:</p>
+<p>$$
+\text{Embedding}: \text{token_id} \rightarrow \mathbf{v} \in \mathbb{R}^d
+$$</p>
+<p>Example (simplified):</p>
+<pre><code>
+&quot;Lionel&quot; → [0.12, -0.88, 0.34, ..., 0.05]
+&quot;Messi&quot;  → [0.91,  0.11, 0.77, ..., -0.42]
+
+</code></pre>
+<p>Typical dimensions:</p>
+<ul>
+<li>768</li>
+<li>1024</li>
+<li>4096+</li>
+<li>even 8192+</li>
+</ul>
+<hr>
+<h2 id="5-what-is-an-embedding">5️⃣ What Is an Embedding?</h2>
+<p>An <strong>embedding</strong> is a vector that represents <strong>meaning</strong>.</p>
+<p>It encodes:</p>
+<ul>
+<li>semantics</li>
+<li>relationships</li>
+<li>context potential</li>
+</ul>
+<p>Important:</p>
+<blockquote>
+<p>Embeddings do NOT store definitions<br>
+They store <strong>positions in meaning space</strong></p>
+</blockquote>
+<hr>
+<h3 id="lionel-messi-in-embedding-space">Lionel Messi in Embedding Space</h3>
+<p>Conceptually:</p>
+<ul>
+<li>
+<p>“Messi” is close to:</p>
+<ul>
+<li>“football”</li>
+<li>“Argentina”</li>
+<li>“Barcelona”</li>
+<li>“GOAT”</li>
+</ul>
+</li>
+<li>
+<p>Far from:</p>
+<ul>
+<li>“quantum mechanics”</li>
+<li>“cooking recipe”</li>
+<li>“neural network”</li>
+</ul>
+</li>
+</ul>
+<p>Distance matters.</p>
+<hr>
+<h2 id="6-vector-embedding-latent-space-same-family">6️⃣ Vector, Embedding, Latent Space (Same Family)</h2>
+<ul>
+<li><strong>Vector</strong>: a list of numbers</li>
+<li><strong>Embedding</strong>: a vector with learned meaning</li>
+<li><strong>Latent space</strong>: the space where embeddings live</li>
+</ul>
+<p>Formally:</p>
+<p>$$
+\mathbf{v}_{\text{Messi}} \in \mathbb{R}^d
+$$</p>
+<p>Where closeness implies semantic similarity.</p>
+<hr>
+<h2 id="7-what-does-an-embedding-look-like">7️⃣ What Does an Embedding Look Like?</h2>
+<p>It looks like <strong>nothing human-readable</strong>.</p>
+<p>Example (tiny fake embedding):</p>
+<pre><code>
+Messi →
+[ 0.83, -1.12, 0.44, 0.09, -0.31 ]
+
+</code></pre>
+<hr>
+<h2 id="8-key-takeaways-do-not-skip">8️⃣ Key Takeaways (Do Not Skip)</h2>
+<ul>
+<li>Vocabulary ≠ words</li>
+<li>Tokens are subword units</li>
+<li>Tokens become vectors</li>
+<li>Vectors live in embedding space</li>
+<li>Meaning = geometry, not text</li>
+</ul>
+<hr>
+<h2 id="-final-intuition">🧠 Final Intuition</h2>
+<blockquote>
+<p>Humans read words.<br>
+Models navigate vector spaces.</p>
+</blockquote>
+<hr>
+<h1 id="-attention-how-vectors-talk-to-each-other">🔍 Attention: How Vectors Talk to Each Other</h1>
+<p>After tokenization and embeddings,<br>
+we have vectors — but <strong>isolated vectors mean nothing</strong>.</p>
+<p>Attention is the mechanism that lets vectors <strong>interact</strong>.</p>
+<p>This chapter explains attention <strong>numerically and intuitively</strong>.</p>
+<hr>
+<h2 id="1-the-core-problem">1️⃣ The Core Problem</h2>
+<p>We start with embeddings:</p>
+<p>$$
+\mathbf{x}_1, \mathbf{x}_2, \dots, \mathbf{x}_n
+$$</p>
+<p>Each vector represents a token.</p>
+<p>Problem:</p>
+<ul>
+<li>each vector knows <strong>only itself</strong></li>
+<li>language meaning depends on <strong>relationships</strong></li>
+</ul>
+<p>Example:</p>
+<blockquote>
+<p>“Lionel Messi scored a goal”</p>
+</blockquote>
+<p>The meaning of “scored” depends on “Messi”.</p>
+<hr>
+<h2 id="2-attention-is-weighted-interaction">2️⃣ Attention Is Weighted Interaction</h2>
+<p>Attention answers one question:</p>
+<blockquote>
+<p><em>Which other tokens matter for this token?</em></p>
+</blockquote>
+<p>Mathematically:</p>
+<p>$$
+\text{Attention}(\mathbf{q}, \mathbf{k}, \mathbf{v})
+$$</p>
+<p>Where:</p>
+<ul>
+<li><strong>Query (Q)</strong> = what I am looking for</li>
+<li><strong>Key (K)</strong> = what I offer</li>
+<li><strong>Value (V)</strong> = what I contribute</li>
+</ul>
+<hr>
+<h2 id="3-creating-q-k-v">3️⃣ Creating Q, K, V</h2>
+<p>Each embedding is linearly projected:</p>
+<p>$$
+\mathbf{q}_i = W_Q \mathbf{x}_i
+$$</p>
+<p>$$
+\mathbf{k}_i = W_K \mathbf{x}_i
+$$</p>
+<p>$$
+\mathbf{v}_i = W_V \mathbf{x}_i
+$$</p>
+<p>Same vector → three different roles.</p>
+<hr>
+<h2 id="4-attention-scores-who-listens-to-whom">4️⃣ Attention Scores (Who Listens to Whom)</h2>
+<p>For token ( i ), compute similarity to token ( j ):</p>
+<p>$$
+\alpha_{ij} = \frac{\mathbf{q}_i \cdot \mathbf{k}_j}{\sqrt{d_k}}
+$$</p>
+<p>This measures <strong>relevance</strong>.</p>
+<p>Example:</p>
+<ul>
+<li>“scored” attends strongly to “Messi”</li>
+<li>weakly to “a”</li>
+</ul>
+<hr>
+<h2 id="5-softmax-turning-scores-into-weights">5️⃣ Softmax: Turning Scores into Weights</h2>
+<p>Normalize scores:</p>
+<p>$$
+w_{ij} = \text{softmax}(\alpha_{ij})
+$$</p>
+<p>Now:</p>
+<ul>
+<li>weights sum to 1</li>
+<li>attention becomes probabilistic focus</li>
+</ul>
+<hr>
+<h2 id="6-mixing-values-talking-happens-here">6️⃣ Mixing Values (Talking Happens Here)</h2>
+<p>Interpretation:</p>
+<blockquote>
+<p>“Token i becomes a mixture of other tokens.”</p>
+</blockquote>
+<p>This is <strong>contextualization</strong>.</p>
+<hr>
+<h2 id="7-lionel-messi-example">7️⃣ Lionel Messi Example</h2>
+<p>Sentence:</p>
+<blockquote>
+<p>“Lionel Messi won the Ballon d’Or”</p>
+</blockquote>
+<p>Token “won”:</p>
+<ul>
+<li>attends strongly to “Messi”</li>
+<li>moderately to “Ballon”</li>
+<li>weakly to “the”</li>
+</ul>
+<p>Result:</p>
+<ul>
+<li>“won” now encodes <strong>who won what</strong></li>
+</ul>
+<hr>
+<h2 id="8-self-attention-vs-cross-attention">8️⃣ Self-Attention vs Cross-Attention</h2>
+<ul>
+<li><strong>Self-attention</strong>: tokens attend to each other</li>
+<li><strong>Cross-attention</strong>: tokens attend to external memory (e.g. RAG)</li>
+</ul>
+<p>Same math. Different source.</p>
+<hr>
+<h2 id="9-multi-head-attention">9️⃣ Multi-Head Attention</h2>
+<p>One attention head is limited.</p>
+<p>So we use many:</p>
+<p>$$
+\text{MultiHead} = \text{Concat}(\text{head}_1, \dots, \text{head}_h)
+$$</p>
+<p>Each head learns:</p>
+<ul>
+<li>syntax</li>
+<li>coreference</li>
+<li>semantics</li>
+<li>long-range relations</li>
+</ul>
+<hr>
+<h2 id="-key-insight">🧠 Key Insight</h2>
+<blockquote>
+<p>Attention does not store meaning.<br>
+It <strong>routes meaning</strong>.</p>
+</blockquote>
+<hr>
+<h1 id="-from-embeddings-to-thought">🧠 From Embeddings to Thought</h1>
+<p>Embeddings are static.</p>
+<p>Thought is dynamic.</p>
+<p>This chapter explains how <strong>repeated attention + transformation</strong> turns vectors into reasoning.</p>
+<hr>
+<h2 id="1-one-layer-is-not-thought">1️⃣ One Layer Is Not Thought</h2>
+<p>After one attention layer:</p>
+<p>$$
+\mathbf{H}^{(1)} = \text{Attention}(\mathbf{X})
+$$</p>
+<p>We get:</p>
+<ul>
+<li>contextualized vectors</li>
+<li>shallow understanding</li>
+</ul>
+<p>But no reasoning yet.</p>
+<hr>
+<h2 id="2-stacking-layers--iterative-refinement">2️⃣ Stacking Layers = Iterative Refinement</h2>
+<p>Transformers stack layers:</p>
+<p>$$
+\mathbf{H}^{(l+1)} = \text{FFN}(\text{Attention}(\mathbf{H}^{(l)}))
+$$</p>
+<p>Each layer:</p>
+<ul>
+<li>refines representations</li>
+<li>integrates broader context</li>
+<li>abstracts meaning</li>
+</ul>
+<hr>
+<h2 id="3-feedforward-networks-nonlinearity">3️⃣ Feedforward Networks (Nonlinearity)</h2>
+<p>FFN:</p>
+<p>$$
+\text{FFN}(\mathbf{x}) = W_2 \sigma(W_1 \mathbf{x})
+$$</p>
+<p>Purpose:</p>
+<ul>
+<li>mix features</li>
+<li>create nonlinear concepts</li>
+<li>enable abstraction</li>
+</ul>
+<hr>
+<h2 id="4-thought-as-trajectory-in-latent-space">4️⃣ Thought as Trajectory in Latent Space</h2>
+<p>A “thought” is not a symbol.</p>
+<p>It is a <strong>path</strong>:</p>
+<p>$$
+\mathbf{x}^{(0)} \rightarrow \mathbf{x}^{(1)} \rightarrow \dots \rightarrow \mathbf{x}^{(L)}
+$$</p>
+<p>Each layer moves the vector through latent space.</p>
+<hr>
+<h2 id="5-example-simple-reasoning">5️⃣ Example: Simple Reasoning</h2>
+<p>Prompt:</p>
+<blockquote>
+<p>“Messi is older than Neymar. Who is younger?”</p>
+</blockquote>
+<p>Early layers:</p>
+<ul>
+<li>identify entities</li>
+</ul>
+<p>Middle layers:</p>
+<ul>
+<li>encode comparison</li>
+</ul>
+<p>Later layers:</p>
+<ul>
+<li>resolve answer</li>
+</ul>
+<p>No rule engine.<br>
+Just geometry evolving.</p>
+<hr>
+<h2 id="6-why-this-feels-like-thinking">6️⃣ Why This Feels Like Thinking</h2>
+<p>Because:</p>
+<ul>
+<li>representations become more abstract</li>
+<li>irrelevant details are suppressed</li>
+<li>relationships dominate</li>
+</ul>
+<p>This mirrors human cognition <strong>functionally</strong>, not biologically.</p>
+<hr>
+<h2 id="7-why-it-sometimes-fails">7️⃣ Why It Sometimes Fails</h2>
+<p>Because:</p>
+<ul>
+<li>reasoning is approximate</li>
+<li>errors compound</li>
+<li>no explicit truth-checking</li>
+</ul>
+<p>Thought is simulated, not guaranteed.</p>
+<hr>
+<h2 id="8-chain-of-thought-is-externalized-latent-process">8️⃣ Chain-of-Thought Is Externalized Latent Process</h2>
+<p>CoT exposes:</p>
+<p>$$
+\text{hidden transformations} \rightarrow \text{text}
+$$</p>
+<p>Open models allow this because:</p>
+<ul>
+<li>transparency</li>
+<li>debuggability</li>
+<li>research value</li>
+</ul>
+<hr>
+<h2 id="-final-insight">🧠 Final Insight</h2>
+<blockquote>
+<p>LLMs do not “think” symbolically.<br>
+They <strong>evolve representations</strong>.</p>
+</blockquote>
+<hr>
 <h1 id="-foundations-of-agentic-ai-and-large-language-models">🤖 Foundations of Agentic AI and Large Language Models</h1>
 <p>Artificial Intelligence today is no longer about <em>single predictions</em>.</p>
 <p>Modern AI systems:</p>
@@ -1751,7 +2514,7 @@ $$</p>
 <li>d = embedding dimension</li>
 </ul>
 <hr>
-<h3 id="embedding-lookup">Embedding Lookup</h3>
+<h3 id="embedding-lookup-1">Embedding Lookup</h3>
 <p>Given token ID ( i ):</p>
 <p>$$
 \mathbf{e}_i = E[i]
@@ -1795,7 +2558,7 @@ $$</p>
 $$</p>
 <p>Where:</p>
 <ul>
-<li>( \mathbf{p}_t ) = positional encoding</li>
+<li>pt = positional encoding</li>
 </ul>
 <p>This allows the model to distinguish:</p>
 <pre><code>
@@ -1852,10 +2615,6 @@ $$</p>
 <li>language-specific patterns</li>
 </ul>
 <p>This creates <strong>cross-lingual embeddings</strong>.</p>
-<p>Example:</p>
-<p>$$
-\mathbf{e}<em>{\text{dog}} \approx \mathbf{e}</em>{\text{犬}} \approx \mathbf{e}_{\text{狗}}
-$$</p>
 <hr>
 <h2 id="16-are-more-tokens-better">1️⃣6️⃣ Are More Tokens Better?</h2>
 <p>No.</p>
@@ -1882,7 +2641,7 @@ $$</p>
 <li>Probability → language generation</li>
 </ul>
 <hr>
-<h2 id="-final-intuition">🧠 Final Intuition</h2>
+<h2 id="-final-intuition-1">🧠 Final Intuition</h2>
 <p>Language models do not store sentences.</p>
 <p>They store <strong>geometric relationships between tokens</strong>.</p>
 <p>Meaning is not memorized.</p>
@@ -2587,9 +3346,9 @@ and start behaving like <strong>reasoning systems</strong>.</p>
 $$</p>
 <p>Where:</p>
 <ul>
-<li>( \mathbf{q} ) = query</li>
-<li>( \mathbf{k} ) = key</li>
-<li>( \mathbf{v} ) = value</li>
+<li>q = query</li>
+<li>k = key</li>
+<li>v = value</li>
 </ul>
 <p>All are vectors.</p>
 <hr>
@@ -2795,7 +3554,7 @@ $$</p>
 <li>Reasoning is emergence</li>
 </ul>
 <hr>
-<h2 id="-final-intuition-1">🧠 Final Intuition</h2>
+<h2 id="-final-intuition-2">🧠 Final Intuition</h2>
 <p>LLMs do not “think” like humans.</p>
 <p>They:</p>
 <ul>
@@ -3043,7 +3802,7 @@ They extrapolate poorly.</p>
 </tbody>
 </table>
 <hr>
-<h2 id="-key-insight">🧠 Key Insight</h2>
+<h2 id="-key-insight-1">🧠 Key Insight</h2>
 <p>LLMs reason statistically, not causally.</p>
 <p>Understanding failure modes is <strong>not a weakness</strong>—
 it is a prerequisite for building better systems.</p>
@@ -3061,6 +3820,13 @@ it is a prerequisite for building better systems.</p>
           <div class="article-widget">
             
 <div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/2026-01-08-daily-knowledge-notes/dk-010-agi-problem/" rel="next">DK-010 — Why AGI Is a Systems Problem, Not a Model</a>
+  </div>
   
   
   
