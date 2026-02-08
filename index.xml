@@ -13,6 +13,909 @@
     </image>
     
     <item>
+      <title>DK-011 — Banking as a System</title>
+      <link>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-011-banking-as-a-system/</link>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-011-banking-as-a-system/</guid>
+      <description>&lt;hr&gt;
+&lt;h1 id=&#34;-banking-as-a-system-products-risk-and-human-behavior&#34;&gt;🏦 Banking as a System: Products, Risk, and Human Behavior&lt;/h1&gt;
+&lt;p&gt;When people think about banks, they often think about &lt;strong&gt;products&lt;/strong&gt;:
+accounts, loans, cards, apps.&lt;/p&gt;
+&lt;p&gt;But for anyone working inside a bank—especially as an AI researcher or
+developer—banking is not a collection of products.&lt;/p&gt;
+&lt;p&gt;Banking is a &lt;strong&gt;system&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A system where money, time, risk, regulation, and human behavior interact
+continuously.&lt;/p&gt;
+&lt;p&gt;This chapter explains:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;what banks actually sell&lt;/li&gt;
+&lt;li&gt;how banking products fit together&lt;/li&gt;
+&lt;li&gt;why risk management dominates everything&lt;/li&gt;
+&lt;li&gt;why human behavior matters as much as mathematics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-what-a-bank-really-does&#34;&gt;1️⃣ What a Bank Really Does&lt;/h2&gt;
+&lt;p&gt;At its core, a bank performs three fundamental functions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Liquidity transformation&lt;/strong&gt;&lt;br&gt;
+Turning short-term money (deposits) into long-term money (loans)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Risk transformation&lt;/strong&gt;&lt;br&gt;
+Pooling, pricing, and redistributing risk across borrowers&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Trust intermediation&lt;/strong&gt;&lt;br&gt;
+Convincing millions of people that their money is safe&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Everything else—apps, branches, AI, products—exists to support these three goals.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-core-banking-products&#34;&gt;2️⃣ Core Banking Products&lt;/h2&gt;
+&lt;h3 id=&#34;21-deposits-the-banks-raw-material&#34;&gt;2.1 Deposits: The Bank’s Raw Material&lt;/h3&gt;
+&lt;p&gt;Deposits are not just customer products.&lt;br&gt;
+They are the &lt;strong&gt;input&lt;/strong&gt; of the banking system.&lt;/p&gt;
+&lt;p&gt;Common types include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Savings accounts&lt;/li&gt;
+&lt;li&gt;Current / checking accounts&lt;/li&gt;
+&lt;li&gt;Fixed-term deposits&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From a systems view:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;deposits are &lt;strong&gt;liabilities&lt;/strong&gt; on the bank’s balance sheet&lt;/li&gt;
+&lt;li&gt;but they are also the &lt;strong&gt;cheapest and most stable funding source&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Longer-term deposits are especially valuable because they reduce
+liquidity and refinancing risk.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;22-loans-where-risk-lives&#34;&gt;2.2 Loans: Where Risk Lives&lt;/h3&gt;
+&lt;p&gt;Loans are where banks earn money—and where banks can fail.&lt;/p&gt;
+&lt;p&gt;Major categories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Retail loans (personal, housing, auto)&lt;/li&gt;
+&lt;li&gt;SME and business loans&lt;/li&gt;
+&lt;li&gt;Corporate and project finance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Each loan embeds assumptions about:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;future income&lt;/li&gt;
+&lt;li&gt;economic conditions&lt;/li&gt;
+&lt;li&gt;human behavior&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is why lending is not just a math problem.
+It is a &lt;strong&gt;prediction under uncertainty&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;23-savings-with-incentives-products&#34;&gt;2.3 Savings-with-Incentives Products&lt;/h3&gt;
+&lt;p&gt;Some banking products exist primarily to shape behavior.&lt;/p&gt;
+&lt;p&gt;Examples include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;prize-linked savings&lt;/li&gt;
+&lt;li&gt;lottery-style savings instruments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These work not because of high expected returns,
+but because humans overweight small probabilities of large gains.&lt;/p&gt;
+&lt;p&gt;Banks design these products to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;encourage saving&lt;/li&gt;
+&lt;li&gt;stabilize funding&lt;/li&gt;
+&lt;li&gt;reduce withdrawal volatility&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;24-cards-payments-and-transaction-services&#34;&gt;2.4 Cards, Payments, and Transaction Services&lt;/h3&gt;
+&lt;p&gt;Payment products:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;debit cards&lt;/li&gt;
+&lt;li&gt;credit cards&lt;/li&gt;
+&lt;li&gt;transfers&lt;/li&gt;
+&lt;li&gt;digital wallets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These services:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;generate fee income&lt;/li&gt;
+&lt;li&gt;produce high-quality behavioral data&lt;/li&gt;
+&lt;li&gt;anchor customers to the ecosystem&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In modern banking, &lt;strong&gt;payments are data engines&lt;/strong&gt;, not just utilities.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;25-insurance-and-investment-products&#34;&gt;2.5 Insurance and Investment Products&lt;/h3&gt;
+&lt;p&gt;Banks often distribute:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;insurance&lt;/li&gt;
+&lt;li&gt;mutual funds&lt;/li&gt;
+&lt;li&gt;structured investments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These products:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;diversify revenue away from interest income&lt;/li&gt;
+&lt;li&gt;shift risk from the bank to customers&lt;/li&gt;
+&lt;li&gt;require strong suitability and compliance controls&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-interest-rates-fees-and-pricing-power&#34;&gt;3️⃣ Interest Rates, Fees, and Pricing Power&lt;/h2&gt;
+&lt;p&gt;Bank pricing reflects three forces:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Cost of funding&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Risk of the borrower&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Regulatory constraints&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Fixed rates exist to provide certainty.
+Floating rates exist to manage interest-rate risk.&lt;/p&gt;
+&lt;p&gt;Fees compensate for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;operational cost&lt;/li&gt;
+&lt;li&gt;capital usage&lt;/li&gt;
+&lt;li&gt;non-credit risk&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pricing is never purely competitive—it is always &lt;strong&gt;risk-adjusted&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-risk-the-central-nervous-system-of-banking&#34;&gt;4️⃣ Risk: The Central Nervous System of Banking&lt;/h2&gt;
+&lt;p&gt;Every banking decision is a risk decision.&lt;/p&gt;
+&lt;p&gt;Key risk dimensions include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Credit risk (default)&lt;/li&gt;
+&lt;li&gt;Liquidity risk (cash shortage)&lt;/li&gt;
+&lt;li&gt;Market risk (rates, FX)&lt;/li&gt;
+&lt;li&gt;Operational risk (systems, fraud)&lt;/li&gt;
+&lt;li&gt;Model risk (wrong assumptions)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Two core quantities dominate credit thinking:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Probability of Default (PD)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Loss Given Default (LGD)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Banks survive not by avoiding risk,
+but by &lt;strong&gt;measuring, pricing, and absorbing it&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-capital-buffers-and-survival&#34;&gt;5️⃣ Capital, Buffers, and Survival&lt;/h2&gt;
+&lt;p&gt;Banks hold capital not to earn returns,
+but to survive rare, catastrophic losses.&lt;/p&gt;
+&lt;p&gt;Capital adequacy exists because:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;expected losses are manageable&lt;/li&gt;
+&lt;li&gt;unexpected losses are existential&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is why banks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;stress test&lt;/li&gt;
+&lt;li&gt;plan for recessions&lt;/li&gt;
+&lt;li&gt;grow slowly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A fast-growing bank is often a fragile bank.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-human-behavior-in-finance&#34;&gt;6️⃣ Human Behavior in Finance&lt;/h2&gt;
+&lt;p&gt;Purely rational models fail in banking.&lt;/p&gt;
+&lt;p&gt;Humans:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;dislike losses more than they like gains&lt;/li&gt;
+&lt;li&gt;overborrow in good times&lt;/li&gt;
+&lt;li&gt;panic in bad times&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is known as &lt;strong&gt;loss aversion&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;As a result:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;defaults cluster&lt;/li&gt;
+&lt;li&gt;liquidity dries up suddenly&lt;/li&gt;
+&lt;li&gt;trust collapses faster than spreadsheets predict&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Banking models must respect psychology,
+not just statistics.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-ai-and-data-inside-banks&#34;&gt;7️⃣ AI and Data Inside Banks&lt;/h2&gt;
+&lt;p&gt;AI adds value when it:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;improves risk estimation&lt;/li&gt;
+&lt;li&gt;detects anomalies and fraud&lt;/li&gt;
+&lt;li&gt;reduces operational friction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But banking data is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sensitive&lt;/li&gt;
+&lt;li&gt;biased&lt;/li&gt;
+&lt;li&gt;non-stationary&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Accuracy alone is insufficient.&lt;/p&gt;
+&lt;p&gt;Models must be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;explainable&lt;/li&gt;
+&lt;li&gt;auditable&lt;/li&gt;
+&lt;li&gt;robust under stress&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is why &lt;strong&gt;human-in-the-loop systems&lt;/strong&gt; dominate financial AI.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8-regulation-and-responsibility&#34;&gt;8️⃣ Regulation and Responsibility&lt;/h2&gt;
+&lt;p&gt;Banks are regulated not because they are inefficient,
+but because they are &lt;strong&gt;systemically important&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Failures propagate.
+Mistakes scale.&lt;/p&gt;
+&lt;p&gt;Regulation enforces:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;capital discipline&lt;/li&gt;
+&lt;li&gt;consumer protection&lt;/li&gt;
+&lt;li&gt;systemic stability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In banking, innovation must move &lt;strong&gt;with trust&lt;/strong&gt;, not ahead of it.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9-banking-as-infrastructure&#34;&gt;9️⃣ Banking as Infrastructure&lt;/h2&gt;
+&lt;p&gt;Banks are not just businesses.
+They are economic infrastructure.&lt;/p&gt;
+&lt;p&gt;They:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;allocate capital&lt;/li&gt;
+&lt;li&gt;smooth consumption&lt;/li&gt;
+&lt;li&gt;absorb shocks&lt;/li&gt;
+&lt;li&gt;enable opportunity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is why profitability is not the only metric.
+Stability, fairness, and resilience matter just as much.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-closing-thought&#34;&gt;🔚 Closing Thought&lt;/h2&gt;
+&lt;p&gt;If you work in banking—especially with AI—you are not optimizing a model.&lt;/p&gt;
+&lt;p&gt;You are shaping:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;incentives&lt;/li&gt;
+&lt;li&gt;behavior&lt;/li&gt;
+&lt;li&gt;risk distribution&lt;/li&gt;
+&lt;li&gt;trust&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Banking is where mathematics meets society.&lt;/p&gt;
+&lt;p&gt;And society is always the harder system to model.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-the-mathematics-of-banking-equations-you-must-know&#34;&gt;🧮 The Mathematics of Banking: Equations You Must Know&lt;/h1&gt;
+&lt;p&gt;Modern banking is not powered by intuition.
+It is powered by &lt;strong&gt;equations&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If you work in banking—as an analyst, AI researcher, or system designer—
+these are the mathematical structures you are expected to &lt;em&gt;think in&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;This chapter is a &lt;strong&gt;map of the math behind real banking decisions&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-time-value-of-money-tvm&#34;&gt;1️⃣ Time Value of Money (TVM)&lt;/h2&gt;
+&lt;p&gt;Everything in banking starts here.&lt;/p&gt;
+&lt;p&gt;Money today is worth more than money tomorrow.&lt;/p&gt;
+&lt;p&gt;$$
+PV = \frac{FV}{(1 + r)^t}
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;( PV ) = present value&lt;/li&gt;
+&lt;li&gt;( FV ) = future value&lt;/li&gt;
+&lt;li&gt;( r ) = interest rate&lt;/li&gt;
+&lt;li&gt;( t ) = time&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Loans, deposits, bonds, projects — all reduce to this idea.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-compound-interest&#34;&gt;2️⃣ Compound Interest&lt;/h2&gt;
+&lt;p&gt;Banks do not earn linear returns.&lt;/p&gt;
+&lt;p&gt;$$
+FV = PV (1 + r)^t
+$$&lt;/p&gt;
+&lt;p&gt;Compounding explains:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;why long-term loans are expensive&lt;/li&gt;
+&lt;li&gt;why early repayments matter&lt;/li&gt;
+&lt;li&gt;why maturity structure is critical&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-loan-amortization-fixed-payment-loans&#34;&gt;3️⃣ Loan Amortization (Fixed Payment Loans)&lt;/h2&gt;
+&lt;p&gt;Mortgage math lives here.&lt;/p&gt;
+&lt;p&gt;$$
+PMT = \frac{P r (1+r)^n}{(1+r)^n - 1}
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;( P ) = loan principal&lt;/li&gt;
+&lt;li&gt;( r ) = periodic interest rate&lt;/li&gt;
+&lt;li&gt;( n ) = number of payments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This equation defines:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;monthly installments&lt;/li&gt;
+&lt;li&gt;interest vs principal split&lt;/li&gt;
+&lt;li&gt;borrower affordability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-effective-interest-rate-eir&#34;&gt;4️⃣ Effective Interest Rate (EIR)&lt;/h2&gt;
+&lt;p&gt;Banks care about &lt;em&gt;true cost&lt;/em&gt;, not advertised rates.&lt;/p&gt;
+&lt;p&gt;$$
+EIR = (1 + \frac{r}{m})^m - 1
+$$&lt;/p&gt;
+&lt;p&gt;Used to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;compare loan products&lt;/li&gt;
+&lt;li&gt;standardize pricing&lt;/li&gt;
+&lt;li&gt;comply with regulation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-expected-value-ev&#34;&gt;5️⃣ Expected Value (EV)&lt;/h2&gt;
+&lt;p&gt;Credit decisions begin with expectations.&lt;/p&gt;
+&lt;p&gt;$$
+\mathbb{E}[X] = \sum_i p_i x_i
+$$&lt;/p&gt;
+&lt;p&gt;But in banking, &lt;strong&gt;expected value is not enough&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Rare losses dominate survival.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-probability-of-default-pd&#34;&gt;6️⃣ Probability of Default (PD)&lt;/h2&gt;
+&lt;p&gt;The backbone of credit risk.&lt;/p&gt;
+&lt;p&gt;$$
+PD = P(\text{Default} \mid \text{Borrower Characteristics})
+$$&lt;/p&gt;
+&lt;p&gt;Estimated using:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;logistic regression&lt;/li&gt;
+&lt;li&gt;scorecards&lt;/li&gt;
+&lt;li&gt;machine learning models&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;7-loss-given-default-lgd&#34;&gt;7️⃣ Loss Given Default (LGD)&lt;/h2&gt;
+&lt;p&gt;Default is not total loss.&lt;/p&gt;
+&lt;p&gt;$$
+LGD = 1 - \frac{\text{Recovery Value}}{\text{Exposure}}
+$$&lt;/p&gt;
+&lt;p&gt;Collateral, legal systems, and timing all matter here.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8-exposure-at-default-ead&#34;&gt;8️⃣ Exposure at Default (EAD)&lt;/h2&gt;
+&lt;p&gt;How much is actually at risk.&lt;/p&gt;
+&lt;p&gt;$$
+EAD = \text{Outstanding Balance at Default}
+$$&lt;/p&gt;
+&lt;p&gt;For credit cards and overdrafts, this is &lt;strong&gt;stochastic&lt;/strong&gt;, not fixed.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9-expected-credit-loss-ecl&#34;&gt;9️⃣ Expected Credit Loss (ECL)&lt;/h2&gt;
+&lt;p&gt;The core accounting equation of modern banks.&lt;/p&gt;
+&lt;p&gt;$$
+\text{ECL} = PD \times LGD \times EAD
+$$&lt;/p&gt;
+&lt;p&gt;This single formula:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;drives provisioning&lt;/li&gt;
+&lt;li&gt;impacts profit&lt;/li&gt;
+&lt;li&gt;influences lending appetite&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-risk-adjusted-return-on-capital-raroc&#34;&gt;🔟 Risk-Adjusted Return on Capital (RAROC)&lt;/h2&gt;
+&lt;p&gt;Banks do not maximize profit.
+They maximize &lt;strong&gt;risk-adjusted profit&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;$$
+RAROC = \frac{\text{Expected Return}}{\text{Economic Capital}}
+$$&lt;/p&gt;
+&lt;p&gt;If RAROC &amp;lt; hurdle rate → reject the loan.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;11-capital-adequacy-ratio-car&#34;&gt;1️⃣1️⃣ Capital Adequacy Ratio (CAR)&lt;/h2&gt;
+&lt;p&gt;Survival constraint, not optimization.&lt;/p&gt;
+&lt;p&gt;$$
+CAR = \frac{\text{Tier 1 + Tier 2 Capital}}{\text{Risk-Weighted Assets}}
+$$&lt;/p&gt;
+&lt;p&gt;Banks fail when capital buffers are insufficient,
+not when models are inaccurate.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;12-risk-weighted-assets-rwa&#34;&gt;1️⃣2️⃣ Risk-Weighted Assets (RWA)&lt;/h2&gt;
+&lt;p&gt;Not all assets are equal.&lt;/p&gt;
+&lt;p&gt;$$
+RWA = \sum_i w_i \cdot A_i
+$$&lt;/p&gt;
+&lt;p&gt;Where ( w_i ) reflects regulatory risk weights.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;13-liquidity-coverage-ratio-lcr&#34;&gt;1️⃣3️⃣ Liquidity Coverage Ratio (LCR)&lt;/h2&gt;
+&lt;p&gt;Can the bank survive a short-term shock?&lt;/p&gt;
+&lt;p&gt;$$
+LCR = \frac{\text{High-Quality Liquid Assets}}{\text{Net Cash Outflows (30 days)}}
+$$&lt;/p&gt;
+&lt;p&gt;Liquidity crises kill banks faster than credit losses.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;14-net-interest-margin-nim&#34;&gt;1️⃣4️⃣ Net Interest Margin (NIM)&lt;/h2&gt;
+&lt;p&gt;Core profitability metric.&lt;/p&gt;
+&lt;p&gt;$$
+NIM = \frac{\text{Interest Income} - \text{Interest Expense}}{\text{Earning Assets}}
+$$&lt;/p&gt;
+&lt;p&gt;Small changes in rates → massive balance-sheet effects.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;15-duration-interest-rate-risk&#34;&gt;1️⃣5️⃣ Duration (Interest Rate Risk)&lt;/h2&gt;
+&lt;p&gt;Sensitivity to rate changes.&lt;/p&gt;
+&lt;p&gt;$$
+D = \frac{\sum t \cdot PV(CF_t)}{PV}
+$$&lt;/p&gt;
+&lt;p&gt;Banks manage duration gaps to survive rate shocks.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;16-stress-testing&#34;&gt;1️⃣6️⃣ Stress Testing&lt;/h2&gt;
+&lt;p&gt;Banking math under fear, not averages.&lt;/p&gt;
+&lt;p&gt;$$
+\text{Loss}_{stress} = f(\text{GDP} \downarrow, \text{Unemployment} \uparrow)
+$$&lt;/p&gt;
+&lt;p&gt;Stress tests ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What if everything goes wrong at once?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;17-expected-utility-theory&#34;&gt;1️⃣7️⃣ Expected Utility Theory&lt;/h2&gt;
+&lt;p&gt;Rational decision-making baseline.&lt;/p&gt;
+&lt;p&gt;$$
+\mathbb{E}[U(W)] = \sum_i p_i U(W_i)
+$$&lt;/p&gt;
+&lt;p&gt;But humans do not behave this way.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;18-prospect-theory-loss-aversion&#34;&gt;1️⃣8️⃣ Prospect Theory (Loss Aversion)&lt;/h2&gt;
+&lt;p&gt;Real human behavior.&lt;/p&gt;
+&lt;p&gt;$$
+U(x) =
+\begin{cases}
+x^\alpha &amp;amp; x \ge 0 \
+-\lambda (-x)^\beta &amp;amp; x &amp;lt; 0
+\end{cases}
+$$&lt;/p&gt;
+&lt;p&gt;Where lambda &amp;gt; 1 explains why losses hurt more than gains.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;19-portfolio-diversification&#34;&gt;1️⃣9️⃣ Portfolio Diversification&lt;/h2&gt;
+&lt;p&gt;Why banks lend to many borrowers.&lt;/p&gt;
+&lt;p&gt;$$
+\sigma_p^2 = w^\top \Sigma w
+$$&lt;/p&gt;
+&lt;p&gt;Correlation kills diversification.
+Concentration kills banks.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;20-model-risk-reality-check&#34;&gt;2️⃣0️⃣ Model Risk (Reality Check)&lt;/h2&gt;
+&lt;p&gt;All models are approximations.&lt;/p&gt;
+&lt;p&gt;$$
+\text{Decision Risk} \neq \text{Model Error}
+$$&lt;/p&gt;
+&lt;p&gt;The biggest danger:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;wrong assumptions&lt;/li&gt;
+&lt;li&gt;stable-looking data&lt;/li&gt;
+&lt;li&gt;ignored tail events&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-thought&#34;&gt;🔚 Final Thought&lt;/h2&gt;
+&lt;p&gt;If you understand these equations,
+you do not just understand banking math.&lt;/p&gt;
+&lt;p&gt;You understand:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;how banks survive&lt;/li&gt;
+&lt;li&gt;why products are priced the way they are&lt;/li&gt;
+&lt;li&gt;why AI must be cautious&lt;/li&gt;
+&lt;li&gt;why trust matters more than accuracy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Banking is applied mathematics under uncertainty.&lt;/p&gt;
+&lt;p&gt;And uncertainty is never fully modelable.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-50-interview-qa-basic&#34;&gt;🎯 50 Interview Q&amp;amp;A (Basic)&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;em&gt;Interview tip:&lt;/em&gt; Answers are written to sound &lt;strong&gt;systems-level, policy-aware, and AI-literate&lt;/strong&gt;.&lt;br&gt;
+Each answer is &lt;strong&gt;hidden&lt;/strong&gt; — open only when you want to rehearse.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;product--banking-basics&#34;&gt;Product &amp;amp; Banking Basics&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;1. What is the difference between deposits and funding?&lt;/summary&gt;
+&lt;p&gt;Deposits are &lt;strong&gt;customer money entrusted to the bank&lt;/strong&gt;, while funding is the &lt;strong&gt;broader set of liabilities&lt;/strong&gt; the bank uses to finance assets, including deposits, bonds, and interbank borrowing. Deposits are typically cheaper and more stable.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;2. Why do banks prefer long-term deposits?&lt;/summary&gt;
+&lt;p&gt;Long-term deposits reduce &lt;strong&gt;liquidity risk&lt;/strong&gt; and maturity mismatch, allowing banks to lend long-term without constant refinancing pressure.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;3. What is NPA?&lt;/summary&gt;
+&lt;p&gt;NPA (Non-Performing Asset) is a loan that stops generating income because the borrower fails to repay as scheduled, directly impacting capital and profitability.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;4. Why is collateral important?&lt;/summary&gt;
+&lt;p&gt;Collateral reduces &lt;strong&gt;loss given default (LGD)&lt;/strong&gt; and aligns borrower incentives, transforming credit risk into asset-backed risk.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;5. Why do banks care about liquidity?&lt;/summary&gt;
+&lt;p&gt;Because even a solvent bank can fail if it cannot meet short-term obligations. Liquidity preserves trust.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;6. Difference between retail and SME loans?&lt;/summary&gt;
+&lt;p&gt;Retail loans rely on personal income and behavior data, while SME loans depend on cash flow, business cycles, and often collateral—making SMEs riskier but economically critical.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;7. Why lottery savings work?&lt;/summary&gt;
+&lt;p&gt;They exploit &lt;strong&gt;loss aversion and probability weighting&lt;/strong&gt;: people prefer a small chance of a big reward over a guaranteed small return.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;8. Why fixed rates exist?&lt;/summary&gt;
+&lt;p&gt;They provide certainty to borrowers and are useful when interest-rate volatility is high.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;9. Why floating rates exist?&lt;/summary&gt;
+&lt;p&gt;They transfer interest-rate risk from banks to borrowers, protecting bank margins in changing macro conditions.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;10. What is responsible lending?&lt;/summary&gt;
+&lt;p&gt;Lending that balances access to credit with borrower affordability, long-term welfare, and systemic stability.&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;risk--economics&#34;&gt;Risk &amp;amp; Economics&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;11. What is PD / LGD?&lt;/summary&gt;
+&lt;p&gt;PD is the probability a borrower defaults; LGD is the percentage loss if default occurs. Together they define expected credit loss.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;12. What is leverage?&lt;/summary&gt;
+&lt;p&gt;Leverage is using borrowed funds to amplify returns—and losses. High leverage increases fragility.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;13. Why diversification matters?&lt;/summary&gt;
+&lt;p&gt;It reduces idiosyncratic risk by ensuring not all assets fail simultaneously.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;14. What is capital adequacy?&lt;/summary&gt;
+&lt;p&gt;A buffer that absorbs losses, ensuring banks remain solvent during stress.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;15. Why banks survive crises?&lt;/summary&gt;
+&lt;p&gt;Because of diversification, capital buffers, regulatory support, and central bank liquidity.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;16. What is moral hazard?&lt;/summary&gt;
+&lt;p&gt;When protection (e.g., bailouts) encourages riskier behavior because losses are partially externalized.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;17. Why households default?&lt;/summary&gt;
+&lt;p&gt;Income shocks, over-leverage, behavioral biases, and lack of financial buffers.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;18. What is tail risk?&lt;/summary&gt;
+&lt;p&gt;Low-probability, high-impact events that standard models often underestimate.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;19. Why expected value is not enough?&lt;/summary&gt;
+&lt;p&gt;Because humans and institutions care about downside risk, volatility, and survival—not just averages.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;20. What is loss aversion?&lt;/summary&gt;
+&lt;p&gt;The tendency for losses to hurt more than equivalent gains feel good, shaping financial behavior.&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;ai--data-perspective&#34;&gt;AI / Data Perspective&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;21. Where does AI add value in banking?&lt;/summary&gt;
+&lt;p&gt;Risk assessment, fraud detection, personalization, operational efficiency, and policy evaluation.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;22. What data is most sensitive?&lt;/summary&gt;
+&lt;p&gt;Personally identifiable information, transaction histories, and credit data.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;23. How do you avoid bias in credit models?&lt;/summary&gt;
+&lt;p&gt;Through representative data, fairness constraints, explainability, and continuous monitoring.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;24. What is model risk?&lt;/summary&gt;
+&lt;p&gt;The risk that a model is wrong, misused, or applied outside its valid context.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;25. Explain explainable AI to a banker.&lt;/summary&gt;
+&lt;p&gt;Models must justify decisions in human terms so regulators, auditors, and customers can trust them.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;26. Why accuracy is not enough?&lt;/summary&gt;
+&lt;p&gt;Because false negatives, fairness, and stability matter more than raw prediction scores.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;27. What is concept drift?&lt;/summary&gt;
+&lt;p&gt;When the data-generating process changes, causing models trained on past data to degrade.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;28. How do you test under recession?&lt;/summary&gt;
+&lt;p&gt;By stress testing models with adverse macroeconomic scenarios and simulated shocks.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;29. Why regulation matters for AI?&lt;/summary&gt;
+&lt;p&gt;Because financial AI decisions affect livelihoods, stability, and trust.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;30. What is human-in-the-loop?&lt;/summary&gt;
+&lt;p&gt;A system where humans oversee, validate, and intervene in AI-driven decisions.&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;gsb--policy-context&#34;&gt;GSB / Policy Context&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;31. Why GSB is different from commercial banks?&lt;/summary&gt;
+&lt;p&gt;GSB prioritizes social welfare and policy goals over profit maximization.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;32. What is a policy bank?&lt;/summary&gt;
+&lt;p&gt;A bank designed to implement government economic and social policies.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;33. How does GSB reduce inequality?&lt;/summary&gt;
+&lt;p&gt;By expanding access to savings and credit for underserved populations.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;34. Why low-interest loans matter?&lt;/summary&gt;
+&lt;p&gt;They prevent debt traps and support long-term economic resilience.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;35. Why government-backed credit exists?&lt;/summary&gt;
+&lt;p&gt;To address market failures where private banks avoid socially important risks.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;36. How do policy goals affect risk?&lt;/summary&gt;
+&lt;p&gt;They may increase credit risk but reduce societal risk.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;37. Why profitability is not the only KPI?&lt;/summary&gt;
+&lt;p&gt;Because public banks measure success through social impact and stability.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;38. What is financial inclusion?&lt;/summary&gt;
+&lt;p&gt;Ensuring everyone can access basic financial services.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;39. What is informal debt?&lt;/summary&gt;
+&lt;p&gt;Unregulated lending, often high-interest, outside the banking system.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;40. Why digital banking matters?&lt;/summary&gt;
+&lt;p&gt;It lowers costs, improves access, and generates data for better policy design.&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;mindset&#34;&gt;Mindset&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;41. Why banking is a systems problem?&lt;/summary&gt;
+&lt;p&gt;Because individual decisions aggregate into systemic outcomes.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;42. Why math alone fails?&lt;/summary&gt;
+&lt;p&gt;Because humans are not rational agents.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;43. Why humans behave irrationally?&lt;/summary&gt;
+&lt;p&gt;Due to cognitive biases, emotions, and limited information.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;44. Why trust is central?&lt;/summary&gt;
+&lt;p&gt;Banking collapses without confidence.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;45. Why defaults are expected?&lt;/summary&gt;
+&lt;p&gt;Because uncertainty is inherent in lending.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;46. Why banks design contracts carefully?&lt;/summary&gt;
+&lt;p&gt;Contracts encode incentives and risk-sharing.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;47. Why transparency matters?&lt;/summary&gt;
+&lt;p&gt;It sustains trust and accountability.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;48. Why ethics matter?&lt;/summary&gt;
+&lt;p&gt;Because financial decisions affect lives at scale.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;49. Why banking changes slowly?&lt;/summary&gt;
+&lt;p&gt;Because stability is more valuable than speed.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;50. Why this job matters?&lt;/summary&gt;
+&lt;p&gt;Because banking shapes economic opportunity and social resilience.&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-50-interview-qa-banking--finance&#34;&gt;🎯 50 Interview Q&amp;amp;A (Banking &amp;amp; Finance)&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;em&gt;How to use this blog:&lt;/em&gt;&lt;br&gt;
+Read the &lt;strong&gt;questions first&lt;/strong&gt;, think like a banker / economist / data scientist,&lt;br&gt;
+then open the answers to &lt;strong&gt;calibrate your thinking&lt;/strong&gt;, not memorize sentences.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is about &lt;strong&gt;judgment&lt;/strong&gt;, &lt;strong&gt;risk awareness&lt;/strong&gt;, and &lt;strong&gt;systems thinking&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;product--banking-basics-1&#34;&gt;Product &amp;amp; Banking Basics&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;1. What is the difference between deposits and funding?&lt;/summary&gt;
+&lt;p&gt;Deposits are customer money placed with the bank, usually stable and low-cost.&lt;br&gt;
+Funding refers to all sources of money a bank uses, including deposits, bonds, and interbank borrowing.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;2. Why do banks prefer long-term deposits?&lt;/summary&gt;
+&lt;p&gt;They reduce liquidity risk and maturity mismatch, allowing banks to lend long-term safely.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;3. What is a non-performing asset (NPA)?&lt;/summary&gt;
+&lt;p&gt;A loan that no longer generates income because the borrower has failed to meet repayment obligations.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;4. Why is collateral important?&lt;/summary&gt;
+&lt;p&gt;Collateral reduces losses when borrowers default and aligns incentives between borrower and lender.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;5. Why do banks care so much about liquidity?&lt;/summary&gt;
+&lt;p&gt;Because a bank can be solvent but still fail if it cannot meet short-term obligations.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;6. Difference between retail and SME loans?&lt;/summary&gt;
+&lt;p&gt;Retail loans depend on individual income and behavior; SME loans depend on business cash flows and economic cycles.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;7. Why do lottery-based savings products work?&lt;/summary&gt;
+&lt;p&gt;They leverage behavioral biases: people overweight small probabilities of large rewards.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;8. Why do fixed interest rates exist?&lt;/summary&gt;
+&lt;p&gt;They provide payment certainty to borrowers and are attractive during volatile interest-rate environments.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;9. Why do floating interest rates exist?&lt;/summary&gt;
+&lt;p&gt;They allow lenders to pass interest-rate risk to borrowers and protect margins.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;10. What is responsible lending?&lt;/summary&gt;
+&lt;p&gt;Granting credit based on affordability, long-term borrower welfare, and systemic stability.&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;risk--economics-1&#34;&gt;Risk &amp;amp; Economics&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;11. What are PD and LGD?&lt;/summary&gt;
+&lt;p&gt;Probability of Default (PD) measures how likely a borrower will default;&lt;br&gt;
+Loss Given Default (LGD) measures how much is lost if default occurs.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;12. What is leverage?&lt;/summary&gt;
+&lt;p&gt;Using borrowed money to amplify returns, which also amplifies losses.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;13. Why does diversification matter?&lt;/summary&gt;
+&lt;p&gt;It reduces exposure to individual failures by spreading risk across assets.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;14. What is capital adequacy?&lt;/summary&gt;
+&lt;p&gt;The level of capital a bank holds to absorb unexpected losses and remain solvent.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;15. Why do banks usually survive financial crises?&lt;/summary&gt;
+&lt;p&gt;Because of capital buffers, diversification, regulation, and central bank support.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;16. What is moral hazard?&lt;/summary&gt;
+&lt;p&gt;When protection from losses encourages riskier behavior.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;17. Why do households default on loans?&lt;/summary&gt;
+&lt;p&gt;Income shocks, excessive leverage, poor financial planning, and behavioral biases.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;18. What is tail risk?&lt;/summary&gt;
+&lt;p&gt;Rare events with extreme consequences that standard models often underestimate.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;19. Why is expected value not enough in finance?&lt;/summary&gt;
+&lt;p&gt;Because people and institutions care about downside risk and survival, not just averages.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;20. What is loss aversion?&lt;/summary&gt;
+&lt;p&gt;Losses psychologically hurt more than equivalent gains feel good.&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;ai--data-perspective-1&#34;&gt;AI &amp;amp; Data Perspective&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;21. Where does AI add value in banking?&lt;/summary&gt;
+&lt;p&gt;Credit scoring, fraud detection, customer segmentation, and operational efficiency.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;22. What data is most sensitive in banking?&lt;/summary&gt;
+&lt;p&gt;Personal identity data, transaction records, and credit histories.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;23. How do you reduce bias in credit models?&lt;/summary&gt;
+&lt;p&gt;By using representative data, fairness constraints, explainability, and monitoring.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;24. What is model risk?&lt;/summary&gt;
+&lt;p&gt;The risk that a model is incorrect, misapplied, or used outside its valid context.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;25. Explain explainable AI to a banker.&lt;/summary&gt;
+&lt;p&gt;Models must justify decisions clearly so humans can trust, audit, and regulate them.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;26. Why is accuracy not enough?&lt;/summary&gt;
+&lt;p&gt;Because false negatives, fairness, robustness, and stability matter more.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;27. What is concept drift?&lt;/summary&gt;
+&lt;p&gt;When relationships in the data change over time, degrading model performance.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;28. How do you test models under recession?&lt;/summary&gt;
+&lt;p&gt;By stress testing with adverse economic scenarios and simulated shocks.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;29. Why does AI in finance require regulation?&lt;/summary&gt;
+&lt;p&gt;Because automated decisions affect livelihoods and systemic stability.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;30. What is human-in-the-loop?&lt;/summary&gt;
+&lt;p&gt;A system where humans oversee, validate, and intervene in AI decisions.&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;policy--system-level-thinking&#34;&gt;Policy &amp;amp; System-Level Thinking&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;31. Why do governments intervene in credit markets?&lt;/summary&gt;
+&lt;p&gt;To correct market failures and support economic stability.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;32. What is a policy-driven financial institution?&lt;/summary&gt;
+&lt;p&gt;An institution designed to serve economic or social objectives beyond profit.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;33. How does finance affect inequality?&lt;/summary&gt;
+&lt;p&gt;Access to credit can amplify opportunity or deepen inequality.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;34. Why do low-interest loans matter?&lt;/summary&gt;
+&lt;p&gt;They reduce debt burdens and improve long-term repayment sustainability.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;35. Why does government-backed credit exist?&lt;/summary&gt;
+&lt;p&gt;To enable lending where private risk appetite is insufficient.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;36. How do policy goals change risk management?&lt;/summary&gt;
+&lt;p&gt;They trade higher financial risk for lower societal risk.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;37. Why is profitability not the only metric?&lt;/summary&gt;
+&lt;p&gt;Because financial systems exist to support real economic activity.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;38. What is financial inclusion?&lt;/summary&gt;
+&lt;p&gt;Ensuring everyone can access basic financial services.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;39. What is informal debt?&lt;/summary&gt;
+&lt;p&gt;Unregulated lending outside the formal banking system.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;40. Why does digital banking matter?&lt;/summary&gt;
+&lt;p&gt;It lowers costs, expands access, and improves data-driven decision-making.&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;mindset--philosophy&#34;&gt;Mindset &amp;amp; Philosophy&lt;/h2&gt;
+&lt;details&gt;
+&lt;summary&gt;41. Why is banking a systems problem?&lt;/summary&gt;
+&lt;p&gt;Individual decisions aggregate into systemic outcomes.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;42. Why does math alone fail in finance?&lt;/summary&gt;
+&lt;p&gt;Because humans are not perfectly rational.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;43. Why do people behave irrationally with money?&lt;/summary&gt;
+&lt;p&gt;Due to biases, emotions, and limited information.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;44. Why is trust central to banking?&lt;/summary&gt;
+&lt;p&gt;Without trust, deposits and credit collapse.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;45. Why are defaults expected?&lt;/summary&gt;
+&lt;p&gt;Because uncertainty is inherent in lending.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;46. Why are contracts carefully designed?&lt;/summary&gt;
+&lt;p&gt;They encode incentives and risk-sharing.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;47. Why does transparency matter?&lt;/summary&gt;
+&lt;p&gt;It supports trust, accountability, and stability.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;48. Why do ethics matter in finance?&lt;/summary&gt;
+&lt;p&gt;Because financial decisions affect lives at scale.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;49. Why does banking evolve slowly?&lt;/summary&gt;
+&lt;p&gt;Because stability is more valuable than speed.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;50. Why does working in banking matter?&lt;/summary&gt;
+&lt;p&gt;Because finance shapes economic opportunity and resilience.&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
       <title>DK-010 — Why AGI Is a Systems Problem, Not a Model</title>
       <link>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-010-agi-problem/</link>
       <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
@@ -33779,6 +34682,1028 @@ D. Loss function&lt;/p&gt;
 &lt;li&gt;Freezing is strategy, not weakness&lt;/li&gt;
 &lt;li&gt;Fine-tuning is about &lt;em&gt;what to move&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+    <item>
+      <title>LC-TEST-23 — Math Behind Loans</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-23-bank-loan/</link>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-23-bank-loan/</guid>
+      <description>&lt;h2 id=&#34;-why-this-document-exists&#34;&gt;🌍 Why This Document Exists&lt;/h2&gt;
+&lt;p&gt;Most people learn Python by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sorting lists&lt;/li&gt;
+&lt;li&gt;reversing strings&lt;/li&gt;
+&lt;li&gt;solving toy problems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But &lt;strong&gt;banks don’t care about toys&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Banks care about:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;money over time&lt;/li&gt;
+&lt;li&gt;interest dynamics&lt;/li&gt;
+&lt;li&gt;human financial decisions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This document teaches &lt;strong&gt;Python + Math + Real Banking Logic&lt;/strong&gt;&lt;br&gt;
+so students can &lt;em&gt;see their future mortgage before signing it&lt;/em&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-core-math-behind-loans-very-important&#34;&gt;🧠 Core Math Behind Loans (Very Important)&lt;/h1&gt;
+&lt;p&gt;When you borrow money, you are solving this problem:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Total Payment} = \sum_{t=1}^{T} \left( \text{Principal}_t + \text{Interest}_t \right)
+$$&lt;/p&gt;
+&lt;p&gt;Where interest usually follows:&lt;/p&gt;
+&lt;p&gt;interest_t = remaining_principal_t_1 * r_t&lt;/p&gt;
+&lt;p&gt;Understanding this formula is &lt;strong&gt;more important than memorizing code&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-problem-1--fixed-rate-mortgage-reality-check&#34;&gt;🟢 Problem 1 — Fixed Rate Mortgage (Reality Check)&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario&#34;&gt;📌 Scenario&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Condo price: &lt;strong&gt;3.3 million THB&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Fixed interest rate: &lt;strong&gt;6.5% per year&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Loan duration: &lt;strong&gt;30 years&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;No down payment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Assume:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Interest is compounded monthly&lt;/li&gt;
+&lt;li&gt;Payments are equal every month (standard mortgage)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-mathematical-hint&#34;&gt;🧮 Mathematical Hint&lt;/h3&gt;
+&lt;p&gt;Monthly interest rate:&lt;/p&gt;
+&lt;p&gt;$$
+r = \frac{0.065}{12}
+$$&lt;/p&gt;
+&lt;p&gt;Number of payments:&lt;/p&gt;
+&lt;p&gt;$$
+N = 30 \times 12
+$$&lt;/p&gt;
+&lt;p&gt;Monthly payment formula:&lt;/p&gt;
+&lt;p&gt;$$
+M = P \cdot \frac{r(1+r)^N}{(1+r)^N - 1}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-tasks&#34;&gt;🎯 Tasks&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Compute &lt;strong&gt;monthly payment&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Compute &lt;strong&gt;total money paid&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Compute &lt;strong&gt;total interest paid&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;P = 3_300_000
+annual_rate = 0.065
+r = annual_rate / 12
+N = 30 * 12
+
+monthly_payment = P * (r * (1 + r)**N) / ((1 + r)**N - 1)
+total_payment = monthly_payment * N
+total_interest = total_payment - P
+
+print(&amp;quot;Monthly payment:&amp;quot;, round(monthly_payment, 2))
+print(&amp;quot;Total paid:&amp;quot;, round(total_payment, 2))
+print(&amp;quot;Total interest:&amp;quot;, round(total_interest, 2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Concept Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You borrow 3.3M&lt;/li&gt;
+&lt;li&gt;You return &lt;strong&gt;almost double&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Time is more expensive than interest rate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-problem-2--fixed-rate-vs-floating-rate-bank-knowledge&#34;&gt;🟢 Problem 2 — Fixed Rate vs Floating Rate (Bank Knowledge)&lt;/h1&gt;
+&lt;p&gt;Before coding, you must understand &lt;strong&gt;bank language&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interest-types-explained-human-language&#34;&gt;🏦 Interest Types Explained (Human Language)&lt;/h2&gt;
+&lt;h3 id=&#34;fixed-rate&#34;&gt;Fixed Rate&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Interest rate is &lt;strong&gt;locked&lt;/strong&gt; for a period or entire contract.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;7% per year&lt;/li&gt;
+&lt;li&gt;Fixed for 4 years&lt;/li&gt;
+&lt;li&gt;No surprise&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;floating-rate&#34;&gt;Floating Rate&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Interest rate &lt;strong&gt;moves with the bank’s cost&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Usually written as:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Interest} = \text{MRR} - x
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-bank-reference-rates&#34;&gt;📘 Bank Reference Rates&lt;/h2&gt;
+&lt;h3 id=&#34;mlr--minimum-loan-rate&#34;&gt;MLR — Minimum Loan Rate&lt;/h3&gt;
+&lt;p&gt;Large, high-quality customers (business loans)&lt;/p&gt;
+&lt;h3 id=&#34;mrr--minimum-retail-rate&#34;&gt;MRR — Minimum Retail Rate&lt;/h3&gt;
+&lt;p&gt;Retail customers (home loans, personal loans)&lt;/p&gt;
+&lt;h3 id=&#34;mor--minimum-overdraft-rate&#34;&gt;MOR — Minimum Overdraft Rate&lt;/h3&gt;
+&lt;p&gt;Overdraft credit lines&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-new-scenario-realistic-mortgage&#34;&gt;📌 New Scenario (Realistic Mortgage)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Condo price: &lt;strong&gt;3.3M&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Loan term: &lt;strong&gt;30 years&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;First 3 years: &lt;strong&gt;MRR = 2.2%&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Remaining years: &lt;strong&gt;MRR = 3.3%&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;No down payment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-mathematical-hint-1&#34;&gt;🧮 Mathematical Hint&lt;/h3&gt;
+&lt;p&gt;Interest changes at time ( t = 36 ) months:&lt;/p&gt;
+&lt;p&gt;$$
+r_t =
+\begin{cases}
+\frac{0.022}{12}, &amp;amp; t \le 36 &lt;br&gt;
+\frac{0.033}{12}, &amp;amp; t &amp;gt; 36
+\end{cases}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-tasks-1&#34;&gt;🎯 Tasks&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Total money paid&lt;/li&gt;
+&lt;li&gt;Total interest paid&lt;/li&gt;
+&lt;li&gt;Interest paid &lt;strong&gt;per year&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;P = 3_300_000
+years = 30
+months = years * 12
+
+rates = [0.022] * 36 + [0.033] * (months - 36)
+
+balance = P
+total_interest = 0
+yearly_interest = {}
+
+monthly_payment = P * 0.005  # simplified assumption for teaching
+
+for m, rate in enumerate(rates, start=1):
+    r = rate / 12
+    interest = balance * r
+    principal = monthly_payment - interest
+    balance -= principal
+
+    total_interest += interest
+    year = (m - 1) // 12 + 1
+    yearly_interest[year] = yearly_interest.get(year, 0) + interest
+
+print(&amp;quot;Total interest:&amp;quot;, round(total_interest, 2))
+print(&amp;quot;Remaining balance:&amp;quot;, round(balance, 2))
+print(&amp;quot;Interest per year:&amp;quot;, yearly_interest)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Teaching Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Floating rate = uncertainty&lt;/li&gt;
+&lt;li&gt;Early years matter more than later years&lt;/li&gt;
+&lt;li&gt;Banks earn most interest at the beginning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-problem-3--add-10-down-payment&#34;&gt;🟢 Problem 3 — Add 10% Down Payment&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario-change&#34;&gt;📌 Scenario Change&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Down payment: &lt;strong&gt;10%&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Loan amount:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+P = 3.3M \times 0.9
+$$&lt;/p&gt;
+&lt;p&gt;Repeat &lt;strong&gt;Problem 2&lt;/strong&gt; with new principal.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;P = 3_300_000 * 0.9
+# reuse previous logic
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Key Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Small down payment = huge interest savings&lt;/li&gt;
+&lt;li&gt;Leverage is expensive&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-problem-4--aggressive-payoff-in-3-years-no-down-payment&#34;&gt;🟢 Problem 4 — Aggressive Payoff in 3 Years (No Down Payment)&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario-1&#34;&gt;📌 Scenario&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Loan: 3.3M&lt;/li&gt;
+&lt;li&gt;Finish payment in &lt;strong&gt;3 years&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Same interest as Problem 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-hint&#34;&gt;🧮 Hint&lt;/h3&gt;
+&lt;p&gt;Shorter time means:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Interest} \propto \text{Time}
+$$&lt;/p&gt;
+&lt;p&gt;But monthly cash flow explodes.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;P = 3_300_000
+months = 36
+rate = 0.022 / 12
+
+monthly_payment = P / months + (P * rate)
+
+total_paid = monthly_payment * months
+total_interest = total_paid - P
+
+print(total_paid, total_interest)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Life Lesson&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Banks hate early payoff&lt;/li&gt;
+&lt;li&gt;Discipline beats interest&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-problem-5--extreme-discipline-pay-off-in-2-years&#34;&gt;🟢 Problem 5 — Extreme Discipline: Pay Off in 2 Years&lt;/h1&gt;
+&lt;p&gt;Same logic as Problem 4, but:&lt;/p&gt;
+&lt;p&gt;$$
+T = 24 \text{ months}
+$$&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;months = 24
+rate = 0.022 / 12
+
+monthly_payment = P / months + (P * rate)
+total_paid = monthly_payment * months
+total_interest = total_paid - P
+
+print(total_paid, total_interest)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Final Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Interest is the price of time&lt;/li&gt;
+&lt;li&gt;Python helps you &lt;strong&gt;see the truth before signing&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-takeaway&#34;&gt;🎓 Final Takeaway&lt;/h2&gt;
+&lt;p&gt;If a student finishes this chapter, they can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;read bank contracts&lt;/li&gt;
+&lt;li&gt;simulate real mortgages&lt;/li&gt;
+&lt;li&gt;explain interest mathematically&lt;/li&gt;
+&lt;li&gt;write Python like a finance engineer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is &lt;strong&gt;real-world algorithmic thinking&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-this-chapter-exists&#34;&gt;🌍 Why This Chapter Exists&lt;/h2&gt;
+&lt;p&gt;Most people ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Which bank is cheaper?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Engineers ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Which bank minimizes &lt;strong&gt;expected financial pain under uncertainty&lt;/strong&gt;?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Banks price &lt;strong&gt;risk&lt;/strong&gt;, not kindness.&lt;/p&gt;
+&lt;p&gt;This chapter teaches:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;how to compare banks &lt;strong&gt;algorithmically&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;how to think in &lt;strong&gt;risk-adjusted terms&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;how Python exposes hidden costs humans overlook&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-mental-model-what-is-a-risk-adjusted-decision&#34;&gt;🧠 Mental Model: What Is a Risk-Adjusted Decision?&lt;/h1&gt;
+&lt;p&gt;A naive decision minimizes:&lt;/p&gt;
+&lt;p&gt;$$
+\min ; \text{Total Payment}
+$$&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;risk-aware decision&lt;/strong&gt; minimizes:&lt;/p&gt;
+&lt;p&gt;$$
+\min ; \mathbb{E}[\text{Cost}] + \lambda \cdot \text{Risk}
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;p&gt;expected_cost = E_cost  # Expected total payment
+risk = volatility  # Or uncertainty / worst-case exposure
+lambda_ = risk_aversion_level  # Human parameter for risk aversion&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-problem-setup--comparing-bank-a--b--c&#34;&gt;🏦 Problem Setup — Comparing Bank A / B / C&lt;/h1&gt;
+&lt;h3 id=&#34;-loan-assumptions-same-for-all-banks&#34;&gt;📌 Loan Assumptions (Same for All Banks)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Condo price: &lt;strong&gt;3.3M THB&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Loan term: &lt;strong&gt;30 years&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;No down payment&lt;/li&gt;
+&lt;li&gt;Monthly payment system&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-bank-profiles-very-realistic&#34;&gt;🏦 Bank Profiles (Very Realistic)&lt;/h2&gt;
+&lt;h3 id=&#34;-bank-a--safe--predictable&#34;&gt;🟢 Bank A — Safe &amp;amp; Predictable&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed rate: &lt;strong&gt;3.0%&lt;/strong&gt; for entire loan&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-bank-b--promotional-trap&#34;&gt;🟡 Bank B — Promotional Trap&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;2.0% for first &lt;strong&gt;3 years&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;4.0% afterward&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-bank-c--floating--uncertain&#34;&gt;🔴 Bank C — Floating &amp;amp; Uncertain&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MRR = &lt;strong&gt;2.0% → 5.0%&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Random yearly fluctuation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-1--pure-cost-comparison&#34;&gt;🟢 Question 1 — Pure Cost Comparison&lt;/h1&gt;
+&lt;h3 id=&#34;-task&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Calculate:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Total payment&lt;/li&gt;
+&lt;li&gt;Total interest&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;for &lt;strong&gt;Bank A and Bank B&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ignore uncertainty for now.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-hint-1&#34;&gt;🧮 Hint&lt;/h3&gt;
+&lt;p&gt;Monthly payment:&lt;/p&gt;
+&lt;p&gt;$$
+M = P \cdot \frac{r(1+r)^N}{(1+r)^N - 1}
+$$&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def mortgage_total(P, annual_rate, years):
+    r = annual_rate / 12
+    N = years * 12
+    M = P * (r * (1 + r)**N) / ((1 + r)**N - 1)
+    return M * N, M * N - P
+
+P = 3_300_000
+
+bank_A = mortgage_total(P, 0.03, 30)
+bank_B_part1 = mortgage_total(P, 0.02, 30)
+
+print(&amp;quot;Bank A:&amp;quot;, bank_A)
+print(&amp;quot;Bank B (naive):&amp;quot;, bank_B_part1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Promotional rates lie if you don’t model the future&lt;/li&gt;
+&lt;li&gt;Banks love customers who stop calculating at year 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-2--correctly-modeling-bank-b-piecewise-rates&#34;&gt;🟢 Question 2 — Correctly Modeling Bank B (Piecewise Rates)&lt;/h1&gt;
+&lt;h3 id=&#34;-task-1&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Bank B:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2% for 3 years&lt;/li&gt;
+&lt;li&gt;4% for remaining 27 years&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Compute &lt;strong&gt;real total interest&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-mathematical-hint-2&#34;&gt;🧮 Mathematical Hint&lt;/h3&gt;
+&lt;p&gt;Interest rate is time-dependent:&lt;/p&gt;
+&lt;p&gt;$$
+r_t =
+\begin{cases}
+0.02 &amp;amp; t \le 3 &lt;br&gt;
+0.04 &amp;amp; t &amp;gt; 3
+\end{cases}
+$$&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;P = 3_300_000
+balance = P
+years = 30
+monthly_payment = P * 0.005  # simplified for teaching
+
+rates = [0.02]*36 + [0.04]*(years*12 - 36)
+
+total_interest = 0
+
+for rate in rates:
+    interest = balance * (rate / 12)
+    principal = monthly_payment - interest
+    balance -= principal
+    total_interest += interest
+
+print(&amp;quot;Total interest Bank B:&amp;quot;, round(total_interest, 2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Engineering Lesson&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Time segmentation matters&lt;/li&gt;
+&lt;li&gt;Banks profit from human short-term thinking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-3--modeling-risk-bank-c-floating-rate&#34;&gt;🧠 Question 3 — Modeling Risk: Bank C (Floating Rate)&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario-2&#34;&gt;📌 Scenario&lt;/h3&gt;
+&lt;p&gt;Bank C interest:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Starts at 2%&lt;/li&gt;
+&lt;li&gt;Every year randomly moves ±1%&lt;/li&gt;
+&lt;li&gt;Capped at 5%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-task-2&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Simulate &lt;strong&gt;1000 futures&lt;/strong&gt; and compute:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Expected total interest&lt;/li&gt;
+&lt;li&gt;Worst 10% outcome (risk)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-hint-monte-carlo-thinking&#34;&gt;🧮 Hint (Monte Carlo Thinking)&lt;/h3&gt;
+&lt;p&gt;$$
+\mathbb{E}[X] \approx \frac{1}{N} \sum_{i=1}^N X_i
+$$&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+def simulate_bank_c(P, years, simulations=1000):
+    results = []
+
+    for _ in range(simulations):
+        balance = P
+        total_interest = 0
+        rate = 0.02
+
+        for _ in range(years * 12):
+            if random.random() &amp;lt; 1/12:
+                rate += random.choice([-0.01, 0.01])
+                rate = min(max(rate, 0.02), 0.05)
+
+            interest = balance * (rate / 12)
+            balance -= (P / (years*12))
+            total_interest += interest
+
+        results.append(total_interest)
+
+    results.sort()
+    return sum(results)/len(results), results[int(0.9*len(results))]
+
+expected, worst_10 = simulate_bank_c(3_300_000, 30)
+
+print(&amp;quot;Expected interest:&amp;quot;, expected)
+print(&amp;quot;Worst 10% interest:&amp;quot;, worst_10)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Deep Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Floating rate is not “cheaper”&lt;/li&gt;
+&lt;li&gt;It is a &lt;strong&gt;distribution&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Humans underestimate tail risk&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-4--risk-adjusted-decision-rule&#34;&gt;🧠 Question 4 — Risk-Adjusted Decision Rule&lt;/h1&gt;
+&lt;h3 id=&#34;-task-3&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Define a decision score:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Score} = \mathbb{E}[\text{Interest}] + \lambda \cdot \text{WorstCase}
+$$&lt;/p&gt;
+&lt;p&gt;Compare banks for:&lt;/p&gt;
+&lt;p&gt;lambda_value = 0  # Risk-neutral
+lambda_value = 0.5  # Moderately risk-averse
+lambda_value = 1.0  # Highly risk-averse&lt;/p&gt;
+&lt;hr&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;banks = {
+    &amp;quot;A&amp;quot;: {&amp;quot;expected&amp;quot;: 1.9e6, &amp;quot;risk&amp;quot;: 0.1e6},
+    &amp;quot;B&amp;quot;: {&amp;quot;expected&amp;quot;: 1.7e6, &amp;quot;risk&amp;quot;: 0.4e6},
+    &amp;quot;C&amp;quot;: {&amp;quot;expected&amp;quot;: expected, &amp;quot;risk&amp;quot;: worst_10}
+}
+
+for lam in [0, 0.5, 1.0]:
+    print(&amp;quot;\nLambda =&amp;quot;, lam)
+    for k, v in banks.items():
+        score = v[&amp;quot;expected&amp;quot;] + lam * v[&amp;quot;risk&amp;quot;]
+        print(k, round(score, 2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Human Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Young + rich → Bank C&lt;/li&gt;
+&lt;li&gt;Family + fixed income → Bank A&lt;/li&gt;
+&lt;li&gt;Optimists regret Bank B&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-mental-upgrade&#34;&gt;🎓 Final Mental Upgrade&lt;/h2&gt;
+&lt;p&gt;After this chapter, students can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;model banks as stochastic systems&lt;/li&gt;
+&lt;li&gt;quantify financial risk&lt;/li&gt;
+&lt;li&gt;explain why “cheapest” ≠ “best”&lt;/li&gt;
+&lt;li&gt;think like a &lt;strong&gt;bank risk analyst&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is &lt;strong&gt;real Python for real life decisions&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-this-chapter-exists-1&#34;&gt;🌍 Why This Chapter Exists&lt;/h2&gt;
+&lt;p&gt;Most mortgage calculators assume:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“The future is stable.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Banks never assume that.&lt;/p&gt;
+&lt;p&gt;Banks ask:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What if income drops?&lt;/li&gt;
+&lt;li&gt;What if interest spikes?&lt;/li&gt;
+&lt;li&gt;What if humans panic?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This chapter teaches:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;how to &lt;strong&gt;simulate recession scenarios&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;how to evaluate decisions using &lt;strong&gt;expected utility&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;why banks survive crises while households don’t&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-core-upgrade-cost-is-not-pain&#34;&gt;🧠 Core Upgrade: Cost Is Not Pain&lt;/h1&gt;
+&lt;p&gt;Humans don’t minimize money.&lt;/p&gt;
+&lt;p&gt;They minimize &lt;strong&gt;pain&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Economics models this using &lt;strong&gt;utility&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-expected-utility-theory-very-simple&#34;&gt;📘 Expected Utility Theory (Very Simple)&lt;/h2&gt;
+&lt;p&gt;Instead of minimizing cost:&lt;/p&gt;
+&lt;p&gt;$$
+\min ; \mathbb{E}[\text{Cost}]
+$$&lt;/p&gt;
+&lt;p&gt;Humans actually maximize:&lt;/p&gt;
+&lt;p&gt;$$
+\max ; \mathbb{E}[U(W)]
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;( W ) = wealth after paying mortgage&lt;/li&gt;
+&lt;li&gt;( U(\cdot) ) = utility function (how painful money loss feels)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-common-utility-function-risk-averse-human&#34;&gt;🧠 Common Utility Function (Risk-Averse Human)&lt;/h2&gt;
+&lt;p&gt;$$
+U(W) = \sqrt{W}
+$$&lt;/p&gt;
+&lt;p&gt;Why?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Losing 100k hurts more when you are poor&lt;/li&gt;
+&lt;li&gt;Rich people absorb shocks better&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-recession-model--what-changes&#34;&gt;🏦 Recession Model — What Changes?&lt;/h1&gt;
+&lt;p&gt;During a recession, &lt;strong&gt;three things happen together&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Interest rates increase&lt;/li&gt;
+&lt;li&gt;Income becomes unstable&lt;/li&gt;
+&lt;li&gt;Forced selling risk appears&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We simulate &lt;strong&gt;interest shock + income shock&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-1--modeling-a-recession-shock&#34;&gt;🟢 Question 1 — Modeling a Recession Shock&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario-3&#34;&gt;📌 Scenario&lt;/h3&gt;
+&lt;p&gt;At year 5:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Interest jumps by +2%&lt;/li&gt;
+&lt;li&gt;Monthly income drops by 30% for 2 years&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-task-4&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Simulate mortgage under recession and compute:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;total interest&lt;/li&gt;
+&lt;li&gt;minimum remaining cash buffer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-mathematical-hint-3&#34;&gt;🧮 Mathematical Hint&lt;/h3&gt;
+&lt;p&gt;Interest rate shift:&lt;/p&gt;
+&lt;p&gt;$$
+r_t =
+\begin{cases}
+r &amp;amp; t &amp;lt; t_c \
+r + 0.02 &amp;amp; t \ge t_c
+\end{cases}
+$$&lt;/p&gt;
+&lt;p&gt;Income shock:&lt;/p&gt;
+&lt;p&gt;$$
+I_t = 0.7 I \quad \text{during recession}
+$$&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;P = 3_300_000
+balance = P
+years = 30
+monthly_income = 80_000
+monthly_payment = 25_000
+cash_buffer = 500_000
+
+rate = 0.03
+total_interest = 0
+min_cash = cash_buffer
+
+for m in range(1, years * 12 + 1):
+    if m == 5 * 12:
+        rate += 0.02
+
+    income = monthly_income
+    if 5 * 12 &amp;lt;= m &amp;lt;= 7 * 12:
+        income *= 0.7
+
+    interest = balance * (rate / 12)
+    principal = monthly_payment - interest
+    balance -= principal
+    total_interest += interest
+
+    cash_buffer += income - monthly_payment
+    min_cash = min(min_cash, cash_buffer)
+
+print(&amp;quot;Total interest:&amp;quot;, round(total_interest, 2))
+print(&amp;quot;Minimum cash buffer:&amp;quot;, round(min_cash, 2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Reality Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Interest shock hurts slowly&lt;/li&gt;
+&lt;li&gt;Income shock kills fast&lt;/li&gt;
+&lt;li&gt;Liquidity &amp;gt; interest rate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-2--probability-of-default-human-view&#34;&gt;🧠 Question 2 — Probability of Default (Human View)&lt;/h1&gt;
+&lt;h3 id=&#34;-default-rule&#34;&gt;📌 Default Rule&lt;/h3&gt;
+&lt;p&gt;Household defaults if:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Cash Buffer} &amp;lt; 0
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-task-5&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Simulate &lt;strong&gt;1000 recession paths&lt;/strong&gt; and compute:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;probability of default&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+def simulate_default():
+    cash = 500_000
+    balance = 3_300_000
+    rate = 0.03
+    income = 80_000
+    payment = 25_000
+
+    for m in range(1, 30*12):
+        if m == 5 * 12:
+            rate += 0.02
+
+        shock = random.random() &amp;lt; 0.3
+        current_income = income * (0.7 if shock else 1.0)
+
+        interest = balance * (rate / 12)
+        balance -= (payment - interest)
+        cash += current_income - payment
+
+        if cash &amp;lt; 0:
+            return True
+
+    return False
+
+defaults = sum(simulate_default() for _ in range(1000))
+print(&amp;quot;Default probability:&amp;quot;, defaults / 1000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Bank Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Banks don’t care about averages&lt;/li&gt;
+&lt;li&gt;They price &lt;strong&gt;default probability&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-3--expected-utility-comparison-bank-a-vs-c&#34;&gt;🧠 Question 3 — Expected Utility Comparison (Bank A vs C)&lt;/h1&gt;
+&lt;h3 id=&#34;-setup&#34;&gt;📌 Setup&lt;/h3&gt;
+&lt;p&gt;We compare two choices:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bank A: fixed rate, low volatility&lt;/li&gt;
+&lt;li&gt;Bank C: floating rate, high volatility&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-task-6&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Compute expected utility under recession risk.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-utility-function&#34;&gt;🧮 Utility Function&lt;/h3&gt;
+&lt;p&gt;$$
+U(W) = \sqrt{W}
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;p&gt;$$
+W = \text{Final Wealth} = \text{Savings} - \text{Total Paid}
+$$&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import math
+
+def utility(wealth):
+    return math.sqrt(max(wealth, 0))
+
+def expected_utility(simulations, bank_type):
+    utilities = []
+
+    for _ in range(simulations):
+        savings = 2_000_000
+        total_paid = 0
+
+        if bank_type == &amp;quot;A&amp;quot;:
+            rate = 0.03
+        else:
+            rate = random.uniform(0.02, 0.05)
+
+        total_paid = 3_300_000 * (1 + rate * 30)
+        wealth = savings - total_paid
+        utilities.append(utility(wealth))
+
+    return sum(utilities) / len(utilities)
+
+print(&amp;quot;EU Bank A:&amp;quot;, expected_utility(1000, &amp;quot;A&amp;quot;))
+print(&amp;quot;EU Bank C:&amp;quot;, expected_utility(1000, &amp;quot;C&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Key Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Higher expected cost can still give &lt;strong&gt;higher utility&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Safety has value&lt;/li&gt;
+&lt;li&gt;Volatility destroys utility faster than it saves money&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-4--why-banks-win-final-truth&#34;&gt;🧠 Question 4 — Why Banks Win (Final Truth)&lt;/h1&gt;
+&lt;p&gt;Banks optimize:&lt;/p&gt;
+&lt;p&gt;$$
+\max ; \mathbb{E}[\text{Profit}] - \text{Tail Risk}
+$$&lt;/p&gt;
+&lt;p&gt;Humans ignore tail risk.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-thought-question-no-code&#34;&gt;🎯 Thought Question (No Code)&lt;/h3&gt;
+&lt;p&gt;Why do banks survive recessions while households don’t?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$$
+\text{Diversification} + \text{Capital Buffer} \gg \text{Single Mortgage}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-mental-shift&#34;&gt;🎓 Final Mental Shift&lt;/h2&gt;
+&lt;p&gt;After this chapter, students understand:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;why floating rate is psychologically dangerous&lt;/li&gt;
+&lt;li&gt;why recession kills liquidity, not math&lt;/li&gt;
+&lt;li&gt;why expected utility beats “lowest interest”&lt;/li&gt;
+&lt;li&gt;why banks always design contracts to win&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You are no longer a borrower.&lt;/p&gt;
+&lt;p&gt;You are a &lt;strong&gt;system thinker&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-this-chapter-exists-2&#34;&gt;🌍 Why This Chapter Exists&lt;/h2&gt;
+&lt;p&gt;People often say:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Banks are greedy.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That is emotionally true — but technically incomplete.&lt;/p&gt;
+&lt;p&gt;Banks do not survive because of greed.&lt;br&gt;
+They survive because of &lt;strong&gt;structure&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This chapter explains:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;why banks can take risks households cannot&lt;/li&gt;
+&lt;li&gt;why leverage hurts humans more than math predicts&lt;/li&gt;
+&lt;li&gt;why loss hurts &lt;strong&gt;more than gain feels good&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-part-i--bank-capital-vs-household-leverage&#34;&gt;🏦 Part I — Bank Capital vs Household Leverage&lt;/h1&gt;
+&lt;h2 id=&#34;-core-asymmetry-very-important&#34;&gt;🧠 Core Asymmetry (Very Important)&lt;/h2&gt;
+&lt;p&gt;A household usually has:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Leverage} = \frac{\text{Debt}}{\text{Income}} \gg 1
+$$&lt;/p&gt;
+&lt;p&gt;A bank operates under:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Capital Ratio} = \frac{\text{Equity}}{\text{Risk-Weighted Assets}} \ge 8%
+$$&lt;/p&gt;
+&lt;p&gt;Same money system — &lt;strong&gt;completely different survival rules&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-definitions-plain-english&#34;&gt;📘 Definitions (Plain English)&lt;/h2&gt;
+&lt;h3 id=&#34;household-leverage&#34;&gt;Household Leverage&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;One income stream&lt;/li&gt;
+&lt;li&gt;One large loan&lt;/li&gt;
+&lt;li&gt;Failure = life disruption&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;bank-capital&#34;&gt;Bank Capital&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thousands of borrowers&lt;/li&gt;
+&lt;li&gt;Diversification&lt;/li&gt;
+&lt;li&gt;Loss absorption buffer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-1--leverage-comparison-math-reality&#34;&gt;🟢 Question 1 — Leverage Comparison (Math Reality)&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario-4&#34;&gt;📌 Scenario&lt;/h3&gt;
+&lt;p&gt;Household:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Income: 80,000 THB/month&lt;/li&gt;
+&lt;li&gt;Mortgage: 3.3M&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bank:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Loans issued: 1,000 × 3.3M&lt;/li&gt;
+&lt;li&gt;Capital ratio: 10%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-tasks-2&#34;&gt;🎯 Tasks&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Compute household leverage&lt;/li&gt;
+&lt;li&gt;Compute bank equity buffer&lt;/li&gt;
+&lt;li&gt;Compare shock tolerance&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-mathematical-hint-4&#34;&gt;🧮 Mathematical Hint&lt;/h3&gt;
+&lt;p&gt;$$
+\text{Household Leverage} = \frac{\text{Debt}}{\text{Annual Income}}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\text{Bank Capital} = 0.10 \times \text{Total Loans}
+$$&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;household_income = 80_000 * 12
+household_debt = 3_300_000
+
+leverage = household_debt / household_income
+
+bank_loans = 3_300_000 * 1000
+bank_capital = bank_loans * 0.10
+
+print(&amp;quot;Household leverage:&amp;quot;, round(leverage, 2))
+print(&amp;quot;Bank capital buffer:&amp;quot;, bank_capital)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Interpretation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Household leverage ≈ 3–5× income → fragile&lt;/li&gt;
+&lt;li&gt;Bank absorbs &lt;strong&gt;millions of defaults&lt;/strong&gt; before dying&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-2--shock-absorption-test&#34;&gt;🧠 Question 2 — Shock Absorption Test&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario-5&#34;&gt;📌 Scenario&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Economic shock causes &lt;strong&gt;5% of borrowers to default&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Each default loses 50% of loan value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-tasks-3&#34;&gt;🎯 Tasks&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Compute total bank loss&lt;/li&gt;
+&lt;li&gt;Check if bank survives&lt;/li&gt;
+&lt;li&gt;Compare to household shock&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;default_rate = 0.05
+loss_given_default = 0.5
+
+loss = bank_loans * default_rate * loss_given_default
+bank_survives = loss &amp;lt; bank_capital
+
+print(&amp;quot;Bank loss:&amp;quot;, loss)
+print(&amp;quot;Bank survives:&amp;quot;, bank_survives)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Key Truth&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Banks are built to &lt;strong&gt;expect failure&lt;/strong&gt;.
+Households are not.&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-part-ii--prospect-theory-why-humans-panic&#34;&gt;🧠 Part II — Prospect Theory (Why Humans Panic)&lt;/h1&gt;
+&lt;h2 id=&#34;-classical-economics-assumption-wrong&#34;&gt;📘 Classical Economics Assumption (Wrong)&lt;/h2&gt;
+&lt;p&gt;Humans maximize expected value:&lt;/p&gt;
+&lt;p&gt;$$
+\max ; \mathbb{E}[W]
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-prospect-theory-reality&#34;&gt;🧠 Prospect Theory (Reality)&lt;/h2&gt;
+&lt;p&gt;Humans evaluate &lt;strong&gt;gains and losses asymmetrically&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Utility function:&lt;/p&gt;
+&lt;p&gt;$$
+U(x) =
+\begin{cases}
+x^\alpha &amp;amp; x \ge 0 &lt;br&gt;
+-\lambda |x|^\beta &amp;amp; x &amp;lt; 0
+\end{cases}
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;( \lambda &amp;gt; 1 ) (loss hurts more than gain)&lt;/li&gt;
+&lt;li&gt;Typically ( \lambda \approx 2.25 )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-3--loss-aversion-in-mortgage-decisions&#34;&gt;🟢 Question 3 — Loss Aversion in Mortgage Decisions&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario-6&#34;&gt;📌 Scenario&lt;/h3&gt;
+&lt;p&gt;Two outcomes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Option A: Save 100,000 THB&lt;/li&gt;
+&lt;li&gt;Option B: Risk losing 100,000 THB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Expected value = same.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-task-7&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Compare utility using prospect theory.&lt;/p&gt;
+&lt;hr&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def prospect_utility(x, alpha=0.88, beta=0.88, lam=2.25):
+    if x &amp;gt;= 0:
+        return x ** alpha
+    else:
+        return -lam * (abs(x) ** beta)
+
+gain = prospect_utility(100_000)
+loss = prospect_utility(-100_000)
+
+print(&amp;quot;Utility of gain:&amp;quot;, gain)
+print(&amp;quot;Utility of loss:&amp;quot;, loss)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Psychological Truth&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Losing 100k hurts ~2× more than gaining 100k feels good&lt;/li&gt;
+&lt;li&gt;Floating rate mortgages amplify psychological pain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-4--why-households-panic-sell&#34;&gt;🧠 Question 4 — Why Households Panic-Sell&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario-7&#34;&gt;📌 Scenario&lt;/h3&gt;
+&lt;p&gt;During recession:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;House price drops 15%&lt;/li&gt;
+&lt;li&gt;Mortgage balance unchanged&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-task-8&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Compute perceived loss vs actual loss.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-hint-2&#34;&gt;🧮 Hint&lt;/h3&gt;
+&lt;p&gt;Reference point matters:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Loss} = P_{\text{peak}} - P_{\text{current}}
+$$&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;house_price = 3_300_000
+price_drop = 0.15
+
+actual_loss = house_price * price_drop
+perceived_pain = prospect_utility(-actual_loss)
+
+print(&amp;quot;Actual loss:&amp;quot;, actual_loss)
+print(&amp;quot;Perceived pain:&amp;quot;, perceived_pain)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Key Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;People sell not because of math —
+they sell because of &lt;strong&gt;pain&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Banks know this.&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-5--final-synthesis-no-code&#34;&gt;🧠 Question 5 — Final Synthesis (No Code)&lt;/h1&gt;
+&lt;p&gt;Why do banks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;encourage leverage?&lt;/li&gt;
+&lt;li&gt;offer floating rates?&lt;/li&gt;
+&lt;li&gt;survive crises?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Answer (Hint):&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$$
+\text{Diversification} + \text{Capital} + \text{Asymmetric Psychology}
+$$&lt;/p&gt;
+&lt;p&gt;Households face:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;concentrated risk&lt;/li&gt;
+&lt;li&gt;no buffer&lt;/li&gt;
+&lt;li&gt;loss aversion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-mental-model&#34;&gt;🎓 Final Mental Model&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Entity&lt;/th&gt;
+&lt;th&gt;Risk&lt;/th&gt;
+&lt;th&gt;Buffer&lt;/th&gt;
+&lt;th&gt;Psychology&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Household&lt;/td&gt;
+&lt;td&gt;Concentrated&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;td&gt;Loss-averse&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Bank&lt;/td&gt;
+&lt;td&gt;Diversified&lt;/td&gt;
+&lt;td&gt;Capital&lt;/td&gt;
+&lt;td&gt;Risk-neutral&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Banks don’t win by cheating.&lt;/p&gt;
+&lt;p&gt;They win because the system was &lt;strong&gt;never symmetric&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You now see the matrix.&lt;/p&gt;
 &lt;hr&gt;</description>
     </item>
     

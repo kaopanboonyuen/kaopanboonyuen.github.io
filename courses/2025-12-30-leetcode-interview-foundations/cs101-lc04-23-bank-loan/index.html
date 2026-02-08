@@ -1,0 +1,2530 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Teerapong Panboonyuen" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-23-bank-loan/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08f2e04360a1c87f5ad39547c02bf219.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-23-bank-loan/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-23-bank-loan/" />
+  <meta property="og:title" content="LC-TEST-23 — Math Behind Loans | Teerapong Panboonyuen" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2026-02-07T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2026-02-07T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>LC-TEST-23 — Math Behind Loans | Teerapong Panboonyuen</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="20ee5a0945329f2dd1a6dd24d369158c" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.4be02a3b391999348b0c7478778a0e4b.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#awards"><span>Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#press"><span>Press</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Featured</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#tags"><span>Topics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#communities"><span>Communities</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://x.com/kaopanboonyuen" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          LeetCode Foundations
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/courses/"><i class="fas fa-arrow-left pr-1"></i>Courses</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/courses/2025-12-30-leetcode-interview-foundations/">LeetCode Foundations</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc01-intro/">CS101-LC01 — What is LeetCode? (Why Everyone Uses It)</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc02-big-o/">CS101-LC02 — Big-O Intuition</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc03-python-recap/">CS101-LC03 — Python for Interviews (From Zero to Thinking Like an Engineer)</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-01-sorting/">LC-TEST-01 — Sorting an Array</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-02-prime-number/">LC-TEST-02 — Prime Number Check</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-03-linear-search/">LC-TEST-03 — Linear Search</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-04-nested-loop/">LC-TEST-04 — Nested Loops (Thinking Beyond O(n²))</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-05-two-sum/">LC-TEST-05 — Two Sum (Brute Force → Hash Map)</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-06-probability-ai/">LC-TEST-06 — Probability for Machine Learning</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-07-indexing-and-containers/">LC-TEST-07 — Indexing &amp; Containers Mastery</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-08-two-pointers/">LC-TEST-08 — Two Pointers in the Wild</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-09-sliding-windows/">LC-TEST-09 — Sliding Window Like a Pro</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-10-messi-stats/">LC-TEST-10 — Messi&#39;s Barcelona Career (Stats and Achievements)</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-11-messi-stats-with-string/">LC-TEST-11 — Messi &amp; Barcelona Career Analytics (Indexing Mastery)</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-12-fifa-world-cup-copy/">LC-TEST-12 — FIFA World Cup 2026 Ultimate Analytics</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-13-messi-puzzle/">LC-TEST-13 — Messi Puzzle</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-14-algorithm-test-v1/">LC-TEST-14 — Algorithm Test (V1)</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-15-algorithm-test-v2/">LC-TEST-15 — Algorithm Test (V2)</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-16-algorithm-test-v3/">LC-TEST-16 — Algorithm Test (V3)</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-17-nlp-basic-v1/">LC-TEST-17 — Basic NLP (V1)</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-18-nlp-basic-v2/">LC-TEST-18 — Basic NLP (V2)</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-19-nlp-basic-v3/">LC-TEST-19 — Basic NLP (V3)</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-20-algorithm-test-v4/">LC-TEST-20 — Algorithm Test (V4)</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-21-algorithm-test-v5/">LC-TEST-21 — Algorithm Test (V5)</a></li>
+
+
+
+  <li class=""><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-22-recap-basic-logic/">LC-TEST-22 — Recap Basic Logic</a></li>
+
+
+
+  <li class="active"><a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-23-bank-loan/">LC-TEST-23 — Math Behind Loans</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-why-this-document-exists">🌍 Why This Document Exists</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-scenario">📌 Scenario</a></li>
+        <li><a href="#-mathematical-hint">🧮 Mathematical Hint</a></li>
+        <li><a href="#-tasks">🎯 Tasks</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#-interest-types-explained-human-language">🏦 Interest Types Explained (Human Language)</a>
+      <ul>
+        <li><a href="#fixed-rate">Fixed Rate</a></li>
+        <li><a href="#floating-rate">Floating Rate</a></li>
+      </ul>
+    </li>
+    <li><a href="#-bank-reference-rates">📘 Bank Reference Rates</a>
+      <ul>
+        <li><a href="#mlr--minimum-loan-rate">MLR — Minimum Loan Rate</a></li>
+        <li><a href="#mrr--minimum-retail-rate">MRR — Minimum Retail Rate</a></li>
+        <li><a href="#mor--minimum-overdraft-rate">MOR — Minimum Overdraft Rate</a></li>
+      </ul>
+    </li>
+    <li><a href="#-new-scenario-realistic-mortgage">📌 New Scenario (Realistic Mortgage)</a>
+      <ul>
+        <li><a href="#-mathematical-hint-1">🧮 Mathematical Hint</a></li>
+        <li><a href="#-tasks-1">🎯 Tasks</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-scenario-change">📌 Scenario Change</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-scenario-1">📌 Scenario</a></li>
+        <li><a href="#-hint">🧮 Hint</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#-final-takeaway">🎓 Final Takeaway</a></li>
+    <li><a href="#-why-this-chapter-exists">🌍 Why This Chapter Exists</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-loan-assumptions-same-for-all-banks">📌 Loan Assumptions (Same for All Banks)</a></li>
+      </ul>
+    </li>
+    <li><a href="#-bank-profiles-very-realistic">🏦 Bank Profiles (Very Realistic)</a>
+      <ul>
+        <li><a href="#-bank-a--safe--predictable">🟢 Bank A — Safe &amp; Predictable</a></li>
+        <li><a href="#-bank-b--promotional-trap">🟡 Bank B — Promotional Trap</a></li>
+        <li><a href="#-bank-c--floating--uncertain">🔴 Bank C — Floating &amp; Uncertain</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-task">🎯 Task</a></li>
+        <li><a href="#-hint-1">🧮 Hint</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-task-1">🎯 Task</a></li>
+        <li><a href="#-mathematical-hint-2">🧮 Mathematical Hint</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-scenario-2">📌 Scenario</a></li>
+        <li><a href="#-task-2">🎯 Task</a></li>
+        <li><a href="#-hint-monte-carlo-thinking">🧮 Hint (Monte Carlo Thinking)</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-task-3">🎯 Task</a></li>
+      </ul>
+    </li>
+    <li><a href="#-final-mental-upgrade">🎓 Final Mental Upgrade</a></li>
+    <li><a href="#-why-this-chapter-exists-1">🌍 Why This Chapter Exists</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-expected-utility-theory-very-simple">📘 Expected Utility Theory (Very Simple)</a></li>
+    <li><a href="#-common-utility-function-risk-averse-human">🧠 Common Utility Function (Risk-Averse Human)</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-scenario-3">📌 Scenario</a></li>
+        <li><a href="#-task-4">🎯 Task</a></li>
+        <li><a href="#-mathematical-hint-3">🧮 Mathematical Hint</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-default-rule">📌 Default Rule</a></li>
+        <li><a href="#-task-5">🎯 Task</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-setup">📌 Setup</a></li>
+        <li><a href="#-task-6">🎯 Task</a></li>
+        <li><a href="#-utility-function">🧮 Utility Function</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-thought-question-no-code">🎯 Thought Question (No Code)</a></li>
+      </ul>
+    </li>
+    <li><a href="#-final-mental-shift">🎓 Final Mental Shift</a></li>
+    <li><a href="#-why-this-chapter-exists-2">🌍 Why This Chapter Exists</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#-core-asymmetry-very-important">🧠 Core Asymmetry (Very Important)</a></li>
+    <li><a href="#-definitions-plain-english">📘 Definitions (Plain English)</a>
+      <ul>
+        <li><a href="#household-leverage">Household Leverage</a></li>
+        <li><a href="#bank-capital">Bank Capital</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-scenario-4">📌 Scenario</a></li>
+        <li><a href="#-tasks-2">🎯 Tasks</a></li>
+        <li><a href="#-mathematical-hint-4">🧮 Mathematical Hint</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-scenario-5">📌 Scenario</a></li>
+        <li><a href="#-tasks-3">🎯 Tasks</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#-classical-economics-assumption-wrong">📘 Classical Economics Assumption (Wrong)</a></li>
+    <li><a href="#-prospect-theory-reality">🧠 Prospect Theory (Reality)</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-scenario-6">📌 Scenario</a></li>
+        <li><a href="#-task-7">🎯 Task</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-scenario-7">📌 Scenario</a></li>
+        <li><a href="#-task-8">🎯 Task</a></li>
+        <li><a href="#-hint-2">🧮 Hint</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#-final-mental-model">🎓 Final Mental Model</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+  
+  
+
+  <li class="breadcrumb-item">
+    <a href="/">
+      
+        Home
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/">
+      
+        Courses
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/2025-12-30-leetcode-interview-foundations/">
+      
+        LeetCode Foundations
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        LC-TEST-23 — Math Behind Loans
+      </li>
+    </ol>
+  </nav>
+
+
+          
+
+          <h1>LC-TEST-23 — Math Behind Loans</h1>
+
+          <div class="article-style">
+            <h2 id="-why-this-document-exists">🌍 Why This Document Exists</h2>
+<p>Most people learn Python by:</p>
+<ul>
+<li>sorting lists</li>
+<li>reversing strings</li>
+<li>solving toy problems</li>
+</ul>
+<p>But <strong>banks don’t care about toys</strong>.</p>
+<p>Banks care about:</p>
+<ul>
+<li>money over time</li>
+<li>interest dynamics</li>
+<li>human financial decisions</li>
+</ul>
+<p>This document teaches <strong>Python + Math + Real Banking Logic</strong><br>
+so students can <em>see their future mortgage before signing it</em>.</p>
+<hr>
+<h1 id="-core-math-behind-loans-very-important">🧠 Core Math Behind Loans (Very Important)</h1>
+<p>When you borrow money, you are solving this problem:</p>
+<p>$$
+\text{Total Payment} = \sum_{t=1}^{T} \left( \text{Principal}_t + \text{Interest}_t \right)
+$$</p>
+<p>Where interest usually follows:</p>
+<p>interest_t = remaining_principal_t_1 * r_t</p>
+<p>Understanding this formula is <strong>more important than memorizing code</strong>.</p>
+<hr>
+<h1 id="-problem-1--fixed-rate-mortgage-reality-check">🟢 Problem 1 — Fixed Rate Mortgage (Reality Check)</h1>
+<h3 id="-scenario">📌 Scenario</h3>
+<ul>
+<li>Condo price: <strong>3.3 million THB</strong></li>
+<li>Fixed interest rate: <strong>6.5% per year</strong></li>
+<li>Loan duration: <strong>30 years</strong></li>
+<li>No down payment</li>
+</ul>
+<p>Assume:</p>
+<ul>
+<li>Interest is compounded monthly</li>
+<li>Payments are equal every month (standard mortgage)</li>
+</ul>
+<hr>
+<h3 id="-mathematical-hint">🧮 Mathematical Hint</h3>
+<p>Monthly interest rate:</p>
+<p>$$
+r = \frac{0.065}{12}
+$$</p>
+<p>Number of payments:</p>
+<p>$$
+N = 30 \times 12
+$$</p>
+<p>Monthly payment formula:</p>
+<p>$$
+M = P \cdot \frac{r(1+r)^N}{(1+r)^N - 1}
+$$</p>
+<hr>
+<h3 id="-tasks">🎯 Tasks</h3>
+<ol>
+<li>Compute <strong>monthly payment</strong></li>
+<li>Compute <strong>total money paid</strong></li>
+<li>Compute <strong>total interest paid</strong></li>
+</ol>
+<details>
+<summary>✅ Solution (Python)</summary>
+<pre><code class="language-python">P = 3_300_000
+annual_rate = 0.065
+r = annual_rate / 12
+N = 30 * 12
+
+monthly_payment = P * (r * (1 + r)**N) / ((1 + r)**N - 1)
+total_payment = monthly_payment * N
+total_interest = total_payment - P
+
+print(&quot;Monthly payment:&quot;, round(monthly_payment, 2))
+print(&quot;Total paid:&quot;, round(total_payment, 2))
+print(&quot;Total interest:&quot;, round(total_interest, 2))
+</code></pre>
+<p>💡 <strong>Concept Insight</strong></p>
+<ul>
+<li>You borrow 3.3M</li>
+<li>You return <strong>almost double</strong></li>
+<li>Time is more expensive than interest rate</li>
+</ul>
+</details>
+<hr>
+<h1 id="-problem-2--fixed-rate-vs-floating-rate-bank-knowledge">🟢 Problem 2 — Fixed Rate vs Floating Rate (Bank Knowledge)</h1>
+<p>Before coding, you must understand <strong>bank language</strong>.</p>
+<hr>
+<h2 id="-interest-types-explained-human-language">🏦 Interest Types Explained (Human Language)</h2>
+<h3 id="fixed-rate">Fixed Rate</h3>
+<blockquote>
+<p>Interest rate is <strong>locked</strong> for a period or entire contract.</p>
+</blockquote>
+<p>Example:</p>
+<ul>
+<li>7% per year</li>
+<li>Fixed for 4 years</li>
+<li>No surprise</li>
+</ul>
+<hr>
+<h3 id="floating-rate">Floating Rate</h3>
+<blockquote>
+<p>Interest rate <strong>moves with the bank’s cost</strong></p>
+</blockquote>
+<p>Usually written as:</p>
+<p>$$
+\text{Interest} = \text{MRR} - x
+$$</p>
+<hr>
+<h2 id="-bank-reference-rates">📘 Bank Reference Rates</h2>
+<h3 id="mlr--minimum-loan-rate">MLR — Minimum Loan Rate</h3>
+<p>Large, high-quality customers (business loans)</p>
+<h3 id="mrr--minimum-retail-rate">MRR — Minimum Retail Rate</h3>
+<p>Retail customers (home loans, personal loans)</p>
+<h3 id="mor--minimum-overdraft-rate">MOR — Minimum Overdraft Rate</h3>
+<p>Overdraft credit lines</p>
+<hr>
+<h2 id="-new-scenario-realistic-mortgage">📌 New Scenario (Realistic Mortgage)</h2>
+<ul>
+<li>Condo price: <strong>3.3M</strong></li>
+<li>Loan term: <strong>30 years</strong></li>
+<li>First 3 years: <strong>MRR = 2.2%</strong></li>
+<li>Remaining years: <strong>MRR = 3.3%</strong></li>
+<li>No down payment</li>
+</ul>
+<hr>
+<h3 id="-mathematical-hint-1">🧮 Mathematical Hint</h3>
+<p>Interest changes at time ( t = 36 ) months:</p>
+<p>$$
+r_t =
+\begin{cases}
+\frac{0.022}{12}, &amp; t \le 36 <br>
+\frac{0.033}{12}, &amp; t &gt; 36
+\end{cases}
+$$</p>
+<hr>
+<h3 id="-tasks-1">🎯 Tasks</h3>
+<ol>
+<li>Total money paid</li>
+<li>Total interest paid</li>
+<li>Interest paid <strong>per year</strong></li>
+</ol>
+<details>
+<summary>✅ Solution (Python)</summary>
+<pre><code class="language-python">P = 3_300_000
+years = 30
+months = years * 12
+
+rates = [0.022] * 36 + [0.033] * (months - 36)
+
+balance = P
+total_interest = 0
+yearly_interest = {}
+
+monthly_payment = P * 0.005  # simplified assumption for teaching
+
+for m, rate in enumerate(rates, start=1):
+    r = rate / 12
+    interest = balance * r
+    principal = monthly_payment - interest
+    balance -= principal
+
+    total_interest += interest
+    year = (m - 1) // 12 + 1
+    yearly_interest[year] = yearly_interest.get(year, 0) + interest
+
+print(&quot;Total interest:&quot;, round(total_interest, 2))
+print(&quot;Remaining balance:&quot;, round(balance, 2))
+print(&quot;Interest per year:&quot;, yearly_interest)
+</code></pre>
+<p>💡 <strong>Teaching Insight</strong></p>
+<ul>
+<li>Floating rate = uncertainty</li>
+<li>Early years matter more than later years</li>
+<li>Banks earn most interest at the beginning</li>
+</ul>
+</details>
+<hr>
+<h1 id="-problem-3--add-10-down-payment">🟢 Problem 3 — Add 10% Down Payment</h1>
+<h3 id="-scenario-change">📌 Scenario Change</h3>
+<ul>
+<li>Down payment: <strong>10%</strong></li>
+<li>Loan amount:</li>
+</ul>
+<p>$$
+P = 3.3M \times 0.9
+$$</p>
+<p>Repeat <strong>Problem 2</strong> with new principal.</p>
+<details>
+<summary>✅ Solution (Python)</summary>
+<pre><code class="language-python">P = 3_300_000 * 0.9
+# reuse previous logic
+</code></pre>
+<p>💡 <strong>Key Insight</strong></p>
+<ul>
+<li>Small down payment = huge interest savings</li>
+<li>Leverage is expensive</li>
+</ul>
+</details>
+<hr>
+<h1 id="-problem-4--aggressive-payoff-in-3-years-no-down-payment">🟢 Problem 4 — Aggressive Payoff in 3 Years (No Down Payment)</h1>
+<h3 id="-scenario-1">📌 Scenario</h3>
+<ul>
+<li>Loan: 3.3M</li>
+<li>Finish payment in <strong>3 years</strong></li>
+<li>Same interest as Problem 2</li>
+</ul>
+<hr>
+<h3 id="-hint">🧮 Hint</h3>
+<p>Shorter time means:</p>
+<p>$$
+\text{Interest} \propto \text{Time}
+$$</p>
+<p>But monthly cash flow explodes.</p>
+<details>
+<summary>✅ Solution (Python)</summary>
+<pre><code class="language-python">P = 3_300_000
+months = 36
+rate = 0.022 / 12
+
+monthly_payment = P / months + (P * rate)
+
+total_paid = monthly_payment * months
+total_interest = total_paid - P
+
+print(total_paid, total_interest)
+</code></pre>
+<p>💡 <strong>Life Lesson</strong></p>
+<ul>
+<li>Banks hate early payoff</li>
+<li>Discipline beats interest</li>
+</ul>
+</details>
+<hr>
+<h1 id="-problem-5--extreme-discipline-pay-off-in-2-years">🟢 Problem 5 — Extreme Discipline: Pay Off in 2 Years</h1>
+<p>Same logic as Problem 4, but:</p>
+<p>$$
+T = 24 \text{ months}
+$$</p>
+<details>
+<summary>✅ Solution (Python)</summary>
+<pre><code class="language-python">months = 24
+rate = 0.022 / 12
+
+monthly_payment = P / months + (P * rate)
+total_paid = monthly_payment * months
+total_interest = total_paid - P
+
+print(total_paid, total_interest)
+</code></pre>
+<p>💡 <strong>Final Insight</strong></p>
+<ul>
+<li>Interest is the price of time</li>
+<li>Python helps you <strong>see the truth before signing</strong></li>
+</ul>
+</details>
+<hr>
+<h2 id="-final-takeaway">🎓 Final Takeaway</h2>
+<p>If a student finishes this chapter, they can:</p>
+<ul>
+<li>read bank contracts</li>
+<li>simulate real mortgages</li>
+<li>explain interest mathematically</li>
+<li>write Python like a finance engineer</li>
+</ul>
+<p>This is <strong>real-world algorithmic thinking</strong>.</p>
+<hr>
+<h2 id="-why-this-chapter-exists">🌍 Why This Chapter Exists</h2>
+<p>Most people ask:</p>
+<blockquote>
+<p>“Which bank is cheaper?”</p>
+</blockquote>
+<p>Engineers ask:</p>
+<blockquote>
+<p>“Which bank minimizes <strong>expected financial pain under uncertainty</strong>?”</p>
+</blockquote>
+<p>Banks price <strong>risk</strong>, not kindness.</p>
+<p>This chapter teaches:</p>
+<ul>
+<li>how to compare banks <strong>algorithmically</strong></li>
+<li>how to think in <strong>risk-adjusted terms</strong></li>
+<li>how Python exposes hidden costs humans overlook</li>
+</ul>
+<hr>
+<h1 id="-mental-model-what-is-a-risk-adjusted-decision">🧠 Mental Model: What Is a Risk-Adjusted Decision?</h1>
+<p>A naive decision minimizes:</p>
+<p>$$
+\min ; \text{Total Payment}
+$$</p>
+<p>A <strong>risk-aware decision</strong> minimizes:</p>
+<p>$$
+\min ; \mathbb{E}[\text{Cost}] + \lambda \cdot \text{Risk}
+$$</p>
+<p>Where:</p>
+<p>expected_cost = E_cost  # Expected total payment
+risk = volatility  # Or uncertainty / worst-case exposure
+lambda_ = risk_aversion_level  # Human parameter for risk aversion</p>
+<hr>
+<h1 id="-problem-setup--comparing-bank-a--b--c">🏦 Problem Setup — Comparing Bank A / B / C</h1>
+<h3 id="-loan-assumptions-same-for-all-banks">📌 Loan Assumptions (Same for All Banks)</h3>
+<ul>
+<li>Condo price: <strong>3.3M THB</strong></li>
+<li>Loan term: <strong>30 years</strong></li>
+<li>No down payment</li>
+<li>Monthly payment system</li>
+</ul>
+<hr>
+<h2 id="-bank-profiles-very-realistic">🏦 Bank Profiles (Very Realistic)</h2>
+<h3 id="-bank-a--safe--predictable">🟢 Bank A — Safe &amp; Predictable</h3>
+<ul>
+<li>Fixed rate: <strong>3.0%</strong> for entire loan</li>
+</ul>
+<h3 id="-bank-b--promotional-trap">🟡 Bank B — Promotional Trap</h3>
+<ul>
+<li>2.0% for first <strong>3 years</strong></li>
+<li>4.0% afterward</li>
+</ul>
+<h3 id="-bank-c--floating--uncertain">🔴 Bank C — Floating &amp; Uncertain</h3>
+<ul>
+<li>MRR = <strong>2.0% → 5.0%</strong></li>
+<li>Random yearly fluctuation</li>
+</ul>
+<hr>
+<h1 id="-question-1--pure-cost-comparison">🟢 Question 1 — Pure Cost Comparison</h1>
+<h3 id="-task">🎯 Task</h3>
+<p>Calculate:</p>
+<ol>
+<li>Total payment</li>
+<li>Total interest</li>
+</ol>
+<p>for <strong>Bank A and Bank B</strong></p>
+<p>Ignore uncertainty for now.</p>
+<hr>
+<h3 id="-hint-1">🧮 Hint</h3>
+<p>Monthly payment:</p>
+<p>$$
+M = P \cdot \frac{r(1+r)^N}{(1+r)^N - 1}
+$$</p>
+<details>
+<summary>✅ Solution (Python)</summary>
+<pre><code class="language-python">def mortgage_total(P, annual_rate, years):
+    r = annual_rate / 12
+    N = years * 12
+    M = P * (r * (1 + r)**N) / ((1 + r)**N - 1)
+    return M * N, M * N - P
+
+P = 3_300_000
+
+bank_A = mortgage_total(P, 0.03, 30)
+bank_B_part1 = mortgage_total(P, 0.02, 30)
+
+print(&quot;Bank A:&quot;, bank_A)
+print(&quot;Bank B (naive):&quot;, bank_B_part1)
+</code></pre>
+<p>💡 <strong>Insight</strong></p>
+<ul>
+<li>Promotional rates lie if you don’t model the future</li>
+<li>Banks love customers who stop calculating at year 3</li>
+</ul>
+</details>
+<hr>
+<h1 id="-question-2--correctly-modeling-bank-b-piecewise-rates">🟢 Question 2 — Correctly Modeling Bank B (Piecewise Rates)</h1>
+<h3 id="-task-1">🎯 Task</h3>
+<p>Bank B:</p>
+<ul>
+<li>2% for 3 years</li>
+<li>4% for remaining 27 years</li>
+</ul>
+<p>Compute <strong>real total interest</strong>.</p>
+<hr>
+<h3 id="-mathematical-hint-2">🧮 Mathematical Hint</h3>
+<p>Interest rate is time-dependent:</p>
+<p>$$
+r_t =
+\begin{cases}
+0.02 &amp; t \le 3 <br>
+0.04 &amp; t &gt; 3
+\end{cases}
+$$</p>
+<details>
+<summary>✅ Solution (Python)</summary>
+<pre><code class="language-python">P = 3_300_000
+balance = P
+years = 30
+monthly_payment = P * 0.005  # simplified for teaching
+
+rates = [0.02]*36 + [0.04]*(years*12 - 36)
+
+total_interest = 0
+
+for rate in rates:
+    interest = balance * (rate / 12)
+    principal = monthly_payment - interest
+    balance -= principal
+    total_interest += interest
+
+print(&quot;Total interest Bank B:&quot;, round(total_interest, 2))
+</code></pre>
+<p>💡 <strong>Engineering Lesson</strong></p>
+<ul>
+<li>Time segmentation matters</li>
+<li>Banks profit from human short-term thinking</li>
+</ul>
+</details>
+<hr>
+<h1 id="-question-3--modeling-risk-bank-c-floating-rate">🧠 Question 3 — Modeling Risk: Bank C (Floating Rate)</h1>
+<h3 id="-scenario-2">📌 Scenario</h3>
+<p>Bank C interest:</p>
+<ul>
+<li>Starts at 2%</li>
+<li>Every year randomly moves ±1%</li>
+<li>Capped at 5%</li>
+</ul>
+<hr>
+<h3 id="-task-2">🎯 Task</h3>
+<p>Simulate <strong>1000 futures</strong> and compute:</p>
+<ul>
+<li>Expected total interest</li>
+<li>Worst 10% outcome (risk)</li>
+</ul>
+<hr>
+<h3 id="-hint-monte-carlo-thinking">🧮 Hint (Monte Carlo Thinking)</h3>
+<p>$$
+\mathbb{E}[X] \approx \frac{1}{N} \sum_{i=1}^N X_i
+$$</p>
+<details>
+<summary>✅ Solution (Python)</summary>
+<pre><code class="language-python">import random
+
+def simulate_bank_c(P, years, simulations=1000):
+    results = []
+
+    for _ in range(simulations):
+        balance = P
+        total_interest = 0
+        rate = 0.02
+
+        for _ in range(years * 12):
+            if random.random() &lt; 1/12:
+                rate += random.choice([-0.01, 0.01])
+                rate = min(max(rate, 0.02), 0.05)
+
+            interest = balance * (rate / 12)
+            balance -= (P / (years*12))
+            total_interest += interest
+
+        results.append(total_interest)
+
+    results.sort()
+    return sum(results)/len(results), results[int(0.9*len(results))]
+
+expected, worst_10 = simulate_bank_c(3_300_000, 30)
+
+print(&quot;Expected interest:&quot;, expected)
+print(&quot;Worst 10% interest:&quot;, worst_10)
+</code></pre>
+<p>💡 <strong>Deep Insight</strong></p>
+<ul>
+<li>Floating rate is not “cheaper”</li>
+<li>It is a <strong>distribution</strong></li>
+<li>Humans underestimate tail risk</li>
+</ul>
+</details>
+<hr>
+<h1 id="-question-4--risk-adjusted-decision-rule">🧠 Question 4 — Risk-Adjusted Decision Rule</h1>
+<h3 id="-task-3">🎯 Task</h3>
+<p>Define a decision score:</p>
+<p>$$
+\text{Score} = \mathbb{E}[\text{Interest}] + \lambda \cdot \text{WorstCase}
+$$</p>
+<p>Compare banks for:</p>
+<p>lambda_value = 0  # Risk-neutral
+lambda_value = 0.5  # Moderately risk-averse
+lambda_value = 1.0  # Highly risk-averse</p>
+<hr>
+<details>
+<summary>✅ Solution (Python)</summary>
+<pre><code class="language-python">banks = {
+    &quot;A&quot;: {&quot;expected&quot;: 1.9e6, &quot;risk&quot;: 0.1e6},
+    &quot;B&quot;: {&quot;expected&quot;: 1.7e6, &quot;risk&quot;: 0.4e6},
+    &quot;C&quot;: {&quot;expected&quot;: expected, &quot;risk&quot;: worst_10}
+}
+
+for lam in [0, 0.5, 1.0]:
+    print(&quot;\nLambda =&quot;, lam)
+    for k, v in banks.items():
+        score = v[&quot;expected&quot;] + lam * v[&quot;risk&quot;]
+        print(k, round(score, 2))
+</code></pre>
+<p>💡 <strong>Human Insight</strong></p>
+<ul>
+<li>Young + rich → Bank C</li>
+<li>Family + fixed income → Bank A</li>
+<li>Optimists regret Bank B</li>
+</ul>
+</details>
+<hr>
+<h2 id="-final-mental-upgrade">🎓 Final Mental Upgrade</h2>
+<p>After this chapter, students can:</p>
+<ul>
+<li>model banks as stochastic systems</li>
+<li>quantify financial risk</li>
+<li>explain why “cheapest” ≠ “best”</li>
+<li>think like a <strong>bank risk analyst</strong></li>
+</ul>
+<p>This is <strong>real Python for real life decisions</strong>.</p>
+<hr>
+<h2 id="-why-this-chapter-exists-1">🌍 Why This Chapter Exists</h2>
+<p>Most mortgage calculators assume:</p>
+<blockquote>
+<p>“The future is stable.”</p>
+</blockquote>
+<p>Banks never assume that.</p>
+<p>Banks ask:</p>
+<ul>
+<li>What if income drops?</li>
+<li>What if interest spikes?</li>
+<li>What if humans panic?</li>
+</ul>
+<p>This chapter teaches:</p>
+<ul>
+<li>how to <strong>simulate recession scenarios</strong></li>
+<li>how to evaluate decisions using <strong>expected utility</strong></li>
+<li>why banks survive crises while households don’t</li>
+</ul>
+<hr>
+<h1 id="-core-upgrade-cost-is-not-pain">🧠 Core Upgrade: Cost Is Not Pain</h1>
+<p>Humans don’t minimize money.</p>
+<p>They minimize <strong>pain</strong>.</p>
+<p>Economics models this using <strong>utility</strong>.</p>
+<hr>
+<h2 id="-expected-utility-theory-very-simple">📘 Expected Utility Theory (Very Simple)</h2>
+<p>Instead of minimizing cost:</p>
+<p>$$
+\min ; \mathbb{E}[\text{Cost}]
+$$</p>
+<p>Humans actually maximize:</p>
+<p>$$
+\max ; \mathbb{E}[U(W)]
+$$</p>
+<p>Where:</p>
+<ul>
+<li>( W ) = wealth after paying mortgage</li>
+<li>( U(\cdot) ) = utility function (how painful money loss feels)</li>
+</ul>
+<hr>
+<h2 id="-common-utility-function-risk-averse-human">🧠 Common Utility Function (Risk-Averse Human)</h2>
+<p>$$
+U(W) = \sqrt{W}
+$$</p>
+<p>Why?</p>
+<ul>
+<li>Losing 100k hurts more when you are poor</li>
+<li>Rich people absorb shocks better</li>
+</ul>
+<hr>
+<h1 id="-recession-model--what-changes">🏦 Recession Model — What Changes?</h1>
+<p>During a recession, <strong>three things happen together</strong>:</p>
+<ol>
+<li>Interest rates increase</li>
+<li>Income becomes unstable</li>
+<li>Forced selling risk appears</li>
+</ol>
+<p>We simulate <strong>interest shock + income shock</strong></p>
+<hr>
+<h1 id="-question-1--modeling-a-recession-shock">🟢 Question 1 — Modeling a Recession Shock</h1>
+<h3 id="-scenario-3">📌 Scenario</h3>
+<p>At year 5:</p>
+<ul>
+<li>Interest jumps by +2%</li>
+<li>Monthly income drops by 30% for 2 years</li>
+</ul>
+<hr>
+<h3 id="-task-4">🎯 Task</h3>
+<p>Simulate mortgage under recession and compute:</p>
+<ul>
+<li>total interest</li>
+<li>minimum remaining cash buffer</li>
+</ul>
+<hr>
+<h3 id="-mathematical-hint-3">🧮 Mathematical Hint</h3>
+<p>Interest rate shift:</p>
+<p>$$
+r_t =
+\begin{cases}
+r &amp; t &lt; t_c \
+r + 0.02 &amp; t \ge t_c
+\end{cases}
+$$</p>
+<p>Income shock:</p>
+<p>$$
+I_t = 0.7 I \quad \text{during recession}
+$$</p>
+<details>
+<summary>✅ Solution (Python)</summary>
+<pre><code class="language-python">P = 3_300_000
+balance = P
+years = 30
+monthly_income = 80_000
+monthly_payment = 25_000
+cash_buffer = 500_000
+
+rate = 0.03
+total_interest = 0
+min_cash = cash_buffer
+
+for m in range(1, years * 12 + 1):
+    if m == 5 * 12:
+        rate += 0.02
+
+    income = monthly_income
+    if 5 * 12 &lt;= m &lt;= 7 * 12:
+        income *= 0.7
+
+    interest = balance * (rate / 12)
+    principal = monthly_payment - interest
+    balance -= principal
+    total_interest += interest
+
+    cash_buffer += income - monthly_payment
+    min_cash = min(min_cash, cash_buffer)
+
+print(&quot;Total interest:&quot;, round(total_interest, 2))
+print(&quot;Minimum cash buffer:&quot;, round(min_cash, 2))
+</code></pre>
+<p>💡 <strong>Reality Insight</strong></p>
+<ul>
+<li>Interest shock hurts slowly</li>
+<li>Income shock kills fast</li>
+<li>Liquidity &gt; interest rate</li>
+</ul>
+</details>
+<hr>
+<h1 id="-question-2--probability-of-default-human-view">🧠 Question 2 — Probability of Default (Human View)</h1>
+<h3 id="-default-rule">📌 Default Rule</h3>
+<p>Household defaults if:</p>
+<p>$$
+\text{Cash Buffer} &lt; 0
+$$</p>
+<hr>
+<h3 id="-task-5">🎯 Task</h3>
+<p>Simulate <strong>1000 recession paths</strong> and compute:</p>
+<ul>
+<li>probability of default</li>
+</ul>
+<hr>
+<details>
+<summary>✅ Solution (Python)</summary>
+<pre><code class="language-python">import random
+
+def simulate_default():
+    cash = 500_000
+    balance = 3_300_000
+    rate = 0.03
+    income = 80_000
+    payment = 25_000
+
+    for m in range(1, 30*12):
+        if m == 5 * 12:
+            rate += 0.02
+
+        shock = random.random() &lt; 0.3
+        current_income = income * (0.7 if shock else 1.0)
+
+        interest = balance * (rate / 12)
+        balance -= (payment - interest)
+        cash += current_income - payment
+
+        if cash &lt; 0:
+            return True
+
+    return False
+
+defaults = sum(simulate_default() for _ in range(1000))
+print(&quot;Default probability:&quot;, defaults / 1000)
+</code></pre>
+<p>💡 <strong>Bank Insight</strong></p>
+<ul>
+<li>Banks don’t care about averages</li>
+<li>They price <strong>default probability</strong></li>
+</ul>
+</details>
+<hr>
+<h1 id="-question-3--expected-utility-comparison-bank-a-vs-c">🧠 Question 3 — Expected Utility Comparison (Bank A vs C)</h1>
+<h3 id="-setup">📌 Setup</h3>
+<p>We compare two choices:</p>
+<ul>
+<li>Bank A: fixed rate, low volatility</li>
+<li>Bank C: floating rate, high volatility</li>
+</ul>
+<hr>
+<h3 id="-task-6">🎯 Task</h3>
+<p>Compute expected utility under recession risk.</p>
+<hr>
+<h3 id="-utility-function">🧮 Utility Function</h3>
+<p>$$
+U(W) = \sqrt{W}
+$$</p>
+<p>Where:</p>
+<p>$$
+W = \text{Final Wealth} = \text{Savings} - \text{Total Paid}
+$$</p>
+<details>
+<summary>✅ Solution (Python)</summary>
+<pre><code class="language-python">import math
+
+def utility(wealth):
+    return math.sqrt(max(wealth, 0))
+
+def expected_utility(simulations, bank_type):
+    utilities = []
+
+    for _ in range(simulations):
+        savings = 2_000_000
+        total_paid = 0
+
+        if bank_type == &quot;A&quot;:
+            rate = 0.03
+        else:
+            rate = random.uniform(0.02, 0.05)
+
+        total_paid = 3_300_000 * (1 + rate * 30)
+        wealth = savings - total_paid
+        utilities.append(utility(wealth))
+
+    return sum(utilities) / len(utilities)
+
+print(&quot;EU Bank A:&quot;, expected_utility(1000, &quot;A&quot;))
+print(&quot;EU Bank C:&quot;, expected_utility(1000, &quot;C&quot;))
+</code></pre>
+<p>💡 <strong>Key Insight</strong></p>
+<ul>
+<li>Higher expected cost can still give <strong>higher utility</strong></li>
+<li>Safety has value</li>
+<li>Volatility destroys utility faster than it saves money</li>
+</ul>
+</details>
+<hr>
+<h1 id="-question-4--why-banks-win-final-truth">🧠 Question 4 — Why Banks Win (Final Truth)</h1>
+<p>Banks optimize:</p>
+<p>$$
+\max ; \mathbb{E}[\text{Profit}] - \text{Tail Risk}
+$$</p>
+<p>Humans ignore tail risk.</p>
+<hr>
+<h3 id="-thought-question-no-code">🎯 Thought Question (No Code)</h3>
+<p>Why do banks survive recessions while households don’t?</p>
+<p><strong>Hint:</strong></p>
+<p>$$
+\text{Diversification} + \text{Capital Buffer} \gg \text{Single Mortgage}
+$$</p>
+<hr>
+<h2 id="-final-mental-shift">🎓 Final Mental Shift</h2>
+<p>After this chapter, students understand:</p>
+<ul>
+<li>why floating rate is psychologically dangerous</li>
+<li>why recession kills liquidity, not math</li>
+<li>why expected utility beats “lowest interest”</li>
+<li>why banks always design contracts to win</li>
+</ul>
+<p>You are no longer a borrower.</p>
+<p>You are a <strong>system thinker</strong>.</p>
+<hr>
+<h2 id="-why-this-chapter-exists-2">🌍 Why This Chapter Exists</h2>
+<p>People often say:</p>
+<blockquote>
+<p>“Banks are greedy.”</p>
+</blockquote>
+<p>That is emotionally true — but technically incomplete.</p>
+<p>Banks do not survive because of greed.<br>
+They survive because of <strong>structure</strong>.</p>
+<p>This chapter explains:</p>
+<ul>
+<li>why banks can take risks households cannot</li>
+<li>why leverage hurts humans more than math predicts</li>
+<li>why loss hurts <strong>more than gain feels good</strong></li>
+</ul>
+<hr>
+<h1 id="-part-i--bank-capital-vs-household-leverage">🏦 Part I — Bank Capital vs Household Leverage</h1>
+<h2 id="-core-asymmetry-very-important">🧠 Core Asymmetry (Very Important)</h2>
+<p>A household usually has:</p>
+<p>$$
+\text{Leverage} = \frac{\text{Debt}}{\text{Income}} \gg 1
+$$</p>
+<p>A bank operates under:</p>
+<p>$$
+\text{Capital Ratio} = \frac{\text{Equity}}{\text{Risk-Weighted Assets}} \ge 8%
+$$</p>
+<p>Same money system — <strong>completely different survival rules</strong>.</p>
+<hr>
+<h2 id="-definitions-plain-english">📘 Definitions (Plain English)</h2>
+<h3 id="household-leverage">Household Leverage</h3>
+<ul>
+<li>One income stream</li>
+<li>One large loan</li>
+<li>Failure = life disruption</li>
+</ul>
+<h3 id="bank-capital">Bank Capital</h3>
+<ul>
+<li>Thousands of borrowers</li>
+<li>Diversification</li>
+<li>Loss absorption buffer</li>
+</ul>
+<hr>
+<h1 id="-question-1--leverage-comparison-math-reality">🟢 Question 1 — Leverage Comparison (Math Reality)</h1>
+<h3 id="-scenario-4">📌 Scenario</h3>
+<p>Household:</p>
+<ul>
+<li>Income: 80,000 THB/month</li>
+<li>Mortgage: 3.3M</li>
+</ul>
+<p>Bank:</p>
+<ul>
+<li>Loans issued: 1,000 × 3.3M</li>
+<li>Capital ratio: 10%</li>
+</ul>
+<hr>
+<h3 id="-tasks-2">🎯 Tasks</h3>
+<ol>
+<li>Compute household leverage</li>
+<li>Compute bank equity buffer</li>
+<li>Compare shock tolerance</li>
+</ol>
+<hr>
+<h3 id="-mathematical-hint-4">🧮 Mathematical Hint</h3>
+<p>$$
+\text{Household Leverage} = \frac{\text{Debt}}{\text{Annual Income}}
+$$</p>
+<p>$$
+\text{Bank Capital} = 0.10 \times \text{Total Loans}
+$$</p>
+<details>
+<summary>✅ Solution (Python)</summary>
+<pre><code class="language-python">household_income = 80_000 * 12
+household_debt = 3_300_000
+
+leverage = household_debt / household_income
+
+bank_loans = 3_300_000 * 1000
+bank_capital = bank_loans * 0.10
+
+print(&quot;Household leverage:&quot;, round(leverage, 2))
+print(&quot;Bank capital buffer:&quot;, bank_capital)
+</code></pre>
+<p>💡 <strong>Interpretation</strong></p>
+<ul>
+<li>Household leverage ≈ 3–5× income → fragile</li>
+<li>Bank absorbs <strong>millions of defaults</strong> before dying</li>
+</ul>
+</details>
+<hr>
+<h1 id="-question-2--shock-absorption-test">🧠 Question 2 — Shock Absorption Test</h1>
+<h3 id="-scenario-5">📌 Scenario</h3>
+<ul>
+<li>Economic shock causes <strong>5% of borrowers to default</strong></li>
+<li>Each default loses 50% of loan value</li>
+</ul>
+<hr>
+<h3 id="-tasks-3">🎯 Tasks</h3>
+<ol>
+<li>Compute total bank loss</li>
+<li>Check if bank survives</li>
+<li>Compare to household shock</li>
+</ol>
+<hr>
+<details>
+<summary>✅ Solution (Python)</summary>
+<pre><code class="language-python">default_rate = 0.05
+loss_given_default = 0.5
+
+loss = bank_loans * default_rate * loss_given_default
+bank_survives = loss &lt; bank_capital
+
+print(&quot;Bank loss:&quot;, loss)
+print(&quot;Bank survives:&quot;, bank_survives)
+</code></pre>
+<p>💡 <strong>Key Truth</strong></p>
+<p>Banks are built to <strong>expect failure</strong>.
+Households are not.</p>
+</details>
+<hr>
+<h1 id="-part-ii--prospect-theory-why-humans-panic">🧠 Part II — Prospect Theory (Why Humans Panic)</h1>
+<h2 id="-classical-economics-assumption-wrong">📘 Classical Economics Assumption (Wrong)</h2>
+<p>Humans maximize expected value:</p>
+<p>$$
+\max ; \mathbb{E}[W]
+$$</p>
+<hr>
+<h2 id="-prospect-theory-reality">🧠 Prospect Theory (Reality)</h2>
+<p>Humans evaluate <strong>gains and losses asymmetrically</strong>.</p>
+<p>Utility function:</p>
+<p>$$
+U(x) =
+\begin{cases}
+x^\alpha &amp; x \ge 0 <br>
+-\lambda |x|^\beta &amp; x &lt; 0
+\end{cases}
+$$</p>
+<p>Where:</p>
+<ul>
+<li>( \lambda &gt; 1 ) (loss hurts more than gain)</li>
+<li>Typically ( \lambda \approx 2.25 )</li>
+</ul>
+<hr>
+<h1 id="-question-3--loss-aversion-in-mortgage-decisions">🟢 Question 3 — Loss Aversion in Mortgage Decisions</h1>
+<h3 id="-scenario-6">📌 Scenario</h3>
+<p>Two outcomes:</p>
+<ul>
+<li>Option A: Save 100,000 THB</li>
+<li>Option B: Risk losing 100,000 THB</li>
+</ul>
+<p>Expected value = same.</p>
+<hr>
+<h3 id="-task-7">🎯 Task</h3>
+<p>Compare utility using prospect theory.</p>
+<hr>
+<details>
+<summary>✅ Solution (Python)</summary>
+<pre><code class="language-python">def prospect_utility(x, alpha=0.88, beta=0.88, lam=2.25):
+    if x &gt;= 0:
+        return x ** alpha
+    else:
+        return -lam * (abs(x) ** beta)
+
+gain = prospect_utility(100_000)
+loss = prospect_utility(-100_000)
+
+print(&quot;Utility of gain:&quot;, gain)
+print(&quot;Utility of loss:&quot;, loss)
+</code></pre>
+<p>💡 <strong>Psychological Truth</strong></p>
+<ul>
+<li>Losing 100k hurts ~2× more than gaining 100k feels good</li>
+<li>Floating rate mortgages amplify psychological pain</li>
+</ul>
+</details>
+<hr>
+<h1 id="-question-4--why-households-panic-sell">🧠 Question 4 — Why Households Panic-Sell</h1>
+<h3 id="-scenario-7">📌 Scenario</h3>
+<p>During recession:</p>
+<ul>
+<li>House price drops 15%</li>
+<li>Mortgage balance unchanged</li>
+</ul>
+<hr>
+<h3 id="-task-8">🎯 Task</h3>
+<p>Compute perceived loss vs actual loss.</p>
+<hr>
+<h3 id="-hint-2">🧮 Hint</h3>
+<p>Reference point matters:</p>
+<p>$$
+\text{Loss} = P_{\text{peak}} - P_{\text{current}}
+$$</p>
+<details>
+<summary>✅ Solution (Python)</summary>
+<pre><code class="language-python">house_price = 3_300_000
+price_drop = 0.15
+
+actual_loss = house_price * price_drop
+perceived_pain = prospect_utility(-actual_loss)
+
+print(&quot;Actual loss:&quot;, actual_loss)
+print(&quot;Perceived pain:&quot;, perceived_pain)
+</code></pre>
+<p>💡 <strong>Key Insight</strong></p>
+<p>People sell not because of math —
+they sell because of <strong>pain</strong>.</p>
+<p>Banks know this.</p>
+</details>
+<hr>
+<h1 id="-question-5--final-synthesis-no-code">🧠 Question 5 — Final Synthesis (No Code)</h1>
+<p>Why do banks:</p>
+<ul>
+<li>encourage leverage?</li>
+<li>offer floating rates?</li>
+<li>survive crises?</li>
+</ul>
+<p><strong>Answer (Hint):</strong></p>
+<p>$$
+\text{Diversification} + \text{Capital} + \text{Asymmetric Psychology}
+$$</p>
+<p>Households face:</p>
+<ul>
+<li>concentrated risk</li>
+<li>no buffer</li>
+<li>loss aversion</li>
+</ul>
+<hr>
+<h2 id="-final-mental-model">🎓 Final Mental Model</h2>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Risk</th>
+<th>Buffer</th>
+<th>Psychology</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Household</td>
+<td>Concentrated</td>
+<td>None</td>
+<td>Loss-averse</td>
+</tr>
+<tr>
+<td>Bank</td>
+<td>Diversified</td>
+<td>Capital</td>
+<td>Risk-neutral</td>
+</tr>
+</tbody>
+</table>
+<p>Banks don’t win by cheating.</p>
+<p>They win because the system was <strong>never symmetric</strong>.</p>
+<p>You now see the matrix.</p>
+<hr>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-22-recap-basic-logic/" rel="next">LC-TEST-22 — Recap Basic Logic</a>
+  </div>
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on 2026</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    ©2026 Kao Panboonyuen
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Built using <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> and the <a href="https://github.com/wowchemy/starter-hugo-academic" target="_blank" rel="noopener">Wowchemy academic template</a>. View <a href="https://github.com/kaopanboonyuen/kaopanboonyuen.github.io" target="_blank" rel="noopener">source</a>.
+        
+  </p>
+</footer>
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/golang.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.b36873e4e886c7b03b21e4eb97d9b6d7.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

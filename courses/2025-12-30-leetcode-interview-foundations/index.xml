@@ -8951,5 +8951,1027 @@ You’re learning &lt;strong&gt;how machines think&lt;/strong&gt; 🧠⚡&lt;/p&
 &lt;hr&gt;</description>
     </item>
     
+    <item>
+      <title>LC-TEST-23 — Math Behind Loans</title>
+      <link>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-23-bank-loan/</link>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-23-bank-loan/</guid>
+      <description>&lt;h2 id=&#34;-why-this-document-exists&#34;&gt;🌍 Why This Document Exists&lt;/h2&gt;
+&lt;p&gt;Most people learn Python by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sorting lists&lt;/li&gt;
+&lt;li&gt;reversing strings&lt;/li&gt;
+&lt;li&gt;solving toy problems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But &lt;strong&gt;banks don’t care about toys&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Banks care about:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;money over time&lt;/li&gt;
+&lt;li&gt;interest dynamics&lt;/li&gt;
+&lt;li&gt;human financial decisions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This document teaches &lt;strong&gt;Python + Math + Real Banking Logic&lt;/strong&gt;&lt;br&gt;
+so students can &lt;em&gt;see their future mortgage before signing it&lt;/em&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-core-math-behind-loans-very-important&#34;&gt;🧠 Core Math Behind Loans (Very Important)&lt;/h1&gt;
+&lt;p&gt;When you borrow money, you are solving this problem:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Total Payment} = \sum_{t=1}^{T} \left( \text{Principal}_t + \text{Interest}_t \right)
+$$&lt;/p&gt;
+&lt;p&gt;Where interest usually follows:&lt;/p&gt;
+&lt;p&gt;interest_t = remaining_principal_t_1 * r_t&lt;/p&gt;
+&lt;p&gt;Understanding this formula is &lt;strong&gt;more important than memorizing code&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-problem-1--fixed-rate-mortgage-reality-check&#34;&gt;🟢 Problem 1 — Fixed Rate Mortgage (Reality Check)&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario&#34;&gt;📌 Scenario&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Condo price: &lt;strong&gt;3.3 million THB&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Fixed interest rate: &lt;strong&gt;6.5% per year&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Loan duration: &lt;strong&gt;30 years&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;No down payment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Assume:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Interest is compounded monthly&lt;/li&gt;
+&lt;li&gt;Payments are equal every month (standard mortgage)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-mathematical-hint&#34;&gt;🧮 Mathematical Hint&lt;/h3&gt;
+&lt;p&gt;Monthly interest rate:&lt;/p&gt;
+&lt;p&gt;$$
+r = \frac{0.065}{12}
+$$&lt;/p&gt;
+&lt;p&gt;Number of payments:&lt;/p&gt;
+&lt;p&gt;$$
+N = 30 \times 12
+$$&lt;/p&gt;
+&lt;p&gt;Monthly payment formula:&lt;/p&gt;
+&lt;p&gt;$$
+M = P \cdot \frac{r(1+r)^N}{(1+r)^N - 1}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-tasks&#34;&gt;🎯 Tasks&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Compute &lt;strong&gt;monthly payment&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Compute &lt;strong&gt;total money paid&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Compute &lt;strong&gt;total interest paid&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;P = 3_300_000
+annual_rate = 0.065
+r = annual_rate / 12
+N = 30 * 12
+
+monthly_payment = P * (r * (1 + r)**N) / ((1 + r)**N - 1)
+total_payment = monthly_payment * N
+total_interest = total_payment - P
+
+print(&amp;quot;Monthly payment:&amp;quot;, round(monthly_payment, 2))
+print(&amp;quot;Total paid:&amp;quot;, round(total_payment, 2))
+print(&amp;quot;Total interest:&amp;quot;, round(total_interest, 2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Concept Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You borrow 3.3M&lt;/li&gt;
+&lt;li&gt;You return &lt;strong&gt;almost double&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Time is more expensive than interest rate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-problem-2--fixed-rate-vs-floating-rate-bank-knowledge&#34;&gt;🟢 Problem 2 — Fixed Rate vs Floating Rate (Bank Knowledge)&lt;/h1&gt;
+&lt;p&gt;Before coding, you must understand &lt;strong&gt;bank language&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-interest-types-explained-human-language&#34;&gt;🏦 Interest Types Explained (Human Language)&lt;/h2&gt;
+&lt;h3 id=&#34;fixed-rate&#34;&gt;Fixed Rate&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Interest rate is &lt;strong&gt;locked&lt;/strong&gt; for a period or entire contract.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;7% per year&lt;/li&gt;
+&lt;li&gt;Fixed for 4 years&lt;/li&gt;
+&lt;li&gt;No surprise&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;floating-rate&#34;&gt;Floating Rate&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Interest rate &lt;strong&gt;moves with the bank’s cost&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Usually written as:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Interest} = \text{MRR} - x
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-bank-reference-rates&#34;&gt;📘 Bank Reference Rates&lt;/h2&gt;
+&lt;h3 id=&#34;mlr--minimum-loan-rate&#34;&gt;MLR — Minimum Loan Rate&lt;/h3&gt;
+&lt;p&gt;Large, high-quality customers (business loans)&lt;/p&gt;
+&lt;h3 id=&#34;mrr--minimum-retail-rate&#34;&gt;MRR — Minimum Retail Rate&lt;/h3&gt;
+&lt;p&gt;Retail customers (home loans, personal loans)&lt;/p&gt;
+&lt;h3 id=&#34;mor--minimum-overdraft-rate&#34;&gt;MOR — Minimum Overdraft Rate&lt;/h3&gt;
+&lt;p&gt;Overdraft credit lines&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-new-scenario-realistic-mortgage&#34;&gt;📌 New Scenario (Realistic Mortgage)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Condo price: &lt;strong&gt;3.3M&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Loan term: &lt;strong&gt;30 years&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;First 3 years: &lt;strong&gt;MRR = 2.2%&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Remaining years: &lt;strong&gt;MRR = 3.3%&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;No down payment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-mathematical-hint-1&#34;&gt;🧮 Mathematical Hint&lt;/h3&gt;
+&lt;p&gt;Interest changes at time ( t = 36 ) months:&lt;/p&gt;
+&lt;p&gt;$$
+r_t =
+\begin{cases}
+\frac{0.022}{12}, &amp;amp; t \le 36 &lt;br&gt;
+\frac{0.033}{12}, &amp;amp; t &amp;gt; 36
+\end{cases}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-tasks-1&#34;&gt;🎯 Tasks&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Total money paid&lt;/li&gt;
+&lt;li&gt;Total interest paid&lt;/li&gt;
+&lt;li&gt;Interest paid &lt;strong&gt;per year&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;P = 3_300_000
+years = 30
+months = years * 12
+
+rates = [0.022] * 36 + [0.033] * (months - 36)
+
+balance = P
+total_interest = 0
+yearly_interest = {}
+
+monthly_payment = P * 0.005  # simplified assumption for teaching
+
+for m, rate in enumerate(rates, start=1):
+    r = rate / 12
+    interest = balance * r
+    principal = monthly_payment - interest
+    balance -= principal
+
+    total_interest += interest
+    year = (m - 1) // 12 + 1
+    yearly_interest[year] = yearly_interest.get(year, 0) + interest
+
+print(&amp;quot;Total interest:&amp;quot;, round(total_interest, 2))
+print(&amp;quot;Remaining balance:&amp;quot;, round(balance, 2))
+print(&amp;quot;Interest per year:&amp;quot;, yearly_interest)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Teaching Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Floating rate = uncertainty&lt;/li&gt;
+&lt;li&gt;Early years matter more than later years&lt;/li&gt;
+&lt;li&gt;Banks earn most interest at the beginning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-problem-3--add-10-down-payment&#34;&gt;🟢 Problem 3 — Add 10% Down Payment&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario-change&#34;&gt;📌 Scenario Change&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Down payment: &lt;strong&gt;10%&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Loan amount:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+P = 3.3M \times 0.9
+$$&lt;/p&gt;
+&lt;p&gt;Repeat &lt;strong&gt;Problem 2&lt;/strong&gt; with new principal.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;P = 3_300_000 * 0.9
+# reuse previous logic
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Key Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Small down payment = huge interest savings&lt;/li&gt;
+&lt;li&gt;Leverage is expensive&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-problem-4--aggressive-payoff-in-3-years-no-down-payment&#34;&gt;🟢 Problem 4 — Aggressive Payoff in 3 Years (No Down Payment)&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario-1&#34;&gt;📌 Scenario&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Loan: 3.3M&lt;/li&gt;
+&lt;li&gt;Finish payment in &lt;strong&gt;3 years&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Same interest as Problem 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-hint&#34;&gt;🧮 Hint&lt;/h3&gt;
+&lt;p&gt;Shorter time means:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Interest} \propto \text{Time}
+$$&lt;/p&gt;
+&lt;p&gt;But monthly cash flow explodes.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;P = 3_300_000
+months = 36
+rate = 0.022 / 12
+
+monthly_payment = P / months + (P * rate)
+
+total_paid = monthly_payment * months
+total_interest = total_paid - P
+
+print(total_paid, total_interest)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Life Lesson&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Banks hate early payoff&lt;/li&gt;
+&lt;li&gt;Discipline beats interest&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-problem-5--extreme-discipline-pay-off-in-2-years&#34;&gt;🟢 Problem 5 — Extreme Discipline: Pay Off in 2 Years&lt;/h1&gt;
+&lt;p&gt;Same logic as Problem 4, but:&lt;/p&gt;
+&lt;p&gt;$$
+T = 24 \text{ months}
+$$&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;months = 24
+rate = 0.022 / 12
+
+monthly_payment = P / months + (P * rate)
+total_paid = monthly_payment * months
+total_interest = total_paid - P
+
+print(total_paid, total_interest)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Final Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Interest is the price of time&lt;/li&gt;
+&lt;li&gt;Python helps you &lt;strong&gt;see the truth before signing&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-takeaway&#34;&gt;🎓 Final Takeaway&lt;/h2&gt;
+&lt;p&gt;If a student finishes this chapter, they can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;read bank contracts&lt;/li&gt;
+&lt;li&gt;simulate real mortgages&lt;/li&gt;
+&lt;li&gt;explain interest mathematically&lt;/li&gt;
+&lt;li&gt;write Python like a finance engineer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is &lt;strong&gt;real-world algorithmic thinking&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-this-chapter-exists&#34;&gt;🌍 Why This Chapter Exists&lt;/h2&gt;
+&lt;p&gt;Most people ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Which bank is cheaper?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Engineers ask:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Which bank minimizes &lt;strong&gt;expected financial pain under uncertainty&lt;/strong&gt;?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Banks price &lt;strong&gt;risk&lt;/strong&gt;, not kindness.&lt;/p&gt;
+&lt;p&gt;This chapter teaches:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;how to compare banks &lt;strong&gt;algorithmically&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;how to think in &lt;strong&gt;risk-adjusted terms&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;how Python exposes hidden costs humans overlook&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-mental-model-what-is-a-risk-adjusted-decision&#34;&gt;🧠 Mental Model: What Is a Risk-Adjusted Decision?&lt;/h1&gt;
+&lt;p&gt;A naive decision minimizes:&lt;/p&gt;
+&lt;p&gt;$$
+\min ; \text{Total Payment}
+$$&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;risk-aware decision&lt;/strong&gt; minimizes:&lt;/p&gt;
+&lt;p&gt;$$
+\min ; \mathbb{E}[\text{Cost}] + \lambda \cdot \text{Risk}
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;p&gt;expected_cost = E_cost  # Expected total payment
+risk = volatility  # Or uncertainty / worst-case exposure
+lambda_ = risk_aversion_level  # Human parameter for risk aversion&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-problem-setup--comparing-bank-a--b--c&#34;&gt;🏦 Problem Setup — Comparing Bank A / B / C&lt;/h1&gt;
+&lt;h3 id=&#34;-loan-assumptions-same-for-all-banks&#34;&gt;📌 Loan Assumptions (Same for All Banks)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Condo price: &lt;strong&gt;3.3M THB&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Loan term: &lt;strong&gt;30 years&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;No down payment&lt;/li&gt;
+&lt;li&gt;Monthly payment system&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-bank-profiles-very-realistic&#34;&gt;🏦 Bank Profiles (Very Realistic)&lt;/h2&gt;
+&lt;h3 id=&#34;-bank-a--safe--predictable&#34;&gt;🟢 Bank A — Safe &amp;amp; Predictable&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed rate: &lt;strong&gt;3.0%&lt;/strong&gt; for entire loan&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-bank-b--promotional-trap&#34;&gt;🟡 Bank B — Promotional Trap&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;2.0% for first &lt;strong&gt;3 years&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;4.0% afterward&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-bank-c--floating--uncertain&#34;&gt;🔴 Bank C — Floating &amp;amp; Uncertain&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MRR = &lt;strong&gt;2.0% → 5.0%&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Random yearly fluctuation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-1--pure-cost-comparison&#34;&gt;🟢 Question 1 — Pure Cost Comparison&lt;/h1&gt;
+&lt;h3 id=&#34;-task&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Calculate:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Total payment&lt;/li&gt;
+&lt;li&gt;Total interest&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;for &lt;strong&gt;Bank A and Bank B&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ignore uncertainty for now.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-hint-1&#34;&gt;🧮 Hint&lt;/h3&gt;
+&lt;p&gt;Monthly payment:&lt;/p&gt;
+&lt;p&gt;$$
+M = P \cdot \frac{r(1+r)^N}{(1+r)^N - 1}
+$$&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def mortgage_total(P, annual_rate, years):
+    r = annual_rate / 12
+    N = years * 12
+    M = P * (r * (1 + r)**N) / ((1 + r)**N - 1)
+    return M * N, M * N - P
+
+P = 3_300_000
+
+bank_A = mortgage_total(P, 0.03, 30)
+bank_B_part1 = mortgage_total(P, 0.02, 30)
+
+print(&amp;quot;Bank A:&amp;quot;, bank_A)
+print(&amp;quot;Bank B (naive):&amp;quot;, bank_B_part1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Promotional rates lie if you don’t model the future&lt;/li&gt;
+&lt;li&gt;Banks love customers who stop calculating at year 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-2--correctly-modeling-bank-b-piecewise-rates&#34;&gt;🟢 Question 2 — Correctly Modeling Bank B (Piecewise Rates)&lt;/h1&gt;
+&lt;h3 id=&#34;-task-1&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Bank B:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2% for 3 years&lt;/li&gt;
+&lt;li&gt;4% for remaining 27 years&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Compute &lt;strong&gt;real total interest&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-mathematical-hint-2&#34;&gt;🧮 Mathematical Hint&lt;/h3&gt;
+&lt;p&gt;Interest rate is time-dependent:&lt;/p&gt;
+&lt;p&gt;$$
+r_t =
+\begin{cases}
+0.02 &amp;amp; t \le 3 &lt;br&gt;
+0.04 &amp;amp; t &amp;gt; 3
+\end{cases}
+$$&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;P = 3_300_000
+balance = P
+years = 30
+monthly_payment = P * 0.005  # simplified for teaching
+
+rates = [0.02]*36 + [0.04]*(years*12 - 36)
+
+total_interest = 0
+
+for rate in rates:
+    interest = balance * (rate / 12)
+    principal = monthly_payment - interest
+    balance -= principal
+    total_interest += interest
+
+print(&amp;quot;Total interest Bank B:&amp;quot;, round(total_interest, 2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Engineering Lesson&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Time segmentation matters&lt;/li&gt;
+&lt;li&gt;Banks profit from human short-term thinking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-3--modeling-risk-bank-c-floating-rate&#34;&gt;🧠 Question 3 — Modeling Risk: Bank C (Floating Rate)&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario-2&#34;&gt;📌 Scenario&lt;/h3&gt;
+&lt;p&gt;Bank C interest:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Starts at 2%&lt;/li&gt;
+&lt;li&gt;Every year randomly moves ±1%&lt;/li&gt;
+&lt;li&gt;Capped at 5%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-task-2&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Simulate &lt;strong&gt;1000 futures&lt;/strong&gt; and compute:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Expected total interest&lt;/li&gt;
+&lt;li&gt;Worst 10% outcome (risk)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-hint-monte-carlo-thinking&#34;&gt;🧮 Hint (Monte Carlo Thinking)&lt;/h3&gt;
+&lt;p&gt;$$
+\mathbb{E}[X] \approx \frac{1}{N} \sum_{i=1}^N X_i
+$$&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+def simulate_bank_c(P, years, simulations=1000):
+    results = []
+
+    for _ in range(simulations):
+        balance = P
+        total_interest = 0
+        rate = 0.02
+
+        for _ in range(years * 12):
+            if random.random() &amp;lt; 1/12:
+                rate += random.choice([-0.01, 0.01])
+                rate = min(max(rate, 0.02), 0.05)
+
+            interest = balance * (rate / 12)
+            balance -= (P / (years*12))
+            total_interest += interest
+
+        results.append(total_interest)
+
+    results.sort()
+    return sum(results)/len(results), results[int(0.9*len(results))]
+
+expected, worst_10 = simulate_bank_c(3_300_000, 30)
+
+print(&amp;quot;Expected interest:&amp;quot;, expected)
+print(&amp;quot;Worst 10% interest:&amp;quot;, worst_10)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Deep Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Floating rate is not “cheaper”&lt;/li&gt;
+&lt;li&gt;It is a &lt;strong&gt;distribution&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Humans underestimate tail risk&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-4--risk-adjusted-decision-rule&#34;&gt;🧠 Question 4 — Risk-Adjusted Decision Rule&lt;/h1&gt;
+&lt;h3 id=&#34;-task-3&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Define a decision score:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Score} = \mathbb{E}[\text{Interest}] + \lambda \cdot \text{WorstCase}
+$$&lt;/p&gt;
+&lt;p&gt;Compare banks for:&lt;/p&gt;
+&lt;p&gt;lambda_value = 0  # Risk-neutral
+lambda_value = 0.5  # Moderately risk-averse
+lambda_value = 1.0  # Highly risk-averse&lt;/p&gt;
+&lt;hr&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;banks = {
+    &amp;quot;A&amp;quot;: {&amp;quot;expected&amp;quot;: 1.9e6, &amp;quot;risk&amp;quot;: 0.1e6},
+    &amp;quot;B&amp;quot;: {&amp;quot;expected&amp;quot;: 1.7e6, &amp;quot;risk&amp;quot;: 0.4e6},
+    &amp;quot;C&amp;quot;: {&amp;quot;expected&amp;quot;: expected, &amp;quot;risk&amp;quot;: worst_10}
+}
+
+for lam in [0, 0.5, 1.0]:
+    print(&amp;quot;\nLambda =&amp;quot;, lam)
+    for k, v in banks.items():
+        score = v[&amp;quot;expected&amp;quot;] + lam * v[&amp;quot;risk&amp;quot;]
+        print(k, round(score, 2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Human Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Young + rich → Bank C&lt;/li&gt;
+&lt;li&gt;Family + fixed income → Bank A&lt;/li&gt;
+&lt;li&gt;Optimists regret Bank B&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-mental-upgrade&#34;&gt;🎓 Final Mental Upgrade&lt;/h2&gt;
+&lt;p&gt;After this chapter, students can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;model banks as stochastic systems&lt;/li&gt;
+&lt;li&gt;quantify financial risk&lt;/li&gt;
+&lt;li&gt;explain why “cheapest” ≠ “best”&lt;/li&gt;
+&lt;li&gt;think like a &lt;strong&gt;bank risk analyst&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is &lt;strong&gt;real Python for real life decisions&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-this-chapter-exists-1&#34;&gt;🌍 Why This Chapter Exists&lt;/h2&gt;
+&lt;p&gt;Most mortgage calculators assume:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“The future is stable.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Banks never assume that.&lt;/p&gt;
+&lt;p&gt;Banks ask:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What if income drops?&lt;/li&gt;
+&lt;li&gt;What if interest spikes?&lt;/li&gt;
+&lt;li&gt;What if humans panic?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This chapter teaches:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;how to &lt;strong&gt;simulate recession scenarios&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;how to evaluate decisions using &lt;strong&gt;expected utility&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;why banks survive crises while households don’t&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-core-upgrade-cost-is-not-pain&#34;&gt;🧠 Core Upgrade: Cost Is Not Pain&lt;/h1&gt;
+&lt;p&gt;Humans don’t minimize money.&lt;/p&gt;
+&lt;p&gt;They minimize &lt;strong&gt;pain&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Economics models this using &lt;strong&gt;utility&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-expected-utility-theory-very-simple&#34;&gt;📘 Expected Utility Theory (Very Simple)&lt;/h2&gt;
+&lt;p&gt;Instead of minimizing cost:&lt;/p&gt;
+&lt;p&gt;$$
+\min ; \mathbb{E}[\text{Cost}]
+$$&lt;/p&gt;
+&lt;p&gt;Humans actually maximize:&lt;/p&gt;
+&lt;p&gt;$$
+\max ; \mathbb{E}[U(W)]
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;( W ) = wealth after paying mortgage&lt;/li&gt;
+&lt;li&gt;( U(\cdot) ) = utility function (how painful money loss feels)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-common-utility-function-risk-averse-human&#34;&gt;🧠 Common Utility Function (Risk-Averse Human)&lt;/h2&gt;
+&lt;p&gt;$$
+U(W) = \sqrt{W}
+$$&lt;/p&gt;
+&lt;p&gt;Why?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Losing 100k hurts more when you are poor&lt;/li&gt;
+&lt;li&gt;Rich people absorb shocks better&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-recession-model--what-changes&#34;&gt;🏦 Recession Model — What Changes?&lt;/h1&gt;
+&lt;p&gt;During a recession, &lt;strong&gt;three things happen together&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Interest rates increase&lt;/li&gt;
+&lt;li&gt;Income becomes unstable&lt;/li&gt;
+&lt;li&gt;Forced selling risk appears&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We simulate &lt;strong&gt;interest shock + income shock&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-1--modeling-a-recession-shock&#34;&gt;🟢 Question 1 — Modeling a Recession Shock&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario-3&#34;&gt;📌 Scenario&lt;/h3&gt;
+&lt;p&gt;At year 5:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Interest jumps by +2%&lt;/li&gt;
+&lt;li&gt;Monthly income drops by 30% for 2 years&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-task-4&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Simulate mortgage under recession and compute:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;total interest&lt;/li&gt;
+&lt;li&gt;minimum remaining cash buffer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-mathematical-hint-3&#34;&gt;🧮 Mathematical Hint&lt;/h3&gt;
+&lt;p&gt;Interest rate shift:&lt;/p&gt;
+&lt;p&gt;$$
+r_t =
+\begin{cases}
+r &amp;amp; t &amp;lt; t_c \
+r + 0.02 &amp;amp; t \ge t_c
+\end{cases}
+$$&lt;/p&gt;
+&lt;p&gt;Income shock:&lt;/p&gt;
+&lt;p&gt;$$
+I_t = 0.7 I \quad \text{during recession}
+$$&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;P = 3_300_000
+balance = P
+years = 30
+monthly_income = 80_000
+monthly_payment = 25_000
+cash_buffer = 500_000
+
+rate = 0.03
+total_interest = 0
+min_cash = cash_buffer
+
+for m in range(1, years * 12 + 1):
+    if m == 5 * 12:
+        rate += 0.02
+
+    income = monthly_income
+    if 5 * 12 &amp;lt;= m &amp;lt;= 7 * 12:
+        income *= 0.7
+
+    interest = balance * (rate / 12)
+    principal = monthly_payment - interest
+    balance -= principal
+    total_interest += interest
+
+    cash_buffer += income - monthly_payment
+    min_cash = min(min_cash, cash_buffer)
+
+print(&amp;quot;Total interest:&amp;quot;, round(total_interest, 2))
+print(&amp;quot;Minimum cash buffer:&amp;quot;, round(min_cash, 2))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Reality Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Interest shock hurts slowly&lt;/li&gt;
+&lt;li&gt;Income shock kills fast&lt;/li&gt;
+&lt;li&gt;Liquidity &amp;gt; interest rate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-2--probability-of-default-human-view&#34;&gt;🧠 Question 2 — Probability of Default (Human View)&lt;/h1&gt;
+&lt;h3 id=&#34;-default-rule&#34;&gt;📌 Default Rule&lt;/h3&gt;
+&lt;p&gt;Household defaults if:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Cash Buffer} &amp;lt; 0
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-task-5&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Simulate &lt;strong&gt;1000 recession paths&lt;/strong&gt; and compute:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;probability of default&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import random
+
+def simulate_default():
+    cash = 500_000
+    balance = 3_300_000
+    rate = 0.03
+    income = 80_000
+    payment = 25_000
+
+    for m in range(1, 30*12):
+        if m == 5 * 12:
+            rate += 0.02
+
+        shock = random.random() &amp;lt; 0.3
+        current_income = income * (0.7 if shock else 1.0)
+
+        interest = balance * (rate / 12)
+        balance -= (payment - interest)
+        cash += current_income - payment
+
+        if cash &amp;lt; 0:
+            return True
+
+    return False
+
+defaults = sum(simulate_default() for _ in range(1000))
+print(&amp;quot;Default probability:&amp;quot;, defaults / 1000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Bank Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Banks don’t care about averages&lt;/li&gt;
+&lt;li&gt;They price &lt;strong&gt;default probability&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-3--expected-utility-comparison-bank-a-vs-c&#34;&gt;🧠 Question 3 — Expected Utility Comparison (Bank A vs C)&lt;/h1&gt;
+&lt;h3 id=&#34;-setup&#34;&gt;📌 Setup&lt;/h3&gt;
+&lt;p&gt;We compare two choices:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bank A: fixed rate, low volatility&lt;/li&gt;
+&lt;li&gt;Bank C: floating rate, high volatility&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-task-6&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Compute expected utility under recession risk.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-utility-function&#34;&gt;🧮 Utility Function&lt;/h3&gt;
+&lt;p&gt;$$
+U(W) = \sqrt{W}
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;p&gt;$$
+W = \text{Final Wealth} = \text{Savings} - \text{Total Paid}
+$$&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import math
+
+def utility(wealth):
+    return math.sqrt(max(wealth, 0))
+
+def expected_utility(simulations, bank_type):
+    utilities = []
+
+    for _ in range(simulations):
+        savings = 2_000_000
+        total_paid = 0
+
+        if bank_type == &amp;quot;A&amp;quot;:
+            rate = 0.03
+        else:
+            rate = random.uniform(0.02, 0.05)
+
+        total_paid = 3_300_000 * (1 + rate * 30)
+        wealth = savings - total_paid
+        utilities.append(utility(wealth))
+
+    return sum(utilities) / len(utilities)
+
+print(&amp;quot;EU Bank A:&amp;quot;, expected_utility(1000, &amp;quot;A&amp;quot;))
+print(&amp;quot;EU Bank C:&amp;quot;, expected_utility(1000, &amp;quot;C&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Key Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Higher expected cost can still give &lt;strong&gt;higher utility&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Safety has value&lt;/li&gt;
+&lt;li&gt;Volatility destroys utility faster than it saves money&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-4--why-banks-win-final-truth&#34;&gt;🧠 Question 4 — Why Banks Win (Final Truth)&lt;/h1&gt;
+&lt;p&gt;Banks optimize:&lt;/p&gt;
+&lt;p&gt;$$
+\max ; \mathbb{E}[\text{Profit}] - \text{Tail Risk}
+$$&lt;/p&gt;
+&lt;p&gt;Humans ignore tail risk.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-thought-question-no-code&#34;&gt;🎯 Thought Question (No Code)&lt;/h3&gt;
+&lt;p&gt;Why do banks survive recessions while households don’t?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hint:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$$
+\text{Diversification} + \text{Capital Buffer} \gg \text{Single Mortgage}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-mental-shift&#34;&gt;🎓 Final Mental Shift&lt;/h2&gt;
+&lt;p&gt;After this chapter, students understand:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;why floating rate is psychologically dangerous&lt;/li&gt;
+&lt;li&gt;why recession kills liquidity, not math&lt;/li&gt;
+&lt;li&gt;why expected utility beats “lowest interest”&lt;/li&gt;
+&lt;li&gt;why banks always design contracts to win&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You are no longer a borrower.&lt;/p&gt;
+&lt;p&gt;You are a &lt;strong&gt;system thinker&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-this-chapter-exists-2&#34;&gt;🌍 Why This Chapter Exists&lt;/h2&gt;
+&lt;p&gt;People often say:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Banks are greedy.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That is emotionally true — but technically incomplete.&lt;/p&gt;
+&lt;p&gt;Banks do not survive because of greed.&lt;br&gt;
+They survive because of &lt;strong&gt;structure&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This chapter explains:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;why banks can take risks households cannot&lt;/li&gt;
+&lt;li&gt;why leverage hurts humans more than math predicts&lt;/li&gt;
+&lt;li&gt;why loss hurts &lt;strong&gt;more than gain feels good&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-part-i--bank-capital-vs-household-leverage&#34;&gt;🏦 Part I — Bank Capital vs Household Leverage&lt;/h1&gt;
+&lt;h2 id=&#34;-core-asymmetry-very-important&#34;&gt;🧠 Core Asymmetry (Very Important)&lt;/h2&gt;
+&lt;p&gt;A household usually has:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Leverage} = \frac{\text{Debt}}{\text{Income}} \gg 1
+$$&lt;/p&gt;
+&lt;p&gt;A bank operates under:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Capital Ratio} = \frac{\text{Equity}}{\text{Risk-Weighted Assets}} \ge 8%
+$$&lt;/p&gt;
+&lt;p&gt;Same money system — &lt;strong&gt;completely different survival rules&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-definitions-plain-english&#34;&gt;📘 Definitions (Plain English)&lt;/h2&gt;
+&lt;h3 id=&#34;household-leverage&#34;&gt;Household Leverage&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;One income stream&lt;/li&gt;
+&lt;li&gt;One large loan&lt;/li&gt;
+&lt;li&gt;Failure = life disruption&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;bank-capital&#34;&gt;Bank Capital&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Thousands of borrowers&lt;/li&gt;
+&lt;li&gt;Diversification&lt;/li&gt;
+&lt;li&gt;Loss absorption buffer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-1--leverage-comparison-math-reality&#34;&gt;🟢 Question 1 — Leverage Comparison (Math Reality)&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario-4&#34;&gt;📌 Scenario&lt;/h3&gt;
+&lt;p&gt;Household:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Income: 80,000 THB/month&lt;/li&gt;
+&lt;li&gt;Mortgage: 3.3M&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bank:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Loans issued: 1,000 × 3.3M&lt;/li&gt;
+&lt;li&gt;Capital ratio: 10%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-tasks-2&#34;&gt;🎯 Tasks&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Compute household leverage&lt;/li&gt;
+&lt;li&gt;Compute bank equity buffer&lt;/li&gt;
+&lt;li&gt;Compare shock tolerance&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-mathematical-hint-4&#34;&gt;🧮 Mathematical Hint&lt;/h3&gt;
+&lt;p&gt;$$
+\text{Household Leverage} = \frac{\text{Debt}}{\text{Annual Income}}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\text{Bank Capital} = 0.10 \times \text{Total Loans}
+$$&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;household_income = 80_000 * 12
+household_debt = 3_300_000
+
+leverage = household_debt / household_income
+
+bank_loans = 3_300_000 * 1000
+bank_capital = bank_loans * 0.10
+
+print(&amp;quot;Household leverage:&amp;quot;, round(leverage, 2))
+print(&amp;quot;Bank capital buffer:&amp;quot;, bank_capital)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Interpretation&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Household leverage ≈ 3–5× income → fragile&lt;/li&gt;
+&lt;li&gt;Bank absorbs &lt;strong&gt;millions of defaults&lt;/strong&gt; before dying&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-2--shock-absorption-test&#34;&gt;🧠 Question 2 — Shock Absorption Test&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario-5&#34;&gt;📌 Scenario&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Economic shock causes &lt;strong&gt;5% of borrowers to default&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Each default loses 50% of loan value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-tasks-3&#34;&gt;🎯 Tasks&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Compute total bank loss&lt;/li&gt;
+&lt;li&gt;Check if bank survives&lt;/li&gt;
+&lt;li&gt;Compare to household shock&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;default_rate = 0.05
+loss_given_default = 0.5
+
+loss = bank_loans * default_rate * loss_given_default
+bank_survives = loss &amp;lt; bank_capital
+
+print(&amp;quot;Bank loss:&amp;quot;, loss)
+print(&amp;quot;Bank survives:&amp;quot;, bank_survives)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Key Truth&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Banks are built to &lt;strong&gt;expect failure&lt;/strong&gt;.
+Households are not.&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-part-ii--prospect-theory-why-humans-panic&#34;&gt;🧠 Part II — Prospect Theory (Why Humans Panic)&lt;/h1&gt;
+&lt;h2 id=&#34;-classical-economics-assumption-wrong&#34;&gt;📘 Classical Economics Assumption (Wrong)&lt;/h2&gt;
+&lt;p&gt;Humans maximize expected value:&lt;/p&gt;
+&lt;p&gt;$$
+\max ; \mathbb{E}[W]
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-prospect-theory-reality&#34;&gt;🧠 Prospect Theory (Reality)&lt;/h2&gt;
+&lt;p&gt;Humans evaluate &lt;strong&gt;gains and losses asymmetrically&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Utility function:&lt;/p&gt;
+&lt;p&gt;$$
+U(x) =
+\begin{cases}
+x^\alpha &amp;amp; x \ge 0 &lt;br&gt;
+-\lambda |x|^\beta &amp;amp; x &amp;lt; 0
+\end{cases}
+$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;( \lambda &amp;gt; 1 ) (loss hurts more than gain)&lt;/li&gt;
+&lt;li&gt;Typically ( \lambda \approx 2.25 )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-3--loss-aversion-in-mortgage-decisions&#34;&gt;🟢 Question 3 — Loss Aversion in Mortgage Decisions&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario-6&#34;&gt;📌 Scenario&lt;/h3&gt;
+&lt;p&gt;Two outcomes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Option A: Save 100,000 THB&lt;/li&gt;
+&lt;li&gt;Option B: Risk losing 100,000 THB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Expected value = same.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-task-7&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Compare utility using prospect theory.&lt;/p&gt;
+&lt;hr&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def prospect_utility(x, alpha=0.88, beta=0.88, lam=2.25):
+    if x &amp;gt;= 0:
+        return x ** alpha
+    else:
+        return -lam * (abs(x) ** beta)
+
+gain = prospect_utility(100_000)
+loss = prospect_utility(-100_000)
+
+print(&amp;quot;Utility of gain:&amp;quot;, gain)
+print(&amp;quot;Utility of loss:&amp;quot;, loss)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Psychological Truth&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Losing 100k hurts ~2× more than gaining 100k feels good&lt;/li&gt;
+&lt;li&gt;Floating rate mortgages amplify psychological pain&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-4--why-households-panic-sell&#34;&gt;🧠 Question 4 — Why Households Panic-Sell&lt;/h1&gt;
+&lt;h3 id=&#34;-scenario-7&#34;&gt;📌 Scenario&lt;/h3&gt;
+&lt;p&gt;During recession:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;House price drops 15%&lt;/li&gt;
+&lt;li&gt;Mortgage balance unchanged&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-task-8&#34;&gt;🎯 Task&lt;/h3&gt;
+&lt;p&gt;Compute perceived loss vs actual loss.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-hint-2&#34;&gt;🧮 Hint&lt;/h3&gt;
+&lt;p&gt;Reference point matters:&lt;/p&gt;
+&lt;p&gt;$$
+\text{Loss} = P_{\text{peak}} - P_{\text{current}}
+$$&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt;✅ Solution (Python)&lt;/summary&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;house_price = 3_300_000
+price_drop = 0.15
+
+actual_loss = house_price * price_drop
+perceived_pain = prospect_utility(-actual_loss)
+
+print(&amp;quot;Actual loss:&amp;quot;, actual_loss)
+print(&amp;quot;Perceived pain:&amp;quot;, perceived_pain)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;💡 &lt;strong&gt;Key Insight&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;People sell not because of math —
+they sell because of &lt;strong&gt;pain&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Banks know this.&lt;/p&gt;
+&lt;/details&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-question-5--final-synthesis-no-code&#34;&gt;🧠 Question 5 — Final Synthesis (No Code)&lt;/h1&gt;
+&lt;p&gt;Why do banks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;encourage leverage?&lt;/li&gt;
+&lt;li&gt;offer floating rates?&lt;/li&gt;
+&lt;li&gt;survive crises?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Answer (Hint):&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$$
+\text{Diversification} + \text{Capital} + \text{Asymmetric Psychology}
+$$&lt;/p&gt;
+&lt;p&gt;Households face:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;concentrated risk&lt;/li&gt;
+&lt;li&gt;no buffer&lt;/li&gt;
+&lt;li&gt;loss aversion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-mental-model&#34;&gt;🎓 Final Mental Model&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Entity&lt;/th&gt;
+&lt;th&gt;Risk&lt;/th&gt;
+&lt;th&gt;Buffer&lt;/th&gt;
+&lt;th&gt;Psychology&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Household&lt;/td&gt;
+&lt;td&gt;Concentrated&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;td&gt;Loss-averse&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Bank&lt;/td&gt;
+&lt;td&gt;Diversified&lt;/td&gt;
+&lt;td&gt;Capital&lt;/td&gt;
+&lt;td&gt;Risk-neutral&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Banks don’t win by cheating.&lt;/p&gt;
+&lt;p&gt;They win because the system was &lt;strong&gt;never symmetric&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You now see the matrix.&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
   </channel>
 </rss>

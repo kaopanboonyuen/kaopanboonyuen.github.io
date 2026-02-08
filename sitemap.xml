@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-011-banking-as-a-system/</loc>
+    <lastmod>2026-02-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-010-agi-problem/</loc>
     <lastmod>2026-02-07T00:00:00+00:00</lastmod>
   </url><url>
@@ -193,6 +196,9 @@
   </url><url>
     <loc>https://kaopanboonyuen.github.io/courses/2026-01-01-llm-multimodal/lecture-12-encoder-decoder-in-llms/</loc>
     <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/courses/2025-12-30-leetcode-interview-foundations/cs101-lc04-23-bank-loan/</loc>
+    <lastmod>2026-02-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/courses/2026-01-01-llm-multimodal/lecture-13-llm-interview/</loc>
     <lastmod>2026-01-01T00:00:00+00:00</lastmod>
