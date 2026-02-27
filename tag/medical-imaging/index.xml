@@ -23,5 +23,20 @@
 </description>
     </item>
     
+    <item>
+      <title>LymphAware: Domain-Aware Bias Disruption for Reliable Lymphoma Cancer AI Diagnosis</title>
+      <link>https://kaopanboonyuen.github.io/publication/lymphaware-domain-aware-bias-disruption-for-reliable-lymphoma-cancer-ai-diagnosis/</link>
+      <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/lymphaware-domain-aware-bias-disruption-for-reliable-lymphoma-cancer-ai-diagnosis/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;You can explore the full &lt;strong&gt;LymphAware&lt;/strong&gt; project at
+👉 &lt;a href=&#34;https://kaopanboonyuen.github.io/LymphAware/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/LymphAware/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The official implementation is publicly available at
+👉 &lt;a href=&#34;https://github.com/kaopanboonyuen/LymphAware&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/kaopanboonyuen/LymphAware&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Unlike conventional histopathology classifiers that implicitly rely on acquisition-specific shortcuts, LymphAware is designed from the ground up to disentangle morphology from scanner- and stain-induced bias. The repository includes reproducible training pipelines, artifact-shift perturbation modules, and evaluation protocols for cross-domain robustness. Our goal is not merely higher accuracy, but representation-level reliability under realistic domain shift — a necessary step toward clinically trustworthy AI systems.&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
