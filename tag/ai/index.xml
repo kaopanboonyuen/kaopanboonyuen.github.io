@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/ai/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/ai/index.xml" rel="self" type="application/rss+xml" />
+    <description>AI</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Wed, 04 Mar 2026 08:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>AI</title>
+      <link>https://kaopanboonyuen.github.io/tag/ai/</link>
+    </image>
+    
+    <item>
+      <title>LymphAware AI for Lymphoma Diagnosis</title>
+      <link>https://kaopanboonyuen.github.io/talk/lymphaware-ai-for-lymphoma-diagnosis/</link>
+      <pubDate>Wed, 04 Mar 2026 08:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/talk/lymphaware-ai-for-lymphoma-diagnosis/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;img/main_news_lymphaware_01.png&#34; alt=&#34;LymphAware Research Highlight&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;research-highlight&#34;&gt;Research Highlight&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;College of Computing, Khon Kaen University&lt;/strong&gt;, has officially featured the research work of &lt;strong&gt;Dr. Teerapong Panboonyuen&lt;/strong&gt;, recognizing his contribution to advancing &lt;strong&gt;Artificial Intelligence for medical diagnosis&lt;/strong&gt;. This recognition highlights an important milestone in the development of trustworthy AI technologies designed to support clinical decision-making and improve healthcare outcomes.&lt;/p&gt;
+&lt;p&gt;The featured research introduces &lt;strong&gt;LymphAware&lt;/strong&gt;, a novel AI framework designed to improve the &lt;strong&gt;accuracy and reliability of lymphoma cancer diagnosis&lt;/strong&gt; from histopathology images. Histopathological analysis plays a critical role in cancer diagnosis, yet variations in slide preparation, staining processes, and scanning devices often introduce unwanted signals that can mislead machine learning models.&lt;/p&gt;
+&lt;h2 id=&#34;addressing-the-shortcut-bias-problem&#34;&gt;Addressing the Shortcut Bias Problem&lt;/h2&gt;
+&lt;p&gt;Many AI models unintentionally learn &lt;strong&gt;shortcut patterns&lt;/strong&gt; from irrelevant image artifacts instead of focusing on true pathological features. These artifacts may include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Differences in color caused by staining procedures&lt;/li&gt;
+&lt;li&gt;Variations from scanning equipment&lt;/li&gt;
+&lt;li&gt;Background textures unrelated to cancer pathology&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While such models may appear highly accurate during laboratory testing, they can fail when deployed in real clinical environments where data characteristics vary significantly across hospitals.&lt;/p&gt;
+&lt;p&gt;To address this challenge, &lt;strong&gt;LymphAware&lt;/strong&gt; introduces a &lt;strong&gt;Tri-Path Deep Learning Architecture&lt;/strong&gt; designed to explicitly separate meaningful cancer morphology from spurious signals.&lt;/p&gt;
+&lt;h2 id=&#34;key-innovations-of-lymphaware&#34;&gt;Key Innovations of LymphAware&lt;/h2&gt;
+&lt;p&gt;The proposed framework focuses on three major objectives:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Extract clinically meaningful morphological features&lt;/strong&gt; from lymphoma cells while isolating irrelevant artifacts.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Suppress artificial signals&lt;/strong&gt; originating from slide preparation, staining, or scanning processes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Enhance cross-domain robustness&lt;/strong&gt;, enabling the model to perform consistently across datasets from different medical institutions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By focusing on domain-aware learning, the system helps ensure that AI predictions are based on &lt;strong&gt;true pathological evidence rather than accidental correlations&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;experimental-impact&#34;&gt;Experimental Impact&lt;/h2&gt;
+&lt;p&gt;Extensive experiments demonstrate that the proposed approach:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Improves robustness against &lt;strong&gt;domain shift&lt;/strong&gt; across different datasets&lt;/li&gt;
+&lt;li&gt;Reduces &lt;strong&gt;misclassification rates&lt;/strong&gt; in lymphoma diagnosis&lt;/li&gt;
+&lt;li&gt;Produces &lt;strong&gt;attribution maps&lt;/strong&gt; that align closely with real pathological regions observed by medical experts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These results highlight the potential of &lt;strong&gt;clinically reliable AI systems&lt;/strong&gt; capable of supporting physicians in making more accurate and trustworthy diagnostic decisions.&lt;/p&gt;
+&lt;h2 id=&#34;advancing-ai-for-healthcare&#34;&gt;Advancing AI for Healthcare&lt;/h2&gt;
+&lt;p&gt;This research represents an important step toward the development of &lt;strong&gt;clinically trustworthy artificial intelligence&lt;/strong&gt;. By addressing reliability challenges in medical imaging, LymphAware contributes to the broader goal of integrating AI safely into healthcare systems.&lt;/p&gt;
+&lt;p&gt;Such technologies have the potential to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reduce diagnostic variability&lt;/li&gt;
+&lt;li&gt;Assist pathologists in complex case analysis&lt;/li&gt;
+&lt;li&gt;Improve early detection and treatment planning for cancer patients&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ultimately, the work demonstrates how &lt;strong&gt;advanced AI research can contribute to improving public health and supporting medical professionals worldwide.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;official-news-coverage&#34;&gt;Official News Coverage&lt;/h2&gt;
+&lt;p&gt;This research recognition has been officially announced by the &lt;strong&gt;College of Computing, Khon Kaen University&lt;/strong&gt; through their institutional communication channels.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;🌐 &lt;a href=&#34;https://computing.kku.ac.th/content/news/2026-03-04-teerapong&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Official News on College of Computing Website&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;📣 &lt;a href=&#34;https://www.facebook.com/computing.kku/posts/pfbid07nn4JgHN5fcuVpyq963Kk35nYzAM1tyu1E4XFLmaQC63NPCyeZUBQtQQoChadWM9l&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Announcement on College of Computing Facebook&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;img/main_news_lymphaware_02.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;learn-more&#34;&gt;Learn More&lt;/h2&gt;
+&lt;p&gt;Readers interested in exploring the full project, technical details, and research materials can visit the official project page:&lt;/p&gt;
+&lt;p&gt;🔗 &lt;a href=&#34;https://kaopanboonyuen.github.io/LymphAware/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/LymphAware/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

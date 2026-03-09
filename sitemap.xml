@@ -206,10 +206,34 @@
     <loc>https://kaopanboonyuen.github.io/courses/2026-01-01-llm-multimodal/lecture-14-deep-learning-modern-ai-final/</loc>
     <lastmod>2026-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/courses/</loc>
-    <lastmod>2026-02-07T00:00:00+00:00</lastmod>
+    <loc>https://kaopanboonyuen.github.io/tag/ai/</loc>
+    <lastmod>2026-03-04T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/histopathology/</loc>
+    <lastmod>2026-03-04T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/ieee-access/</loc>
+    <lastmod>2026-03-04T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/talk/lymphaware-ai-for-lymphoma-diagnosis/</loc>
+    <lastmod>2026-03-04T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/lymphoma/</loc>
+    <lastmod>2026-03-04T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/medical-imaging/</loc>
+    <lastmod>2026-03-04T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/event/</loc>
+    <lastmod>2026-03-04T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tags/</loc>
+    <lastmod>2026-03-04T08:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/</loc>
+    <lastmod>2026-03-04T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/courses/</loc>
     <lastmod>2026-02-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/publication-type/1/</loc>
@@ -251,9 +275,6 @@
     <loc>https://kaopanboonyuen.github.io/tag/self-supervised-learning/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tags/</loc>
-    <lastmod>2026-01-29T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://kaopanboonyuen.github.io/author/teerapong-panboonyuen/</loc>
     <lastmod>2026-01-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -284,9 +305,6 @@
     <loc>https://kaopanboonyuen.github.io/tag/lung-cancer/</loc>
     <lastmod>2026-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/medical-imaging/</loc>
-    <lastmod>2026-01-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/model-interpretability/</loc>
     <lastmod>2026-01-19T00:00:00+00:00</lastmod>
   </url><url>
@@ -314,13 +332,7 @@
     <loc>https://kaopanboonyuen.github.io/tag/domain-generalization/</loc>
     <lastmod>2026-01-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/histopathology/</loc>
-    <lastmod>2026-01-18T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://kaopanboonyuen.github.io/publication/lymphaware-domain-aware-bias-disruption-for-reliable-lymphoma-cancer-ai-diagnosis/</loc>
-    <lastmod>2026-01-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/lymphoma/</loc>
     <lastmod>2026-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/robust-ai/</loc>
@@ -451,12 +463,6 @@
   </url><url>
     <loc>https://kaopanboonyuen.github.io/blog/2025-10-13-my25th-blood-donation/</loc>
     <lastmod>2025-10-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/talk/get-to-know-me-better/</loc>
-    <lastmod>2025-09-22T05:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/event/</loc>
-    <lastmod>2025-09-22T05:30:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/author/c.-charoenphon/</loc>
     <lastmod>2025-07-28T00:00:00+00:00</lastmod>
@@ -1243,6 +1249,9 @@
   </url><url>
     <loc>https://kaopanboonyuen.github.io/author/t.-vajeethaveesin/</loc>
     <lastmod>2022-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/talk/get-to-know-me-better/</loc>
+    <lastmod>2021-09-22T05:30:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/talk/ph.d.-thesis-defense/</loc>
     <lastmod>2020-07-31T14:00:00+00:00</lastmod>
