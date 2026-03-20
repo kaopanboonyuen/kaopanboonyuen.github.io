@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>transformer-architectures | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/transformer-architectures/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/transformer-architectures/index.xml" rel="self" type="application/rss+xml" />
+    <description>transformer-architectures</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Thu, 19 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>transformer-architectures</title>
+      <link>https://kaopanboonyuen.github.io/tag/transformer-architectures/</link>
+    </image>
+    
+    <item>
+      <title>Foundations and Architectures of Artificial Intelligence for Motor Insurance</title>
+      <link>https://kaopanboonyuen.github.io/publication/foundations-and-architectures-of-artificial-intelligence-for-motor-insurance/</link>
+      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/foundations-and-architectures-of-artificial-intelligence-for-motor-insurance/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;panboonyuen_book_cover.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;compact_01.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Discover the definitive guide to AI in motor insurance with this comprehensive handbook, available at &lt;a href=&#34;https://arxiv.org/pdf/2603.18508&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv:2603.18508&lt;/a&gt;. Covering everything from domain-adapted transformer architectures to scalable, production-ready pipelines, it unifies perception, multimodal reasoning, and claims processing into a cohesive intelligence stack. Whether you’re building models for vehicle damage assessment, automating underwriting workflows, or designing MLOps frameworks for nationwide deployment, this handbook provides all the insights, methodologies, and practical know-how you need to bring cutting-edge AI to motor insurance—making it the ultimate resource for researchers, practitioners, and industry innovators alike.&lt;/p&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

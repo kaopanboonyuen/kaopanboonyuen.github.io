@@ -5,7 +5,7 @@
     <link>https://kaopanboonyuen.github.io/tag/domain-adaptation/</link>
       <atom:link href="https://kaopanboonyuen.github.io/tag/domain-adaptation/index.xml" rel="self" type="application/rss+xml" />
     <description>domain-adaptation</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Thu, 29 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Fri, 20 Mar 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>domain-adaptation</title>
@@ -15,7 +15,7 @@
     <item>
       <title>HERS: Hidden-Pattern Expert Learning for Risk-Specific Vehicle Damage Adaptation in Diffusion Models</title>
       <link>https://kaopanboonyuen.github.io/publication/hers-hidden-pattern-expert-learning-for-risk-specific-vehicle-damage-adaptation-in-diffusion-models/</link>
-      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/publication/hers-hidden-pattern-expert-learning-for-risk-specific-vehicle-damage-adaptation-in-diffusion-models/</guid>
       <description>&lt;!-- ![](featured.png) --&gt;
 &lt;p&gt;HERS (Hidden-Pattern Expert Learning for Risk-Specific Damage Adaptation) is a diffusion-based framework that addresses a critical gap in deploying generative models within safety-critical domains such as auto insurance. While modern text-to-image diffusion models produce visually realistic outputs, they often fail to capture subtle, liability-relevant damage patterns—such as faint dents, hairline cracks, asymmetric breakage, or signs of tampering—that are essential for fraud detection and claim validation. HERS reframes vehicle damage synthesis as a risk-specific adaptation problem rather than a generic image generation task.&lt;/p&gt;

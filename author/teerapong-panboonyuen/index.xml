@@ -5,12 +5,56 @@
     <link>https://kaopanboonyuen.github.io/author/teerapong-panboonyuen/</link>
       <atom:link href="https://kaopanboonyuen.github.io/author/teerapong-panboonyuen/index.xml" rel="self" type="application/rss+xml" />
     <description>Teerapong Panboonyuen</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Sat, 14 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Fri, 20 Mar 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/author/teerapong-panboonyuen/avatar_hu00be49bf8d306be2acce952c8fa7a11f_1239445_270x270_fill_lanczos_center_3.png</url>
       <title>Teerapong Panboonyuen</title>
       <link>https://kaopanboonyuen.github.io/author/teerapong-panboonyuen/</link>
     </image>
+    
+    <item>
+      <title>HERS: Hidden-Pattern Expert Learning for Risk-Specific Vehicle Damage Adaptation in Diffusion Models</title>
+      <link>https://kaopanboonyuen.github.io/publication/hers-hidden-pattern-expert-learning-for-risk-specific-vehicle-damage-adaptation-in-diffusion-models/</link>
+      <pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/hers-hidden-pattern-expert-learning-for-risk-specific-vehicle-damage-adaptation-in-diffusion-models/</guid>
+      <description>&lt;!-- ![](featured.png) --&gt;
+&lt;p&gt;HERS (Hidden-Pattern Expert Learning for Risk-Specific Damage Adaptation) is a diffusion-based framework that addresses a critical gap in deploying generative models within safety-critical domains such as auto insurance. While modern text-to-image diffusion models produce visually realistic outputs, they often fail to capture subtle, liability-relevant damage patterns—such as faint dents, hairline cracks, asymmetric breakage, or signs of tampering—that are essential for fraud detection and claim validation. HERS reframes vehicle damage synthesis as a risk-specific adaptation problem rather than a generic image generation task.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The framework operates without manual annotation or human feedback by leveraging large language models to automatically generate diverse, damage-aware prompts paired with synthetic images from a pretrained diffusion backbone. From this self-supervised data, HERS trains lightweight LoRA-based experts, each specializing in a distinct damage category including dents, scratches, cracked paint, and broken lights. These experts learn hidden visual patterns that generic diffusion models typically overlook but that forensic assessment implicitly depends on.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To balance specialization and generalization, all damage-specific experts are merged into a single unified diffusion model, enabling zero-shot synthesis of complex, multi-damage scenarios without inference-time routing. Extensive experiments across multiple diffusion backbones demonstrate consistent improvements in text–image alignment and human preference, alongside qualitative gains in damage localization, geometric coherence, and fine-grained artifact preservation. Beyond technical performance, HERS highlights the dual-use nature of generative models in insurance, underscoring the need for trustworthy, risk-aware diffusion systems for real-world, high-stakes deployment.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;HERS_SHOWCASE_01.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;HERS_SHOWCASE_03.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;HERS_SHOWCASE_04.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Foundations and Architectures of Artificial Intelligence for Motor Insurance</title>
+      <link>https://kaopanboonyuen.github.io/publication/foundations-and-architectures-of-artificial-intelligence-for-motor-insurance/</link>
+      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/foundations-and-architectures-of-artificial-intelligence-for-motor-insurance/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;panboonyuen_book_cover.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;compact_01.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Discover the definitive guide to AI in motor insurance with this comprehensive handbook, available at &lt;a href=&#34;https://arxiv.org/pdf/2603.18508&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;arXiv:2603.18508&lt;/a&gt;. Covering everything from domain-adapted transformer architectures to scalable, production-ready pipelines, it unifies perception, multimodal reasoning, and claims processing into a cohesive intelligence stack. Whether you’re building models for vehicle damage assessment, automating underwriting workflows, or designing MLOps frameworks for nationwide deployment, this handbook provides all the insights, methodologies, and practical know-how you need to bring cutting-edge AI to motor insurance—making it the ultimate resource for researchers, practitioners, and industry innovators alike.&lt;/p&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>HOMEY: Heuristic Object Masking with Enhanced YOLO for Property Insurance Risk Detection</title>
+      <link>https://kaopanboonyuen.github.io/publication/homey-heuristic-object-masking-with-enhanced-yolo-for-property-insurance-risk-detection/</link>
+      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/homey-heuristic-object-masking-with-enhanced-yolo-for-property-insurance-risk-detection/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;compact_01.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Sub-50 in the Snow: My 10K Winter City Run Through the Streets of Sapporo, Hokkaido</title>
@@ -926,24 +970,6 @@ If yes, please consider sharing it — inspiration grows when shared. ❄️✨
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;hr&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>HERS: Hidden-Pattern Expert Learning for Risk-Specific Vehicle Damage Adaptation in Diffusion Models</title>
-      <link>https://kaopanboonyuen.github.io/publication/hers-hidden-pattern-expert-learning-for-risk-specific-vehicle-damage-adaptation-in-diffusion-models/</link>
-      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/publication/hers-hidden-pattern-expert-learning-for-risk-specific-vehicle-damage-adaptation-in-diffusion-models/</guid>
-      <description>&lt;!-- ![](featured.png) --&gt;
-&lt;p&gt;HERS (Hidden-Pattern Expert Learning for Risk-Specific Damage Adaptation) is a diffusion-based framework that addresses a critical gap in deploying generative models within safety-critical domains such as auto insurance. While modern text-to-image diffusion models produce visually realistic outputs, they often fail to capture subtle, liability-relevant damage patterns—such as faint dents, hairline cracks, asymmetric breakage, or signs of tampering—that are essential for fraud detection and claim validation. HERS reframes vehicle damage synthesis as a risk-specific adaptation problem rather than a generic image generation task.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The framework operates without manual annotation or human feedback by leveraging large language models to automatically generate diverse, damage-aware prompts paired with synthetic images from a pretrained diffusion backbone. From this self-supervised data, HERS trains lightweight LoRA-based experts, each specializing in a distinct damage category including dents, scratches, cracked paint, and broken lights. These experts learn hidden visual patterns that generic diffusion models typically overlook but that forensic assessment implicitly depends on.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;To balance specialization and generalization, all damage-specific experts are merged into a single unified diffusion model, enabling zero-shot synthesis of complex, multi-damage scenarios without inference-time routing. Extensive experiments across multiple diffusion backbones demonstrate consistent improvements in text–image alignment and human preference, alongside qualitative gains in damage localization, geometric coherence, and fine-grained artifact preservation. Beyond technical performance, HERS highlights the dual-use nature of generative models in insurance, underscoring the need for trustworthy, risk-aware diffusion systems for real-world, high-stakes deployment.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;HERS_SHOWCASE_01.png&#34; alt=&#34;&#34;&gt;
-&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;
-&lt;img src=&#34;HERS_SHOWCASE_03.png&#34; alt=&#34;&#34;&gt;
-&lt;img src=&#34;HERS_SHOWCASE_04.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
