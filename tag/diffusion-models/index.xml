@@ -35,7 +35,12 @@
       <link>https://kaopanboonyuen.github.io/publication/kao-kernel-adaptive-optimization-in-diffusion-for-satellite-image/</link>
       <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/publication/kao-kernel-adaptive-optimization-in-diffusion-for-satellite-image/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;
+      <description>
+  &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://www.youtube.com/embed/aedbXk85rRc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;
 &lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://kaopanboonyuen.github.io/KAO/results/re_show_01.png&#34; alt=&#34;&#34;&gt;
 &lt;img src=&#34;https://kaopanboonyuen.github.io/KAO/results/re_show_01.png&#34; alt=&#34;&#34;&gt;
@@ -49,17 +54,21 @@
       <link>https://kaopanboonyuen.github.io/publication/satdiff-a-stable-diffusion-framework-for-inpainting/</link>
       <pubDate>Tue, 13 May 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/publication/satdiff-a-stable-diffusion-framework-for-inpainting/</guid>
-      <description>&lt;h2 id=&#34;keywords&#34;&gt;Keywords&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Diffusion Models&lt;/li&gt;
-&lt;li&gt;High-Resolution Satellite Imagery&lt;/li&gt;
-&lt;li&gt;Inpainting&lt;/li&gt;
-&lt;li&gt;Latent Space Conditioning&lt;/li&gt;
-&lt;li&gt;Remote Sensing&lt;/li&gt;
-&lt;li&gt;Stable Diffusion&lt;/li&gt;
-&lt;li&gt;Satellite Image Restoration&lt;/li&gt;
-&lt;li&gt;Very High-Resolution Images&lt;/li&gt;
-&lt;/ul&gt;
+      <description>&lt;!-- ## Keywords
+
+- Diffusion Models
+- High-Resolution Satellite Imagery
+- Inpainting
+- Latent Space Conditioning
+- Remote Sensing
+- Stable Diffusion
+- Satellite Image Restoration
+- Very High-Resolution Images --&gt;
+
+  &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://www.youtube.com/embed/aedbXk85rRc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Satellite image inpainting is a crucial process in remote sensing, aimed at recovering missing or damaged areas to ensure precise data analysis. Satellite images are often affected by occlusions from factors like clouds, atmospheric disturbances, or physical obstructions, making it challenging to obtain fully clear and complete data. To overcome these challenges, especially in high-resolution satellite imagery, effective inpainting methods are required that can reconstruct the missing portions while maintaining the overall structural coherence of the image.&lt;/p&gt;
 &lt;p&gt;Diffusion models have emerged as powerful tools in image inpainting, representing a significant advancement in the field. They have been applied to a wide array of tasks, such as object removal, generative inpainting with contextual attention, and addressing semantic differences between masked and unmasked regions. These models excel in maintaining structural consistency while producing high-quality restorations, making them effective for complex tasks, such as video inpainting, text-based object removal, and sketch-based inpainting.&lt;/p&gt;

@@ -38219,7 +38219,12 @@ If yes, please consider sharing it — inspiration grows when shared. 🏔️✨
       <link>https://kaopanboonyuen.github.io/publication/kao-kernel-adaptive-optimization-in-diffusion-for-satellite-image/</link>
       <pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/publication/kao-kernel-adaptive-optimization-in-diffusion-for-satellite-image/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;
+      <description>
+  &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://www.youtube.com/embed/aedbXk85rRc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;
 &lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://kaopanboonyuen.github.io/KAO/results/re_show_01.png&#34; alt=&#34;&#34;&gt;
 &lt;img src=&#34;https://kaopanboonyuen.github.io/KAO/results/re_show_01.png&#34; alt=&#34;&#34;&gt;
@@ -39584,17 +39589,21 @@ $$&lt;/p&gt;
       <link>https://kaopanboonyuen.github.io/publication/satdiff-a-stable-diffusion-framework-for-inpainting/</link>
       <pubDate>Tue, 13 May 2025 00:00:00 +0000</pubDate>
       <guid>https://kaopanboonyuen.github.io/publication/satdiff-a-stable-diffusion-framework-for-inpainting/</guid>
-      <description>&lt;h2 id=&#34;keywords&#34;&gt;Keywords&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Diffusion Models&lt;/li&gt;
-&lt;li&gt;High-Resolution Satellite Imagery&lt;/li&gt;
-&lt;li&gt;Inpainting&lt;/li&gt;
-&lt;li&gt;Latent Space Conditioning&lt;/li&gt;
-&lt;li&gt;Remote Sensing&lt;/li&gt;
-&lt;li&gt;Stable Diffusion&lt;/li&gt;
-&lt;li&gt;Satellite Image Restoration&lt;/li&gt;
-&lt;li&gt;Very High-Resolution Images&lt;/li&gt;
-&lt;/ul&gt;
+      <description>&lt;!-- ## Keywords
+
+- Diffusion Models
+- High-Resolution Satellite Imagery
+- Inpainting
+- Latent Space Conditioning
+- Remote Sensing
+- Stable Diffusion
+- Satellite Image Restoration
+- Very High-Resolution Images --&gt;
+
+  &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://www.youtube.com/embed/aedbXk85rRc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+  &lt;/div&gt;
+
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Satellite image inpainting is a crucial process in remote sensing, aimed at recovering missing or damaged areas to ensure precise data analysis. Satellite images are often affected by occlusions from factors like clouds, atmospheric disturbances, or physical obstructions, making it challenging to obtain fully clear and complete data. To overcome these challenges, especially in high-resolution satellite imagery, effective inpainting methods are required that can reconstruct the missing portions while maintaining the overall structural coherence of the image.&lt;/p&gt;
 &lt;p&gt;Diffusion models have emerged as powerful tools in image inpainting, representing a significant advancement in the field. They have been applied to a wide array of tasks, such as object removal, generative inpainting with contextual attention, and addressing semantic differences between masked and unmasked regions. These models excel in maintaining structural consistency while producing high-quality restorations, making them effective for complex tasks, such as video inpainting, text-based object removal, and sketch-based inpainting.&lt;/p&gt;
@@ -40629,9 +40638,61 @@ $$&lt;/p&gt;
  --&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/tgcKR97Ea8I&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/aedbXk85rRc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
+&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;KAO Research Highlight&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;research-highlight&#34;&gt;Research Highlight&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;Department of Computer Engineering, Chulalongkorn University&lt;/strong&gt;, has officially featured the research work of &lt;strong&gt;Dr. Teerapong Panboonyuen&lt;/strong&gt;, recognizing his contribution to advancing &lt;strong&gt;Artificial Intelligence for satellite image restoration&lt;/strong&gt;. This recognition highlights an important milestone in developing &lt;strong&gt;high-resolution inpainting technologies&lt;/strong&gt; that support environmental monitoring, urban planning, and agricultural analysis.&lt;/p&gt;
+&lt;p&gt;The featured research introduces &lt;strong&gt;KAO (Kernel-Adaptive Optimization)&lt;/strong&gt;, a novel AI framework designed to &lt;strong&gt;restore missing or occluded regions in very high-resolution satellite imagery&lt;/strong&gt;. High-resolution satellite images often suffer from occlusions caused by clouds, atmospheric effects, or sensor limitations, which can compromise data analysis. KAO addresses these challenges by dynamically adapting kernel operations in diffusion models to produce &lt;strong&gt;structurally coherent, high-fidelity reconstructions&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;addressing-challenges-in-satellite-image-inpainting&#34;&gt;Addressing Challenges in Satellite Image Inpainting&lt;/h2&gt;
+&lt;p&gt;Many existing AI inpainting methods face limitations such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;High computational cost&lt;/strong&gt; from iterative postconditioning processes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lack of flexibility&lt;/strong&gt; when adapting preconditioned models to new datasets&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Difficulty preserving fine structural details&lt;/strong&gt; in very high-resolution images&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While conventional methods may work in controlled scenarios, they struggle to maintain &lt;strong&gt;accuracy and structural consistency&lt;/strong&gt; across diverse satellite imagery.&lt;/p&gt;
+&lt;p&gt;KAO overcomes these issues by introducing &lt;strong&gt;kernel-adaptive optimization&lt;/strong&gt; within a &lt;strong&gt;latent-space diffusion framework&lt;/strong&gt;, allowing the model to focus on both &lt;strong&gt;local details and global context&lt;/strong&gt; during image reconstruction.&lt;/p&gt;
+&lt;h2 id=&#34;key-innovations-of-kao&#34;&gt;Key Innovations of KAO&lt;/h2&gt;
+&lt;p&gt;The framework incorporates several major technical advancements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Latent Space Conditioning:&lt;/strong&gt; Optimizes a compact latent space for efficient and accurate inpainting without retraining large-scale models.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Token Pyramid Transformer (TPT):&lt;/strong&gt; Captures hierarchical, multi-scale spatial information for fine-grained restoration.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Explicit Forward-Backward Propagation:&lt;/strong&gt; Improves stability and precision by fusing information during both diffusion passes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Adaptive Kernel Modulation:&lt;/strong&gt; Tailors the denoising process to local context, enhancing reconstruction of roads, buildings, and natural terrain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scalable Performance:&lt;/strong&gt; Achieves superior quantitative and qualitative results on high-resolution datasets like DeepGlobe and the Massachusetts Roads Dataset.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These innovations ensure that KAO produces &lt;strong&gt;reliable, high-quality reconstructions&lt;/strong&gt; suitable for real-world applications in remote sensing.&lt;/p&gt;
+&lt;h2 id=&#34;experimental-impact&#34;&gt;Experimental Impact&lt;/h2&gt;
+&lt;p&gt;Extensive experiments demonstrate that KAO:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Outperforms state-of-the-art methods&lt;/strong&gt;, including Stable Diffusion, RePaint, LatentPaint, DPS, PSLD, and SatDiff&lt;/li&gt;
+&lt;li&gt;Improves &lt;strong&gt;LPIPS, FID, and visual fidelity metrics&lt;/strong&gt;, ensuring structural and textural accuracy&lt;/li&gt;
+&lt;li&gt;Efficiently handles &lt;strong&gt;real-world occlusions&lt;/strong&gt; such as clouds, mist, and sensor gaps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These results highlight the framework’s potential to support &lt;strong&gt;data-driven decision-making in urban planning, environmental monitoring, and agriculture management&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;advancing-ai-for-satellite-imagery&#34;&gt;Advancing AI for Satellite Imagery&lt;/h2&gt;
+&lt;p&gt;This research represents a significant step forward in &lt;strong&gt;AI-powered satellite image restoration&lt;/strong&gt;. By combining kernel-adaptive operations with hierarchical latent features, KAO enables:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;High-resolution, structurally consistent reconstructions&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scalable deployment for large satellite datasets&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Better insights for remote sensing, environmental studies, and agriculture monitoring&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ultimately, the work demonstrates how &lt;strong&gt;advanced AI research can enhance practical applications in geoscience and remote sensing&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;official-resources&#34;&gt;Official Resources&lt;/h2&gt;
+&lt;p&gt;Readers interested in exploring the full project, technical details, and research materials can visit:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;📄 &lt;strong&gt;Paper:&lt;/strong&gt; &lt;a href=&#34;https://ieeexplore.ieee.org/document/11204656/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;IEEE TGRS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📄 &lt;strong&gt;ArXiv:&lt;/strong&gt; &lt;a href=&#34;https://arxiv.org/abs/2511.02462&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://arxiv.org/abs/2511.02462&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🌐 &lt;strong&gt;Project Page:&lt;/strong&gt; &lt;a href=&#34;https://kaopanboonyuen.github.io/KAO/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/KAO/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💻 &lt;strong&gt;Code Repository:&lt;/strong&gt; &lt;a href=&#34;https://github.com/kaopanboonyuen/KAO&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/kaopanboonyuen/KAO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🎥 &lt;strong&gt;Video Demo:&lt;/strong&gt; 
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/aedbXk85rRc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
