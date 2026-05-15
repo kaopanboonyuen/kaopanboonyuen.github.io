@@ -1,0 +1,1750 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Teerapong Panboonyuen" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="A technical reflection on speaking at AutoTech Aftermarket Summit 2026 in Bangkok as Head of AI at MARSAIL, discussing the evolution of automotive AI, real-world deployment challenges, computer vision systems, intelligent automation, and the future direction of AI-driven automotive ecosystems." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/blog/2026-05-15-autotech-in-transition-inside-the-future-of-automotive-ai/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08f2e04360a1c87f5ad39547c02bf219.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/blog/2026-05-15-autotech-in-transition-inside-the-future-of-automotive-ai/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/blog/2026-05-15-autotech-in-transition-inside-the-future-of-automotive-ai/" />
+  <meta property="og:title" content="AutoTech in Transition: Inside the Future of Automotive AI | Teerapong Panboonyuen" />
+  <meta property="og:description" content="A technical reflection on speaking at AutoTech Aftermarket Summit 2026 in Bangkok as Head of AI at MARSAIL, discussing the evolution of automotive AI, real-world deployment challenges, computer vision systems, intelligent automation, and the future direction of AI-driven automotive ecosystems." /><meta property="og:image" content="https://kaopanboonyuen.github.io/blog/2026-05-15-autotech-in-transition-inside-the-future-of-automotive-ai/featured.jpg" />
+    <meta property="twitter:image" content="https://kaopanboonyuen.github.io/blog/2026-05-15-autotech-in-transition-inside-the-future-of-automotive-ai/featured.jpg" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2026-05-15T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2026-05-15T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>AutoTech in Transition: Inside the Future of Automotive AI | Teerapong Panboonyuen</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="368a8a9ca5b693b0d41faff253c39cf8" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.4be02a3b391999348b0c7478778a0e4b.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#awards"><span>Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#press"><span>Press</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Featured</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#tags"><span>Topics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#communities"><span>Communities</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://x.com/kaopanboonyuen" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>AutoTech in Transition: Inside the Future of Automotive AI</h1>
+
+  
+  <p class="page-subtitle">Sharing perspectives on production AI systems, computer vision infrastructure, and the future of intelligent automotive technologies at AutoTech Aftermarket Summit 2026</p>
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span class="author-highlighted">Teerapong Panboonyuen</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    2026
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/ai/">ai</a>, <a href="/category/automotive/">automotive</a>, <a href="/category/computer-vision/">computer-vision</a>, <a href="/category/engineering/">engineering</a>, <a href="/category/technology/">technology</a></span>
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 1200px; max-height: 672px;">
+  <div style="position: relative">
+    <img src="/blog/2026-05-15-autotech-in-transition-inside-the-future-of-automotive-ai/featured_huaf7a4fae9c69f814c75c8953bc1a42ec_996840_1200x0_resize_q75_lanczos.jpg" alt="" class="featured-image">
+    <span class="article-header-caption">Speaking at AutoTech Aftermarket Summit 2026 at BITEC Bangkok.</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="-autotech-in-transition-inside-the-future-of-automotive-ai">🚗 AutoTech in Transition: Inside the Future of Automotive AI</h1>
+<blockquote>
+<p>&ldquo;AI becomes truly valuable when research, engineering, and deployment converge into systems that solve real operational problems.&rdquo;</p>
+</blockquote>
+<hr>
+<h2 id="-autotech-aftermarket-summit-2026">🌏 AutoTech Aftermarket Summit 2026</h2>
+<p>Today, I had the opportunity to join <strong>AutoTech Aftermarket Summit 2026</strong> at <strong>BITEC Bangkok</strong> as an invited speaker representing <strong>MARSAIL (Motor AI Recognition Solution AI Laboratory)</strong>.</p>
+<p>The summit was organized as part of:</p>
+<ul>
+<li><strong>TyreXpo Asia Bangkok 2026</strong></li>
+<li><strong>AutoMROtive 2026</strong></li>
+</ul>
+<p>The conference brought together professionals across the automotive ecosystem, including:</p>
+<ul>
+<li>OEMs</li>
+<li>automotive service providers</li>
+<li>AI startups</li>
+<li>workshop technology platforms</li>
+<li>enterprise solution providers</li>
+<li>infrastructure companies</li>
+<li>fleet operators</li>
+<li>researchers and engineers</li>
+</ul>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_001.jpg" alt="Official homepage of AutoTech Aftermarket Summit 2026">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 1: The official homepage of AutoTech Aftermarket Summit 2026.  
+    Seeing the event officially published online made everything suddenly feel real.  
+    AutoTech Aftermarket Summit 2026 was organized as part of TyreXpo Asia Bangkok and AutoMROtive 2026, bringing together global leaders across automotive technology, AI infrastructure, mobility innovation, and intelligent service platforms.  
+    This event became a meeting point between traditional automotive industries and the next generation of AI-driven operational systems.  
+    Official Website: 
+    <a href="https://www.automrotive.com/" target="_blank" rel="noopener noreferrer">
+      https://www.automrotive.com/
+    </a>
+  </p>
+</div>
+<p>This year’s summit focused heavily on the technological transformation occurring inside the automotive aftermarket industry — particularly the integration of AI systems into operational workflows, intelligent diagnostics, customer service automation, predictive maintenance, and next-generation mobility infrastructure.</p>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_002.jpg" alt="Conference agenda showing AutoTech in Transition session">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 2: The official conference agenda featuring my session, “AutoTech in Transition: Current Trends and Future Trajectories,” scheduled on 15 May 2026 at 11:30 AM.  
+    This session focused on how AI, intelligent automation, and modern digital infrastructure are reshaping the automotive aftermarket ecosystem.  
+    It was an honor to contribute perspectives from MARSAIL and discuss how production-grade AI systems are moving from research environments into real operational automotive workflows.  
+    Official Agenda: 
+    <a href="https://www.automrotive.com/conference-agenda-2026/" target="_blank" rel="noopener noreferrer">
+      https://www.automrotive.com/conference-agenda-2026/
+    </a>
+  </p>
+</div>
+<p>At <strong>11:30 AM</strong>, I joined the session:</p>
+<h1 id="autotech-in-transition-current-trends-and-future-trajectories"><em>AutoTech in Transition: Current Trends and Future Trajectories</em></h1>
+<p>The discussion explored several important themes:</p>
+<ul>
+<li>How AI is reshaping the automotive ecosystem</li>
+<li>Emerging technologies driving operational transformation</li>
+<li>Challenges in fragmented industrial environments</li>
+<li>Startup perspectives on scalable innovation</li>
+<li>Future directions for intelligent automotive systems</li>
+</ul>
+<p>I joined the session as:</p>
+<h2 id="dr-teerapong-panboonyuen"><strong>Dr. Teerapong Panboonyuen</strong></h2>
+<h3 id="senior-research-scientist-head-of-ai-marsail">Senior Research Scientist, Head of AI, MARSAIL</h3>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_003.jpg" alt="Speaker headshot profile on official speaker list">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 3: My official speaker profile displayed on the AutoTech Aftermarket Summit 2026 speaker list.  
+    Seeing my name appear alongside professionals, founders, innovators, and technology leaders from across the automotive industry was both exciting and deeply meaningful.  
+    Moments like this quietly remind me how far the journey in AI research, engineering, and deployment has progressed over the years.  
+    Official Speakers List: 
+    <a href="https://www.automrotive.com/conference-speakers/" target="_blank" rel="noopener noreferrer">
+      https://www.automrotive.com/conference-speakers/
+    </a>
+  </p>
+</div>
+<hr>
+<h1 id="-the-transition-toward-intelligent-automotive-infrastructure">🤖 The Transition Toward Intelligent Automotive Infrastructure</h1>
+<p>One of the most important observations from the summit was clear:</p>
+<p>The automotive industry is rapidly transitioning from traditional operational models into intelligent AI-driven infrastructure.</p>
+<p>Historically, automotive workflows depended heavily on:</p>
+<ul>
+<li>manual inspection,</li>
+<li>human-operated diagnostics,</li>
+<li>fragmented service records,</li>
+<li>disconnected maintenance systems,</li>
+<li>and reactive operational processes.</li>
+</ul>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_005.jpg" alt="Entrance atmosphere at BITEC Bangkok during AutoTech 2026">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 4: The atmosphere near the entrance area of BITEC Bangkok before entering the conference hall.  
+    There was an incredible sense of energy throughout the venue — engineers, startup founders, researchers, enterprise teams, and technology providers gathering together in one place to discuss the future of automotive innovation.  
+    At that moment, the excitement started becoming real.  
+    It felt inspiring to become part of a global technology event centered around AI, intelligent systems, and the future direction of mobility infrastructure.
+  </p>
+</div>
+<p>Today, those systems are evolving toward:</p>
+<ul>
+<li>computer vision-assisted inspection,</li>
+<li>AI-driven diagnostics,</li>
+<li>predictive maintenance pipelines,</li>
+<li>intelligent customer interaction systems,</li>
+<li>automated workflow orchestration,</li>
+<li>and real-time operational analytics.</li>
+</ul>
+<p>The shift is no longer theoretical.</p>
+<p>AI systems are now moving directly into production environments.</p>
+<p>And this transformation is accelerating faster than many expected.</p>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_006.jpg" alt="Speaker badge at AutoTech Aftermarket Summit 2026">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 5: A photo of my official speaker badge together with the conference backdrop at AutoTech Aftermarket Summit 2026.  
+    Behind this badge were years of research, experimentation, deployment challenges, production incidents, debugging sessions, infrastructure engineering, and continuous iteration in applied AI systems.  
+    Holding this badge felt more than symbolic — it represented the collective effort behind the AI systems we have spent years building at MARSAIL.
+  </p>
+</div>
+<hr>
+<h1 id="-building-ai-systems-for-real-world-automotive-operations">🧠 Building AI Systems for Real-World Automotive Operations</h1>
+<p>At <strong>MARSAIL</strong>, our focus has never been limited to building AI demonstrations or experimental prototypes.</p>
+<p>Our objective has always been much more practical:</p>
+<blockquote>
+<p>Building production-grade AI systems capable of operating reliably in real automotive environments.</p>
+</blockquote>
+<p>This introduces engineering challenges far beyond model accuracy alone.</p>
+<p>Real-world automotive AI systems must address:</p>
+<ul>
+<li>deployment scalability,</li>
+<li>latency constraints,</li>
+<li>hardware limitations,</li>
+<li>environmental variability,</li>
+<li>long-tail failure cases,</li>
+<li>model robustness,</li>
+<li>infrastructure reliability,</li>
+<li>and continuous operational monitoring.</li>
+</ul>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_007.jpg" alt="Stage atmosphere before the session began">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 6: The atmosphere on stage shortly before the session officially began.  
+    The conference hall was gradually filling with attendees from across the automotive and technology industries, while discussions around AI, intelligent systems, and digital transformation continued throughout the venue.  
+    Standing there before the talk started, I felt both excited and grateful for the opportunity to share the journey behind MARSAIL and our work in automotive AI.
+  </p>
+</div>
+<p>In research environments, benchmark performance often becomes the primary metric.</p>
+<p>But in production systems, the questions become fundamentally different:</p>
+<ul>
+<li>Can the model maintain stable inference performance at scale?</li>
+<li>Can it generalize under difficult environmental conditions?</li>
+<li>Can it reduce operational workload?</li>
+<li>Can it integrate into existing enterprise infrastructure?</li>
+<li>Can it support real business operations reliably over time?</li>
+</ul>
+<p>These questions define the difference between experimental AI and deployable AI.</p>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_008.jpg" alt="Speaking during AutoTech in Transition session">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 7: Speaking during the session “AutoTech in Transition: Current Trends and Future Trajectories.”  
+    This became one of the most enjoyable and meaningful technical talks I have given in recent years.  
+    The session allowed me to share perspectives on production AI systems, computer vision infrastructure, intelligent automotive workflows, and the engineering realities behind deploying AI into operational environments.  
+    More importantly, it was an opportunity to represent the incredible work and research culture built together at MARSAIL.
+  </p>
+</div>
+<hr>
+<h1 id="-automotive-ai-is-an-engineering-problem">🔬 Automotive AI Is an Engineering Problem</h1>
+<p>During the session, I emphasized that automotive AI should not be viewed purely as a machine learning problem.</p>
+<p>It is fundamentally a systems engineering challenge.</p>
+<p>Modern automotive AI requires the integration of multiple layers simultaneously:</p>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_009.jpg" alt="Technical discussion during automotive AI session">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 8: Another moment captured during the fireside discussion on automotive AI transformation.  
+    We explored how emerging AI technologies are influencing the future of vehicle inspection systems, predictive maintenance, intelligent service platforms, and customer experience automation.  
+    The conversation felt highly engaging because many attendees shared similar interests in bridging advanced AI research with deployable industrial systems.
+  </p>
+</div>
+<h2 id="computer-vision">Computer Vision</h2>
+<p>Detection, segmentation, OCR, damage analysis, asset recognition, and visual understanding systems operating under real-world constraints.</p>
+<h2 id="machine-learning-infrastructure">Machine Learning Infrastructure</h2>
+<p>Training pipelines, distributed experimentation, model versioning, reproducibility, GPU optimization, monitoring systems, and scalable inference services.</p>
+<h2 id="cloud-and-edge-computing">Cloud and Edge Computing</h2>
+<p>Deployment architectures capable of supporting both centralized cloud systems and low-latency edge inference.</p>
+<h2 id="data-engineering">Data Engineering</h2>
+<p>Automotive AI systems are only as strong as the datasets supporting them. Large-scale annotation, dataset balancing, domain adaptation, and continual data refinement remain critical.</p>
+<h2 id="human-centered-design">Human-Centered Design</h2>
+<p>AI systems must integrate naturally into operational workflows rather than increasing friction for users.</p>
+<p>The future of automotive AI will belong to teams capable of combining all these disciplines together.</p>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_011.jpg" alt="Sharing MARSAIL AI research on stage">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 9: Sharing technical perspectives from MARSAIL during the conference session.  
+    One important theme I wanted to emphasize was that successful automotive AI requires far more than high benchmark accuracy.  
+    Real-world systems must operate reliably under difficult operational conditions, integrate into enterprise workflows, and scale efficiently across production infrastructure.  
+    These engineering realities define the future of applied AI in the automotive ecosystem.
+  </p>
+</div>
+<hr>
+<h1 id="-computer-vision-is-becoming-core-automotive-infrastructure">🚘 Computer Vision Is Becoming Core Automotive Infrastructure</h1>
+<p>One major trend discussed during the summit was the increasing role of computer vision inside automotive ecosystems.</p>
+<p>Computer vision is no longer limited to research publications or isolated proof-of-concept systems.</p>
+<p>It is becoming operational infrastructure.</p>
+<p>Applications now include:</p>
+<ul>
+<li>automated vehicle inspection,</li>
+<li>intelligent damage assessment,</li>
+<li>maintenance workflow automation,</li>
+<li>license plate recognition,</li>
+<li>workshop monitoring systems,</li>
+<li>predictive maintenance support,</li>
+<li>service quality assurance,</li>
+<li>and fleet intelligence platforms.</li>
+</ul>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_013.jpg" alt="Discussing automotive AI trends on stage">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 10: Discussing current trends shaping the future of automotive AI and intelligent mobility systems.  
+    Topics included computer vision, intelligent diagnostics, scalable inference infrastructure, operational automation, and the growing role of AI startups within the automotive technology landscape.  
+    The automotive industry is now entering an era where AI is becoming foundational infrastructure rather than optional enhancement.
+  </p>
+</div>
+<p>As deep learning architectures continue evolving — especially Vision Transformers, hybrid CNN-transformer systems, and multimodal foundation models — the capability of automotive AI systems is expanding significantly.</p>
+<p>However, model architecture alone is not enough.</p>
+<p>The true challenge lies in transforming research capability into deployable operational systems.</p>
+<p>That gap remains one of the most difficult engineering challenges in applied AI today.</p>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_014.jpg" alt="Speaking about real-world AI deployment">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 11: Explaining the transition from AI research into real-world deployment environments.  
+    One of the most rewarding aspects of this session was discussing engineering challenges that many AI teams encounter in practice — including scalability, latency optimization, robustness, monitoring, infrastructure reliability, and long-term maintainability of production AI systems.
+  </p>
+</div>
+<hr>
+<h1 id="-startups-and-the-speed-of-innovation">⚙️ Startups and the Speed of Innovation</h1>
+<p>Another important topic discussed during the summit was the growing influence of startups in the automotive technology ecosystem.</p>
+<p>Large organizations often possess extensive infrastructure and operational scale.</p>
+<p>But startups possess something equally powerful:</p>
+<p>Speed.</p>
+<p>Agility.</p>
+<p>Experimental freedom.</p>
+<p>And the ability to iterate rapidly.</p>
+<p>This creates an environment where smaller AI teams can drive disproportionate innovation.</p>
+<p>Today, many critical breakthroughs in applied automotive AI are emerging not only from enterprise organizations, but also from highly specialized engineering teams capable of moving quickly from research into deployment.</p>
+<p>This transition is reshaping the structure of the automotive technology landscape itself.</p>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_015.jpg" alt="Automotive AI session at AutoTech 2026">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 12: A technical discussion during the AutoTech in Transition session at BITEC Bangkok.  
+    What made this session especially enjoyable was the opportunity to discuss AI not only from a research perspective, but also from the viewpoint of deployment, infrastructure engineering, operational integration, and industrial scalability.  
+    Applied AI becomes truly meaningful when it creates measurable value in real operational environments.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_018.jpg" alt="Presenting future directions of automotive AI">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 13: Presenting future directions of automotive AI systems and intelligent infrastructure.  
+    The automotive ecosystem is evolving rapidly toward AI-assisted operations, connected service platforms, multimodal intelligence, and predictive workflow orchestration.  
+    This transformation represents one of the most exciting engineering shifts currently happening across applied AI industries.
+  </p>
+</div>
+<hr>
+<h1 id="-research-alone-is-no-longer-enough">🧪 Research Alone Is No Longer Enough</h1>
+<p>One important realization from recent years is this:</p>
+<p>Publishing research alone is no longer sufficient.</p>
+<p>Modern AI teams must increasingly operate across multiple dimensions simultaneously:</p>
+<ul>
+<li>research,</li>
+<li>engineering,</li>
+<li>deployment,</li>
+<li>infrastructure,</li>
+<li>operations,</li>
+<li>and product integration.</li>
+</ul>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_019.jpg" alt="Technical fireside chat at AutoTech Aftermarket Summit">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 14: Another moment from the technical fireside conversation during AutoTech Aftermarket Summit 2026.  
+    I particularly enjoyed discussing how smaller AI teams and startups can drive rapid innovation through agility, experimentation speed, and close integration between research and engineering.  
+    The future automotive ecosystem will likely be shaped by organizations capable of iterating quickly while maintaining strong technical depth.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_020.jpg" alt="Explaining AI engineering challenges on stage">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 15: Explaining practical engineering considerations behind large-scale automotive AI systems.  
+    Topics such as dataset quality, inference optimization, edge deployment, model robustness, and infrastructure scalability are becoming increasingly important as AI systems transition into mission-critical operational environments.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_021.jpg" alt="AI infrastructure discussion during conference">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 16: A moment during the discussion on AI infrastructure and intelligent automotive services.  
+    The conversation highlighted how future automotive ecosystems will increasingly depend on integrated AI platforms capable of combining perception, reasoning, analytics, and operational automation into unified intelligent systems.
+  </p>
+</div>
+<p>The industry now values systems that can survive real-world complexity.</p>
+<p>This requires balancing:</p>
+<ul>
+<li>state-of-the-art performance,</li>
+<li>computational efficiency,</li>
+<li>scalability,</li>
+<li>maintainability,</li>
+<li>and operational reliability.</li>
+</ul>
+<p>At MARSAIL, this mindset strongly influences how we approach AI development.</p>
+<p>The objective is not simply creating accurate models.</p>
+<p>The objective is building AI systems that create measurable operational value.</p>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_022.jpg" alt="Discussing production AI systems for automotive industry">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 17: Sharing perspectives on building production-grade AI systems for automotive applications.  
+    While state-of-the-art models remain important, long-term success ultimately depends on deployment stability, maintainability, scalability, and the ability to continuously improve systems under real-world operational constraints.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_024.jpg" alt="Conference discussion on AI transformation">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 18: Discussing how AI transformation is reshaping automotive operations and customer experiences.  
+    Across the industry, there is increasing momentum toward intelligent inspection systems, predictive analytics, workflow automation, and AI-assisted decision-making platforms.  
+    This transition is fundamentally changing how automotive services are designed and delivered.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_025.jpg" alt="Sharing experiences from MARSAIL on stage">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 19: Sharing experiences from MARSAIL while discussing applied AI engineering in the automotive domain.  
+    Many of the ideas presented during this session were shaped through years of experimentation, deployment iterations, infrastructure refinement, and collaboration across research and engineering teams.  
+    It felt incredibly meaningful to share those experiences with professionals from across the automotive ecosystem.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_027.jpg" alt="Automotive AI presentation at BITEC Bangkok">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 20: Presenting perspectives on the next generation of automotive AI systems at BITEC Bangkok.  
+    The automotive industry is moving toward a future where AI infrastructure becomes deeply integrated into maintenance workflows, service intelligence, operational analytics, and connected mobility ecosystems.  
+    Conferences like this provide an important opportunity to exchange ideas between researchers, engineers, and industry leaders.
+  </p>
+</div>
+<hr>
+<h1 id="-representing-the-marsail-team">❤️ Representing the MARSAIL Team</h1>
+<p>Personally, one of the most meaningful aspects of today was having the opportunity to represent the incredible people behind MARSAIL.</p>
+<p>AI systems are never built by one person.</p>
+<p>Behind every successful deployment are teams contributing through:</p>
+<ul>
+<li>research,</li>
+<li>annotation,</li>
+<li>infrastructure engineering,</li>
+<li>backend systems,</li>
+<li>deployment pipelines,</li>
+<li>experimentation,</li>
+<li>debugging,</li>
+<li>validation,</li>
+<li>and continuous iteration.</li>
+</ul>
+<p>Many of the AI systems we discussed today represent years of collective work.</p>
+<p>Seeing those efforts shared on an international stage was genuinely meaningful.</p>
+<p>Not simply because of the presentation itself.</p>
+<p>But because it reflected how far the team has progressed together.</p>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_028.jpg" alt="AI engineering discussion during AutoTech session">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 21: Another memorable moment during the AutoTech in Transition session.  
+    Throughout the discussion, I tried to emphasize that impactful AI systems require much more than strong architectures alone.  
+    Successful deployment depends equally on data engineering, infrastructure design, operational integration, and continuous system refinement under real-world conditions.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_030.jpg" alt="Discussing future of automotive intelligent systems">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 22: Discussing the long-term future of intelligent automotive systems and AI-driven operational ecosystems.  
+    Over the next decade, technologies such as multimodal AI, real-time inference systems, intelligent automation, and connected mobility infrastructure will likely redefine the entire automotive service landscape.
+  </p>
+</div>
+<hr>
+<h1 id="-the-future-of-automotive-ai">🌏 The Future of Automotive AI</h1>
+<p>The automotive industry is entering a period where AI will increasingly become foundational infrastructure rather than optional enhancement.</p>
+<p>Over the next decade, we will likely see rapid growth in:</p>
+<ul>
+<li>intelligent inspection systems,</li>
+<li>multimodal automotive foundation models,</li>
+<li>autonomous workflow orchestration,</li>
+<li>predictive service infrastructure,</li>
+<li>edge AI systems,</li>
+<li>real-time operational intelligence,</li>
+<li>and large-scale connected automotive ecosystems.</li>
+</ul>
+<p>The companies capable of integrating AI deeply into operational workflows will define the next generation of automotive technology.</p>
+<p>This makes the current moment incredibly exciting for engineers, researchers, and startups working in applied AI.</p>
+<p>Because we are no longer discussing theoretical futures.</p>
+<p>We are actively building them.</p>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_033.jpg" alt="Final moments during AutoTech 2026 talk">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 23: Final moments during the AutoTech in Transition session at AutoTech Aftermarket Summit 2026.  
+    Looking back, this became one of the most enjoyable technical talks I have participated in.  
+    Beyond the presentation itself, the experience represented years of learning, engineering, experimentation, and persistence in applied AI research and deployment.  
+    I am deeply grateful to the MARSAIL team and everyone who contributed to the journey behind these systems.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_032.jpg" alt="Merged summary image of AutoTech Aftermarket Summit 2026">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 24: A final merged composition combining my official speaker headshot, the conference homepage, and the official session agenda for “AutoTech in Transition: Current Trends and Future Trajectories.”  
+    This image summarizes one of the most meaningful moments in my journey as an AI researcher and Head of AI at MARSAIL.  
+    From research and experimentation to production deployment and international conference discussions, this experience became a powerful reminder of how applied AI can evolve from ideas into real operational impact within the automotive industry.
+  </p>
+</div>
+<hr>
+<h1 id="-final-thoughts">🙏 Final Thoughts</h1>
+<p>Speaking at <strong>AutoTech Aftermarket Summit 2026</strong> was an experience I will remember for a very long time.</p>
+<p>Not only as a speaker.</p>
+<p>But as an AI engineer and researcher who has spent years working on production AI systems for real-world automotive applications.</p>
+<p>I would like to sincerely thank:</p>
+<ul>
+<li>the organizers of AutoTech Aftermarket Summit 2026,</li>
+<li>everyone who attended the session,</li>
+<li>and especially the entire MARSAIL team.</li>
+</ul>
+<p>Thank you for the opportunity to share our work, ideas, and vision for the future of automotive AI.</p>
+<p>The future of automotive technology will not be defined solely by smarter models.</p>
+<p>It will be defined by teams capable of transforming AI research into reliable systems that operate meaningfully at scale.</p>
+<p>And that transition has already begun.</p>
+<hr>
+<h2 id="citation">Citation</h2>
+<blockquote>
+<p>Panboonyuen, Teerapong. (May 2026). <em>AutoTech in Transition: Inside the Future of Automotive AI</em>. Blog post on Kao Panboonyuen.<br>
+<a href="https://kaopanboonyuen.github.io/blog/2026-05-15-autotech-in-transition-inside-the-future-of-automotive-ai" target="_blank" rel="noopener">https://kaopanboonyuen.github.io/blog/2026-05-15-autotech-in-transition-inside-the-future-of-automotive-ai</a></p>
+</blockquote>
+<p><strong>For a BibTeX citation:</strong></p>
+<pre><code class="language-bibtex">@article{panboonyuen2026autotechai,
+  title   = &quot;AutoTech in Transition: Inside the Future of Automotive AI&quot;,
+  author  = &quot;Panboonyuen, Teerapong&quot;,
+  journal = &quot;kaopanboonyuen.github.io/&quot;,
+  year    = &quot;2026&quot;,
+  month   = &quot;May&quot;,
+  url     = &quot;https://kaopanboonyuen.github.io/blog/2026-05-15-autotech-in-transition-inside-the-future-of-automotive-ai&quot;
+}
+</code></pre>
+<div class="alert alert-note">
+  <div>
+    <p>Thank you for reading this technical reflection on automotive AI, intelligent systems, and the future of AI-driven mobility infrastructure. 🚗🤖⚙️</p>
+<p>If this article inspired you, feel free to share it with researchers, engineers, startups, and AI enthusiasts building the next generation of automotive technologies.</p>
+  </div>
+</div>
+<hr>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/autotech/">autotech</a>
+  
+  <a class="badge badge-light" href="/tag/autotech2026/">autotech2026</a>
+  
+  <a class="badge badge-light" href="/tag/automotive-ai/">automotive-ai</a>
+  
+  <a class="badge badge-light" href="/tag/artificial-intelligence/">artificial-intelligence</a>
+  
+  <a class="badge badge-light" href="/tag/computer-vision/">computer-vision</a>
+  
+  <a class="badge badge-light" href="/tag/deep-learning/">deep-learning</a>
+  
+  <a class="badge badge-light" href="/tag/machine-learning/">machine-learning</a>
+  
+  <a class="badge badge-light" href="/tag/ai-engineering/">ai-engineering</a>
+  
+  <a class="badge badge-light" href="/tag/mars/">mars</a>
+  
+  <a class="badge badge-light" href="/tag/marsail/">marsail</a>
+  
+  <a class="badge badge-light" href="/tag/startup/">startup</a>
+  
+  <a class="badge badge-light" href="/tag/technology/">technology</a>
+  
+  <a class="badge badge-light" href="/tag/innovation/">Innovation</a>
+  
+  <a class="badge badge-light" href="/tag/intelligent-systems/">intelligent-systems</a>
+  
+  <a class="badge badge-light" href="/tag/ai-in-production/">ai-in-production</a>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://kaopanboonyuen.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/teerapong-panboonyuen/avatar_hu00be49bf8d306be2acce952c8fa7a11f_1239445_270x270_fill_lanczos_center_3.png" alt="Teerapong Panboonyuen"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://kaopanboonyuen.github.io/">Teerapong Panboonyuen</a></h5>
+      
+      <p class="card-text">My research focuses on leveraging advanced machine intelligence techniques, specifically computer vision, to enhance semantic understanding, learning representations, visual recognition, and geospatial data interpretation.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:teerapong.panboonyuen@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://x.com/kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://orcid.org/0000-0001-8464-4476" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.youtube.com/@kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/teerapong-panboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    ©2026 Kao Panboonyuen
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Built using <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> and the <a href="https://github.com/wowchemy/starter-hugo-academic" target="_blank" rel="noopener">Wowchemy academic template</a>. View <a href="https://github.com/kaopanboonyuen/kaopanboonyuen.github.io" target="_blank" rel="noopener">source</a>.
+        
+  </p>
+</footer>
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/golang.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.b36873e4e886c7b03b21e4eb97d9b6d7.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>
