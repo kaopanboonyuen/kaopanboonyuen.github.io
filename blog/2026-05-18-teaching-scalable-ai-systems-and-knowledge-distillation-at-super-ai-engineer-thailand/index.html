@@ -1,0 +1,1909 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Teerapong Panboonyuen" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="A technical reflection on teaching AI in the Real World: Trade-offs Behind Fast &amp; Scalable Object Detection at Super AI Engineer Season 6 (SAIE2026), organized by the Artificial Intelligence Association of Thailand (AIAT). This post walks through all six labs — from baseline profiling to Jetson Nano deployment — covering the engineering trade-offs that matter in production vision systems." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/blog/2026-05-18-teaching-scalable-ai-systems-and-knowledge-distillation-at-super-ai-engineer-thailand/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08f2e04360a1c87f5ad39547c02bf219.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/blog/2026-05-18-teaching-scalable-ai-systems-and-knowledge-distillation-at-super-ai-engineer-thailand/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/blog/2026-05-18-teaching-scalable-ai-systems-and-knowledge-distillation-at-super-ai-engineer-thailand/" />
+  <meta property="og:title" content="Teaching Scalable AI Systems and Knowledge Distillation at Super AI Engineer Thailand | Teerapong Panboonyuen" />
+  <meta property="og:description" content="A technical reflection on teaching AI in the Real World: Trade-offs Behind Fast &amp; Scalable Object Detection at Super AI Engineer Season 6 (SAIE2026), organized by the Artificial Intelligence Association of Thailand (AIAT). This post walks through all six labs — from baseline profiling to Jetson Nano deployment — covering the engineering trade-offs that matter in production vision systems." /><meta property="og:image" content="https://kaopanboonyuen.github.io/blog/2026-05-18-teaching-scalable-ai-systems-and-knowledge-distillation-at-super-ai-engineer-thailand/featured.jpg" />
+    <meta property="twitter:image" content="https://kaopanboonyuen.github.io/blog/2026-05-18-teaching-scalable-ai-systems-and-knowledge-distillation-at-super-ai-engineer-thailand/featured.jpg" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2026-05-18T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2026-05-18T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Teaching Scalable AI Systems and Knowledge Distillation at Super AI Engineer Thailand | Teerapong Panboonyuen</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="ffc681d8b87bf6ee9850350727f54996" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.4be02a3b391999348b0c7478778a0e4b.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#awards"><span>Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#press"><span>Press</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Featured</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#tags"><span>Topics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#communities"><span>Communities</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://x.com/kaopanboonyuen" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>Teaching Scalable AI Systems and Knowledge Distillation at Super AI Engineer Thailand</h1>
+
+  
+  <p class="page-subtitle">A deep technical reflection on six labs covering profiling, pruning, quantization, knowledge distillation, lightweight architecture design, and multi-camera edge deployment</p>
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span class="author-highlighted">Teerapong Panboonyuen</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    2026
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/ai/">ai</a>, <a href="/category/computer-vision/">computer-vision</a>, <a href="/category/engineering/">engineering</a>, <a href="/category/education/">education</a>, <a href="/category/workshops/">workshops</a></span>
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 1200px; max-height: 637px;">
+  <div style="position: relative">
+    <img src="/blog/2026-05-18-teaching-scalable-ai-systems-and-knowledge-distillation-at-super-ai-engineer-thailand/featured_hu8a89b57ea15c16e290182f26e79ded3b_704361_1200x0_resize_q75_lanczos.jpg" alt="" class="featured-image">
+    <span class="article-header-caption">Dr. Teerapong Panboonyuen (Dr. Kao) teaching scalable AI systems and knowledge distillation at Super AI Engineer Thailand, Pathum Thani, Thailand.</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="-trade-offs-behind-fast--scalable-object-detection">🚁 Trade-offs Behind Fast &amp; Scalable Object Detection</h1>
+<blockquote>
+<p>&ldquo;Fast models don&rsquo;t just run faster — they enable applications that slow models simply cannot.&rdquo;</p>
+</blockquote>
+<hr>
+<h2 id="-super-ai-engineer-season-6--a-morning-worth-the-drive">🌏 Super AI Engineer Season 6 — A Morning Worth the Drive</h2>
+<p>Today, May 18, 2026, I left home at 6:00 AM.</p>
+<p>The camp — <strong>Super AI Engineer Season 6</strong> — is held in <strong>Pathum Thani</strong>, which is a fair distance from my side of Bangkok–Nonthaburi. But when the Artificial Intelligence Association of Thailand (<strong>AIAT</strong>) invites you to teach a room full of brilliant young engineers who <em>want to be there</em>, you don&rsquo;t think twice about the commute. You pack your laptop, pray the T4 runtime cooperates, and go.</p>
+<p>This is the sixth season of <a href="https://superai.aiat.or.th/" target="_blank" rel="noopener">Super AI Engineer Thailand</a> — a hackathon-based camp where participants tackle a fresh challenge every week. This season&rsquo;s theme from the camp organizers captured the problem space perfectly:</p>
+<blockquote>
+<p><em>&ldquo;We have demand from private companies for object detection solutions that can run fast, handle multiple cameras simultaneously, and ideally operate on embedded boards like the Jetson Nano.&rdquo;</em></p>
+</blockquote>
+<p>That framing is <strong>exactly</strong> the right framing for real production AI. Not &ldquo;what&rsquo;s the highest mAP on a leaderboard?&rdquo; but &ldquo;how do I ship something that runs on constrained hardware, at scale, without dropping frames?&rdquo;</p>
+<p>That&rsquo;s what I came to teach.</p>
+<hr>
+<h2 id="-workshop-overview">📋 Workshop Overview</h2>
+<p><strong>Title:</strong> AI in the Real World: Trade-offs Behind Fast &amp; Scalable Object Detection<br>
+<strong>How to build vision systems that run on multiple cameras — without skipping a frame</strong></p>
+<ul>
+<li><strong>Platform:</strong> Google Colab (T4 Free Tier)</li>
+<li><strong>Dataset:</strong> VisDrone — SAIE Tiny Subset</li>
+<li><strong>Duration:</strong> ~3 Hours · <strong>6 Labs</strong> · Full open-source</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Lab</th>
+<th>Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🛠️ Setup</td>
+<td>Environment, Dataset &amp; EDA</td>
+</tr>
+<tr>
+<td>🚀 Lab 1</td>
+<td>Profiling &amp; Benchmarking</td>
+</tr>
+<tr>
+<td>✂️ Lab 2</td>
+<td>Structured Pruning</td>
+</tr>
+<tr>
+<td>⚡ Lab 3</td>
+<td>Quantization</td>
+</tr>
+<tr>
+<td>🧠 Lab 4</td>
+<td>Knowledge Distillation</td>
+</tr>
+<tr>
+<td>🧩 Lab 5</td>
+<td>Tiny Model Design</td>
+</tr>
+<tr>
+<td>🌐 Lab 6</td>
+<td>Multi-Camera Deployment &amp; Scalability</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Honest confession: we only got through Labs 1–3 live. Three hours disappears fast when you&rsquo;re explaining <em>why</em> something works, not just <em>how</em> to run the cell. But every slide, every notebook, every solution — it&rsquo;s all open source. That was always the plan.</p>
+</blockquote>
+<p>🔗 <strong>Workshop site:</strong> <a href="https://kaopanboonyuen.github.io/SAIE2026/" target="_blank" rel="noopener">kaopanboonyuen.github.io/SAIE2026</a><br>
+🔗 <strong>GitHub:</strong> <a href="https://github.com/kaopanboonyuen/SAIE2026" target="_blank" rel="noopener">github.com/kaopanboonyuen/SAIE2026</a></p>
+<hr>
+<h2 id="-setup--visdrone-the-dataset-that-humbles-you">🛠️ Setup — VisDrone, the Dataset That Humbles You</h2>
+<p>We trained on a curated subset of <strong>VisDrone</strong> — an aerial drone footage dataset with 10 object classes: pedestrian, people, bicycle, car, van, truck, tricycle, awning-tricycle, bus, and motor.</p>
+<pre><code class="language-python">CLASS_NAMES = {
+    0: &quot;pedestrian&quot;, 1: &quot;people&quot;,    2: &quot;bicycle&quot;,
+    3: &quot;car&quot;,        4: &quot;van&quot;,       5: &quot;truck&quot;,
+    6: &quot;tricycle&quot;,   7: &quot;awning-tricycle&quot;,
+    8: &quot;bus&quot;,        9: &quot;motor&quot;
+}
+</code></pre>
+<p>The first thing you notice when you plot the class distribution is <strong>severe imbalance</strong> — pedestrians vastly outnumber buses. This isn&rsquo;t a dataset quirk; it&rsquo;s reality. Urban drone footage is full of people. It means per-class mAP for rare classes (bus, awning-tricycle) will be brutal no matter what you do. You have to know this <em>before</em> you start optimizing, or you&rsquo;ll optimize for the wrong thing.</p>
+<p>This is the core philosophy of the workshop: <strong>you cannot improve what you don&rsquo;t measure.</strong></p>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_001.jpg" alt="Preparing before teaching at Super AI Engineer Thailand 2026">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 1: A few quiet moments before the workshop officially began.  
+    Standing on stage preparing the slides, testing the microphone, and introducing myself to the students felt surreal in a surprisingly good way.  
+    This was my first opportunity to teach at Super AI Engineer Thailand, and honestly, I was more excited than nervous.  
+    The entire workshop today — including slides, Colab notebooks, and implementation code — was intentionally prepared as open-source material because I wanted students to continue experimenting long after the session ended.   
+    Workshop materials: 
+    <a href="https://kaopanboonyuen.github.io/SAIE2026/" target="_blank" rel="noopener noreferrer">
+      https://kaopanboonyuen.github.io/SAIE2026/
+    </a>
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_002.jpg" alt="Opening session on scalable object detection systems">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 2: Officially opening today's session: “AI in the Real World: Trade-offs Behind Fast &amp; Scalable Object Detection.”  
+    The workshop focused on how modern vision systems are engineered under real deployment constraints — not just how to maximize benchmark scores.  
+    Instead of discussing only accuracy metrics, we explored the systems-level realities behind production AI pipelines:
+    latency ceilings, throughput bottlenecks, VRAM limitations, TensorRT acceleration, asynchronous inference, and scaling detection models across multiple concurrent camera streams.  
+    In many real-world environments, the best model is not necessarily the newest or the largest model — but the model that survives deployment constraints while remaining stable under load.  
+    Slide deck and implementation repository: 
+    <a href="https://github.com/kaopanboonyuen/SAIE2026" target="_blank" rel="noopener noreferrer">
+      https://github.com/kaopanboonyuen/SAIE2026
+    </a>
+  </p>
+</div>
+<hr>
+<h2 id="-lab-1--baseline-profiling-before-you-touch-a-single-weight">🚀 Lab 1 — Baseline Profiling: Before You Touch a Single Weight</h2>
+<p>Most engineers skip straight to optimization. That&rsquo;s a mistake. Lab 1 is entirely about establishing ground truth — not training, not tweaking — just <em>measuring</em>.</p>
+<h3 id="what-we-measure">What We Measure</h3>
+<p>$$\text{mAP} = \frac{1}{|C|} \sum_{c \in C} AP_c$$</p>
+<p>$$AP_c = \int_0^1 p(r) , dr \approx \sum_{k=1}^{N} P(k) \cdot \Delta R(k)$$</p>
+<p>Where $P(k)$ is precision at rank $k$ and $\Delta R(k)$ is the change in recall. This is the primary accuracy signal — but it tells you nothing about speed.</p>
+<p>For speed, we track:</p>
+<p>$$\text{FPS} = \frac{1}{\text{Average Latency per Frame (s)}}$$</p>
+<p>And we compute an <strong>Efficiency Score</strong> that ties them together:</p>
+<p>$$\text{Efficiency Score} = \frac{\text{mAP}}{\text{GFLOPs}}$$</p>
+<p>Higher is better. This single number tells you how much accuracy you&rsquo;re buying per unit of computation — and it&rsquo;s what you should be optimizing when hardware is constrained.</p>
+<h3 id="latency-benchmarking--the-right-way">Latency Benchmarking — The Right Way</h3>
+<p>Never trust a single inference time. Warm up the GPU, measure across enough samples to get stable statistics, and report P50 <em>and</em> P95 (tail latency matters for real-time systems):</p>
+<pre><code class="language-python">def benchmark_latency(model_path, val_imgs, n_warmup=10, n_runs=50, device=0):
+    m = YOLO(model_path)
+    sample_imgs = random.sample(val_imgs, min(n_runs, len(val_imgs)))
+
+    # Critical: warm up first — cold GPU gives you garbage numbers
+    for img in sample_imgs[:n_warmup]:
+        _ = m.predict(img, imgsz=416, verbose=False, device=device)
+
+    torch.cuda.synchronize()
+
+    latencies = []
+    for img in sample_imgs:
+        t0 = time.perf_counter()
+        _ = m.predict(img, imgsz=416, verbose=False, device=device)
+        torch.cuda.synchronize()  # Wait for GPU to actually finish
+        latencies.append((time.perf_counter() - t0) * 1000)
+
+    return {
+        &quot;mean_ms&quot;: np.mean(latencies),
+        &quot;p50_ms&quot;:  np.percentile(latencies, 50),
+        &quot;p95_ms&quot;:  np.percentile(latencies, 95),
+        &quot;fps&quot;:     1000 / np.mean(latencies)
+    }
+</code></pre>
+<p>The <code>torch.cuda.synchronize()</code> call is one of the most commonly missed details. Without it, you&rsquo;re measuring how fast Python <em>submits</em> work to the GPU — not how fast the GPU <em>completes</em> it. For small models on fast hardware, the difference can be dramatic.</p>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_003.jpg" alt="Large workshop audience during AI engineering lecture">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 3: The atmosphere inside the workshop hall during the technical lecture session.  
+    Originally, I prepared six complete engineering labs covering scalable detection pipelines, edge AI deployment, model optimization, efficient inference scheduling, TensorRT acceleration, and deployment strategies for embedded systems such as NVIDIA Jetson devices.  
+    However, the session quickly evolved into a much deeper technical discussion than expected because students were highly engaged and continuously asking systems-level questions about inference efficiency, deployment bottlenecks, and practical optimization strategies.  
+    That energy completely changed the atmosphere of the room in the best possible way.  
+    As a teacher, there is something genuinely rewarding about seeing students become excited when the engineering concepts finally start connecting together.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_004.jpg" alt="Teaching baseline profiling and efficiency metrics">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 4: Beginning Lab 1: Baseline Profiling for Real-Time Object Detection Systems.  
+    Before optimizing any AI model, students first needed to understand how to properly measure performance.  
+    We discussed why FLOPs alone are insufficient, why latency measurements can be misleading, and why deployment-aware metrics matter significantly more in production environments.  
+    The workshop introduced the relationship between:
+    FLOPs, latency, throughput, memory bandwidth, mAP, FPS stability, and overall efficiency score.  
+    One major takeaway from this section was simple:
+    “A fast benchmark does not always imply a deployable system.”
+  </p>
+</div>
+<hr>
+<h2 id="-lab-2--structured-pruning-remove-what-doesnt-matter">✂️ Lab 2 — Structured Pruning: Remove What Doesn&rsquo;t Matter</h2>
+<p>Not all neurons contribute equally. Structured pruning identifies and removes entire <strong>channels</strong> from convolutional layers, producing a genuinely smaller model — not a sparse one — so inference actually gets faster without specialized hardware.</p>
+<h3 id="the-pruning-criterion">The Pruning Criterion</h3>
+<p>We use an $\ell_1$-norm criterion on batch normalization scale factors $\gamma$:</p>
+<p>$$\text{importance}(c) = |\gamma_c|_1$$</p>
+<p>Channels with the smallest $|\gamma|$ contribute least to the output signal and are pruned first.</p>
+<p>$$\text{Pruned set} = { c \mid |\gamma_c|_1 &lt; \tau }$$</p>
+<p>Where $\tau$ is a percentile threshold (e.g., prune the bottom 30% of channels by $\ell_1$-norm magnitude).</p>
+<pre><code class="language-python">def get_pruning_mask(model, prune_ratio=0.3):
+    # Collect all BN gamma (scale) parameters from the backbone
+    all_gammas = []
+    for name, module in model.named_modules():
+        if isinstance(module, nn.BatchNorm2d):
+            all_gammas.append(module.weight.data.abs())
+
+    all_gammas_cat = torch.cat(all_gammas)
+    threshold = torch.quantile(all_gammas_cat, prune_ratio)
+
+    masks = {}
+    for name, module in model.named_modules():
+        if isinstance(module, nn.BatchNorm2d):
+            masks[name] = (module.weight.data.abs() &gt;= threshold)
+    return masks
+</code></pre>
+<p>The key insight: after pruning, you <em>must</em> fine-tune. Pruned models can lose 5–15% mAP immediately. Fine-tuning for even a few epochs recovers most of that loss — and the resulting model is permanently smaller.</p>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_005.jpg" alt="Explaining evaluation metrics for object detection">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 5: Diving deeper into the evaluation metrics behind modern object detection systems.  
+    This section focused on helping students build intuition around what performance numbers actually mean in practice.  
+    We explored how mAP behaves under different IoU thresholds, why throughput collapses under multi-stream inference, and how latency variance can become a hidden deployment failure point even when average FPS appears acceptable.  
+    Real-world AI engineering is often less about maximizing a single metric and more about balancing multiple competing constraints simultaneously.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_006.jpg" alt="Teaching YOLOv12 and efficient object detection">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 6: Introducing YOLOv12: Attention-Centric Real-Time Object Detectors.  
+    One important point discussed throughout the workshop was that real production systems rarely care about “the newest model” alone.  
+    In practice, engineers care about models that provide the best balance between:
+    speed, stability, accuracy, deployment cost, and scalability.  
+    To illustrate this idea, we explored the YOLOv12 paper presented at NeurIPS 2025 by researchers from the University at Buffalo and the University of Chinese Academy of Sciences.  
+    The discussion focused heavily on how modern attention mechanisms are being redesigned specifically for efficient real-time detection workloads rather than purely offline research benchmarks.  
+    Paper link:
+    <a href="https://neurips.cc/virtual/2025/loc/san-diego/poster/116765" target="_blank" rel="noopener noreferrer">
+      https://neurips.cc/virtual/2025/loc/san-diego/poster/116765
+    </a>
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_007.jpg" alt="Explaining YOLOv12 architecture and efficient detection trade-offs">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 7: Continuing the discussion around modern YOLO architectures and efficiency-oriented detector design.  
+    We analyzed how the latest generation of real-time detectors increasingly focuses on optimizing attention efficiency rather than simply scaling network depth or parameter count.  
+    The workshop also emphasized an important engineering principle:
+    production AI systems are fundamentally constrained systems.  
+    Every additional millisecond of latency, every extra megabyte of VRAM, and every unstable inference spike eventually becomes a deployment problem at scale.
+  </p>
+</div>
+<hr>
+<h2 id="-lab-3--quantization-fewer-bits-same-predictions">⚡ Lab 3 — Quantization: Fewer Bits, Same Predictions</h2>
+<p>Quantization reduces the numerical precision of model weights and activations. The most impactful transitions are:</p>
+<ul>
+<li><strong>FP32 → FP16:</strong> ~2× speedup, essentially zero accuracy loss on modern GPUs with Tensor Cores</li>
+<li><strong>FP16 → INT8:</strong> Another ~2× speedup, ~1–2% mAP loss, requires calibration</li>
+</ul>
+<p>The mathematical model for uniform quantization:</p>
+<p>$$Q(x) = \text{round}\left(\frac{x}{\Delta}\right) \cdot \Delta$$</p>
+<p>Where:</p>
+<p>$$\Delta = \frac{x_{\max} - x_{\min}}{2^b - 1}$$</p>
+<p>And $b$ is the bit-width (8 for INT8, 16 for FP16). The quantization error is bounded by $\frac{\Delta}{2}$, which is why calibration data matters — you want $x_{\max}$ and $x_{\min}$ to reflect the true activation range of your specific deployment data.</p>
+<p>For our YOLOv8s baseline on the VisDrone subset, FP16 is essentially a free lunch:</p>
+<pre><code class="language-python"># FP16 inference — one-line change
+results = model.predict(img, imgsz=416, half=True, device=0)
+</code></pre>
+<p><code>half=True</code> tells Ultralytics to run the forward pass in FP16. On an NVIDIA T4, this alone typically gives a 1.5–2× throughput gain with no measurable mAP degradation.</p>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_008.jpg" alt="Explaining attention mechanisms in YOLOv12">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 8: Exploring efficient attention mechanisms used inside modern real-time detection architectures.  
+    This section covered several attention variants including:
+    Criss-Cross Attention, Swin Attention, CSWin Attention, and Area Attention as discussed in YOLOv12.  
+    Rather than treating attention as a purely theoretical concept, the discussion focused on the computational trade-offs behind each design:
+    receptive field coverage, memory complexity, token interaction cost, and inference scalability under real-time constraints.  
+    Understanding these trade-offs becomes extremely important once models leave research papers and enter production systems.
+  </p>
+</div>
+<hr>
+<h2 id="-lab-4--knowledge-distillation-teaching-a-small-model-to-think-big">🧠 Lab 4 — Knowledge Distillation: Teaching a Small Model to Think Big</h2>
+<p>This is the lab that I find most intellectually satisfying. Knowledge distillation isn&rsquo;t compression in the traditional sense — it&rsquo;s <strong>curriculum design</strong>. You train a small <em>student</em> network to mimic the output distribution of a large, accurate <em>teacher</em>.</p>
+<h3 id="the-distillation-loss">The Distillation Loss</h3>
+<p>Standard cross-entropy trains against hard labels (0 or 1). Distillation trains against <em>soft</em> teacher logits — the full probability distribution the teacher assigns across all classes:</p>
+<p>$$L_{KD} = (1 - \alpha) \cdot L_{CE}(y, \hat{y}_s) + \alpha \cdot T^2 \cdot KL\left(\sigma\left(\frac{z_t}{T}\right) | \sigma\left(\frac{z_s}{T}\right)\right)$$</p>
+<p>Where:</p>
+<ul>
+<li>$z_t$, $z_s$ are teacher and student logits</li>
+<li>$T$ is the <strong>temperature</strong> — higher $T$ softens the distribution, exposing inter-class relationships the student can learn from</li>
+<li>$\alpha$ balances hard label loss vs. distillation loss</li>
+<li>$\text{KL}$ is the Kullback–Leibler divergence</li>
+</ul>
+<p>The $T^2$ factor is critical and often forgotten: it compensates for the fact that soft targets are scaled down by $T$, which would otherwise reduce the gradient magnitude by $T^2$.</p>
+<pre><code class="language-python">def distillation_loss(student_logits, teacher_logits, true_labels,
+                       alpha=0.7, temperature=4.0):
+    # Soft target loss
+    soft_teacher = F.softmax(teacher_logits / temperature, dim=-1)
+    soft_student = F.log_softmax(student_logits / temperature, dim=-1)
+    kd_loss = F.kl_div(soft_student, soft_teacher, reduction='batchmean')
+
+    # Hard label loss
+    ce_loss = F.cross_entropy(student_logits, true_labels)
+
+    # T^2 scales the KD gradient back to normal magnitude
+    return (1 - alpha) * ce_loss + alpha * (temperature ** 2) * kd_loss
+</code></pre>
+<p>In practice on our VisDrone setup: a YOLOv8n student distilled from a YOLOv8s teacher recovers ~92% of the teacher&rsquo;s mAP at 2.2× the teacher&rsquo;s FPS. That&rsquo;s a genuinely useful operating point.</p>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_009.jpg" alt="Analyzing YOLOv12 benchmark evaluation metrics">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 9: Analyzing the benchmark results and reporting methodology used in YOLOv12.  
+    One recurring theme throughout the workshop was the importance of reading benchmark tables carefully rather than blindly trusting headline numbers.  
+    We discussed hidden deployment variables such as:
+    input resolution, TensorRT optimization, precision modes, hardware-specific acceleration, batch size effects, and evaluation environments.  
+    Many “real-time” claims in research papers can look very different once tested under production workloads.
+  </p>
+</div>
+<hr>
+<h2 id="-lab-5--tiny-model-design-architecture-matters">🧩 Lab 5 — Tiny Model Design: Architecture Matters</h2>
+<p>Beyond training recipes, the model architecture itself determines the efficiency ceiling. Two key tools in the lightweight design toolkit:</p>
+<h3 id="depthwise-separable-convolutions">Depthwise-Separable Convolutions</h3>
+<p>Standard conv: $C_{in} \times C_{out} \times k^2$ FLOPs per spatial position.<br>
+DW-Sep conv: $C_{in} \times k^2 + C_{in} \times C_{out}$ FLOPs per position.</p>
+<p>From a systems engineering perspective, depthwise separable convolution provides a massive computational advantage over standard convolution by factorizing spatial and channel-wise operations.</p>
+<p>For a typical 3×3 detection head with 128 output channels, the theoretical compute reduction approaches nearly <strong>9× fewer FLOPs</strong>, which directly translates into:</p>
+<ul>
+<li>lower latency</li>
+<li>reduced VRAM pressure</li>
+<li>higher multi-stream throughput</li>
+<li>better edge-device deployability</li>
+</ul>
+<p>This optimization becomes especially important when scaling object detection across multiple concurrent camera feeds.</p>
+<pre><code class="language-python">class LightweightDetHead(nn.Module):
+    &quot;&quot;&quot;Depthwise-Separable detection head.&quot;&quot;&quot;
+    def __init__(self, in_ch, mid_ch, num_classes, k=3):
+        super().__init__()
+        self.dw  = nn.Conv2d(in_ch, in_ch, k, padding=k//2,
+                              groups=in_ch, bias=False)  # depthwise
+        self.bn1 = nn.BatchNorm2d(in_ch)
+        self.pw  = nn.Conv2d(in_ch, mid_ch, 1, bias=False)  # pointwise
+        self.bn2 = nn.BatchNorm2d(mid_ch)
+        self.act = nn.SiLU()
+        self.out = nn.Conv2d(mid_ch, num_classes + 4, 1)
+
+    def forward(self, x):
+        x = self.act(self.bn1(self.dw(x)))
+        x = self.act(self.bn2(self.pw(x)))
+        return self.out(x)
+</code></pre>
+<h3 id="input-resolution-scaling">Input Resolution Scaling</h3>
+<p>FLOPs scale <strong>quadratically</strong> with input resolution. Halving image size cuts FLOPs by 4×:</p>
+<p>$$\text{FLOPs} \propto H \times W \propto \text{imgsz}^2$$</p>
+<p>This is one of the fastest levers available. The practical question is where the accuracy cliff is for your specific data. For VisDrone&rsquo;s predominantly tiny objects, going below 320px starts hurting badly because the P3 stride-8 detection head needs enough spatial resolution to see objects that might only be 8–15px wide at full resolution.</p>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_010.jpg" alt="Teaching RT-DETR transformer object detector">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 10: Introducing Baidu's RT-DETR: A Vision Transformer-Based Real-Time Object Detector.  
+    This section explored how transformer-based detectors are evolving toward practical real-time deployment scenarios.  
+    We discussed the architecture of RT-DETR, including:
+    multiscale feature extraction, the efficient hybrid encoder, intra-scale feature interaction (AIFI), and cross-scale feature fusion modules (CCFM).  
+    Students were particularly interested in how RT-DETR attempts to bridge the gap between transformer accuracy and real-time inference efficiency.  
+    Documentation:
+    <a href="https://docs.ultralytics.com/models/rtdetr/" target="_blank" rel="noopener noreferrer">
+      https://docs.ultralytics.com/models/rtdetr/
+    </a>
+  </p>
+</div>
+<hr>
+<h2 id="-lab-6--multi-camera-deployment-the-real-engineering-problem">🌐 Lab 6 — Multi-Camera Deployment: The Real Engineering Problem</h2>
+<p>Everything in Labs 1–5 is preparation for this. Lab 6 is where the rubber meets the road: <strong>can you actually serve 4 cameras at 25 FPS each?</strong></p>
+<h3 id="system-throughput-model">System Throughput Model</h3>
+<p>With $N$ cameras at target frame rate $R$ and per-frame model latency $L$ milliseconds:</p>
+<p>$$\text{Required FPS} = N \cdot R$$</p>
+<p>For batched inference across all $N$ camera streams simultaneously, latency scales approximately sub-linearly:</p>
+<p>$$L_{\text{batch}}(N) = L_{\text{single}} \cdot \left(1 + \alpha \cdot \log N\right)$$</p>
+<p>This means GPU utilization <em>improves</em> with batch size — a single large batch uses GPU memory bandwidth more efficiently than many sequential small ones.</p>
+<pre><code class="language-python">def batch_inference_benchmark(model_path, imgs,
+                               batch_sizes=[1, 2, 4, 8],
+                               imgsz=416, device=0):
+    m = YOLO(model_path)
+    results = {}
+
+    for bs in batch_sizes:
+        batch = random.sample(imgs, min(bs, len(imgs)))
+
+        # Warm up
+        for _ in range(3):
+            _ = m.predict(batch, imgsz=imgsz, verbose=False, device=device)
+
+        torch.cuda.synchronize()
+        times = []
+        for _ in range(max(1, 20 // bs)):
+            t0 = time.perf_counter()
+            _ = m.predict(batch, imgsz=imgsz, verbose=False, device=device)
+            torch.cuda.synchronize()
+            times.append(time.perf_counter() - t0)
+
+        throughput = bs / np.mean(times)
+        results[bs] = {&quot;throughput_fps&quot;: throughput,
+                       &quot;latency_ms&quot;: np.mean(times) * 1000}
+        print(f&quot;Batch={bs:2d} | {np.mean(times)*1000:.1f} ms | {throughput:.1f} img/s&quot;)
+
+    return results
+</code></pre>
+<h3 id="pytorch--onnx--tensorrt-the-deployment-stack">PyTorch → ONNX → TensorRT: The Deployment Stack</h3>
+<p>The full optimization pipeline for a production edge deployment:</p>
+<pre><code>Training (PyTorch FP32)
+        ↓
+Export  (ONNX — portable intermediate format)
+        ↓
+Compile (TensorRT on Jetson — hardware-fused kernels)
+        ↓
+Deploy  (INT8 + batched streams on edge GPU)
+</code></pre>
+<p>On a <strong>Jetson Nano</strong> (128-core Maxwell, 4GB LPDDR4):</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>FPS per stream</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single camera, FP16</td>
+<td>~20–25</td>
+</tr>
+<tr>
+<td>Dual camera</td>
+<td>~12–15</td>
+</tr>
+<tr>
+<td>4 cameras</td>
+<td>~6–8</td>
+</tr>
+</tbody>
+</table>
+<p>To hit 4 cameras × 25 FPS = 100 total FPS, you need either a more powerful GPU or a model small enough that batched inference amortizes the compute:</p>
+<pre><code class="language-python"># Edge deployment — multi-camera stream on Jetson
+from ultralytics import YOLO
+
+model = YOLO(&quot;model.engine&quot;)  # TensorRT-compiled model
+sources = [&quot;rtsp://cam1&quot;, &quot;rtsp://cam2&quot;, &quot;rtsp://cam3&quot;, &quot;rtsp://cam4&quot;]
+results = model.predict(source=sources, stream=True)
+</code></pre>
+<p>The answer to the final hackathon challenge — which the students had to solve themselves — is <strong>YOLOv8n + Knowledge Distillation + FP16, batch size 4</strong>. It&rsquo;s the only combination in our ablation that simultaneously hits the throughput target and keeps mAP within 20% of the baseline.</p>
+<hr>
+<h2 id="-final-results-dashboard">📊 Final Results Dashboard</h2>
+<table>
+<thead>
+<tr>
+<th>Technique</th>
+<th>Speed Gain</th>
+<th>mAP Drop</th>
+<th>Difficulty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FP16 Quantization</td>
+<td>~1.5–2×</td>
+<td>~0%</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td>INT8 Quantization</td>
+<td>~2–4×</td>
+<td>~1–2%</td>
+<td>⭐⭐</td>
+</tr>
+<tr>
+<td>Structured Pruning</td>
+<td>~1.2–2×</td>
+<td>~2–5%</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>Knowledge Distillation</td>
+<td>~2–3×</td>
+<td>~5–8%</td>
+<td>⭐⭐⭐</td>
+</tr>
+<tr>
+<td>DW-Sep Head Design</td>
+<td>~1.3×</td>
+<td>~1–3%</td>
+<td>⭐⭐</td>
+</tr>
+<tr>
+<td>Smaller Input Size</td>
+<td>quadratic</td>
+<td>~3–10%</td>
+<td>⭐</td>
+</tr>
+</tbody>
+</table>
+<p>Combined intelligently: <strong>~3–5× faster with less than 10% mAP drop</strong>. That&rsquo;s the difference between a model that sits on a benchmark and a model that ships.</p>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_011.jpg" alt="Teaching YOLOE open vocabulary object detection">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 11: Exploring YOLOE and the future direction of open-vocabulary object detection systems.  
+    Unlike traditional YOLO architectures restricted to fixed categories, YOLOE introduces promptable detection using text, image, and internal vocabulary guidance for zero-shot inference.  
+    This part of the workshop sparked many discussions around the future of foundation models in computer vision:
+    systems capable of detecting unseen categories dynamically without retraining.  
+    We also discussed how open-vocabulary systems may eventually reshape edge AI applications, robotics, and adaptive perception systems operating in uncertain environments.  
+    Documentation:
+    <a href="https://docs.ultralytics.com/models/yoloe/" target="_blank" rel="noopener noreferrer">
+      https://docs.ultralytics.com/models/yoloe/
+    </a>
+  </p>
+</div>
+<hr>
+<h2 id="-the-core-engineering-principle">🧠 The Core Engineering Principle</h2>
+<p>$$\text{Accuracy} \leftrightarrow \text{Speed} \leftrightarrow \text{Memory}$$</p>
+<p>There is no free lunch. Every optimization technique moves you somewhere on this triangle. The job of the AI engineer is not to find the highest point on the accuracy axis — it&rsquo;s to find the point on the <strong>Pareto frontier</strong> that satisfies your deployment constraints.</p>
+<p>That&rsquo;s what I wanted every student in the room to leave with. Not a set of tricks, but a framework for <em>reasoning</em> about trade-offs.</p>
+<hr>
+<h2 id="-closing-thoughts">💬 Closing Thoughts</h2>
+<p>Today was genuinely a very good day.</p>
+<p>I arrived in Pathum Thani at 8 AM, set up in a room full of students who had already been building AI systems for weeks, and spent three hours going deeper than I usually get to go in a workshop. We didn&rsquo;t finish all six labs live — time is finite and concepts deserve space — but everything is open source and the students have everything they need to continue.</p>
+<p>To the <strong>Artificial Intelligence Association of Thailand (AIAT)</strong>: thank you for organizing a camp that treats AI engineering as a serious craft, not a series of <code>model.fit()</code> calls. It&rsquo;s a privilege to contribute to something like this.</p>
+<p>To every student in <strong>Super AI Engineer Season 6</strong>: the fact that you&rsquo;re here, learning things this hard, this early — that matters. The engineers who understand <em>why</em> a model is fast are the ones who will build the systems that actually work in the real world. I hope today gave you some of that intuition.</p>
+<p>Go build things. Make them fast. Know your trade-offs. 🚁</p>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_013.jpg" alt="Closing the workshop session at Super AI Engineer Thailand">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 12: Closing the workshop session after an unexpectedly intense and highly interactive morning.  
+    The organizing team kindly gave me a small gift afterward, but honestly, the most rewarding part of the day was seeing students become genuinely curious about systems optimization, model efficiency, pruning strategies, and scalable deployment engineering.  
+    If even a few ideas from today's workshop eventually help someone build useful systems in the future, then the trip was already completely worth it.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_014.jpg" alt="Post workshop interview session">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 13: A surprise interview session immediately after the workshop ended!.  
+    The Super AI Engineer team asked me to share thoughts about the workshop, deployment engineering, and the topics covered throughout the session.  
+    Honestly, I was not prepared at all and probably looked slightly panicked while answering questions spontaneously.  
+    But perhaps that is the fun part of technical conversations — sometimes the most genuine answers happen when you are simply speaking from experience rather than reading prepared scripts.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_015.jpg" alt="Students discussing model pruning and optimization after class">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 14: After the session officially ended, many students stayed behind to continue discussing pruning strategies, model stacking, optimization pipelines, and deployment trade-offs.  
+    This became one of my favorite moments of the day because the conversations shifted naturally from lecture material into deeper engineering curiosity.  
+    Watching students actively connect research ideas with deployment realities is probably one of the most satisfying parts of teaching AI engineering.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_016.jpg" alt="Technical discussion with students after the workshop">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 15: Continuing technical discussions with students long after the workshop had officially finished.  
+    We talked about pruning pipelines, ensemble strategies, stacked models, inference scheduling, and how to balance accuracy with deployment cost under constrained hardware environments.  
+    Moments like this are honestly the reason I enjoy teaching.  
+    Sometimes the best learning does not happen during the lecture itself — it happens afterward, when students begin asking deeper questions beyond the slides.
+  </p>
+</div>
+<hr>
+<h2 id="-resources">🔗 Resources</h2>
+<ul>
+<li><strong>Workshop overview:</strong> <a href="https://kaopanboonyuen.github.io/SAIE2026/" target="_blank" rel="noopener">kaopanboonyuen.github.io/SAIE2026</a></li>
+<li><strong>All slides + notebooks:</strong> <a href="https://github.com/kaopanboonyuen/SAIE2026" target="_blank" rel="noopener">github.com/kaopanboonyuen/SAIE2026</a></li>
+<li><strong>Super AI Engineer Thailand:</strong> <a href="https://superai.aiat.or.th/" target="_blank" rel="noopener">superai.in.th</a></li>
+<li><strong>AIAT:</strong> <a href="https://aiat.or.th/" target="_blank" rel="noopener">aiat.or.th</a></li>
+</ul>
+<hr>
+<p><strong>Teerapong Panboonyuen, Ph.D. (P&rsquo;Kao)</strong><br>
+<em>Instructor — Super AI Engineer Thailand | SAIE Workshop</em><br>
+<em>May 18, 2026 — Pathum Thani</em></p>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_017.jpg" alt="Creative workshop summary collage version 1">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 16: A merged visual summary of today's workshop — version one.  
+    Looking back at the photos afterward, it reminded me how energetic the entire session felt from beginning to end.  
+    Between debugging Colab notebooks, discussing deployment bottlenecks, and talking about scalable AI systems for hours, the workshop somehow felt both technically intense and genuinely fun at the same time.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_018.jpg" alt="Creative workshop summary collage version 2">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 17: Another merged recap of the workshop atmosphere throughout the day.  
+    One thing I appreciated most was how naturally the discussion evolved from traditional object detection topics into broader conversations around systems engineering, scalable inference, and deployment-aware AI design.  
+    That transition reflects how modern AI engineering is increasingly becoming a systems problem rather than purely a modeling problem.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_019.jpg" alt="Final workshop cover collage for the blog">
+  <p style="font-style: italic; margin-top: 0px;">
+    Figure 18: Final merged cover image summarizing the entire Super AI Engineer Thailand 2026 workshop experience.  
+    Out of all the edited versions, this one became my personal favorite and eventually turned into the blog cover image.  
+    Today was exhausting, chaotic, deeply technical, and incredibly enjoyable all at once.  
+    More importantly, it was another reminder that sharing knowledge — even small engineering tricks, deployment lessons, or debugging experiences — can genuinely help others continue growing in their own AI journey.
+  </p>
+</div>
+<hr>
+<blockquote>
+<p>“AI is not just about building smarter models — it’s about building systems that work in the real world, under real constraints, for real people.</p>
+<p>Keep learning, keep building, and don’t be afraid of hard problems — because that’s exactly where real engineers are made.</p>
+<p>The future of AI won’t be written by tools, but by the people who refuse to stop improving them.”</p>
+</blockquote>
+<p>— P’Kao 🚀</p>
+<h2 id="citation">Citation</h2>
+<blockquote>
+<p>Panboonyuen, Teerapong. (May 2026). <em>Teaching Scalable AI Systems and Knowledge Distillation at Super AI Engineer Thailand</em>. Blog post on Kao Panboonyuen.
+<a href="https://kaopanboonyuen.github.io/blog/2026-05-18-teaching-scalable-ai-systems-and-knowledge-distillation-at-super-ai-engineer-thailand" target="_blank" rel="noopener">https://kaopanboonyuen.github.io/blog/2026-05-18-teaching-scalable-ai-systems-and-knowledge-distillation-at-super-ai-engineer-thailand</a></p>
+</blockquote>
+<p><strong>For a BibTeX citation:</strong></p>
+<pre><code class="language-bibtex">@article{panboonyuen2026superai,
+  title   = &quot;Teaching Scalable AI Systems and Knowledge Distillation at Super AI Engineer Thailand&quot;,
+  author  = &quot;Panboonyuen, Teerapong&quot;,
+  journal = &quot;kaopanboonyuen.github.io/&quot;,
+  year    = &quot;2026&quot;,
+  month   = &quot;May&quot;,
+  day     = &quot;18&quot;,
+  url     = &quot;https://kaopanboonyuen.github.io/blog/2026-05-18-teaching-scalable-ai-systems-and-knowledge-distillation-at-super-ai-engineer-thailand&quot;
+}
+</code></pre>
+<div class="alert alert-note">
+  <div>
+    <p>Thank you for reading this technical reflection on scalable AI systems, multi-camera object detection, edge AI deployment, and knowledge distillation for real-world computer vision engineering. 🚀🧠⚡</p>
+<p>If this article inspired you, feel free to share it with researchers, engineers, students, startups, and AI enthusiasts building the next generation of efficient and scalable AI systems.</p>
+  </div>
+</div>
+<hr>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/super-ai-engineer/">super-ai-engineer</a>
+  
+  <a class="badge badge-light" href="/tag/object-detection/">object-detection</a>
+  
+  <a class="badge badge-light" href="/tag/knowledge-distillation/">knowledge-distillation</a>
+  
+  <a class="badge badge-light" href="/tag/model-compression/">model-compression</a>
+  
+  <a class="badge badge-light" href="/tag/quantization/">quantization</a>
+  
+  <a class="badge badge-light" href="/tag/pruning/">pruning</a>
+  
+  <a class="badge badge-light" href="/tag/visdrone/">visdrone</a>
+  
+  <a class="badge badge-light" href="/tag/edge-ai/">edge-ai</a>
+  
+  <a class="badge badge-light" href="/tag/computer-vision/">computer-vision</a>
+  
+  <a class="badge badge-light" href="/tag/deep-learning/">deep-learning</a>
+  
+  <a class="badge badge-light" href="/tag/ai-engineering/">ai-engineering</a>
+  
+  <a class="badge badge-light" href="/tag/real-world-ai/">real-world-ai</a>
+  
+  <a class="badge badge-light" href="/tag/multi-camera/">multi-camera</a>
+  
+  <a class="badge badge-light" href="/tag/jetson-nano/">jetson-nano</a>
+  
+  <a class="badge badge-light" href="/tag/onnx/">onnx</a>
+  
+  <a class="badge badge-light" href="/tag/tensorrt/">tensorrt</a>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://kaopanboonyuen.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/teerapong-panboonyuen/avatar_hu00be49bf8d306be2acce952c8fa7a11f_1239445_270x270_fill_lanczos_center_3.png" alt="Teerapong Panboonyuen"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://kaopanboonyuen.github.io/">Teerapong Panboonyuen</a></h5>
+      
+      <p class="card-text">My research focuses on leveraging advanced machine intelligence techniques, specifically computer vision, to enhance semantic understanding, learning representations, visual recognition, and geospatial data interpretation.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:teerapong.panboonyuen@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://x.com/kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://orcid.org/0000-0001-8464-4476" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.youtube.com/@kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/teerapong-panboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    ©2026 Kao Panboonyuen
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Built using <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> and the <a href="https://github.com/wowchemy/starter-hugo-academic" target="_blank" rel="noopener">Wowchemy academic template</a>. View <a href="https://github.com/kaopanboonyuen/kaopanboonyuen.github.io" target="_blank" rel="noopener">source</a>.
+        
+  </p>
+</footer>
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/golang.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.b36873e4e886c7b03b21e4eb97d9b6d7.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

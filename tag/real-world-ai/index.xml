@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>real-world-ai | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/real-world-ai/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/real-world-ai/index.xml" rel="self" type="application/rss+xml" />
+    <description>real-world-ai</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Mon, 18 May 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>real-world-ai</title>
+      <link>https://kaopanboonyuen.github.io/tag/real-world-ai/</link>
+    </image>
+    
+    <item>
+      <title>Teaching Scalable AI Systems and Knowledge Distillation at Super AI Engineer Thailand</title>
+      <link>https://kaopanboonyuen.github.io/blog/2026-05-18-teaching-scalable-ai-systems-and-knowledge-distillation-at-super-ai-engineer-thailand/</link>
+      <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/blog/2026-05-18-teaching-scalable-ai-systems-and-knowledge-distillation-at-super-ai-engineer-thailand/</guid>
+      <description>&lt;h1 id=&#34;-trade-offs-behind-fast--scalable-object-detection&#34;&gt;🚁 Trade-offs Behind Fast &amp;amp; Scalable Object Detection&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Fast models don&amp;rsquo;t just run faster — they enable applications that slow models simply cannot.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-super-ai-engineer-season-6--a-morning-worth-the-drive&#34;&gt;🌏 Super AI Engineer Season 6 — A Morning Worth the Drive&lt;/h2&gt;
+&lt;p&gt;Today, May 18, 2026, I left home at 6:00 AM.&lt;/p&gt;
+&lt;p&gt;The camp — &lt;strong&gt;Super AI Engineer Season 6&lt;/strong&gt; — is held in &lt;strong&gt;Pathum Thani&lt;/strong&gt;, which is a fair distance from my side of Bangkok–Nonthaburi. But when the Artificial Intelligence Association of Thailand (&lt;strong&gt;AIAT&lt;/strong&gt;) invites you to teach a room full of brilliant young engineers who &lt;em&gt;want to be there&lt;/em&gt;, you don&amp;rsquo;t think twice about the commute. You pack your laptop, pray the T4 runtime cooperates, and go.&lt;/p&gt;
+&lt;p&gt;This is the sixth season of &lt;a href=&#34;https://superai.aiat.or.th/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Super AI Engineer Thailand&lt;/a&gt; — a hackathon-based camp where participants tackle a fresh challenge every week. This season&amp;rsquo;s theme from the camp organizers captured the problem space perfectly:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;We have demand from private companies for object detection solutions that can run fast, handle multiple cameras simultaneously, and ideally operate on embedded boards like the Jetson Nano.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That framing is &lt;strong&gt;exactly&lt;/strong&gt; the right framing for real production AI. Not &amp;ldquo;what&amp;rsquo;s the highest mAP on a leaderboard?&amp;rdquo; but &amp;ldquo;how do I ship something that runs on constrained hardware, at scale, without dropping frames?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s what I came to teach.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-workshop-overview&#34;&gt;📋 Workshop Overview&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Title:&lt;/strong&gt; AI in the Real World: Trade-offs Behind Fast &amp;amp; Scalable Object Detection&lt;br&gt;
+&lt;strong&gt;How to build vision systems that run on multiple cameras — without skipping a frame&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Platform:&lt;/strong&gt; Google Colab (T4 Free Tier)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dataset:&lt;/strong&gt; VisDrone — SAIE Tiny Subset&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Duration:&lt;/strong&gt; ~3 Hours · &lt;strong&gt;6 Labs&lt;/strong&gt; · Full open-source&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Lab&lt;/th&gt;
+&lt;th&gt;Topic&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;🛠️ Setup&lt;/td&gt;
+&lt;td&gt;Environment, Dataset &amp;amp; EDA&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;🚀 Lab 1&lt;/td&gt;
+&lt;td&gt;Profiling &amp;amp; Benchmarking&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✂️ Lab 2&lt;/td&gt;
+&lt;td&gt;Structured Pruning&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;⚡ Lab 3&lt;/td&gt;
+&lt;td&gt;Quantization&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;🧠 Lab 4&lt;/td&gt;
+&lt;td&gt;Knowledge Distillation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;🧩 Lab 5&lt;/td&gt;
+&lt;td&gt;Tiny Model Design&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;🌐 Lab 6&lt;/td&gt;
+&lt;td&gt;Multi-Camera Deployment &amp;amp; Scalability&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Honest confession: we only got through Labs 1–3 live. Three hours disappears fast when you&amp;rsquo;re explaining &lt;em&gt;why&lt;/em&gt; something works, not just &lt;em&gt;how&lt;/em&gt; to run the cell. But every slide, every notebook, every solution — it&amp;rsquo;s all open source. That was always the plan.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;🔗 &lt;strong&gt;Workshop site:&lt;/strong&gt; &lt;a href=&#34;https://kaopanboonyuen.github.io/SAIE2026/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;kaopanboonyuen.github.io/SAIE2026&lt;/a&gt;&lt;br&gt;
+🔗 &lt;strong&gt;GitHub:&lt;/strong&gt; &lt;a href=&#34;https://github.com/kaopanboonyuen/SAIE2026&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;github.com/kaopanboonyuen/SAIE2026&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-setup--visdrone-the-dataset-that-humbles-you&#34;&gt;🛠️ Setup — VisDrone, the Dataset That Humbles You&lt;/h2&gt;
+&lt;p&gt;We trained on a curated subset of &lt;strong&gt;VisDrone&lt;/strong&gt; — an aerial drone footage dataset with 10 object classes: pedestrian, people, bicycle, car, van, truck, tricycle, awning-tricycle, bus, and motor.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;CLASS_NAMES = {
+    0: &amp;quot;pedestrian&amp;quot;, 1: &amp;quot;people&amp;quot;,    2: &amp;quot;bicycle&amp;quot;,
+    3: &amp;quot;car&amp;quot;,        4: &amp;quot;van&amp;quot;,       5: &amp;quot;truck&amp;quot;,
+    6: &amp;quot;tricycle&amp;quot;,   7: &amp;quot;awning-tricycle&amp;quot;,
+    8: &amp;quot;bus&amp;quot;,        9: &amp;quot;motor&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The first thing you notice when you plot the class distribution is &lt;strong&gt;severe imbalance&lt;/strong&gt; — pedestrians vastly outnumber buses. This isn&amp;rsquo;t a dataset quirk; it&amp;rsquo;s reality. Urban drone footage is full of people. It means per-class mAP for rare classes (bus, awning-tricycle) will be brutal no matter what you do. You have to know this &lt;em&gt;before&lt;/em&gt; you start optimizing, or you&amp;rsquo;ll optimize for the wrong thing.&lt;/p&gt;
+&lt;p&gt;This is the core philosophy of the workshop: &lt;strong&gt;you cannot improve what you don&amp;rsquo;t measure.&lt;/strong&gt;&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_001.jpg&#34; alt=&#34;Preparing before teaching at Super AI Engineer Thailand 2026&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 1: A few quiet moments before the workshop officially began.  
+    Standing on stage preparing the slides, testing the microphone, and introducing myself to the students felt surreal in a surprisingly good way.  
+    This was my first opportunity to teach at Super AI Engineer Thailand, and honestly, I was more excited than nervous.  
+    The entire workshop today — including slides, Colab notebooks, and implementation code — was intentionally prepared as open-source material because I wanted students to continue experimenting long after the session ended.   
+    Workshop materials: 
+    &lt;a href=&#34;https://kaopanboonyuen.github.io/SAIE2026/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+      https://kaopanboonyuen.github.io/SAIE2026/
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_002.jpg&#34; alt=&#34;Opening session on scalable object detection systems&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 2: Officially opening today&#39;s session: “AI in the Real World: Trade-offs Behind Fast &amp;amp; Scalable Object Detection.”  
+    The workshop focused on how modern vision systems are engineered under real deployment constraints — not just how to maximize benchmark scores.  
+    Instead of discussing only accuracy metrics, we explored the systems-level realities behind production AI pipelines:
+    latency ceilings, throughput bottlenecks, VRAM limitations, TensorRT acceleration, asynchronous inference, and scaling detection models across multiple concurrent camera streams.  
+    In many real-world environments, the best model is not necessarily the newest or the largest model — but the model that survives deployment constraints while remaining stable under load.  
+    Slide deck and implementation repository: 
+    &lt;a href=&#34;https://github.com/kaopanboonyuen/SAIE2026&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+      https://github.com/kaopanboonyuen/SAIE2026
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-lab-1--baseline-profiling-before-you-touch-a-single-weight&#34;&gt;🚀 Lab 1 — Baseline Profiling: Before You Touch a Single Weight&lt;/h2&gt;
+&lt;p&gt;Most engineers skip straight to optimization. That&amp;rsquo;s a mistake. Lab 1 is entirely about establishing ground truth — not training, not tweaking — just &lt;em&gt;measuring&lt;/em&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;what-we-measure&#34;&gt;What We Measure&lt;/h3&gt;
+&lt;p&gt;$$\text{mAP} = \frac{1}{|C|} \sum_{c \in C} AP_c$$&lt;/p&gt;
+&lt;p&gt;$$AP_c = \int_0^1 p(r) , dr \approx \sum_{k=1}^{N} P(k) \cdot \Delta R(k)$$&lt;/p&gt;
+&lt;p&gt;Where $P(k)$ is precision at rank $k$ and $\Delta R(k)$ is the change in recall. This is the primary accuracy signal — but it tells you nothing about speed.&lt;/p&gt;
+&lt;p&gt;For speed, we track:&lt;/p&gt;
+&lt;p&gt;$$\text{FPS} = \frac{1}{\text{Average Latency per Frame (s)}}$$&lt;/p&gt;
+&lt;p&gt;And we compute an &lt;strong&gt;Efficiency Score&lt;/strong&gt; that ties them together:&lt;/p&gt;
+&lt;p&gt;$$\text{Efficiency Score} = \frac{\text{mAP}}{\text{GFLOPs}}$$&lt;/p&gt;
+&lt;p&gt;Higher is better. This single number tells you how much accuracy you&amp;rsquo;re buying per unit of computation — and it&amp;rsquo;s what you should be optimizing when hardware is constrained.&lt;/p&gt;
+&lt;h3 id=&#34;latency-benchmarking--the-right-way&#34;&gt;Latency Benchmarking — The Right Way&lt;/h3&gt;
+&lt;p&gt;Never trust a single inference time. Warm up the GPU, measure across enough samples to get stable statistics, and report P50 &lt;em&gt;and&lt;/em&gt; P95 (tail latency matters for real-time systems):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def benchmark_latency(model_path, val_imgs, n_warmup=10, n_runs=50, device=0):
+    m = YOLO(model_path)
+    sample_imgs = random.sample(val_imgs, min(n_runs, len(val_imgs)))
+
+    # Critical: warm up first — cold GPU gives you garbage numbers
+    for img in sample_imgs[:n_warmup]:
+        _ = m.predict(img, imgsz=416, verbose=False, device=device)
+
+    torch.cuda.synchronize()
+
+    latencies = []
+    for img in sample_imgs:
+        t0 = time.perf_counter()
+        _ = m.predict(img, imgsz=416, verbose=False, device=device)
+        torch.cuda.synchronize()  # Wait for GPU to actually finish
+        latencies.append((time.perf_counter() - t0) * 1000)
+
+    return {
+        &amp;quot;mean_ms&amp;quot;: np.mean(latencies),
+        &amp;quot;p50_ms&amp;quot;:  np.percentile(latencies, 50),
+        &amp;quot;p95_ms&amp;quot;:  np.percentile(latencies, 95),
+        &amp;quot;fps&amp;quot;:     1000 / np.mean(latencies)
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;torch.cuda.synchronize()&lt;/code&gt; call is one of the most commonly missed details. Without it, you&amp;rsquo;re measuring how fast Python &lt;em&gt;submits&lt;/em&gt; work to the GPU — not how fast the GPU &lt;em&gt;completes&lt;/em&gt; it. For small models on fast hardware, the difference can be dramatic.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_003.jpg&#34; alt=&#34;Large workshop audience during AI engineering lecture&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 3: The atmosphere inside the workshop hall during the technical lecture session.  
+    Originally, I prepared six complete engineering labs covering scalable detection pipelines, edge AI deployment, model optimization, efficient inference scheduling, TensorRT acceleration, and deployment strategies for embedded systems such as NVIDIA Jetson devices.  
+    However, the session quickly evolved into a much deeper technical discussion than expected because students were highly engaged and continuously asking systems-level questions about inference efficiency, deployment bottlenecks, and practical optimization strategies.  
+    That energy completely changed the atmosphere of the room in the best possible way.  
+    As a teacher, there is something genuinely rewarding about seeing students become excited when the engineering concepts finally start connecting together.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_004.jpg&#34; alt=&#34;Teaching baseline profiling and efficiency metrics&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 4: Beginning Lab 1: Baseline Profiling for Real-Time Object Detection Systems.  
+    Before optimizing any AI model, students first needed to understand how to properly measure performance.  
+    We discussed why FLOPs alone are insufficient, why latency measurements can be misleading, and why deployment-aware metrics matter significantly more in production environments.  
+    The workshop introduced the relationship between:
+    FLOPs, latency, throughput, memory bandwidth, mAP, FPS stability, and overall efficiency score.  
+    One major takeaway from this section was simple:
+    “A fast benchmark does not always imply a deployable system.”
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-lab-2--structured-pruning-remove-what-doesnt-matter&#34;&gt;✂️ Lab 2 — Structured Pruning: Remove What Doesn&amp;rsquo;t Matter&lt;/h2&gt;
+&lt;p&gt;Not all neurons contribute equally. Structured pruning identifies and removes entire &lt;strong&gt;channels&lt;/strong&gt; from convolutional layers, producing a genuinely smaller model — not a sparse one — so inference actually gets faster without specialized hardware.&lt;/p&gt;
+&lt;h3 id=&#34;the-pruning-criterion&#34;&gt;The Pruning Criterion&lt;/h3&gt;
+&lt;p&gt;We use an $\ell_1$-norm criterion on batch normalization scale factors $\gamma$:&lt;/p&gt;
+&lt;p&gt;$$\text{importance}(c) = |\gamma_c|_1$$&lt;/p&gt;
+&lt;p&gt;Channels with the smallest $|\gamma|$ contribute least to the output signal and are pruned first.&lt;/p&gt;
+&lt;p&gt;$$\text{Pruned set} = { c \mid |\gamma_c|_1 &amp;lt; \tau }$$&lt;/p&gt;
+&lt;p&gt;Where $\tau$ is a percentile threshold (e.g., prune the bottom 30% of channels by $\ell_1$-norm magnitude).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def get_pruning_mask(model, prune_ratio=0.3):
+    # Collect all BN gamma (scale) parameters from the backbone
+    all_gammas = []
+    for name, module in model.named_modules():
+        if isinstance(module, nn.BatchNorm2d):
+            all_gammas.append(module.weight.data.abs())
+
+    all_gammas_cat = torch.cat(all_gammas)
+    threshold = torch.quantile(all_gammas_cat, prune_ratio)
+
+    masks = {}
+    for name, module in model.named_modules():
+        if isinstance(module, nn.BatchNorm2d):
+            masks[name] = (module.weight.data.abs() &amp;gt;= threshold)
+    return masks
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The key insight: after pruning, you &lt;em&gt;must&lt;/em&gt; fine-tune. Pruned models can lose 5–15% mAP immediately. Fine-tuning for even a few epochs recovers most of that loss — and the resulting model is permanently smaller.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_005.jpg&#34; alt=&#34;Explaining evaluation metrics for object detection&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 5: Diving deeper into the evaluation metrics behind modern object detection systems.  
+    This section focused on helping students build intuition around what performance numbers actually mean in practice.  
+    We explored how mAP behaves under different IoU thresholds, why throughput collapses under multi-stream inference, and how latency variance can become a hidden deployment failure point even when average FPS appears acceptable.  
+    Real-world AI engineering is often less about maximizing a single metric and more about balancing multiple competing constraints simultaneously.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_006.jpg&#34; alt=&#34;Teaching YOLOv12 and efficient object detection&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 6: Introducing YOLOv12: Attention-Centric Real-Time Object Detectors.  
+    One important point discussed throughout the workshop was that real production systems rarely care about “the newest model” alone.  
+    In practice, engineers care about models that provide the best balance between:
+    speed, stability, accuracy, deployment cost, and scalability.  
+    To illustrate this idea, we explored the YOLOv12 paper presented at NeurIPS 2025 by researchers from the University at Buffalo and the University of Chinese Academy of Sciences.  
+    The discussion focused heavily on how modern attention mechanisms are being redesigned specifically for efficient real-time detection workloads rather than purely offline research benchmarks.  
+    Paper link:
+    &lt;a href=&#34;https://neurips.cc/virtual/2025/loc/san-diego/poster/116765&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+      https://neurips.cc/virtual/2025/loc/san-diego/poster/116765
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_007.jpg&#34; alt=&#34;Explaining YOLOv12 architecture and efficient detection trade-offs&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 7: Continuing the discussion around modern YOLO architectures and efficiency-oriented detector design.  
+    We analyzed how the latest generation of real-time detectors increasingly focuses on optimizing attention efficiency rather than simply scaling network depth or parameter count.  
+    The workshop also emphasized an important engineering principle:
+    production AI systems are fundamentally constrained systems.  
+    Every additional millisecond of latency, every extra megabyte of VRAM, and every unstable inference spike eventually becomes a deployment problem at scale.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-lab-3--quantization-fewer-bits-same-predictions&#34;&gt;⚡ Lab 3 — Quantization: Fewer Bits, Same Predictions&lt;/h2&gt;
+&lt;p&gt;Quantization reduces the numerical precision of model weights and activations. The most impactful transitions are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;FP32 → FP16:&lt;/strong&gt; ~2× speedup, essentially zero accuracy loss on modern GPUs with Tensor Cores&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FP16 → INT8:&lt;/strong&gt; Another ~2× speedup, ~1–2% mAP loss, requires calibration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The mathematical model for uniform quantization:&lt;/p&gt;
+&lt;p&gt;$$Q(x) = \text{round}\left(\frac{x}{\Delta}\right) \cdot \Delta$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;p&gt;$$\Delta = \frac{x_{\max} - x_{\min}}{2^b - 1}$$&lt;/p&gt;
+&lt;p&gt;And $b$ is the bit-width (8 for INT8, 16 for FP16). The quantization error is bounded by $\frac{\Delta}{2}$, which is why calibration data matters — you want $x_{\max}$ and $x_{\min}$ to reflect the true activation range of your specific deployment data.&lt;/p&gt;
+&lt;p&gt;For our YOLOv8s baseline on the VisDrone subset, FP16 is essentially a free lunch:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# FP16 inference — one-line change
+results = model.predict(img, imgsz=416, half=True, device=0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;half=True&lt;/code&gt; tells Ultralytics to run the forward pass in FP16. On an NVIDIA T4, this alone typically gives a 1.5–2× throughput gain with no measurable mAP degradation.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_008.jpg&#34; alt=&#34;Explaining attention mechanisms in YOLOv12&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 8: Exploring efficient attention mechanisms used inside modern real-time detection architectures.  
+    This section covered several attention variants including:
+    Criss-Cross Attention, Swin Attention, CSWin Attention, and Area Attention as discussed in YOLOv12.  
+    Rather than treating attention as a purely theoretical concept, the discussion focused on the computational trade-offs behind each design:
+    receptive field coverage, memory complexity, token interaction cost, and inference scalability under real-time constraints.  
+    Understanding these trade-offs becomes extremely important once models leave research papers and enter production systems.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-lab-4--knowledge-distillation-teaching-a-small-model-to-think-big&#34;&gt;🧠 Lab 4 — Knowledge Distillation: Teaching a Small Model to Think Big&lt;/h2&gt;
+&lt;p&gt;This is the lab that I find most intellectually satisfying. Knowledge distillation isn&amp;rsquo;t compression in the traditional sense — it&amp;rsquo;s &lt;strong&gt;curriculum design&lt;/strong&gt;. You train a small &lt;em&gt;student&lt;/em&gt; network to mimic the output distribution of a large, accurate &lt;em&gt;teacher&lt;/em&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;the-distillation-loss&#34;&gt;The Distillation Loss&lt;/h3&gt;
+&lt;p&gt;Standard cross-entropy trains against hard labels (0 or 1). Distillation trains against &lt;em&gt;soft&lt;/em&gt; teacher logits — the full probability distribution the teacher assigns across all classes:&lt;/p&gt;
+&lt;p&gt;$$L_{KD} = (1 - \alpha) \cdot L_{CE}(y, \hat{y}_s) + \alpha \cdot T^2 \cdot KL\left(\sigma\left(\frac{z_t}{T}\right) | \sigma\left(\frac{z_s}{T}\right)\right)$$&lt;/p&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$z_t$, $z_s$ are teacher and student logits&lt;/li&gt;
+&lt;li&gt;$T$ is the &lt;strong&gt;temperature&lt;/strong&gt; — higher $T$ softens the distribution, exposing inter-class relationships the student can learn from&lt;/li&gt;
+&lt;li&gt;$\alpha$ balances hard label loss vs. distillation loss&lt;/li&gt;
+&lt;li&gt;$\text{KL}$ is the Kullback–Leibler divergence&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The $T^2$ factor is critical and often forgotten: it compensates for the fact that soft targets are scaled down by $T$, which would otherwise reduce the gradient magnitude by $T^2$.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def distillation_loss(student_logits, teacher_logits, true_labels,
+                       alpha=0.7, temperature=4.0):
+    # Soft target loss
+    soft_teacher = F.softmax(teacher_logits / temperature, dim=-1)
+    soft_student = F.log_softmax(student_logits / temperature, dim=-1)
+    kd_loss = F.kl_div(soft_student, soft_teacher, reduction=&#39;batchmean&#39;)
+
+    # Hard label loss
+    ce_loss = F.cross_entropy(student_logits, true_labels)
+
+    # T^2 scales the KD gradient back to normal magnitude
+    return (1 - alpha) * ce_loss + alpha * (temperature ** 2) * kd_loss
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In practice on our VisDrone setup: a YOLOv8n student distilled from a YOLOv8s teacher recovers ~92% of the teacher&amp;rsquo;s mAP at 2.2× the teacher&amp;rsquo;s FPS. That&amp;rsquo;s a genuinely useful operating point.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_009.jpg&#34; alt=&#34;Analyzing YOLOv12 benchmark evaluation metrics&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 9: Analyzing the benchmark results and reporting methodology used in YOLOv12.  
+    One recurring theme throughout the workshop was the importance of reading benchmark tables carefully rather than blindly trusting headline numbers.  
+    We discussed hidden deployment variables such as:
+    input resolution, TensorRT optimization, precision modes, hardware-specific acceleration, batch size effects, and evaluation environments.  
+    Many “real-time” claims in research papers can look very different once tested under production workloads.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-lab-5--tiny-model-design-architecture-matters&#34;&gt;🧩 Lab 5 — Tiny Model Design: Architecture Matters&lt;/h2&gt;
+&lt;p&gt;Beyond training recipes, the model architecture itself determines the efficiency ceiling. Two key tools in the lightweight design toolkit:&lt;/p&gt;
+&lt;h3 id=&#34;depthwise-separable-convolutions&#34;&gt;Depthwise-Separable Convolutions&lt;/h3&gt;
+&lt;p&gt;Standard conv: $C_{in} \times C_{out} \times k^2$ FLOPs per spatial position.&lt;br&gt;
+DW-Sep conv: $C_{in} \times k^2 + C_{in} \times C_{out}$ FLOPs per position.&lt;/p&gt;
+&lt;p&gt;From a systems engineering perspective, depthwise separable convolution provides a massive computational advantage over standard convolution by factorizing spatial and channel-wise operations.&lt;/p&gt;
+&lt;p&gt;For a typical 3×3 detection head with 128 output channels, the theoretical compute reduction approaches nearly &lt;strong&gt;9× fewer FLOPs&lt;/strong&gt;, which directly translates into:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;lower latency&lt;/li&gt;
+&lt;li&gt;reduced VRAM pressure&lt;/li&gt;
+&lt;li&gt;higher multi-stream throughput&lt;/li&gt;
+&lt;li&gt;better edge-device deployability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This optimization becomes especially important when scaling object detection across multiple concurrent camera feeds.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class LightweightDetHead(nn.Module):
+    &amp;quot;&amp;quot;&amp;quot;Depthwise-Separable detection head.&amp;quot;&amp;quot;&amp;quot;
+    def __init__(self, in_ch, mid_ch, num_classes, k=3):
+        super().__init__()
+        self.dw  = nn.Conv2d(in_ch, in_ch, k, padding=k//2,
+                              groups=in_ch, bias=False)  # depthwise
+        self.bn1 = nn.BatchNorm2d(in_ch)
+        self.pw  = nn.Conv2d(in_ch, mid_ch, 1, bias=False)  # pointwise
+        self.bn2 = nn.BatchNorm2d(mid_ch)
+        self.act = nn.SiLU()
+        self.out = nn.Conv2d(mid_ch, num_classes + 4, 1)
+
+    def forward(self, x):
+        x = self.act(self.bn1(self.dw(x)))
+        x = self.act(self.bn2(self.pw(x)))
+        return self.out(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;input-resolution-scaling&#34;&gt;Input Resolution Scaling&lt;/h3&gt;
+&lt;p&gt;FLOPs scale &lt;strong&gt;quadratically&lt;/strong&gt; with input resolution. Halving image size cuts FLOPs by 4×:&lt;/p&gt;
+&lt;p&gt;$$\text{FLOPs} \propto H \times W \propto \text{imgsz}^2$$&lt;/p&gt;
+&lt;p&gt;This is one of the fastest levers available. The practical question is where the accuracy cliff is for your specific data. For VisDrone&amp;rsquo;s predominantly tiny objects, going below 320px starts hurting badly because the P3 stride-8 detection head needs enough spatial resolution to see objects that might only be 8–15px wide at full resolution.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_010.jpg&#34; alt=&#34;Teaching RT-DETR transformer object detector&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 10: Introducing Baidu&#39;s RT-DETR: A Vision Transformer-Based Real-Time Object Detector.  
+    This section explored how transformer-based detectors are evolving toward practical real-time deployment scenarios.  
+    We discussed the architecture of RT-DETR, including:
+    multiscale feature extraction, the efficient hybrid encoder, intra-scale feature interaction (AIFI), and cross-scale feature fusion modules (CCFM).  
+    Students were particularly interested in how RT-DETR attempts to bridge the gap between transformer accuracy and real-time inference efficiency.  
+    Documentation:
+    &lt;a href=&#34;https://docs.ultralytics.com/models/rtdetr/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+      https://docs.ultralytics.com/models/rtdetr/
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-lab-6--multi-camera-deployment-the-real-engineering-problem&#34;&gt;🌐 Lab 6 — Multi-Camera Deployment: The Real Engineering Problem&lt;/h2&gt;
+&lt;p&gt;Everything in Labs 1–5 is preparation for this. Lab 6 is where the rubber meets the road: &lt;strong&gt;can you actually serve 4 cameras at 25 FPS each?&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;system-throughput-model&#34;&gt;System Throughput Model&lt;/h3&gt;
+&lt;p&gt;With $N$ cameras at target frame rate $R$ and per-frame model latency $L$ milliseconds:&lt;/p&gt;
+&lt;p&gt;$$\text{Required FPS} = N \cdot R$$&lt;/p&gt;
+&lt;p&gt;For batched inference across all $N$ camera streams simultaneously, latency scales approximately sub-linearly:&lt;/p&gt;
+&lt;p&gt;$$L_{\text{batch}}(N) = L_{\text{single}} \cdot \left(1 + \alpha \cdot \log N\right)$$&lt;/p&gt;
+&lt;p&gt;This means GPU utilization &lt;em&gt;improves&lt;/em&gt; with batch size — a single large batch uses GPU memory bandwidth more efficiently than many sequential small ones.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def batch_inference_benchmark(model_path, imgs,
+                               batch_sizes=[1, 2, 4, 8],
+                               imgsz=416, device=0):
+    m = YOLO(model_path)
+    results = {}
+
+    for bs in batch_sizes:
+        batch = random.sample(imgs, min(bs, len(imgs)))
+
+        # Warm up
+        for _ in range(3):
+            _ = m.predict(batch, imgsz=imgsz, verbose=False, device=device)
+
+        torch.cuda.synchronize()
+        times = []
+        for _ in range(max(1, 20 // bs)):
+            t0 = time.perf_counter()
+            _ = m.predict(batch, imgsz=imgsz, verbose=False, device=device)
+            torch.cuda.synchronize()
+            times.append(time.perf_counter() - t0)
+
+        throughput = bs / np.mean(times)
+        results[bs] = {&amp;quot;throughput_fps&amp;quot;: throughput,
+                       &amp;quot;latency_ms&amp;quot;: np.mean(times) * 1000}
+        print(f&amp;quot;Batch={bs:2d} | {np.mean(times)*1000:.1f} ms | {throughput:.1f} img/s&amp;quot;)
+
+    return results
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;pytorch--onnx--tensorrt-the-deployment-stack&#34;&gt;PyTorch → ONNX → TensorRT: The Deployment Stack&lt;/h3&gt;
+&lt;p&gt;The full optimization pipeline for a production edge deployment:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Training (PyTorch FP32)
+        ↓
+Export  (ONNX — portable intermediate format)
+        ↓
+Compile (TensorRT on Jetson — hardware-fused kernels)
+        ↓
+Deploy  (INT8 + batched streams on edge GPU)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;On a &lt;strong&gt;Jetson Nano&lt;/strong&gt; (128-core Maxwell, 4GB LPDDR4):&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Configuration&lt;/th&gt;
+&lt;th&gt;FPS per stream&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Single camera, FP16&lt;/td&gt;
+&lt;td&gt;~20–25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dual camera&lt;/td&gt;
+&lt;td&gt;~12–15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4 cameras&lt;/td&gt;
+&lt;td&gt;~6–8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;To hit 4 cameras × 25 FPS = 100 total FPS, you need either a more powerful GPU or a model small enough that batched inference amortizes the compute:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Edge deployment — multi-camera stream on Jetson
+from ultralytics import YOLO
+
+model = YOLO(&amp;quot;model.engine&amp;quot;)  # TensorRT-compiled model
+sources = [&amp;quot;rtsp://cam1&amp;quot;, &amp;quot;rtsp://cam2&amp;quot;, &amp;quot;rtsp://cam3&amp;quot;, &amp;quot;rtsp://cam4&amp;quot;]
+results = model.predict(source=sources, stream=True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The answer to the final hackathon challenge — which the students had to solve themselves — is &lt;strong&gt;YOLOv8n + Knowledge Distillation + FP16, batch size 4&lt;/strong&gt;. It&amp;rsquo;s the only combination in our ablation that simultaneously hits the throughput target and keeps mAP within 20% of the baseline.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-final-results-dashboard&#34;&gt;📊 Final Results Dashboard&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Technique&lt;/th&gt;
+&lt;th&gt;Speed Gain&lt;/th&gt;
+&lt;th&gt;mAP Drop&lt;/th&gt;
+&lt;th&gt;Difficulty&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;FP16 Quantization&lt;/td&gt;
+&lt;td&gt;~1.5–2×&lt;/td&gt;
+&lt;td&gt;~0%&lt;/td&gt;
+&lt;td&gt;⭐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;INT8 Quantization&lt;/td&gt;
+&lt;td&gt;~2–4×&lt;/td&gt;
+&lt;td&gt;~1–2%&lt;/td&gt;
+&lt;td&gt;⭐⭐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Structured Pruning&lt;/td&gt;
+&lt;td&gt;~1.2–2×&lt;/td&gt;
+&lt;td&gt;~2–5%&lt;/td&gt;
+&lt;td&gt;⭐⭐⭐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Knowledge Distillation&lt;/td&gt;
+&lt;td&gt;~2–3×&lt;/td&gt;
+&lt;td&gt;~5–8%&lt;/td&gt;
+&lt;td&gt;⭐⭐⭐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DW-Sep Head Design&lt;/td&gt;
+&lt;td&gt;~1.3×&lt;/td&gt;
+&lt;td&gt;~1–3%&lt;/td&gt;
+&lt;td&gt;⭐⭐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Smaller Input Size&lt;/td&gt;
+&lt;td&gt;quadratic&lt;/td&gt;
+&lt;td&gt;~3–10%&lt;/td&gt;
+&lt;td&gt;⭐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Combined intelligently: &lt;strong&gt;~3–5× faster with less than 10% mAP drop&lt;/strong&gt;. That&amp;rsquo;s the difference between a model that sits on a benchmark and a model that ships.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_011.jpg&#34; alt=&#34;Teaching YOLOE open vocabulary object detection&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 11: Exploring YOLOE and the future direction of open-vocabulary object detection systems.  
+    Unlike traditional YOLO architectures restricted to fixed categories, YOLOE introduces promptable detection using text, image, and internal vocabulary guidance for zero-shot inference.  
+    This part of the workshop sparked many discussions around the future of foundation models in computer vision:
+    systems capable of detecting unseen categories dynamically without retraining.  
+    We also discussed how open-vocabulary systems may eventually reshape edge AI applications, robotics, and adaptive perception systems operating in uncertain environments.  
+    Documentation:
+    &lt;a href=&#34;https://docs.ultralytics.com/models/yoloe/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+      https://docs.ultralytics.com/models/yoloe/
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-the-core-engineering-principle&#34;&gt;🧠 The Core Engineering Principle&lt;/h2&gt;
+&lt;p&gt;$$\text{Accuracy} \leftrightarrow \text{Speed} \leftrightarrow \text{Memory}$$&lt;/p&gt;
+&lt;p&gt;There is no free lunch. Every optimization technique moves you somewhere on this triangle. The job of the AI engineer is not to find the highest point on the accuracy axis — it&amp;rsquo;s to find the point on the &lt;strong&gt;Pareto frontier&lt;/strong&gt; that satisfies your deployment constraints.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s what I wanted every student in the room to leave with. Not a set of tricks, but a framework for &lt;em&gt;reasoning&lt;/em&gt; about trade-offs.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-closing-thoughts&#34;&gt;💬 Closing Thoughts&lt;/h2&gt;
+&lt;p&gt;Today was genuinely a very good day.&lt;/p&gt;
+&lt;p&gt;I arrived in Pathum Thani at 8 AM, set up in a room full of students who had already been building AI systems for weeks, and spent three hours going deeper than I usually get to go in a workshop. We didn&amp;rsquo;t finish all six labs live — time is finite and concepts deserve space — but everything is open source and the students have everything they need to continue.&lt;/p&gt;
+&lt;p&gt;To the &lt;strong&gt;Artificial Intelligence Association of Thailand (AIAT)&lt;/strong&gt;: thank you for organizing a camp that treats AI engineering as a serious craft, not a series of &lt;code&gt;model.fit()&lt;/code&gt; calls. It&amp;rsquo;s a privilege to contribute to something like this.&lt;/p&gt;
+&lt;p&gt;To every student in &lt;strong&gt;Super AI Engineer Season 6&lt;/strong&gt;: the fact that you&amp;rsquo;re here, learning things this hard, this early — that matters. The engineers who understand &lt;em&gt;why&lt;/em&gt; a model is fast are the ones who will build the systems that actually work in the real world. I hope today gave you some of that intuition.&lt;/p&gt;
+&lt;p&gt;Go build things. Make them fast. Know your trade-offs. 🚁&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_013.jpg&#34; alt=&#34;Closing the workshop session at Super AI Engineer Thailand&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 12: Closing the workshop session after an unexpectedly intense and highly interactive morning.  
+    The organizing team kindly gave me a small gift afterward, but honestly, the most rewarding part of the day was seeing students become genuinely curious about systems optimization, model efficiency, pruning strategies, and scalable deployment engineering.  
+    If even a few ideas from today&#39;s workshop eventually help someone build useful systems in the future, then the trip was already completely worth it.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_014.jpg&#34; alt=&#34;Post workshop interview session&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 13: A surprise interview session immediately after the workshop ended!.  
+    The Super AI Engineer team asked me to share thoughts about the workshop, deployment engineering, and the topics covered throughout the session.  
+    Honestly, I was not prepared at all and probably looked slightly panicked while answering questions spontaneously.  
+    But perhaps that is the fun part of technical conversations — sometimes the most genuine answers happen when you are simply speaking from experience rather than reading prepared scripts.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_015.jpg&#34; alt=&#34;Students discussing model pruning and optimization after class&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 14: After the session officially ended, many students stayed behind to continue discussing pruning strategies, model stacking, optimization pipelines, and deployment trade-offs.  
+    This became one of my favorite moments of the day because the conversations shifted naturally from lecture material into deeper engineering curiosity.  
+    Watching students actively connect research ideas with deployment realities is probably one of the most satisfying parts of teaching AI engineering.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_016.jpg&#34; alt=&#34;Technical discussion with students after the workshop&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 15: Continuing technical discussions with students long after the workshop had officially finished.  
+    We talked about pruning pipelines, ensemble strategies, stacked models, inference scheduling, and how to balance accuracy with deployment cost under constrained hardware environments.  
+    Moments like this are honestly the reason I enjoy teaching.  
+    Sometimes the best learning does not happen during the lecture itself — it happens afterward, when students begin asking deeper questions beyond the slides.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-resources&#34;&gt;🔗 Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Workshop overview:&lt;/strong&gt; &lt;a href=&#34;https://kaopanboonyuen.github.io/SAIE2026/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;kaopanboonyuen.github.io/SAIE2026&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;All slides + notebooks:&lt;/strong&gt; &lt;a href=&#34;https://github.com/kaopanboonyuen/SAIE2026&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;github.com/kaopanboonyuen/SAIE2026&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Super AI Engineer Thailand:&lt;/strong&gt; &lt;a href=&#34;https://superai.aiat.or.th/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;superai.in.th&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AIAT:&lt;/strong&gt; &lt;a href=&#34;https://aiat.or.th/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;aiat.or.th&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Teerapong Panboonyuen, Ph.D. (P&amp;rsquo;Kao)&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;Instructor — Super AI Engineer Thailand | SAIE Workshop&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;May 18, 2026 — Pathum Thani&lt;/em&gt;&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_017.jpg&#34; alt=&#34;Creative workshop summary collage version 1&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 16: A merged visual summary of today&#39;s workshop — version one.  
+    Looking back at the photos afterward, it reminded me how energetic the entire session felt from beginning to end.  
+    Between debugging Colab notebooks, discussing deployment bottlenecks, and talking about scalable AI systems for hours, the workshop somehow felt both technically intense and genuinely fun at the same time.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_018.jpg&#34; alt=&#34;Creative workshop summary collage version 2&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 17: Another merged recap of the workshop atmosphere throughout the day.  
+    One thing I appreciated most was how naturally the discussion evolved from traditional object detection topics into broader conversations around systems engineering, scalable inference, and deployment-aware AI design.  
+    That transition reflects how modern AI engineering is increasingly becoming a systems problem rather than purely a modeling problem.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;SUPERAI2026_IMG/Kao_Super_AI_Engineer_Thailand_2026_019.jpg&#34; alt=&#34;Final workshop cover collage for the blog&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 18: Final merged cover image summarizing the entire Super AI Engineer Thailand 2026 workshop experience.  
+    Out of all the edited versions, this one became my personal favorite and eventually turned into the blog cover image.  
+    Today was exhausting, chaotic, deeply technical, and incredibly enjoyable all at once.  
+    More importantly, it was another reminder that sharing knowledge — even small engineering tricks, deployment lessons, or debugging experiences — can genuinely help others continue growing in their own AI journey.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“AI is not just about building smarter models — it’s about building systems that work in the real world, under real constraints, for real people.&lt;/p&gt;
+&lt;p&gt;Keep learning, keep building, and don’t be afraid of hard problems — because that’s exactly where real engineers are made.&lt;/p&gt;
+&lt;p&gt;The future of AI won’t be written by tools, but by the people who refuse to stop improving them.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;— P’Kao 🚀&lt;/p&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Panboonyuen, Teerapong. (May 2026). &lt;em&gt;Teaching Scalable AI Systems and Knowledge Distillation at Super AI Engineer Thailand&lt;/em&gt;. Blog post on Kao Panboonyuen.
+&lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2026-05-18-teaching-scalable-ai-systems-and-knowledge-distillation-at-super-ai-engineer-thailand&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2026-05-18-teaching-scalable-ai-systems-and-knowledge-distillation-at-super-ai-engineer-thailand&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;For a BibTeX citation:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bibtex&#34;&gt;@article{panboonyuen2026superai,
+  title   = &amp;quot;Teaching Scalable AI Systems and Knowledge Distillation at Super AI Engineer Thailand&amp;quot;,
+  author  = &amp;quot;Panboonyuen, Teerapong&amp;quot;,
+  journal = &amp;quot;kaopanboonyuen.github.io/&amp;quot;,
+  year    = &amp;quot;2026&amp;quot;,
+  month   = &amp;quot;May&amp;quot;,
+  day     = &amp;quot;18&amp;quot;,
+  url     = &amp;quot;https://kaopanboonyuen.github.io/blog/2026-05-18-teaching-scalable-ai-systems-and-knowledge-distillation-at-super-ai-engineer-thailand&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;Thank you for reading this technical reflection on scalable AI systems, multi-camera object detection, edge AI deployment, and knowledge distillation for real-world computer vision engineering. 🚀🧠⚡&lt;/p&gt;
+&lt;p&gt;If this article inspired you, feel free to share it with researchers, engineers, students, startups, and AI enthusiasts building the next generation of efficient and scalable AI systems.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
