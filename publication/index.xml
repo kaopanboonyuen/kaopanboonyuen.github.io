@@ -5,12 +5,29 @@
     <link>https://kaopanboonyuen.github.io/publication/</link>
       <atom:link href="https://kaopanboonyuen.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Fri, 20 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Wed, 13 May 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>Publications</title>
       <link>https://kaopanboonyuen.github.io/publication/</link>
     </image>
+    
+    <item>
+      <title>GateKD: Confidence-Gated Closed-Loop Distillation for Robust Reasoning</title>
+      <link>https://kaopanboonyuen.github.io/publication/gatekd-confidence-gated-closed-loop-distillation-for-robust-reasoning/</link>
+      <pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/gatekd-confidence-gated-closed-loop-distillation-for-robust-reasoning/</guid>
+      <description>&lt;!-- ![](featured.png) --&gt;
+&lt;p&gt;GateKD (Confidence-Gated Closed-Loop Distillation) addresses a critical challenge in reasoning distillation: transferring reliable multi-step reasoning abilities from large language models into smaller student models without propagating hallucinated or noisy supervision. While conventional knowledge distillation methods treat the teacher model as a uniformly reliable oracle, real-world reasoning traces often contain uncertain intermediate steps, unstable rationales, and misleading attention patterns. GateKD reframes reasoning distillation as a confidence-aware closed-loop learning problem in which the teacher dynamically regulates how much information should be transferred during training.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The framework introduces three complementary confidence-gated mechanisms that collectively stabilize reasoning transfer. First, confidence-gated soft supervision selectively distills predictive signals only when the teacher exhibits high certainty. Second, gated hidden-state evolution aligns intermediate latent representations between teacher and student models while suppressing unreliable hidden dynamics. Third, reliability-filtered attention distillation transfers stable reasoning structures while filtering noisy or hallucinated attention maps that could otherwise corrupt student reasoning trajectories.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Together, these components establish a closed feedback loop in which teacher confidence continuously modulates supervision strength across the distillation pipeline. Unlike traditional open-loop distillation approaches, GateKD enables the student model to learn reasoning behaviors from selectively trusted intermediate states rather than blindly imitating all teacher outputs. Extensive experiments across commonsense, logical, and symbolic reasoning benchmarks demonstrate consistent improvements over strong open-loop baselines using T5 and Flan-T5 architectures of varying sizes.&lt;/p&gt;
+&lt;p&gt;Beyond empirical performance gains, GateKD highlights a broader paradigm shift toward confidence-aware reasoning supervision for trustworthy language models. The framework shows strong robustness under low-resource distillation settings, reduces hallucination transfer, and maintains stable reasoning fidelity even under noisy supervision conditions. These findings suggest that confidence-gated teacher-student interaction is a promising direction for building scalable, efficient, and reliable reasoning systems suitable for real-world deployment in resource-constrained environments.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>HERS: Hidden-Pattern Expert Learning for Risk-Specific Vehicle Damage Adaptation in Diffusion Models</title>
