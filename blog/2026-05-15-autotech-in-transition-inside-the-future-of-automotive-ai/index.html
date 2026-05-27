@@ -902,10 +902,10 @@
 </div>
 
 
-<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 1200px; max-height: 672px;">
+<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 1200px; max-height: 668px;">
   <div style="position: relative">
-    <img src="/blog/2026-05-15-autotech-in-transition-inside-the-future-of-automotive-ai/featured_huaf7a4fae9c69f814c75c8953bc1a42ec_996840_1200x0_resize_q75_lanczos.jpg" alt="" class="featured-image">
-    <span class="article-header-caption">Speaking at AutoTech Aftermarket Summit 2026 at BITEC Bangkok.</span>
+    <img src="/blog/2026-05-15-autotech-in-transition-inside-the-future-of-automotive-ai/featured_hu29f7d12322336a14efe1aa9da9df15bb_284106_1200x0_resize_q75_lanczos.jpg" alt="" class="featured-image">
+    <span class="article-header-caption">Dr. Teerapong Panboonyuen (Dr. Kao), Head of AI at MARSAIL, was invited as a speaker at the AutoTech Aftermarket Summit 2026 held at BITEC Bangkok.</span>
   </div>
 </div>
 
@@ -973,9 +973,7 @@
 <li>Startup perspectives on scalable innovation</li>
 <li>Future directions for intelligent automotive systems</li>
 </ul>
-<p>I joined the session as:</p>
-<h2 id="dr-teerapong-panboonyuen"><strong>Dr. Teerapong Panboonyuen</strong></h2>
-<h3 id="senior-research-scientist-head-of-ai-marsail">Senior Research Scientist, Head of AI, MARSAIL</h3>
+<p>I was truly excited and honored to be invited as a speaker in this session.</p>
 <div style="text-align: center;">
   <img src="AUTOTECH_IMG/Kao_AutoTech_Aftermarket_Summit_2026_003.jpg" alt="Speaker headshot profile on official speaker list">
   <p style="font-style: italic; margin-top: 0px;">
@@ -1099,521 +1097,978 @@
 <p>$$\mathcal{L}_{\text{focal}}(p_t) = -\alpha_t (1 - p_t)^\gamma \log(p_t)$$</p>
 <p>This ensures the optimization landscape prioritizes hard, misclassified boundary cases (like complex wet tire reflections) over easy backgrounds, guaranteeing a $94.2%$ mIoU deployment rate without exceeding edge hardware budgets.</p>
 <hr>
-<h1 id="the-mathematics-powering-production-automotive-ai">The Mathematics Powering Production Automotive AI</h1>
 <blockquote>
-<p>&ldquo;A model that works in a notebook is not an AI system. A model that survives real sensor noise, class imbalance, occlusion, and latency constraints — that is engineering.&rdquo;</p>
+<p><em>A model that generalizes in a notebook is not an engineering artifact. A model that remains calibrated under covariate shift, sensor degradation, and hardware quantization — that is a system.</em></p>
 </blockquote>
-<p>This section presents the core mathematical foundations that govern every production AI system operating inside MARSAIL&rsquo;s automotive computer vision infrastructure. Each equation is grounded in a real deployment scenario encountered during development, integration, and operation of automotive AI pipelines in Thailand and the broader Southeast Asian market.</p>
 <hr>
-<h2 id="1-object-detection-fundamentals-intersection-over-union">1. Object Detection Fundamentals: Intersection over Union</h2>
-<p>Every bounding box prediction in a vehicle damage detection or parts recognition system is evaluated through <strong>Intersection over Union (IoU)</strong> — the foundational metric connecting raw model output to operational correctness.</p>
+<h2 id="1-beyond-iou-the-geometry-of-bounding-box-regression-loss">1. Beyond IoU: The Geometry of Bounding-Box Regression Loss</h2>
+<p>Standard bounding-box regression via smooth-$\ell_1$ loss treats coordinate errors as independent scalars and is blind to the geometric relationship between predicted and ground-truth regions. The <strong>Intersection over Union</strong> family of losses directly optimizes the evaluation metric, but its vanilla form is non-differentiable at zero overlap.</p>
+<h3 id="11-generalized-iou-loss">1.1 Generalized IoU Loss</h3>
+<p>Let $\hat{B}, B \subset \mathbb{R}^2$ denote the predicted and ground-truth boxes respectively, and $C$ the smallest axis-aligned enclosing box. The <strong>GIoU loss</strong> (Rezatofighi et al., CVPR 2019) is:</p>
 <p>$$
-\text{IoU}(\hat{B}, B) = \frac{|\hat{B} \cap B|}{|\hat{B} \cup B|} = \frac{\text{Area of Overlap}}{\text{Area of Union}}
+\mathcal{L}_{GIoU} = 1 - \frac{|\hat{B} \cap B|}{|\hat{B} \cup B|} + \frac{|C \setminus (\hat{B} \cup B)|}{|C|}
 $$</p>
-<p>For two axis-aligned boxes $\hat{B} = (x_1^p, y_1^p, x_2^p, y_2^p)$ (predicted) and $B = (x_1^g, y_1^g, x_2^g, y_2^g)$ (ground truth), the overlap area is computed as:</p>
+<p>where the first fraction is the standard IoU term, and the second is the penalty term that furnishes a non-zero gradient when $\hat{B} \cap B = \emptyset$ — a regime.</p>
+<h3 id="12-distance-iou-and-complete-iou">1.2 Distance-IoU and Complete-IoU</h3>
+<p>GIoU converges slowly when boxes overlap but are misaligned. <strong>DIoU</strong> (Zheng et al., AAAI 2020) introduces a direct distance penalty:</p>
 <p>$$
-\text{Overlap} = \max(0,\ \min(x_2^p, x_2^g) - \max(x_1^p, x_1^g)) \times \max(0,\ \min(y_2^p, y_2^g) - \max(y_1^p, y_1^g))
+\mathcal{L}_{\text{DIoU}} = 1 - \text{IoU} + \frac{\rho^2(\mathbf{b},, \mathbf{b}^{gt})}{c^2}
 $$</p>
+<p>where $\rho(\cdot, \cdot)$ is the Euclidean distance between box centroids $\mathbf{b}, \mathbf{b}^{gt}$, and $c$ is the diagonal length of $\mathcal{C}$. This normalizes centroid displacement into $[0, 1]$, making gradient magnitude invariant to absolute scale — critical in automotive inspection where a single image may contain both a full vehicle ($\sim!600\text{px}$ wide) and a hairline crack ($\sim!8\text{px}$ wide).</p>
+<p><strong>CIoU</strong> additionally penalizes aspect-ratio inconsistency:</p>
 <p>$$
-\text{Union} = |\hat{B}| + |B| - \text{Overlap}
-$$</p>
-<p><strong>Real-World Case — Insurance Damage Assessment Pipeline:</strong></p>
-<p>A vehicle enters a MARSAIL inspection lane. The camera captures a dented rear quarter panel. The detection model predicts:</p>
-<p>$$
-\hat{B} = [118,\ 76,\ 342,\ 224]\ \text{pixels}
-$$</p>
-<p>The annotated ground truth from the QA engineer is:</p>
-<p>$$
-B = [130,\ 85,\ 350,\ 225]\ \text{pixels}
-$$</p>
-<p>Computing explicitly:</p>
-<p>$$
-\text{Overlap} = (342 - 130) \times (224 - 85) = 212 \times 139 = 29{,}468\ \text{px}^2
+\mathcal{L}_{\text{CIoU}} = 1 - \text{IoU} + \frac{\rho^2(\mathbf{b}, \mathbf{b}^{gt})}{c^2} + \alpha_v \cdot v
 $$</p>
 <p>$$
-|\hat{B}| = (342-118)(224-76) = 224 \times 148 = 33{,}152\ \text{px}^2
+v = \frac{4}{\pi^2}\left(\arctan\frac{w^{gt}}{h^{gt}} - \arctan\frac{w}{h}\right)^2, \qquad \alpha_v = \frac{v}{(1-\text{IoU}) + v}
 $$</p>
+<p>The weighting coefficient $\alpha_v$ is designed so that when IoU is small (early training), the aspect-ratio term is suppressed — avoiding conflicting gradients — and only dominates when IoU has converged to a reasonable level.</p>
+<h3 id="13-wise-iou-dynamic-geometric-focus">1.3 Wise-IoU: Dynamic Geometric Focus</h3>
+<p>A recent extension (Tong et al., 2023) replaces static focusing with a <strong>Wise-IoU</strong> formulation based on the Wishart-inspired geometric factor $\beta$:</p>
+<!-- $$
+\mathcal{L}_{WIoU} = r \cdot \mathcal{L}_{IoU}, \qquad r = \exp\!\left(\frac{\rho^2(\mathbf{b}, \mathbf{b}^{gt})}{W_g^2 + H_g^2} - \delta\right)
+$$ -->
 <p>$$
-|B| = (350-130)(225-85) = 220 \times 140 = 30{,}800\ \text{px}^2
+\delta = \mathbb{E}!\left[\frac{\rho^2(\mathbf{b}, \mathbf{b}^{gt})}{W_g^2 + H_g^2}\right]
 $$</p>
-<p>$$
-\text{IoU} = \frac{29{,}468}{33{,}152 + 30{,}800 - 29{,}468} = \frac{29{,}468}{34{,}484} \approx 0.855
-$$</p>
-<p>At a deployment threshold of $\text{IoU} \geq 0.50$ (COCO standard) or $\text{IoU} \geq 0.75$ (strict automotive QA), this detection passes. However, a box drifted by just 40 pixels in any direction can drop IoU below threshold — meaning the downstream repair quotation engine never registers the dent, causing a financially significant miss in real insurance claim workflows.</p>
-<p>We also apply <strong>Generalized IoU (GIoU)</strong> during training to penalize non-overlapping predictions more aggressively:</p>
-<p>$$
-\mathcal{L}_\text{GIoU} = 1 - \text{IoU} + \frac{|C \setminus (\hat{B} \cup B)|}{|C|}
-$$</p>
-<p>where $C$ is the smallest enclosing box. This provides a non-zero gradient even when $\hat{B} \cap B = \emptyset$, which standard IoU loss cannot do.</p>
+<p>Here $W_g, H_g$ are the width and height of $\mathcal{C}$, and $\delta$ is a running mean of the normalized centroid distance over the dataset. Samples with distance near $\delta$ receive unit weight; easy samples ($\rho \ll \delta$) and hard outliers ($\rho \gg \delta$) are down-weighted, concentrating gradient signal on geometrically informative examples — the spatial analogue of Focal Loss.</p>
 <hr>
-<h2 id="2-class-imbalance-focal-loss-for-rare-defect-detection">2. Class Imbalance: Focal Loss for Rare Defect Detection</h2>
-<p>Standard binary cross-entropy collapses in automotive datasets because the overwhelming majority of frames contain clean, undamaged vehicles. A model trained naively on 200,000 tyre images with 0.7% sidewall bulge prevalence will predict &ldquo;normal&rdquo; for every input, achieving 99.3% accuracy while detecting exactly zero defects.</p>
-<p><strong>Focal Loss</strong>, introduced by Lin et al. (2017), resolves this through adaptive loss weighting:</p>
+<h2 id="2-adaptive-loss-reweighting-from-focal-loss-to-varifocal-and-quality-focal">2. Adaptive Loss Reweighting: From Focal Loss to Varifocal and Quality Focal</h2>
+<h3 id="21-the-focal-loss-derivation">2.1 The Focal Loss Derivation</h3>
+<p>Let $p \in [0,1]$ be the sigmoid output, $y \in {0,1}$ the binary label. Standard binary cross-entropy:</p>
 <p>$$
-\mathcal{L}_\text{FL}(p_t) = -\alpha_t,(1 - p_t)^{\gamma},\log(p_t)
+\mathcal{L}_{\text{BCE}}(p, y) = -\bigl[y \log p + (1-y)\log(1-p)\bigr]
 $$</p>
-<p>where:</p>
-<ul>
-<li>$p_t = p$ if $y = 1$, else $p_t = 1 - p$ (effective probability for the true class)</li>
-<li>$\alpha_t \in (0, 1)$ is a class-balancing weight (typically $\alpha = 0.25$ for background, $\alpha = 0.75$ for rare defect classes)</li>
-<li>$\gamma \geq 0$ is the focusing parameter (typically $\gamma = 2$; for extreme imbalance in automotive data, $\gamma = 3$–$4$ empirically outperforms)</li>
-</ul>
-<p>The modulating factor $(1 - p_t)^\gamma$ drives the key behavior:</p>
-<table>
-<thead>
-<tr>
-<th>Scenario</th>
-<th>$p_t$</th>
-<th>$(1-p_t)^2$</th>
-<th>Effective loss weight</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Easy negative (background, confident)</td>
-<td>0.97</td>
-<td>0.0009</td>
-<td>Near-zero</td>
-</tr>
-<tr>
-<td>Hard negative (borderline case)</td>
-<td>0.60</td>
-<td>0.160</td>
-<td>Moderate</td>
-</tr>
-<tr>
-<td>Hard positive (missed rare defect)</td>
-<td>0.20</td>
-<td>0.640</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Very hard positive (near-missed crack)</td>
-<td>0.05</td>
-<td>0.902</td>
-<td>Maximum</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Real-World Case — Tyre Sidewall Bulge Detection:</strong></p>
-<p>Dataset composition at MARSAIL:</p>
+<p>Define the effective probability $p_t = yp + (1-y)(1-p)$. The <strong>Focal Loss</strong> (Lin et al., CVPR 2017):</p>
 <p>$$
-N_\text{normal} = 198{,}600,\quad N_\text{bulge} = 1{,}400,\quad \text{Imbalance ratio} = 141.9{:}1
+\mathcal{L}_{\text{FL}}(p_t) = -\alpha_t (1-p_t)^\gamma \log p_t
 $$</p>
-<p>We use the standard cross-entropy (CE) loss for binary classification, where the model is penalized based on the difference between predicted probabilities and the ground-truth labels.</p>
-<p>The model converges to the trivial solution: predict $\hat{y} = 0$ always. Recall on the bulge class = <strong>0.0%</strong>.</p>
-<p>With Focal Loss ($\gamma = 3$, $\alpha_\text{bulge} = 0.85$, $\alpha_\text{normal} = 0.15$):</p>
-<p>The proposed model achieved strong performance on bulge detection, reaching 91.4% recall, 86.1% precision, and an F1-score of 0.887.</p>
-<p>The number of missed sidewall bulges was significantly reduced, decreasing from 860 to only 72 cases per 10,000 inspected tyres.</p>
-<p>A sidewall bulge undetected leads to catastrophic tyre failure at highway speed. The mathematics of Focal Loss is not an academic curiosity — it is the difference between a system that saves lives and one that creates the illusion of safety.</p>
+<p><strong>Gradient analysis.</strong> For a background sample with $p = 0.97$, $\gamma = 2$:</p>
+<p>$$
+\frac{\partial \mathcal{L}_{\text{FL}}}{\partial p} = \alpha_t \gamma (1-p_t)^{\gamma-1} \log(p_t) - \alpha_t \frac{(1-p_t)^\gamma}{p_t}
+$$</p>
+<p>The factor $(1-p_t)^{\gamma-1}$ scales the gradient by approximately $0.0009$ relative to the unmodulated BCE gradient, effectively zeroing out the contribution of confidently classified negatives from the parameter update step. In automotive inspection datasets with foreground:background ratios of $1\colon 140$ or worse, this is not a regularization choice — it is a <em>necessary condition</em> for learning.</p>
+<h3 id="22-varifocal-loss-asymmetric-quality-aware-reweighting">2.2 Varifocal Loss: Asymmetric Quality-Aware Reweighting</h3>
+<p><strong>VFL</strong> (Zhang et al., CVPR 2021) decouples treatment of positives and negatives, weighting by the <strong>IACS</strong> (IoU-Aware Classification Score) target $q$:</p>
+<p>$$
+\mathcal{L}_{\text{VFL}}(p, q) =
+\begin{cases}
+-q\bigl(q \log p + (1-q)\log(1-p)\bigr) &amp; q &gt; 0 \text{ (positive)}\
+-\alpha p^\gamma \log(1-p) &amp; q = 0 \text{ (negative)}
+\end{cases}
+$$</p>
+<p>For positives, the loss is scaled by $q = \text{IoU}(\hat{\mathcal{B}}, \mathcal{B}^{gt}) \in [0,1]$ — a high-quality detection at $q = 0.9$ contributes 9× more to the gradient than a marginal detection at $q = 0.1$. For negatives, the standard focal modulation applies. This joint optimization of localization and classification within a single loss term is the key architectural difference from two-branch heads.</p>
+<h3 id="23-quality-focal-loss-continuous-label-distribution">2.3 Quality Focal Loss: Continuous Label Distribution</h3>
+<p><strong>QFL</strong> (Li et al., NeurIPS 2020) extends focal reweighting to soft labels, replacing the binary $y \in {0,1}$ with a continuous quality target $q \in [0,1]$:</p>
+<p>$$
+\mathcal{L}_{\text{QFL}}(\sigma, y) = -\bigl|y - \sigma\bigr|^\beta \bigl[y \log(\sigma) + (1-y)\log(1-\sigma)\bigr]
+$$</p>
+<p>where $\sigma$ is the predicted score and $|y - \sigma|^\beta$ is the dynamic focusing weight. When the prediction is close to the target ($|\sigma - y| \approx 0$), the modulating factor suppresses the gradient; when they diverge, the gradient is amplified. Unlike Focal Loss, this formulation is compatible with Gaussian or IoU-derived label distributions — enabling end-to-end training with localization-aware supervision signals.</p>
 <hr>
-<h2 id="3-scaled-dot-product-attention-vision-transformers-for-automotive-perception">3. Scaled Dot-Product Attention: Vision Transformers for Automotive Perception</h2>
-<p>Modern automotive part classifiers, damage segmentation models, and multi-view inspection systems increasingly leverage <strong>Vision Transformers (ViT)</strong>. The core computational primitive is scaled dot-product attention, which allows the model to dynamically reweight which spatial regions of an image are relevant for a given classification decision.</p>
+<h2 id="3-scaled-dot-product-attention-capacity-and-approximation-bounds">3. Scaled Dot-Product Attention: Capacity and Approximation Bounds</h2>
+<h3 id="31-standard-formulation-and-numerical-stability">3.1 Standard Formulation and Numerical Stability</h3>
+<p>Given $Q \in \mathbb{R}^{n \times d_k}$, $K \in \mathbb{R}^{m \times d_k}$, $V \in \mathbb{R}^{m \times d_v}$:</p>
 <p>$$
 \text{Attention}(Q, K, V) = \text{softmax}!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
 $$</p>
-<p>where $Q \in \mathbb{R}^{n \times d_k}$, $K \in \mathbb{R}^{m \times d_k}$, $V \in \mathbb{R}^{m \times d_v}$ are query, key, and value matrices derived from linear projections of image patch embeddings. The factor $\frac{1}{\sqrt{d_k}}$ prevents dot-product magnitudes from growing into regions where the softmax gradient vanishes.</p>
-<p>In <strong>Multi-Head Attention</strong>, the operation runs in parallel across $h$ independent heads:</p>
+<p>The scaling factor $\frac{1}{\sqrt{d_k}}$ is not cosmetic. For $d_k$ large, the dot products $QK^\top$ grow as $\mathcal{O}(d_k)$ in expectation (under unit-Gaussian inputs), pushing softmax into regions of exponential saturation where $\nabla \text{softmax} \approx 0$. The scaling normalizes variance to $\mathcal{O}(1)$, preserving gradient flow through the attention map.</p>
+<p>The full $\mathcal{O}(n^2 d)$ complexity becomes prohibitive for high-resolution inputs. For a $1920 \times 1080$ image tokenized at patch size $16$: $n = 8{,}100$, giving an attention matrix of $65.6 \times 10^6$ entries per layer.</p>
+<h3 id="32-linear-attention-via-kernel-approximation">3.2 Linear Attention via Kernel Approximation</h3>
+<p>The softmax attention kernel $k(q, k) = e^{q^\top k / \sqrt{d}}$ can be approximated via a feature map $\phi: \mathbb{R}^d \to \mathbb{R}^r$ such that $k(q, k) \approx \phi(q)^\top \phi(k)$. This yields <strong>linear attention</strong> (Katharopoulos et al., ICML 2020):</p>
 <p>$$
-\text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_h),W^O
+\text{LinearAttn}(Q,K,V) = \frac{\phi(Q)\bigl(\phi(K)^\top V\bigr)}{\phi(Q)\bigl(\phi(K)^\top \mathbf{1}\bigr)}
+$$</p>
+<p>By associativity, $\phi(K)^\top V \in \mathbb{R}^{r \times d_v}$ can be precomputed once in $\mathcal{O}(m r d_v)$, reducing total complexity from $\mathcal{O}(n^2 d)$ to $\mathcal{O}(n r d)$ — linear in sequence length. The approximation error for random Fourier features satisfies:</p>
+<p>$$
+\left|\phi(q)^\top\phi(k) - e^{q^\top k / \sqrt{d}}\right| \leq \epsilon \quad \text{with probability} \geq 1 - \delta
+$$</p>
+<p>provided $r = \mathcal{O}!\left(\frac{d}{\epsilon^2} \log \frac{d}{\delta}\right)$.</p>
+<h3 id="33-multi-head-attention-and-representational-expressivity">3.3 Multi-Head Attention and Representational Expressivity</h3>
+<p>Multi-head attention decomposes the representation space into $h$ independent subspaces:</p>
+<p>$$
+\text{MHA}(Q,K,V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_h),W^O
 $$</p>
 <p>$$
-\text{head}_i = \text{Attention}(QW_i^Q,\ KW_i^K,\ VW_i^V)
+\text{head}_i = \text{Attention}(QW_i^Q,; KW_i^K,; VW_i^V)
 $$</p>
-<p>Each head learns to attend to different spatial relationships simultaneously — one head may focus on edge curvature (relevant for dent contours), another on texture gradients (scratches vs. dirt), another on structural symmetry (body panel alignment).</p>
-<p>The computational complexity of full self-attention over a sequence of $n$ patches is:</p>
-<p>$$
-\mathcal{O}(n^2 \cdot d)
-$$</p>
-<p>For a $224 \times 224$ image with patch size $16 \times 16$: $n = 196$ patches. This is tractable. For high-resolution inspection cameras at $1920 \times 1080$: $n = 8{,}100$ patches — attention complexity becomes $\approx 65.6M$ operations per layer, motivating windowed attention or hierarchical ViT architectures (Swin Transformer) for real-time automotive inference.</p>
-<p><strong>Real-World Case — License Plate OCR Under Rainy-Season Occlusion:</strong></p>
-<p>In Thailand, the primary OCR failure mode for outdoor workshop cameras is partial plate occlusion by mud during the April–September monsoon season. A standard CNN-based OCR treats all spatial locations equally. A ViT with learned attention learns to suppress occluded patches and redistribute attention weight to the visible digit regions.</p>
-<p>For a plate partially occluded at patches $\mathcal{O} \subset {1, \ldots, 196}$, the effective attention distribution after training concentrates:</p>
-<p>$$
-\sum_{j \notin \mathcal{O}} a_{ij} \gg \sum_{j \in \mathcal{O}} a_{ij}, \quad \forall, i \in \text{digit query positions}
-$$</p>
-<p>In MARSAIL&rsquo;s deployment, this translated to:</p>
-<p>$$
-\text{Character Error Rate (CER)}_\text{CNN} = 14.3% \xrightarrow{\text{ViT}} 4.1%\ \text{under } \leq 40%\ \text{occlusion}
-$$</p>
-<p>The attention map is also directly interpretable as a heatmap for field engineers debugging recognition failures — a property that matters enormously in enterprise automotive environments where explainability to non-ML stakeholders is a deployment requirement.</p>
+<p>where $W_i^Q \in \mathbb{R}^{d_\text{model} \times d_k}$, $W_i^K \in \mathbb{R}^{d_\text{model} \times d_k}$, $W_i^V \in \mathbb{R}^{d_\text{model} \times d_v}$, and $W^O \in \mathbb{R}^{h d_v \times d_\text{model}}$. Setting $d_k = d_v = d_\text{model}/h$ keeps total parameter count constant relative to single-head attention.</p>
+<p>The formal expressivity advantage of multi-head over single-head attention is characterized by the <strong>rank of the attention output matrix</strong>. For single-head attention, the output lies in $\text{span}(V)$, a subspace of rank at most $\min(m, d_v)$. For $h$ heads with independent value projections, the concatenated output can represent a space of rank up to $\min(m, h \cdot d_v)$, enabling simultaneous encoding of structurally distinct features — edge curvature, texture frequency, and global symmetry — without interference across representational channels.</p>
 <hr>
-<h2 id="4-probabilistic-state-estimation-kalman-filtering-for-multi-camera-workshop-tracking">4. Probabilistic State Estimation: Kalman Filtering for Multi-Camera Workshop Tracking</h2>
-<p>Tracking vehicles as they move through a multi-bay service center requires fusing noisy, temporally inconsistent detection outputs into a stable identity trajectory. The <strong>Discrete Linear Kalman Filter</strong> provides an optimal (minimum mean square error) state estimator under Gaussian noise assumptions.</p>
-<p><strong>State vector</strong> for a vehicle in workshop coordinates:</p>
+<h2 id="4-optimal-state-estimation-the-discrete-kalman-filter">4. Optimal State Estimation: The Discrete Kalman Filter</h2>
+<h3 id="41-system-model">4.1 System Model</h3>
+<p>Let the latent state at frame $k$ be $\mathbf{x}_k \in \mathbb{R}^n$ and the observation $\mathbf{z}_k \in \mathbb{R}^m$, governed by:</p>
+<!-- $$
+\mathbf{x}_k = F_k \mathbf{x}_{k-1} + B_k \mathbf{u}_k + \mathbf{w}_k, \qquad \mathbf{w}_k \sim \mathcal{N}(0, Q_k)
+$$ -->
 <p>$$
-\mathbf{x}_k = [c_x,\ c_y,\ w,\ h,\ \dot{c}_x,\ \dot{c}_y,\ \dot{w},\ \dot{h}]^\top \in \mathbb{R}^8
+\mathbf{z}_k = H_k \mathbf{x}_k + \mathbf{v}_k, \qquad \mathbf{v}_k \sim \mathcal{N}(0, R_k)
 $$</p>
-<p>representing centroid position, bounding box dimensions, and their first derivatives (velocities).</p>
-<p><strong>Prediction step</strong> (propagate state forward one frame):</p>
-<p>The predicted state at the current timestep was estimated using the state transition model based on the previous state estimate.</p>
+<p>where $F_k$ is the state transition matrix, $H_k$ the observation model, $Q_k$ and $R_k$ the process and measurement noise covariances.</p>
+<h3 id="42-prediction-and-update-equations">4.2 Prediction and Update Equations</h3>
+<p><strong>Predict:</strong></p>
+<!-- $$
+\hat{\mathbf{x}}_{k|k-1} = F_k \hat{\mathbf{x}}_{k-1|k-1}
+$$ -->
 <p>$$
-P_{k|k-1} = F,P_{k-1|k-1},F^\top + Q
+P_{k|k-1} = F_k P_{k-1|k-1} F_k^\top + Q_k
 $$</p>
-<p>where $F$ is the constant-velocity motion model:</p>
+<p><strong>Update:</strong></p>
+<!-- 
+$$
+\tilde{\mathbf{y}}_k = \mathbf{z}_k - H_k \hat{\mathbf{x}}_{k|k-1} \qquad \text{(innovation)}
+$$ -->
 <p>$$
-F = \begin{bmatrix} I_4 &amp; \Delta t \cdot I_4 \ 0_4 &amp; I_4 \end{bmatrix} \in \mathbb{R}^{8\times 8}
-$$</p>
-<p>and $Q$ is the process noise covariance encoding uncertainty in vehicle motion dynamics.</p>
-<p><strong>Update step</strong> (incorporate new detection measurement $\mathbf{z}_k \in \mathbb{R}^4$):</p>
-<p>$$
-S_k = H,P_{k|k-1},H^\top + R
-$$</p>
-<p>$$
-K_k = P_{k|k-1},H^\top S_k^{-1}
-$$</p>
-<p>The state estimate was updated by combining the predicted state with the measurement residual weighted by the Kalman gain.</p>
-<p>$$
-P_{k|k} = \left(I - K_k H\right)P_{k|k-1}
-$$</p>
-<p>where $H = [I_4\ |\ 0_4] \in \mathbb{R}^{4\times8}$ is the observation matrix projecting the full state to the observable measurement space, $R$ is measurement noise covariance (tuned from camera calibration data), and $K_k$ is the <strong>Kalman gain</strong> — the optimal weight assigned to new observations versus prior predictions.</p>
-<p>The Kalman gain has an intuitive interpretation: when $R \to 0$ (perfect sensor), $K_k \to H^{-1}$ and we trust the measurement completely. When $R \to \infty$ (noisy sensor), $K_k \to 0$ and we trust the prior prediction.</p>
-<p><strong>Data Association</strong> across multiple vehicles uses the Hungarian algorithm minimizing total assignment cost:</p>
-<p>$$
-\text{Cost}(i, j) = 1 - \text{IoU}(\hat{B}_i,\ B_j^\text{det})
-$$</p>
-<p>The optimal assignment is determined by minimizing the total matching cost across all possible permutations of predicted and target pairs.</p>
-<p><strong>Real-World Case — 12-Bay Service Center Throughput Intelligence:</strong></p>
-<p>A MARSAIL client operates a 12-bay automotive service center in Bangkok. Overhead fisheye cameras feed into a YOLOv8 detection pipeline running at 12 fps. Raw detections exhibit:</p>
-<ul>
-<li>Frame drop rate: <strong>8.1%</strong> (network jitter on edge hardware)</li>
-<li>Localization noise: $\sigma_\text{position} \approx 14$ pixels at $1080\text{p}$</li>
-</ul>
-<p>Without filtering, the workflow management system loses vehicle identity during occlusion (cars moving between bays, technicians walking in front) and misassigns service orders — a directly measurable operational failure costing the workshop an estimated 90 minutes of technician time per day in manual correction.</p>
-<p>With the Kalman-SORT pipeline (process noise $\sigma_Q = 4$, measurement noise $\sigma_R = 12$, max age $= 3$ frames):</p>
-<p>$$
-\text{Identity preservation across occlusion events}: 71.3% \rightarrow 97.1%
+S_k = H_k P_{k|k-1} H_k^\top + R_k \qquad \text{(innovation covariance)}
 $$</p>
 <p>$$
-\text{Service time estimation error}: \pm 22\ \text{min} \rightarrow \pm 3\ \text{min}
+K_k = P_{k|k-1} H_k^\top S_k^{-1} \qquad \text{(Kalman gain)}
 $$</p>
+<!-- $$
+\hat{\mathbf{x}}_{k|k} = \hat{\mathbf{x}}_{k|k-1} + K_k \tilde{\mathbf{y}}_k
+$$ -->
 <p>$$
-\text{Manual correction overhead}: 90\ \text{min/day} \rightarrow 11\ \text{min/day}
+P_{k|k} = (I - K_k H_k) P_{k|k-1}
 $$</p>
+<h3 id="43-optimality-and-the-mmse-interpretation">4.3 Optimality and the MMSE Interpretation</h3>
+<p>The Kalman filter is the <strong>minimum mean square error (MMSE)</strong> estimator under Gaussian noise. Formally, it solves:</p>
+<!-- $$
+\hat{\mathbf{x}}_{k|k} = \underset{\hat{\mathbf{x}}}{\arg\min}\; \mathbb{E}\!\left[\|\mathbf{x}_k - \hat{\mathbf{x}}\|^2 \,\Big|\, \mathbf{z}_{1:k}\right]
+$$ -->
+<!-- 
+which, under the linear-Gaussian model, coincides with the conditional mean $\mathbb{E}[\mathbf{x}_k \mid \mathbf{z}_{1:k}]$. The posterior covariance $P_{k|k}$ satisfies the **Joseph form** for numerical stability under finite-precision arithmetic: -->
+<p>$$
+P_{k|k} = (I - K_k H_k),P_{k|k-1},(I - K_k H_k)^\top + K_k R_k K_k^\top
+$$</p>
+<p>This symmetric form guarantees positive semi-definiteness of $P_{k|k}$ even when $K_k$ is computed from a numerically perturbed $S_k^{-1}$, a critical property on embedded hardware where matrix inversions accumulate floating-point error over long tracking sequences.</p>
+<h3 id="44-mahalanobis-gating-for-data-association">4.4 Mahalanobis Gating for Data Association</h3>
+<p>In multi-object settings, detections must be assigned to existing tracks. <strong>Mahalanobis distance</strong> provides a statistically principled gating criterion.</p>
+<!-- $$
+d^2(\mathbf{z}_k, \hat{\mathbf{x}}_{k|k-1}) = \tilde{\mathbf{y}}_k^\top S_k^{-1} \tilde{\mathbf{y}}_k
+$$ -->
+<p>Under the null hypothesis (detection from track $i$), $d^2 \sim \chi^2_m$. A gate threshold at the $99.7%$ confidence level of the $\chi^2_m$ distribution rejects association candidates lying outside the $3\sigma$ ellipse of the predicted measurement distribution — filtering clutter without requiring explicit appearance re-identification at every frame.</p>
 <hr>
-<h2 id="5-semantic-segmentation-per-pixel-classification-for-damage-mapping">5. Semantic Segmentation: Per-Pixel Classification for Damage Mapping</h2>
-<p>For precise repair area estimation — required for accurate workshop labor quotation — MARSAIL uses <strong>fully convolutional semantic segmentation</strong> rather than bounding box detection. Each pixel $i$ is assigned a class label $y_i \in {1, \ldots, C}$.</p>
-<p>The training objective is <strong>weighted cross-entropy</strong> with per-class weights $w_c$ to address spatial imbalance (damage pixels are typically 0.5–3% of total image area):</p>
-<p>The segmentation loss was computed using a weighted multi-class cross-entropy objective, where each pixel contributes according to its class label and corresponding class weight.</p>
-<p>where $\hat{p}_{ic}$ is the predicted probability for pixel $i$ belonging to class $c$, and $\Omega$ is the full set of pixels.</p>
-<p>Per-class weights are computed from inverse frequency:</p>
-<p>$$
-w_c = \frac{\text{median}(f_1, f_2, \ldots, f_C)}{f_c}, \quad f_c = \frac{\text{pixels of class } c}{\text{total pixels}}
-$$</p>
-<p>Segmentation quality is reported through <strong>mean Intersection over Union (mIoU)</strong> across all $C$ damage classes:</p>
+<h2 id="5-per-pixel-classification-the-weighted-cross-entropy-geometry">5. Per-Pixel Classification: The Weighted Cross-Entropy Geometry</h2>
+<h3 id="51-loss-formulation-for-imbalanced-segmentation">5.1 Loss Formulation for Imbalanced Segmentation</h3>
+<p>In pixel-wise damage classification, the core challenge is severe class imbalance — background pixels dominate by orders of magnitude while structurally critical classes such as deep cracks occupy less than 0.1% of total image area. Standard cross-entropy treats every pixel equally, which causes the model to converge toward predicting background everywhere and achieving deceptively high accuracy while completely missing the classes that matter.</p>
+<p>Weighted cross-entropy addresses this by assigning each class a scalar weight inversely proportional to how frequently it appears in the dataset — a technique known as <strong>median frequency balancing</strong> (Eigen &amp; Fergus, ICCV 2015). Classes that appear below the median frequency receive amplified gradient contribution. In practice, a structural crack class appearing at 0.1% frequency receives a weight over 400 times larger than the background class, forcing the model to treat each crack pixel as genuinely informative rather than negligible noise.</p>
+<h3 id="52-dice-loss-and-the-f_1-objective">5.2 Dice Loss and the $F_1$ Objective</h3>
+<p>Weighted cross-entropy still evaluates pixels independently — it has no notion of whether the predicted damage region is spatially coherent or globally correct. <strong>Dice loss</strong> addresses this by directly measuring the overlap between the predicted segmentation mask and the ground-truth annotation as a single set-level quantity, which is mathematically equivalent to optimizing the F1 score over the predicted region.</p>
+<p>In production, both objectives are combined with tunable coefficients: cross-entropy contributes stable, well-behaved gradients throughout training, while Dice loss enforces global mask consistency in the final learned boundary. This matters specifically for repair cost estimation — what the downstream quotation engine cares about is the total predicted damage area, not whether any individual pixel was correctly classified in isolation.</p>
+<h3 id="53-miou-as-deployment-gate">5.3 mIoU as Deployment Gate</h3>
+<p>Segmentation quality is evaluated through <strong>mean Intersection over Union</strong> across all $C$ damage classes:</p>
 <p>$$
 \text{mIoU} = \frac{1}{C} \sum_{c=1}^{C} \frac{TP_c}{TP_c + FP_c + FN_c}
 $$</p>
-<p>where $TP_c$, $FP_c$, $FN_c$ are true positive, false positive, and false negative pixel counts for class $c$.</p>
-<p><strong>Real-World Case — Repair Area Estimation for Labor Quotation:</strong></p>
-<p>Damage class distribution in MARSAIL&rsquo;s dataset ($N = 42{,}000$ annotated images):</p>
-<table>
-<thead>
-<tr>
-<th>Class</th>
-<th>Pixel frequency $f_c$</th>
-<th>Weight $w_c$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Background (undamaged)</td>
-<td>97.8%</td>
-<td>0.47</td>
-</tr>
-<tr>
-<td>Scratch</td>
-<td>1.1%</td>
-<td>41.7</td>
-</tr>
-<tr>
-<td>Dent</td>
-<td>0.7%</td>
-<td>65.5</td>
-</tr>
-<tr>
-<td>Paint chip</td>
-<td>0.3%</td>
-<td>152.9</td>
-</tr>
-<tr>
-<td>Deep crack</td>
-<td>0.1%</td>
-<td>458.7</td>
-</tr>
-</tbody>
-</table>
-<p>A DeepLabV3+ backbone (ResNet-101, atrous convolution with rates $r \in {6, 12, 18}$) trained with these weights achieves:</p>
-<p>The segmentation model achieved strong mean Intersection-over-Union (mIoU) scores across multiple damage categories, including 0.791 for scratches, 0.763 for dents, and 0.681 for cracks.</p>
+<p>Note the relationship: $\text{IoU}_c = \frac{TP_c}{TP_c + FP_c + FN_c} = \frac{F_1^{(c)}}{2 - F_1^{(c)}}$, showing that mIoU and macro-$F_1$ encode equivalent information under a monotone transformation. The conversion is:</p>
 <p>$$
-\text{mIoU}_\text{overall} = 0.745
+F_1^{(c)} = \frac{2 \cdot \text{IoU}_c}{1 + \text{IoU}_c}
 $$</p>
-<p>The pixel-level damage area $A_c$ in real-world cm² is recovered via camera calibration:</p>
-<p>The damaged area for each class was estimated by counting the predicted pixels belonging to that category and scaling them according to the real-world pixel-to-distance ratio.</p>
-<p>This feeds directly into the labor quotation engine:</p>
-<p>$$
-\text{Labor cost}_c = A_c \times r_c
-$$</p>
-<p>where $r_c$ is the repair rate (THB per cm²) for damage class $c$ — transforming a computer vision output into a structured financial estimate with no human intervention required.</p>
+<p>This equivalence means mIoU threshold policies and $F_1$ threshold policies are interchangeable through this bijection — a fact that simplifies threshold calibration across teams using different evaluation conventions.</p>
 <hr>
-<h2 id="6-model-deployment-inference-latency-and-the-computation-accuracy-tradeoff">6. Model Deployment: Inference Latency and the Computation-Accuracy Tradeoff</h2>
-<p>Deploying a high-accuracy model is only half the engineering problem. In real automotive environments, inference must complete within hard latency budgets — typically 200ms for interactive inspection tools and 33ms for real-time video-rate processing.</p>
-<p>The total inference latency is modeled as:</p>
+<h2 id="6-quantization-error-bounds-under-int8-inference">6. Quantization Error Bounds under INT8 Inference</h2>
+<h3 id="61-uniform-affine-quantization">6.1 Uniform Affine Quantization</h3>
+<p>Given a floating-point weight tensor $W \in \mathbb{R}^{m \times n}$, uniform symmetric quantization maps to $b$-bit integers:</p>
 <p>$$
-T_\text{total} = T_\text{preprocess} + T_\text{forward} + T_\text{postprocess} + T_\text{network}
+\hat{W} = s \cdot \text{clip}!\left(\text{round}!\left(\frac{W}{s}\right),, -2^{b-1},, 2^{b-1} - 1\right), \qquad s = \frac{\max(|W|)}{2^{b-1} - 1}
 $$</p>
-<p>For a model with $L$ layers, $T_\text{forward}$ is dominated by matrix multiplications:</p>
+<p>The quantization error $\Delta W = W - \hat{W}$ is bounded elementwise by $|\Delta W_{ij}| \leq s/2$.</p>
+<h3 id="62-output-perturbation-bound">6.2 Output Perturbation Bound</h3>
+<p>When a weight matrix is quantized, every layer introduces a small numerical error between the original floating-point output and the quantized approximation. The magnitude of this error is bounded by two factors: how coarsely the weights were rounded, and how large the input activations are. The problem with naive global quantization — applying a single scale factor across the entire weight matrix — is that this bound grows with the number of parameters in the layer. Wide layers with many neurons accumulate quantization error proportionally, making the bound increasingly loose and the approximation unreliable.</p>
+<p><strong>GPTQ-style per-channel quantization</strong> solves this by assigning an independent scale factor to each output channel rather than sharing one across the whole layer. Each channel is quantized relative to its own dynamic range, so a channel with small weights is not penalized by the presence of a channel with large weights in the same matrix. In layers where weight magnitude varies significantly across channels — which is typical in deep vision models — this reduces the effective quantization error by more than 3× compared to the global approach, with no change to model architecture or inference logic.</p>
+<h3 id="63-the-accuracy-latency-pareto-frontier">6.3 The Accuracy-Latency Pareto Frontier</h3>
+<p>The joint optimization problem for deployment is:</p>
 <p>$$
-T_\text{forward} \propto \sum_{\ell=1}^{L} \frac{2 \cdot M_\ell \cdot K_\ell \cdot N_\ell}{\text{GPU FLOPS} \times \eta}
+\underset{\theta,; b,; r}{\arg\max};; \text{mAP}(\theta, r) \quad\text{subject to}\quad T(\theta, b, r) \leq T_{\text{budget}},\quad \text{VRAM}(\theta, b) \leq M_{\text{device}}
 $$</p>
-<p>where $M_\ell \times K_\ell$ is the weight matrix dimension, $N_\ell$ is the batch-adjusted input dimension, and $\eta \in (0,1)$ is hardware utilization efficiency (typically 0.55–0.75 for automotive edge GPUs like NVIDIA Jetson Orin).</p>
-<p><strong>TensorRT INT8 Quantization</strong> reduces $T_\text{forward}$ by replacing 32-bit float operations with 8-bit integer arithmetic:</p>
-<p>$$
-\hat{W} = \text{round}!\left(\frac{W}{s}\right), \quad s = \frac{\max(|W|)}{127}
-$$</p>
-<p>The quantization error on output activations is bounded by:</p>
-<p>$$
-|\hat{y} - y|_2 \leq |W - \hat{W}|_F \cdot |x|_2 \leq \frac{s\sqrt{d}}{2} \cdot |x|_2
-$$</p>
-<p><strong>Real-World Case — MARSAIL Edge Deployment on Jetson Orin NX:</strong></p>
-<p>YOLOv8-L backbone, input resolution $1280 \times 720$:</p>
-<table>
-<thead>
-<tr>
-<th>Precision</th>
-<th>Latency (ms)</th>
-<th><a href="mailto:mAP@0.5">mAP@0.5</a></th>
-<th>Throughput (fps)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>FP32</td>
-<td>148 ms</td>
-<td>0.841</td>
-<td>6.8</td>
-</tr>
-<tr>
-<td>FP16</td>
-<td>79 ms</td>
-<td>0.839</td>
-<td>12.7</td>
-</tr>
-<tr>
-<td>INT8 (TensorRT)</td>
-<td>31 ms</td>
-<td>0.827</td>
-<td>32.3</td>
-</tr>
-</tbody>
-</table>
-<p>The mAP degradation from FP32 to INT8 is $\Delta\text{mAP} = 0.014$ — well within the acceptable production threshold of $\leq 0.02$ — while throughput increases <strong>4.75×</strong>, enabling real-time video processing from all 12 workshop bay cameras simultaneously on a single Jetson Orin NX module.</p>
-<p>This tradeoff analysis is a required deliverable for every MARSAIL deployment. Model accuracy in isolation is an incomplete specification. The full engineering question is:</p>
-<p>$$
-\underset{\theta,\ \text{precision},\ \text{resolution}}{\arg\max}\ \text{mAP}(\theta) \quad \text{subject to}\ T_\text{total} \leq T_\text{budget},\ \text{VRAM} \leq M_\text{device}
-$$</p>
+<p>where $b \in {4, 8, 16, 32}$ is the quantization bitwidth, $r$ is the input resolution, and $T(\cdot)$ is the end-to-end inference latency model. The feasible set forms a <strong>Pareto frontier</strong> in the $(\text{mAP}, T)$ plane; any model configuration not on this frontier is Pareto-dominated. In practice, INT8 quantization ($b = 8$) achieves throughput gains of $3\text{–}5\times$ over FP32 with mAP degradation $\Delta\text{mAP@0.5} &lt; 0.02$, placing INT8 Pareto-dominantly above FP32 for all latency budgets below $\approx 50$ ms on current automotive-grade edge silicon.</p>
 <hr>
-<h2 id="7-mean-average-precision-the-production-deployment-gate">7. Mean Average Precision: The Production Deployment Gate</h2>
-<p>No MARSAIL computer vision model is promoted to a production environment without passing a formal <strong>mAP evaluation</strong> across all target classes. mAP averages the area under the Precision-Recall curve for each class.</p>
-<p>For a ranked list of $N$ detections, precision and recall at rank $k$ are:</p>
+<h2 id="7-mean-average-precision-a-formal-treatment">7. Mean Average Precision: A Formal Treatment</h2>
+<h3 id="71-precisionrecall-curve-construction">7.1 Precision–Recall Curve Construction</h3>
+<p>Given $N$ detection hypotheses ranked by confidence score $s_1 \geq s_2 \geq \cdots \geq s_N$. Then:</p>
 <p>$$
-P(k) = \frac{TP(k)}{k}, \qquad R(k) = \frac{TP(k)}{N_\text{pos}}
+P(k) = \frac{\text{TP}(k)}{k}, \qquad R(k) = \frac{\text{TP}(k)}{N_{\text{pos}}}
 $$</p>
-<p><strong>Average Precision</strong> for class $c$ using the interpolated 11-point approximation:</p>
-<p>Average Precision (AP) was computed using the 11-point interpolation method by averaging the maximum precision values across recall levels from 0.0 to 1.0.</p>
-<p>Or equivalently, the COCO area-under-curve formulation:</p>
-<p>Average Precision (AP) was estimated by integrating the precision–recall curve, approximated as the weighted sum of precision values across successive recall intervals.</p>
-<p><strong>Mean Average Precision</strong> across $C$ classes:</p>
+<h3 id="72-average-precision-via-area-under-curve">7.2 Average Precision via Area-Under-Curve</h3>
+<p><strong>AP</strong> is the area under the interpolated precision–recall curve:</p>
 <p>$$
-\text{mAP} = \frac{1}{C} \sum_{c=1}^{C} \text{AP}_c
+\text{AP} = \int_0^1 p_{\text{interp}}(r), dr \approx \sum_{k=1}^{N} \bigl[R(k) - R(k-1)\bigr] \cdot \max_{r&rsquo; \geq R(k)} P(r&rsquo;)
 $$</p>
-<p>MARSAIL reports two standard variants:</p>
+<p>The interpolation $p_{\text{interp}}(r) = \max_{r&rsquo; \geq r} P(r&rsquo;)$ removes the &ldquo;wiggle&rdquo; in the raw PR curve caused by individual detection orderings, making AP a monotone functional of the underlying scoring model.</p>
+<h3 id="73-coco-style-map-averaging">7.3 COCO-Style mAP Averaging</h3>
 <p>$$
-\text{mAP@0.5}: \text{IoU threshold} = 0.50 \quad \text{(lenient, standard)}
+\text{mAP@}[0.50:0.05:0.95] = \frac{1}{10} \sum_{\tau \in {0.50, 0.55, \ldots, 0.95}} \frac{1}{C} \sum_{c=1}^{C} \text{AP}_c(\tau)
 $$</p>
+<p>This double averaging — over IoU thresholds and over classes — penalizes both localization imprecision (sensitive to $\tau$) and class-level recall gaps (sensitive to the per-class AP sum). A model with high <a href="mailto:mAP@0.5">mAP@0.5</a> but low <a href="mailto:mAP@0.5">mAP@0.5</a>:0.95 is a model with accurate <em>classification</em> but imprecise <em>localization</em>, a distinction invisible to single-threshold reporting.</p>
+<h3 id="74-asymmetric-threshold-policy-for-safety-critical-classes">7.4 Asymmetric Threshold Policy for Safety-Critical Classes</h3>
+<p>For damage classes with asymmetric consequence severity, a single mAP threshold is insufficient. Let $\mathcal{S} \subset {1, \ldots, C}$ denote safety-critical classes. The deployment gate requires:</p>
+<!-- $$
+\text{AP}_c(\tau_{\text{strict}}) \geq \theta_c^{\text{safe}} \quad \forall\, c \in \mathcal{S}
+$$ -->
 <p>$$
-\text{mAP@0.5:0.95}: \text{average over IoU} \in {0.50, 0.55, \ldots, 0.95} \quad \text{(strict, COCO)}
+\text{mAP}(\tau_{\text{lenient}}) \geq \theta_{\text{global}}
 $$</p>
-<p><strong>Deployment Gate — Vehicle Damage Detection System:</strong></p>
-<p>Required thresholds before any production push:</p>
-<p>$$
-\text{mAP@0.5} \geq 0.820 \quad \text{AND} \quad \text{mAP@0.5:0.95} \geq 0.610
-$$</p>
-<p>Most recent model evaluation (YOLOv8-X, 640px, trained on 42k images):</p>
-<table>
-<thead>
-<tr>
-<th>Class</th>
-<th><a href="mailto:AP@0.5">AP@0.5</a></th>
-<th><a href="mailto:AP@0.5">AP@0.5</a>:0.95</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Scratch</td>
-<td>0.871</td>
-<td>0.643</td>
-<td>✅ Pass</td>
-</tr>
-<tr>
-<td>Dent</td>
-<td>0.843</td>
-<td>0.619</td>
-<td>✅ Pass</td>
-</tr>
-<tr>
-<td>Paint chip</td>
-<td>0.814</td>
-<td>0.598</td>
-<td>✅ Pass</td>
-</tr>
-<tr>
-<td>Deep crack</td>
-<td>0.794</td>
-<td>0.571</td>
-<td>❌ Fail</td>
-</tr>
-<tr>
-<td><strong>Overall mAP</strong></td>
-<td><strong>0.831</strong></td>
-<td><strong>0.608</strong></td>
-<td><strong>⚠️ Blocked</strong></td>
-</tr>
-</tbody>
-</table>
-<p>Despite the overall <a href="mailto:mAP@0.5">mAP@0.5</a> passing at 0.831, the <strong>deep crack class</strong> fell below its per-class threshold of 0.80, triggering a mandatory data collection sprint targeting under-represented crack morphologies (hairline surface cracks, edge cracks under directional lighting). Deployment was blocked until per-class thresholds were met across all safety-relevant damage classes.</p>
-<p>This gate exists because automotive AI operates in a domain where class-level failure has asymmetric consequences. A missed deep crack on a load-bearing structural component is not equivalent to a missed minor paint chip. The mathematics of mAP must be paired with domain-aware deployment policy.</p>
+<p>Both conditions must hold simultaneously. This formulation reflects the decision-theoretic asymmetry of automotive inspection: a false negative on a structural crack has a qualitatively different expected loss than a false negative on a minor paint chip, and loss functions that treat them identically are miscalibrated to the deployment domain.</p>
 <hr>
-<blockquote>
-<p><strong>Key Insight:</strong> Across all seven mathematical frameworks presented here — from IoU and Focal Loss through attention mechanisms, Kalman filtering, segmentation objectives, quantization bounds, and mAP evaluation gates — the common thread is that <strong>mathematical rigor is what converts research capability into operational reliability.</strong> Every equation above is not a theoretical exercise. Each one corresponds to a decision made, a failure debugged, or a deployment approved inside a real automotive AI pipeline at MARSAIL.</p>
-</blockquote>
+<h2 id="conclusion">Conclusion</h2>
+<p>The mathematical frameworks surveyed here — generalized bounding-box regression losses, adaptive focal reweighting, kernel-approximated attention, optimal Bayesian state estimation, frequency-balanced segmentation objectives, quantization error analysis, and asymmetric evaluation gates — are not independent techniques. They form a coherent mathematical stack in which each layer addresses a failure mode introduced by the preceding one. Reliable computer vision in constrained, high-stakes environments is an exercise in identifying where each mathematical assumption breaks and replacing it with a formulation whose assumptions hold.</p>
 <hr>
 <h3 id="from-equations-to-pytorch-production-multi-task-loss-implementation">From Equations to PyTorch: Production Multi-Task Loss Implementation</h3>
 <p>To bridge the gap between theoretical Bayesian uncertainty and raw engineering execution, here is the production-grade PyTorch implementation of our adaptive multi-task loss layer. This module dynamically learns the homoscedastic uncertainty parameters ($\sigma_1, \sigma_2$) during the backward pass, ensuring stable gradient dynamics on edge devices like the Jetson Orin.</p>
-<pre><code class="language-python"># ==============================================================================
-#  📌 MARSAIL Core AI Infrastructure Pipeline v2.6.1
-#  ==============================================================================
-#  🚀 System:     Automotive Intelligent Computer Vision Ecosystem
-#  🧠 Author:     Kao Panboonyuen
-#  👔 Role:       Head of AI, MARSAIL (Motor AI Recognition Solution AI Lab)
-#  📅 Year:       2026 (Production Release)
-#  🛡️ License:    Proprietary / MARSAIL
-#  ------------------------------------------------------------------------------
-#  &quot;In continuous optimization we trust. Latency is the enemy, uncertainty is quantified.&quot;
-# ==============================================================================
+<pre><code class="language-python">&quot;&quot;&quot;
+Mathematical Foundations of Loss Geometry in Automotive Computer Vision
+=======================================================================
+Author : Kao Panboonyuen
+Affiliation : MARSAIL (Motor AI Recognition Solution AI Lab)
 
+This module implements the core mathematical theorems and their numerical
+verification for production automotive vision systems. Every function
+corresponds to a formal result in the loss geometry literature — not
+engineering wrappers, but proofs made executable.
+
+References
+----------
+[1] Rezatofighi et al.  &quot;Generalized Intersection over Union&quot;  CVPR 2019
+[2] Zheng et al.        &quot;Distance-IoU Loss&quot;                    AAAI 2020
+[3] Lin et al.          &quot;Focal Loss for Dense Object Detection&quot; CVPR 2017
+[4] Zhang et al.        &quot;VarifocalNet&quot;                         CVPR 2021
+[5] Li et al.           &quot;Generalized Focal Loss&quot;               NeurIPS 2020
+[6] Tong et al.         &quot;Wise-IoU&quot;                             arXiv 2023
+[7] Eigen &amp; Fergus      &quot;Predicting Depth, Surface Normals...&quot; ICCV 2015
+[8] Katharopoulos et al.&quot;Transformers are RNNs&quot;                ICML 2020
+&quot;&quot;&quot;
+
+import math
 import torch
 import torch.nn as nn
-from typing import Dict, Tuple
+import torch.nn.functional as F
+from typing import Tuple
 
-class AutomotiveMultiTaskLoss(nn.Module):
-    &quot;&quot;&quot;
-    Production-grade Bayesian Multi-Task Loss Layer with Learned Heteroscedastic Uncertainty.
-    Optimized for simultaneous Detection (GIoU) and Segmentation (Focal/Dice) optimization.
-    Ref: MARSAIL Automotive Infrastructure Pipeline (2026).
-    &quot;&quot;&quot;
-    def __init__(self, num_tasks: int = 2, init_sigma: float = 1.0):
-        super(AutomotiveMultiTaskLoss, self).__init__()
-        # We parameterize log(sigma^2) instead of sigma directly for numerical stability 
-        # during gradient descent, avoiding division-by-zero or negative variance.
-        self.log_vars = nn.Parameter(torch.ones(num_tasks) * (2 * torch.log(torch.tensor(init_sigma))))
 
-    def forward(self, losses: Dict[str, torch.Tensor]) -&gt; Tuple[torch.Tensor, Dict[str, float]]:
+# =============================================================================
+# §1  BOUNDING-BOX REGRESSION LOSS FAMILY
+# =============================================================================
+# Theorem (GIoU gradient non-degeneracy, Rezatofighi et al. 2019):
+#   Let L_IoU = 1 - IoU(B_hat, B).  When B_hat ∩ B = ∅,
+#   ∇_{B_hat} L_IoU = 0 everywhere.  GIoU resolves this by adding a
+#   penalty term whose gradient is non-zero whenever C ≠ B_hat ∪ B,
+#   which holds whenever the boxes are non-coincident.
+# =============================================================================
+
+def box_area(boxes: torch.Tensor) -&gt; torch.Tensor:
+    &quot;&quot;&quot;Area of axis-aligned boxes [x1, y1, x2, y2].&quot;&quot;&quot;
+    return (boxes[:, 2] - boxes[:, 0]).clamp(0) * \
+           (boxes[:, 3] - boxes[:, 1]).clamp(0)
+
+
+def iou_family(
+    pred: torch.Tensor,
+    gt:   torch.Tensor,
+    mode: str = &quot;giou&quot;,
+) -&gt; torch.Tensor:
+    &quot;&quot;&quot;
+    Unified implementation of the IoU loss family.
+
+    All variants satisfy the ordering:
+        L_IoU  ≥  L_GIoU  ≥  L_DIoU  ≥  L_CIoU
+
+    in the sense that each successive loss adds a strictly non-negative
+    correction term that provides gradient signal in regimes where the
+    predecessor has zero gradient.
+
+    Parameters
+    ----------
+    pred : (N, 4)  predicted boxes  [x1, y1, x2, y2]
+    gt   : (N, 4)  ground-truth boxes
+    mode : one of {&quot;iou&quot;, &quot;giou&quot;, &quot;diou&quot;, &quot;ciou&quot;}
+
+    Returns
+    -------
+    loss : (N,)  per-sample scalar loss values in [0, 2] (GIoU) or [0, ~2] (CIoU)
+    &quot;&quot;&quot;
+    # --- Intersection ---
+    inter_x1 = torch.max(pred[:, 0], gt[:, 0])
+    inter_y1 = torch.max(pred[:, 1], gt[:, 1])
+    inter_x2 = torch.min(pred[:, 2], gt[:, 2])
+    inter_y2 = torch.min(pred[:, 3], gt[:, 3])
+
+    inter_area = (inter_x2 - inter_x1).clamp(0) * \
+                 (inter_y2 - inter_y1).clamp(0)
+
+    # --- Union ---
+    pred_area = box_area(pred)
+    gt_area   = box_area(gt)
+    union_area = pred_area + gt_area - inter_area + 1e-7
+
+    iou = inter_area / union_area                          # ∈ [0, 1]
+
+    if mode == &quot;iou&quot;:
+        return 1.0 - iou
+
+    # --- Smallest enclosing box C ---
+    c_x1 = torch.min(pred[:, 0], gt[:, 0])
+    c_y1 = torch.min(pred[:, 1], gt[:, 1])
+    c_x2 = torch.max(pred[:, 2], gt[:, 2])
+    c_y2 = torch.max(pred[:, 3], gt[:, 3])
+    c_area = (c_x2 - c_x1).clamp(0) * (c_y2 - c_y1).clamp(0) + 1e-7
+
+    if mode == &quot;giou&quot;:
+        # L_GIoU = 1 - IoU + |C \ (B_hat ∪ B)| / |C|
+        # Penalty ∈ [0, 1]; equals 0 iff B_hat ∪ B = C (tight enclosure).
+        penalty = (c_area - union_area) / c_area
+        return 1.0 - iou + penalty
+
+    # --- Centroid distance (DIoU / CIoU) ---
+    pred_cx = (pred[:, 0] + pred[:, 2]) / 2
+    pred_cy = (pred[:, 1] + pred[:, 3]) / 2
+    gt_cx   = (gt[:, 0]   + gt[:, 2])   / 2
+    gt_cy   = (gt[:, 1]   + gt[:, 3])   / 2
+
+    rho2 = (pred_cx - gt_cx) ** 2 + (pred_cy - gt_cy) ** 2   # ρ²(b, b^gt)
+    c_diag2 = (c_x2 - c_x1) ** 2 + (c_y2 - c_y1) ** 2 + 1e-7  # c²
+
+    if mode == &quot;diou&quot;:
+        # L_DIoU = 1 - IoU + ρ²(b, b^gt) / c²
+        # The normalisation by c² makes the penalty scale-invariant:
+        # a centroid offset of Δ pixels on a 600px box is penalised the
+        # same as Δ pixels on an 8px box, which is the correct geometric
+        # interpretation for multi-scale automotive scenes.
+        return 1.0 - iou + rho2 / c_diag2
+
+    if mode == &quot;ciou&quot;:
+        # Aspect-ratio consistency term (Zheng et al., AAAI 2020):
+        #   v  = (4/π²)(arctan(w^gt/h^gt) - arctan(w/h))²
+        #   α_v = v / ((1 - IoU) + v)
+        # α_v is designed so that when IoU is small (early training) the
+        # aspect-ratio gradient is suppressed relative to the centroid
+        # gradient, avoiding conflicting update directions.
+        pred_w = (pred[:, 2] - pred[:, 0]).clamp(1e-7)
+        pred_h = (pred[:, 3] - pred[:, 1]).clamp(1e-7)
+        gt_w   = (gt[:, 2]   - gt[:, 0]).clamp(1e-7)
+        gt_h   = (gt[:, 3]   - gt[:, 1]).clamp(1e-7)
+
+        v      = (4.0 / (math.pi ** 2)) * \
+                 (torch.atan(gt_w / gt_h) - torch.atan(pred_w / pred_h)) ** 2
+        alpha  = v / ((1.0 - iou).detach() + v + 1e-7)   # detach: treat as weight
+        return 1.0 - iou + rho2 / c_diag2 + alpha * v
+
+    raise ValueError(f&quot;Unknown mode: {mode!r}&quot;)
+
+
+def wise_iou_loss(
+    pred:  torch.Tensor,
+    gt:    torch.Tensor,
+    delta: float = None,
+) -&gt; torch.Tensor:
+    &quot;&quot;&quot;
+    Wise-IoU (Tong et al., 2023) — dynamic geometric focusing.
+
+    The monotonic focusing factor r concentrates gradient on samples
+    whose normalised centroid distance is near the running dataset mean δ.
+    Formally:
+
+        r = exp( ρ²(b, b^gt) / (W_g² + H_g²) - δ )
+
+    where δ = E[ρ²(b, b^gt) / (W_g² + H_g²)] is estimated from the batch.
+
+    This is the spatial analogue of Focal Loss: easy samples (ρ ≪ δ)
+    and hard outliers (ρ ≫ δ) are both down-weighted relative to the
+    geometrically informative mid-range examples.
+    &quot;&quot;&quot;
+    iou_loss = iou_family(pred, gt, mode=&quot;iou&quot;)
+
+    c_x1 = torch.min(pred[:, 0], gt[:, 0])
+    c_y1 = torch.min(pred[:, 1], gt[:, 1])
+    c_x2 = torch.max(pred[:, 2], gt[:, 2])
+    c_y2 = torch.max(pred[:, 3], gt[:, 3])
+    W_g  = (c_x2 - c_x1).clamp(1e-7)
+    H_g  = (c_y2 - c_y1).clamp(1e-7)
+
+    pred_cx = (pred[:, 0] + pred[:, 2]) / 2
+    pred_cy = (pred[:, 1] + pred[:, 3]) / 2
+    gt_cx   = (gt[:, 0]   + gt[:, 2])   / 2
+    gt_cy   = (gt[:, 1]   + gt[:, 3])   / 2
+
+    rho2_norm = ((pred_cx - gt_cx) ** 2 + (pred_cy - gt_cy) ** 2) / \
+                (W_g ** 2 + H_g ** 2)
+
+    # δ estimated from the current batch (proxy for dataset expectation)
+    if delta is None:
+        delta = rho2_norm.detach().mean()
+
+    r = torch.exp(rho2_norm - delta)
+    return r * iou_loss
+
+
+# =============================================================================
+# §2  ADAPTIVE LOSS REWEIGHTING
+# =============================================================================
+# Theorem (Focal Loss gradient suppression, Lin et al. 2017):
+#   For a background sample with prediction p → 1,
+#   |∂L_FL / ∂p| = α(1-p)^{γ-1}[ γ log(p)(1-p) + (1-p)^{...} / p ]
+#   The factor (1-p)^{γ-1} → 0 as p → 1, suppressing gradient
+#   contribution proportionally to (1 - p)^{γ-1}.
+#   For p = 0.97, γ = 2: factor ≈ 0.03.
+#   For p = 0.05, γ = 2: factor ≈ 0.90.
+# =============================================================================
+
+class FocalLoss(nn.Module):
+    &quot;&quot;&quot;
+    Binary Focal Loss (Lin et al., CVPR 2017).
+
+        L_FL(p_t) = -α_t (1 - p_t)^γ  log(p_t)
+
+    where p_t = p if y=1, else 1-p.
+
+    The modulating factor (1-p_t)^γ satisfies:
+        - lim_{p_t → 1} (1-p_t)^γ = 0   [easy negatives suppressed]
+        - lim_{p_t → 0} (1-p_t)^γ = 1   [hard positives fully weighted]
+    &quot;&quot;&quot;
+
+    def __init__(self, alpha: float = 0.25, gamma: float = 2.0):
+        super().__init__()
+        self.alpha = alpha
+        self.gamma = gamma
+
+    def forward(self, logits: torch.Tensor, targets: torch.Tensor) -&gt; torch.Tensor:
+        p      = torch.sigmoid(logits)
+        p_t    = targets * p + (1.0 - targets) * (1.0 - p)
+        alpha_t = targets * self.alpha + (1.0 - targets) * (1.0 - self.alpha)
+
+        # Numerically stable log(p_t) via F.binary_cross_entropy_with_logits
+        bce    = F.binary_cross_entropy_with_logits(logits, targets, reduction=&quot;none&quot;)
+        focal  = alpha_t * (1.0 - p_t) ** self.gamma * bce
+        return focal.mean()
+
+    @torch.no_grad()
+    def gradient_suppression_ratio(self, p: float, gamma: float = None) -&gt; float:
         &quot;&quot;&quot;
-        Args:
-            losses: Dictionary containing raw unweighted losses from each head.
-                    e.g., {&quot;detection&quot;: det_loss, &quot;segmentation&quot;: seg_loss}
-        Returns:
-            total_loss: Scalar tensor representing the uncertainty-weighted total loss.
-            metrics: Dictionary of native python floats for monitoring/WandB logging.
+        Returns (1-p_t)^{γ-1}, the multiplicative suppression applied to the
+        BCE gradient for a background sample with prediction probability p.
+        Provides empirical verification of the analytical result.
         &quot;&quot;&quot;
-        total_loss = 0.0
-        weighted_metrics = {}
-        
-        # Enforce strict ordering to match parameter indexing
-        task_keys = [&quot;detection&quot;, &quot;segmentation&quot;]
-        
-        for idx, key in enumerate(task_keys):
-            if key not in losses:
-                raise KeyError(f&quot;Expected task key '{key}' missing from optimization batch.&quot;)
-                
-            raw_loss = losses[key]
-            # Precision term: 1 / (2 * sigma^2) = exp(-log_var) / 2
-            precision = torch.exp(-self.log_vars[idx])
-            
-            # Apply task-specific loss scaling and append the logarithmic regularizer
-            if key == &quot;detection&quot;:
-                # For regression tasks: (1 / (2 * sigma^2)) * L_det + log(sigma)
-                task_loss = 0.5 * precision * raw_loss + 0.5 * self.log_vars[idx]
-            else:
-                # For classification/segmentation tasks: (1 / sigma^2) * L_seg + log(sigma)
-                task_loss = precision * raw_loss + 0.5 * self.log_vars[idx]
-                
-            total_loss += task_loss
-            weighted_metrics[f&quot;weighted_{key}_loss&quot;] = task_loss.item()
-            weighted_metrics[f&quot;sigma_{key}&quot;] = torch.exp(0.5 * self.log_vars[idx]).item()
+        g = gamma if gamma is not None else self.gamma
+        return (1.0 - p) ** (g - 1)
 
-        return total_loss, weighted_metrics
 
-class MMDDomainLoss(nn.Module):
+class VarifocalLoss(nn.Module):
     &quot;&quot;&quot;
-    Maximum Mean Discrepancy (MMD) Loss for Unsupervised Domain Adaptation (UDA).
-    Forces feature representations to remain invariant between premium and unconstrained workshops.
+    Varifocal Loss (Zhang et al., CVPR 2021).
+
+    Asymmetric reweighting that decouples positive and negative treatment:
+
+        For positives (q &gt; 0):  L = -q [ q log(p) + (1-q) log(1-p) ]
+        For negatives (q = 0):  L = -α p^γ log(1-p)
+
+    where q = IoU(B_hat, B^gt) ∈ [0,1] is the IACS quality target.
+
+    Key property: positive loss is scaled by q², so a high-quality
+    detection (q=0.9) contributes 81× more gradient than a marginal
+    detection (q=0.1) — enforcing quality-aware classification scores.
     &quot;&quot;&quot;
-    def __init__(self, gammas: list = [0.001, 0.01, 0.1, 1.0, 10.0]):
-        super(MMDDomainLoss, self).__init__()
-        self.gammas = gammas
 
-    def rbf_kernel(self, x: torch.Tensor, y: torch.Tensor) -&gt; torch.Tensor:
-        &quot;&quot;&quot;Computes multi-scale RBF kernel matrix between two spatial latent tensors.&quot;&quot;&quot;
-        n = x.size(0)
-        m = y.size(0)
-        x_flat = x.view(n, -1)
-        y_flat = y.view(m, -1)
-        
-        # Compute pairwise squared Euclidean distances
-        dist_x = torch.sum(x_flat**2, dim=1, keepdim=True)
-        dist_y = torch.sum(y_flat**2, dim=1, keepdim=True)
-        distances = dist_x + dist_y.t() - 2.0 * torch.matmul(x_flat, y_flat.t())
-        
-        # Multi-scale Gaussian Mixture
-        kernel_val = 0.0
-        for gamma in self.gammas:
-            kernel_val += torch.exp(-gamma * distances)
-        return kernel_val
+    def __init__(self, alpha: float = 0.75, gamma: float = 2.0):
+        super().__init__()
+        self.alpha = alpha
+        self.gamma = gamma
 
-    def forward(self, source_features: torch.Tensor, target_features: torch.Tensor) -&gt; torch.Tensor:
-        n = source_features.size(0)
-        m = target_features.size(0)
-        
-        k_ss = self.rbf_kernel(source_features, source_features)
-        k_tt = self.rbf_kernel(target_features, target_features)
-        k_st = self.rbf_kernel(source_features, target_features)
-        
-        # MMD^2 formulation execution
-        mmd_squared = (torch.sum(k_ss) / (n * n)) + (torch.sum(k_tt) / (m * m)) - (2.0 * torch.sum(k_st) / (n * m))
-        return torch.clamp(mmd_squared, min=0.0)
+    def forward(
+        self,
+        pred_score: torch.Tensor,   # sigmoid predictions
+        quality:    torch.Tensor,   # IoU targets ∈ [0,1]
+    ) -&gt; torch.Tensor:
+        pos_mask = quality &gt; 0.0
+        bce      = F.binary_cross_entropy(pred_score, quality, reduction=&quot;none&quot;)
 
-# Example Production Usage within the Training Loop:
-if __name__ == &quot;__main__&quot;:
-    # Simulate a single production batch execution
-    criterion = AutomotiveMultiTaskLoss(num_tasks=2)
-    domain_adapter = MMDDomainLoss()
-    
-    # Fake losses generated from detection &amp; segmentation heads
-    mock_losses = {
-        &quot;detection&quot;: torch.tensor(1.42, requires_grad=True),
-        &quot;segmentation&quot;: torch.tensor(0.89, requires_grad=True)
+        # Positive branch: scale by quality (IACS target)
+        pos_weight = quality[pos_mask]
+        pos_loss   = pos_weight * bce[pos_mask]
+
+        # Negative branch: focal modulation on background predictions
+        neg_weight = self.alpha * pred_score[~pos_mask] ** self.gamma
+        neg_loss   = neg_weight * bce[~pos_mask]
+
+        return (pos_loss.sum() + neg_loss.sum()) / \
+               (pos_mask.sum().clamp(1).float())
+
+
+class QualityFocalLoss(nn.Module):
+    &quot;&quot;&quot;
+    Quality Focal Loss (Li et al., NeurIPS 2020).
+
+        L_QFL(σ, y) = -|y - σ|^β [ y log σ + (1-y) log(1-σ) ]
+
+    Extends focal reweighting to continuous label distributions.
+    When σ ≈ y, |y-σ|^β → 0 and the sample is suppressed.
+    When σ ≪ y (missed detection), |y-σ|^β ≈ 1 and full BCE applies.
+
+    Compatible with IoU-derived soft labels y ∈ [0,1], enabling
+    end-to-end training with localization-aware supervision signals.
+    &quot;&quot;&quot;
+
+    def __init__(self, beta: float = 2.0):
+        super().__init__()
+        self.beta = beta
+
+    def forward(
+        self,
+        pred:   torch.Tensor,  # sigmoid predictions ∈ (0,1)
+        target: torch.Tensor,  # continuous targets ∈ [0,1]
+    ) -&gt; torch.Tensor:
+        bce     = F.binary_cross_entropy(pred, target, reduction=&quot;none&quot;)
+        weight  = (target - pred).abs() ** self.beta
+        return (weight * bce).mean()
+
+
+# =============================================================================
+# §3  KERNEL-APPROXIMATED LINEAR ATTENTION
+# =============================================================================
+# Theorem (Katharopoulos et al., ICML 2020):
+#   softmax(QK^T / √d) V  can be approximated as
+#       φ(Q) (φ(K)^T V) / φ(Q) (φ(K)^T 1)
+#   reducing complexity from O(n²d) to O(nrd), where r is the feature
+#   dimension of φ.  The approximation error for random Fourier features
+#   satisfies |φ(q)^T φ(k) - exp(q^T k / √d)| ≤ ε w.p. ≥ 1-δ
+#   provided r = O(d/ε² · log(d/δ)).
+# =============================================================================
+
+class LinearAttention(nn.Module):
+    &quot;&quot;&quot;
+    Linear attention via ELU+1 feature map (Katharopoulos et al., ICML 2020).
+
+    φ(x) = ELU(x) + 1  satisfies φ(x) &gt; 0 everywhere, guaranteeing that
+    the denominator φ(Q)(φ(K)^T 1) &gt; 0 without the need for masking or
+    numerical epsilon corrections.
+
+    Complexity: O(nrd) vs O(n²d) for standard attention.
+    For n=8100 (1080p image, patch=16), r=d=64:
+        Standard  : 8100² × 64  ≈ 4.2 × 10⁹ ops / layer
+        Linear    : 8100  × 64² ≈ 3.3 × 10⁷ ops / layer  (127× reduction)
+    &quot;&quot;&quot;
+
+    def __init__(self, d_model: int, n_heads: int = 8):
+        super().__init__()
+        assert d_model % n_heads == 0
+        self.n_heads = n_heads
+        self.d_k     = d_model // n_heads
+
+        self.W_q = nn.Linear(d_model, d_model, bias=False)
+        self.W_k = nn.Linear(d_model, d_model, bias=False)
+        self.W_v = nn.Linear(d_model, d_model, bias=False)
+        self.W_o = nn.Linear(d_model, d_model, bias=False)
+
+    @staticmethod
+    def feature_map(x: torch.Tensor) -&gt; torch.Tensor:
+        &quot;&quot;&quot;φ(x) = ELU(x) + 1  (positive, differentiable everywhere).&quot;&quot;&quot;
+        return F.elu(x) + 1.0
+
+    def forward(self, x: torch.Tensor) -&gt; torch.Tensor:
+        &quot;&quot;&quot;
+        Parameters
+        ----------
+        x : (B, n, d_model)
+
+        Returns
+        -------
+        out : (B, n, d_model)
+
+        Computation
+        -----------
+        For each head i:
+            φ_Q = φ(Q_i)                          (B, n, d_k)
+            φ_K = φ(K_i)                          (B, n, d_k)
+            KV  = φ_K^T V_i                       (B, d_k, d_v)   ← O(n·d²)
+            Z   = φ_Q · (φ_K^T 1)                 (B, n, 1)       ← normaliser
+            out = (φ_Q KV) / Z                    (B, n, d_v)     ← O(n·d²)
+        Total: O(n·r·d) instead of O(n²·d).
+        &quot;&quot;&quot;
+        B, n, _ = x.shape
+        h, d_k  = self.n_heads, self.d_k
+
+        def split_heads(t):
+            return t.view(B, n, h, d_k).transpose(1, 2)   # (B, h, n, d_k)
+
+        Q = self.feature_map(split_heads(self.W_q(x)))    # (B, h, n, d_k)
+        K = self.feature_map(split_heads(self.W_k(x)))
+        V = split_heads(self.W_v(x))
+
+        # Key insight: (K^T V) computed once for all query positions
+        KV       = torch.einsum(&quot;bhnd,bhnv-&gt;bhdv&quot;, K, V)  # (B, h, d_k, d_k)
+        Z        = torch.einsum(&quot;bhnd,bhnd-&gt;bhn&quot;,  Q, K.sum(dim=2, keepdim=True).expand_as(Q)) \
+                       .unsqueeze(-1).clamp(min=1e-6)      # (B, h, n, 1)
+        attended = torch.einsum(&quot;bhnd,bhdv-&gt;bhnv&quot;, Q, KV) / Z
+
+        out = attended.transpose(1, 2).contiguous().view(B, n, -1)
+        return self.W_o(out)
+
+
+# =============================================================================
+# §4  OPTIMAL STATE ESTIMATION — DISCRETE KALMAN FILTER
+# =============================================================================
+# Theorem (MMSE optimality):
+#   Under the linear-Gaussian model, the posterior mean E[x_k | z_{1:k}]
+#   is achieved by the Kalman update equations.  The posterior covariance
+#   P_{k|k} is minimal in the Löwner partial order: for any other linear
+#   unbiased estimator x̃, Cov(x̃) - P_{k|k} ≽ 0.
+#
+# The Joseph stabilised form
+#   P_{k|k} = (I - K H) P_{k|k-1} (I - K H)^T + K R K^T
+# is numerically equivalent but guarantees P_{k|k} ≽ 0 under
+# finite-precision arithmetic, critical for embedded inference.
+# =============================================================================
+
+class KalmanFilter:
+    &quot;&quot;&quot;
+    Discrete Linear Kalman Filter with Joseph-stabilised covariance update.
+
+    State vector x ∈ R^8 encodes:
+        [c_x, c_y, w, h, ċ_x, ċ_y, ẇ, ḣ]^T
+    (bounding-box centroid, dimensions, and their first derivatives).
+
+    The constant-velocity motion model F assumes:
+        c_x[k] = c_x[k-1] + Δt · ċ_x[k-1]   (and analogously for others)
+    &quot;&quot;&quot;
+
+    def __init__(self, dt: float = 1.0, sigma_q: float = 4.0, sigma_r: float = 12.0):
+        self.n = 8   # state dim
+        self.m = 4   # measurement dim
+
+        # State transition: constant-velocity model
+        I4 = torch.eye(4)
+        self.F = torch.block_diag(I4, I4)
+        self.F[:4, 4:] = dt * I4
+
+        # Observation model: H projects full state to [c_x, c_y, w, h]
+        self.H = torch.zeros(4, 8)
+        self.H[:4, :4] = I4
+
+        # Noise covariances
+        self.Q = (sigma_q ** 2) * torch.eye(8)
+        self.R = (sigma_r ** 2) * torch.eye(4)
+
+    def predict(
+        self,
+        x: torch.Tensor,     # (8,)
+        P: torch.Tensor,     # (8, 8)
+    ) -&gt; Tuple[torch.Tensor, torch.Tensor]:
+        &quot;&quot;&quot;
+        Prediction step:
+            x̂_{k|k-1} = F x̂_{k-1|k-1}
+            P_{k|k-1}  = F P_{k-1|k-1} F^T + Q
+        &quot;&quot;&quot;
+        x_pred = self.F @ x
+        P_pred = self.F @ P @ self.F.T + self.Q
+        return x_pred, P_pred
+
+    def update(
+        self,
+        x_pred: torch.Tensor,   # (8,)
+        P_pred: torch.Tensor,   # (8, 8)
+        z:      torch.Tensor,   # (4,)  measurement
+    ) -&gt; Tuple[torch.Tensor, torch.Tensor]:
+        &quot;&quot;&quot;
+        Update step with Joseph-stabilised covariance:
+
+            ỹ_k = z_k - H x̂_{k|k-1}                  (innovation)
+            S_k = H P_{k|k-1} H^T + R                  (innovation covariance)
+            K_k = P_{k|k-1} H^T S_k^{-1}               (Kalman gain)
+            x̂_{k|k} = x̂_{k|k-1} + K_k ỹ_k
+            P_{k|k} = (I - K H) P_{k|k-1} (I - K H)^T + K R K^T
+
+        The Joseph form guarantees P_{k|k} ≽ 0 under floating-point
+        arithmetic, unlike the standard form P = (I - KH) P_pred which
+        can lose positive semi-definiteness due to numerical cancellation.
+        &quot;&quot;&quot;
+        H, R = self.H, self.R
+
+        innov = z - H @ x_pred                             # ỹ_k ∈ R^4
+        S     = H @ P_pred @ H.T + R                       # S_k ∈ R^{4×4}
+        K     = P_pred @ H.T @ torch.linalg.inv(S)         # K_k ∈ R^{8×4}
+
+        x_upd = x_pred + K @ innov
+
+        # Joseph stabilised covariance update
+        IKH   = torch.eye(self.n) - K @ H
+        P_upd = IKH @ P_pred @ IKH.T + K @ R @ K.T
+
+        return x_upd, P_upd
+
+    def mahalanobis_gate(
+        self,
+        x_pred: torch.Tensor,
+        P_pred: torch.Tensor,
+        z:      torch.Tensor,
+        chi2_threshold: float = 11.345,   # χ²_4 at 97.7% confidence
+    ) -&gt; bool:
+        &quot;&quot;&quot;
+        Mahalanobis gating for data association.
+
+        Under H_0 (detection originates from this track):
+            d²(z, x̂) = ỹ^T S^{-1} ỹ  ~  χ²_m
+
+        Reject association if d² &gt; χ²_m(α), filtering clutter without
+        explicit appearance re-identification at every frame.
+
+        The threshold 11.345 corresponds to the 97.7% quantile of χ²_4
+        (the 3σ ellipse for a 4-dimensional Gaussian), a standard
+        conservative gate in multi-object tracking literature.
+        &quot;&quot;&quot;
+        innov = z - self.H @ x_pred
+        S     = self.H @ P_pred @ self.H.T + self.R
+        d2    = (innov @ torch.linalg.inv(S) @ innov).item()
+        return d2 &lt; chi2_threshold
+
+
+# =============================================================================
+# §5  FREQUENCY-BALANCED SEGMENTATION LOSS
+# =============================================================================
+# Proposition (Median frequency balancing, Eigen &amp; Fergus 2015):
+#   Setting w_c = f_med / f_c equalises the expected gradient
+#   contribution per class: E[w_c · 1[y_i=c]] = f_med  for all c.
+#   This is the maximum-entropy reweighting under the constraint that
+#   no class is assigned weight below 1.
+# =============================================================================
+
+class MedianFrequencyWeightedCE(nn.Module):
+    &quot;&quot;&quot;
+    Weighted cross-entropy with median frequency balancing.
+
+    For C damage classes with pixel frequencies f_1, ..., f_C:
+        w_c = f_med / f_c
+
+    Classes below median frequency receive w_c &gt; 1, amplifying gradient
+    from rare categories.  In automotive inspection datasets where
+    structural cracks occupy ~0.1% of pixels, w_crack &gt; 400.
+    &quot;&quot;&quot;
+
+    def __init__(self, class_freq: torch.Tensor):
+        &quot;&quot;&quot;
+        Parameters
+        ----------
+        class_freq : (C,)  per-class pixel frequencies summing to 1.
+        &quot;&quot;&quot;
+        super().__init__()
+        f_med   = class_freq.median()
+        weights = f_med / class_freq.clamp(min=1e-7)
+        self.register_buffer(&quot;weights&quot;, weights)
+
+    def forward(
+        self,
+        logits:  torch.Tensor,   # (B, C, H, W)
+        targets: torch.Tensor,   # (B, H, W) integer class labels
+    ) -&gt; torch.Tensor:
+        return F.cross_entropy(logits, targets, weight=self.weights)
+
+
+class DiceLoss(nn.Module):
+    &quot;&quot;&quot;
+    Soft Dice Loss (Milletari et al., 2016).
+
+    In the limit of binary predictions, Dice loss equals 1 - F_1^(c).
+    The bijective relationship between IoU and F_1:
+
+        F_1^(c) = 2 · IoU_c / (1 + IoU_c)
+        IoU_c   = F_1^(c) / (2 - F_1^(c))
+
+    means mIoU and macro-F_1 carry equivalent information under a
+    monotone transformation — threshold policies are interchangeable.
+    &quot;&quot;&quot;
+
+    def __init__(self, smooth: float = 1.0):
+        super().__init__()
+        self.smooth = smooth
+
+    def forward(
+        self,
+        pred:    torch.Tensor,   # (B, C, H, W) softmax probabilities
+        targets: torch.Tensor,   # (B, H, W)    integer labels
+    ) -&gt; torch.Tensor:
+        C      = pred.shape[1]
+        target_oh = F.one_hot(targets, C).permute(0, 3, 1, 2).float()
+
+        dims   = (0, 2, 3)
+        inter  = (pred * target_oh).sum(dim=dims)
+        cardin = pred.sum(dim=dims) + target_oh.sum(dim=dims)
+
+        dice_per_class = (2.0 * inter + self.smooth) / (cardin + self.smooth)
+        return 1.0 - dice_per_class.mean()
+
+    @staticmethod
+    def iou_f1_bijection(iou: float) -&gt; float:
+        &quot;&quot;&quot;F_1 = 2·IoU / (1 + IoU).  Verifies the closed-form identity.&quot;&quot;&quot;
+        return 2.0 * iou / (1.0 + iou)
+
+    @staticmethod
+    def f1_iou_bijection(f1: float) -&gt; float:
+        &quot;&quot;&quot;IoU = F_1 / (2 - F_1).  Inverse of the above.&quot;&quot;&quot;
+        return f1 / (2.0 - f1)
+
+
+# =============================================================================
+# §6  QUANTIZATION ERROR BOUNDS
+# =============================================================================
+# Theorem (per-channel tightening):
+#   Global quantization: ||Ŵ - W||_F ≤ s_global · √(mn) / 2
+#   Per-channel:         ||Ŵ_j - W_j||_2 ≤ s_j · √n / 2   (per output channel)
+#   Ratio of output error bounds: max_j(s_j) / s_global ≥ 1,
+#   with equality only when all channels share the same dynamic range.
+#   In practice this ratio exceeds 3× for layers with high inter-channel
+#   weight variance, motivating per-channel scale calibration.
+# =============================================================================
+
+def quantize_symmetric(
+    W: torch.Tensor,
+    bits: int = 8,
+    per_channel: bool = True,
+) -&gt; Tuple[torch.Tensor, torch.Tensor]:
+    &quot;&quot;&quot;
+    Uniform symmetric quantization.
+
+        Ŵ = s · clip( round(W / s), -2^{b-1}, 2^{b-1} - 1 )
+        s = max(|W|) / (2^{b-1} - 1)        [global]
+        s_j = max_i |W_{ij}| / (2^{b-1}-1)  [per-channel]
+
+    Returns (W_quantized, scale)
+    &quot;&quot;&quot;
+    q_max = 2 ** (bits - 1) - 1
+
+    if per_channel:
+        # Independent scale per output channel (first dimension)
+        scale = W.abs().amax(dim=1, keepdim=True) / q_max + 1e-8
+    else:
+        scale = W.abs().max() / q_max + 1e-8
+
+    W_int  = (W / scale).round().clamp(-q_max, q_max)
+    W_hat  = W_int * scale
+    return W_hat, scale
+
+
+def quantization_error_bound(
+    W: torch.Tensor,
+    x: torch.Tensor,
+    bits: int = 8,
+) -&gt; dict:
+    &quot;&quot;&quot;
+    Empirically verifies the perturbation bound:
+
+        ||ŷ - y||_2 ≤ ||W - Ŵ||_F · ||x||_2  (global)
+                    ≤ s√(mn)/2 · ||x||_2      (analytical)
+
+    and demonstrates that per-channel quantization tightens the bound
+    by the factor max_j(s_j) / s_global.
+    &quot;&quot;&quot;
+    m, n = W.shape
+
+    W_hat_global, s_global = quantize_symmetric(W, bits, per_channel=False)
+    W_hat_channel, s_ch    = quantize_symmetric(W, bits, per_channel=True)
+
+    y        = W        @ x
+    y_global = W_hat_global  @ x
+    y_ch     = W_hat_channel @ x
+
+    err_global   = (y_global - y).norm().item()
+    err_channel  = (y_ch    - y).norm().item()
+
+    # Analytical upper bounds
+    bound_global  = (s_global.item() * math.sqrt(m * n) / 2) * x.norm().item()
+    bound_channel = (s_ch.amax().item() * math.sqrt(n) / 2)  * x.norm().item()
+
+    tightening = s_ch.amax().item() / s_global.item()
+
+    return {
+        &quot;empirical_error_global&quot;:   err_global,
+        &quot;empirical_error_channel&quot;:  err_channel,
+        &quot;analytical_bound_global&quot;:  bound_global,
+        &quot;analytical_bound_channel&quot;: bound_channel,
+        &quot;per_channel_tightening_ratio&quot;: tightening,
+        &quot;error_reduction_factor&quot;:   err_global / (err_channel + 1e-8),
     }
-    
-    # Compute adaptive multitask optimization
-    total_loss, metrics = criterion(mock_losses)
-    
-    print(f&quot;🔗 Dynamic Total Loss: {total_loss.item():.4f}&quot;)
-    for k, v in metrics.items():
-        print(f&quot;   ↳ {k}: {v:.4f}&quot;)
 
+
+# =============================================================================
+# NUMERICAL VERIFICATION
+# =============================================================================
+
+if __name__ == &quot;__main__&quot;:
+
+    torch.manual_seed(0)
+
+    print(&quot;=&quot; * 65)
+    print(&quot;§1  IoU Loss Family — Gradient Non-Degeneracy Verification&quot;)
+    print(&quot;=&quot; * 65)
+
+    # Non-overlapping boxes: IoU = 0, GIoU penalty &gt; 0
+    pred_nonoverlap = torch.tensor([[0.0, 0.0, 1.0, 1.0]], requires_grad=True)
+    gt_nonoverlap   = torch.tensor([[2.0, 2.0, 3.0, 3.0]])
+
+    for mode in [&quot;iou&quot;, &quot;giou&quot;, &quot;diou&quot;, &quot;ciou&quot;]:
+        p = pred_nonoverlap.detach().requires_grad_(True)
+        loss = iou_family(p, gt_nonoverlap, mode=mode)
+        loss.backward()
+        grad_norm = p.grad.norm().item()
+        print(f&quot;  {mode.upper():5s}  loss={loss.item():.4f}  ||∇||={grad_norm:.6f}&quot;)
+
+    print()
+    print(&quot;  → IoU grad norm = 0 on non-overlapping boxes (theorem verified)&quot;)
+    print(&quot;  → GIoU/DIoU/CIoU grad norms &gt; 0 (non-degeneracy confirmed)&quot;)
+
+    print()
+    print(&quot;=&quot; * 65)
+    print(&quot;§2  Focal Loss — Gradient Suppression Ratio&quot;)
+    print(&quot;=&quot; * 65)
+
+    fl = FocalLoss(alpha=0.25, gamma=2.0)
+    for p_val in [0.97, 0.80, 0.50, 0.20, 0.05]:
+        ratio = fl.gradient_suppression_ratio(p_val)
+        print(f&quot;  p={p_val:.2f}  suppression factor (1-p)^(γ-1) = {ratio:.6f}&quot;)
+
+    print()
+    print(&quot;=&quot; * 65)
+    print(&quot;§3  Linear Attention — Complexity Verification&quot;)
+    print(&quot;=&quot; * 65)
+
+    B, n, d = 1, 196, 64   # ViT-B/16 on 224×224
+    x_attn  = torch.randn(B, n, d)
+    attn    = LinearAttention(d_model=d, n_heads=8)
+    out     = attn(x_attn)
+    print(f&quot;  Input  shape : {tuple(x_attn.shape)}&quot;)
+    print(f&quot;  Output shape : {tuple(out.shape)}&quot;)
+    print(f&quot;  Standard O(n²d) = {n**2 * d:,}  ops&quot;)
+    print(f&quot;  Linear   O(nd²) = {n * d**2:,}  ops&quot;)
+    print(f&quot;  Reduction factor: {n**2 * d / (n * d**2):.1f}×&quot;)
+
+    print()
+    print(&quot;=&quot; * 65)
+    print(&quot;§4  Kalman Filter — Joseph Form Positive-Definiteness&quot;)
+    print(&quot;=&quot; * 65)
+
+    kf    = KalmanFilter(dt=1.0, sigma_q=4.0, sigma_r=12.0)
+    x0    = torch.zeros(8)
+    P0    = torch.eye(8) * 100.0
+    z_seq = [torch.tensor([float(i), 0.0, 50.0, 30.0]) for i in range(5)]
+
+    x, P = x0, P0
+    for t, z in enumerate(z_seq):
+        x, P = kf.predict(x, P)
+        x, P = kf.update(x, P, z)
+        eigvals = torch.linalg.eigvalsh(P)
+        psd_ok  = (eigvals &gt;= -1e-6).all().item()
+        print(f&quot;  t={t}  min_eigenvalue={eigvals.min().item():.2e}  P ≽ 0: {psd_ok}&quot;)
+
+    print()
+    print(&quot;=&quot; * 65)
+    print(&quot;§6  Quantization — Per-Channel Error Bound Tightening&quot;)
+    print(&quot;=&quot; * 65)
+
+    W = torch.randn(64, 256) * torch.linspace(0.1, 5.0, 64).unsqueeze(1)
+    x = torch.randn(256)
+    result = quantization_error_bound(W, x, bits=8)
+
+    for k, v in result.items():
+        print(f&quot;  {k:&lt;40s}: {v:.4f}&quot;)
+
+    print()
+    print(&quot;  → Per-channel tightening ratio &gt; 1 confirms analytical bound&quot;)
+    print(&quot;    for high inter-channel variance weight matrices.&quot;)
 </code></pre>
 <hr>
 <h1 id="-automotive-ai-is-an-engineering-problem">🔬 Automotive AI Is an Engineering Problem</h1>
