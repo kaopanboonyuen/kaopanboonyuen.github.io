@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>calibration | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/calibration/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/calibration/index.xml" rel="self" type="application/rss+xml" />
+    <description>calibration</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Fri, 01 May 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>calibration</title>
+      <link>https://kaopanboonyuen.github.io/tag/calibration/</link>
+    </image>
+    
+    <item>
+      <title>CAREF: Calibration-Aware Regularization for Explanation Faithfulness Without Rationale Supervision</title>
+      <link>https://kaopanboonyuen.github.io/publication/caref-calibration-aware-regularization-for-explanation-faithfulness-without-rationale-supervision/</link>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/caref-calibration-aware-regularization-for-explanation-faithfulness-without-rationale-supervision/</guid>
+      <description>&lt;!-- ![](featured.png) --&gt;
+&lt;p&gt;CAREF (Calibration-Aware Regularization for Explanation Faithfulness) addresses a fundamental challenge in explainable language modeling: ensuring that generated explanations genuinely reflect the reasoning process that produces model predictions. While modern large language models are capable of generating fluent and persuasive explanations, these explanations are frequently plausible rather than faithful, leading to a disconnect between what the model says and what actually drives its decisions.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CAREF introduces a unified calibration-aware regularization framework that improves explanation faithfulness without requiring rationale supervision. The proposed Sparsity-Calibrated Entropic Divergence (SCED) objective combines entropy-based calibration and adaptive token-level sparsity within a single differentiable loss, encouraging models to focus on compact and decision-relevant token subsets while suppressing diffuse and potentially misleading probability distributions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The central insight behind CAREF is that faithful explanations emerge when predictions are grounded in a stable and causally relevant subset of tokens rather than broad or overconfident distributions. Unlike rationale-supervised approaches that require expensive token-level annotations, CAREF operates solely through distributional regularization and standard task supervision. This makes the framework practical, scalable, and applicable to a wide range of natural language explanation tasks.&lt;/p&gt;
+&lt;p&gt;A key advantage of CAREF is its compatibility with parameter-efficient fine-tuning methods. Because the SCED objective acts directly on model output distributions, it can be integrated seamlessly with existing PEFT techniques such as LoRA, adapters, and attention-only tuning without modifying model architectures. Experimental results across COS-E, ECQA, ComVE, and e-SNLI demonstrate consistent improvements in both predictive accuracy and explanation quality over strong baseline methods.&lt;/p&gt;
+&lt;p&gt;The CAREF-AQ variant further shows that explanation-faithful adaptation can be achieved with remarkable efficiency. By updating only decoder attention query projections—representing just 6.43% of model parameters—CAREF-AQ surpasses both full fine-tuning and widely adopted PEFT baselines including LoRA and AdaLoRA. These findings suggest that calibration-aware sparsity regularization provides an effective mechanism for aligning model explanations with decision-making processes while maintaining computational efficiency.&lt;/p&gt;
+&lt;p&gt;Beyond empirical gains, CAREF highlights a broader direction for trustworthy language model development. By directly shaping predictive distributions through unified entropy calibration and adaptive sparsity control, CAREF offers a principled framework for improving explanation faithfulness without external rationale annotations. This establishes a scalable pathway toward more interpretable, reliable, and transparent language models for real-world deployment.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

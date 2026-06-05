@@ -509,6 +509,45 @@
     <loc>https://kaopanboonyuen.github.io/tag/trustnlp/</loc>
     <lastmod>2026-05-13T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/calibration/</loc>
+    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/publication/caref-calibration-aware-regularization-for-explanation-faithfulness-without-rationale-supervision/</loc>
+    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/explainable-ai/</loc>
+    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/explanation-faithfulness/</loc>
+    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/flan-t5/</loc>
+    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/interpretable-ai/</loc>
+    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/language-models/</loc>
+    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/lora/</loc>
+    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/author/n.-n./</loc>
+    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/natural-language-explanations/</loc>
+    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/parameter-efficient-fine-tuning/</loc>
+    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/peft/</loc>
+    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/tag/sparsity-regularization/</loc>
+    <lastmod>2026-05-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/diffusion-models/</loc>
     <lastmod>2026-03-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -546,9 +585,6 @@
     <lastmod>2026-03-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/claims-processing/</loc>
-    <lastmod>2026-03-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/explainable-ai/</loc>
     <lastmod>2026-03-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/publication/foundations-and-architectures-of-artificial-intelligence-for-motor-insurance/</loc>
@@ -902,9 +938,6 @@
     <loc>https://kaopanboonyuen.github.io/publication/cu-icu-customizing-unsupervised-instruction-finetuned-language-models-for-icu-datasets/</loc>
     <lastmod>2025-07-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/flan-t5/</loc>
-    <lastmod>2025-07-17T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/healthcare-innovation/</loc>
     <lastmod>2025-07-17T00:00:00+00:00</lastmod>
   </url><url>
@@ -915,9 +948,6 @@
     <lastmod>2025-07-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/parameter-efficient-finetuning/</loc>
-    <lastmod>2025-07-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/tag/peft/</loc>
     <lastmod>2025-07-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/category/peft-for-healthcare/</loc>
@@ -1720,8 +1750,6 @@
     <loc>https://kaopanboonyuen.github.io/author/i.-w./</loc>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/author/k.-i./</loc>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/author/n.-n./</loc>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/author/p.-r./</loc>
   </url>
