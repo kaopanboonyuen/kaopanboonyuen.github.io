@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-012-phenome-to-biomarkers/</loc>
+    <lastmod>2026-06-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-011-banking-as-a-system/</loc>
     <lastmod>2026-02-07T00:00:00+00:00</lastmod>
   </url><url>
@@ -206,6 +209,12 @@
     <loc>https://kaopanboonyuen.github.io/courses/2026-01-01-llm-multimodal/lecture-14-deep-learning-modern-ai-final/</loc>
     <lastmod>2026-01-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://kaopanboonyuen.github.io/courses/</loc>
+    <lastmod>2026-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kaopanboonyuen.github.io/</loc>
+    <lastmod>2026-06-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/artificial-intelligence/</loc>
     <lastmod>2026-05-19T09:00:00+00:00</lastmod>
   </url><url>
@@ -243,9 +252,6 @@
     <lastmod>2026-05-19T09:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tags/</loc>
-    <lastmod>2026-05-19T09:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/</loc>
     <lastmod>2026-05-19T09:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/trans-gms-llm/</loc>
@@ -685,9 +691,6 @@
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/winter-travel/</loc>
     <lastmod>2026-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://kaopanboonyuen.github.io/courses/</loc>
-    <lastmod>2026-02-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kaopanboonyuen.github.io/tag/clinical-ai/</loc>
     <lastmod>2026-01-19T00:00:00+00:00</lastmod>

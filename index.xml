@@ -5,12 +5,1461 @@
     <link>https://kaopanboonyuen.github.io/</link>
       <atom:link href="https://kaopanboonyuen.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Teerapong Panboonyuen</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Tue, 19 May 2026 09:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Mon, 15 Jun 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>Teerapong Panboonyuen</title>
       <link>https://kaopanboonyuen.github.io/</link>
     </image>
+    
+    <item>
+      <title>DK-012 — From Phenome to Biomarkers</title>
+      <link>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-012-phenome-to-biomarkers/</link>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-012-phenome-to-biomarkers/</guid>
+      <description>&lt;hr&gt;
+&lt;h1 id=&#34;-from-dna-to-diagnosis-phenomics-genomics-and-machine-learning-for-biomarker-discovery&#34;&gt;🧬 From DNA to Diagnosis: Phenomics, Genomics, and Machine Learning for Biomarker Discovery&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;The genome is the hardware. The phenome is the software running on it. And machine learning is the debugger.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;When most people hear &amp;ldquo;AI in medicine,&amp;rdquo; they imagine a robot doctor scanning X-rays.&lt;/p&gt;
+&lt;p&gt;But the real frontier is quieter and far more profound: &lt;strong&gt;teaching machines to read the molecular language of life itself&lt;/strong&gt; — encoded in your DNA, your metabolites, your proteins, your vital signs.&lt;/p&gt;
+&lt;p&gt;This guide takes you from the very beginning — &lt;em&gt;what is DNA? what is a phenome?&lt;/em&gt; — all the way to production-grade machine learning pipelines used in cutting-edge research. Whether you are a biology student learning to code, or a data scientist learning biology, this is your complete map.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;The Biological Foundation: DNA, Genes, and the Central Dogma&lt;/li&gt;
+&lt;li&gt;What Is a Phenome? From Traits to Omics&lt;/li&gt;
+&lt;li&gt;The Omics Universe: Genomics, Transcriptomics, Metabolomics, and More&lt;/li&gt;
+&lt;li&gt;Why This Is a Machine Learning Problem&lt;/li&gt;
+&lt;li&gt;Part A: High-Dimensional Tabular Data — Feature Selection and Tabular ML&lt;/li&gt;
+&lt;li&gt;Part B: Making Models Trustworthy — Imbalanced Data and Interpretability&lt;/li&gt;
+&lt;li&gt;Part C: Time-Series, Biosignals, and Survival Analysis&lt;/li&gt;
+&lt;li&gt;Putting It All Together: A Research Pipeline&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-chapter-1-the-biological-foundation&#34;&gt;🔬 Chapter 1: The Biological Foundation&lt;/h1&gt;
+&lt;h2 id=&#34;11-what-is-dna&#34;&gt;1.1 What Is DNA?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;DNA&lt;/strong&gt; stands for &lt;strong&gt;Deoxyribonucleic Acid&lt;/strong&gt;. It is the molecule that encodes every instruction your body has ever received — from &amp;ldquo;build a liver&amp;rdquo; to &amp;ldquo;produce insulin when blood sugar rises.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Think of DNA like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DNA is the world&#39;s most compact hard drive.
+In every single cell of your body (~37 trillion cells),
+there is a complete copy of your DNA — 3 billion letters long —
+coiled into a space smaller than 6 micrometers.
+
+If you stretched your DNA end to end, it would reach the Sun and back 300 times.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;the-alphabet-of-life&#34;&gt;The Alphabet of Life&lt;/h3&gt;
+&lt;p&gt;DNA is written in an alphabet of only &lt;strong&gt;four letters&lt;/strong&gt;, called &lt;strong&gt;nucleotide bases&lt;/strong&gt;:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Letter&lt;/th&gt;
+&lt;th&gt;Base&lt;/th&gt;
+&lt;th&gt;Pairs With&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;A&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Adenine&lt;/td&gt;
+&lt;td&gt;T&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Thymine&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;C&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Cytosine&lt;/td&gt;
+&lt;td&gt;G&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;G&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Guanine&lt;/td&gt;
+&lt;td&gt;C&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;These four letters, arranged in specific sequences, encode all the information needed to build and run a human body.&lt;/p&gt;
+&lt;h3 id=&#34;the-double-helix&#34;&gt;The Double Helix&lt;/h3&gt;
+&lt;p&gt;DNA exists as a &lt;strong&gt;double helix&lt;/strong&gt; — two complementary strands twisted together like a spiral staircase. The famous Watson-Crick structure (1953) revealed that the two strands are antiparallel and held together by hydrogen bonds between complementary base pairs (A-T and G-C).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;5&#39; — A — T — G — C — A — G — T — 3&#39;  (Strand 1)
+     |   |   |   |   |   |   |
+3&#39; — T — A — C — G — T — C — A — 5&#39;  (Strand 2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This complementarity is what allows DNA to be copied faithfully during cell division — an engineering feat of breathtaking precision.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;12-genes-functional-units-of-dna&#34;&gt;1.2 Genes: Functional Units of DNA&lt;/h2&gt;
+&lt;p&gt;Your ~3 billion base pairs are organized into &lt;strong&gt;~20,000–25,000 genes&lt;/strong&gt;. A gene is a specific sequence of DNA that encodes a functional product — usually a &lt;strong&gt;protein&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;But here is a crucial insight that surprises many students:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Only about 1.5% of the human genome encodes proteins.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The rest was once dismissively called &amp;ldquo;junk DNA.&amp;rdquo; We now know much of it:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Regulates when and how genes are expressed&lt;/li&gt;
+&lt;li&gt;Encodes regulatory RNA molecules&lt;/li&gt;
+&lt;li&gt;Maintains chromosome structure&lt;/li&gt;
+&lt;li&gt;Has roles we are still discovering&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;gene-expression-from-dna-to-protein&#34;&gt;Gene Expression: From DNA to Protein&lt;/h3&gt;
+&lt;p&gt;The pathway from gene to functional protein follows what biologists call &lt;strong&gt;The Central Dogma&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DNA → (Transcription) → RNA → (Translation) → Protein → Function
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Step 1: Transcription&lt;/strong&gt;&lt;br&gt;
+The DNA is &amp;ldquo;read&amp;rdquo; and a complementary strand of &lt;strong&gt;messenger RNA (mRNA)&lt;/strong&gt; is synthesized. This happens in the cell nucleus.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 2: RNA Processing&lt;/strong&gt;&lt;br&gt;
+The pre-mRNA is processed — introns (non-coding regions) are spliced out, exons (coding regions) are joined. This is &lt;strong&gt;alternative splicing&lt;/strong&gt;, which allows one gene to produce multiple protein variants.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 3: Translation&lt;/strong&gt;&lt;br&gt;
+The mRNA travels to the ribosome, where &lt;strong&gt;transfer RNAs (tRNAs)&lt;/strong&gt; read the message in triplets (&lt;strong&gt;codons&lt;/strong&gt;) and link the corresponding amino acids together to form a protein chain.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Step 4: Protein Folding and Function&lt;/strong&gt;&lt;br&gt;
+The protein chain folds into its 3D structure (often with help from &lt;strong&gt;chaperone proteins&lt;/strong&gt;) and carries out its biological function — as an enzyme, structural component, signaling molecule, or receptor.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;13-genetic-variation-why-we-are-all-different&#34;&gt;1.3 Genetic Variation: Why We Are All Different&lt;/h2&gt;
+&lt;p&gt;If all humans share ~99.9% of their DNA, what accounts for the incredible diversity in disease risk, drug response, and physical traits?&lt;/p&gt;
+&lt;p&gt;The answer lies in the &lt;strong&gt;0.1%&lt;/strong&gt; — and how that 0.1% is distributed across the genome.&lt;/p&gt;
+&lt;h3 id=&#34;single-nucleotide-polymorphisms-snps&#34;&gt;Single Nucleotide Polymorphisms (SNPs)&lt;/h3&gt;
+&lt;p&gt;The most common type of genetic variation is the &lt;strong&gt;SNP&lt;/strong&gt; (pronounced &amp;ldquo;snip&amp;rdquo;): a position in the genome where a single nucleotide differs between individuals.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Population reference:  ...ACGT[A]CCGT...
+Individual 1:          ...ACGT[A]CCGT...  (Reference allele: A)
+Individual 2:          ...ACGT[G]CCGT...  (Alternate allele: G)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There are roughly &lt;strong&gt;10 million common SNPs&lt;/strong&gt; in the human genome. Each can be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Benign&lt;/strong&gt; — a normal variation with no functional consequence&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Functional&lt;/strong&gt; — alters protein structure or gene regulation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pathogenic&lt;/strong&gt; — directly causes or strongly predisposes to disease&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;genotyping-arrays-and-gwas&#34;&gt;Genotyping Arrays and GWAS&lt;/h3&gt;
+&lt;p&gt;Modern &lt;strong&gt;genotyping arrays&lt;/strong&gt; (chips like the Illumina GSA) can measure &lt;strong&gt;500,000 to 2 million SNPs&lt;/strong&gt; simultaneously from a saliva sample. This data forms the basis of &lt;strong&gt;Genome-Wide Association Studies (GWAS)&lt;/strong&gt; — which scan millions of SNPs across thousands of individuals to identify variants associated with disease.&lt;/p&gt;
+&lt;p&gt;A classic GWAS result is a &lt;strong&gt;Manhattan plot&lt;/strong&gt; — named for its resemblance to a city skyline — where peaks indicate genomic regions significantly associated with a trait.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-chapter-2-what-is-a-phenome&#34;&gt;🌐 Chapter 2: What Is a Phenome?&lt;/h1&gt;
+&lt;h2 id=&#34;21-from-phenotype-to-phenome&#34;&gt;2.1 From Phenotype to Phenome&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;phenotype&lt;/strong&gt; is any observable characteristic of an organism: height, blood pressure, fasting glucose, the color of your eyes, whether you have type 2 diabetes.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;phenome&lt;/strong&gt; is the &lt;em&gt;complete collection of all phenotypes&lt;/em&gt; of an individual — across all conditions, time points, and scales of measurement.&lt;/p&gt;
+&lt;p&gt;If the genome asks &amp;ldquo;what could happen?&amp;rdquo; the phenome asks &amp;ldquo;what actually is happening?&amp;rdquo;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Genome     → Blueprint (potential)
+Phenome    → Reality (expression)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;the-phenome-is-vast-and-multidimensional&#34;&gt;The Phenome Is Vast and Multidimensional&lt;/h3&gt;
+&lt;p&gt;Consider a single patient in a hospital system:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Clinical measurements&lt;/strong&gt;: blood pressure, BMI, heart rate, spirometry values&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Laboratory values&lt;/strong&gt;: CBC, metabolic panel, lipid panel, HbA1c, thyroid hormones&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Imaging features&lt;/strong&gt;: CT lung density, retinal vessel diameter, cardiac wall thickness&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Behavioral phenotypes&lt;/strong&gt;: sleep patterns, physical activity, dietary intake&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Electronic Health Record (EHR) codes&lt;/strong&gt;: ICD-10 diagnoses, procedure codes, medication histories&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A comprehensive phenome dataset for one patient might contain &lt;strong&gt;hundreds to thousands of variables&lt;/strong&gt; measured over years. Multiply that by 100,000 patients, and you begin to understand why this is fundamentally a big data problem.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;22-phewas-phenome-wide-association-studies&#34;&gt;2.2 PheWAS: Phenome-Wide Association Studies&lt;/h2&gt;
+&lt;p&gt;Just as GWAS scans the genome for variants associated with one disease, &lt;strong&gt;PheWAS&lt;/strong&gt; (Phenome-Wide Association Study) scans the phenome — asking:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Given this one genetic variant (or drug, or exposure), what are ALL its associations across the entire landscape of clinical phenotypes?&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This &amp;ldquo;reverse GWAS&amp;rdquo; approach has revealed surprising pleiotropy — the same genetic variant influencing seemingly unrelated conditions — and has been instrumental in drug repurposing.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;23-the-phenome-datasets-you-will-use&#34;&gt;2.3 The Phenome Datasets You Will Use&lt;/h2&gt;
+&lt;p&gt;In this course, we work with two phenome datasets:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Phenome Dataset 1 (Phenome-1)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Source: Population cohort (e.g., UK Biobank-style)&lt;/li&gt;
+&lt;li&gt;Variables: ~500 phenotypic variables per participant&lt;/li&gt;
+&lt;li&gt;Sample size: ~10,000 individuals&lt;/li&gt;
+&lt;li&gt;Use case: Feature selection, biomarker discovery&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Phenome Dataset 2 (Phenome-2)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Source: Clinical biobank with linked EHR&lt;/li&gt;
+&lt;li&gt;Variables: ~2,000 variables including lab values, medications, ICD codes&lt;/li&gt;
+&lt;li&gt;Special feature: Longitudinal — multiple timepoints per patient&lt;/li&gt;
+&lt;li&gt;Use case: Survival analysis, risk stratification&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-chapter-3-the-omics-universe&#34;&gt;🧪 Chapter 3: The Omics Universe&lt;/h1&gt;
+&lt;h2 id=&#34;31-layers-of-biological-information&#34;&gt;3.1 Layers of Biological Information&lt;/h2&gt;
+&lt;p&gt;Modern biology has fractured into a collection of &amp;ldquo;omics&amp;rdquo; disciplines, each studying a different layer of molecular information:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DNA ─────────────── Genomics
+  ↓
+RNA ─────────────── Transcriptomics
+  ↓
+Protein ─────────── Proteomics
+  ↓
+Metabolite ──────── Metabolomics
+  ↓
+Microbiome ──────── Metagenomics
+  ↓
+Environment ─────── Exposomics
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Each layer adds a new dimension to understanding human health and disease. Together, they constitute a &lt;strong&gt;multi-omics&lt;/strong&gt; picture.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;32-metabolomics-the-chemical-fingerprint-of-life&#34;&gt;3.2 Metabolomics: The Chemical Fingerprint of Life&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Metabolomics&lt;/strong&gt; measures the small molecules (&lt;strong&gt;metabolites&lt;/strong&gt;) present in a biological sample — blood, urine, cerebrospinal fluid, or tissue.&lt;/p&gt;
+&lt;p&gt;Metabolites are the &lt;strong&gt;end products of metabolism&lt;/strong&gt;: the sugars, amino acids, lipids, nucleotides, and their countless derivatives that your cells produce and consume every moment.&lt;/p&gt;
+&lt;h3 id=&#34;why-metabolomics-is-powerful&#34;&gt;Why Metabolomics Is Powerful&lt;/h3&gt;
+&lt;p&gt;Unlike genomics (which is static — your DNA doesn&amp;rsquo;t change), the metabolome is &lt;strong&gt;dynamic&lt;/strong&gt;. It reflects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What you ate last night&lt;/li&gt;
+&lt;li&gt;Whether you exercised this morning&lt;/li&gt;
+&lt;li&gt;Your current disease state&lt;/li&gt;
+&lt;li&gt;How your medications are being processed&lt;/li&gt;
+&lt;li&gt;Your microbiome&amp;rsquo;s activity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;Example: Type 2 Diabetes Metabolic Signature
+
+Elevated:
+  • Branched-chain amino acids (leucine, isoleucine, valine)
+  • Triglycerides and ceramides
+  • Gluconeogenic intermediates
+
+Depleted:
+  • Bile acids (altered by gut dysbiosis)
+  • Omega-3 fatty acids
+  • Certain acylcarnitines
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;These patterns can &lt;strong&gt;precede clinical diagnosis by years&lt;/strong&gt; — which is why metabolomics is so powerful for early biomarker discovery.&lt;/p&gt;
+&lt;h3 id=&#34;measurement-technologies&#34;&gt;Measurement Technologies&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Nuclear Magnetic Resonance (NMR) Spectroscopy&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Measures ~100–200 metabolites&lt;/li&gt;
+&lt;li&gt;Highly reproducible and quantitative&lt;/li&gt;
+&lt;li&gt;Great for targeted metabolite classes (lipoproteins, amino acids)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Mass Spectrometry (MS)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Untargeted: can detect 1,000–10,000 metabolite features&lt;/li&gt;
+&lt;li&gt;Targeted: quantifies specific metabolites with high accuracy&lt;/li&gt;
+&lt;li&gt;Combined with chromatography (LC-MS, GC-MS) for separation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;the-data-problem&#34;&gt;The Data Problem&lt;/h3&gt;
+&lt;p&gt;A typical untargeted metabolomics study produces a matrix of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rows&lt;/strong&gt;: samples (patients or time points)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Columns&lt;/strong&gt;: metabolite features (m/z values or named metabolites)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Values&lt;/strong&gt;: peak intensities&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;Sample × Feature matrix:
+         Metabolite_1  Metabolite_2  ...  Metabolite_8000
+Sample_1     1234.5        678.2    ...      99.1
+Sample_2      890.1       1456.8    ...     234.7
+...
+Sample_500   2345.6        123.4    ...     567.3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This high-dimensional, noisy, collinear matrix is a perfect candidate for ML — and a nightmare for traditional statistical methods.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;33-dna-signal-processing-from-raw-reads-to-features&#34;&gt;3.3 DNA Signal Processing: From Raw Reads to Features&lt;/h2&gt;
+&lt;p&gt;Modern DNA sequencing (Next-Generation Sequencing, NGS) produces raw &lt;strong&gt;reads&lt;/strong&gt; — short fragments of DNA sequence. Converting these to usable features involves:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Base Calling&lt;/strong&gt;: Converting electrical signals to nucleotide letters (A, T, G, C)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Quality Control&lt;/strong&gt;: Filtering low-quality reads, trimming adapters&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. Alignment&lt;/strong&gt;: Mapping reads to the reference human genome (hg38)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. Variant Calling&lt;/strong&gt;: Identifying SNPs, insertions, deletions (indels), and structural variants&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5. Annotation&lt;/strong&gt;: Mapping variants to genes, regulatory regions, known disease databases&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6. Feature Engineering&lt;/strong&gt;: Converting variant calls to numerical features (e.g., dosage encoding: 0, 1, 2 for the number of alternate alleles at each SNP)&lt;/p&gt;
+&lt;p&gt;The final product is a &lt;strong&gt;genotype matrix&lt;/strong&gt;: patients × SNPs, with values 0, 1, or 2.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-chapter-4-why-this-is-a-machine-learning-problem&#34;&gt;📊 Chapter 4: Why This Is a Machine Learning Problem&lt;/h1&gt;
+&lt;h2 id=&#34;41-the-dimensionality-challenge&#34;&gt;4.1 The Dimensionality Challenge&lt;/h2&gt;
+&lt;p&gt;Here is the fundamental challenge of omics data:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Typical study:
+  Samples (n):    500 – 100,000 people
+  Features (p):   500 – 10,000,000 variables (SNPs, metabolites, genes)
+
+Classical statistics assumes n &amp;gt;&amp;gt; p.
+In omics, we often have p &amp;gt;&amp;gt; n.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When features outnumber samples, classical regression &lt;strong&gt;overfits catastrophically&lt;/strong&gt;. You can fit any pattern — including pure noise — with enough features.&lt;/p&gt;
+&lt;p&gt;This is the &lt;strong&gt;curse of dimensionality&lt;/strong&gt;, and solving it is the central challenge of computational biology.&lt;/p&gt;
+&lt;h2 id=&#34;42-the-signal-to-noise-challenge&#34;&gt;4.2 The Signal-to-Noise Challenge&lt;/h2&gt;
+&lt;p&gt;Biological data is extraordinarily noisy:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Batch effects: samples processed on different days produce systematic biases&lt;/li&gt;
+&lt;li&gt;Biological variability: even identical twins differ in their metabolome&lt;/li&gt;
+&lt;li&gt;Technical variability: measurement error from instruments&lt;/li&gt;
+&lt;li&gt;Missing data: not every test is run for every patient&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Real biological signals — the SNP that genuinely predicts heart disease, the metabolite that rises before liver failure — are often &lt;strong&gt;tiny effects buried in noise&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;43-the-interpretability-challenge&#34;&gt;4.3 The Interpretability Challenge&lt;/h2&gt;
+&lt;p&gt;In medicine, a prediction model is only useful if clinicians can understand and trust it.&lt;/p&gt;
+&lt;p&gt;A black-box model that says &amp;ldquo;this patient has an 87% chance of cardiovascular event&amp;rdquo; is less useful than one that says &amp;ldquo;this patient&amp;rsquo;s elevated branched-chain amino acids and reduced bile acids, combined with their APOE ε4 genotype, place them in a high-risk cluster.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Interpretability is not a luxury in clinical ML. It is a requirement.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-chapter-5-part-a--high-dimensional-tabular-data&#34;&gt;🔮 Chapter 5: Part A — High-Dimensional Tabular Data&lt;/h1&gt;
+&lt;h2 id=&#34;51-feature-selection-the-lasso-approach&#34;&gt;5.1 Feature Selection: The LASSO Approach&lt;/h2&gt;
+&lt;h3 id=&#34;the-problem-too-many-variables&#34;&gt;The Problem: Too Many Variables&lt;/h3&gt;
+&lt;p&gt;Imagine you have 500 patients and 5,000 metabolite measurements. You want to predict who will develop type 2 diabetes in the next 5 years.&lt;/p&gt;
+&lt;p&gt;If you naively run a logistic regression with all 5,000 features:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The model will overfit perfectly to your training data&lt;/li&gt;
+&lt;li&gt;It will fail completely on new patients&lt;/li&gt;
+&lt;li&gt;You will have no idea which metabolites actually matter&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You need &lt;strong&gt;feature selection&lt;/strong&gt;: the process of identifying the small subset of features that genuinely predict the outcome.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-main-model-lasso-l1-regularization&#34;&gt;The Main Model: LASSO (L1 Regularization)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;LASSO&lt;/strong&gt; stands for &lt;strong&gt;Least Absolute Shrinkage and Selection Operator&lt;/strong&gt;. It was proposed by Robert Tibshirani in 1996 and remains one of the most important tools in computational biology.&lt;/p&gt;
+&lt;h4 id=&#34;the-intuition&#34;&gt;The Intuition&lt;/h4&gt;
+&lt;p&gt;Regular linear regression minimizes:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Loss = Σ(y_i - ŷ_i)²
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;LASSO adds a penalty term:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;LASSO Loss = Σ(y_i - ŷ_i)² + λ × Σ|β_j|
+             ─────────────────  ─────────────────
+             Fit to data           Penalty for
+                                   large coefficients
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The key insight: &lt;strong&gt;the L1 penalty produces sparse solutions&lt;/strong&gt;. As λ increases, LASSO drives more and more coefficients exactly to zero — effectively performing automatic feature selection.&lt;/p&gt;
+&lt;h4 id=&#34;why-l1-produces-sparsity-the-geometric-intuition&#34;&gt;Why L1 Produces Sparsity (The Geometric Intuition)&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;L1 constraint region: A diamond (corners on axes)
+L2 constraint region: A circle (smooth everywhere)
+
+The optimal solution often touches the L1 diamond at a corner —
+where one coefficient is zero.
+
+This does NOT happen with L2 (Ridge) regression,
+whose circular constraint region rarely touches the axes.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;the-regularization-path&#34;&gt;The Regularization Path&lt;/h4&gt;
+&lt;p&gt;The most powerful way to use LASSO is to solve it for &lt;strong&gt;many values of λ&lt;/strong&gt; simultaneously:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
+from sklearn.linear_model import LassoCV
+from sklearn.preprocessing import StandardScaler
+
+# Standardize features (CRITICAL for LASSO — coefficients must be comparable)
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# Cross-validated LASSO — finds optimal λ automatically
+lasso_cv = LassoCV(
+    alphas=np.logspace(-4, 1, 100),  # λ values from 0.0001 to 10
+    cv=10,                            # 10-fold cross-validation
+    max_iter=10000,
+    random_state=42
+)
+lasso_cv.fit(X_scaled, y)
+
+# Extract selected features
+selected_mask = lasso_cv.coef_ != 0
+selected_features = feature_names[selected_mask]
+print(f&amp;quot;Selected {selected_mask.sum()} features from {X.shape[1]} total&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;reading-the-regularization-path-plot&#34;&gt;Reading the Regularization Path Plot&lt;/h4&gt;
+&lt;p&gt;A &lt;strong&gt;regularization path plot&lt;/strong&gt; shows how each coefficient changes as λ varies:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Coefficient
+value
+    ^
+0.5 |       ──────────────── Feature A
+    |      /
+0.0 |─────/──────────────── (most features stay at 0)
+    |    /
+-0.3|   ──────────────────── Feature B
+    +──────────────────────────────────&amp;gt; log(λ)
+    large λ                    small λ
+    (few features)         (all features included)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Reading this plot tells you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Which features enter the model first&lt;/strong&gt; (at large λ) are the most robustly predictive&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The λ at the elbow&lt;/strong&gt; (selected by cross-validation) gives your final feature set&lt;/li&gt;
+&lt;li&gt;Features that enter only at very small λ are likely noise&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;choosing-λ-the-cross-validation-criterion&#34;&gt;Choosing λ: The Cross-Validation Criterion&lt;/h4&gt;
+&lt;p&gt;Two common CV criteria:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;lambda.min&lt;/code&gt;&lt;/strong&gt;: The λ that minimizes cross-validation error — gives maximum predictive accuracy&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;lambda.1se&lt;/code&gt;&lt;/strong&gt;: The largest λ whose CV error is within 1 standard error of the minimum — gives sparser, more conservative model&lt;/p&gt;
+&lt;p&gt;For &lt;strong&gt;biomarker discovery&lt;/strong&gt;, prefer &lt;code&gt;lambda.1se&lt;/code&gt;: you want the smallest set of features that still predicts well.&lt;/p&gt;
+&lt;h4 id=&#34;visualizing-with-pca-and-umap&#34;&gt;Visualizing with PCA and UMAP&lt;/h4&gt;
+&lt;p&gt;After LASSO selects features, use dimensionality reduction to visualize patient clustering:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from sklearn.decomposition import PCA
+import umap
+import matplotlib.pyplot as plt
+
+X_selected = X_scaled[:, selected_mask]
+
+# PCA — linear, interpretable
+pca = PCA(n_components=2)
+X_pca = pca.fit_transform(X_selected)
+
+# UMAP — nonlinear, reveals clusters
+reducer = umap.UMAP(n_neighbors=15, min_dist=0.1, random_state=42)
+X_umap = reducer.fit_transform(X_selected)
+
+fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+for ax, embedding, title in zip(
+    axes,
+    [X_pca, X_umap],
+    [&amp;quot;PCA of LASSO-selected features&amp;quot;, &amp;quot;UMAP of LASSO-selected features&amp;quot;]
+):
+    scatter = ax.scatter(
+        embedding[:, 0], embedding[:, 1],
+        c=y, cmap=&#39;RdYlBu&#39;, alpha=0.7, s=30
+    )
+    ax.set_title(title, fontsize=13)
+    plt.colorbar(scatter, ax=ax, label=&#39;Outcome&#39;)
+plt.tight_layout()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;PCA&lt;/strong&gt; is linear and interpretable — the axes represent linear combinations of features with maximum variance. Great for detecting batch effects and outliers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UMAP&lt;/strong&gt; is nonlinear and reveals local structure — clusters in UMAP space often correspond to meaningful disease subtypes. Great for hypothesis generation.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;notebook-comparison-elastic-net-boruta-mrmr&#34;&gt;Notebook Comparison: Elastic Net, Boruta, mRMR&lt;/h3&gt;
+&lt;h4 id=&#34;elastic-net&#34;&gt;Elastic Net&lt;/h4&gt;
+&lt;p&gt;Elastic Net combines L1 and L2 penalties:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Elastic Net Loss = Σ(y_i - ŷ_i)² + λ₁ × Σ|β_j| + λ₂ × Σβ_j²
+                                     ─── L1 ────   ─── L2 ───
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;When to use over LASSO&lt;/strong&gt;: When features are highly correlated (e.g., metabolites from the same pathway). LASSO arbitrarily picks one from a correlated group; Elastic Net tends to include all of them at reduced coefficients.&lt;/p&gt;
+&lt;h4 id=&#34;boruta&#34;&gt;Boruta&lt;/h4&gt;
+&lt;p&gt;Boruta is a &lt;strong&gt;wrapper method&lt;/strong&gt; built on Random Forest:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from boruta import BorutaPy
+from sklearn.ensemble import RandomForestClassifier
+
+rf = RandomForestClassifier(n_jobs=-1, class_weight=&#39;balanced&#39;, max_depth=5)
+boruta = BorutaPy(rf, n_estimators=&#39;auto&#39;, verbose=2, random_state=42)
+boruta.fit(X_scaled, y)
+
+# Three categories of features:
+confirmed = feature_names[boruta.support_]          # Definitely relevant
+tentative = feature_names[boruta.support_weak_]     # Possibly relevant
+rejected = feature_names[~boruta.support_ &amp;amp; ~boruta.support_weak_]  # Noise
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;How it works&lt;/strong&gt;: Creates &amp;ldquo;shadow features&amp;rdquo; — shuffled copies of each real feature. A feature is accepted only if it consistently outperforms its own shuffled version across many random forest runs. This controls family-wise error rate, making it statistically rigorous.&lt;/p&gt;
+&lt;h4 id=&#34;mrmr-minimum-redundancy-maximum-relevance&#34;&gt;mRMR (Minimum Redundancy Maximum Relevance)&lt;/h4&gt;
+&lt;p&gt;mRMR selects features that are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Maximally relevant&lt;/strong&gt; to the outcome (high mutual information with y)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Minimally redundant&lt;/strong&gt; with each other (low mutual information among features)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from mrmr import mrmr_classif
+
+# Select top 50 features
+selected_features = mrmr_classif(X=df_features, y=df_target, K=50)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;When to use&lt;/strong&gt;: When you want a diverse panel of biomarkers from different biological pathways — not five variants of the same measurement.&lt;/p&gt;
+&lt;h4 id=&#34;comparison-table&#34;&gt;Comparison Table&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Method&lt;/th&gt;
+&lt;th&gt;Statistical Basis&lt;/th&gt;
+&lt;th&gt;Handles Correlation&lt;/th&gt;
+&lt;th&gt;Speed&lt;/th&gt;
+&lt;th&gt;Interpretability&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;LASSO&lt;/td&gt;
+&lt;td&gt;Convex optimization&lt;/td&gt;
+&lt;td&gt;Poorly (picks one)&lt;/td&gt;
+&lt;td&gt;Fast&lt;/td&gt;
+&lt;td&gt;Coefficients&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Elastic Net&lt;/td&gt;
+&lt;td&gt;Convex optimization&lt;/td&gt;
+&lt;td&gt;Well&lt;/td&gt;
+&lt;td&gt;Fast&lt;/td&gt;
+&lt;td&gt;Coefficients&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Boruta&lt;/td&gt;
+&lt;td&gt;Permutation testing&lt;/td&gt;
+&lt;td&gt;Reasonably&lt;/td&gt;
+&lt;td&gt;Slow&lt;/td&gt;
+&lt;td&gt;Importance&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mRMR&lt;/td&gt;
+&lt;td&gt;Information theory&lt;/td&gt;
+&lt;td&gt;By design&lt;/td&gt;
+&lt;td&gt;Medium&lt;/td&gt;
+&lt;td&gt;Mutual info&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;52-tabular-ml-xgboost&#34;&gt;5.2 Tabular ML: XGBoost&lt;/h2&gt;
+&lt;h3 id=&#34;why-tree-based-methods-dominate-omics&#34;&gt;Why Tree-Based Methods Dominate Omics&lt;/h3&gt;
+&lt;p&gt;Before explaining XGBoost, it helps to understand &lt;strong&gt;why gradient boosting machines have dominated tabular ML competitions and clinical research alike&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Biological tabular data has several properties that make it hard for neural networks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Mixed feature types&lt;/strong&gt;: continuous measurements mixed with binary indicators and ordinal categories&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Missing values&lt;/strong&gt;: clinical data routinely has 10–40% missingness&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Non-linear interactions&lt;/strong&gt;: the effect of metabolite A might depend on the level of gene B&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Small-to-medium datasets&lt;/strong&gt;: hundreds or thousands of samples, not millions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Neural networks excel at finding patterns in millions of identical-format examples (images, text). Decision trees excel at heterogeneous tabular data with complex feature interactions. And &lt;strong&gt;XGBoost combines hundreds of trees into an ensemble that is nearly unbeatable&lt;/strong&gt; on this type of data.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-main-model-xgboost-extreme-gradient-boosting&#34;&gt;The Main Model: XGBoost (eXtreme Gradient Boosting)&lt;/h3&gt;
+&lt;h4 id=&#34;from-decision-tree-to-ensemble-building-the-intuition&#34;&gt;From Decision Tree to Ensemble: Building the Intuition&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;A single decision tree&lt;/strong&gt; makes predictions by asking a series of yes/no questions:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Is fasting_glucose &amp;gt; 100 mg/dL?
+    YES → Is BMI &amp;gt; 30?
+                YES → Predict: High risk (score: 0.82)
+                NO  → Predict: Medium risk (score: 0.61)
+    NO  → Is age &amp;gt; 50?
+                YES → Predict: Low-medium risk (score: 0.34)
+                NO  → Predict: Low risk (score: 0.12)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;One tree is brittle — a slight change in training data produces a very different tree.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Random Forest&lt;/strong&gt; trains hundreds of trees on bootstrap samples and averages their predictions — reducing variance but using each tree independently.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Gradient Boosting&lt;/strong&gt; takes a fundamentally different approach: trees are built &lt;strong&gt;sequentially&lt;/strong&gt;, each one correcting the mistakes of all previous trees.&lt;/p&gt;
+&lt;h4 id=&#34;the-gradient-boosting-algorithm-intuitive-version&#34;&gt;The Gradient Boosting Algorithm (Intuitive Version)&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;Start: Predict the same value for all patients (e.g., mean of y)
+       Residuals = Actual y - Predicted y  ← these are your &amp;quot;mistakes&amp;quot;
+
+Iteration 1:
+  Train Tree_1 to predict the residuals
+  Update predictions: ŷ ← ŷ + η × Tree_1(x)
+  Compute new residuals
+
+Iteration 2:
+  Train Tree_2 on the new residuals
+  Update predictions: ŷ ← ŷ + η × Tree_1(x) + η × Tree_2(x)
+  ...
+
+Continue for T iterations (trees)
+Final prediction: F(x) = η × Σᵢ Treeᵢ(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;η&lt;/code&gt; (eta) is the &lt;strong&gt;learning rate&lt;/strong&gt; — a small number (0.01–0.3) that prevents overfitting by shrinking each tree&amp;rsquo;s contribution.&lt;/p&gt;
+&lt;h4 id=&#34;what-makes-xgboost-extreme&#34;&gt;What Makes XGBoost &amp;ldquo;eXtreme&amp;rdquo;&lt;/h4&gt;
+&lt;p&gt;XGBoost added several innovations over standard gradient boosting:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regularization&lt;/strong&gt;: Both L1 (on leaf weights) and L2 (on sum of squared leaf weights) regularization built into the tree-building objective.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Second-Order Optimization&lt;/strong&gt;: Instead of fitting residuals (first-order gradient), XGBoost uses both gradient and Hessian (second-order Taylor expansion) for more precise tree construction.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Column Subsampling&lt;/strong&gt;: Like Random Forest, XGBoost samples features for each tree — further reducing overfitting.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sparse Awareness&lt;/strong&gt;: XGBoost handles missing values natively by learning the best default direction for missing data at each split.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parallelization&lt;/strong&gt;: Tree construction is parallelized across CPU cores — hence &amp;ldquo;eXtreme.&amp;rdquo;&lt;/p&gt;
+&lt;h4 id=&#34;training-xgboost-on-phenome-data&#34;&gt;Training XGBoost on Phenome Data&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import xgboost as xgb
+from sklearn.model_selection import StratifiedKFold
+from sklearn.metrics import roc_auc_score, average_precision_score
+import numpy as np
+
+# Prepare DMatrix — XGBoost&#39;s optimized data format
+dtrain = xgb.DMatrix(X_train, label=y_train, feature_names=feature_names)
+dval   = xgb.DMatrix(X_val,   label=y_val,   feature_names=feature_names)
+
+# Hyperparameters — the most important ones
+params = {
+    # Task
+    &#39;objective&#39;: &#39;binary:logistic&#39;,     # Binary classification
+    &#39;eval_metric&#39;: &#39;auc&#39;,
+    &#39;seed&#39;: 42,
+
+    # Tree structure
+    &#39;max_depth&#39;: 6,          # How deep each tree can grow (3–8 typical)
+    &#39;min_child_weight&#39;: 5,   # Minimum samples in leaf (fights overfitting)
+    &#39;gamma&#39;: 0.1,            # Minimum gain for a split to happen
+
+    # Regularization
+    &#39;reg_alpha&#39;: 0.1,        # L1 on leaf weights
+    &#39;reg_lambda&#39;: 1.0,       # L2 on leaf weights
+
+    # Sampling
+    &#39;subsample&#39;: 0.8,        # Use 80% of training rows per tree
+    &#39;colsample_bytree&#39;: 0.8, # Use 80% of features per tree
+
+    # Boosting
+    &#39;learning_rate&#39;: 0.05,   # Small η → need more trees, but more stable
+    &#39;n_estimators&#39;: 5000,    # Maximum trees (early stopping will cut this)
+}
+
+# Train with early stopping
+evals_result = {}
+model = xgb.train(
+    params,
+    dtrain,
+    num_boost_round=5000,
+    evals=[(dtrain, &#39;train&#39;), (dval, &#39;val&#39;)],
+    early_stopping_rounds=50,      # Stop if val AUC doesn&#39;t improve for 50 rounds
+    evals_result=evals_result,
+    verbose_eval=100
+)
+
+# Predict
+y_pred_prob = model.predict(xgb.DMatrix(X_test, feature_names=feature_names))
+print(f&amp;quot;Test AUC: {roc_auc_score(y_test, y_pred_prob):.4f}&amp;quot;)
+print(f&amp;quot;Best iteration: {model.best_iteration}&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;feature-importance-in-xgboost&#34;&gt;Feature Importance in XGBoost&lt;/h4&gt;
+&lt;p&gt;XGBoost provides three built-in feature importance metrics:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;weight&lt;/code&gt;&lt;/strong&gt;: How many times a feature is used to split across all trees&lt;br&gt;
+&lt;strong&gt;&lt;code&gt;gain&lt;/code&gt;&lt;/strong&gt;: Average improvement in loss brought by splits using this feature&lt;br&gt;
+&lt;strong&gt;&lt;code&gt;cover&lt;/code&gt;&lt;/strong&gt;: Average number of samples covered by splits using this feature&lt;/p&gt;
+&lt;p&gt;For biomarker discovery, &lt;strong&gt;&lt;code&gt;gain&lt;/code&gt;&lt;/strong&gt; is the most meaningful — it tells you which features actually improve predictions.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Plot feature importance
+importance = model.get_score(importance_type=&#39;gain&#39;)
+importance_sorted = sorted(importance.items(), key=lambda x: x[1], reverse=True)
+
+features_top20 = [x[0] for x in importance_sorted[:20]]
+values_top20 = [x[1] for x in importance_sorted[:20]]
+
+plt.figure(figsize=(10, 8))
+plt.barh(features_top20[::-1], values_top20[::-1])
+plt.xlabel(&#39;Average Gain&#39;)
+plt.title(&#39;Top 20 Features by XGBoost Gain&#39;)
+plt.tight_layout()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;early-stopping-why-it-matters&#34;&gt;Early Stopping: Why It Matters&lt;/h4&gt;
+&lt;p&gt;Without early stopping, XGBoost with 5,000 trees will memorize the training data. The validation curve reveals the &amp;ldquo;sweet spot&amp;rdquo;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Loss
+  ^
+  |\ Training loss
+  | \──────────────────────── (keeps decreasing)
+  |  \  
+  |   \  Validation loss
+  |    \──────────────\─────── (starts increasing = overfitting)
+  |     \              \
+  |      \              Best model ← early_stopping_rounds finds this
+  +─────────────────────────────────────────────────────&amp;gt; Iteration
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;hyperparameter-tuning-a-practical-guide&#34;&gt;Hyperparameter Tuning: A Practical Guide&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;The tuning priority order (most impactful first):&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;n_estimators&lt;/code&gt; + &lt;code&gt;learning_rate&lt;/code&gt; — Start with 0.1, use early stopping&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;max_depth&lt;/code&gt; — Typical range: 3–8. Lower for regularization, higher for complex interactions&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;min_child_weight&lt;/code&gt; — Critical for imbalanced data. Higher values reduce leaf specificity&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;subsample&lt;/code&gt; + &lt;code&gt;colsample_bytree&lt;/code&gt; — Typical range: 0.6–1.0&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gamma&lt;/code&gt; — Minimum gain required to make a split (acts as tree pruning)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;reg_alpha&lt;/code&gt; + &lt;code&gt;reg_lambda&lt;/code&gt; — Fine-tune regularization last&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Bayesian optimization with Optuna
+import optuna
+
+def objective(trial):
+    params = {
+        &#39;objective&#39;: &#39;binary:logistic&#39;,
+        &#39;eval_metric&#39;: &#39;auc&#39;,
+        &#39;max_depth&#39;: trial.suggest_int(&#39;max_depth&#39;, 3, 8),
+        &#39;learning_rate&#39;: trial.suggest_float(&#39;learning_rate&#39;, 0.01, 0.3, log=True),
+        &#39;min_child_weight&#39;: trial.suggest_int(&#39;min_child_weight&#39;, 1, 20),
+        &#39;subsample&#39;: trial.suggest_float(&#39;subsample&#39;, 0.5, 1.0),
+        &#39;colsample_bytree&#39;: trial.suggest_float(&#39;colsample_bytree&#39;, 0.5, 1.0),
+        &#39;reg_alpha&#39;: trial.suggest_float(&#39;reg_alpha&#39;, 1e-4, 10.0, log=True),
+        &#39;reg_lambda&#39;: trial.suggest_float(&#39;reg_lambda&#39;, 1e-4, 10.0, log=True),
+        &#39;gamma&#39;: trial.suggest_float(&#39;gamma&#39;, 0, 5),
+    }
+    
+    # Cross-validation
+    cv_results = xgb.cv(
+        params, dtrain,
+        num_boost_round=500,
+        nfold=5,
+        early_stopping_rounds=30,
+        metrics=&#39;auc&#39;,
+        seed=42
+    )
+    return cv_results[&#39;test-auc-mean&#39;].max()
+
+study = optuna.create_study(direction=&#39;maximize&#39;)
+study.optimize(objective, n_trials=100)
+print(f&amp;quot;Best AUC: {study.best_value:.4f}&amp;quot;)
+print(f&amp;quot;Best params: {study.best_params}&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;notebook-comparison-lightgbm-catboost-tabnet&#34;&gt;Notebook Comparison: LightGBM, CatBoost, TabNet&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;LightGBM&lt;/strong&gt; (Microsoft, 2017)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Uses &lt;strong&gt;Leaf-wise tree growth&lt;/strong&gt; instead of level-wise — finds the split that reduces loss most, regardless of depth&lt;/li&gt;
+&lt;li&gt;Often &lt;strong&gt;10–20× faster&lt;/strong&gt; than XGBoost on large datasets&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GOSS&lt;/strong&gt; (Gradient-based One-Side Sampling): focuses more gradient computation on hard examples&lt;/li&gt;
+&lt;li&gt;Excellent for large genomic datasets (100K+ samples, millions of SNPs)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;CatBoost&lt;/strong&gt; (Yandex, 2018)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Designed for &lt;strong&gt;categorical features&lt;/strong&gt; — uses ordered target statistics instead of one-hot encoding&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Symmetric trees&lt;/strong&gt;: each level of the tree uses the same split, which aids regularization and fast inference&lt;/li&gt;
+&lt;li&gt;Often requires less tuning than XGBoost or LightGBM&lt;/li&gt;
+&lt;li&gt;Best choice when your phenome data contains many categorical variables (ICD codes, medication classes)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;TabNet&lt;/strong&gt; (Google, 2019) and &lt;strong&gt;FT-Transformer&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Neural approaches to tabular data&lt;/li&gt;
+&lt;li&gt;TabNet uses sequential attention to select features step-by-step&lt;/li&gt;
+&lt;li&gt;FT-Transformer uses transformer attention over feature embeddings&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;When deep learning beats GBM on tabular&lt;/strong&gt;: data has &amp;gt;100K samples, many categorical features with high cardinality, or when transfer learning from pretrained models is possible&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;Rule of thumb:
+  n &amp;lt; 10K:    XGBoost / LightGBM almost always wins
+  n = 10–100K: XGBoost / LightGBM likely wins, but TabNet worth trying
+  n &amp;gt; 100K:   LightGBM fastest; TabNet/FT-Transformer competitive
+  Many categoricals: CatBoost often best
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-chapter-6-part-b--making-models-trustworthy&#34;&gt;⚖️ Chapter 6: Part B — Making Models Trustworthy&lt;/h1&gt;
+&lt;h2 id=&#34;61-imbalanced-classification-type-1-diabetes-2000-cases&#34;&gt;6.1 Imbalanced Classification: Type 1 Diabetes (~2,000 cases)&lt;/h2&gt;
+&lt;h3 id=&#34;the-problem-rare-disease-in-a-sea-of-healthy-controls&#34;&gt;The Problem: Rare Disease in a Sea of Healthy Controls&lt;/h3&gt;
+&lt;p&gt;Type 1 Diabetes (T1D) is an autoimmune disease affecting approximately 0.5–1% of the general population. In a dataset of 200,000 individuals, you might have only 2,000 T1D cases and 198,000 controls.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Class balance:
+  T1D (positive class):  2,000 patients   → 1%
+  Controls (negative):  198,000 patients  → 99%
+
+Class imbalance ratio: 1:99
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This creates a catastrophic trap for naive models:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# A model that ALWAYS predicts &amp;quot;healthy&amp;quot; achieves:
+accuracy = 198000 / 200000 = 99.0%
+
+# But it identifies ZERO T1D patients!
+recall = 0 / 2000 = 0.0%
+precision = undefined (0 positive predictions)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Accuracy is a completely useless metric for rare disease classification.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The correct metrics for imbalanced clinical problems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;AUROC&lt;/strong&gt; (Area Under ROC Curve): measures overall discrimination across all thresholds&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AUPRC&lt;/strong&gt; (Area Under Precision-Recall Curve): more sensitive to rare class performance&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sensitivity/Recall&lt;/strong&gt;: &amp;ldquo;Of all T1D patients, what fraction did we catch?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Specificity&lt;/strong&gt;: &amp;ldquo;Of all healthy people, what fraction did we correctly label?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;F1 Score&lt;/strong&gt;: Harmonic mean of precision and recall&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-main-approach-class-weighted-loss&#34;&gt;The Main Approach: Class-Weighted Loss&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Core idea&lt;/strong&gt;: When computing the loss function, give each T1D case &lt;strong&gt;99× more weight&lt;/strong&gt; than each control. This forces the model to pay equal total attention to both classes.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from sklearn.utils.class_weight import compute_class_weight
+import numpy as np
+
+# Compute balanced class weights automatically
+classes = np.unique(y_train)
+weights = compute_class_weight(&#39;balanced&#39;, classes=classes, y=y_train)
+class_weight_dict = {0: weights[0], 1: weights[1]}
+# → {0: 0.505, 1: 50.0}  (T1D cases get 99× more weight)
+
+# Apply to XGBoost
+scale_pos_weight = (y_train == 0).sum() / (y_train == 1).sum()
+# = 198,000 / 2,000 = 99
+
+xgb_model = xgb.XGBClassifier(
+    scale_pos_weight=scale_pos_weight,  # XGBoost&#39;s way of handling imbalance
+    n_estimators=500,
+    max_depth=5,
+    learning_rate=0.05,
+    random_state=42
+)
+xgb_model.fit(X_train, y_train)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Why class weighting is preferred over resampling&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Does not distort the data distribution&lt;/strong&gt; — you are not creating fake patients or throwing away real ones&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mathematically equivalent to resampling&lt;/strong&gt; when done correctly, but more stable&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Preserves all information&lt;/strong&gt; in the original dataset&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transparent&lt;/strong&gt;: the weighting is explicit and documented&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;notebook-comparison-smote-focal-loss-ctgan&#34;&gt;Notebook Comparison: SMOTE, Focal Loss, CTGAN&lt;/h3&gt;
+&lt;h4 id=&#34;smote-synthetic-minority-over-sampling-technique&#34;&gt;SMOTE (Synthetic Minority Over-sampling Technique)&lt;/h4&gt;
+&lt;p&gt;SMOTE creates &lt;strong&gt;synthetic T1D cases&lt;/strong&gt; by interpolating between existing ones:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;For each minority sample x:
+  1. Find k nearest neighbors in feature space
+  2. Randomly select one neighbor x_neighbor
+  3. Create synthetic sample: x_new = x + rand(0,1) × (x_neighbor - x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Advantages&lt;/strong&gt;: Increases minority class size, reducing overfitting to few real examples&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dangers in clinical/omics research&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Synthetic patients are &lt;strong&gt;biologically meaningless&lt;/strong&gt; — you cannot linearly interpolate between two real patients&amp;rsquo; metabolome profiles&lt;/li&gt;
+&lt;li&gt;Can &lt;strong&gt;introduce artifacts&lt;/strong&gt; that models learn instead of real biological signals&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ADASYN&lt;/strong&gt; (Adaptive Synthetic Sampling) is a smarter variant — generates more synthetic samples in harder-to-classify regions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from imblearn.over_sampling import SMOTE, ADASYN
+
+smote = SMOTE(sampling_strategy=0.1, k_neighbors=5, random_state=42)
+X_resampled, y_resampled = smote.fit_resample(X_train, y_train)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;focal-loss&#34;&gt;Focal Loss&lt;/h4&gt;
+&lt;p&gt;Focal Loss (Lin et al., 2017, originally for object detection) modifies cross-entropy to &lt;strong&gt;focus training on hard examples&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Standard cross-entropy: CE(p, y) = -y·log(p) - (1-y)·log(1-p)
+
+Focal Loss: FL(p, y) = -(1 - p_t)^γ · log(p_t)
+
+Where:
+  p_t = p if y=1 else (1-p)
+  γ (gamma) = focusing parameter (typically 2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When a sample is &lt;strong&gt;correctly classified with high confidence&lt;/strong&gt; (p_t ≈ 1), the factor (1-p_t)^γ ≈ 0, meaning the loss is nearly zero — easy examples contribute little to training.&lt;/p&gt;
+&lt;p&gt;When a sample is &lt;strong&gt;misclassified or uncertain&lt;/strong&gt; (p_t ≈ 0.5), the factor is ≈ 0.25, amplifying those examples&amp;rsquo; contribution.&lt;/p&gt;
+&lt;h4 id=&#34;ctgan-conditional-tabular-gan&#34;&gt;CTGAN (Conditional Tabular GAN)&lt;/h4&gt;
+&lt;p&gt;CTGAN is a generative adversarial network designed specifically for tabular data. It can generate &lt;strong&gt;statistically realistic synthetic T1D patients&lt;/strong&gt; by learning the joint distribution of all features conditioned on the T1D label.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from ctgan import CTGAN
+
+# Train on real T1D cases only
+X_t1d = X_train[y_train == 1]
+df_t1d = pd.DataFrame(X_t1d, columns=feature_names)
+
+ctgan = CTGAN(epochs=300, verbose=True)
+ctgan.fit(df_t1d)
+
+# Generate 10,000 synthetic T1D patients
+synthetic_t1d = ctgan.sample(10000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Important caveat&lt;/strong&gt;: Synthetic patients from CTGAN are useful for augmenting training data but should &lt;strong&gt;never be mixed with real patients&lt;/strong&gt; in validation or test sets.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;62-interpretability-shap-values&#34;&gt;6.2 Interpretability: SHAP Values&lt;/h2&gt;
+&lt;h3 id=&#34;the-black-box-problem-in-medicine&#34;&gt;The Black Box Problem in Medicine&lt;/h3&gt;
+&lt;p&gt;You train an XGBoost model. It achieves AUROC 0.91. You show it to a cardiologist.&lt;/p&gt;
+&lt;p&gt;She asks: &amp;ldquo;Which features drove this patient&amp;rsquo;s high-risk prediction?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;You say: &amp;ldquo;The model uses 847 features and 500 trees. I can&amp;rsquo;t tell you.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;She says: &amp;ldquo;Then I cannot use this in clinical practice.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;This is the &lt;strong&gt;interpretability crisis&lt;/strong&gt; in clinical ML. And SHAP solves it.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-main-model-shap-shapley-additive-explanations&#34;&gt;The Main Model: SHAP (SHapley Additive exPlanations)&lt;/h3&gt;
+&lt;p&gt;SHAP, developed by Scott Lundberg and Su-In Lee (2017), provides a theoretically principled framework for explaining any ML model&amp;rsquo;s predictions.&lt;/p&gt;
+&lt;h4 id=&#34;the-game-theory-foundation&#34;&gt;The Game Theory Foundation&lt;/h4&gt;
+&lt;p&gt;SHAP values are inspired by &lt;strong&gt;Shapley values&lt;/strong&gt; from cooperative game theory (Lloyd Shapley, 1953 — Nobel Prize 2012).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The analogy&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A team of workers (features) collaborates to produce a profit (model prediction)&lt;/li&gt;
+&lt;li&gt;How much credit does each worker deserve?&lt;/li&gt;
+&lt;li&gt;Shapley&amp;rsquo;s answer: calculate each worker&amp;rsquo;s marginal contribution averaged over all possible coalitions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Translated to ML&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Coalition = subset of features provided to the model&lt;/li&gt;
+&lt;li&gt;Contribution = how much a feature&amp;rsquo;s presence changes the prediction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;For feature j, the SHAP value is:
+
+φ_j = Σ_{S ⊆ F\{j}}  |S|!(|F|-|S|-1)!/|F|!  ×  [f(S∪{j}) - f(S)]
+       all subsets                               ─────────────────────
+       not containing j                          marginal contribution
+                                                 of adding feature j
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This guarantees four desirable properties:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Efficiency&lt;/strong&gt;: SHAP values sum to the prediction minus baseline&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Symmetry&lt;/strong&gt;: Features with equal impact get equal SHAP values&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dummy&lt;/strong&gt;: Features that never matter get SHAP = 0&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Additivity&lt;/strong&gt;: SHAP values from different models can be combined&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;treeshap-efficient-for-tree-models&#34;&gt;TreeSHAP: Efficient for Tree Models&lt;/h4&gt;
+&lt;p&gt;Computing exact Shapley values naively requires exponentially many model evaluations. For tree models, Lundberg et al. devised &lt;strong&gt;TreeSHAP&lt;/strong&gt; — an algorithm that computes exact SHAP values in polynomial time.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import shap
+
+# Compute SHAP values
+explainer = shap.TreeExplainer(model)
+shap_values = explainer.shap_values(X_test)
+
+# Global: What features matter most overall?
+shap.summary_plot(
+    shap_values, X_test,
+    feature_names=feature_names,
+    plot_type=&#39;dot&#39;,    # Shows both importance and direction
+    max_display=20
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Reading the SHAP summary plot&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Y-axis&lt;/strong&gt;: Features ordered by mean |SHAP value| (most important at top)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;X-axis&lt;/strong&gt;: SHAP value (negative = pushes toward class 0, positive = pushes toward class 1)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Color&lt;/strong&gt;: Feature value (red = high, blue = low)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;Example reading: &amp;quot;High BCAA level (red) → positive SHAP (pushes toward T1D risk)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;individual-patient-explanation-waterfall-plot&#34;&gt;Individual Patient Explanation: Waterfall Plot&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Explain a single patient
+patient_idx = 42
+
+shap.waterfall_plot(
+    shap.Explanation(
+        values=shap_values[patient_idx],
+        base_values=explainer.expected_value,
+        data=X_test[patient_idx],
+        feature_names=feature_names
+    )
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This produces a &lt;strong&gt;waterfall chart&lt;/strong&gt; showing how each feature pushed the prediction away from the baseline (average prediction):&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Baseline (average): 0.23
++ Leucine = 284 μM:        +0.18  →  0.41
++ Age = 45:                +0.09  →  0.50
++ HOMA-IR = 3.2:           +0.07  →  0.57
+- HDL = 1.8 mmol/L:       -0.05  →  0.52
++ Isoleucine = 198 μM:     +0.12  →  0.64
+...
+Final prediction:           0.78  (High T1D risk)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is &lt;strong&gt;clinically actionable&lt;/strong&gt;: the doctor can see exactly which measurements drove the risk score and discuss them with the patient.&lt;/p&gt;
+&lt;h4 id=&#34;shap-for-biomarker-discovery-feature-clustering&#34;&gt;SHAP for Biomarker Discovery: Feature Clustering&lt;/h4&gt;
+&lt;p&gt;SHAP values can be used for &lt;strong&gt;unsupervised biomarker clustering&lt;/strong&gt; — grouping features by their pattern of effects across patients:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Cluster features by SHAP correlation
+shap_df = pd.DataFrame(shap_values, columns=feature_names)
+feature_correlation = shap_df.corr()
+
+# Features with similar SHAP patterns likely represent the same biological pathway
+import seaborn as sns
+sns.clustermap(
+    feature_correlation,
+    method=&#39;ward&#39;,
+    cmap=&#39;RdBu_r&#39;,
+    center=0,
+    figsize=(16, 16)
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This reveals &lt;strong&gt;biological pathway clusters&lt;/strong&gt; — metabolites from BCAA metabolism cluster together, lipid metabolism features cluster together — providing pathway-level insights even when individual feature significance is noisy.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-chapter-7-part-c--time-series-biosignals-and-survival&#34;&gt;📡 Chapter 7: Part C — Time-Series, Biosignals, and Survival&lt;/h1&gt;
+&lt;h2 id=&#34;71-biosignal-time-series-ventilator-waveforms&#34;&gt;7.1 Biosignal Time-Series: Ventilator Waveforms&lt;/h2&gt;
+&lt;h3 id=&#34;mechanical-ventilation-a-life-or-death-signal&#34;&gt;Mechanical Ventilation: A Life-or-Death Signal&lt;/h3&gt;
+&lt;p&gt;In the ICU, mechanical ventilators breathe for patients who cannot breathe on their own. They generate continuous waveforms:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Pressure waveform&lt;/strong&gt;: airway pressure over time (cmH₂O)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Flow waveform&lt;/strong&gt;: airflow into/out of lungs (L/min)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Volume waveform&lt;/strong&gt;: cumulative air volume per breath (mL)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These waveforms are sampled at &lt;strong&gt;100 Hz&lt;/strong&gt; — 100 measurements per second — producing enormous streams of continuous data.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why ML matters here&lt;/strong&gt;: Subtle abnormalities in waveform shape — patient-ventilator asynchrony, dynamic hyperinflation, flow starvation — indicate distress, lung injury, or need for ventilator adjustment. Many of these are &lt;strong&gt;visually subtle&lt;/strong&gt; and easy for even experienced clinicians to miss.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;data-preprocessing-windowing&#34;&gt;Data Preprocessing: Windowing&lt;/h3&gt;
+&lt;p&gt;Before modeling, continuous waveforms must be &lt;strong&gt;segmented into fixed-length windows&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
+
+def create_windows(signal, window_size=500, stride=50, fs=100):
+    &amp;quot;&amp;quot;&amp;quot;
+    signal:      1D array — ventilator waveform
+    window_size: samples per window (500 @ 100Hz = 5 seconds)
+    stride:      step between consecutive windows (50 = 90% overlap)
+    fs:          sampling frequency (Hz)
+    &amp;quot;&amp;quot;&amp;quot;
+    windows = []
+    start_times = []
+    
+    for i in range(0, len(signal) - window_size, stride):
+        window = signal[i:i + window_size]
+        windows.append(window)
+        start_times.append(i / fs)  # in seconds
+    
+    return np.array(windows), np.array(start_times)
+
+# Each window: [n_samples, window_size]
+# → Feed to model as [batch, channels, length]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Window size choice&lt;/strong&gt;: A tradeoff between:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Short windows&lt;/strong&gt;: Faster response, but less temporal context (may miss multi-breath patterns)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Long windows&lt;/strong&gt;: More context, but higher computational cost and may span multiple conditions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-main-model-1d-cnn&#34;&gt;The Main Model: 1D-CNN&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Convolutional Neural Networks&lt;/strong&gt; were designed for images — detecting local patterns (edges, textures) that appear anywhere in the image. &lt;strong&gt;1D-CNNs&lt;/strong&gt; apply the same idea to sequential signals.&lt;/p&gt;
+&lt;h4 id=&#34;the-core-operation-1d-convolution&#34;&gt;The Core Operation: 1D Convolution&lt;/h4&gt;
+&lt;p&gt;A 1D convolution slides a small &lt;strong&gt;kernel&lt;/strong&gt; (learnable filter) across the signal, computing the inner product at each position:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Signal:  [1.2, 2.3, 3.1, 2.8, 1.9, 2.1, 3.4, 2.7, ...]
+Kernel:  [-1, 0, +1]  ← edge detector
+
+Position 0: (-1)(1.2) + (0)(2.3) + (+1)(3.1) = 1.9  ← rising edge
+Position 1: (-1)(2.3) + (0)(3.1) + (+1)(2.8) = 0.5
+Position 2: (-1)(3.1) + (0)(2.8) + (+1)(1.9) = -1.2 ← falling edge
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A &lt;strong&gt;bank of kernels&lt;/strong&gt; learns to detect different temporal patterns: peaks, troughs, gradual rises, sharp drops.&lt;/p&gt;
+&lt;h4 id=&#34;1d-cnn-architecture-for-ventilator-waveforms&#34;&gt;1D-CNN Architecture for Ventilator Waveforms&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import torch
+import torch.nn as nn
+
+class VentilatorCNN(nn.Module):
+    def __init__(self, n_classes=2, window_size=500):
+        super().__init__()
+        
+        # Convolutional blocks — extract local patterns
+        self.conv_blocks = nn.Sequential(
+            # Block 1: detect fine-grained features (short-term)
+            nn.Conv1d(in_channels=3,   # pressure, flow, volume
+                      out_channels=32,
+                      kernel_size=5,   # 5 samples = 50ms at 100Hz
+                      padding=2),
+            nn.BatchNorm1d(32),
+            nn.ReLU(),
+            nn.MaxPool1d(kernel_size=2, stride=2),  # Downsample 2×
+            
+            # Block 2: detect medium-term patterns (individual breath features)
+            nn.Conv1d(32, 64, kernel_size=7, padding=3),
+            nn.BatchNorm1d(64),
+            nn.ReLU(),
+            nn.MaxPool1d(2, 2),
+            
+            # Block 3: detect long-term patterns (multi-breath trends)
+            nn.Conv1d(64, 128, kernel_size=9, padding=4),
+            nn.BatchNorm1d(128),
+            nn.ReLU(),
+            nn.AdaptiveAvgPool1d(16),   # Compress to 16 time steps
+        )
+        
+        # Classification head
+        self.classifier = nn.Sequential(
+            nn.Flatten(),
+            nn.Linear(128 * 16, 256),
+            nn.ReLU(),
+            nn.Dropout(0.5),
+            nn.Linear(256, n_classes)
+        )
+    
+    def forward(self, x):
+        # x shape: [batch, channels, time]
+        features = self.conv_blocks(x)
+        return self.classifier(features)
+
+model = VentilatorCNN(n_classes=2)
+print(f&amp;quot;Parameters: {sum(p.numel() for p in model.parameters()):,}&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;anomaly-detection-isolation-forest&#34;&gt;Anomaly Detection: Isolation Forest&lt;/h3&gt;
+&lt;p&gt;Beyond classification, we want to &lt;strong&gt;detect abnormal waveforms automatically&lt;/strong&gt; — catching dangerous patterns without needing labeled examples of every possible anomaly.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Isolation Forest&lt;/strong&gt; is an elegant unsupervised anomaly detection algorithm:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Core insight&lt;/strong&gt;: Anomalous points are rare and different — they are &lt;strong&gt;easy to isolate&lt;/strong&gt; by random partitioning.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Build an isolation tree:
+  1. Randomly select a feature
+  2. Randomly select a split value between feature min and max
+  3. Recursively partition until each point is isolated
+
+Anomaly score: Points requiring FEW splits to isolate are anomalies
+               Points requiring MANY splits are normal (surrounded by neighbors)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from sklearn.ensemble import IsolationForest
+import numpy as np
+
+# Extract features from windows (e.g., CNN embeddings, or handcrafted stats)
+def extract_waveform_features(windows):
+    &amp;quot;&amp;quot;&amp;quot;Extract statistical features from each waveform window&amp;quot;&amp;quot;&amp;quot;
+    features = []
+    for w in windows:
+        features.append([
+            np.mean(w),
+            np.std(w),
+            np.max(w) - np.min(w),      # Peak-to-peak amplitude
+            np.sum(np.diff(np.sign(np.diff(w))) != 0),  # Zero crossings
+            np.percentile(w, 10),
+            np.percentile(w, 90),
+        ])
+    return np.array(features)
+
+X_features = extract_waveform_features(windows)
+
+# Fit Isolation Forest
+iforest = IsolationForest(
+    n_estimators=200,
+    contamination=0.05,   # Expect ~5% anomalies
+    random_state=42
+)
+iforest.fit(X_features)
+
+# Score all windows (more negative = more anomalous)
+anomaly_scores = iforest.score_samples(X_features)
+anomaly_labels = iforest.predict(X_features)  # -1 = anomaly, +1 = normal
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;notebook-comparison-lstm-tcn-wavelet-features&#34;&gt;Notebook Comparison: LSTM, TCN, Wavelet Features&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;LSTM (Long Short-Term Memory)&lt;/strong&gt;
+LSTMs model sequential dependencies with gates that control information flow:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Forget gate&lt;/strong&gt;: What past information to discard&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Input gate&lt;/strong&gt;: What new information to store&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Output gate&lt;/strong&gt;: What to output at this step&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;LSTMs excel at &lt;strong&gt;long-range dependencies&lt;/strong&gt; — patterns that span many time steps. They are computationally expensive and can be tricky to train. For waveform classification, 1D-CNN often outperforms LSTM while being faster.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TCN (Temporal Convolutional Network)&lt;/strong&gt;
+TCNs use &lt;strong&gt;dilated causal convolutions&lt;/strong&gt; to capture long-range patterns without the gating complexity of LSTMs:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Standard Conv: kernel sees adjacent time steps
+Dilated Conv (dilation=4): kernel sees every 4th time step
+Dilated Conv (dilation=16): kernel sees every 16th time step
+
+Stacking dilations: each layer doubles the receptive field
+→ Exponentially large context with linear parameters
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;TCNs are generally &lt;strong&gt;faster than LSTMs&lt;/strong&gt; and &lt;strong&gt;easier to train&lt;/strong&gt; (no vanishing gradient problem).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Wavelet and FFT Features for Tabular Models&lt;/strong&gt;
+Before deep learning, biosignal features were handcrafted:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import scipy.signal as signal
+import pywt
+
+# FFT features: frequency domain
+def fft_features(window, fs=100):
+    freqs = np.fft.rfftfreq(len(window), 1/fs)
+    fft_mag = np.abs(np.fft.rfft(window))
+    return {
+        &#39;dominant_freq&#39;: freqs[np.argmax(fft_mag)],
+        &#39;spectral_entropy&#39;: -np.sum(fft_mag * np.log(fft_mag + 1e-9)),
+        &#39;power_0_2Hz&#39;: np.sum(fft_mag[(freqs &amp;lt; 2)]),
+        &#39;power_2_5Hz&#39;: np.sum(fft_mag[(freqs &amp;gt;= 2) &amp;amp; (freqs &amp;lt; 5)]),
+    }
+
+# Wavelet features: time-frequency decomposition
+def wavelet_features(window, wavelet=&#39;db4&#39;, level=4):
+    coeffs = pywt.wavedec(window, wavelet, level=level)
+    features = {}
+    for i, c in enumerate(coeffs):
+        features[f&#39;wavelet_L{i}_mean&#39;] = np.mean(np.abs(c))
+        features[f&#39;wavelet_L{i}_energy&#39;] = np.sum(c**2)
+        features[f&#39;wavelet_L{i}_std&#39;] = np.std(c)
+    return features
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;These features can be fed into XGBoost/LightGBM when deep learning models are impractical.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;72-survival-analysis-hypertension-risk-stratification-130k-patients&#34;&gt;7.2 Survival Analysis: Hypertension Risk Stratification (130K patients)&lt;/h2&gt;
+&lt;h3 id=&#34;why-standard-classification-fails-for-survival&#34;&gt;Why Standard Classification Fails for Survival&lt;/h3&gt;
+&lt;p&gt;Imagine you want to predict cardiovascular events in 130,000 hypertensive patients.&lt;/p&gt;
+&lt;p&gt;You have 10 years of follow-up. Some patients had events (heart attack, stroke). Others are still event-free at the last observation. Some dropped out of the study after 3 years.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The censoring problem&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A patient who had no event after 5 years of follow-up is NOT the same as a patient who had no event after 10 years of follow-up&lt;/li&gt;
+&lt;li&gt;A patient who was lost to follow-up at year 3 provides valuable information up to year 3, but you do not know their outcome afterward&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Standard binary classification throws away this time information — treating &amp;ldquo;event at year 1&amp;rdquo; and &amp;ldquo;event at year 9&amp;rdquo; as equivalent, and discarding censored patients entirely.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Survival analysis handles this correctly.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;key-concepts-in-survival-analysis&#34;&gt;Key Concepts in Survival Analysis&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Survival Function S(t)&lt;/strong&gt;:&lt;br&gt;
+The probability that an individual survives (does not experience the event) past time t.&lt;br&gt;
+S(t) is always between 0 and 1, starts at S(0) = 1, and is non-increasing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hazard Function h(t)&lt;/strong&gt;:&lt;br&gt;
+The instantaneous rate of the event occurring at time t, given survival to time t.&lt;br&gt;
+Think of it as: &amp;ldquo;How dangerous is this moment, if you made it this far?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cumulative Hazard H(t)&lt;/strong&gt;:&lt;br&gt;
+The total accumulated risk from time 0 to time t.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-main-model-cox-proportional-hazards-cox-ph&#34;&gt;The Main Model: Cox Proportional Hazards (Cox-PH)&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;Cox model&lt;/strong&gt; (David Cox, 1972) is the workhorse of clinical survival analysis. Its elegance lies in modeling the &lt;strong&gt;hazard as a product of a baseline hazard and a feature-dependent term&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;h(t | x) = h₀(t) × exp(β₁x₁ + β₂x₂ + ... + βₚxₚ)
+
+Where:
+  h₀(t)  = baseline hazard (unspecified — &amp;quot;semi-parametric&amp;quot;)
+  β       = coefficients we estimate
+  x       = patient features
+
+The &amp;quot;proportional hazards&amp;quot; assumption:
+  The ratio of hazards between two patients is CONSTANT over time
+  (Feature effects don&#39;t change as time progresses)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;the-hazard-ratio-clinical-interpretation&#34;&gt;The Hazard Ratio: Clinical Interpretation&lt;/h4&gt;
+&lt;p&gt;The key output of Cox regression is the &lt;strong&gt;hazard ratio (HR)&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;HR for feature j = exp(βⱼ)
+
+Interpretation:
+  HR = 2.5 → patients with one unit higher feature j have
+              2.5× the instantaneous risk of the event
+              
+  HR = 0.7 → patients with one unit higher feature j have
+              30% LOWER risk (protective effect)
+              
+  HR = 1.0 → no effect
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Clinical example&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Cox model for cardiovascular event in hypertensives:
+
+Feature                      HR      95% CI          p-value
+─────────────────────────────────────────────────────────────
+Systolic BP (per 10 mmHg)   1.28   [1.19, 1.38]    &amp;lt;0.001
+Age (per 10 years)          1.67   [1.55, 1.80]    &amp;lt;0.001
+Diabetes (yes vs no)        2.14   [1.89, 2.42]    &amp;lt;0.001
+Smoking (current vs never)  1.73   [1.54, 1.95]    &amp;lt;0.001
+ACE inhibitor use           0.81   [0.73, 0.90]    &amp;lt;0.001
+
+Reading: Diabetic patients have 2.14× higher CV event rate
+         compared to non-diabetics, at any given time point,
+         holding other factors constant.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;implementing-cox-ph&#34;&gt;Implementing Cox-PH&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from lifelines import CoxPHFitter
+from lifelines.statistics import logrank_test
+
+# Data format for survival analysis
+# T = time to event (or censoring)
+# E = event indicator (1 = event occurred, 0 = censored)
+
+df_survival = pd.DataFrame({
+    &#39;T&#39;: time_to_event,    # In months
+    &#39;E&#39;: event_occurred,   # 1 = cardiovascular event, 0 = censored
+    &#39;systolic_bp&#39;: systolic_bp,
+    &#39;age&#39;: age,
+    &#39;diabetes&#39;: diabetes,
+    &#39;smoking&#39;: smoking,
+    &#39;acei_use&#39;: acei_use,
+})
+
+# Fit Cox model
+cph = CoxPHFitter(penalizer=0.1)  # L2 regularization
+cph.fit(df_survival, duration_col=&#39;T&#39;, event_col=&#39;E&#39;)
+
+# Summary table
+cph.print_summary()
+
+# Check proportional hazards assumption
+cph.check_assumptions(df_survival, p_value_threshold=0.05)
+
+# Predict survival curve for a new patient
+new_patient = pd.DataFrame({
+    &#39;systolic_bp&#39;: [155],
+    &#39;age&#39;: [62],
+    &#39;diabetes&#39;: [1],
+    &#39;smoking&#39;: [0],
+    &#39;acei_use&#39;: [1],
+})
+survival_func = cph.predict_survival_function(new_patient)
+
+plt.figure(figsize=(10, 6))
+survival_func.plot()
+plt.xlabel(&#39;Time (months)&#39;)
+plt.ylabel(&#39;Survival probability&#39;)
+plt.title(&#39;Predicted survival curve for high-risk patient&#39;)
+plt.ylim(0, 1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;kaplan-meier-curves-visualizing-survival&#34;&gt;Kaplan-Meier Curves: Visualizing Survival&lt;/h4&gt;
+&lt;p&gt;Before fitting any model, always explore your data with &lt;strong&gt;Kaplan-Meier (KM) curves&lt;/strong&gt; — non-parametric estimates of the survival function for each group:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from lifelines import KaplanMeierFitter
+
+fig, ax = plt.subplots(figsize=(10, 6))
+
+for diabetic in [0, 1]:
+    mask = df_survival[&#39;diabetes&#39;] == diabetic
+    kmf = KaplanMeierFitter()
+    kmf.fit(
+        df_survival.loc[mask, &#39;T&#39;],
+        df_survival.loc[mask, &#39;E&#39;],
+        label=&#39;Diabetic&#39; if diabetic else &#39;Non-diabetic&#39;
+    )
+    kmf.plot_survival_function(ax=ax, ci_show=True)
+
+# Log-rank test
+results = logrank_test(
+    df_survival.loc[df_survival[&#39;diabetes&#39;]==1, &#39;T&#39;],
+    df_survival.loc[df_survival[&#39;diabetes&#39;]==0, &#39;T&#39;],
+    event_observed_A=df_survival.loc[df_survival[&#39;diabetes&#39;]==1, &#39;E&#39;],
+    event_observed_B=df_survival.loc[df_survival[&#39;diabetes&#39;]==0, &#39;E&#39;]
+)
+ax.set_title(f&#39;Cardiovascular Event-Free Survival\nLog-rank p = {results.p_value:.4f}&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;notebook-comparison-random-survival-forest-deepsurv&#34;&gt;Notebook Comparison: Random Survival Forest, DeepSurv&lt;/h3&gt;
+&lt;h4 id=&#34;random-survival-forest-rsf&#34;&gt;Random Survival Forest (RSF)&lt;/h4&gt;
+&lt;p&gt;RSF extends Random Forest to survival data using the &lt;strong&gt;log-rank splitting criterion&lt;/strong&gt; — at each node, it finds the split that maximizes the difference in survival distributions between left and right children.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from sksurv.ensemble import RandomSurvivalForest
+import numpy as np
+
+# sksurv expects structured array for the outcome
+y_survival = np.array(
+    [(bool(e), t) for e, t in zip(event_occurred, time_to_event)],
+    dtype=[(&#39;event&#39;, bool), (&#39;time&#39;, float)]
+)
+
+rsf = RandomSurvivalForest(
+    n_estimators=300,
+    min_samples_split=10,
+    min_samples_leaf=15,
+    max_features=&#39;sqrt&#39;,
+    n_jobs=-1,
+    random_state=42
+)
+rsf.fit(X_train, y_survival_train)
+
+# Concordance index (C-index): main metric for survival models
+c_index = rsf.score(X_test, y_survival_test)
+print(f&amp;quot;C-index: {c_index:.4f}&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;C-index (Concordance Index)&lt;/strong&gt;: For a randomly selected pair of patients where one had the event earlier, what fraction of the time does the model correctly rank the earlier-event patient as higher risk? C-index = 0.5 is random; 1.0 is perfect.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Advantages over Cox&lt;/strong&gt;: No proportional hazards assumption; captures nonlinear interactions and complex feature effects; often outperforms Cox on complex clinical data.&lt;/p&gt;
+&lt;h4 id=&#34;deepsurv&#34;&gt;DeepSurv&lt;/h4&gt;
+&lt;p&gt;DeepSurv (Katzman et al., 2018) is a neural network that generalizes the Cox model:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# DeepSurv architecture
+# Instead of linear combination: h(t|x) = h₀(t) × exp(β·x)
+# We use: h(t|x) = h₀(t) × exp(NN(x))
+# The neural network learns nonlinear transformations of features
+
+import torch
+import torch.nn as nn
+
+class DeepSurv(nn.Module):
+    def __init__(self, n_features, hidden_dims=[256, 128, 64]):
+        super().__init__()
+        
+        layers = []
+        prev_dim = n_features
+        for dim in hidden_dims:
+            layers.extend([
+                nn.Linear(prev_dim, dim),
+                nn.BatchNorm1d(dim),
+                nn.ReLU(),
+                nn.Dropout(0.3),
+            ])
+            prev_dim = dim
+        
+        layers.append(nn.Linear(prev_dim, 1))  # Output: log risk score
+        self.network = nn.Sequential(*layers)
+    
+    def forward(self, x):
+        return self.network(x).squeeze()
+    
+    def partial_log_likelihood(self, risk_scores, events, times):
+        &amp;quot;&amp;quot;&amp;quot;Cox partial likelihood loss&amp;quot;&amp;quot;&amp;quot;
+        # Sort by descending time
+        sort_idx = torch.argsort(times, descending=True)
+        risk_scores = risk_scores[sort_idx]
+        events = events[sort_idx]
+        
+        # For each event, compute log of ratio: event risk / sum of all at-risk risks
+        log_cumsum_exp = torch.logcumsumexp(risk_scores, dim=0)
+        loss = -(risk_scores - log_cumsum_exp)[events.bool()].mean()
+        return loss
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-chapter-8-putting-it-all-together--a-research-pipeline&#34;&gt;🏗️ Chapter 8: Putting It All Together — A Research Pipeline&lt;/h1&gt;
+&lt;h2 id=&#34;81-the-complete-workflow&#34;&gt;8.1 The Complete Workflow&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;Raw Data Sources
+  ├── Biobank Phenome Dataset (tabular)
+  ├── EHR / EMR Records (clinical codes, labs, meds)
+  ├── Omics Assays (metabolomics, genomics)
+  └── ICU Biosignals (ventilator waveforms)
+           │
+           ▼
+   Data Engineering
+  ├── Quality Control &amp;amp; Normalization
+  ├── Batch Effect Correction
+  ├── Missing Value Imputation
+  └── Feature Engineering
+           │
+           ▼
+   Feature Selection (LASSO, Boruta, mRMR)
+  └── Reduced, stable biomarker set
+           │
+           ▼
+   Model Training
+  ├── XGBoost / LightGBM (tabular)
+  ├── 1D-CNN / LSTM / TCN (biosignal)
+  └── Cox-PH / RSF / DeepSurv (survival)
+           │
+           ▼
+   Validation
+  ├── Internal (cross-validation, holdout)
+  ├── External (independent cohort)
+  └── Clinical calibration (Brier score, calibration curves)
+           │
+           ▼
+   Interpretation
+  ├── SHAP global (biomarker importance)
+  ├── SHAP local (individual patient explanation)
+  └── Pathway enrichment analysis
+           │
+           ▼
+   Clinical Translation
+  ├── Risk score calculator
+  ├── Decision support tool
+  └── Biomarker panel validation (wet lab)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;82-the-evaluation-framework&#34;&gt;8.2 The Evaluation Framework&lt;/h2&gt;
+&lt;h3 id=&#34;classification-metrics&#34;&gt;Classification Metrics&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from sklearn.metrics import (
+    roc_auc_score, average_precision_score,
+    classification_report, brier_score_loss,
+    RocCurveDisplay, PrecisionRecallDisplay
+)
+
+def comprehensive_evaluation(y_true, y_pred_prob, threshold=0.5):
+    y_pred = (y_pred_prob &amp;gt;= threshold).astype(int)
+    
+    print(&amp;quot;=&amp;quot; * 50)
+    print(&amp;quot;CLASSIFICATION REPORT&amp;quot;)
+    print(&amp;quot;=&amp;quot; * 50)
+    print(classification_report(y_true, y_pred, target_names=[&#39;Control&#39;, &#39;Case&#39;]))
+    
+    print(f&amp;quot;\nAUROC:  {roc_auc_score(y_true, y_pred_prob):.4f}&amp;quot;)
+    print(f&amp;quot;AUPRC:  {average_precision_score(y_true, y_pred_prob):.4f}&amp;quot;)
+    print(f&amp;quot;Brier:  {brier_score_loss(y_true, y_pred_prob):.4f}&amp;quot;)
+    
+    # Net Reclassification Improvement, Integrated Discrimination Improvement
+    # (For comparison against a clinical baseline model)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;calibration-does-the-model-know-what-it-doesnt-know&#34;&gt;Calibration: Does the Model Know What It Doesn&amp;rsquo;t Know?&lt;/h3&gt;
+&lt;p&gt;A model that predicts &amp;ldquo;80% probability&amp;rdquo; should be right 80% of the time. Models that are systematically over- or under-confident mislead clinical decision-making.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from sklearn.calibration import calibration_curve, CalibratedClassifierCV
+
+# Plot calibration curve
+fraction_of_positives, mean_predicted_value = calibration_curve(
+    y_true, y_pred_prob, n_bins=10
+)
+
+plt.figure(figsize=(8, 6))
+plt.plot(mean_predicted_value, fraction_of_positives, &#39;s-&#39;, label=&#39;XGBoost&#39;)
+plt.plot([0, 1], [0, 1], &#39;k--&#39;, label=&#39;Perfect calibration&#39;)
+plt.xlabel(&#39;Mean predicted probability&#39;)
+plt.ylabel(&#39;Fraction of positives&#39;)
+plt.title(&#39;Calibration Curve&#39;)
+plt.legend()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;83-common-pitfalls-in-clinical-ml-research&#34;&gt;8.3 Common Pitfalls in Clinical ML Research&lt;/h2&gt;
+&lt;h3 id=&#34;data-leakage&#34;&gt;Data Leakage&lt;/h3&gt;
+&lt;p&gt;The most dangerous mistake in clinical ML: &lt;strong&gt;information from the future leaks into your training features&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Common sources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Temporal leakage&lt;/strong&gt;: Using lab values that were only measured because the patient was already diagnosed&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Processing leakage&lt;/strong&gt;: Fitting normalization parameters on the entire dataset before splitting&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Duplicate leakage&lt;/strong&gt;: The same patient appears in both training and test sets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# WRONG: Scales entire dataset before splitting
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)  # ← LEAKAGE
+X_train, X_test = train_test_split(X_scaled)
+
+# CORRECT: Fit scaler only on training data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)   # Fit on train only
+X_test_scaled  = scaler.transform(X_test)         # Apply to test
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;p-hacking-and-feature-mining&#34;&gt;P-Hacking and Feature Mining&lt;/h3&gt;
+&lt;p&gt;With 5,000 metabolites and α = 0.05, you expect &lt;strong&gt;250 false positives&lt;/strong&gt; by chance alone. Without correction:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;strong&gt;Bonferroni correction&lt;/strong&gt; (strict) or &lt;strong&gt;Benjamini-Hochberg FDR correction&lt;/strong&gt; (less strict, better powered)&lt;/li&gt;
+&lt;li&gt;Replicate in an independent cohort before reporting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;the-validation-hierarchy&#34;&gt;The Validation Hierarchy&lt;/h3&gt;
+&lt;p&gt;Not all validation is equal:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Level 1: Internal CV on development dataset          (necessary, not sufficient)
+Level 2: Holdout test set (same institution)         (good, but optimistic)
+Level 3: External validation (different institution)  (required for publication)
+Level 4: Prospective clinical validation              (required for clinical use)
+Level 5: Randomized trial comparing ML-guided vs     (gold standard)
+          standard care
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Most published ML models never progress beyond Level 2. The ones that transform clinical practice reach Level 4–5.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;-conclusion-the-future-of-omics-machine-learning&#34;&gt;🌟 Conclusion: The Future of Omics Machine Learning&lt;/h1&gt;
+&lt;p&gt;We stand at an inflection point in biological discovery. The tools now exist to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Read the complete molecular state&lt;/strong&gt; of a human being with unprecedented depth&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Identify signals&lt;/strong&gt; in data that would be invisible to any single human analyst&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Explain predictions&lt;/strong&gt; in terms clinicians and patients can understand&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Learn from millions of patient experiences&lt;/strong&gt; to personalize medicine for individual people&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The methods in this guide — LASSO, XGBoost, SHAP, Cox-PH, 1D-CNN — are not temporary tools. They are the &lt;strong&gt;vocabulary&lt;/strong&gt; of a new discipline that sits at the intersection of molecular biology, clinical medicine, and machine learning.&lt;/p&gt;
+&lt;p&gt;What makes this field special is that the stakes are real. The biomarker you discover might be the one that leads to a diagnostic test. The risk model you build might be the one that changes screening guidelines. The waveform anomaly detector you deploy might be the one that saves a life in the ICU at 3 AM.&lt;/p&gt;
+&lt;p&gt;The genome encoded the instructions. The phenome is the living expression of them. Machine learning is how we finally learn to read both — and act on what we find.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-further-reading&#34;&gt;📚 Further Reading&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Foundations&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hartl &amp;amp; Clark — &lt;em&gt;Principles of Population Genetics&lt;/em&gt; (population genetics)&lt;/li&gt;
+&lt;li&gt;Alberts et al. — &lt;em&gt;Molecular Biology of the Cell&lt;/em&gt; (cellular biology)&lt;/li&gt;
+&lt;li&gt;Strimmer &amp;amp; von Haeseler — &lt;em&gt;Statistical Genomics&lt;/em&gt; (statistical foundations)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Machine Learning&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hastie, Tibshirani &amp;amp; Friedman — &lt;em&gt;The Elements of Statistical Learning&lt;/em&gt; (LASSO, boosting, survival)&lt;/li&gt;
+&lt;li&gt;Molnar — &lt;em&gt;Interpretable Machine Learning&lt;/em&gt; (free online, SHAP chapter excellent)&lt;/li&gt;
+&lt;li&gt;Chen &amp;amp; Guestrin (2016) — &lt;em&gt;XGBoost: A Scalable Tree Boosting System&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Clinical Applications&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Obermeyer &amp;amp; Emanuel (2016) — &amp;ldquo;Predicting the Future — Big Data, Machine Learning, and Clinical Medicine&amp;rdquo; (NEJM)&lt;/li&gt;
+&lt;li&gt;Lundberg et al. (2020) — &amp;ldquo;From local explanations to global understanding with explainable AI for trees&amp;rdquo; (Nature Machine Intelligence)&lt;/li&gt;
+&lt;li&gt;Katzman et al. (2018) — &amp;ldquo;DeepSurv: personalized treatment recommender system using a Cox proportional hazards deep neural network&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Omics &amp;amp; Metabolomics&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wishart et al. — &lt;em&gt;Human Metabolome Database&lt;/em&gt; (hmdb.ca)&lt;/li&gt;
+&lt;li&gt;Wishart (2016) — &amp;ldquo;Emerging applications of metabolomics in drug discovery and precision medicine&amp;rdquo; (Nature Reviews Drug Discovery)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;This blog post was written for students and researchers entering the field of computational biomedicine. All code examples are illustrative and should be adapted to your specific dataset and research question.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
     
     <item>
       <title>DK-011 — Banking as a System</title>
