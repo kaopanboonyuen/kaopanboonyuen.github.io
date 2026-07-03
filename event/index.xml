@@ -5,12 +5,44 @@
     <link>https://kaopanboonyuen.github.io/event/</link>
       <atom:link href="https://kaopanboonyuen.github.io/event/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Tue, 19 May 2026 09:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Thu, 02 Jul 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>Recent &amp; Upcoming Talks</title>
       <link>https://kaopanboonyuen.github.io/event/</link>
     </image>
+    
+    <item>
+      <title>IEEE GRSS Professional Member Spotlight, A Conversation on GeoAI, Remote Sensing, and the Journey Behind KAO</title>
+      <link>https://kaopanboonyuen.github.io/talk/ieee-grss-professional-member-spotlight-a-conversation-on-geoai-remote-sensing-and-the-journey-behind-kao/</link>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/talk/ieee-grss-professional-member-spotlight-a-conversation-on-geoai-remote-sensing-and-the-journey-behind-kao/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;IEEE_GRSS_IMG/KAO_IEEE_GRSS_SPOTLIGHT_001_WEB.png&#34; alt=&#34;IEEE GRSS Professional Member Spotlight&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;a-conversation-beyond-research-papers&#34;&gt;A Conversation Beyond Research Papers&lt;/h1&gt;
+&lt;p&gt;It is a tremendous honor to be featured as a &lt;strong&gt;Professional Member Spotlight&lt;/strong&gt; by the &lt;strong&gt;IEEE Geoscience and Remote Sensing Society (IEEE GRSS)&lt;/strong&gt;—one of the world&amp;rsquo;s leading professional societies dedicated to Earth observation, remote sensing, and geospatial technologies.&lt;/p&gt;
+&lt;p&gt;The interview was conducted by &lt;strong&gt;Madeleine Dawson&lt;/strong&gt; from the &lt;strong&gt;Ocean Remote Sensing Lab, University of Miami&lt;/strong&gt;, and offered an opportunity to reflect not only on my recent research, but also on the experiences that shaped my journey into GeoAI.&lt;/p&gt;
+&lt;p&gt;Rather than focusing on a single publication, the conversation explored the people, institutions, and ideas that have influenced my work—from my early days at &lt;strong&gt;GISTDA&lt;/strong&gt;, through postdoctoral research at &lt;strong&gt;Chulalongkorn University&lt;/strong&gt;, to my current role at the &lt;strong&gt;College of Computing, Khon Kaen University&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can read the full interview here: &lt;a href=&#34;https://www.grss-ieee.org/resources/news/professional-member-spotlight-dr-teerapong-panboonyuen/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;IEEE GRSS Professional Member Spotlight — Dr. Teerapong Panboonyuen&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;IEEE_GRSS_IMG/KAO_IEEE_GRSS_SPOTLIGHT_002_WEB.png&#34; alt=&#34;IEEE GRSS Professional Member Spotlight&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;research-highlight&#34;&gt;Research Highlight&lt;/h2&gt;
+&lt;p&gt;The interview also discusses my recent work on:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Kernel-Adaptive Optimization (KAO)&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;published in &lt;strong&gt;IEEE Transactions on Geoscience and Remote Sensing (IEEE TGRS)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;KAO introduces a new optimization framework designed to improve the stability and efficiency of deep neural network training for remote sensing and Earth observation applications. The interview also reflects on broader themes, including responsible AI, scientific curiosity, and the importance of developing technologies that benefit both society and our understanding of the Earth.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;a-meaningful-recognition&#34;&gt;A Meaningful Recognition&lt;/h2&gt;
+&lt;p&gt;For me, this feature represents much more than personal recognition.&lt;/p&gt;
+&lt;p&gt;It reflects the collective support of mentors, collaborators, students, and institutions that have accompanied my academic journey over the years.&lt;/p&gt;
+&lt;p&gt;As a researcher from Thailand, I am deeply grateful to contribute to a global scientific community working toward a shared goal: advancing artificial intelligence and remote sensing to better understand and protect our planet.&lt;/p&gt;
+&lt;p&gt;I sincerely thank &lt;strong&gt;IEEE GRSS&lt;/strong&gt; and &lt;strong&gt;Madeleine Dawson&lt;/strong&gt; for the opportunity to share my story with researchers around the world.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For the Earth, always. 🕊️&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>ASEAN Young Scientists Connect 2026 Pitching Trans-GMS LLM at Dusit Thani Bangkok</title>
@@ -505,27 +537,6 @@ After training your model, it’s time to evaluate how well it does at finding W
     </item>
     
     <item>
-      <title>AI Research Featured in Techsauce News</title>
-      <link>https://kaopanboonyuen.github.io/talk/ai-research-featured-in-techsauce-news/</link>
-      <pubDate>Tue, 15 Aug 2023 10:30:00 +0000</pubDate>
-      <guid>https://kaopanboonyuen.github.io/talk/ai-research-featured-in-techsauce-news/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;ai-research-featured-in-techsauce-news&#34;&gt;AI Research Featured in Techsauce News&lt;/h2&gt;
-&lt;p&gt;Honored to have my AI research featured in &lt;a href=&#34;https://techsauce.co/news/mars-deep-tech-startup-thaivivat-ai&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Techsauce&lt;/a&gt;, Thailand’s leading tech media platform. The article showcases my work in advancing AI technologies, emphasizing innovation and impact in the field.&lt;/p&gt;
-&lt;p&gt;This recognition underscores the significance of AI research in driving technological progress and its application in real-world scenarios. I&amp;rsquo;m grateful for the opportunity to contribute to the evolving landscape of AI and look forward to future endeavors in this exciting field.&lt;/p&gt;
-&lt;h2 id=&#34;-mars-revolutionizing-car-damage-segmentation&#34;&gt;🚗 MARS: Revolutionizing Car Damage Segmentation&lt;/h2&gt;
-&lt;p&gt;Proud to have our flagship model, MARS (Mask Attention Refinement with Sequential Quadtree Nodes), featured in &lt;a href=&#34;https://techsauce.co/news/mars-deep-tech-startup-thaivivat-ai&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Techsauce News&lt;/a&gt;. This recognition underscores our commitment to advancing AI in the automotive insurance sector.&lt;/p&gt;
-&lt;h3 id=&#34;-what-is-mars&#34;&gt;🔍 What is MARS?&lt;/h3&gt;
-&lt;p&gt;MARS is a state-of-the-art deep learning model designed for precise car damage instance segmentation. By leveraging sequential quadtree attention, it surpasses existing methods like Mask R-CNN and PointRend, achieving notable improvements in segmentation accuracy.&lt;/p&gt;
-&lt;h3 id=&#34;-marsail-driving-innovation&#34;&gt;🧠 MARSAIL: Driving Innovation&lt;/h3&gt;
-&lt;p&gt;MARSAIL (Motor AI Recognition Solution Artificial Intelligence Laboratory) is dedicated to pioneering research at the intersection of computer vision, transformers, and automotive AI. Our mission is to revolutionize the automotive insurance and repair industries through AI-driven automation, delivering breakthroughs in segmentation, localization, and decision intelligence.&lt;/p&gt;
-&lt;h3 id=&#34;-impact-and-recognition&#34;&gt;📈 Impact and Recognition&lt;/h3&gt;
-&lt;p&gt;The feature in Techsauce News highlights the significance of our work in transforming the automotive insurance landscape. By integrating advanced AI models like MARS, we aim to enhance the accuracy and efficiency of car damage evaluation, paving the way for smarter, more automated insurance processes.&lt;/p&gt;
-&lt;p&gt;Explore more about MARS and MARSAIL&amp;rsquo;s innovative solutions at &lt;a href=&#34;https://kaopanboonyuen.github.io/MARS/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;kaopanboonyuen.github.io/MARS/&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Invited to Italy for ICIAP2023</title>
       <link>https://kaopanboonyuen.github.io/talk/invited-to-italy-for-iciap2023/</link>
       <pubDate>Fri, 11 Aug 2023 10:30:00 +0000</pubDate>
@@ -549,6 +560,27 @@ After training your model, it’s time to evaluate how well it does at finding W
 &lt;p&gt;Thank you to Techsauce, the Thai tech news agency, for showcasing my research on the application of AI in the auto insurance and garage industry. You can read the full article here: &lt;a href=&#34;https://techsauce.co/news/mars-deep-tech-startup-thaivivat-ai&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Techsauce&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Presenting my findings at ICIAP 2023 was a fantastic opportunity to engage with fellow researchers and industry professionals, exploring the opportunities, challenges, and future directions in this rapidly evolving field.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AI Research Featured in Techsauce News</title>
+      <link>https://kaopanboonyuen.github.io/talk/ai-research-featured-in-techsauce-news/</link>
+      <pubDate>Wed, 09 Aug 2023 10:30:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/talk/ai-research-featured-in-techsauce-news/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ai-research-featured-in-techsauce-news&#34;&gt;AI Research Featured in Techsauce News&lt;/h2&gt;
+&lt;p&gt;Honored to have my AI research featured in &lt;a href=&#34;https://techsauce.co/news/mars-deep-tech-startup-thaivivat-ai&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Techsauce&lt;/a&gt;, Thailand’s leading tech media platform. The article showcases my work in advancing AI technologies, emphasizing innovation and impact in the field.&lt;/p&gt;
+&lt;p&gt;This recognition underscores the significance of AI research in driving technological progress and its application in real-world scenarios. I&amp;rsquo;m grateful for the opportunity to contribute to the evolving landscape of AI and look forward to future endeavors in this exciting field.&lt;/p&gt;
+&lt;h2 id=&#34;-mars-revolutionizing-car-damage-segmentation&#34;&gt;🚗 MARS: Revolutionizing Car Damage Segmentation&lt;/h2&gt;
+&lt;p&gt;Proud to have our flagship model, MARS (Mask Attention Refinement with Sequential Quadtree Nodes), featured in &lt;a href=&#34;https://techsauce.co/news/mars-deep-tech-startup-thaivivat-ai&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Techsauce News&lt;/a&gt;. This recognition underscores our commitment to advancing AI in the automotive insurance sector.&lt;/p&gt;
+&lt;h3 id=&#34;-what-is-mars&#34;&gt;🔍 What is MARS?&lt;/h3&gt;
+&lt;p&gt;MARS is a state-of-the-art deep learning model designed for precise car damage instance segmentation. By leveraging sequential quadtree attention, it surpasses existing methods like Mask R-CNN and PointRend, achieving notable improvements in segmentation accuracy.&lt;/p&gt;
+&lt;h3 id=&#34;-marsail-driving-innovation&#34;&gt;🧠 MARSAIL: Driving Innovation&lt;/h3&gt;
+&lt;p&gt;MARSAIL (Motor AI Recognition Solution Artificial Intelligence Laboratory) is dedicated to pioneering research at the intersection of computer vision, transformers, and automotive AI. Our mission is to revolutionize the automotive insurance and repair industries through AI-driven automation, delivering breakthroughs in segmentation, localization, and decision intelligence.&lt;/p&gt;
+&lt;h3 id=&#34;-impact-and-recognition&#34;&gt;📈 Impact and Recognition&lt;/h3&gt;
+&lt;p&gt;The feature in Techsauce News highlights the significance of our work in transforming the automotive insurance landscape. By integrating advanced AI models like MARS, we aim to enhance the accuracy and efficiency of car damage evaluation, paving the way for smarter, more automated insurance processes.&lt;/p&gt;
+&lt;p&gt;Explore more about MARS and MARSAIL&amp;rsquo;s innovative solutions at &lt;a href=&#34;https://kaopanboonyuen.github.io/MARS/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;kaopanboonyuen.github.io/MARS/&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

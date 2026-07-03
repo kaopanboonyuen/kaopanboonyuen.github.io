@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ieee | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/ieee/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/ieee/index.xml" rel="self" type="application/rss+xml" />
+    <description>ieee</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Thu, 02 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>ieee</title>
+      <link>https://kaopanboonyuen.github.io/tag/ieee/</link>
+    </image>
+    
+    <item>
+      <title>IEEE GRSS Professional Member Spotlight, A Conversation on GeoAI, Remote Sensing, and the Journey Behind KAO</title>
+      <link>https://kaopanboonyuen.github.io/talk/ieee-grss-professional-member-spotlight-a-conversation-on-geoai-remote-sensing-and-the-journey-behind-kao/</link>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/talk/ieee-grss-professional-member-spotlight-a-conversation-on-geoai-remote-sensing-and-the-journey-behind-kao/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;IEEE_GRSS_IMG/KAO_IEEE_GRSS_SPOTLIGHT_001_WEB.png&#34; alt=&#34;IEEE GRSS Professional Member Spotlight&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;a-conversation-beyond-research-papers&#34;&gt;A Conversation Beyond Research Papers&lt;/h1&gt;
+&lt;p&gt;It is a tremendous honor to be featured as a &lt;strong&gt;Professional Member Spotlight&lt;/strong&gt; by the &lt;strong&gt;IEEE Geoscience and Remote Sensing Society (IEEE GRSS)&lt;/strong&gt;—one of the world&amp;rsquo;s leading professional societies dedicated to Earth observation, remote sensing, and geospatial technologies.&lt;/p&gt;
+&lt;p&gt;The interview was conducted by &lt;strong&gt;Madeleine Dawson&lt;/strong&gt; from the &lt;strong&gt;Ocean Remote Sensing Lab, University of Miami&lt;/strong&gt;, and offered an opportunity to reflect not only on my recent research, but also on the experiences that shaped my journey into GeoAI.&lt;/p&gt;
+&lt;p&gt;Rather than focusing on a single publication, the conversation explored the people, institutions, and ideas that have influenced my work—from my early days at &lt;strong&gt;GISTDA&lt;/strong&gt;, through postdoctoral research at &lt;strong&gt;Chulalongkorn University&lt;/strong&gt;, to my current role at the &lt;strong&gt;College of Computing, Khon Kaen University&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can read the full interview here: &lt;a href=&#34;https://www.grss-ieee.org/resources/news/professional-member-spotlight-dr-teerapong-panboonyuen/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;IEEE GRSS Professional Member Spotlight — Dr. Teerapong Panboonyuen&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;IEEE_GRSS_IMG/KAO_IEEE_GRSS_SPOTLIGHT_002_WEB.png&#34; alt=&#34;IEEE GRSS Professional Member Spotlight&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;research-highlight&#34;&gt;Research Highlight&lt;/h2&gt;
+&lt;p&gt;The interview also discusses my recent work on:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Kernel-Adaptive Optimization (KAO)&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;published in &lt;strong&gt;IEEE Transactions on Geoscience and Remote Sensing (IEEE TGRS)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;KAO introduces a new optimization framework designed to improve the stability and efficiency of deep neural network training for remote sensing and Earth observation applications. The interview also reflects on broader themes, including responsible AI, scientific curiosity, and the importance of developing technologies that benefit both society and our understanding of the Earth.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;a-meaningful-recognition&#34;&gt;A Meaningful Recognition&lt;/h2&gt;
+&lt;p&gt;For me, this feature represents much more than personal recognition.&lt;/p&gt;
+&lt;p&gt;It reflects the collective support of mentors, collaborators, students, and institutions that have accompanied my academic journey over the years.&lt;/p&gt;
+&lt;p&gt;As a researcher from Thailand, I am deeply grateful to contribute to a global scientific community working toward a shared goal: advancing artificial intelligence and remote sensing to better understand and protect our planet.&lt;/p&gt;
+&lt;p&gt;I sincerely thank &lt;strong&gt;IEEE GRSS&lt;/strong&gt; and &lt;strong&gt;Madeleine Dawson&lt;/strong&gt; for the opportunity to share my story with researchers around the world.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For the Earth, always. 🕊️&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>When the Earth Sees You Back: Being Featured by IEEE GRSS as a Professional Member Spotlight</title>
+      <link>https://kaopanboonyuen.github.io/blog/2026-07-02-ieee-grss-professional-member-spotlight/</link>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/blog/2026-07-02-ieee-grss-professional-member-spotlight/</guid>
+      <description>&lt;h1 id=&#34;-i-got-into-geoai-to-see-the-earth-more-clearly-turns-out-it-saw-me-too&#34;&gt;🛰️ I Got Into GeoAI to See the Earth More Clearly. Turns Out, It Saw Me Too.&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;You don&amp;rsquo;t need a perfect trajectory. You just need to keep going, keep being curious, and find the people who believe in your work before you do.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;Some news arrives loudly. This one arrived quietly, in an email, and I&amp;rsquo;ve been sitting with it for a few days now, still slightly in disbelief.&lt;/p&gt;
+&lt;p&gt;I was recently named a &lt;strong&gt;Professional Member Spotlight&lt;/strong&gt; by the &lt;strong&gt;IEEE Geoscience and Remote Sensing Society (GRSS)&lt;/strong&gt; — the global academic society under IEEE dedicated to the research, development, and application of remote sensing technology for the Earth, the oceans, the atmosphere, and space, serving scientists and engineers around the world.&lt;/p&gt;
+&lt;p&gt;Being recognized by a society like this is not something I take lightly. GRSS is where the global remote sensing community lives. Having a small piece of my work, and my story, sit inside that space — I am still processing what that means.&lt;/p&gt;
+&lt;p&gt;You can read the full interview here: &lt;a href=&#34;https://www.grss-ieee.org/resources/news/professional-member-spotlight-dr-teerapong-panboonyuen/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;IEEE GRSS Professional Member Spotlight — Dr. Teerapong Panboonyuen&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-a-conversation-worth-remembering&#34;&gt;🎙️ A Conversation Worth Remembering&lt;/h2&gt;
+&lt;p&gt;The spotlight came through a conversation with &lt;strong&gt;Madeleine Dawson&lt;/strong&gt; from the &lt;strong&gt;Ocean Remote Sensing Lab, University of Miami&lt;/strong&gt;. We talked about my recent work on &lt;strong&gt;KAO: Kernel-Adaptive Optimization&lt;/strong&gt;, published in &lt;strong&gt;IEEE Transactions on Geoscience and Remote Sensing (TGRS)&lt;/strong&gt; — but really, the conversation went well beyond the paper itself.&lt;/p&gt;
+&lt;p&gt;It was the kind of exchange that reminds you why you chose this field in the first place. Not just the equations, the benchmarks, or the leaderboard numbers — but the people who care about the same quiet, unglamorous question: &lt;em&gt;how do we build tools that help us understand this planet a little better?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;And since a fair number of people who reached out after the spotlight asked, quite fairly, &amp;ldquo;okay but what actually &lt;strong&gt;is&lt;/strong&gt; KAO?&amp;rdquo; — I figured the honest way to answer that is to just show you. Grab a coffee. This part gets nerdy. ☕🛰️&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;IEEE_GRSS_IMG/KAO_IEEE_GRSS_SPOTLIGHT_002_WEB.png&#34; alt=&#34;IEEE GRSS Latest News featuring Professional Member Spotlight&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    &lt;strong&gt;Figure 1:&lt;/strong&gt; The &lt;strong&gt;IEEE Geoscience and Remote Sensing Society (IEEE GRSS)&lt;/strong&gt; Latest News page highlighting my feature as a &lt;em&gt;Professional Member Spotlight&lt;/em&gt;.
+    Seeing my work appear on the official homepage of one of the world&#39;s leading scientific societies in remote sensing was an unforgettable moment.
+    It represents not only a personal milestone but also a meaningful recognition of the growing contributions of Thai researchers to the global GeoAI and Earth observation community.
+    &lt;br&gt;&lt;br&gt;
+    &lt;strong&gt;Credit:&lt;/strong&gt; IEEE Geoscience and Remote Sensing Society (IEEE GRSS).&lt;br&gt;
+    Official Article:
+    &lt;a href=&#34;https://www.grss-ieee.org/resources/news/professional-member-spotlight-dr-teerapong-panboonyuen/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+      https://www.grss-ieee.org/resources/news/professional-member-spotlight-dr-teerapong-panboonyuen/
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-where-it-actually-started&#34;&gt;🌱 Where It Actually Started&lt;/h2&gt;
+&lt;p&gt;Before the math, the origin story, because it matters.&lt;/p&gt;
+&lt;p&gt;My journey in GeoAI started at &lt;strong&gt;GISTDA&lt;/strong&gt; — the Geo-Informatics and Space Technology Development Agency of Thailand. It was my first real school in geoscience, and it&amp;rsquo;s a place I still carry with me. GISTDA gave me the foundation to believe that satellite imagery could be something more than pixels and data — it could be a lens for understanding the world more clearly. That belief still shows up in every line of code I write.&lt;/p&gt;
+&lt;p&gt;From there, I found a second home at &lt;strong&gt;Chulalongkorn University&lt;/strong&gt;, under my postdoctoral advisor, &lt;strong&gt;Professor Chalermchon&lt;/strong&gt;, who trusted me with the space to explore and create independently. The &lt;strong&gt;C2F (The Second Century Fund, Chulalongkorn University) postdoctoral support&lt;/strong&gt; made much of this work possible.&lt;/p&gt;
+&lt;p&gt;And I owe real gratitude to the &lt;strong&gt;College of Computing at Khon Kaen University&lt;/strong&gt;, for their warmth, and for letting me be part of shaping the next generation of AI researchers here in Thailand.&lt;/p&gt;
+&lt;p&gt;None of this happened alone. Recognition like this always belongs to more people than the name on the article.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Small news folded in:&lt;/strong&gt; KAO has also been accepted at &lt;strong&gt;AOGS 2026 in Fukuoka, Japan&lt;/strong&gt;. Quietly one of the things I&amp;rsquo;m most looking forward to this year.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;IEEE_GRSS_IMG/KAO_IEEE_GRSS_SPOTLIGHT_001_WEB.png&#34; alt=&#34;Professional Member Spotlight article on IEEE GRSS&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    &lt;strong&gt;Figure 2:&lt;/strong&gt; The official &lt;em&gt;Professional Member Spotlight&lt;/em&gt; article published by IEEE GRSS.
+    The interview reflects my research journey—from discovering remote sensing at GISTDA to developing Kernel-Adaptive Optimization (KAO) for Earth observation and AI.
+    I am deeply grateful to IEEE GRSS and interviewer Madeleine Dawson for providing the opportunity to share my story with the international remote sensing community.
+    &lt;br&gt;&lt;br&gt;
+    &lt;strong&gt;Credit:&lt;/strong&gt; IEEE Geoscience and Remote Sensing Society (IEEE GRSS).&lt;br&gt;
+    Official Article:
+    &lt;a href=&#34;https://www.grss-ieee.org/resources/news/professional-member-spotlight-dr-teerapong-panboonyuen/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+      https://www.grss-ieee.org/resources/news/professional-member-spotlight-dr-teerapong-panboonyuen/
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-okay-so-what-problem-is-kao-actually-solving&#34;&gt;🧩 Okay, So What Problem Is KAO Actually Solving?&lt;/h2&gt;
+&lt;p&gt;Picture a very high-resolution (VHR) satellite image — 50 cm per pixel, sharp enough to make out individual rooftops and cars. Now picture a chunk of it missing. Clouds drifted through during acquisition. A sensor glitched. Someone&amp;rsquo;s occlusion mask covers a whole neighborhood.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Satellite image inpainting&lt;/strong&gt; is the task of filling that hole back in — not with a plausible-looking blur, but with something structurally &lt;em&gt;correct&lt;/em&gt;: roads that connect properly, fields that follow real irrigation lines, coastlines that don&amp;rsquo;t hallucinate a pier that was never there.&lt;/p&gt;
+&lt;p&gt;Diffusion models are the best tool we have for this. But they come in two flavors, and both have a catch:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Preconditioned models&lt;/strong&gt; — inpainting is baked in during training. Fast at inference, but you need to retrain the whole thing every time you touch a new dataset.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Postconditioned models&lt;/strong&gt; — inpainting is bolted on at inference time, no retraining needed. Flexible, but painfully slow, because you&amp;rsquo;re running the diffusion process forward and backward, over and over, just to patch one hole.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;KAO is our attempt to get the best of both: the speed of preconditioning, the flexibility of postconditioning — without either the retraining tax or the compute tax.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-a-60-second-refresher-on-diffusion-models&#34;&gt;🌀 A 60-Second Refresher on Diffusion Models&lt;/h2&gt;
+&lt;p&gt;If you already live and breathe DDPMs, skip ahead. If not, here&amp;rsquo;s the shape of the idea, distilled.&lt;/p&gt;
+&lt;p&gt;A diffusion model learns to destroy an image with noise, step by step, and then learns to walk that process backward.&lt;/p&gt;
+&lt;h3 id=&#34;11-the-forward-process&#34;&gt;1.1 The Forward Process&lt;/h3&gt;
+&lt;p&gt;Let $x_0$ be a clean satellite image. The forward process corrupts it over $T$ timesteps until it becomes pure Gaussian noise, following a Markov chain:&lt;/p&gt;
+&lt;p&gt;$$
+q(x_{1:T} \mid x_0) = \prod_{t=1}^{T} q(x_t \mid x_{t-1})
+$$&lt;/p&gt;
+&lt;p&gt;where each individual transition adds a small amount of noise, controlled by a schedule $\alpha_t \in (0,1)$:&lt;/p&gt;
+&lt;p&gt;$$
+q(x_t \mid x_{t-1}) = \mathcal{N}\bigl(x_t;\ \sqrt{\alpha_t}, x_{t-1},\ (1-\alpha_t)\mathbf{I}\bigr)
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reading the schedule.&lt;/strong&gt; As $\alpha_t \to 1$, almost no noise is added at step $t$; as $\alpha_t \to 0$, the signal is nearly wiped out. Over $T \approx 1000$ steps, this drip-feed of noise is what lets the reverse process learn a &lt;em&gt;smooth&lt;/em&gt; denoising trajectory instead of a single, brutal leap from noise to image.&lt;/p&gt;
+&lt;h3 id=&#34;12-the-reverse-process&#34;&gt;1.2 The Reverse Process&lt;/h3&gt;
+&lt;p&gt;A neural network $p_\theta$ learns to invert this corruption, one step at a time, starting from pure noise:&lt;/p&gt;
+&lt;p&gt;$$
+p(x_{0:T}) = p(x_T) \prod_{t=1}^{T} p_\theta(x_{t-1} \mid x_t), \qquad p(x_T) = \mathcal{N}(x_T;\ 0,\ \mathbf{I})
+$$&lt;/p&gt;
+&lt;p&gt;Training minimizes the KL divergence between the true posterior $q(x_{t-1}\mid x_t, x_0)$ and the model&amp;rsquo;s prediction $p_\theta(x_{t-1}\mid x_t)$:&lt;/p&gt;
+&lt;p&gt;$$
+\theta^{*} = \arg\min_{\theta}\ D_{\mathrm{KL}}\bigl[q(x_{t-1}\mid x_t, x_0)\ \Vert\ p_\theta(x_{t-1}\mid x_t)\bigr] = \arg\min_{\theta}\ \frac{1}{2\sigma_q^2(t)}\bigl\Vert \mu_\theta - \mu_q \bigr\Vert^2
+$$&lt;/p&gt;
+&lt;p&gt;which, after taking the expectation over randomly sampled timesteps $t \sim \mathcal{U}{2,T}$, gives the standard diffusion training objective. For &lt;em&gt;inpainting&lt;/em&gt;, this reverse process is conditioned on the known pixels while the model dreams up the missing ones — and that hand-off is exactly where KAO steps in.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-the-core-idea-kernel-adaptive-optimization&#34;&gt;⚙️ The Core Idea: Kernel-Adaptive Optimization&lt;/h2&gt;
+&lt;p&gt;Standard diffusion training treats every pixel, every region, every timestep with the same gradient weighting. But satellite images aren&amp;rsquo;t uniform. A stretch of open ocean and a dense city block do not deserve equal attention during denoising — one is nearly flat, the other is packed with structure that&amp;rsquo;s easy to destroy and hard to rebuild.&lt;/p&gt;
+&lt;p&gt;KAO&amp;rsquo;s fix: &lt;strong&gt;weight the training signal by a kernel that measures how &amp;ldquo;eventful&amp;rdquo; a region is&lt;/strong&gt;, so the model spends its learning capacity where it actually matters.&lt;/p&gt;
+&lt;h3 id=&#34;21-diffusion-as-a-stochastic-differential-equation&#34;&gt;2.1 Diffusion as a Stochastic Differential Equation&lt;/h3&gt;
+&lt;p&gt;We treat the forward diffusion process as a stochastic differential equation (SDE):&lt;/p&gt;
+&lt;p&gt;$$
+dX_t = f(X_t, t), dt + g(t), dW_t
+$$&lt;/p&gt;
+&lt;p&gt;where $f(X_t,t)$ is the drift term ensuring smooth transitions, $g(t)$ is a time-dependent diffusion coefficient, and $W_t$ is a Wiener process. The reverse process recovers $X_0$ from $X_T$ using a learned score function $s_\theta(X_t, t)$:&lt;/p&gt;
+&lt;p&gt;$$
+dX_t = \bigl[f(X_t,t) - g(t)^2, s_\theta(X_t,t)\bigr], dt + g(t), d\bar{W}_t
+$$&lt;/p&gt;
+&lt;h3 id=&#34;22-the-kernelized-objective&#34;&gt;2.2 The Kernelized Objective&lt;/h3&gt;
+&lt;p&gt;Kernel-Aware Optimization (KAO) modifies the standard training process by applying a similarity-based weighting to the KL divergence loss. Instead of treating every training sample equally, KAO assigns greater importance to transitions between consecutive latent states that are more similar according to a kernel function, while giving less emphasis to less similar transitions.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This allows the model to focus its learning on preserving locally consistent latent representations, leading to smoother and more coherent denoising behavior during training.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The kernel itself is a Gaussian radial basis function (RBF) over the latent distance between consecutive states:&lt;/p&gt;
+&lt;p&gt;$$
+K(X_t, X_{t-1}) = \exp\left(-\frac{\Vert X_t - X_{t-1} \Vert^2}{2\sigma^2}\right)
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bandwidth analysis.&lt;/strong&gt; $\sigma$ is an &lt;em&gt;adaptive&lt;/em&gt; bandwidth, not a fixed hyperparameter — it stretches or shrinks with local image complexity. For a flat, low-variance patch (open ocean, uniform cropland), $\Vert X_t - X_{t-1}\Vert$ stays small across timesteps, so $K \to 1$ and the sample contributes close to its unweighted gradient. For a high-frequency patch (a coastline, a road intersection), consecutive latent states diverge more sharply under noise, $K$ decays toward $0$, and the &lt;em&gt;loss weighting compensates upward&lt;/em&gt; relative to flat regions — concentrating gradient signal exactly where structure is easiest to destroy and hardest to reconstruct.&lt;/p&gt;
+&lt;h3 id=&#34;23-defining-eventful-high-structural-variance-hsv&#34;&gt;2.3 Defining &amp;ldquo;Eventful&amp;rdquo;: High Structural Variance (HSV)&lt;/h3&gt;
+&lt;p&gt;To decide which regions deserve that extra attention, we define a per-pixel &lt;strong&gt;High Structural Variance (HSV)&lt;/strong&gt; score:&lt;/p&gt;
+&lt;p&gt;$$
+\mathrm{HSV}(x) = \mathrm{Var}_{\mathcal{N}(x)}\bigl[\nabla I\bigr] - \epsilon
+$$&lt;/p&gt;
+&lt;p&gt;where $\nabla I$ is the local image-gradient magnitude within neighborhood $\mathcal{N}(x)$, and $\epsilon$ is a learned noise-suppression threshold. Positive $\mathrm{HSV}(x)$ marks structurally rich content — road edges, coastlines, field boundaries — and KAO prioritizes these regions during denoising; near-zero or negative $\mathrm{HSV}(x)$ marks flat, low-information content, which the model can safely under-weight.&lt;/p&gt;
+&lt;h3 id=&#34;24-why-this-is-principled-not-just-a-heuristic&#34;&gt;2.4 Why This Is Principled, Not Just a Heuristic&lt;/h3&gt;
+&lt;p&gt;This kernelized reweighting mirrors the &lt;strong&gt;Fisher-Rao metric&lt;/strong&gt; from information geometry: gradients are reweighted to reduce variance in regions of high uncertainty, steering parameter updates toward the locally Wasserstein-optimal direction rather than treating every region of the image as equally informative:&lt;/p&gt;
+&lt;p&gt;$$
+\nabla_\theta, \mathbb{E}\Bigl[\bigl\Vert s_\theta(X_t,t) - \nabla \log p(X_t)\bigr\Vert^2\Bigr] \ \propto\ \mathbb{E}\Bigl[K(X_t, X_{t-1})\cdot \nabla_\theta \log p_\theta(X_t)\Bigr]
+$$&lt;/p&gt;
+&lt;p&gt;Nerdy, yes. But the payoff is concrete: sharper roads, cleaner field boundaries, fewer hallucinated textures where the model &amp;ldquo;gave up&amp;rdquo; and smoothed things over.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-two-mechanisms-that-make-it-work-latent-conditioning--explicit-propagation&#34;&gt;🧵 Two Mechanisms That Make It Work: Latent Conditioning + Explicit Propagation&lt;/h2&gt;
+&lt;p&gt;Kernel weighting alone isn&amp;rsquo;t enough — KAO also needs a way to actually &lt;strong&gt;inject the known pixels&lt;/strong&gt; into the generation process for the unknown ones. That&amp;rsquo;s done through two coordinated mechanisms.&lt;/p&gt;
+&lt;h3 id=&#34;31-latent-space-conditioning-lsc&#34;&gt;3.1 Latent Space Conditioning (LSC)&lt;/h3&gt;
+&lt;p&gt;At every resolution level of the network, we blend the &amp;ldquo;inferred&amp;rdquo; latent features $h^{\text{infr}}$ with the &amp;ldquo;conditioned&amp;rdquo; (known) features $h^{\text{cond}}$, guided by a downsampled version of the occlusion mask $D(m)$:&lt;/p&gt;
+&lt;p&gt;$$
+h^{*} = h^{\text{infr}} \odot \bigl(1 - D(m)\bigr) ;+; h^{\text{cond}} \odot D(m)
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why average pooling for $D(m)$.&lt;/strong&gt; Because $D(m)$ is produced by resizing the binary mask $m$ via average pooling rather than nearest-neighbor downsampling, it is no longer strictly binary near occlusion boundaries — it becomes a soft blending coefficient. This is what prevents hard, visible seams at the edge of a reconstructed region.&lt;/p&gt;
+&lt;h3 id=&#34;32-explicit-propagation-ep&#34;&gt;3.2 Explicit Propagation (EP)&lt;/h3&gt;
+&lt;p&gt;Latent conditioning alone tells the model &lt;em&gt;where&lt;/em&gt; to blend; Explicit Propagation is what actually lets information &lt;em&gt;flow&lt;/em&gt; from known regions into missing ones inside the latent space, via a learned nonlinear transform $\phi$ with parameters $\omega$:&lt;/p&gt;
+&lt;p&gt;$$
+\hat{h} = \gamma^{-1}\Bigl[,\phi\bigl(\omega,;\ \gamma(D(m),, h^{\text{cond}})\bigr)\Bigr]
+$$&lt;/p&gt;
+&lt;p&gt;Here $\gamma$ is a mask-wise max-pooling operation that compresses the conditioned region&amp;rsquo;s information, $\phi$ is a small learned nonlinearity that maps $\phi:\mathbb{R}^{C}\to\mathbb{R}^{C\times 1 \times 24}$, and $\gamma^{-1}$ is the corresponding unpooling operation that restores the result to full resolution.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Parameter cost.&lt;/strong&gt; This entire module adds fewer than $1%$ additional parameters relative to the base diffusion backbone — a strikingly cheap add-on for the quality gain it produces, since it never touches the pretrained weights of the underlying denoiser.&lt;/p&gt;
+&lt;h3 id=&#34;33-final-reconstruction&#34;&gt;3.3 Final Reconstruction&lt;/h3&gt;
+&lt;p&gt;At each denoising step, the inferred and conditioned predictions are blended one last time using the original (full-resolution) mask $m$:&lt;/p&gt;
+&lt;p&gt;$$
+x_{t-1} = x_{t-1}^{\text{infr}} \odot (1-m) ;+; x_{t-1}^{\text{cond}} \odot m
+$$&lt;/p&gt;
+&lt;p&gt;Run this recursively for $t = T, T-1, \dots, 1$, and the output at $t=0$ is the fully reconstructed satellite image — occlusion filled in, structure intact.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-a-token-pyramid-transformer-tpt-specifically&#34;&gt;🌐 Why a Token Pyramid Transformer (TPT), Specifically&lt;/h2&gt;
+&lt;p&gt;KAO&amp;rsquo;s backbone uses a &lt;strong&gt;Token Pyramid Transformer (TPT)&lt;/strong&gt; instead of a more familiar U-Net or HRNet. The reasoning, briefly:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;U-Net&lt;/strong&gt; relies on repeated downsampling/upsampling, which tends to blur token-level detail across scales.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HRNet&lt;/strong&gt; keeps high resolution throughout, which preserves detail — but at a steep computational cost for VHR imagery.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TPT&lt;/strong&gt; keeps token-level granularity &lt;em&gt;without&lt;/em&gt; the downsample/upsample cycle, and stays lighter than HRNet, while still capturing hierarchical semantics.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Critically, TPT&amp;rsquo;s token-level representations give KAO&amp;rsquo;s kernel weighting something clean to grab onto — each token becomes a natural unit for the kernel to weight, rather than an entire feature map.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-does-it-actually-work-yes--heres-the-receipts&#34;&gt;📊 Does It Actually Work? (Yes — Here&amp;rsquo;s the Receipts)&lt;/h2&gt;
+&lt;p&gt;KAO was tested on two very-high-resolution benchmarks: the &lt;strong&gt;Massachusetts Roads Dataset&lt;/strong&gt; (thin, sharp linear structures) and &lt;strong&gt;DeepGlobe 2018&lt;/strong&gt; (diverse land cover at 50 cm/pixel), against Stable Diffusion, RePaint, LatentPaint, SatDiff, DPS, and PSLD.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Dataset&lt;/th&gt;
+&lt;th&gt;Metric&lt;/th&gt;
+&lt;th&gt;KAO (Ours)&lt;/th&gt;
+&lt;th&gt;Best Baseline&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Massachusetts Roads&lt;/td&gt;
+&lt;td&gt;FID ↓&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;3.11&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;3.42 (PSLD)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Massachusetts Roads&lt;/td&gt;
+&lt;td&gt;Precision ↑&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0.93&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;0.91 (PSLD)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Massachusetts Roads&lt;/td&gt;
+&lt;td&gt;Recall ↑&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0.91&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;0.89 (PSLD)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DeepGlobe 2018&lt;/td&gt;
+&lt;td&gt;FID ↓&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;1.42&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;1.65 (PSLD)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DeepGlobe 2018&lt;/td&gt;
+&lt;td&gt;Precision ↑&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0.88&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;0.84 (PSLD)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DeepGlobe 2018&lt;/td&gt;
+&lt;td&gt;Recall ↑&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;0.63&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;0.58 (PSLD)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;And it&amp;rsquo;s not just more accurate — it&amp;rsquo;s &lt;em&gt;lighter&lt;/em&gt;. On Massachusetts Roads, KAO runs inference in &lt;strong&gt;0.67s per image&lt;/strong&gt; on &lt;strong&gt;8.7 GB&lt;/strong&gt; of GPU memory with &lt;strong&gt;10.9 billion FLOPs&lt;/strong&gt;, all of them the lowest among every method tested. Better reconstructions, smaller footprint. That combination is rare enough that it&amp;rsquo;s genuinely satisfying to see in the numbers.&lt;/p&gt;
+&lt;p&gt;The ablation study tells the same story from a different angle — strip out resampling, and LPIPS falls apart (0.528); add latent conditioning back, and it drops to 0.297; add the propagation modules, and the full model lands at &lt;strong&gt;0.059 LPIPS, 6.13 FID&lt;/strong&gt;. Every component earns its place.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-where-it-actually-shows-up-farmland-not-just-formulas&#34;&gt;🌾 Where It Actually Shows Up: Farmland, Not Just Formulas&lt;/h2&gt;
+&lt;p&gt;The equations are fun, but the part that actually made the Madeleine Dawson conversation feel real was talking about &lt;em&gt;where&lt;/em&gt; this matters. In agricultural regions — crop rows, irrigation channels, segmented plots — KAO consistently recovers boundary alignment and furrow direction that other methods blur into mush. In urban scenes, it holds road networks and rooftops together instead of letting them melt into their surroundings.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s the actual point of all this kernel machinery: not a leaderboard number, but a downstream researcher somewhere being able to trust that a reconstructed satellite tile reflects the real geometry of a real place — for crop monitoring, disaster response, land-use mapping, the unglamorous infrastructure work that remote sensing quietly makes possible.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;IEEE_GRSS_IMG/IEEE_GRSS_LOGO.png&#34; alt=&#34;IEEE Geoscience and Remote Sensing Society logo&#34; style=&#34;max-width: 320px;&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    &lt;strong&gt;Figure 3:&lt;/strong&gt; The official logo of the &lt;strong&gt;IEEE Geoscience and Remote Sensing Society (IEEE GRSS)&lt;/strong&gt;,
+    one of the world&#39;s premier professional societies dedicated to advancing the science and engineering of remote sensing, Earth observation, geospatial artificial intelligence, and environmental monitoring.
+    Being recognized by IEEE GRSS is an honor that reminds me how far curiosity, perseverance, and collaboration can carry a researcher—from local beginnings to a truly global scientific community.
+    &lt;br&gt;&lt;br&gt;
+    &lt;strong&gt;Credit:&lt;/strong&gt; IEEE Geoscience and Remote Sensing Society (IEEE GRSS).&lt;br&gt;
+    Official Website:
+    &lt;a href=&#34;https://www.grss-ieee.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+      https://www.grss-ieee.org/
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-this-matters-beyond-me&#34;&gt;🕊️ Why This Matters Beyond Me&lt;/h2&gt;
+&lt;p&gt;If this interview reaches anyone — especially someone early in their path in GeoAI or remote sensing here in Thailand — I hope it says this clearly: you don&amp;rsquo;t need a perfect trajectory to get somewhere meaningful. You need curiosity, persistence, and people who believe in your work before you fully believe in it yourself.&lt;/p&gt;
+&lt;p&gt;I got into this field to see the Earth more clearly. I didn&amp;rsquo;t expect, one day, for the Earth-observation community to look back.&lt;/p&gt;
+&lt;p&gt;For the Earth, always. 🕊️&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Full interview:&lt;/strong&gt; &lt;a href=&#34;https://www.grss-ieee.org/resources/news/professional-member-spotlight-dr-teerapong-panboonyuen/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;IEEE GRSS Professional Member Spotlight — Dr. Teerapong Panboonyuen&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;KAO project page:&lt;/strong&gt; &lt;a href=&#34;https://kaopanboonyuen.github.io/KAO/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;kaopanboonyuen.github.io/KAO&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Panboonyuen, Teerapong. (July 2026). &lt;em&gt;When the Earth Sees You Back: Being Featured by IEEE GRSS as a Professional Member Spotlight&lt;/em&gt;. Blog post on Kao Panboonyuen.&lt;br&gt;
+&lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2026-07-02-ieee-grss-professional-member-spotlight/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2026-07-02-ieee-grss-professional-member-spotlight/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;For a BibTeX citation:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bibtex&#34;&gt;@article{panboonyuen2026ieeegrssspotlight,
+  title   = &amp;quot;When the Earth Sees You Back: Being Featured by IEEE GRSS as a Professional Member Spotlight&amp;quot;,
+  author  = &amp;quot;Panboonyuen, Teerapong&amp;quot;,
+  journal = &amp;quot;kaopanboonyuen.github.io/&amp;quot;,
+  year    = &amp;quot;2026&amp;quot;,
+  month   = &amp;quot;July&amp;quot;,
+  day     = &amp;quot;2&amp;quot;,
+  url     = &amp;quot;https://kaopanboonyuen.github.io/blog/2026-07-03-ieee-grss-professional-member-spotlight/&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;Thank you for reading this reflection on my journey in &lt;strong&gt;GeoAI&lt;/strong&gt;, &lt;strong&gt;remote sensing&lt;/strong&gt;, and the incredible honor of being featured as a &lt;strong&gt;Professional Member Spotlight&lt;/strong&gt; by the &lt;strong&gt;IEEE Geoscience and Remote Sensing Society (IEEE GRSS)&lt;/strong&gt;. 🌍🛰️🤖&lt;/p&gt;
+&lt;p&gt;This recognition is far more than a personal milestone. It represents the collective support of mentors, collaborators, students, friends, and institutions that have shaped my journey—from my first steps in geospatial science at &lt;strong&gt;GISTDA&lt;/strong&gt;, through my postdoctoral research at &lt;strong&gt;Chulalongkorn University&lt;/strong&gt;, to my current academic home at the &lt;strong&gt;College of Computing, Khon Kaen University&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I sincerely hope this story encourages more young researchers—especially those from Thailand and Southeast Asia—to believe that impactful research can emerge from anywhere. Curiosity has no borders, and neither should scientific discovery.&lt;/p&gt;
+&lt;p&gt;Finally, my heartfelt gratitude goes to &lt;strong&gt;IEEE GRSS&lt;/strong&gt;, &lt;strong&gt;Madeleine Dawson&lt;/strong&gt;, and everyone involved in making this interview possible. It is a privilege to contribute, in my own small way, to a global community dedicated to understanding our planet through Earth observation, remote sensing, and artificial intelligence.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For the Earth, always.&lt;/strong&gt; 🌏🕊️&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
