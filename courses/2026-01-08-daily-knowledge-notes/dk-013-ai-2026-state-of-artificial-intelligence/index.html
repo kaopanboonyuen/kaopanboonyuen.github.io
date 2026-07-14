@@ -1,0 +1,1785 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Teerapong Panboonyuen" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-013-ai-2026-state-of-artificial-intelligence/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08f2e04360a1c87f5ad39547c02bf219.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-013-ai-2026-state-of-artificial-intelligence/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/courses/2026-01-08-daily-knowledge-notes/dk-013-ai-2026-state-of-artificial-intelligence/" />
+  <meta property="og:title" content="DK-013 — The State of AI (2026) | Teerapong Panboonyuen" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2026-07-14T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2026-07-14T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>DK-013 — The State of AI (2026) | Teerapong Panboonyuen</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="38b84346f4a837e3af540a366ab54475" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.4be02a3b391999348b0c7478778a0e4b.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#awards"><span>Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#press"><span>Press</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Featured</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#tags"><span>Topics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#communities"><span>Communities</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://x.com/kaopanboonyuen" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          Knowledge Notes
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/courses/"><i class="fas fa-arrow-left pr-1"></i>Courses</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/courses/2026-01-08-daily-knowledge-notes/">Knowledge Notes</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class="active"><a href="/courses/2026-01-08-daily-knowledge-notes/dk-013-ai-2026-state-of-artificial-intelligence/">DK-013 — The State of AI (2026)</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-012-phenome-to-biomarkers/">DK-012 — From Phenome to Biomarkers</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-011-banking-as-a-system/">DK-011 — Banking as a System</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-010-agi-problem/">DK-010 — Why AGI Is a Systems Problem, Not a Model</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-009-llm-recap/">DK-009 — From Pretraining to MoE and Agentic Systems</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-008-geospatial-intelligence/">DK-008 — Geospatial Intelligence</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-007-astronomy/">DK-007 — Astronomy</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-006-iq-puzzle-practice/">DK-006 — IQ Practice</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-005-playing-cards/">DK-005 — Playing Cards &amp; Probability with Python</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-004-music-theory/">DK-004 — Music Theory</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-003-probability/">DK-003 — Probability</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-002-math-every-programmer-should-know-copy/">DK-002 — Math Every Programmer Should Know</a></li>
+
+
+
+  <li class=""><a href="/courses/2026-01-08-daily-knowledge-notes/dk-001-harry-potter-overview/">DK-001 — The Harry Potter Universe (A Beginner-Friendly Guide)</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#table-of-contents">Table of Contents</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#the-three-stage-pipeline">The Three-Stage Pipeline</a></li>
+        <li><a href="#the-brain-analogy-done-properly-part-1">The Brain Analogy, Done Properly (Part 1)</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#we-have-1m-token-context-now-do-we-still-need-rag">&ldquo;We have 1M-token context now, do we still need RAG?&rdquo;</a></li>
+        <li><a href="#what-modern-rag-actually-looks-like-now">What &ldquo;modern RAG&rdquo; actually looks like now</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#us-frontier">US Frontier</a></li>
+        <li><a href="#chinese-frontier">Chinese Frontier</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ai-harness">AI Harness</a></li>
+        <li><a href="#human-in-the-loop-hitl">Human-in-the-Loop (HITL)</a></li>
+        <li><a href="#ai-literacy">AI Literacy</a></li>
+        <li><a href="#ai-governance">AI Governance</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#what-b-and-t-mean">What &ldquo;B&rdquo; and &ldquo;T&rdquo; mean</a></li>
+        <li><a href="#the-one-formula-that-matters-vram--parameters--bytes-per-parameter">The one formula that matters: VRAM ≈ parameters × bytes-per-parameter</a></li>
+        <li><a href="#practical-spec-table-running-models-locally">Practical spec table: running models locally</a></li>
+        <li><a href="#designing-for-inference-serving-many-users-not-just-yourself">Designing for inference: serving many users, not just yourself</a></li>
+        <li><a href="#vector-databases-for-rag-chapter-3">Vector databases for RAG (Chapter 3)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+  
+  
+
+  <li class="breadcrumb-item">
+    <a href="/">
+      
+        Home
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/">
+      
+        Courses
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/2026-01-08-daily-knowledge-notes/">
+      
+        Knowledge Notes
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        DK-013 — The State of AI (2026)
+      </li>
+    </ol>
+  </nav>
+
+
+          
+
+          <h1>DK-013 — The State of AI (2026)</h1>
+
+          <div class="article-style">
+            <h1 id="-the-state-of-ai-mid-2026-models-architecture-world-models-and-the-vocabulary-you-need-to-sound-like-you-actually-know-whats-going-on">🧠 The State of AI, Mid-2026: Models, Architecture, World Models, and the Vocabulary You Need to Sound Like You Actually Know What&rsquo;s Going On</h1>
+<blockquote>
+<p><em>&ldquo;A model is not an agent. An agent is a model wearing a harness.&rdquo;</em></p>
+</blockquote>
+<p>Everyone&rsquo;s cousin has an opinion about AI right now. Most of it is vibes. This post is not vibes. It&rsquo;s the actual mental model — from how a transformer is trained, to why &ldquo;RAG is dead&rdquo; is wrong, to why your brain is still the most absurd piece of computing hardware in the known universe, to whether letting an AI manage a team of other AIs is a good idea.</p>
+<p>We&rsquo;ll go from foundations to frontier. If you already know what a transformer is, skip ahead — but even the &ldquo;basic&rdquo; sections have a twist you probably haven&rsquo;t seen framed this way.</p>
+<hr>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li>Foundations: What Actually Happens When You &ldquo;Train&rdquo; a Model</li>
+<li>The Vocabulary Upgrade: Fine-Tuning vs. Retraining vs. Training From Scratch</li>
+<li>RAG in 2026: Is It Dead, Reborn, or Just Renamed?</li>
+<li>The Model Landscape, Mid-2026: US Frontier and Chinese Frontier</li>
+<li>Hallucination: Why It Happens and Why It Never Fully Goes Away</li>
+<li>AI Harness, Human-in-the-Loop, AI Literacy, AI Governance — The New Core Vocabulary</li>
+<li>World Models: The Other AGI Bet</li>
+<li>Multi-Agent Dev Teams: Should an AI Be Your Project Manager?</li>
+<li>Data Leakage and Why &ldquo;Just Paste It Into ChatGPT&rdquo; Is a Corporate Risk</li>
+<li>AI Sovereignty: Why Countries Suddenly Care Who Owns the Weights</li>
+<li>Why So Many Smart People Think LLMs Will Become AGI (and Why Others Don&rsquo;t)</li>
+<li>Your Brain vs. a Supercomputer: An Honest Comparison</li>
+<li>How to Actually Use AI Well: Augmentation, Not Autopilot</li>
+</ol>
+<hr>
+<h1 id="-chapter-1-foundations--what-actually-happens-when-you-train-a-model">🔬 Chapter 1: Foundations — What Actually Happens When You &ldquo;Train&rdquo; a Model</h1>
+<p>Before the vocabulary, you need the shape of the thing. A large language model (LLM) is, underneath everything, a very large function that takes in a sequence of tokens (fragments of words) and predicts the probability distribution of the next token. That&rsquo;s it. Everything — reasoning, code generation, poetry — is an emergent side effect of getting extremely good at that one prediction task, at a scale of hundreds of billions to trillions of parameters.</p>
+<h3 id="the-three-stage-pipeline">The Three-Stage Pipeline</h3>
+<p>Modern frontier model training happens in (roughly) three stages, and understanding these stages is the single highest-leverage thing you can learn this year, because almost every piece of 2026 vocabulary is really just &ldquo;which stage are we talking about.&rdquo;</p>
+<p><strong>Stage 1 — Pretraining.</strong> The model is shown an enormous corpus (trillions of tokens: web text, code, books, licensed data, synthetic data) and trained purely to predict the next token. No instructions, no &ldquo;be helpful.&rdquo; This is where the model absorbs grammar, facts, world knowledge, and — controversially — a huge share of its emergent reasoning ability. This stage costs the most compute by far, often tens of thousands of GPUs/TPUs running for months.</p>
+<p><strong>Stage 2 — Post-training / alignment.</strong> This is where a raw pretrained model (which just completes text — including completing it badly) becomes an assistant. This has multiple sub-steps:</p>
+<ul>
+<li><strong>Supervised Fine-Tuning (SFT):</strong> the model is shown curated examples of ideal question-answer pairs.</li>
+<li><strong>RLHF (Reinforcement Learning from Human Feedback):</strong> human raters rank multiple model outputs; a reward model is trained on those rankings; the base model is then optimized against that reward model.</li>
+<li><strong>RLAIF (RL from AI Feedback):</strong> the same idea, but an AI model does the ranking instead of humans — cheaper and more scalable, and increasingly dominant in 2026 pipelines because human-ranking doesn&rsquo;t scale to trillions of comparisons.</li>
+<li><strong>RLVR (RL from Verifiable Rewards):</strong> for domains with a checkable ground truth — math, code that either compiles and passes tests or doesn&rsquo;t — the model is rewarded directly against an automated verifier rather than a learned preference model. This is the technique behind the big 2025–2026 jump in &ldquo;reasoning models&rdquo; that show their chain-of-thought before answering.</li>
+</ul>
+<p><strong>Stage 3 — Inference-time scaling.</strong> Instead of (or in addition to) making the model bigger, you let it &ldquo;think longer&rdquo; at answer time — generating longer chains of reasoning, sampling multiple candidate answers and picking the best one, or running tool calls in a loop. This is why you now see model variants labeled &ldquo;high / xhigh / max thinking&rdquo; — the same underlying weights, given more inference-time compute budget.</p>
+<h3 id="the-brain-analogy-done-properly-part-1">The Brain Analogy, Done Properly (Part 1)</h3>
+<p>People love to say &ldquo;the AI&rsquo;s brain is like a human brain.&rdquo; It&rsquo;s a useful lie for stage 1 and a bad one for stage 2. Pretraining resembles a child absorbing language and the statistical structure of the world through sheer exposure — genuinely brain-like in spirit, if not in mechanism. But RLHF/RLVR has no clean biological analogue: it&rsquo;s closer to an extremely intensive, automated version of a teacher grading millions of practice essays and a coach correcting your form in real time, simultaneously, at a scale no human institution could ever run. Keep this distinction in your head — we&rsquo;ll come back to it in Chapter 12.</p>
+<hr>
+<h1 id="-chapter-2-fine-tuning-vs-retraining-vs-training-from-scratch">📚 Chapter 2: Fine-Tuning vs. Retraining vs. Training From Scratch</h1>
+<p>This trio confuses even people who use AI daily, so let&rsquo;s nail it down with a concrete anchor: <strong>cost and how much of the model&rsquo;s &ldquo;brain&rdquo; you&rsquo;re touching.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>What it means</th>
+<th>Rough cost</th>
+<th>Analogy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training from scratch</strong></td>
+<td>Random-initialized weights, full pretraining pipeline on trillions of tokens</td>
+<td>$10M–$100M+, months, thousands of accelerators</td>
+<td>Growing a new brain from a fertilized egg</td>
+</tr>
+<tr>
+<td><strong>Retraining</strong></td>
+<td>Re-running the (or an updated) pretraining process, often to incorporate a new architecture, new data mix, or to produce the &ldquo;next generation&rdquo; (e.g., GPT-4 → GPT-5)</td>
+<td>Similar cost profile to training from scratch — it usually <em>is</em> training from scratch, just using lessons learned from the last generation</td>
+<td>Raising a second child with better parenting knowledge, not surgery on the first child</td>
+</tr>
+<tr>
+<td><strong>Fine-tuning</strong></td>
+<td>Taking an already-pretrained model and continuing training on a smaller, task- or domain-specific dataset, adjusting some or all weights</td>
+<td>$10s–$10,000s, hours to days, a handful of GPUs</td>
+<td>An adult doctor doing a specialized residency — the general medical brain is already there</td>
+</tr>
+</tbody>
+</table>
+<p>Two important 2026 nuances:</p>
+<ul>
+<li><strong>Full fine-tuning vs. parameter-efficient fine-tuning (PEFT).</strong> Full fine-tuning touches every weight. Techniques like <strong>LoRA (Low-Rank Adaptation)</strong> and <strong>QLoRA</strong> instead freeze the original weights and train small &ldquo;adapter&rdquo; matrices bolted onto the network — cheaper, faster, reversible, and now the default way most companies customize an open-weight model (Llama, Qwen, DeepSeek) for their own data.</li>
+<li><strong>&ldquo;Retraining&rdquo; is often confused with fine-tuning in casual conversation</strong>, but the distinction that actually matters in a business context is: <em>are you changing what the model fundamentally knows and how it reasons (retraining/pretraining), or are you changing how it behaves on top of what it already knows (fine-tuning)?</em> If your company&rsquo;s internal jargon or tone is the issue, fine-tuning (or honestly, just good prompting/RAG) solves it. If the model is missing entire domains of world knowledge, no amount of fine-tuning substitutes for a model that was pretrained on that domain.</li>
+</ul>
+<hr>
+<h1 id="-chapter-3-rag-in-2026--dead-reborn-or-just-renamed">🔎 Chapter 3: RAG in 2026 — Dead, Reborn, or Just Renamed?</h1>
+<p><strong>RAG (Retrieval-Augmented Generation)</strong> means: instead of relying purely on what the model memorized during pretraining, you retrieve relevant documents from an external knowledge base at query time and stuff them into the model&rsquo;s context window before it answers.</p>
+<h3 id="we-have-1m-token-context-now-do-we-still-need-rag">&ldquo;We have 1M-token context now, do we still need RAG?&rdquo;</h3>
+<p>This is the single most-debated architecture question of H1 2026, and the honest answer is: <strong>yes, but RAG itself has changed shape.</strong></p>
+<p>The naive 2023-era argument against RAG was: context windows are growing (many frontier and open-weight models now advertise context windows well past 200K tokens, with some Chinese models like Qwen&rsquo;s long-context variants marketing 1M-token windows), so &ldquo;just put everything in context&rdquo; should make retrieval unnecessary.</p>
+<p>Reality in 2026 pushed back on that for three concrete reasons:</p>
+<ol>
+<li><strong>Cost and latency.</strong> Feeding a million tokens into every query — even when only 200 words of it are relevant — is enormously wasteful. RAG is a cost-and-speed optimization as much as a knowledge one.</li>
+<li><strong>&ldquo;Lost in the middle.&rdquo;</strong> Even models with huge nominal context windows show measurably worse recall for information buried in the middle of a very long context versus the beginning or end. Bigger windows didn&rsquo;t fully solve this; retrieval that surfaces exactly the relevant chunk still outperforms &ldquo;dump everything in.&rdquo;</li>
+<li><strong>Freshness and permissions.</strong> A model&rsquo;s weights are frozen after training. RAG is the only practical way to give a model access to information that changed <em>after</em> training, or information that&rsquo;s private/permissioned and should never be baked into weights in the first place (this matters enormously for the data-leakage discussion in Chapter 9).</li>
+</ol>
+<h3 id="what-modern-rag-actually-looks-like-now">What &ldquo;modern RAG&rdquo; actually looks like now</h3>
+<p>The 2023 version of RAG was: chunk documents → embed → cosine-similarity search → stuff top-k chunks into the prompt. That naive pipeline is now considered legacy. The modern (2026) RAG stack typically layers in:</p>
+<ul>
+<li><strong>Hybrid retrieval</strong> — combining dense vector search with classic keyword/BM25 search, because pure embedding search misses exact-match terms (product SKUs, legal citations, error codes).</li>
+<li><strong>Re-ranking</strong> — a second, smaller model re-scores the top 50–100 retrieved chunks before the final 5–10 go into the prompt, catching cases where the embedding model&rsquo;s similarity score was misleading.</li>
+<li><strong>Agentic RAG</strong> — instead of one retrieval pass, the model itself decides <em>iteratively</em> what to search for, evaluates whether the results actually answer the question, and re-queries if not. This blurs RAG into the &ldquo;agent with tools&rdquo; paradigm entirely: retrieval becomes just one tool among many (web search, database query, code execution) that the model calls when it decides it needs more information, rather than a rigid pre-processing step.</li>
+<li><strong>GraphRAG</strong> — building a knowledge graph of entities and relationships from the documents first, so the model can answer multi-hop questions (&ldquo;who was the manager of the person who signed this contract&rsquo;s original 2019 version?&rdquo;) that pure similarity search handles poorly.</li>
+</ul>
+<p>So the honest one-line answer to &ldquo;do we still need RAG&rdquo;: <strong>the term &ldquo;RAG&rdquo; is dissolving into &ldquo;an agent that has retrieval as one of its tools,&rdquo; but the underlying need — grounding answers in real, current, permissioned data rather than frozen weights — is more important than ever, not less.</strong></p>
+<hr>
+<h1 id="-chapter-4-the-model-landscape-mid-2026">🌍 Chapter 4: The Model Landscape, Mid-2026</h1>
+<p>This section will be stale in a month — that&rsquo;s the nature of the field right now — but here&rsquo;s the honest lay of the land as of July 2026.</p>
+<h3 id="us-frontier">US Frontier</h3>
+<ul>
+<li><strong>OpenAI</strong>: shipped the <strong>GPT-5</strong> family through several point releases across 2026 (GPT-5.2, GPT-5.4, GPT-5.5 as the current shipping default in ChatGPT, with a GPT-5.6 &ldquo;Sol-tier&rdquo; preview for the heaviest reasoning workloads). Strength: broad ecosystem, tool integrations, and strong agentic/terminal-workflow benchmarks.</li>
+<li><strong>Anthropic</strong>: the Claude lineup moved through Opus 4.5 → 4.6 → 4.7 → 4.8 across the first half of 2026, with <strong>Claude Sonnet 5</strong> as the new balanced default and <strong>Claude Opus 4.8</strong> as the flagship. Anthropic also introduced a tier above Opus — the <strong>Mythos</strong> class — with <strong>Claude Fable 5</strong> as its safety-hardened public variant. Independent benchmark trackers generally put the Claude family ahead on real-world coding-agent tasks (like resolving actual GitHub issues) and long-document coherence.</li>
+<li><strong>Google DeepMind</strong>: the <strong>Gemini 3</strong> family (3 Pro → 3.1 Pro → 3.5 Flash/Pro) leads several reasoning and multimodal benchmarks and has the deepest native integration with Google Workspace, Search, and — notably — the world-model work covered in Chapter 7.</li>
+<li><strong>xAI</strong>: <strong>Grok 4</strong> and its successors compete aggressively on price and lead some knowledge-recall benchmarks (Humanity&rsquo;s Last Exam), with the cheapest flagship-class output pricing on the market as of mid-2026.</li>
+<li><strong>Meta</strong>: <strong>Llama 4</strong> remains the most-used fully open-weight Western model family, competing with Chinese open-weight labs more than with the closed US labs above.</li>
+</ul>
+<h3 id="chinese-frontier">Chinese Frontier</h3>
+<p>The Chinese ecosystem stopped being &ldquo;the cheap alternative&rdquo; sometime in 2025 and became a genuine second pole of frontier capability by mid-2026:</p>
+<ul>
+<li><strong>DeepSeek</strong> (V3.2, with V4 delayed by reported compute/chip constraints) remains the price-performance benchmark everyone else gets compared against — open-weight, extremely cheap per token, competitive on reasoning.</li>
+<li><strong>Alibaba&rsquo;s Qwen</strong> (Qwen3, Qwen3.5/3.6 Max/Plus) offers some of the largest advertised context windows in the industry and leads on multilingual capability and agent-framework tooling (Qwen3 Agent + Qwen-Image).</li>
+<li><strong>Zhipu AI&rsquo;s GLM</strong> (GLM-5, GLM-5.1) has repeatedly led open-weight coding benchmarks, in some evaluations surpassing closed Western models like Gemini 3 Pro on agentic coding tasks.</li>
+<li><strong>Moonshot AI&rsquo;s Kimi</strong> (K2, K2.5, K2.6) is specifically tuned for long-context retrieval and document-heavy workflows and became, per several benchmark trackers, the first open-weight model to beat a GPT-5.4 variant on the SWE-Bench Pro coding benchmark.</li>
+<li><strong>MiniMax and StepFun</strong> round out a now-crowded field, with StepFun&rsquo;s Step 3.5 Flash pushing pricing down to roughly $0.10 per million input tokens — undercutting Western pricing by an order of magnitude.</li>
+</ul>
+<p>The strategic read: <strong>Chinese labs have converged on &ldquo;good enough to be a top-3 model, radically cheaper, mostly open-weight.&rdquo;</strong> That combination is exactly what&rsquo;s driving the sovereignty and self-hosting conversation in Chapter 10 — a country or company that doesn&rsquo;t want to depend on a single foreign API now has credible, near-frontier options it can run on its own infrastructure.</p>
+<hr>
+<h1 id="-chapter-5-hallucination--why-it-happens-and-why-it-doesnt-fully-go-away">🎭 Chapter 5: Hallucination — Why It Happens and Why It Doesn&rsquo;t Fully Go Away</h1>
+<p><strong>Hallucination</strong> = the model generating confident, fluent, and wrong information. It is not a bug that will simply be &ldquo;patched out&rdquo; — it&rsquo;s a structural consequence of how these models work, for three compounding reasons:</p>
+<ol>
+<li><strong>The model is a probability machine, not a fact database.</strong> It predicts <em>plausible</em> next tokens. Plausible and true are correlated, not identical. When the true answer is rare or ambiguous in training data, &ldquo;plausible-sounding&rdquo; and &ldquo;correct&rdquo; diverge.</li>
+<li><strong>Compression loss.</strong> Trillions of tokens of training data get compressed into a fixed number of parameters. Specific facts (a phone number, a rarely-cited statistic, an exact court case citation) are exactly the kind of low-frequency information that gets &ldquo;smoothed over&rdquo; during this compression, the same way a JPEG at high compression loses fine detail while keeping the overall picture recognizable.</li>
+<li><strong>Reward hacking during RLHF/RLVR.</strong> Human raters (and AI raters) tend to prefer confident-sounding, complete answers over answers that hedge or say &ldquo;I don&rsquo;t know.&rdquo; This subtly trains models to <em>guess</em> rather than <em>abstain</em>, because guessing wins more preference comparisons even when it&rsquo;s sometimes wrong.</li>
+</ol>
+<p><strong>What actually reduces hallucination in practice (2026 state of the art):</strong></p>
+<ul>
+<li>RAG/grounding (Chapter 3) — give the model the actual source instead of asking it to recall from memory.</li>
+<li>RLVR training on domains with checkable answers, which measurably improves calibration in those domains.</li>
+<li>Explicit &ldquo;I don&rsquo;t know&rdquo; reward shaping — some labs now specifically reward abstention on genuinely unanswerable questions rather than only rewarding correctness.</li>
+<li>Tool use — letting the model call a calculator, a search engine, or a code interpreter rather than &ldquo;mentally&rdquo; computing or recalling.</li>
+</ul>
+<p>None of this eliminates hallucination. It reduces its rate and shifts <em>where</em> it shows up (usually: the more obscure, low-frequency, or recent the fact, the higher the risk).</p>
+<hr>
+<h1 id="-chapter-6-the-new-core-vocabulary">🧩 Chapter 6: The New Core Vocabulary</h1>
+<h3 id="ai-harness">AI Harness</h3>
+<p>An <strong>agent harness</strong> is the software scaffolding around a model that turns &ldquo;a model that predicts text&rdquo; into &ldquo;an agent that gets things done.&rdquo; The formulation that&rsquo;s become standard in 2026 engineering circles: <strong>Agent = Model + Harness.</strong></p>
+<p>The harness includes: the system prompt and task instructions, the tool definitions the model can call (file editing, web search, code execution, MCP servers), the sandboxed execution environment, memory/state persistence across turns, and the verification/feedback loop that checks the agent&rsquo;s work and feeds errors back in. The insight that made &ldquo;harness&rdquo; a term of art rather than just &ldquo;infrastructure&rdquo;: a fixed model&rsquo;s real-world task performance can vary enormously depending purely on harness quality — a well-engineered harness can make a mid-tier model outperform a frontier model wrapped in a sloppy harness. <strong>Harness engineering</strong> — designing constraints, verification steps, and feedback loops for agents — is now treated as its own discipline, separate from prompt engineering.</p>
+<h3 id="human-in-the-loop-hitl">Human-in-the-Loop (HITL)</h3>
+<p>A design pattern where a human reviews, approves, or can interrupt an AI system&rsquo;s action at a defined checkpoint, rather than letting the system act fully autonomously. In 2026, this has split into two flavors that are worth distinguishing:</p>
+<ul>
+<li><strong>HITL-for-quality</strong>: a human reviews outputs before they ship (e.g., approving AI-drafted emails).</li>
+<li><strong>HITL-for-safety</strong>: a human must explicitly authorize any <em>consequential</em> action (deleting data, spending money, sending external communications), regardless of how confident the agent is — analogous to a two-person rule in security-sensitive fields.</li>
+</ul>
+<h3 id="ai-literacy">AI Literacy</h3>
+<p>The practical skill of understanding what a model can and can&rsquo;t reliably do, how to prompt and verify it, and where its failure modes (hallucination, sycophancy, stale knowledge) are likely to bite you. It is increasingly treated as a baseline professional skill, the way &ldquo;spreadsheet literacy&rdquo; was in the 1990s — not &ldquo;can you use the tool&rdquo; but &ldquo;do you understand its failure modes well enough not to get burned by it.&rdquo;</p>
+<h3 id="ai-governance">AI Governance</h3>
+<p>The broader set of policies, regulations, and organizational controls around how AI is developed and deployed: model evaluations before release, incident reporting, the EU AI Act&rsquo;s risk-tiered obligations, export controls on advanced chips and (increasingly) on advanced models themselves, and internal corporate policies about which tools employees may feed sensitive data into. Governance is where the technical (harness, HITL) and the political (sovereignty, export controls) layers meet.</p>
+<hr>
+<h1 id="-chapter-7-world-models--the-other-agi-bet">🌌 Chapter 7: World Models — The Other AGI Bet</h1>
+<p>If 2023–2025 was defined by &ldquo;scale the transformer, add reasoning,&rdquo; 2026&rsquo;s most interesting parallel bet is <strong>world models</strong> — and the two camps genuinely disagree about which path leads to general intelligence.</p>
+<p>A <strong>world model</strong> is a system trained not to predict the next <em>word</em>, but to predict how an environment evolves — given the current state of a scene and an action, what does the next moment look like? Google DeepMind&rsquo;s <strong>Genie 3</strong>, released as a research preview in 2025 and opened to the public in January 2026, generates fully interactive, navigable 3D environments in real time (24 frames per second) from a text prompt, with the model having taught itself physics and spatial consistency purely from watching video — no hand-coded physics engine underneath. NVIDIA&rsquo;s <strong>Cosmos</strong> platform pursues a similar goal for robotics and autonomous-vehicle simulation, trained on an enormous corpus of real-world driving, industrial, and human-interaction video. Waymo has already integrated Genie-derived world models into its self-driving simulation stack.</p>
+<p>The philosophical split matters: Yann LeCun (formerly Meta&rsquo;s chief AI scientist, now running his own world-model lab) has argued for years that <strong>language models alone will never reach general intelligence</strong>, because text is a low-bandwidth, already-compressed representation of the world — a child learns intuitive physics (that unsupported objects fall) from years of raw sensory exposure, not from reading sentences about gravity. His architecture family (JEPA — Joint Embedding Predictive Architecture) is built specifically around learning to predict future <em>states</em> of the world in an abstract representation space, rather than predicting pixels or tokens.</p>
+<p>Meanwhile, DeepMind explicitly frames Genie 3 as <strong>infrastructure for training better agents</strong> — the point isn&rsquo;t the video generation itself, but giving an AI agent an effectively unlimited curriculum of realistic, interactive practice environments to learn in, sidestepping the fact that the real world is slow, expensive, and dangerous to practice in directly.</p>
+<p>Honest caveat, which the researchers themselves are candid about: current world models still lose object permanence and violate physics over longer time horizons, are extremely compute- and data-hungry to train, and have no agreed-upon benchmark for &ldquo;does it actually understand the world&rdquo; the way we have SWE-bench for coding. This is a genuine research frontier, not a solved problem being productized — treat any breathless &ldquo;world models solve AGI&rdquo; headline with real skepticism, including the ones in this article.</p>
+<hr>
+<h1 id="-chapter-8-multi-agent-dev-teams--should-an-ai-be-your-project-manager">👥 Chapter 8: Multi-Agent Dev Teams — Should an AI Be Your Project Manager?</h1>
+<p>The pattern getting a lot of attention in 2026: instead of one AI coding agent, you run several — one writes code, one writes tests, one reviews pull requests — coordinated by an <strong>orchestrator agent</strong> acting like a project manager: breaking down the task, assigning subtasks, and merging results. Frameworks like LangGraph, CrewAI, and cloud-native orchestration services (Microsoft&rsquo;s Foundry Agent Service, Google&rsquo;s Agent Development Kit) have made this pattern accessible enough that &ldquo;give it a try&rdquo; no longer requires a research team.</p>
+<p><strong>Does it actually work?</strong> The honest, non-hyped answer, based on both vendor-reported figures and independent write-ups, is: <strong>it depends heavily on task shape, and the gains are real but narrower than the marketing suggests.</strong></p>
+<ul>
+<li>It clearly helps on tasks that decompose cleanly into independent, parallelizable subtasks with objective success criteria — refactors, migrations, &ldquo;add tests to every module,&rdquo; incident-response triage where multiple hypotheses can be checked in parallel. Some published incident-response trials report dramatically higher rates of actionable output from multi-agent setups versus a single agent working sequentially.</li>
+<li>It struggles on tasks requiring a single coherent architectural vision, where splitting work across agents introduces the same coordination overhead and miscommunication risk you&rsquo;d get splitting the work across humans who don&rsquo;t talk to each other enough — except the &ldquo;AI PM&rdquo; doesn&rsquo;t yet have the judgment to notice when two agents&rsquo; outputs subtly contradict each other&rsquo;s assumptions.</li>
+<li>The orchestrator itself becomes a new single point of failure and a new attack/error surface — if the &ldquo;PM agent&rdquo; misunderstands the task or drops context, everything downstream inherits that error, often silently, because no individual worker agent is positioned to catch a planning-level mistake.</li>
+</ul>
+<p><strong>Practical read for a team considering this in 2026:</strong> treat &ldquo;AI-managed multi-agent dev team&rdquo; as a legitimate productivity tool for well-scoped, verifiable work — not as a replacement for a human tech lead&rsquo;s judgment on ambiguous, high-stakes architecture decisions. The harness (Chapter 6) matters enormously here: teams that invest in strong verification gates between agent handoffs report far better outcomes than teams that just chain agents together and hope.</p>
+<hr>
+<h1 id="-chapter-9-data-leakage--why-just-paste-it-into-the-ai-is-a-real-risk">🔒 Chapter 9: Data Leakage — Why &ldquo;Just Paste It Into the AI&rdquo; Is a Real Risk</h1>
+<p>Every time you paste a document into a consumer AI chat interface, three separate risks are worth distinguishing, because they get conflated constantly:</p>
+<ol>
+<li><strong>Training-data risk</strong>: does the provider use your input to train future models? (Enterprise/API tiers from major providers generally contractually exclude this by default; free consumer tiers sometimes don&rsquo;t — always check the specific product&rsquo;s current data-use policy rather than assuming.)</li>
+<li><strong>Retention/breach risk</strong>: even if it&rsquo;s not used for training, is it logged, and could it leak via a security incident, a subpoena, or an employee with access?</li>
+<li><strong>Jurisdictional risk</strong>: which country&rsquo;s servers and laws govern that data once it leaves your organization&rsquo;s boundary? This is precisely what&rsquo;s driving Chapter 10.</li>
+</ol>
+<p>The practical 2026 corporate response has been a wave of <strong>private/sovereign AI deployments</strong> — running open-weight models (Llama, Qwen, DeepSeek, GLM are all popular choices specifically <em>because</em> they&rsquo;re open-weight and self-hostable) inside a company&rsquo;s or country&rsquo;s own infrastructure, trading some frontier capability for full control over where data physically goes and who can access it. Surveys from major consultancies in 2026 report a large share of enterprise AI leaders now naming &ldquo;enabling private or sovereign AI&rdquo; as their single biggest adoption barrier — not because they don&rsquo;t want AI, but because their risk and compliance functions won&rsquo;t sign off on the default cloud-API path for sensitive data categories.</p>
+<hr>
+<h1 id="-chapter-10-ai-sovereignty--why-nations-care-who-owns-the-weights">🏛️ Chapter 10: AI Sovereignty — Why Nations Care Who Owns the Weights</h1>
+<p><strong>AI/data sovereignty</strong> is the idea that a nation (or a large organization) should maintain control over the entire lifecycle of its AI systems — not just where the data physically sits, but who trained the model, on what data, and whether the organization can keep running it if the original vendor relationship ends.</p>
+<p>2026 made this concrete rather than theoretical: the World Economic Forum&rsquo;s Davos meeting in January 2026 had sovereign AI as its dominant technology theme; the EU launched OpenEuroLLM to build models across 24 European languages rather than depend entirely on US labs; the UAE built the Falcon/Jais model family through G42 and MBZUAI; India&rsquo;s IndiaAI Mission hosted a Global South AI summit that drew commitments from over a hundred countries; and export-control fights over advanced chips (and, per this notice you may already be aware of, over certain frontier models themselves) became a recurring feature of US-China AI relations through the first half of 2026.</p>
+<p>The strategic logic, stripped of rhetoric: a country or company entirely dependent on one foreign vendor&rsquo;s API is exposed to that vendor&rsquo;s pricing changes, policy changes, service interruptions, or export-control decisions it has zero say over. Building (or credibly threatening to build) a domestic alternative is as much geopolitical leverage as it is a technical achievement — which is exactly why the rise of capable, cheap, open-weight Chinese models in Chapter 4 has become a geopolitical talking point and not just a technology story.</p>
+<hr>
+<h1 id="-chapter-11-why-so-many-smart-people-think-llms-will-become-agi-and-why-others-dont">🤔 Chapter 11: Why So Many Smart People Think LLMs Will Become AGI (and Why Others Don&rsquo;t)</h1>
+<p>Two camps, both containing genuinely serious researchers:</p>
+<p><strong>The &ldquo;scaling is enough&rdquo; camp</strong> points to an empirical pattern that has held up remarkably well since around 2020: model capability improves smoothly and predictably as you scale up parameters, data, and compute together (the &ldquo;scaling laws&rdquo;). If that trend holds — the argument goes — and you add better reasoning training (RLVR) and longer inference-time thinking, there&rsquo;s no obvious wall preventing continued improvement all the way to human-level generality across most cognitive tasks. Dario Amodei of Anthropic has repeatedly argued powerful, broadly capable AI is close enough to be planning for economically (his Davos 2026 remarks about AI-driven GDP growth <em>and</em> unemployment risk reflect exactly this view).</p>
+<p><strong>The skeptics&rsquo; camp</strong> — including, notably, Demis Hassabis of Google DeepMind, who stated at the same Davos gathering that current systems remain &ldquo;nowhere near&rdquo; human-level general intelligence — points to specific, stubborn gaps: models still lack persistent, updating memory the way humans do; they don&rsquo;t have grounded, embodied understanding of the physical world (hence the world-model research bet in Chapter 7); they hallucinate in ways that suggest a difference in kind, not just degree, from human error; and there&rsquo;s real debate about whether &ldquo;reasoning&rdquo; in a chain-of-thought is genuine multi-step logic or an increasingly sophisticated form of pattern completion that merely looks like reasoning on the benchmarks we&rsquo;ve chosen to measure.</p>
+<p>Neither camp is being unserious. The honest 2026 state of the debate is: capability curves keep climbing on the benchmarks we have, but there&rsquo;s genuine, unresolved disagreement about whether those benchmarks measure the things that actually constitute &ldquo;general intelligence,&rdquo; or whether we&rsquo;re getting extremely good at exactly the tasks we chose to test.</p>
+<hr>
+<h1 id="-chapter-12-your-brain-vs-a-supercomputer--an-honest-comparison">🧠 Chapter 12: Your Brain vs. a Supercomputer — An Honest Comparison</h1>
+<p>This is the part that should make you feel better, not worse, about being a biological intelligence.</p>
+<p>A modern frontier LLM runs on data-center hardware: separate memory (RAM/storage) and processing units (GPUs/TPUs) connected by comparatively slow interconnects, consuming on the order of tens of megawatts across a training run, with data constantly shuttled back and forth between &ldquo;where it&rsquo;s stored&rdquo; and &ldquo;where it&rsquo;s computed.&rdquo;</p>
+<p>Your brain does not have this separation. Roughly 86 billion neurons, each with thousands of synaptic connections, perform storage <em>and</em> computation in the same physical substrate — a synapse&rsquo;s strength (a &ldquo;weight,&rdquo; in ML terms) <em>is</em> both the stored memory and the active computational element simultaneously. There&rsquo;s no separate &ldquo;RAM&rdquo; being copied over a bus to a separate &ldquo;CPU.&rdquo; This is called <strong>in-memory computing</strong>, and it&rsquo;s a property AI hardware researchers are still trying to replicate with neuromorphic chips, because the classic CPU/GPU-plus-separate-RAM architecture (the &ldquo;von Neumann architecture,&rdquo; dating to the 1940s) is fundamentally memory-bandwidth-limited in a way biological brains simply aren&rsquo;t.</p>
+<p>And the power budget is almost embarrassing to compare: your brain runs on roughly <strong>20 watts</strong> — less than a household lightbulb — for continuous, real-time, multimodal sensory processing, motor control, memory formation and retrieval, language, planning, and social reasoning, simultaneously, for decades, without a training/inference split (you learn <em>while</em> you operate, constantly, online, from a tiny number of examples). A frontier model&rsquo;s <em>training run alone</em> consumes megawatts for months; inference at scale consumes additional megawatts continuously across data centers serving millions of users.</p>
+<p>None of this means LLMs are &ldquo;fake intelligence&rdquo; — the comparison isn&rsquo;t really fair in either direction, because brains and transformers optimize for different things under different constraints, evolved (in one case literally) for different purposes. But it&rsquo;s worth sitting with: your brain is, on pure energy-efficiency-per-unit-of-general-capability, still the most efficient known general intelligence in the universe. That&rsquo;s not a consolation prize. That&rsquo;s a genuinely unmatched engineering achievement that evolution produced with zero design meetings.</p>
+<hr>
+<h1 id="-chapter-13-how-to-actually-use-ai-well">🛠️ Chapter 13: How to Actually Use AI Well</h1>
+<p>Given everything above, here&rsquo;s the practical synthesis:</p>
+<ol>
+<li><strong>Treat the model as a very well-read, very fast, occasionally-confidently-wrong collaborator</strong> — not an oracle. Verify anything load-bearing (numbers, citations, legal/medical specifics) against a primary source, especially anything that falls into the &ldquo;low-frequency in training data&rdquo; hallucination risk zone from Chapter 5.</li>
+<li><strong>Use RAG/grounding for anything that changed after the model&rsquo;s knowledge cutoff, or that&rsquo;s private to you.</strong> Don&rsquo;t rely on frozen weights for current facts.</li>
+<li><strong>Keep a human in the loop at consequential decision points</strong>, proportional to the stakes — reviewing a drafted email is low-stakes; letting an agent autonomously spend money or delete production data is not, regardless of how good the agent&rsquo;s track record has been so far.</li>
+<li><strong>Use AI to widen your thinking, not replace it.</strong> The most reliable pattern across serious users in 2026 isn&rsquo;t &ldquo;ask AI, accept answer&rdquo; — it&rsquo;s &ldquo;ask AI, get a first draft or a set of angles you hadn&rsquo;t considered, then apply your own judgment on top.&rdquo; The tasks AI still reliably fails at are exactly the ones requiring genuine judgment under ambiguity, taste, or accountability — which, not coincidentally, is where human value is concentrating.</li>
+<li><strong>Match the tool to the task shape</strong>, the same lesson as Chapter 8&rsquo;s multi-agent teams: well-scoped, verifiable, parallelizable work is where AI (single-agent or multi-agent) shines; ambiguous, high-stakes, judgment-heavy work is where you should still be doing the driving.</li>
+</ol>
+<hr>
+<h1 id="-chapter-14-reading-model-size-and-what-hardware-you-actually-need">🖥️ Chapter 14: Reading Model Size, and What Hardware You Actually Need</h1>
+<p>You&rsquo;ll see model names like &ldquo;8B,&rdquo; &ldquo;32B,&rdquo; &ldquo;70B,&rdquo; &ldquo;671B,&rdquo; or &ldquo;1.8T.&rdquo; Here&rsquo;s how to read that number, and what it actually costs you in silicon.</p>
+<h3 id="what-b-and-t-mean">What &ldquo;B&rdquo; and &ldquo;T&rdquo; mean</h3>
+<p>The number is the <strong>parameter count</strong> — how many individual weights the neural network has, in billions (B) or trillions (T). Roughly speaking, more parameters = more capacity to store knowledge and represent complex patterns, but it&rsquo;s not a clean line to &ldquo;smarter.&rdquo; A well-trained 32B model can beat a poorly-trained 70B model. Parameter count is a proxy for capacity, not a guarantee of quality — training data quality and post-training (Chapter 1) matter enormously too.</p>
+<p><strong>Dense vs. Mixture-of-Experts (MoE):</strong> A &ldquo;dense&rdquo; model activates every parameter for every token. An MoE model (DeepSeek-V3/V4, GLM-5, many Qwen variants) has many &ldquo;expert&rdquo; sub-networks and only routes each token through a small subset of them. So a &ldquo;671B&rdquo; MoE model might only <em>activate</em> ~37B parameters per token — you still need enough memory to hold all 671B in VRAM, but the actual compute per token is much closer to a 37B dense model. This is why MoE models can be both huge and comparatively fast.</p>
+<h3 id="the-one-formula-that-matters-vram--parameters--bytes-per-parameter">The one formula that matters: VRAM ≈ parameters × bytes-per-parameter</h3>
+<table>
+<thead>
+<tr>
+<th>Precision</th>
+<th>Bytes/param</th>
+<th>Rough VRAM for weights alone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FP16 / BF16 (full)</td>
+<td>2 bytes</td>
+<td>7B → ~14GB, 70B → ~140GB</td>
+</tr>
+<tr>
+<td>INT8</td>
+<td>1 byte</td>
+<td>7B → ~7GB, 70B → ~70GB</td>
+</tr>
+<tr>
+<td><strong>Q4 (4-bit quantization)</strong></td>
+<td>0.5 bytes</td>
+<td>7B → ~3.5–4GB, 70B → ~35–40GB</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Quantization</strong> = compressing the weights to lower precision after training, trading a small amount of accuracy for a large drop in memory footprint. Q4/Q5 (GGUF format, used by llama.cpp/Ollama) is the default choice for running models locally — the accuracy loss is usually small enough not to matter for most day-to-day use.</p>
+<p>Add on top of the weights: <strong>KV cache</strong> (memory that grows with context length × number of concurrent users — often the actual bottleneck in production, not the weights) and a working-memory overhead of roughly 10–20%.</p>
+<h3 id="practical-spec-table-running-models-locally">Practical spec table: running models locally</h3>
+<table>
+<thead>
+<tr>
+<th>Model size class</th>
+<th>Example models</th>
+<th>Minimum viable GPU</th>
+<th>Comfortable setup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1B–3B</strong> (&ldquo;tiny,&rdquo; on-device)</td>
+<td>Llama 3.2 1B/3B, Qwen2.5 0.5B–3B, Gemma 3 1B/4B</td>
+<td>Any modern laptop GPU, 8GB VRAM, even CPU-only</td>
+<td>RTX 4060/5060 (8–12GB)</td>
+</tr>
+<tr>
+<td><strong>7B–14B</strong> (&ldquo;small,&rdquo; daily-driver local assistant)</td>
+<td>Llama 3.1 8B, Qwen3 8B/14B, Mistral 7B</td>
+<td>12–16GB VRAM (RTX 4070/5070 Ti) at Q4</td>
+<td>RTX 5090 (32GB) at FP16</td>
+</tr>
+<tr>
+<td><strong>30B–32B</strong> (&ldquo;mid,&rdquo; strong local coding assistant)</td>
+<td>Qwen3 32B, DeepSeek-R1-Distill-32B, Gemma 3 27B</td>
+<td>RTX 5090 (32GB) at Q4</td>
+<td>RTX PRO 6000 Blackwell (96GB) at FP16</td>
+</tr>
+<tr>
+<td><strong>70B</strong> (&ldquo;large,&rdquo; near frontier quality)</td>
+<td>Llama 3.3 70B, Qwen2.5 72B</td>
+<td>RTX PRO 6000 Blackwell (96GB) at FP8, or 2× RTX 5090 (32GB each) split across GPUs</td>
+<td>2–4× H100/H200, or Mac Studio Ultra (192GB+ unified memory) at Q4/Q8</td>
+</tr>
+<tr>
+<td><strong>100B–700B+ MoE</strong> (&ldquo;frontier-class,&rdquo; e.g., DeepSeek-V3/V4, GLM-5, Kimi K2)</td>
+<td>—</td>
+<td>4–8× H100/H200/B200 (80–192GB each) with NVLink</td>
+<td>8× B200/B300 DGX node, or a multi-node cluster for the biggest MoE releases</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule of thumb for &ldquo;how many GPUs do I need&rdquo;:</strong> take the model&rsquo;s total parameter count, multiply by your target precision&rsquo;s bytes-per-parameter, add ~20% for KV cache and overhead, then divide by your GPU&rsquo;s VRAM. If the answer is more than 1, you need multi-GPU serving with <strong>tensor parallelism</strong> (splitting each layer&rsquo;s computation across GPUs, needs fast interconnect like NVLink) or <strong>pipeline parallelism</strong> (splitting different layers onto different GPUs, more tolerant of slower interconnect but adds latency).</p>
+<h3 id="designing-for-inference-serving-many-users-not-just-yourself">Designing for inference: serving many users, not just yourself</h3>
+<p>Running a model for yourself and serving hundreds of concurrent users are different engineering problems:</p>
+<ul>
+<li><strong>Continuous batching</strong>: instead of processing one request fully before starting the next, the serving engine dynamically batches multiple users&rsquo; in-flight requests together on the GPU — this is the single biggest throughput win for multi-user serving, and it&rsquo;s the default behavior in modern serving engines (see tools below).</li>
+<li><strong>KV cache management</strong>: each user&rsquo;s conversation keeps a growing cache of attention keys/values. This is usually the real memory bottleneck at scale, not the model weights — techniques like <strong>PagedAttention</strong> (treating KV cache like OS virtual memory pages, popularized by vLLM) let you serve far more concurrent users out of the same VRAM by avoiding memory fragmentation.</li>
+<li><strong>Speculative decoding</strong>: a small &ldquo;draft&rdquo; model quickly guesses several tokens ahead, and the big model verifies them in one pass instead of generating token-by-token — meaningful latency reduction with no quality loss when done correctly.</li>
+<li><strong>Load balancing across replicas</strong>: for real production scale, you run multiple copies of the model behind a router, not one giant instance — horizontal scaling, same as any other web service.</li>
+</ul>
+<p><strong>Recommended serving tools (2026):</strong></p>
+<ul>
+<li><strong>vLLM</strong> — the most widely adopted open-source serving engine, built around PagedAttention, continuous batching, and broad model support. Good default choice.</li>
+<li><strong>SGLang</strong> — strong alternative, particularly fast for structured generation and agent workloads with heavy tool-calling.</li>
+<li><strong>TensorRT-LLM</strong> (NVIDIA) — lower-level, maximum throughput on NVIDIA hardware if you&rsquo;re willing to do more tuning.</li>
+<li><strong>Ollama</strong> / <strong>llama.cpp</strong> — best for single-user local use and quick prototyping, not built for high-concurrency production serving.</li>
+</ul>
+<h3 id="vector-databases-for-rag-chapter-3">Vector databases for RAG (Chapter 3)</h3>
+<p>If you&rsquo;re building a retrieval pipeline, the vector database is where your document embeddings live and get searched:</p>
+<ul>
+<li><strong>pgvector</strong> — a Postgres extension; the pragmatic default if you already run Postgres and don&rsquo;t want a new piece of infrastructure to operate.</li>
+<li><strong>Qdrant</strong> — open-source, fast, popular for self-hosted production RAG with good filtering support alongside vector search.</li>
+<li><strong>Milvus</strong> — built for very large scale (billions of vectors), the choice once you outgrow single-node setups.</li>
+<li><strong>Weaviate</strong> — open-source with built-in hybrid (keyword + vector) search and a plugin ecosystem for re-ranking.</li>
+<li><strong>Pinecone</strong> — fully managed/hosted, the easiest path if you don&rsquo;t want to operate the database yourself, at the cost of it being closed and cloud-only.</li>
+</ul>
+<p>Rule of thumb: start with <strong>pgvector</strong> if you already have Postgres and your corpus is under a few million chunks; move to <strong>Qdrant</strong> or <strong>Milvus</strong> once you need dedicated scale, and only reach for a managed service like <strong>Pinecone</strong> if you specifically want to offload operations rather than infrastructure cost.</p>
+<hr>
+<h1 id="-chapter-15-the-cheat-sheet--every-chapter-one-table">📋 Chapter 15: The Cheat Sheet — Every Chapter, One Table</h1>
+<p>If you only screenshot one part of this entire post, screenshot this. Each row = one thing you should be able to drop into conversation and sound like you know exactly what&rsquo;s going on.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Topic</th>
+<th>Keyword(s)</th>
+<th>The one-line hint to remember</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Training pipeline</td>
+<td><strong>Pretraining → SFT → RLHF/RLAIF/RLVR → inference-time scaling</strong></td>
+<td>Pretraining = raw knowledge from predicting next-token; post-training = shaping it into an assistant; &ldquo;high/max thinking&rdquo; modes = more compute spent <em>at answer time</em>, not a different model</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Reward signal types</td>
+<td><strong>RLHF vs RLAIF vs RLVR</strong></td>
+<td>RLHF = humans rank answers; RLAIF = AI ranks answers (scales better); RLVR = graded against an automatic checker (math/code) — this is what powers &ldquo;reasoning models&rdquo;</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Model customization</td>
+<td><strong>Fine-tuning vs. retraining vs. training from scratch</strong></td>
+<td>Scratch/retrain = touching the whole brain, $10M+; fine-tune = specializing an existing brain, $10s–$1000s; <strong>LoRA/QLoRA</strong> = cheap adapter-based fine-tuning, freeze the base, train small add-on matrices</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Grounding models in real data</td>
+<td><strong>RAG → Agentic RAG → GraphRAG</strong></td>
+<td>Long context ≠ retrieval solved (cost, &ldquo;lost in the middle,&rdquo; freshness/permissions); modern RAG = hybrid search + re-ranking + the model deciding when to search, i.e. retrieval becomes just one tool in an agent&rsquo;s toolbox</td>
+</tr>
+<tr>
+<td>4</td>
+<td>US frontier models (mid-2026)</td>
+<td><strong>GPT-5.5/5.6, Claude Sonnet 5/Opus 4.8/Fable 5, Gemini 3.1 Pro/3.5, Grok 4, Llama 4</strong></td>
+<td>OpenAI = ecosystem + agentic workflows; Anthropic = coding-agent + long-doc coherence leader; Google = multimodal + Workspace + world models; xAI = cheapest flagship pricing</td>
+</tr>
+<tr>
+<td>4</td>
+<td>China frontier models (mid-2026)</td>
+<td><strong>DeepSeek V3.2/V4, Qwen3.x, GLM-5/5.1, Kimi K2.6, StepFun, MiniMax</strong></td>
+<td>DeepSeek = price/performance benchmark; Qwen = huge context + multilingual; GLM = open-weight coding leader; Kimi = long-context/agentic RAG specialist; whole field now genuinely near-frontier, mostly open-weight</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Hallucination</td>
+<td><strong>Compression loss + reward hacking + no ground truth</strong></td>
+<td>Model predicts <em>plausible</em>, not <em>true</em>; rare facts get &ldquo;smoothed&rdquo; like JPEG compression; RLHF subtly rewards confident guessing over honest &ldquo;I don&rsquo;t know&rdquo;</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Fixing hallucination</td>
+<td><strong>Grounding, RLVR, abstention rewards, tool use</strong></td>
+<td>None of these eliminate it — they shrink it and push it toward the rarest/most recent facts</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Turning a model into an agent</td>
+<td><strong>AI harness</strong></td>
+<td>Agent = Model + Harness; harness = system prompt + tools + sandbox + memory + verification loop; a great harness can beat a frontier model in a bad harness</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Safety pattern</td>
+<td><strong>Human-in-the-loop (HITL)</strong></td>
+<td>HITL-for-quality (review before it ships) vs. HITL-for-safety (must approve consequential actions — money, deletion, external comms)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>New baseline skill</td>
+<td><strong>AI literacy</strong></td>
+<td>Knowing what the model reliably can&rsquo;t do (hallucination, staleness, sycophancy) — the 2026 equivalent of &ldquo;spreadsheet literacy&rdquo;</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Policy layer</td>
+<td><strong>AI governance</strong></td>
+<td>Evals before release, incident reporting, EU AI Act risk tiers, export controls — where technical (harness) meets political (sovereignty)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>The other AGI bet</td>
+<td><strong>World models — Genie 3, Cosmos, JEPA</strong></td>
+<td>Predicts how a <em>scene</em> evolves, not the next <em>word</em>; DeepMind frames it as infinite training environments for agents; LeCun (JEPA) argues language alone can never reach general intelligence</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Honest caveat</td>
+<td><strong>Object permanence, physics drift, no benchmark</strong></td>
+<td>World models still break over long time horizons — treat &ldquo;world models solve AGI&rdquo; headlines skeptically</td>
+</tr>
+<tr>
+<td>8</td>
+<td>AI-managed teams</td>
+<td><strong>Multi-agent orchestration, orchestrator = &ldquo;AI PM&rdquo;</strong></td>
+<td>Works well: parallelizable, verifiable tasks (refactors, incident triage). Fails: tasks needing one coherent vision — orchestrator becomes a silent single point of failure</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Corporate risk</td>
+<td><strong>Data leakage — training risk, retention risk, jurisdiction risk</strong></td>
+<td>Three separate risks, don&rsquo;t conflate them; check the <em>specific</em> product&rsquo;s data-use policy, don&rsquo;t assume</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Geopolitics</td>
+<td><strong>AI/data sovereignty</strong></td>
+<td>Control over the whole lifecycle (data + model + infrastructure), not just server location; driven directly by cheap, capable, open-weight Chinese models (row 4) needing no foreign API dependency</td>
+</tr>
+<tr>
+<td>11</td>
+<td>The AGI debate</td>
+<td><strong>Scaling-is-enough (Amodei) vs. skeptics (Hassabis: &ldquo;nowhere near&rdquo;)</strong></td>
+<td>Both camps are serious; disagreement is really about whether current benchmarks measure the thing that <em>is</em> general intelligence</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Brain vs. computer</td>
+<td><strong>In-memory computing, ~20 watts, von Neumann bottleneck</strong></td>
+<td>Your brain fuses memory + compute in the same synapse, no separate RAM/CPU shuttle; runs on a lightbulb&rsquo;s worth of power vs. megawatts for a training run — most energy-efficient general intelligence known, full stop</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Using AI well</td>
+<td><strong>Augment, don&rsquo;t autopilot</strong></td>
+<td>Verify load-bearing facts, ground with RAG for anything post-cutoff/private, HITL proportional to stakes, match tool to task shape (row 8)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Reading model size</td>
+<td><strong>1B–3B tiny, 7–14B small, 30–32B mid, 70B large, 100B+ MoE frontier</strong></td>
+<td>Bigger ≠ automatically smarter; <strong>dense vs. MoE</strong> — MoE activates only a slice of total params per token (e.g. 671B total / ~37B active)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>The VRAM formula</td>
+<td><strong>VRAM ≈ params × bytes/param (+ KV cache)</strong></td>
+<td>FP16 = 2 bytes/param, INT8 = 1, <strong>Q4 quantization</strong> = 0.5 — this is why Q4/GGUF is the default for local models</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Local hardware picks</td>
+<td><strong>RTX 5090 (32GB) sweet spot; RTX PRO 6000 Blackwell (96GB) for 70B; H100/H200/B200 for frontier MoE</strong></td>
+<td>If (params × bytes/param × 1.2) ÷ your GPU&rsquo;s VRAM &gt; 1, you need multi-GPU — tensor parallelism (fast interconnect) or pipeline parallelism (slower-tolerant)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Serving many users</td>
+<td><strong>Continuous batching, PagedAttention/KV cache, speculative decoding</strong></td>
+<td>KV cache (grows with users × context), not weights, is usually the real bottleneck at scale</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Serving tools</td>
+<td><strong>vLLM, SGLang, TensorRT-LLM</strong> (production) vs. <strong>Ollama, llama.cpp</strong> (single-user local)</td>
+<td>vLLM = safest default; SGLang = fast agentic/tool-calling workloads; TensorRT-LLM = max NVIDIA-tuned throughput</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Vector databases</td>
+<td><strong>pgvector → Qdrant/Milvus → Pinecone</strong></td>
+<td>Start pgvector if you already run Postgres; scale to Qdrant/Milvus; use Pinecone only to offload ops, not cost</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>This has been a long one. If you made it here, you now know more precise, currently-accurate AI vocabulary than most people writing &ldquo;AI trend&rdquo; listicles this year — and, more importantly, you know <em>why</em> each term exists, which is the part that doesn&rsquo;t go stale in six months even when the model names do.</em></p>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/2026-01-08-daily-knowledge-notes/dk-012-phenome-to-biomarkers/" rel="prev">DK-012 — From Phenome to Biomarkers</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on 2026</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    ©2026 Kao Panboonyuen
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Built using <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> and the <a href="https://github.com/wowchemy/starter-hugo-academic" target="_blank" rel="noopener">Wowchemy academic template</a>. View <a href="https://github.com/kaopanboonyuen/kaopanboonyuen.github.io" target="_blank" rel="noopener">source</a>.
+        
+  </p>
+</footer>
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/golang.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.b36873e4e886c7b03b21e4eb97d9b6d7.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>
