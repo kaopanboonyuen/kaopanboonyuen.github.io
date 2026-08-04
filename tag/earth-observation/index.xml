@@ -5,12 +5,280 @@
     <link>https://kaopanboonyuen.github.io/tag/earth-observation/</link>
       <atom:link href="https://kaopanboonyuen.github.io/tag/earth-observation/index.xml" rel="self" type="application/rss+xml" />
     <description>earth-observation</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Wed, 15 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Tue, 04 Aug 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
       <title>earth-observation</title>
       <link>https://kaopanboonyuen.github.io/tag/earth-observation/</link>
     </image>
+    
+    <item>
+      <title>From IEEE TGRS to AOGS 2026: Bringing Generative AI to the Global Geoscience Community</title>
+      <link>https://kaopanboonyuen.github.io/blog/2026-08-04-from-ieee-tgrs-to-aogs-2026-bringing-generative-ai-to-the-global-geoscience-community/</link>
+      <pubDate>Tue, 04 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/blog/2026-08-04-from-ieee-tgrs-to-aogs-2026-bringing-generative-ai-to-the-global-geoscience-community/</guid>
+      <description>&lt;h1 id=&#34;-from-ieee-tgrs-to-aogs-2026-bringing-generative-ai-to-the-global-geoscience-community&#34;&gt;🌏 From IEEE TGRS to AOGS 2026: Bringing Generative AI to the Global Geoscience Community&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Some trips are about the talk you give. Others are about everything that happens around it. This one was both.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;I&amp;rsquo;m writing this from a week that felt, at times, like too much to hold at once — the excitement of a first-time visit, the heat of a Kyushu summer, the quiet worry of an earthquake, and the simple joy of standing in front of a room of geoscientists to talk about something I&amp;rsquo;ve been building for years.&lt;/p&gt;
+&lt;p&gt;This year, I had the honor of presenting my work at &lt;strong&gt;AOGS2026&lt;/strong&gt;, the 23rd Annual Meeting of the &lt;strong&gt;Asia Oceania Geosciences Society&lt;/strong&gt;, held under the theme &lt;em&gt;&amp;ldquo;Geoscience Horizons, Pacific Synergy&amp;rdquo;&lt;/em&gt; at the &lt;strong&gt;Fukuoka International Congress Centre&lt;/strong&gt;, Japan, from &lt;strong&gt;2 to 7 August 2026&lt;/strong&gt;. Thousands of geoscientists from across disciplines — atmosphere, ocean, solid earth, hydrology, and everything in between — gathered in one place, and somehow, my work on generative AI for satellite imagery got to be part of that conversation.&lt;/p&gt;
+&lt;p&gt;You can find the official program here: &lt;a href=&#34;https://www.asiaoceania.org/AOGS2026/Program-Details/34328/generative-ai-with-kernel-adaptive-diffusion-for-high-resolution-satellite-image-inpainting-across-urban,-forest,-and-agricultural-landscapes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AOGS2026 — Generative AI with Kernel-adaptive Diffusion for High-resolution Satellite Image Inpainting Across Urban, Forest, and Agricultural Landscapes&lt;/a&gt;, and more about the conference itself at &lt;a href=&#34;https://www.asiaoceania.org/AOGS2026/Home&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AOGS2026 Home&lt;/a&gt;.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;AOGS2026_IMG/AOGS2026_KAO_001.jpg&#34; alt=&#34;AOGS2026 Registration Badge&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    &lt;strong&gt;Figure 1:&lt;/strong&gt; Receiving my official conference badge for the
+    &lt;strong&gt;21st Annual Meeting of the Asia Oceania Geosciences Society (AOGS 2026)&lt;/strong&gt;
+    marked the true beginning of an exciting scientific journey in Fukuoka, Japan.
+    Standing beside the official AOGS sign after registration, I could finally
+    feel that months of research preparation had become reality.
+    Every international conference begins with a simple badge, but behind it are
+    countless hours of research, experiments, paper writing, and preparation.
+    This badge symbolizes not only participation in one of Asia&#39;s largest
+    geoscience conferences, but also the opportunity to exchange ideas with
+    scientists from around the world and represent Thailand on the international stage.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;AOGS2026_IMG/AOGS2026_KAO_MAIN_WEB_01.png&#34; alt=&#34;AOGS2026 Official Website&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    &lt;strong&gt;Figure 2:&lt;/strong&gt; Screenshot of the official homepage of
+    &lt;strong&gt;AOGS 2026&lt;/strong&gt;.
+    I really admire this year&#39;s conference theme:
+    &lt;em&gt;&#34;In Asia, For Asia and the World.&#34;&lt;/em&gt;
+    It perfectly reflects the mission of the Asia Oceania Geosciences Society—to
+    promote geophysical sciences for the benefit of humanity while fostering
+    international collaboration across Asia, Oceania, and beyond.
+    As an AI researcher working in Earth observation, it is inspiring to become
+    part of a scientific community where researchers from many disciplines gather
+    to solve global environmental challenges together.
+    &lt;br&gt;&lt;br&gt;
+    &lt;strong&gt;Credit:&lt;/strong&gt; Asia Oceania Geosciences Society (AOGS).&lt;br&gt;
+    Official Website:
+    &lt;a href=&#34;https://www.asiaoceania.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+      https://www.asiaoceania.org/
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;AOGS2026_IMG/AOGS2026_KAO_MAIN_WEB_02.png&#34; alt=&#34;Official Presentation Information&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    &lt;strong&gt;Figure 3:&lt;/strong&gt; The official conference program showing my accepted
+    poster presentation:
+    &lt;strong&gt;IG18-A001 — &#34;Generative AI with Kernel-adaptive Diffusion for High-resolution Satellite Image Inpainting Across Urban, Forest, and Agricultural Landscapes.&#34;&lt;/strong&gt;
+    This presentation adapts my IEEE Transactions on Geoscience and Remote Sensing
+    (IEEE TGRS) research into a form that is accessible to the broader geoscience
+    community, emphasizing how modern Generative AI can improve satellite image
+    restoration and Earth observation analysis.
+    Seeing my work officially listed among hundreds of international presentations
+    is both an honor and a reminder of the collaborative nature of scientific progress.
+    &lt;br&gt;&lt;br&gt;
+    &lt;strong&gt;Credit:&lt;/strong&gt; Asia Oceania Geosciences Society (AOGS).&lt;br&gt;
+    Official Presentation Page:
+    &lt;a href=&#34;https://www.asiaoceania.org/AOGS2026/Program-Details/34328/generative-ai-with-kernel-adaptive-diffusion-for-high-resolution-satellite-image-inpainting-across-urban,-forest,-and-agricultural-landscapes&#34;
+       target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+      https://www.asiaoceania.org/AOGS2026/Program-Details/34328/generative-ai-with-kernel-adaptive-diffusion-for-high-resolution-satellite-image-inpainting-across-urban,-forest,-and-agricultural-landscapes
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;AOGS2026_IMG/AOGS2026_KAO_MAIN_WEB_03.png&#34; alt=&#34;AOGS2026 Homepage&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    &lt;strong&gt;Figure 4:&lt;/strong&gt; The official homepage of
+    &lt;strong&gt;AOGS 2026&lt;/strong&gt;.
+    Before traveling to Japan, many participants were understandably concerned
+    about the possibility of conference cancellation following the
+    &lt;strong&gt;2026 Kumamoto earthquake&lt;/strong&gt;.
+    Fortunately, the organizers confirmed that the meeting would proceed as scheduled,
+    allowing researchers from around the world to continue sharing scientific discoveries.
+    I therefore traveled from Bangkok to Fukuoka to present my work in person.
+    At the same time, I would like to express my deepest condolences to everyone
+    affected by this devastating earthquake.
+    My thoughts are with the victims, their families, and all communities impacted
+    by this disaster.
+    I sincerely hope Japan will continue its remarkable recovery with the resilience
+    and strength that has always inspired the world.
+    &lt;br&gt;&lt;br&gt;
+    &lt;strong&gt;Credit:&lt;/strong&gt; Asia Oceania Geosciences Society (AOGS).&lt;br&gt;
+    Official Website:
+    &lt;a href=&#34;https://www.asiaoceania.org/AOGS2026/Home&#34;
+       target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+      https://www.asiaoceania.org/AOGS2026/Home
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-from-tgrs-to-a-geoscience-audience-translating-kao-into-a-story-anyone-could-follow&#34;&gt;🛰️ From TGRS to a Geoscience Audience: Translating KAO Into a Story Anyone Could Follow&lt;/h2&gt;
+&lt;p&gt;Last year, my paper &lt;strong&gt;&amp;ldquo;KAO: Kernel-Adaptive Optimization in Diffusion for Satellite Image&amp;rdquo;&lt;/strong&gt; was published in &lt;strong&gt;IEEE Transactions on Geoscience and Remote Sensing (TGRS)&lt;/strong&gt;. Like most papers in that journal, it was written the way engineers write for other engineers — dense, technical, full of equations and ablation tables that make perfect sense to a remote sensing AI researcher and very little sense to almost anyone else.&lt;/p&gt;
+&lt;p&gt;AOGS is not that audience. It&amp;rsquo;s geologists, oceanographers, atmospheric scientists, hydrologists — brilliant people who think in terms of landscapes, processes, and physical systems, not loss functions and kernel bandwidths. So instead of walking in with the original TGRS framing, I rebuilt the story around a question that any geoscientist would immediately recognize: &lt;em&gt;what do you do when your satellite image has a hole in it?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s the plain-language heart of the work. Clouds block a scene. A sensor drops out. A swath of forest, farmland, or city block simply isn&amp;rsquo;t there in the data you need. My presentation, &lt;strong&gt;&amp;ldquo;Generative AI with Kernel-adaptive Diffusion for High-resolution Satellite Image Inpainting Across Urban, Forest, and Agricultural Landscapes,&amp;rdquo;&lt;/strong&gt; was my attempt to explain how a kernel-adaptive diffusion model can fill in those gaps — not with a blurry guess, but with something that respects the very different textures and structures of a city block, a forest canopy, and a farm field, which behave completely differently under the hood.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;AOGS2026_IMG/AOGS2026_KAO_006.jpg&#34; alt=&#34;Opening Ceremony&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    &lt;strong&gt;Figure 5:&lt;/strong&gt; Taking a photo with my conference badge during the
+    spectacular opening ceremony held in the main hall of the
+    &lt;strong&gt;Fukuoka International Congress Center, Japan&lt;/strong&gt;.
+    The venue welcomed thousands of geoscientists from across Asia, Oceania,
+    Europe, and many other regions, creating an inspiring atmosphere filled with
+    scientific curiosity and international collaboration.
+    Witnessing such a large gathering of researchers working toward a better
+    understanding of our planet was an unforgettable experience.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;AOGS2026_IMG/AOGS2026_KAO_002.jpg&#34; alt=&#34;Poster Presentation&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    &lt;strong&gt;Figure 6:&lt;/strong&gt; Standing beside my completed poster presentation in
+    Session &lt;strong&gt;IG18-A001&lt;/strong&gt;.
+    This work presents my IEEE TGRS research on
+    &lt;em&gt;Kernel-adaptive Diffusion&lt;/em&gt; for satellite image inpainting,
+    restructured specifically for the geoscience audience attending AOGS.
+    Rather than focusing solely on deep learning innovations, I emphasized the
+    practical value of Generative AI for remote sensing applications,
+    including urban environments, forests, and agricultural landscapes.
+    Preparing a poster for an interdisciplinary audience was both challenging
+    and rewarding, requiring complex AI concepts to be communicated in a way
+    that researchers from diverse geoscience backgrounds could easily appreciate.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;AOGS2026_IMG/AOGS2026_KAO_003.jpg&#34; alt=&#34;Poster Installation&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    &lt;strong&gt;Figure 7:&lt;/strong&gt; My poster successfully installed at the official
+    presentation board provided by AOGS 2026.
+    Walking through the poster hall before the session began, I was amazed by the
+    enormous number of researchers preparing to present their latest discoveries.
+    Although I felt a little nervous, the excitement of becoming part of such an
+    international scientific event quickly outweighed the pressure.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Reframing a TGRS paper for a geoscience-first audience turned out to be its own kind of research exercise. I had to strip away the machine learning jargon and instead lead with the landscape — urban, forest, agricultural — because that&amp;rsquo;s the language this room speaks fluently. Watching people nod along, ask questions about specific land-cover types rather than architecture details, was its own quiet reward.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;AOGS2026_IMG/AOGS2026_KAO_004.jpg&#34; alt=&#34;Poster Session Atmosphere&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    &lt;strong&gt;Figure 8:&lt;/strong&gt; The lively atmosphere during the poster session.
+    Throughout the presentation period, many researchers stopped by to discuss
+    my work, ask insightful questions, and exchange ideas about Generative AI,
+    satellite image restoration, remote sensing, and Earth observation.
+    It was wonderful to see how rapidly AI has become an integral part of modern
+    geoscience research, bringing together scientists from different disciplines
+    to tackle increasingly complex environmental problems.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;AOGS2026_IMG/AOGS2026_KAO_005.jpg&#34; alt=&#34;Research Collaboration&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    &lt;strong&gt;Figure 9:&lt;/strong&gt; A memorable selfie with my postdoctoral advisor,
+    &lt;strong&gt;Professor Chalermchon Satirapod&lt;/strong&gt;, together with
+    &lt;strong&gt;Professor Wei-Chia (Kelvin) Hung&lt;/strong&gt;,
+    General Manager of Green Environment Engineering Consultant Company, Taiwan.
+    Professor Hung has extensive expertise in GNSS, InSAR, GPS surveying,
+    leveling, and land subsidence monitoring.
+    Our conversations about combining modern Artificial Intelligence with
+    geodetic technologies were particularly inspiring.
+    I sincerely hope that future collaborations will allow us to integrate
+    advanced AI methodologies into GNSS and InSAR applications for more accurate
+    environmental monitoring and geospatial analysis.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-first-time-in-kyushu-first-time-in-fukuoka&#34;&gt;✈️ First Time in Kyushu, First Time in Fukuoka&lt;/h2&gt;
+&lt;p&gt;This was my first visit to Kyushu, and my first time in Fukuoka altogether, and I couldn&amp;rsquo;t have asked for a better introduction to this part of Japan. I flew in for five days, and even though the heat this time of year was genuinely brutal — the kind of humid summer heat that makes you question your life choices the moment you step outside — none of that dulled how much I love being in Japan.&lt;/p&gt;
+&lt;p&gt;There&amp;rsquo;s something about the atmosphere here that I keep coming back for: the order, the quiet discipline in how everything runs, and the warmth of the people underneath all of that structure. Fukuoka gave me all of that, plus something I wasn&amp;rsquo;t expecting — genuinely incredible ramen. I made sure to try the city&amp;rsquo;s original-style bowl, and it did not disappoint. If you&amp;rsquo;re ever in Fukuoka, that&amp;rsquo;s non-negotiable.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-holding-space-for-kumamoto&#34;&gt;🙏 Holding Space for Kumamoto&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;ll be honest about something that weighed on me in the lead-up to this trip. Earlier this year, the &lt;strong&gt;2026 Kumamoto earthquake&lt;/strong&gt; struck the region, and for a while I genuinely wasn&amp;rsquo;t sure whether AOGS2026 would go ahead as planned. When the organizers confirmed the conference would proceed as scheduled, I booked my flight from Bangkok to Fukuoka to come present my work.&lt;/p&gt;
+&lt;p&gt;But arriving here with that news still fresh, I couldn&amp;rsquo;t just move past it without saying something. To everyone in Kyushu and across Japan affected by the earthquake — I&amp;rsquo;m deeply sorry for what was lost, and I&amp;rsquo;m holding onto real hope and confidence that recovery is already underway and will continue. Japan has shown, again and again, a remarkable capacity to rebuild with resilience and grace, and I wanted this post to carry that acknowledgment alongside everything else I&amp;rsquo;m grateful for this week.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-new-friends-new-connections-new-horizons&#34;&gt;🤝 New Friends, New Connections, New Horizons&lt;/h2&gt;
+&lt;p&gt;If there&amp;rsquo;s one thing I&amp;rsquo;ll take home from AOGS2026 beyond the talk itself, it&amp;rsquo;s how much this trip opened up my view of geoscience as a field. Coming from a background rooted in AI and remote sensing, I don&amp;rsquo;t always get to sit across the table from oceanographers, seismologists, or atmospheric scientists — and this week, I did, repeatedly, over coffee breaks and poster sessions and post-talk conversations that ran long in the best way.&lt;/p&gt;
+&lt;p&gt;I met professors from institutions across the region, exchanged ideas about where generative AI could actually be useful in their corners of geoscience, and left with more open threads and potential collaborations than I arrived with. That, more than anything, is what makes a conference worth the jet lag.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;AOGS2026_IMG/AOGS2026_KAO_009.jpg&#34; alt=&#34;Poster Presentation Completed&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    &lt;strong&gt;Figure 10:&lt;/strong&gt; Successfully completing my poster presentation at
+    AOGS 2026.
+    I was delighted to meet numerous researchers from across Asia and Europe,
+    exchange ideas, discuss future collaborations, and receive valuable feedback
+    on my IEEE TGRS research.
+    It was incredibly rewarding to know that many attendees showed genuine
+    interest in reproducing and extending my work.
+    All source code, datasets, and implementation details are publicly available,
+    supporting the principles of open science and reproducible research.
+    &lt;br&gt;&lt;br&gt;
+    Project Website:
+    &lt;a href=&#34;https://kaopanboonyuen.github.io/KAO&#34;
+       target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+      https://kaopanboonyuen.github.io/KAO
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;AOGS2026_IMG/AOGS2026_KAO_008.jpg&#34; alt=&#34;Conference Dinner&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    &lt;strong&gt;Figure 11:&lt;/strong&gt; Celebrating the successful completion of the first
+    day of presentations during the conference dinner.
+    The organizers prepared a warm and welcoming social gathering where attendees
+    could relax, network, and continue scientific discussions in a much more
+    informal atmosphere.
+    A memorable highlight was the traditional Japanese hospitality, including
+    locally prepared beverages that participants could freely enjoy.
+    After an intense day of presenting research, sharing conversations and laughter
+    with fellow scientists from around the world became one of the most enjoyable
+    moments of the conference.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;AOGS2026_IMG/AOGS2026_KAO_007.jpg&#34; alt=&#34;Conference Banquet&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    &lt;strong&gt;Figure 12:&lt;/strong&gt; The evening banquet following the conclusion of my
+    poster session.
+    Besides offering an excellent opportunity to reconnect with researchers and
+    make new international friends, the event featured wonderful live performances
+    showcasing traditional Japanese music and culture.
+    Experiences like these remind us that international conferences are much more
+    than venues for presenting research—they also build lasting friendships,
+    cultural understanding, and future scientific collaborations across borders.
+    Returning to Japan is always a pleasure, and visiting Fukuoka for the very
+    first time made this AOGS journey even more memorable.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-thank-you-aogs2026&#34;&gt;🛫 Thank You, AOGS2026&lt;/h2&gt;
+&lt;p&gt;To the organizers of AOGS2026, to the reviewers who accepted this work, and to everyone I met in Fukuoka this week — thank you. This trip reminded me why I love working at the intersection of AI and Earth observation: it&amp;rsquo;s never just about the model or the metric, it&amp;rsquo;s about the people trying to understand this planet a little better, together.&lt;/p&gt;
+&lt;p&gt;Kyushu, I&amp;rsquo;ll be back.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;citation&#34;&gt;Citation&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Panboonyuen, Teerapong. (August 2026). &lt;em&gt;From IEEE TGRS to AOGS 2026: Bringing Generative AI to the Global Geoscience Community&lt;/em&gt;. Blog post on Kao Panboonyuen.&lt;br&gt;
+&lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2026-08-04-from-ieee-tgrs-to-aogs-2026-bringing-generative-ai-to-the-global-geoscience-community/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2026-08-04-from-ieee-tgrs-to-aogs-2026-bringing-generative-ai-to-the-global-geoscience-community/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;For a BibTeX citation:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bibtex&#34;&gt;@article{panboonyuen2026aogs2026,
+  title   = &amp;quot;From IEEE TGRS to AOGS 2026: Bringing Generative AI to the Global Geoscience Community&amp;quot;,
+  author  = &amp;quot;Panboonyuen, Teerapong&amp;quot;,
+  journal = &amp;quot;kaopanboonyuen.github.io/&amp;quot;,
+  year    = &amp;quot;2026&amp;quot;,
+  month   = &amp;quot;August&amp;quot;,
+  day     = &amp;quot;4&amp;quot;,
+  url     = &amp;quot;https://kaopanboonyuen.github.io/blog/2026-08-04-from-ieee-tgrs-to-aogs-2026-bringing-generative-ai-to-the-global-geoscience-community/&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;Thank you for reading about my journey to &lt;strong&gt;AOGS 2026&lt;/strong&gt; in &lt;strong&gt;Fukuoka, Japan&lt;/strong&gt;, where I had the privilege of presenting my research, &lt;strong&gt;&amp;ldquo;Generative AI with Kernel-adaptive Diffusion for High-resolution Satellite Image Inpainting Across Urban, Forest, and Agricultural Landscapes.&amp;rdquo;&lt;/strong&gt; 🌏🛰️🤖&lt;/p&gt;
+&lt;p&gt;This presentation represents an important milestone in the continuing journey of &lt;strong&gt;KAO (Kernel-Adaptive Optimization)&lt;/strong&gt;, originally published in &lt;strong&gt;IEEE Transactions on Geoscience and Remote Sensing (IEEE TGRS)&lt;/strong&gt;. At AOGS 2026, I had the opportunity to reintroduce this work from a different perspective—making advanced diffusion-based generative AI more accessible to the broader geoscience community and demonstrating how artificial intelligence can contribute to solving real-world Earth observation challenges.&lt;/p&gt;
+&lt;p&gt;Beyond presenting my research, this conference was an unforgettable experience. Meeting researchers, professors, and students from across Asia, Europe, and many other parts of the world reminded me that science is ultimately about collaboration, curiosity, and building connections that transcend national borders.&lt;/p&gt;
+&lt;p&gt;My sincere gratitude goes to the &lt;strong&gt;Asia Oceania Geosciences Society (AOGS)&lt;/strong&gt; for accepting my work, to everyone who visited my poster session and shared thoughtful discussions, and to my mentors, collaborators, colleagues, and friends whose support has made this journey possible.&lt;/p&gt;
+&lt;p&gt;Finally, I would like to express my heartfelt sympathy to everyone affected by the &lt;strong&gt;2026 Kumamoto earthquake&lt;/strong&gt;. Despite the difficult circumstances, the conference continued as scheduled, reflecting the remarkable resilience and determination of the Japanese people. I sincerely wish for a swift recovery for all communities impacted by this disaster.&lt;/p&gt;
+&lt;p&gt;I hope this story inspires young researchers to continue exploring the intersection of &lt;strong&gt;artificial intelligence&lt;/strong&gt;, &lt;strong&gt;remote sensing&lt;/strong&gt;, and &lt;strong&gt;geoscience&lt;/strong&gt;, and to never hesitate to share their ideas with the global scientific community.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;See the Earth. Understand the Earth. Build AI that helps protect the Earth.&lt;/strong&gt; 🌏💙&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+</description>
+    </item>
     
     <item>
       <title>Invited for the IEEE GRSS Professional Member Spotlight Interview — Featured Across IEEE GRSS Social Media</title>

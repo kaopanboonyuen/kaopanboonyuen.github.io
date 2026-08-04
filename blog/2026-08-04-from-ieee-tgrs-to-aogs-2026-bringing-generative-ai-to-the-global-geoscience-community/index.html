@@ -1,0 +1,1578 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Teerapong Panboonyuen" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Reflecting on presenting &#39;Generative AI with Kernel-adaptive Diffusion for High-resolution Satellite Image Inpainting Across Urban, Forest, and Agricultural Landscapes&#39; at AOGS2026 in Fukuoka, Japan — a geoscience-friendly retelling of my IEEE TGRS paper on KAO: Kernel-Adaptive Optimization, and a week of ramen, new friendships, and quiet resilience in Kyushu." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://kaopanboonyuen.github.io/blog/2026-08-04-from-ieee-tgrs-to-aogs-2026-bringing-generative-ai-to-the-global-geoscience-community/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.08f2e04360a1c87f5ad39547c02bf219.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://kaopanboonyuen.github.io/blog/2026-08-04-from-ieee-tgrs-to-aogs-2026-bringing-generative-ai-to-the-global-geoscience-community/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Teerapong Panboonyuen" />
+  <meta property="og:url" content="https://kaopanboonyuen.github.io/blog/2026-08-04-from-ieee-tgrs-to-aogs-2026-bringing-generative-ai-to-the-global-geoscience-community/" />
+  <meta property="og:title" content="From IEEE TGRS to AOGS 2026: Bringing Generative AI to the Global Geoscience Community | Teerapong Panboonyuen" />
+  <meta property="og:description" content="Reflecting on presenting &#39;Generative AI with Kernel-adaptive Diffusion for High-resolution Satellite Image Inpainting Across Urban, Forest, and Agricultural Landscapes&#39; at AOGS2026 in Fukuoka, Japan — a geoscience-friendly retelling of my IEEE TGRS paper on KAO: Kernel-Adaptive Optimization, and a week of ramen, new friendships, and quiet resilience in Kyushu." /><meta property="og:image" content="https://kaopanboonyuen.github.io/blog/2026-08-04-from-ieee-tgrs-to-aogs-2026-bringing-generative-ai-to-the-global-geoscience-community/featured.png" />
+    <meta property="twitter:image" content="https://kaopanboonyuen.github.io/blog/2026-08-04-from-ieee-tgrs-to-aogs-2026-bringing-generative-ai-to-the-global-geoscience-community/featured.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2026-08-04T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2026-08-04T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>From IEEE TGRS to AOGS 2026: Bringing Generative AI to the Global Geoscience Community | Teerapong Panboonyuen</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="02b46acb708d108ab3dd49599222ae47" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.4be02a3b391999348b0c7478778a0e4b.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Teerapong Panboonyuen</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#awards"><span>Awards</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#press"><span>Press</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Featured</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#tags"><span>Topics</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#communities"><span>Communities</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://x.com/kaopanboonyuen" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>From IEEE TGRS to AOGS 2026: Bringing Generative AI to the Global Geoscience Community</h1>
+
+  
+  <p class="page-subtitle">On bringing a year-old IEEE TGRS paper to a room full of geoscientists, falling for Fukuoka, and holding space for Kumamoto.</p>
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span class="author-highlighted">Teerapong Panboonyuen</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    2026
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/research/">research</a>, <a href="/category/ai/">ai</a>, <a href="/category/remote-sensing/">remote-sensing</a>, <a href="/category/personal/">personal</a>, <a href="/category/travel/">travel</a></span>
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 1200px; max-height: 672px;">
+  <div style="position: relative">
+    <img src="/blog/2026-08-04-from-ieee-tgrs-to-aogs-2026-bringing-generative-ai-to-the-global-geoscience-community/featured_hudefbada0b36cc2e45db3e36cac9042a9_10842134_1200x0_resize_lanczos_3.png" alt="" class="featured-image">
+    <span class="article-header-caption">Presenting at AOGS2026, the 23rd annual meeting of the Asia Oceania Geosciences Society, held at the Fukuoka International Congress Centre, Japan.</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="-from-ieee-tgrs-to-aogs-2026-bringing-generative-ai-to-the-global-geoscience-community">🌏 From IEEE TGRS to AOGS 2026: Bringing Generative AI to the Global Geoscience Community</h1>
+<blockquote>
+<p>&ldquo;Some trips are about the talk you give. Others are about everything that happens around it. This one was both.&rdquo;</p>
+</blockquote>
+<hr>
+<p>I&rsquo;m writing this from a week that felt, at times, like too much to hold at once — the excitement of a first-time visit, the heat of a Kyushu summer, the quiet worry of an earthquake, and the simple joy of standing in front of a room of geoscientists to talk about something I&rsquo;ve been building for years.</p>
+<p>This year, I had the honor of presenting my work at <strong>AOGS2026</strong>, the 23rd Annual Meeting of the <strong>Asia Oceania Geosciences Society</strong>, held under the theme <em>&ldquo;Geoscience Horizons, Pacific Synergy&rdquo;</em> at the <strong>Fukuoka International Congress Centre</strong>, Japan, from <strong>2 to 7 August 2026</strong>. Thousands of geoscientists from across disciplines — atmosphere, ocean, solid earth, hydrology, and everything in between — gathered in one place, and somehow, my work on generative AI for satellite imagery got to be part of that conversation.</p>
+<p>You can find the official program here: <a href="https://www.asiaoceania.org/AOGS2026/Program-Details/34328/generative-ai-with-kernel-adaptive-diffusion-for-high-resolution-satellite-image-inpainting-across-urban,-forest,-and-agricultural-landscapes" target="_blank" rel="noopener">AOGS2026 — Generative AI with Kernel-adaptive Diffusion for High-resolution Satellite Image Inpainting Across Urban, Forest, and Agricultural Landscapes</a>, and more about the conference itself at <a href="https://www.asiaoceania.org/AOGS2026/Home" target="_blank" rel="noopener">AOGS2026 Home</a>.</p>
+<div style="text-align: center;">
+  <img src="AOGS2026_IMG/AOGS2026_KAO_001.jpg" alt="AOGS2026 Registration Badge">
+  <p style="font-style: italic; margin-top: 0px;">
+    <strong>Figure 1:</strong> Receiving my official conference badge for the
+    <strong>21st Annual Meeting of the Asia Oceania Geosciences Society (AOGS 2026)</strong>
+    marked the true beginning of an exciting scientific journey in Fukuoka, Japan.
+    Standing beside the official AOGS sign after registration, I could finally
+    feel that months of research preparation had become reality.
+    Every international conference begins with a simple badge, but behind it are
+    countless hours of research, experiments, paper writing, and preparation.
+    This badge symbolizes not only participation in one of Asia's largest
+    geoscience conferences, but also the opportunity to exchange ideas with
+    scientists from around the world and represent Thailand on the international stage.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="AOGS2026_IMG/AOGS2026_KAO_MAIN_WEB_01.png" alt="AOGS2026 Official Website">
+  <p style="font-style: italic; margin-top: 0px;">
+    <strong>Figure 2:</strong> Screenshot of the official homepage of
+    <strong>AOGS 2026</strong>.
+    I really admire this year's conference theme:
+    <em>"In Asia, For Asia and the World."</em>
+    It perfectly reflects the mission of the Asia Oceania Geosciences Society—to
+    promote geophysical sciences for the benefit of humanity while fostering
+    international collaboration across Asia, Oceania, and beyond.
+    As an AI researcher working in Earth observation, it is inspiring to become
+    part of a scientific community where researchers from many disciplines gather
+    to solve global environmental challenges together.
+    <br><br>
+    <strong>Credit:</strong> Asia Oceania Geosciences Society (AOGS).<br>
+    Official Website:
+    <a href="https://www.asiaoceania.org/" target="_blank" rel="noopener noreferrer">
+      https://www.asiaoceania.org/
+    </a>
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="AOGS2026_IMG/AOGS2026_KAO_MAIN_WEB_02.png" alt="Official Presentation Information">
+  <p style="font-style: italic; margin-top: 0px;">
+    <strong>Figure 3:</strong> The official conference program showing my accepted
+    poster presentation:
+    <strong>IG18-A001 — "Generative AI with Kernel-adaptive Diffusion for High-resolution Satellite Image Inpainting Across Urban, Forest, and Agricultural Landscapes."</strong>
+    This presentation adapts my IEEE Transactions on Geoscience and Remote Sensing
+    (IEEE TGRS) research into a form that is accessible to the broader geoscience
+    community, emphasizing how modern Generative AI can improve satellite image
+    restoration and Earth observation analysis.
+    Seeing my work officially listed among hundreds of international presentations
+    is both an honor and a reminder of the collaborative nature of scientific progress.
+    <br><br>
+    <strong>Credit:</strong> Asia Oceania Geosciences Society (AOGS).<br>
+    Official Presentation Page:
+    <a href="https://www.asiaoceania.org/AOGS2026/Program-Details/34328/generative-ai-with-kernel-adaptive-diffusion-for-high-resolution-satellite-image-inpainting-across-urban,-forest,-and-agricultural-landscapes"
+       target="_blank" rel="noopener noreferrer">
+      https://www.asiaoceania.org/AOGS2026/Program-Details/34328/generative-ai-with-kernel-adaptive-diffusion-for-high-resolution-satellite-image-inpainting-across-urban,-forest,-and-agricultural-landscapes
+    </a>
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="AOGS2026_IMG/AOGS2026_KAO_MAIN_WEB_03.png" alt="AOGS2026 Homepage">
+  <p style="font-style: italic; margin-top: 0px;">
+    <strong>Figure 4:</strong> The official homepage of
+    <strong>AOGS 2026</strong>.
+    Before traveling to Japan, many participants were understandably concerned
+    about the possibility of conference cancellation following the
+    <strong>2026 Kumamoto earthquake</strong>.
+    Fortunately, the organizers confirmed that the meeting would proceed as scheduled,
+    allowing researchers from around the world to continue sharing scientific discoveries.
+    I therefore traveled from Bangkok to Fukuoka to present my work in person.
+    At the same time, I would like to express my deepest condolences to everyone
+    affected by this devastating earthquake.
+    My thoughts are with the victims, their families, and all communities impacted
+    by this disaster.
+    I sincerely hope Japan will continue its remarkable recovery with the resilience
+    and strength that has always inspired the world.
+    <br><br>
+    <strong>Credit:</strong> Asia Oceania Geosciences Society (AOGS).<br>
+    Official Website:
+    <a href="https://www.asiaoceania.org/AOGS2026/Home"
+       target="_blank" rel="noopener noreferrer">
+      https://www.asiaoceania.org/AOGS2026/Home
+    </a>
+  </p>
+</div>
+<hr>
+<h2 id="-from-tgrs-to-a-geoscience-audience-translating-kao-into-a-story-anyone-could-follow">🛰️ From TGRS to a Geoscience Audience: Translating KAO Into a Story Anyone Could Follow</h2>
+<p>Last year, my paper <strong>&ldquo;KAO: Kernel-Adaptive Optimization in Diffusion for Satellite Image&rdquo;</strong> was published in <strong>IEEE Transactions on Geoscience and Remote Sensing (TGRS)</strong>. Like most papers in that journal, it was written the way engineers write for other engineers — dense, technical, full of equations and ablation tables that make perfect sense to a remote sensing AI researcher and very little sense to almost anyone else.</p>
+<p>AOGS is not that audience. It&rsquo;s geologists, oceanographers, atmospheric scientists, hydrologists — brilliant people who think in terms of landscapes, processes, and physical systems, not loss functions and kernel bandwidths. So instead of walking in with the original TGRS framing, I rebuilt the story around a question that any geoscientist would immediately recognize: <em>what do you do when your satellite image has a hole in it?</em></p>
+<p>That&rsquo;s the plain-language heart of the work. Clouds block a scene. A sensor drops out. A swath of forest, farmland, or city block simply isn&rsquo;t there in the data you need. My presentation, <strong>&ldquo;Generative AI with Kernel-adaptive Diffusion for High-resolution Satellite Image Inpainting Across Urban, Forest, and Agricultural Landscapes,&rdquo;</strong> was my attempt to explain how a kernel-adaptive diffusion model can fill in those gaps — not with a blurry guess, but with something that respects the very different textures and structures of a city block, a forest canopy, and a farm field, which behave completely differently under the hood.</p>
+<div style="text-align: center;">
+  <img src="AOGS2026_IMG/AOGS2026_KAO_006.jpg" alt="Opening Ceremony">
+  <p style="font-style: italic; margin-top: 0px;">
+    <strong>Figure 5:</strong> Taking a photo with my conference badge during the
+    spectacular opening ceremony held in the main hall of the
+    <strong>Fukuoka International Congress Center, Japan</strong>.
+    The venue welcomed thousands of geoscientists from across Asia, Oceania,
+    Europe, and many other regions, creating an inspiring atmosphere filled with
+    scientific curiosity and international collaboration.
+    Witnessing such a large gathering of researchers working toward a better
+    understanding of our planet was an unforgettable experience.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="AOGS2026_IMG/AOGS2026_KAO_002.jpg" alt="Poster Presentation">
+  <p style="font-style: italic; margin-top: 0px;">
+    <strong>Figure 6:</strong> Standing beside my completed poster presentation in
+    Session <strong>IG18-A001</strong>.
+    This work presents my IEEE TGRS research on
+    <em>Kernel-adaptive Diffusion</em> for satellite image inpainting,
+    restructured specifically for the geoscience audience attending AOGS.
+    Rather than focusing solely on deep learning innovations, I emphasized the
+    practical value of Generative AI for remote sensing applications,
+    including urban environments, forests, and agricultural landscapes.
+    Preparing a poster for an interdisciplinary audience was both challenging
+    and rewarding, requiring complex AI concepts to be communicated in a way
+    that researchers from diverse geoscience backgrounds could easily appreciate.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="AOGS2026_IMG/AOGS2026_KAO_003.jpg" alt="Poster Installation">
+  <p style="font-style: italic; margin-top: 0px;">
+    <strong>Figure 7:</strong> My poster successfully installed at the official
+    presentation board provided by AOGS 2026.
+    Walking through the poster hall before the session began, I was amazed by the
+    enormous number of researchers preparing to present their latest discoveries.
+    Although I felt a little nervous, the excitement of becoming part of such an
+    international scientific event quickly outweighed the pressure.
+  </p>
+</div>
+<p>Reframing a TGRS paper for a geoscience-first audience turned out to be its own kind of research exercise. I had to strip away the machine learning jargon and instead lead with the landscape — urban, forest, agricultural — because that&rsquo;s the language this room speaks fluently. Watching people nod along, ask questions about specific land-cover types rather than architecture details, was its own quiet reward.</p>
+<div style="text-align: center;">
+  <img src="AOGS2026_IMG/AOGS2026_KAO_004.jpg" alt="Poster Session Atmosphere">
+  <p style="font-style: italic; margin-top: 0px;">
+    <strong>Figure 8:</strong> The lively atmosphere during the poster session.
+    Throughout the presentation period, many researchers stopped by to discuss
+    my work, ask insightful questions, and exchange ideas about Generative AI,
+    satellite image restoration, remote sensing, and Earth observation.
+    It was wonderful to see how rapidly AI has become an integral part of modern
+    geoscience research, bringing together scientists from different disciplines
+    to tackle increasingly complex environmental problems.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="AOGS2026_IMG/AOGS2026_KAO_005.jpg" alt="Research Collaboration">
+  <p style="font-style: italic; margin-top: 0px;">
+    <strong>Figure 9:</strong> A memorable selfie with my postdoctoral advisor,
+    <strong>Professor Chalermchon Satirapod</strong>, together with
+    <strong>Professor Wei-Chia (Kelvin) Hung</strong>,
+    General Manager of Green Environment Engineering Consultant Company, Taiwan.
+    Professor Hung has extensive expertise in GNSS, InSAR, GPS surveying,
+    leveling, and land subsidence monitoring.
+    Our conversations about combining modern Artificial Intelligence with
+    geodetic technologies were particularly inspiring.
+    I sincerely hope that future collaborations will allow us to integrate
+    advanced AI methodologies into GNSS and InSAR applications for more accurate
+    environmental monitoring and geospatial analysis.
+  </p>
+</div>
+<hr>
+<h2 id="-first-time-in-kyushu-first-time-in-fukuoka">✈️ First Time in Kyushu, First Time in Fukuoka</h2>
+<p>This was my first visit to Kyushu, and my first time in Fukuoka altogether, and I couldn&rsquo;t have asked for a better introduction to this part of Japan. I flew in for five days, and even though the heat this time of year was genuinely brutal — the kind of humid summer heat that makes you question your life choices the moment you step outside — none of that dulled how much I love being in Japan.</p>
+<p>There&rsquo;s something about the atmosphere here that I keep coming back for: the order, the quiet discipline in how everything runs, and the warmth of the people underneath all of that structure. Fukuoka gave me all of that, plus something I wasn&rsquo;t expecting — genuinely incredible ramen. I made sure to try the city&rsquo;s original-style bowl, and it did not disappoint. If you&rsquo;re ever in Fukuoka, that&rsquo;s non-negotiable.</p>
+<hr>
+<h2 id="-holding-space-for-kumamoto">🙏 Holding Space for Kumamoto</h2>
+<p>I&rsquo;ll be honest about something that weighed on me in the lead-up to this trip. Earlier this year, the <strong>2026 Kumamoto earthquake</strong> struck the region, and for a while I genuinely wasn&rsquo;t sure whether AOGS2026 would go ahead as planned. When the organizers confirmed the conference would proceed as scheduled, I booked my flight from Bangkok to Fukuoka to come present my work.</p>
+<p>But arriving here with that news still fresh, I couldn&rsquo;t just move past it without saying something. To everyone in Kyushu and across Japan affected by the earthquake — I&rsquo;m deeply sorry for what was lost, and I&rsquo;m holding onto real hope and confidence that recovery is already underway and will continue. Japan has shown, again and again, a remarkable capacity to rebuild with resilience and grace, and I wanted this post to carry that acknowledgment alongside everything else I&rsquo;m grateful for this week.</p>
+<hr>
+<h2 id="-new-friends-new-connections-new-horizons">🤝 New Friends, New Connections, New Horizons</h2>
+<p>If there&rsquo;s one thing I&rsquo;ll take home from AOGS2026 beyond the talk itself, it&rsquo;s how much this trip opened up my view of geoscience as a field. Coming from a background rooted in AI and remote sensing, I don&rsquo;t always get to sit across the table from oceanographers, seismologists, or atmospheric scientists — and this week, I did, repeatedly, over coffee breaks and poster sessions and post-talk conversations that ran long in the best way.</p>
+<p>I met professors from institutions across the region, exchanged ideas about where generative AI could actually be useful in their corners of geoscience, and left with more open threads and potential collaborations than I arrived with. That, more than anything, is what makes a conference worth the jet lag.</p>
+<div style="text-align: center;">
+  <img src="AOGS2026_IMG/AOGS2026_KAO_009.jpg" alt="Poster Presentation Completed">
+  <p style="font-style: italic; margin-top: 0px;">
+    <strong>Figure 10:</strong> Successfully completing my poster presentation at
+    AOGS 2026.
+    I was delighted to meet numerous researchers from across Asia and Europe,
+    exchange ideas, discuss future collaborations, and receive valuable feedback
+    on my IEEE TGRS research.
+    It was incredibly rewarding to know that many attendees showed genuine
+    interest in reproducing and extending my work.
+    All source code, datasets, and implementation details are publicly available,
+    supporting the principles of open science and reproducible research.
+    <br><br>
+    Project Website:
+    <a href="https://kaopanboonyuen.github.io/KAO"
+       target="_blank" rel="noopener noreferrer">
+      https://kaopanboonyuen.github.io/KAO
+    </a>
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="AOGS2026_IMG/AOGS2026_KAO_008.jpg" alt="Conference Dinner">
+  <p style="font-style: italic; margin-top: 0px;">
+    <strong>Figure 11:</strong> Celebrating the successful completion of the first
+    day of presentations during the conference dinner.
+    The organizers prepared a warm and welcoming social gathering where attendees
+    could relax, network, and continue scientific discussions in a much more
+    informal atmosphere.
+    A memorable highlight was the traditional Japanese hospitality, including
+    locally prepared beverages that participants could freely enjoy.
+    After an intense day of presenting research, sharing conversations and laughter
+    with fellow scientists from around the world became one of the most enjoyable
+    moments of the conference.
+  </p>
+</div>
+<div style="text-align: center;">
+  <img src="AOGS2026_IMG/AOGS2026_KAO_007.jpg" alt="Conference Banquet">
+  <p style="font-style: italic; margin-top: 0px;">
+    <strong>Figure 12:</strong> The evening banquet following the conclusion of my
+    poster session.
+    Besides offering an excellent opportunity to reconnect with researchers and
+    make new international friends, the event featured wonderful live performances
+    showcasing traditional Japanese music and culture.
+    Experiences like these remind us that international conferences are much more
+    than venues for presenting research—they also build lasting friendships,
+    cultural understanding, and future scientific collaborations across borders.
+    Returning to Japan is always a pleasure, and visiting Fukuoka for the very
+    first time made this AOGS journey even more memorable.
+  </p>
+</div>
+<hr>
+<h2 id="-thank-you-aogs2026">🛫 Thank You, AOGS2026</h2>
+<p>To the organizers of AOGS2026, to the reviewers who accepted this work, and to everyone I met in Fukuoka this week — thank you. This trip reminded me why I love working at the intersection of AI and Earth observation: it&rsquo;s never just about the model or the metric, it&rsquo;s about the people trying to understand this planet a little better, together.</p>
+<p>Kyushu, I&rsquo;ll be back.</p>
+<hr>
+<h2 id="citation">Citation</h2>
+<blockquote>
+<p>Panboonyuen, Teerapong. (August 2026). <em>From IEEE TGRS to AOGS 2026: Bringing Generative AI to the Global Geoscience Community</em>. Blog post on Kao Panboonyuen.<br>
+<a href="https://kaopanboonyuen.github.io/blog/2026-08-04-from-ieee-tgrs-to-aogs-2026-bringing-generative-ai-to-the-global-geoscience-community/" target="_blank" rel="noopener">https://kaopanboonyuen.github.io/blog/2026-08-04-from-ieee-tgrs-to-aogs-2026-bringing-generative-ai-to-the-global-geoscience-community/</a></p>
+</blockquote>
+<p><strong>For a BibTeX citation:</strong></p>
+<pre><code class="language-bibtex">@article{panboonyuen2026aogs2026,
+  title   = &quot;From IEEE TGRS to AOGS 2026: Bringing Generative AI to the Global Geoscience Community&quot;,
+  author  = &quot;Panboonyuen, Teerapong&quot;,
+  journal = &quot;kaopanboonyuen.github.io/&quot;,
+  year    = &quot;2026&quot;,
+  month   = &quot;August&quot;,
+  day     = &quot;4&quot;,
+  url     = &quot;https://kaopanboonyuen.github.io/blog/2026-08-04-from-ieee-tgrs-to-aogs-2026-bringing-generative-ai-to-the-global-geoscience-community/&quot;
+}
+</code></pre>
+<div class="alert alert-note">
+  <div>
+    <p>Thank you for reading about my journey to <strong>AOGS 2026</strong> in <strong>Fukuoka, Japan</strong>, where I had the privilege of presenting my research, <strong>&ldquo;Generative AI with Kernel-adaptive Diffusion for High-resolution Satellite Image Inpainting Across Urban, Forest, and Agricultural Landscapes.&rdquo;</strong> 🌏🛰️🤖</p>
+<p>This presentation represents an important milestone in the continuing journey of <strong>KAO (Kernel-Adaptive Optimization)</strong>, originally published in <strong>IEEE Transactions on Geoscience and Remote Sensing (IEEE TGRS)</strong>. At AOGS 2026, I had the opportunity to reintroduce this work from a different perspective—making advanced diffusion-based generative AI more accessible to the broader geoscience community and demonstrating how artificial intelligence can contribute to solving real-world Earth observation challenges.</p>
+<p>Beyond presenting my research, this conference was an unforgettable experience. Meeting researchers, professors, and students from across Asia, Europe, and many other parts of the world reminded me that science is ultimately about collaboration, curiosity, and building connections that transcend national borders.</p>
+<p>My sincere gratitude goes to the <strong>Asia Oceania Geosciences Society (AOGS)</strong> for accepting my work, to everyone who visited my poster session and shared thoughtful discussions, and to my mentors, collaborators, colleagues, and friends whose support has made this journey possible.</p>
+<p>Finally, I would like to express my heartfelt sympathy to everyone affected by the <strong>2026 Kumamoto earthquake</strong>. Despite the difficult circumstances, the conference continued as scheduled, reflecting the remarkable resilience and determination of the Japanese people. I sincerely wish for a swift recovery for all communities impacted by this disaster.</p>
+<p>I hope this story inspires young researchers to continue exploring the intersection of <strong>artificial intelligence</strong>, <strong>remote sensing</strong>, and <strong>geoscience</strong>, and to never hesitate to share their ideas with the global scientific community.</p>
+<p><strong>See the Earth. Understand the Earth. Build AI that helps protect the Earth.</strong> 🌏💙</p>
+  </div>
+</div>
+<hr>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/aogs2026/">aogs2026</a>
+  
+  <a class="badge badge-light" href="/tag/geoscience/">geoscience</a>
+  
+  <a class="badge badge-light" href="/tag/remote-sensing/">remote-sensing</a>
+  
+  <a class="badge badge-light" href="/tag/geoai/">geoai</a>
+  
+  <a class="badge badge-light" href="/tag/geospatial-ai/">geospatial-ai</a>
+  
+  <a class="badge badge-light" href="/tag/earth-observation/">earth-observation</a>
+  
+  <a class="badge badge-light" href="/tag/satellite-imagery/">satellite-imagery</a>
+  
+  <a class="badge badge-light" href="/tag/diffusion-models/">diffusion-models</a>
+  
+  <a class="badge badge-light" href="/tag/generative-ai/">generative-ai</a>
+  
+  <a class="badge badge-light" href="/tag/ai/">ai</a>
+  
+  <a class="badge badge-light" href="/tag/machine-learning/">machine-learning</a>
+  
+  <a class="badge badge-light" href="/tag/tgrs/">tgrs</a>
+  
+  <a class="badge badge-light" href="/tag/kao/">kao</a>
+  
+  <a class="badge badge-light" href="/tag/kernel-adaptive-optimization/">kernel-adaptive-optimization</a>
+  
+  <a class="badge badge-light" href="/tag/fukuoka/">fukuoka</a>
+  
+  <a class="badge badge-light" href="/tag/japan/">Japan</a>
+  
+  <a class="badge badge-light" href="/tag/thailand/">Thailand</a>
+  
+  <a class="badge badge-light" href="/tag/researcher/">researcher</a>
+  
+  <a class="badge badge-light" href="/tag/conference/">conference</a>
+  
+  <a class="badge badge-light" href="/tag/academic-life/">academic-life</a>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://kaopanboonyuen.github.io/"><img class="avatar mr-3 avatar-circle" src="/author/teerapong-panboonyuen/avatar_hu00be49bf8d306be2acce952c8fa7a11f_1239445_270x270_fill_lanczos_center_3.png" alt="Teerapong Panboonyuen"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://kaopanboonyuen.github.io/">Teerapong Panboonyuen</a></h5>
+      
+      <p class="card-text">My research focuses on leveraging advanced machine intelligence techniques, specifically computer vision, to enhance semantic understanding, learning representations, visual recognition, and geospatial data interpretation.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:teerapong.panboonyuen@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://x.com/kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.th/citations?user=myy0qDgAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://orcid.org/0000-0001-8464-4476" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.youtube.com/@kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/kaopanboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/teerapong-panboonyuen" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    ©2026 Kao Panboonyuen
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Built using <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> and the <a href="https://github.com/wowchemy/starter-hugo-academic" target="_blank" rel="noopener">Wowchemy academic template</a>. View <a href="https://github.com/kaopanboonyuen/kaopanboonyuen.github.io" target="_blank" rel="noopener">source</a>.
+        
+  </p>
+</footer>
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/golang.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.b36873e4e886c7b03b21e4eb97d9b6d7.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>
