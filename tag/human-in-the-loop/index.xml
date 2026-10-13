@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>human-in-the-loop | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/human-in-the-loop/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/human-in-the-loop/index.xml" rel="self" type="application/rss+xml" />
+    <description>human-in-the-loop</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Mon, 12 Oct 2026 09:09:09 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>human-in-the-loop</title>
+      <link>https://kaopanboonyuen.github.io/tag/human-in-the-loop/</link>
+    </image>
+    
+    <item>
+      <title>KAO-TerraMind: Targeted Adaptation of Geospatial Foundation Models for Dense Prediction</title>
+      <link>https://kaopanboonyuen.github.io/publication/kaoterramind-targeted-adaptation-of-geospatial-foundation-models-for-dense-prediction/</link>
+      <pubDate>Mon, 12 Oct 2026 09:09:09 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/kaoterramind-targeted-adaptation-of-geospatial-foundation-models-for-dense-prediction/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CHULA-OCR: Uncertainty-Aware Robust OCR for Digitizing Land Title Deeds</title>
+      <link>https://kaopanboonyuen.github.io/publication/chula-ocr-uncertainty-aware-robust-ocr-for-digitizing-land-title-deeds/</link>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/publication/chula-ocr-uncertainty-aware-robust-ocr-for-digitizing-land-title-deeds/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;featured.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;compact.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
