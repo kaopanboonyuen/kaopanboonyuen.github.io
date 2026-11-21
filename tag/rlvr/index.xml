@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rlvr | Teerapong Panboonyuen</title>
+    <link>https://kaopanboonyuen.github.io/tag/rlvr/</link>
+      <atom:link href="https://kaopanboonyuen.github.io/tag/rlvr/index.xml" rel="self" type="application/rss+xml" />
+    <description>rlvr</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>©2026 Kao Panboonyuen</copyright><lastBuildDate>Thu, 19 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://kaopanboonyuen.github.io/media/icon_hueaa9297dc78a770d45cebdfb81bbca28_1203332_512x512_fill_lanczos_center_3.png</url>
+      <title>rlvr</title>
+      <link>https://kaopanboonyuen.github.io/tag/rlvr/</link>
+    </image>
+    
+    <item>
+      <title>GSB AI: Beyond the Model — One Laboratory, and a Promise to Everyday Thai People</title>
+      <link>https://kaopanboonyuen.github.io/blog/2026-11-19-gsb-ai-beyond-the-model/</link>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaopanboonyuen.github.io/blog/2026-11-19-gsb-ai-beyond-the-model/</guid>
+      <description>&lt;h1 id=&#34;gsb-ai-beyond-the-model&#34;&gt;GSB AI: Beyond the Model&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;A bank holds more than money. It holds people&amp;rsquo;s lives. So the AI that touches those lives should live inside the bank&amp;rsquo;s own walls.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;prologue-the-tenth-of-august&#34;&gt;Prologue: The Tenth of August&lt;/h2&gt;
+&lt;p&gt;On the tenth of August 2026, I began my work at the Government Savings Bank.&lt;/p&gt;
+&lt;div style=&#34;text-align: center; font-style: italic; margin: 1.6em 0;&#34;&gt;
+Ten August, first light:&lt;br&gt;
+a new door, a steady heart,&lt;br&gt;
+a long road begun.
+&lt;/div&gt;
+&lt;p&gt;That morning I carried two feelings at once. The first was excitement, the plain and slightly shy kind that a researcher feels when a long-held question finally meets a real place in which it can be asked. The second was humility. The Government Savings Bank is an institution with more than a century of history, trusted by Thai families across generations, and I was the newest person in the building, with a great deal to learn and very little to show.&lt;/p&gt;
+&lt;p&gt;Three months have passed since then. I have deliberately chosen not to measure them in days, because days are a poor unit for gratitude. I would rather account for them in what they made possible: a laboratory that now has a name, a family of models that now has a shape, a pilot that now has results, and, on the nineteenth of November, a place on the stage of the &lt;strong&gt;GSB Data &amp;amp; AI Culture Showcase 2026&lt;/strong&gt;, where I was given the honor of speaking about a subject I love dearly, namely how a machine can learn to think by being allowed to try.&lt;/p&gt;
+&lt;p&gt;This post is my attempt to tell that story properly. It is written in two movements. The first is personal: why I came to GSB, what I hoped to contribute, and what these months have taught me. The second is technical: the reinforcement-learning ideas behind our work, the models we have built, and the evidence, with its honest limits, from our first pilot. A reader in a hurry may go straight to the second movement. A reader with a little time may find that the first explains why the second exists at all.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-i-came-here&#34;&gt;Why I Came Here&lt;/h2&gt;
+&lt;p&gt;Some institutions are measured by their profit. A few are measured by the lives they quietly hold together. When I looked at the Government Savings Bank, I saw the second kind.&lt;/p&gt;
+&lt;p&gt;I did not come here merely to train larger models. Larger models are being trained in many places, by many capable people, with far more compute than any one of us will ever see. I came because I wanted my work to land somewhere it could matter to ordinary people: the street-side vendor, the small shop owner, the &lt;em&gt;pho-kha mae-kha&lt;/em&gt; (พ่อค้าแม่ค้า), the people whose whole livelihood may depend on a modest amount of working capital arriving at the right moment. For them, access to funding is rarely an abstract financial concept. It is the difference between a shutter that rolls up tomorrow morning and one that does not.&lt;/p&gt;
+&lt;p&gt;That is what the words &lt;strong&gt;Social Bank&lt;/strong&gt; mean to me. The Government Savings Bank does not exist only to lend. It exists to give people who are easily overlooked a fair chance to keep their work alive, to keep going, and, in the plainest sense of the word, to keep breathing. And I came to believe that artificial intelligence, built with care and kept under the bank&amp;rsquo;s own governance, could help make decisions of this kind &lt;strong&gt;faster, fairer, and more transparent&lt;/strong&gt;.&lt;/p&gt;
+&lt;div style=&#34;text-align: center; font-style: italic; margin: 1.6em 0;&#34;&gt;
+A shutter lifts at half past five,&lt;br&gt;
+a pot of broth begins to hum;&lt;br&gt;
+the whole of someone&#39;s world, alive&lt;br&gt;
+on forty baht and what may come.&lt;br&gt;
+&lt;br&gt;
+No ledger counts the hour she rose,&lt;br&gt;
+no column prices what she bears;&lt;br&gt;
+yet every row, as the data goes,&lt;br&gt;
+is someone&#39;s morning, someone&#39;s prayers.&lt;br&gt;
+&lt;br&gt;
+So teach the machine to be slow where it must,&lt;br&gt;
+and quick where a person is waiting in line;&lt;br&gt;
+to be fair in the way that a promise is just,&lt;br&gt;
+and plain as the daylight, and honest, and kind.
+&lt;/div&gt;
+&lt;p&gt;I am a researcher by habit, so I want to give that belief an intellectual footing rather than leave it as a sentiment.&lt;/p&gt;
+&lt;p&gt;Economics has understood the difficulty for a long time. In their classic study of credit rationing, Stiglitz and Weiss (1981) showed that when a lender cannot observe how risky a borrower truly is, it may rationally refuse credit to some applicants who would have repaid, simply because it cannot tell them apart from those who would not. The people who pay the highest price for this information gap are the ones with thin records: borrowers without collateral, without formal accounts, without a paper trail that a traditional scorecard knows how to read. A vendor who has sold faithfully for many years, but whose sales live inside a mobile banking app, can be invisible to a process that only looks at what it was designed to see.&lt;/p&gt;
+&lt;p&gt;Modern machine learning offers a partial remedy. Khandani, Kim, and Lo (2010) showed that machine-learning models applied to consumer banking data can forecast credit delinquencies better than conventional approaches, and Björkegren and Grissen (2020) showed that behavioral traces, in their case patterns of mobile-phone usage, can predict repayment for borrowers who have no formal credit history at all. The shared lesson is that evidence of reliability often already exists in the daily rhythm of a person&amp;rsquo;s economic life. The task is to read it faithfully. In our own pilot, described below, that evidence is a merchant&amp;rsquo;s own bank statements.&lt;/p&gt;
+&lt;p&gt;The same literature, however, carries a warning that I take just as seriously. Barocas and Selbst (2016) explain how data-driven decision systems can reproduce disadvantage even when nobody intends to discriminate, and Rudin (2019) argues that for high-stakes decisions we should prefer models whose reasoning can be inspected over black boxes that are explained after the fact. A bank that serves vulnerable people cannot treat accuracy as its only virtue. It must also be able to explain, to audit, and to correct itself. That is why, throughout this post, three words will return like a refrain: &lt;strong&gt;verifiable, local, and accountable&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-the-first-three-months-were-made-of&#34;&gt;What the First Three Months Were Made Of&lt;/h2&gt;
+&lt;p&gt;I will not pretend that these months were effortless, and I will certainly not pretend that I traveled them alone.&lt;/p&gt;
+&lt;p&gt;I worked as hard as I knew how. Many evenings went to tuning, testing, breaking, and rebuilding. A great many more went to the quieter labor of learning the bank itself: its language, its regulations, its sense of duty toward the people it serves. A newcomer who is trusted with responsibility incurs a debt, and the only honest way I know to repay a debt of trust is through effort, and through results that other people can check.&lt;/p&gt;
+&lt;p&gt;None of it would have been possible without the confidence of &lt;strong&gt;P&amp;rsquo;June&lt;/strong&gt; (Ms. Sivada Khongkun, Executive Vice President of Data and AI Strategy), who backed the idea that a savings bank could build its own AI laboratory, nor without the colleagues of the &lt;strong&gt;Data and AI Innovation Team&lt;/strong&gt;, who shared their time, their knowledge, and their patience with a new colleague who asked a great many questions.&lt;/p&gt;
+&lt;p&gt;Out of that shared effort came &lt;strong&gt;GSBAIL&lt;/strong&gt;, the &lt;strong&gt;Government Savings Bank Artificial Intelligence Laboratory&lt;/strong&gt;: a research laboratory for deep AI, created to serve the bank and, through the bank, everyday Thai people. Its first work spans language, documents, speech, and credit scoring, and every part of it is designed so that the data stays inside infrastructure that the bank itself controls.&lt;/p&gt;
+&lt;p&gt;I want to be careful about how I describe this. In machine learning we save a &lt;em&gt;checkpoint&lt;/em&gt; not because training has finished, but because the work so far is worth keeping and building upon. That is how I think of this post, and of these three months: a checkpoint, saved with gratitude, from a run that is still going.&lt;/p&gt;
+&lt;div style=&#34;text-align: center; font-style: italic; margin: 1.6em 0;&#34;&gt;
+The loss curve falls like evening rain,&lt;br&gt;
+slow, and then slower, down the screen;&lt;br&gt;
+each epoch is a small refrain&lt;br&gt;
+for things we hope, and things we mean.&lt;br&gt;
+&lt;br&gt;
+No headline marks the quiet hour&lt;br&gt;
+a checksum finally balances;&lt;br&gt;
+but somewhere, in that small, true power,&lt;br&gt;
+a stranger gets a fairer chance.
+&lt;/div&gt;
+&lt;p&gt;If there is one promise I would like to make in these pages, it is this: I will keep working, with diligence and with humility, to develop local AI that is both &lt;strong&gt;capable&lt;/strong&gt; and &lt;strong&gt;ethical&lt;/strong&gt;, so that the Government Savings Bank can continue to help the grassroots people of Thailand for many years to come.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;interlude-the-day-on-stage&#34;&gt;Interlude: The Day on Stage&lt;/h2&gt;
+&lt;p&gt;On 19 November 2026, I stood before a room of bankers and talked about &lt;strong&gt;reinforcement learning&lt;/strong&gt;. At a savings bank, with a slide that read &lt;em&gt;&amp;ldquo;Teaching a model to think by letting it try.&amp;rdquo;&lt;/em&gt; I am grateful to everyone in that room for their generous attention.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;GSB_IMG/GSB_AI_Showcase_0001.jpg&#34; alt=&#34;Reinforcement learning slide on the big screens at GSB Data and AI Culture Showcase 2026&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 1: The moment reinforcement learning reached the big screens of the GSB Data &amp; AI Culture Showcase 2026.  
+    The slide reads &#34;Teaching a model to think by letting it try,&#34; with three steps laid out from left to right: RL (learn from reward), RLHF (reward from humans), and RLVR (reward from a verifier).  
+    That three-step ladder is the engine behind much of what our laboratory is building, and it is the thread I will follow through the rest of this post.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;in-brief&#34;&gt;In Brief&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;I am building &lt;strong&gt;GSBAIL&lt;/strong&gt;, the &lt;strong&gt;Government Savings Bank AI Laboratory&lt;/strong&gt;, a research lab for deep AI that serves the bank and, through the bank, everyday Thai people.&lt;/li&gt;
+&lt;li&gt;Everything is designed as &lt;strong&gt;sovereign AI / local AI&lt;/strong&gt;: models we research, train, and run on infrastructure the bank controls.&lt;/li&gt;
+&lt;li&gt;The engine is &lt;strong&gt;RL → RLHF → RLVR&lt;/strong&gt;, and the mathematics is explained below.&lt;/li&gt;
+&lt;li&gt;The Kao model family: &lt;strong&gt;KaoOCR, KaoLEAF, KaoChat, KaoASR, KaoNPL&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;The pilot: &lt;strong&gt;QR Maha Heng × Nokkrasip&lt;/strong&gt;, merchant loans scored by our own models, with &lt;strong&gt;0 bytes leaving the bank&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;None of it would exist without &lt;strong&gt;P&amp;rsquo;June&lt;/strong&gt; and the Data and AI Innovation Team.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-talk-gsb-ai-beyond-the-model&#34;&gt;The Talk: &amp;ldquo;GSB AI: Beyond the Model&amp;rdquo;&lt;/h2&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;GSB_IMG/GSB_AI_Showcase_0004.jpg&#34; alt=&#34;Title slide GSB AI Beyond the Model on stage&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 2: The title slide: &#34;GSB AI: Beyond the Model: Building Our Own Models, Knowledge Systems, and Autonomous AI.&#34;  
+    The slide carries the laboratory&#39;s name, GSBAIL, in small print above the title, and &#34;VP of AI · Data and AI Innovation Team&#34; below it.  
+    Seeing &#34;GSBAIL&#34; on a screen that large was a strange and wonderful feeling. Three months earlier, that name did not exist.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;My talk opened with a question that I suspect many people in that room were quietly asking:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Is a savings bank supposed to build its own AI?&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Thailand&amp;rsquo;s national savings bank is trusted across generations. It is not the first name one would guess for frontier research. The honest answer to the question is the whole purpose of the laboratory: &lt;em&gt;let us see how far we can responsibly go.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;what-is-gsbail&#34;&gt;What Is GSBAIL?&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;GSBAIL&lt;/strong&gt; = &lt;strong&gt;G&lt;/strong&gt;overnment &lt;strong&gt;S&lt;/strong&gt;avings &lt;strong&gt;B&lt;/strong&gt;ank &lt;strong&gt;A&lt;/strong&gt;rtificial &lt;strong&gt;I&lt;/strong&gt;ntelligence &lt;strong&gt;L&lt;/strong&gt;aboratory.&lt;/p&gt;
+&lt;p&gt;We research and build four families of capability, &lt;strong&gt;with every byte inside infrastructure the bank controls&lt;/strong&gt;:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;#&lt;/th&gt;
+&lt;th&gt;Capability&lt;/th&gt;
+&lt;th&gt;What it means&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;01&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Language&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;LLMs and knowledge systems&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;02&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Documents&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Vision-language OCR&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;03&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Speech&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Thai ASR and summarization&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;04&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Scoring&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Attention models for credit&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;sovereign-ai-in-one-equation&#34;&gt;Sovereign AI in One Equation&lt;/h3&gt;
+&lt;p&gt;Sovereign AI can sound like a slogan until it is written as an optimization problem:&lt;/p&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+\max_{\theta}\;\; \text{Capability}(\theta)
+\quad \text{subject to} \quad
+\text{Egress}\big(\theta,\; \mathcal{D}_{\text{bank}}\big) \;=\; 0 \text{ bytes}
+$$
+&lt;/div&gt;
+&lt;p&gt;The &lt;strong&gt;objective&lt;/strong&gt; is where we are free to be creative. The &lt;strong&gt;constraint&lt;/strong&gt; is not negotiable.&lt;/p&gt;
+&lt;p&gt;There are sound scientific reasons for treating the constraint so strictly. Foundation models concentrate both capability and risk in a few places (Bommasani et al., 2021), and large language models are known to memorize and, under some conditions, reveal fragments of their training data (Carlini et al., 2021). For a bank, whose data is a record of people&amp;rsquo;s lives, the safest place for sensitive text to go is nowhere. There is also a practical, local reason: Thai is a language in which open models have historically been less well served than English, which is why community efforts such as Typhoon (Pipatanakul et al., 2023) matter, and why a bank with its own Thai documents and its own regulations has something genuinely worth training on.&lt;/p&gt;
+&lt;p&gt;Most of the interesting engineering in a regulated environment lives in that small phrase, &amp;ldquo;subject to.&amp;rdquo;&lt;/p&gt;
+&lt;h3 id=&#34;the-local-everything-agenda&#34;&gt;The &amp;ldquo;Local Everything&amp;rdquo; Agenda&lt;/h3&gt;
+&lt;p&gt;This is the research agenda the laboratory is built around. The showcase covered the first few items as systems already running; the rest is where we are heading:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Local LLMs&lt;/strong&gt;: language models that think, summarize, and reason in Thai and English, on our own GPUs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Local vision-language models&lt;/strong&gt;: reading Thai documents without sending a single page anywhere&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Local ASR&lt;/strong&gt;: Thai speech-to-text and meeting summaries that stay in the building&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Local retrieval&lt;/strong&gt;: our own embeddings, indexes, and rerankers over the bank&amp;rsquo;s own regulations&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Local tools and code execution&lt;/strong&gt;: so the model never does arithmetic that code can do exactly&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Local verifiers&lt;/strong&gt;: deterministic checkers that turn &amp;ldquo;is this right?&amp;rdquo; into a reward signal&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Local evaluation harnesses&lt;/strong&gt;: honest, repeatable benchmarks on bank-relevant tasks&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Local guardrails and audit trails&lt;/strong&gt;: because &amp;ldquo;trust me&amp;rdquo; is not a compliance strategy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If something can be run locally, researched locally, and governed locally, we would like it to be.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-people-behind-the-lab&#34;&gt;The People Behind the Lab&lt;/h2&gt;
+&lt;p&gt;Before any algorithm, I would like to introduce the people who matter most.&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;GSB_IMG/GSB_AI_Showcase_0006.jpg&#34; alt=&#34;Meet the nerds of the Data and AI Innovation Team slide&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 3: &#34;Meet the nerds of the Data and AI Innovation Team.&#34;  
+    Yes, the word &#34;nerds&#34; appeared on a main-stage slide, and it was said with affection. The photos show the team doing what we do best: working side by side, laughing a little too loudly, and debating loss curves.  
+    Everything presented in this talk carries the fingerprints of every person in those pictures.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;GSB_IMG/GSB_AI_Showcase_0007.jpg&#34; alt=&#34;Slide introducing Ms. Sivada Khongkun P&#39;June, Executive Vice President of Data and AI Strategy&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 4: &#34;Under the leadership of P&#39;June&#34;: Ms. Sivada Khongkun, Executive Vice President of Data and AI Strategy.  
+    Thank you, P&#39;June, for believing that a savings bank can build its own AI laboratory.  
+    Great research needs great sponsorship, and this laboratory exists because of her leadership.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;To &lt;strong&gt;P&amp;rsquo;June&lt;/strong&gt; and to every colleague in the &lt;strong&gt;Data and AI Innovation Team&lt;/strong&gt;: thank you. You are the reason GSB can have local AI that is both &lt;strong&gt;capable&lt;/strong&gt; and &lt;strong&gt;ethical&lt;/strong&gt;. I promise to keep developing local AI to help the bank as far as my abilities allow.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;part-1-the-engine--rl-rlhf-rlvr&#34;&gt;Part 1: The Engine — RL, RLHF, RLVR&lt;/h2&gt;
+&lt;p&gt;This is the section where the mathematics comes out, and I will try to keep it gentle.&lt;/p&gt;
+&lt;p&gt;The idea fits in one sentence:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;We teach a model to think by letting it try, and then we tell it how well it did.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The only question that changes from step to step is: &lt;strong&gt;who gives the reward?&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Step&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Who gives the reward?&lt;/th&gt;
+&lt;th&gt;Best at&lt;/th&gt;
+&lt;th&gt;Weak at&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;RL&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;the environment&lt;/td&gt;
+&lt;td&gt;games, control, anything with a clean score&lt;/td&gt;
+&lt;td&gt;needs a reward function&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;RLHF&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;humans (via a learned reward model)&lt;/td&gt;
+&lt;td&gt;style, helpfulness, tone&lt;/td&gt;
+&lt;td&gt;humans are noisy, slow, expensive&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;RLVR&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;a verifier (plain code)&lt;/td&gt;
+&lt;td&gt;math, code, &lt;strong&gt;bank data&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;needs answers that can be checked&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Let us climb the ladder one rung at a time.&lt;/p&gt;
+&lt;h3 id=&#34;step-1-reinforcement-learning--act-get-a-reward-repeat&#34;&gt;Step 1: Reinforcement Learning — &amp;ldquo;Act. Get a reward. Repeat.&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Plain-English version.&lt;/strong&gt; Imagine a dog learning &amp;ldquo;sit.&amp;rdquo; The dog (the &lt;strong&gt;agent&lt;/strong&gt;) tries a trick. The owner (the &lt;strong&gt;environment&lt;/strong&gt;) reacts. A treat comes back: &lt;strong&gt;+1&lt;/strong&gt;. Over time the dog adds up every treat it earns, and a treat &lt;em&gt;now&lt;/em&gt; is worth a little more than a treat &lt;em&gt;later&lt;/em&gt;. So it learns to do whatever earns the most treats.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Technical version.&lt;/strong&gt; The framework is the Markov decision process, the standard formalism of the field (Sutton &amp;amp; Barto, 2018). At each step $t$ the agent observes a state $s_t$, takes an action $a_t \sim \pi_\theta(\cdot \mid s_t)$, and receives a reward $r_t$ and the next state $s_{t+1}$. The discounted return from time $t$ is:&lt;/p&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+G_t \;=\; \sum_{k=0}^{\infty} \gamma^{k}\, r_{t+k+1}, \qquad \gamma \in [0,1)
+$$
+&lt;/div&gt;
+&lt;p&gt;and the goal is to find the policy that maximizes expected return:&lt;/p&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+\pi^{\star} \;=\; \arg\max_{\pi}\; \mathbb{E}_{\tau \sim \pi}\!\left[\sum_{t=0}^{\infty} \gamma^{t}\, r_t\right]
+$$
+&lt;/div&gt;
+&lt;p&gt;The discount factor $\gamma$ is the mathematical form of &amp;ldquo;a treat now is worth more than a treat later.&amp;rdquo; If the treat is two steps away and $\gamma = 0.9$, it is worth $0.9^2 = 0.81$ treats today. (I verified this in code below.)&lt;/p&gt;
+&lt;p&gt;The value of a state satisfies the &lt;strong&gt;Bellman equation&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+V^{\pi}(s) \;=\; \mathbb{E}_{a \sim \pi}\Big[\, r(s,a) \;+\; \gamma\, V^{\pi}(s&#39;)\,\Big]
+$$
+&lt;/div&gt;
+&lt;p&gt;and the &lt;strong&gt;policy gradient theorem&lt;/strong&gt;, whose simplest practical form is the REINFORCE estimator (Williams, 1992), tells us how to improve the policy directly:&lt;/p&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+\nabla_\theta J(\theta) \;=\; \mathbb{E}\!\left[\sum_{t} \nabla_\theta \log \pi_\theta(a_t \mid s_t)\,\big(G_t - b(s_t)\big)\right]
+$$
+&lt;/div&gt;
+&lt;p&gt;Read it as a sentence: &lt;em&gt;&amp;ldquo;raise the log-probability of an action in proportion to how much better than expected it turned out.&amp;rdquo;&lt;/em&gt; The baseline $b(s_t)$ does not bias the gradient but reduces its variance, and when $b = V^\pi$ the bracket becomes the &lt;strong&gt;advantage&lt;/strong&gt; $A_t$. Please remember the word &lt;em&gt;advantage&lt;/em&gt;. It returns in a few minutes wearing a very different outfit.&lt;/p&gt;
+&lt;h3 id=&#34;step-2-rlhf--when-good-is-a-human-opinion&#34;&gt;Step 2: RLHF — &amp;ldquo;When &amp;lsquo;good&amp;rsquo; is a human opinion.&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;Some things have no clean score. What makes a &lt;em&gt;good&lt;/em&gt; answer to &amp;ldquo;Explain a loan in one sentence&amp;rdquo;?&lt;/p&gt;
+&lt;p&gt;On my slide, the LLM writes two answers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: &lt;em&gt;a loan is money you borrow today and pay back later, with a small fee.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;B&lt;/strong&gt;: a legalistic sentence about a &amp;ldquo;bilateral contract whereby the obligor shall remit principal…&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A person picks the one they prefer: &lt;strong&gt;A&lt;/strong&gt;. A &lt;strong&gt;reward model&lt;/strong&gt; learns to score the winner high ($r = 0.9$) and the loser low ($r = 0.2$). Then the LLM is nudged toward answers that people like. This recipe, learning a reward from human preferences and then optimizing against it, was introduced for deep RL by Christiano et al. (2017) and scaled to instruction-following language models by Ouyang et al. (2022).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The mathematics: Bradley–Terry.&lt;/strong&gt; We model the probability that humans prefer $y_w$ over $y_l$ as a logistic function of the reward gap (Bradley &amp;amp; Terry, 1952):&lt;/p&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+P\big(y_w \succ y_l \mid x\big) \;=\; \sigma\!\big(r_\varphi(x, y_w) - r_\varphi(x, y_l)\big), \qquad \sigma(z) = \frac{1}{1+e^{-z}}
+$$
+&lt;/div&gt;
+&lt;p&gt;and train the reward model by maximum likelihood:&lt;/p&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+\mathcal{L}(\varphi) \;=\; -\,\mathbb{E}_{(x,\,y_w,\,y_l)}\Big[\log \sigma\big(r_\varphi(x, y_w) - r_\varphi(x, y_l)\big)\Big]
+$$
+&lt;/div&gt;
+&lt;p&gt;Plugging in the slide&amp;rsquo;s numbers: the gap is $0.9 - 0.2 = 0.7$, so $\sigma(0.7) \approx 0.668$ and the loss is $-\log(0.668) \approx 0.403$. The gradient with respect to the gap is $-(1 - \sigma(0.7)) \approx -0.332$, which is the mathematical way of saying &lt;strong&gt;&amp;ldquo;push A up, push B down.&amp;rdquo;&lt;/strong&gt; Training widens that gap.&lt;/p&gt;
+&lt;p&gt;Then &lt;strong&gt;PPO&lt;/strong&gt; (Schulman et al., 2017) improves the policy using the learned reward, while a KL penalty keeps it from drifting too far from the reference model:&lt;/p&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+\max_{\theta}\;\; \mathbb{E}_{x,\; y \sim \pi_\theta}\big[r_\varphi(x,y)\big] \;-\; \beta\, D_{\mathrm{KL}}\!\big(\pi_\theta(\cdot \mid x)\,\big\|\,\pi_{\mathrm{ref}}(\cdot \mid x)\big)
+$$
+&lt;/div&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+L^{\text{CLIP}}(\theta) \;=\; \mathbb{E}_t\Big[\min\!\big(\rho_t(\theta) A_t,\;\; \mathrm{clip}(\rho_t(\theta),\, 1-\epsilon,\, 1+\epsilon)\, A_t\big)\Big], \qquad \rho_t(\theta) = \frac{\pi_\theta(a_t \mid s_t)}{\pi_{\theta_{\text{old}}}(a_t \mid s_t)}
+$$
+&lt;/div&gt;
+&lt;p&gt;The clip says: &lt;em&gt;&amp;ldquo;improve, but do not take a step so large that you forget how to speak.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;A note for the curious.&lt;/strong&gt; The KL-regularized objective above has a closed-form optimum, $\pi^\star(y \mid x) \propto \pi_{\mathrm{ref}}(y \mid x) \exp(r(x,y)/\beta)$. Rearranging it is exactly how &lt;strong&gt;DPO&lt;/strong&gt; (Rafailov et al., 2023) removes the need for an explicit reward model. That deserves a post of its own.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;The catch.&lt;/strong&gt; A learned reward model is only a &lt;em&gt;proxy&lt;/em&gt; for what we actually want. Optimize a proxy hard enough and the policy finds its cracks. This is &lt;strong&gt;reward hacking&lt;/strong&gt;, and it has been studied both empirically, through scaling laws for reward-model overoptimization (Gao et al., 2023), and formally (Amodei et al., 2016; Skalse et al., 2022). It is Goodhart&amp;rsquo;s law in a GPU costume, in the popular phrasing of Strathern (1997): &lt;em&gt;when a measure becomes a target, it ceases to be a good measure.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For a bank, &amp;ldquo;a human thought it sounded nice&amp;rdquo; is not a sufficient standard. Which brings us to the third rung.&lt;/p&gt;
+&lt;h3 id=&#34;step-3-rlvr--replace-the-human-with-a-verifier&#34;&gt;Step 3: RLVR — &amp;ldquo;Replace the human with a verifier.&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Reinforcement Learning with Verifiable Rewards.&lt;/strong&gt; The term was popularized by the Tülu 3 work (Lambert et al., 2024), and the approach gained wide attention through DeepSeek-R1 (DeepSeek-AI, 2025), which trained reasoning behavior using rule-based rewards. The insight is wonderfully simple:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Banks are full of answers that can be checked.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A statement says the total is 32,293. Do the extracted rows actually sum to 32,293? That is not an opinion. That is arithmetic. A &lt;strong&gt;verifier&lt;/strong&gt;, plain deterministic code, can check it:&lt;/p&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+\text{verifier}(y) \;=\; \mathbf{1}\!\left[\sum_{i} \text{rows}_i(y) \;=\; T_{\text{declared}}\right] \;\in\; \{0, 1\}
+$$
+&lt;/div&gt;
+&lt;p&gt;Right answer: reward &lt;strong&gt;1&lt;/strong&gt;. Wrong answer: reward &lt;strong&gt;0&lt;/strong&gt;. No human involved, and no reward model to hack.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The loop (this is the animation I had on the slide):&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ask the model the &lt;strong&gt;same question 8 times&lt;/strong&gt; ($G = 8$). Eight different answers come back.&lt;/li&gt;
+&lt;li&gt;A verifier checks each one against the statement. Suppose 4 pass and 4 fail, so the rewards are $(1,0,1,0,0,1,1,0)$.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Compare each answer with its own group.&lt;/strong&gt; The mean reward is $0.5$ and the standard deviation is $0.5$.&lt;/li&gt;
+&lt;li&gt;Better than the group? &lt;strong&gt;+1&lt;/strong&gt;. Worse? &lt;strong&gt;−1&lt;/strong&gt;. Make the winners more likely next time.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;That &amp;ldquo;compare with the group&amp;rdquo; step is &lt;strong&gt;GRPO&lt;/strong&gt;, Group Relative Policy Optimization (Shao et al., 2024). Remember the &lt;em&gt;advantage&lt;/em&gt; from RL? Here is its new outfit:&lt;/p&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+\hat{A}_i \;=\; \frac{r_i - \operatorname{mean}(r_1,\ldots,r_G)}{\operatorname{std}(r_1,\ldots,r_G)}
+$$
+&lt;/div&gt;
+&lt;p&gt;and the objective is a PPO-style clipped surrogate averaged over the group (simplified here to the sequence level, with $\rho_i = \pi_\theta(y_i \mid x)/\pi_{\theta_{\text{old}}}(y_i \mid x)$):&lt;/p&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+J_{\text{GRPO}}(\theta) \;=\; \mathbb{E}\!\left[\frac{1}{G}\sum_{i=1}^{G} \min\!\Big(\rho_i \hat{A}_i,\;\; \mathrm{clip}(\rho_i,\, 1-\epsilon,\, 1+\epsilon)\,\hat{A}_i\Big)\right] \;-\; \beta\, D_{\mathrm{KL}}\!\big(\pi_\theta \,\|\, \pi_{\mathrm{ref}}\big)
+$$
+&lt;/div&gt;
+&lt;p&gt;What I appreciate about this design:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;No reward model.&lt;/strong&gt; The verifier is code.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No labelers.&lt;/strong&gt; No human is needed in the loop for the reward.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No critic or value network.&lt;/strong&gt; The group &lt;em&gt;is&lt;/em&gt; the baseline, which saves a whole network&amp;rsquo;s worth of memory.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And a few caveats, because honest research should list them:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Zero-signal groups.&lt;/strong&gt; If all 8 answers are right (or all wrong), then $\operatorname{std} = 0$ and every advantage collapses to 0. No learning happens. In practice we need prompts that are &lt;em&gt;neither trivial nor impossible&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Normalization quirks.&lt;/strong&gt; Follow-up analysis (Liu et al., 2025) has examined difficulty and length biases that arise from the standard-deviation and length normalization in GRPO. Another rabbit hole, and another post.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reward design still matters, even with a verifier.&lt;/strong&gt; Which leads to the next section.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;rlvr-on-bank-data&#34;&gt;RLVR on Bank Data&lt;/h3&gt;
+&lt;p&gt;Why am I so enthusiastic about this for a bank? Because our world is &lt;strong&gt;full of verifiable structure&lt;/strong&gt;:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Model&lt;/th&gt;
+&lt;th&gt;The question a verifier can ask&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;KaoOCR&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Does $\sum \text{extracted} = \sum \text{declared}$ on the statement?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;KaoChat&lt;/strong&gt; (GSB)&lt;/td&gt;
+&lt;td&gt;Does the cited document &lt;em&gt;and page&lt;/em&gt; actually contain the claim?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;KaoChat&lt;/strong&gt; (analyst)&lt;/td&gt;
+&lt;td&gt;Does the query result equal the ground-truth table?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;A reward shape that captures the first row (shown on the slide as &lt;em&gt;illustrative&lt;/em&gt;):&lt;/p&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+r(y) \;=\; \mathbf{1}\big[\textstyle\sum_{\text{ext}} = \sum_{\text{decl}}\big] \cdot \Big(0.5 \;+\; 0.3\cdot\mathbf{1}[\text{cite valid}] \;+\; 0.2\cdot\mathbf{1}[\text{format ok}]\Big)
+$$
+&lt;/div&gt;
+&lt;p&gt;Look carefully at the &lt;strong&gt;product&lt;/strong&gt;. Correctness is a &lt;em&gt;gate&lt;/em&gt;, not a bonus. A beautifully formatted, perfectly cited, &lt;strong&gt;wrong&lt;/strong&gt; answer receives exactly &lt;strong&gt;zero&lt;/strong&gt;. That is deliberate: it removes the cheap exploit of polishing the packaging while ignoring the content. The reward is &lt;strong&gt;verifiable, deterministic, and auditable&lt;/strong&gt;, three words that a risk committee is glad to hear.&lt;/p&gt;
+&lt;h3 id=&#34;from-equations-to-code-the-rl-zoo&#34;&gt;From Equations to Code: The RL Zoo&lt;/h3&gt;
+&lt;p&gt;Because I trust nothing that I have not run, here is the small pure-NumPy script behind the numbers above (the dog, the reward model, and the GRPO group). It uses no bank data and no GPU. It is illustrative only, but it runs anywhere:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;quot;&amp;quot;&amp;quot;
+GSBAIL RL Zoo — three tiny, runnable demos behind the talk
+==========================================================
+  1. RL     : discounted return (the dog and the treats)
+  2. RLHF   : Bradley-Terry preference loss (the reward model)
+  3. RLVR   : verifiable reward + group-relative advantage (GRPO-style)
+
+Pure NumPy, CPU only. No bank data. Illustrative only.
+&amp;quot;&amp;quot;&amp;quot;
+import numpy as np
+
+
+def sigmoid(x):
+    return 1.0 / (1.0 + np.exp(-x))
+
+
+def log_sigmoid(x):
+    # numerically stable log(sigmoid(x))
+    return -np.logaddexp(0.0, -x)
+
+
+# ---------------------------------------------------------------------------
+# 1. RL — discounted return  G_t = sum_k gamma^k r_{t+k}
+# ---------------------------------------------------------------------------
+def discounted_return(rewards, gamma=0.9):
+    g = 0.0
+    for r in reversed(rewards):          # G_t = r_t + gamma * G_{t+1}
+        g = r + gamma * g
+    return g
+
+
+# ---------------------------------------------------------------------------
+# 2. RLHF — Bradley-Terry:  L = -log sigmoid( r(x,y_w) - r(x,y_l) )
+# ---------------------------------------------------------------------------
+def bradley_terry_loss(r_win, r_lose):
+    return float(-np.mean(log_sigmoid(np.asarray(r_win) - np.asarray(r_lose))))
+
+
+# ---------------------------------------------------------------------------
+# 3. RLVR — the verifier is plain, deterministic code
+# ---------------------------------------------------------------------------
+def verifier_reward(extracted_rows, declared_total, cite_valid, format_ok):
+    &amp;quot;&amp;quot;&amp;quot;
+    r(y) = 1[ sum(rows) == declared ] * (0.5 + 0.3*1[cite] + 0.2*1[format])
+    Correctness GATES everything: a beautifully formatted wrong answer = 0.
+    &amp;quot;&amp;quot;&amp;quot;
+    exact = abs(sum(extracted_rows) - declared_total) &amp;lt; 1e-6
+    return float(exact) * (0.5 + 0.3 * cite_valid + 0.2 * format_ok)
+
+
+def group_advantages(rewards, eps=1e-6):
+    &amp;quot;&amp;quot;&amp;quot;A_i = (r_i - mean(r)) / (std(r) + eps)   — no critic, no value network.&amp;quot;&amp;quot;&amp;quot;
+    r = np.asarray(rewards, dtype=np.float64)
+    return (r - r.mean()) / (r.std() + eps)          # population std
+
+
+def grpo_surrogate(logp_new, logp_old, adv, clip_eps=0.2):
+    &amp;quot;&amp;quot;&amp;quot;PPO-style clipped surrogate, with group-relative advantages.&amp;quot;&amp;quot;&amp;quot;
+    ratio = np.exp(np.asarray(logp_new) - np.asarray(logp_old))
+    unclipped = ratio * adv
+    clipped = np.clip(ratio, 1 - clip_eps, 1 + clip_eps) * adv
+    return float(-np.mean(np.minimum(unclipped, clipped)))
+
+
+if __name__ == &amp;quot;__main__&amp;quot;:
+    print(&amp;quot;== 1. RL: a treat now beats a treat later ==&amp;quot;)
+    print(&amp;quot;   G_0 for rewards [0, 0, 1], gamma=0.9 :&amp;quot;, round(discounted_return([0, 0, 1]), 4))
+
+    print(&amp;quot;\n== 2. RLHF: Bradley-Terry ==&amp;quot;)
+    r_win, r_lose = 0.9, 0.2
+    gap = r_win - r_lose
+    p = float(sigmoid(gap))
+    print(f&amp;quot;   reward gap                 : {gap:.2f}&amp;quot;)
+    print(f&amp;quot;   P(A preferred over B)      : {p:.4f}&amp;quot;)
+    print(f&amp;quot;   loss = -log sigmoid(gap)   : {bradley_terry_loss(r_win, r_lose):.4f}&amp;quot;)
+    print(f&amp;quot;   dL/dgap = -(1 - sigmoid)   : {-(1 - p):.4f}   (push A up, push B down)&amp;quot;)
+
+    print(&amp;quot;\n== 3. RLVR: G = 8 samples, 4 pass the verifier ==&amp;quot;)
+    rewards = [1, 0, 1, 0, 0, 1, 1, 0]
+    adv = group_advantages(rewards)
+    print(&amp;quot;   rewards    :&amp;quot;, rewards)
+    print(&amp;quot;   mean, std  :&amp;quot;, np.mean(rewards), np.std(rewards))
+    print(&amp;quot;   advantages :&amp;quot;, [round(float(a), 3) for a in adv])
+
+    print(&amp;quot;\n   Degenerate groups carry no signal (std = 0):&amp;quot;)
+    print(&amp;quot;   all correct:&amp;quot;, np.round(group_advantages([1] * 8)[:3], 3), &amp;quot;...&amp;quot;)
+    print(&amp;quot;   all wrong  :&amp;quot;, np.round(group_advantages([0] * 8)[:3], 3), &amp;quot;...&amp;quot;)
+
+    print(&amp;quot;\n   Reward shaping (illustrative):&amp;quot;)
+    rows, total = [10.0, 20.0, 30.0], 60.0
+    print(&amp;quot;   exact + cite + format :&amp;quot;, verifier_reward(rows, total, 1, 1))
+    print(&amp;quot;   exact, no cite        :&amp;quot;, verifier_reward(rows, total, 0, 1))
+    print(&amp;quot;   WRONG but pretty      :&amp;quot;, verifier_reward([10.0, 20.0, 31.0], total, 1, 1))
+
+    print(&amp;quot;\n   One clipped surrogate step:&amp;quot;)
+    logp_old = np.zeros(8)
+    logp_new = np.array([0.30, -0.25, 0.10, -0.05, 0.0, 0.40, -0.10, -0.30])
+    print(&amp;quot;   surrogate loss:&amp;quot;, round(grpo_surrogate(logp_new, logp_old, adv), 4))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Expected output:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;== 1. RL: a treat now beats a treat later ==
+   G_0 for rewards [0, 0, 1], gamma=0.9 : 0.81
+
+== 2. RLHF: Bradley-Terry ==
+   reward gap                 : 0.70
+   P(A preferred over B)      : 0.6682
+   loss = -log sigmoid(gap)   : 0.4032
+   dL/dgap = -(1 - sigmoid)   : -0.3318   (push A up, push B down)
+
+== 3. RLVR: G = 8 samples, 4 pass the verifier ==
+   rewards    : [1, 0, 1, 0, 0, 1, 1, 0]
+   mean, std  : 0.5 0.5
+   advantages : [1.0, -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, -1.0]
+   ...
+   WRONG but pretty      : 0.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-kao-family&#34;&gt;The Kao Family&lt;/h2&gt;
+&lt;p&gt;Now that the engine is on the table, what do we actually build?&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;GSB_IMG/GSB_AI_Showcase_0009.jpg&#34; alt=&#34;The KAO family slide: Kernel Adaptive Optimization with KaoOCR, KaoLeaf, KaoChat, KaoASR, KaoNPL&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 5: The KAO family: &lt;b&gt;K&lt;/b&gt;ernel · &lt;b&gt;A&lt;/b&gt;daptive · &lt;b&gt;O&lt;/b&gt;ptimization. &#34;One recipe, applied to every model we ship.&#34;  
+    Five models sit under the banner: KaoOCR (Thai documents to data), KaoLeaf (attention for credit), KaoChat (bank-wide analyst), KaoASR (meetings to reports), and KaoNPL (loan book at a glance).  
+    KAO is also my own nickname. I noticed this too, and I have decided to leave it as it is.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Model&lt;/th&gt;
+&lt;th&gt;One-liner&lt;/th&gt;
+&lt;th&gt;What it does&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;KaoOCR&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Thai documents to data&lt;/td&gt;
+&lt;td&gt;A vision-language model that reads Thai bank statements and app captures into clean, structured data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;KaoLEAF&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Attention for credit&lt;/td&gt;
+&lt;td&gt;An attention model that turns those numbers into a score and a credit limit&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;KaoChat&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Bank-wide analyst&lt;/td&gt;
+&lt;td&gt;Answers staff questions &lt;em&gt;with file and page citations&lt;/em&gt;, and also analyzes data&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;KaoASR&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Meetings to reports&lt;/td&gt;
+&lt;td&gt;Thai speech-to-text with summaries and formal reports&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;KaoNPL&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Loan book at a glance&lt;/td&gt;
+&lt;td&gt;A warehouse-style dashboard tracking the loan portfolio, days-past-due (DPD) buckets, and NPL flow&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The recipe behind &amp;ldquo;Kernel Adaptive Optimization&amp;rdquo; deserves a post of its own. For now, let us look at two of these models in the field.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;part-2-gsb--nokkrasip--qr-maha-heng&#34;&gt;Part 2: GSB × Nokkrasip — QR Maha Heng&lt;/h2&gt;
+&lt;p&gt;This is the part of the talk where the mission and the mathematics finally meet.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Savings Bank QR Maha Heng × Nokkrasip&lt;/strong&gt; is a pilot for &lt;strong&gt;merchant loans&lt;/strong&gt;, scored by &lt;strong&gt;KaoOCR&lt;/strong&gt; and &lt;strong&gt;KaoLEAF&lt;/strong&gt;, in a pipeline that runs &lt;strong&gt;entirely on our own local AI&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;the-hard-part&#34;&gt;The Hard Part&lt;/h3&gt;
+&lt;p&gt;We cannot reach the merchant&amp;rsquo;s source app. A shop&amp;rsquo;s daily sales live in &lt;em&gt;another bank&amp;rsquo;s&lt;/em&gt; app. So the shop owner downloads &lt;strong&gt;four months of statements&lt;/strong&gt; and uploads them to us.&lt;/p&gt;
+&lt;p&gt;Which raises the question that kept me awake:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;How do we know nobody edited them on the way?&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;One case is four monthly statements, and &lt;strong&gt;a single statement can run past 100 pages&lt;/strong&gt;. Hundreds of rows. A human reviewer cannot be expected to examine every one.&lt;/p&gt;
+&lt;h3 id=&#34;the-answer-never-trust-always-verify&#34;&gt;The Answer: Never Trust, Always Verify&lt;/h3&gt;
+&lt;p&gt;The decision path for every case looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;  4 monthly statements + 1 storefront capture
+                    │
+                    ▼
+        ┌───────────────────────┐
+        │  KaoOCR  (13–31 s)    │   Thai PDFs → structured rows
+        └───────────┬───────────┘
+                    ▼
+   Gate 1  Documents   declared totals == extracted totals ?
+   Gate 2  Identity    shop name in statement == shop name in app capture ?
+   Gate 3  Forensics   does the PDF&#39;s file fingerprint look genuine ?
+   Gate 4  Prescreen   is average monthly sales above the floor ?
+   Gate 5  KaoLEAF     score + credit limit
+                    ▼
+                 Verdict
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Gate 1 is an accounting identity.&lt;/strong&gt; For each monthly statement $m$ with $n_m$ rows of amounts $a_{m,i}$ and a printed total $T_m$:&lt;/p&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+\sum_{i=1}^{n_m} a_{m,i} \;=\; T_m \qquad \text{for every month } m
+$$
+&lt;/div&gt;
+&lt;p&gt;A single misread digit shifts the sum, so the identity breaks. Only a &lt;em&gt;coordinated&lt;/em&gt; set of errors could cancel out. It is a checksum for money, and it is exactly the verifier from the RLVR section: the same idea doing a different job.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Gate 3 is my favorite party trick: every PDF has a fingerprint.&lt;/strong&gt; A genuine export from the source app carries a specific producer string in its metadata (in our pilot, &lt;code&gt;iText 2.1.7&lt;/code&gt;), and its declared totals match the extracted totals. The fraudulent case in the pilot? Its producer read &lt;strong&gt;Microsoft Excel 2024&lt;/strong&gt;: a spreadsheet, printed to PDF. A hand-built statement, not an export.&lt;/p&gt;
+&lt;p&gt;A two-line sketch of the idea:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from pypdf import PdfReader
+
+producer = PdfReader(&amp;quot;statement.pdf&amp;quot;).metadata.producer   # e.g. &#39;iText 2.1.7 by 1T3XT&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;A note on honesty.&lt;/strong&gt; Metadata can be spoofed, so a fingerprint is &lt;em&gt;one signal&lt;/em&gt;, never a verdict. That is exactly why it sits next to the totals check and the identity cross-check. Defense in depth beats a clever trick, every time.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;kaoocr--the-eyes&#34;&gt;KaoOCR — &amp;ldquo;The Eyes&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;KaoOCR is a &lt;strong&gt;27B vision-language model&lt;/strong&gt; that reads Thai bank statements and app captures. On our &amp;ldquo;budget set&amp;rdquo; it scores &lt;strong&gt;95.6%&lt;/strong&gt;, compared with &lt;strong&gt;81.0%&lt;/strong&gt; for Gemini 2.5 Flash. Converted into error rates, the comparison becomes sharper:&lt;/p&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+\frac{1 - 0.810}{1 - 0.956} \;=\; \frac{0.190}{0.044} \;\approx\; 4.3\times \text{ fewer errors}
+$$
+&lt;/div&gt;
+&lt;p&gt;When the cost of one wrong digit is a wrong credit decision about a real person&amp;rsquo;s livelihood, &amp;ldquo;4.3× fewer errors&amp;rdquo; is not a vanity metric.&lt;/p&gt;
+&lt;h3 id=&#34;kaoleaf--the-judgment&#34;&gt;KaoLEAF — &amp;ldquo;The Judgment&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;Once the numbers are clean and trusted, &lt;strong&gt;KaoLEAF&lt;/strong&gt; turns them into a &lt;strong&gt;score and a credit limit&lt;/strong&gt;. It is an &lt;strong&gt;attention model&lt;/strong&gt;, built on the same core operation that powers every modern transformer (Vaswani et al., 2017):&lt;/p&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+\text{Attention}(Q, K, V) \;=\; \operatorname{softmax}\!\left(\frac{Q K^{\top}}{\sqrt{d_k}}\right) V
+$$
+&lt;/div&gt;
+&lt;p&gt;Intuitively, attention lets each signal in a merchant&amp;rsquo;s history (average monthly sales, median, minimum, and a stability measure such as the coefficient of variation $\mathrm{CV} = \sigma/\mu$) &lt;em&gt;look at the others&lt;/em&gt; before deciding what matters. A shop with high average sales but wild swings tells a different story from a modest shop that sells steadily every single week.&lt;/p&gt;
+&lt;p&gt;On a realistic loan dataset, KaoLEAF reached &lt;strong&gt;AUC 0.9852, first place among 11 models&lt;/strong&gt;. A short translation, because AUC has a lovely probabilistic meaning (Hanley &amp;amp; McNeil, 1982):&lt;/p&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+\text{AUC} \;=\; P\big(s(x^{+}) &gt; s(x^{-})\big) \;+\; \tfrac{1}{2}\,P\big(s(x^{+}) = s(x^{-})\big)
+$$
+&lt;/div&gt;
+&lt;p&gt;Pick one good borrower and one bad borrower at random: &lt;strong&gt;the model ranks the good one higher about 98.5% of the time.&lt;/strong&gt; Credit-risk practitioners also like the &lt;strong&gt;Gini coefficient&lt;/strong&gt;, $\text{Gini} = 2\text{AUC} - 1 \approx 0.970$.&lt;/p&gt;
+&lt;h3 id=&#34;six-real-cases-six-stories&#34;&gt;Six Real Cases, Six Stories&lt;/h3&gt;
+&lt;p&gt;The pilot ran on six real merchant cases (identities removed), each with 4 statements and 1 storefront capture:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Case&lt;/th&gt;
+&lt;th&gt;Outcome&lt;/th&gt;
+&lt;th&gt;What happened&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;01&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Approve&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;All gates green: totals match, identity matches, genuine file, score approves&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;02&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Approve&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The same: every gate green&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;03&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Reject&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Documents were clean, but the prescreen on average sales did not pass&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;04&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Reject&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The same pattern: honest files, but capacity did not meet the prescreen&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;05&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Fraud flagged&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;File fingerprint said &lt;em&gt;Microsoft Excel 2024&lt;/em&gt;, and the source app did not match&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;06&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Misunderstanding found&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;The capture was a storefront without the app screen: a warning, not an accusation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;I want to dwell on cases &lt;strong&gt;03 and 04&lt;/strong&gt; for a moment. Those are the &amp;ldquo;no&amp;rdquo; answers, and they are the ones my mind keeps returning to. A rejection is not a verdict on a person. It is a statement about &lt;em&gt;capacity at this moment.&lt;/em&gt; The long-term research question I care about is how a &amp;ldquo;no&amp;rdquo; can come with a &amp;ldquo;here is what would change it.&amp;rdquo; That is a research direction, not a product commitment.&lt;/p&gt;
+&lt;h3 id=&#34;the-scoreboard&#34;&gt;The Scoreboard&lt;/h3&gt;
+&lt;div style=&#34;display:flex; flex-wrap:wrap; gap:12px; justify-content:center; text-align:center; margin: 18px 0;&#34;&gt;
+  &lt;div style=&#34;min-width:150px; padding:14px 18px; border:1px solid #8884; border-radius:12px;&#34;&gt;&lt;div style=&#34;font-size:2rem; font-weight:800;&#34;&gt;100%&lt;/div&gt;&lt;div&gt;extraction accuracy&lt;/div&gt;&lt;/div&gt;
+  &lt;div style=&#34;min-width:150px; padding:14px 18px; border:1px solid #8884; border-radius:12px;&#34;&gt;&lt;div style=&#34;font-size:2rem; font-weight:800;&#34;&gt;100%&lt;/div&gt;&lt;div&gt;fraud detection&lt;/div&gt;&lt;/div&gt;
+  &lt;div style=&#34;min-width:150px; padding:14px 18px; border:1px solid #8884; border-radius:12px;&#34;&gt;&lt;div style=&#34;font-size:2rem; font-weight:800;&#34;&gt;~30 s&lt;/div&gt;&lt;div&gt;per case&lt;/div&gt;&lt;/div&gt;
+  &lt;div style=&#34;min-width:150px; padding:14px 18px; border:1px solid #8884; border-radius:12px;&#34;&gt;&lt;div style=&#34;font-size:2rem; font-weight:800;&#34;&gt;0&lt;/div&gt;&lt;div&gt;bytes leaving the bank&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;2 approved, 2 rejected, 1 fraud caught, 1 misunderstanding found.&lt;/strong&gt; And &lt;strong&gt;0 bytes left the bank.&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;A word on statistical honesty.&lt;/strong&gt; A pilot of six cases shows that the &lt;em&gt;pipeline works end to end&lt;/em&gt;; it does not prove &amp;ldquo;100% in the wild.&amp;rdquo; If extraction is counted per statement (24 of 24 correct, which is my own assumption about how to count), the lower end of the exact Clopper–Pearson 95% confidence interval (Clopper &amp;amp; Pearson, 1934) for the true accuracy is $0.025^{1/24}$, which is roughly 85.8 percent. For fraud we have exactly one positive example, which is a &lt;em&gt;story&lt;/em&gt; and not a &lt;em&gt;statistic&lt;/em&gt;. Evaluation at scale is what comes next, and I would rather say so plainly than let a perfect score in a small sample speak for more than it can.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;part-3-kaochat--ask-the-bank-get-the-page-number&#34;&gt;Part 3: KaoChat — &amp;ldquo;Ask the Bank. Get the Page Number.&amp;rdquo;&lt;/h2&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;GSB_IMG/GSB_AI_Showcase_0011.jpg&#34; alt=&#34;Live KaoChat demo on the big screens asking what is GSB Reboost&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 6: The live KaoChat demo on the big screens: &#34;What is GSB Reboost? What is it for?&#34;  
+    A live demonstration is among the most nerve-racking things a researcher can do, because the model is free to misbehave in front of an entire room.  
+    What you see is a real back-end running locally, with a Thai question going in and a cited Thai answer coming out.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;KaoChat answers staff questions in plain Thai, and &lt;strong&gt;every answer comes with the file name and the page number.&lt;/strong&gt; The pipeline on the slide lights up one box at a time:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt; Question (plain Thai) → Retrieve (7 sources found) → LLM plans (text or tool?)
+        → Code computes (exact numbers) → Answer + cite (file · page)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;what-the-retrieval-step-really-does&#34;&gt;What the Retrieval Step Really Does&lt;/h3&gt;
+&lt;p&gt;The textbook description of retrieval-augmented generation (Lewis et al., 2020) is to marginalize over the retrieved documents:&lt;/p&gt;
+&lt;div class=&#34;math-block&#34;&gt;
+$$
+p(y \mid x) \;\approx\; \sum_{d \,\in\, \text{top-}k(x)} p(d \mid x)\; p(y \mid x, d), \qquad
+\text{sim}(q, d) \;=\; \frac{q \cdot d}{\lVert q \rVert\, \lVert d \rVert}
+$$
+&lt;/div&gt;
+&lt;p&gt;In plain words: &lt;em&gt;find the pages most relevant to the question, then answer using them, and show your sources.&lt;/em&gt; The part that makes it bank-grade is the second half: &lt;strong&gt;if the cited document and page do not actually contain the claim, that is a failure,&lt;/strong&gt; which is precisely a verifier-shaped question for RLVR.&lt;/p&gt;
+&lt;h3 id=&#34;live-demo-1-can-anyone-apply-for-gsb-reboost&#34;&gt;Live Demo 1: &amp;ldquo;Can anyone apply for GSB Reboost?&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;KaoChat answered, roughly: &lt;strong&gt;No.&lt;/strong&gt; The loan is not open to the general public. It is available only to target customers the bank selects under defined conditions. It cited the Q&amp;amp;A document, page 1, with a download link, in about &lt;strong&gt;9.0 seconds&lt;/strong&gt;, with a gentle reminder to confirm with the bank before making decisions.&lt;/p&gt;
+&lt;h3 id=&#34;live-demo-2-what-is-gsb-reboost-what-is-it-for&#34;&gt;Live Demo 2: &amp;ldquo;What is GSB Reboost? What is it for?&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;KaoChat explained that &lt;strong&gt;GSB Reboost&lt;/strong&gt; (under the &lt;em&gt;People&amp;rsquo;s Bank&lt;/em&gt; initiative) is a &lt;strong&gt;social loan program&lt;/strong&gt; designed to help customers who do not pass the bank&amp;rsquo;s normal credit criteria but are &lt;em&gt;selected by the bank&lt;/em&gt;, with the goal of improving their &lt;strong&gt;liquidity for day-to-day living.&lt;/strong&gt; It cited three sources in about 9.9 seconds.&lt;/p&gt;
+&lt;p&gt;This answer touched me personally, because it is the whole mission in one paragraph: a loan product built for people the &lt;em&gt;regular&lt;/em&gt; rules would turn away. An AI that helps our staff explain it correctly, instantly, and with a page number, is a small piece of plumbing in something that truly matters.&lt;/p&gt;
+&lt;h3 id=&#34;beyond-the-chatbot-kaochat-is-also-a-data-analyst&#34;&gt;Beyond the Chatbot: KaoChat Is Also a Data Analyst&lt;/h3&gt;
+&lt;p&gt;Ask it for the &lt;strong&gt;top 10 branches by Reboost disbursement&lt;/strong&gt;, and something more interesting happens:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt; LLM plans (aggregate · top 10)  →  Code runs (sort · max · min · avg)  →  LLM explains (Thai answer)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The slide&amp;rsquo;s tagline is my favorite sentence of the entire talk:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;The model never does the arithmetic. The harness does.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Language models are wonderful at &lt;em&gt;deciding what to compute&lt;/em&gt; and &lt;em&gt;explaining what it means&lt;/em&gt;. They are unreliable at multiplying seven-digit numbers in their heads. So we give them a calculator and a rule: &lt;strong&gt;numbers in the answer must come from code, not from token prediction.&lt;/strong&gt; The result on the slide was labeled, with pride, as computed by a program and not by a language model (data as of 5 November 2026).&lt;/p&gt;
+&lt;h3 id=&#34;live-demo-3-which-regulation-which-page-instantly&#34;&gt;Live Demo 3: &amp;ldquo;Which regulation? Which page? Instantly.&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;Asked whether the cost of prosthetics and therapeutic devices (including repairs) is reimbursable, KaoChat answered &lt;strong&gt;yes, at the types and rates set by the Ministry of Finance&lt;/strong&gt;, citing four GSB regulations (Nos. 762, 741, 740, and 525) down to the &lt;em&gt;pages&lt;/em&gt;. Instead of opening four PDFs and hunting for the right page, the answer arrived in under 10 seconds (9.9 s on the slide).&lt;/p&gt;
+&lt;h3 id=&#34;why-local-matters-new-rule-today-answer-today&#34;&gt;Why Local Matters: &amp;ldquo;New Rule Today. Answer Today.&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;Because the AI is &lt;strong&gt;ours&lt;/strong&gt;, we can update the bank&amp;rsquo;s knowledge whenever we need to:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt; New PDF (regulation lands) → Parse (KaoOCR reads it) → Index (pages + dates) → Live (KaoChat cites it)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;No vendor. No waiting. No data leaving the building.&lt;/strong&gt; A new regulation can be answerable on the same day it is published. That sentence alone justified the laboratory for me.&lt;/p&gt;
+&lt;h3 id=&#34;two-quick-cameos&#34;&gt;Two Quick Cameos&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;KaoASR&lt;/strong&gt; turns Thai meetings into text, summaries, and formal reports, supporting long recordings and common audio and video formats.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;KaoNPL-Warehouse&lt;/strong&gt; gives a bird&amp;rsquo;s-eye view of the loan book: portfolio composition, DPD buckets, and NPL flow over time. It is &lt;em&gt;the loan book at a glance.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Each deserves a full write-up. Consider this the post-credits scene.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-ethics-slide-i-would-not-skip&#34;&gt;The Ethics Slide I Would Not Skip&lt;/h2&gt;
+&lt;p&gt;Near the end of the talk I slowed down and said something that was not about models at all.&lt;/p&gt;
+&lt;p&gt;Today, many of us build with &lt;strong&gt;Copilot, Claude, Gemini, and ChatGPT&lt;/strong&gt;. They make our work easier, and I say that sincerely. But a bank holds more than money:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;A bank holds people&amp;rsquo;s lives.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;And every prompt is a &lt;strong&gt;trust decision&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Who sees it?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Who keeps it?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Who learns from it?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So we are building toward &lt;strong&gt;100% control&lt;/strong&gt; and &lt;strong&gt;0 bytes leaving the bank.&lt;/strong&gt; The research question for the laboratory is simple to state and hard to answer:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;What can replace the frontier tier, inside our walls?&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Researched by our laboratory. Run on our infrastructure. &lt;strong&gt;Governed by our bank.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;five-lessons-from-three-months&#34;&gt;Five Lessons from Three Months&lt;/h2&gt;
+&lt;p&gt;If I had to compress these months into a model card:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Verifiers beat vibes.&lt;/strong&gt; Wherever an answer can be checked by code, check it, and let that check become the reward.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Never let the model do arithmetic that code can do exactly.&lt;/strong&gt; Let language models plan and explain; let programs compute.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cite everything.&lt;/strong&gt; An answer without a page number is a rumor with good grammar.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Local is a feature, not a limitation.&lt;/strong&gt; Same-day updates, zero egress, and auditability are &lt;em&gt;capabilities&lt;/em&gt;, not compromises.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The data is people.&lt;/strong&gt; Every row in every statement is somebody&amp;rsquo;s Tuesday. Build accordingly.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;a-gift-and-a-moment-of-gratitude&#34;&gt;A Gift, and a Moment of Gratitude&lt;/h2&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;GSB_IMG/GSB_AI_Showcase_0014.jpg&#34; alt=&#34;Receiving a gift bag on stage after the talk at GSB Data and AI Culture Showcase 2026&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 7: Receiving a kind gift on stage after the session.  
+    I smiled the smile of someone who had spent many evenings tuning slide animations, which is accurate.  
+    Standing under my own name on that giant screen, three months after first walking through the door, was one of the most moving moments of my career so far.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;thank-you&#34;&gt;Thank You&lt;/h2&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;GSB_IMG/GSB_AI_Showcase_0016.jpg&#34; alt=&#34;The Data and AI Innovation Team in front of the GSB Data and AI Culture Showcase backdrop&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 8: The team, in front of the GSB Data &amp; AI Culture Showcase backdrop.  
+    Colleagues and friends: the people behind every Kao-something on the screen.  
+    AI systems are never built by one person. I happened to be the one holding the microphone, not the one doing all the work.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;img src=&#34;GSB_IMG/GSB_AI_Showcase_0019.jpg&#34; alt=&#34;Team group photo with thumbs up and peace signs at the showcase&#34;&gt;
+  &lt;p style=&#34;font-style: italic; margin-top: 0px;&#34;&gt;
+    Figure 9: Thumbs up, peace signs, and tired smiles: the best possible output of a very long pipeline.  
+    If you want to know what the Data and AI Innovation Team looks like, it looks like this: people who care deeply, laugh often, and deliver anyway.
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I would like to thank, from the bottom of my heart:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;P&amp;rsquo;June&lt;/strong&gt;, for leadership, trust, and a mission that makes the whole effort worthwhile&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Every colleague in the Data and AI Innovation Team.&lt;/strong&gt; Every one of you shaped what I showed on that stage. You are the reason GSB can have local AI that is &lt;em&gt;capable&lt;/em&gt; and &lt;em&gt;ethical.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The organizers&lt;/strong&gt; of the GSB Data &amp;amp; AI Culture Showcase 2026, for the stage&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Everyone who sat in the audience&lt;/strong&gt; and listened patiently to a newcomer speak about reinforcement learning at a savings bank&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I am genuinely grateful to have chosen to work here, and I promise to keep developing local AI that helps the bank as much as I possibly can.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;this-is-only-the-beginning&#34;&gt;This Is Only the Beginning&lt;/h2&gt;
+&lt;p&gt;Everything I presented was the result of about three months of work, and I regard it as the first page of a long book rather than the last.&lt;/p&gt;
+&lt;p&gt;It is the first step of &lt;strong&gt;GSBAIL&lt;/strong&gt;, the &lt;strong&gt;Government Savings Bank AI Laboratory&lt;/strong&gt;: a laboratory for &lt;em&gt;deep&lt;/em&gt; AI research, built to support our own bank and, through it, to help grassroots Thais live a little better, in the spirit of the &lt;strong&gt;Social Bank&lt;/strong&gt; that the Government Savings Bank has always stood for.&lt;/p&gt;
+&lt;p&gt;The vendor who needs a small loan to keep her stall open. The shop owner whose whole life is summarized in a monthly statement. The person who has been told &amp;ldquo;no&amp;rdquo; by every system before this one.&lt;/p&gt;
+&lt;p&gt;Those are the people I think about when I write a loss function.&lt;/p&gt;
+&lt;div style=&#34;text-align: center; font-style: italic; margin: 1.6em 0;&#34;&gt;
+The model is a window, not the view.&lt;br&gt;
+Beyond the glass, a vendor lights her stove;&lt;br&gt;
+a clerk explains a rule to someone new;&lt;br&gt;
+and all our work has only this to prove:&lt;br&gt;
+&lt;br&gt;
+that trust can live inside a line of code,&lt;br&gt;
+and still belong to those who walked the road.
+&lt;/div&gt;
+&lt;p&gt;The model is not the end. &lt;strong&gt;Beyond the model&lt;/strong&gt; is where the people are.&lt;/p&gt;
+&lt;p&gt;Let us keep going.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;glossary-for-the-gentle-reader&#34;&gt;Glossary for the Gentle Reader&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Term&lt;/th&gt;
+&lt;th&gt;Plain meaning&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;RL&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Learn by trying, getting a reward, and repeating&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;RLHF&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;RL where the reward comes from human preferences (via a reward model)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;RLVR&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;RL where the reward comes from a &lt;em&gt;verifier&lt;/em&gt;, i.e., checkable code&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;PPO&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;A stable RL algorithm that limits how far each update can move the policy&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;GRPO&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;PPO-style training where each answer is scored relative to its own sampled group&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;KL divergence&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;A measure of how far one model&amp;rsquo;s behavior has drifted from another&amp;rsquo;s&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;VLM&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Vision-language model: reads images &lt;em&gt;and&lt;/em&gt; text&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;OCR&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Optical character recognition: turning images of text into text&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;RAG&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Retrieval-augmented generation: look things up, then answer with citations&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;ASR&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Automatic speech recognition: speech to text&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;AUC&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Probability that a model ranks a random good case above a random bad case&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;DPD / NPL&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Days past due / non-performing loan&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Sovereign AI&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;AI whose models, data, and governance stay under your own control&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;selected-references&#34;&gt;Selected References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Amodei, D., Olah, C., Steinhardt, J., Christiano, P., Schulman, J., &amp;amp; Mané, D. (2016). &lt;em&gt;Concrete Problems in AI Safety.&lt;/em&gt; arXiv:1606.06565.&lt;/li&gt;
+&lt;li&gt;Barocas, S., &amp;amp; Selbst, A. D. (2016). Big Data&amp;rsquo;s Disparate Impact. &lt;em&gt;California Law Review&lt;/em&gt;, 104(3), 671–732.&lt;/li&gt;
+&lt;li&gt;Björkegren, D., &amp;amp; Grissen, D. (2020). Behavior Revealed in Mobile Phone Usage Predicts Credit Repayment. &lt;em&gt;The World Bank Economic Review&lt;/em&gt;, 34(3), 618–634.&lt;/li&gt;
+&lt;li&gt;Bommasani, R., et al. (2021). &lt;em&gt;On the Opportunities and Risks of Foundation Models.&lt;/em&gt; arXiv:2108.07258.&lt;/li&gt;
+&lt;li&gt;Bradley, R. A., &amp;amp; Terry, M. E. (1952). Rank Analysis of Incomplete Block Designs: I. The Method of Paired Comparisons. &lt;em&gt;Biometrika&lt;/em&gt;, 39(3/4), 324–345.&lt;/li&gt;
+&lt;li&gt;Carlini, N., et al. (2021). Extracting Training Data from Large Language Models. &lt;em&gt;USENIX Security Symposium.&lt;/em&gt; arXiv:2012.07805.&lt;/li&gt;
+&lt;li&gt;Christiano, P., Leike, J., Brown, T., Martic, M., Legg, S., &amp;amp; Amodei, D. (2017). Deep Reinforcement Learning from Human Preferences. &lt;em&gt;Advances in Neural Information Processing Systems (NeurIPS)&lt;/em&gt;, 30.&lt;/li&gt;
+&lt;li&gt;Clopper, C. J., &amp;amp; Pearson, E. S. (1934). The Use of Confidence or Fiducial Limits Illustrated in the Case of the Binomial. &lt;em&gt;Biometrika&lt;/em&gt;, 26(4), 404–413.&lt;/li&gt;
+&lt;li&gt;DeepSeek-AI. (2025). &lt;em&gt;DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning.&lt;/em&gt; arXiv:2501.12948.&lt;/li&gt;
+&lt;li&gt;Gao, L., Schulman, J., &amp;amp; Hilton, J. (2023). Scaling Laws for Reward Model Overoptimization. &lt;em&gt;International Conference on Machine Learning (ICML).&lt;/em&gt; arXiv:2210.10760.&lt;/li&gt;
+&lt;li&gt;Hanley, J. A., &amp;amp; McNeil, B. J. (1982). The Meaning and Use of the Area under a Receiver Operating Characteristic (ROC) Curve. &lt;em&gt;Radiology&lt;/em&gt;, 143(1), 29–36.&lt;/li&gt;
+&lt;li&gt;Khandani, A. E., Kim, A. J., &amp;amp; Lo, A. W. (2010). Consumer Credit-Risk Models via Machine-Learning Algorithms. &lt;em&gt;Journal of Banking &amp;amp; Finance&lt;/em&gt;, 34(11), 2767–2787.&lt;/li&gt;
+&lt;li&gt;Lambert, N., et al. (2024). &lt;em&gt;Tülu 3: Pushing Frontiers in Open Language Model Post-Training.&lt;/em&gt; arXiv:2411.15124.&lt;/li&gt;
+&lt;li&gt;Lewis, P., et al. (2020). Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. &lt;em&gt;Advances in Neural Information Processing Systems (NeurIPS)&lt;/em&gt;, 33.&lt;/li&gt;
+&lt;li&gt;Liu, Z., et al. (2025). &lt;em&gt;Understanding R1-Zero-Like Training: A Critical Perspective.&lt;/em&gt; arXiv:2503.20783.&lt;/li&gt;
+&lt;li&gt;Ouyang, L., et al. (2022). Training Language Models to Follow Instructions with Human Feedback. &lt;em&gt;Advances in Neural Information Processing Systems (NeurIPS)&lt;/em&gt;, 35.&lt;/li&gt;
+&lt;li&gt;Pipatanakul, K., et al. (2023). &lt;em&gt;Typhoon: Thai Large Language Models.&lt;/em&gt; arXiv:2312.13951.&lt;/li&gt;
+&lt;li&gt;Rafailov, R., Sharma, A., Mitchell, E., Ermon, S., Manning, C. D., &amp;amp; Finn, C. (2023). Direct Preference Optimization: Your Language Model Is Secretly a Reward Model. &lt;em&gt;Advances in Neural Information Processing Systems (NeurIPS)&lt;/em&gt;, 36.&lt;/li&gt;
+&lt;li&gt;Rudin, C. (2019). Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead. &lt;em&gt;Nature Machine Intelligence&lt;/em&gt;, 1(5), 206–215.&lt;/li&gt;
+&lt;li&gt;Schulman, J., Wolski, F., Dhariwal, P., Radford, A., &amp;amp; Klimov, O. (2017). &lt;em&gt;Proximal Policy Optimization Algorithms.&lt;/em&gt; arXiv:1707.06347.&lt;/li&gt;
+&lt;li&gt;Shao, Z., et al. (2024). &lt;em&gt;DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models.&lt;/em&gt; arXiv:2402.03300.&lt;/li&gt;
+&lt;li&gt;Skalse, J., Howe, N., Krasheninnikov, D., &amp;amp; Krueger, D. (2022). Defining and Characterizing Reward Gaming. &lt;em&gt;Advances in Neural Information Processing Systems (NeurIPS)&lt;/em&gt;, 35.&lt;/li&gt;
+&lt;li&gt;Stiglitz, J. E., &amp;amp; Weiss, A. (1981). Credit Rationing in Markets with Imperfect Information. &lt;em&gt;American Economic Review&lt;/em&gt;, 71(3), 393–410.&lt;/li&gt;
+&lt;li&gt;Strathern, M. (1997). &amp;lsquo;Improving Ratings&amp;rsquo;: Audit in the British University System. &lt;em&gt;European Review&lt;/em&gt;, 5(3), 305–321.&lt;/li&gt;
+&lt;li&gt;Sutton, R. S., &amp;amp; Barto, A. G. (2018). &lt;em&gt;Reinforcement Learning: An Introduction&lt;/em&gt; (2nd ed.). MIT Press.&lt;/li&gt;
+&lt;li&gt;Vaswani, A., et al. (2017). Attention Is All You Need. &lt;em&gt;Advances in Neural Information Processing Systems (NeurIPS)&lt;/em&gt;, 30.&lt;/li&gt;
+&lt;li&gt;Williams, R. J. (1992). Simple Statistical Gradient-Following Algorithms for Connectionist Reinforcement Learning. &lt;em&gt;Machine Learning&lt;/em&gt;, 8, 229–256.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;how-to-cite&#34;&gt;How to Cite&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Panboonyuen, Teerapong. (Nov 2026). &lt;em&gt;GSB AI: Beyond the Model — One Laboratory, and a Promise to Everyday Thai People&lt;/em&gt;. Blog post on Kao Panboonyuen.&lt;br&gt;
+&lt;a href=&#34;https://kaopanboonyuen.github.io/blog/2026-11-19-gsb-ai-beyond-the-model&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kaopanboonyuen.github.io/blog/2026-11-19-gsb-ai-beyond-the-model&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;For a BibTeX citation:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bibtex&#34;&gt;@article{panboonyuen2026gsbail,
+  title   = &amp;quot;GSB AI: Beyond the Model — One Laboratory, and a Promise to Everyday Thai People&amp;quot;,
+  author  = &amp;quot;Panboonyuen, Teerapong&amp;quot;,
+  journal = &amp;quot;kaopanboonyuen.github.io/&amp;quot;,
+  year    = &amp;quot;2026&amp;quot;,
+  month   = &amp;quot;Nov&amp;quot;,
+  url     = &amp;quot;https://kaopanboonyuen.github.io/blog/2026-11-19-gsb-ai-beyond-the-model&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;Thank you for reading this reflection on sovereign AI, reinforcement learning, and building a research laboratory inside Thailand&amp;rsquo;s national savings bank.&lt;/p&gt;
+&lt;p&gt;If it made you think, or made you want to dust off your Bellman equations, please feel free to share it with researchers, bankers, and anyone who believes AI should serve everyday people.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
